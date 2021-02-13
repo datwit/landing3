@@ -1,0 +1,37 @@
+[
+  {
+    "name": "blog",
+    "path": "/blog",
+    "component": "C:\\\\Users\\\\Enma\\\\Desktop\\\\landing-nuxtjs\\\\pages\\\\blog\\\\index.vue",
+    "chunkName": "pages/blog/index",
+    "_name": "_6170ad2c"
+  },
+  {
+    "name": "contact",
+    "path": "/contact",
+    "component": "C:\\\\Users\\\\Enma\\\\Desktop\\\\landing-nuxtjs\\\\pages\\\\contact.vue",
+    "chunkName": "pages/contact",
+    "_name": "_92a759cc"
+  },
+  {
+    "name": "blog-slug",
+    "path": "/blog/:slug",
+    "component": "C:\\\\Users\\\\Enma\\\\Desktop\\\\landing-nuxtjs\\\\pages\\\\blog\\\\_slug.vue",
+    "chunkName": "pages/blog/_slug",
+    "_name": "_64ddefbc"
+  },
+  {
+    "name": "index",
+    "path": "/",
+    "component": "C:\\\\Users\\\\Enma\\\\Desktop\\\\landing-nuxtjs\\\\pages\\\\index.vue",
+    "chunkName": "pages/index",
+    "_name": "_49765f4c"
+  },
+  {
+    "name": "slug",
+    "path": "/:slug",
+    "component": "C:\\\\Users\\\\Enma\\\\Desktop\\\\landing-nuxtjs\\\\pages\\\\_slug.vue",
+    "chunkName": "pages/_slug",
+    "_name": "_47bfbe04"
+  }
+]

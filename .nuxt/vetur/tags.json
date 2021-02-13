@@ -1,0 +1,50 @@
+{
+  "Author": {
+    "description": "Auto imported from components/global/Author.vue"
+  },
+  "LazyAuthor": {
+    "description": "Auto imported from components/global/Author.vue"
+  },
+  "Cta": {
+    "description": "Auto imported from components/global/CTA.vue"
+  },
+  "LazyCta": {
+    "description": "Auto imported from components/global/CTA.vue"
+  },
+  "Goals": {
+    "description": "Auto imported from components/global/Goals.vue"
+  },
+  "LazyGoals": {
+    "description": "Auto imported from components/global/Goals.vue"
+  },
+  "Hero": {
+    "description": "Auto imported from components/global/Hero.vue"
+  },
+  "LazyHero": {
+    "description": "Auto imported from components/global/Hero.vue"
+  },
+  "Resources": {
+    "description": "Auto imported from components/global/Resources.vue"
+  },
+  "LazyResources": {
+    "description": "Auto imported from components/global/Resources.vue"
+  },
+  "Services": {
+    "description": "Auto imported from components/global/Services.vue"
+  },
+  "LazyServices": {
+    "description": "Auto imported from components/global/Services.vue"
+  },
+  "Footer": {
+    "description": "Auto imported from components/Footer.vue"
+  },
+  "LazyFooter": {
+    "description": "Auto imported from components/Footer.vue"
+  },
+  "Header": {
+    "description": "Auto imported from components/Header.vue"
+  },
+  "LazyHeader": {
+    "description": "Auto imported from components/Header.vue"
+  }
+}
