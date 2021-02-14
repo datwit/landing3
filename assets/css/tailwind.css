@@ -17,10 +17,17 @@
   }
   h1{
     @apply tracking-tight font-black text-primary text-4xl sm:text-5xl md:text-6xl;
+    font-family: 'Numans';
+  }  
+  a{
+    font-family: 'Numans';
   }
-}
-body{
-  font-family: 'Numans';
+  h4{
+    @apply text-lg leading-6 font-medium text-black text-opacity-70;
+  }
+  p{
+    @apply mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl;
+  }
 }
 
 section{
@@ -28,4 +35,7 @@ section{
   height: 100vh;
   overflow: hidden;
 }
-
+#hero-id{  
+  top: 45%;
+  transform: translateY(-45%);
+}

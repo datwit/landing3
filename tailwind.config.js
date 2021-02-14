@@ -15,16 +15,19 @@ module.exports = {
         primary: '#1e4158',
         secondary1:'#00baff',
         secondary2: '#e69c24',
-        gray: ' #eaebec'
+        bggray: ' #eaebec'
       },
       screens:{
         'xs': '360px', 
         ...defaultTheme.screens       
-      },      
+      }, 
+      fontFamily:{
+         'p': ['Roboto']
+      },     
     },
   },
   variants: {
     extend: {},
   },
-  plugins: [/* require("@tailwindcss/typography") */],
+  plugins: [require("@tailwindcss/typography")],
 };

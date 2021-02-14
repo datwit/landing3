@@ -1,18 +1,17 @@
 <template>
   <section class="mx-auto max-w-screen-xl">
     <cheader></cheader>
-    <div class="text-center mt-16">
+    <div class="text-center relative" id= "hero-id"> <!-- mt-28 sm:mt-52 -->
       <h1>Bring your idea,
         <br/>
         <span class="text-primary">we will make it real!</span>
       </h1>
-      <p
-        class="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0"
-      >
+      <h4>
         Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem
+        <br/>
         cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat aliqua.
-      </p>
-      <div class="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
+      </h4>
+      <!-- <div class="mt-5 sm:mt-8">
         <div class="rounded-md shadow">
           <a
             href="#"
@@ -21,7 +20,7 @@
             Contact us
           </a>
         </div>
-      </div>
+      </div> -->
     </div>
   </section>
 </template>
