@@ -15,7 +15,17 @@
     font-family: 'Numans';
     src: url('../fonts/Numans-Regular.ttf') format('truetype');
   }
+  h1{
+    @apply tracking-tight font-black text-primary text-4xl sm:text-5xl md:text-6xl;
+  }
 }
 body{
   font-family: 'Numans';
 }
+
+section{
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+

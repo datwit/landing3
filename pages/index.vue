@@ -1,5 +1,5 @@
 <template>
-  <main>
+  <main>    
     <hero></hero>
 
     <services></services>

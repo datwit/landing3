@@ -1,3 +1,4 @@
+const defaultTheme = require('tailwindcss/defaultTheme')
 module.exports = {
   purge: [
     "./content/**/*.md",
@@ -9,7 +10,18 @@ module.exports = {
   ],
   darkMode: false, // or 'media' or 'class'
   theme: {
-    extend: {},
+    extend: {
+      colors:{
+        primary: '#1e4158',
+        secondary1:'#00baff',
+        secondary2: '#e69c24',
+        gray: ' #eaebec'
+      },
+      screens:{
+        'xs': '360px', 
+        ...defaultTheme.screens       
+      },      
+    },
   },
   variants: {
     extend: {},

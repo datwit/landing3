@@ -35,16 +35,16 @@
   "LazyServices": {
     "description": "Auto imported from components/global/Services.vue"
   },
+  "Cheader": {
+    "description": "Auto imported from components/Cheader.vue"
+  },
+  "LazyCheader": {
+    "description": "Auto imported from components/Cheader.vue"
+  },
   "Footer": {
     "description": "Auto imported from components/Footer.vue"
   },
   "LazyFooter": {
     "description": "Auto imported from components/Footer.vue"
-  },
-  "Header": {
-    "description": "Auto imported from components/Header.vue"
-  },
-  "LazyHeader": {
-    "description": "Auto imported from components/Header.vue"
   }
 }
