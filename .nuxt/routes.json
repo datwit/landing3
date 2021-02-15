@@ -3,35 +3,30 @@
     "name": "blog",
     "path": "/blog",
     "component": "C:\\\\Users\\\\Enma\\\\Desktop\\\\landing3\\\\pages\\\\blog\\\\index.vue",
-    "chunkName": "pages/blog/index",
-    "_name": "_13961764"
+    "chunkName": "pages/blog/index"
   },
   {
     "name": "contact",
     "path": "/contact",
     "component": "C:\\\\Users\\\\Enma\\\\Desktop\\\\landing3\\\\pages\\\\contact.vue",
-    "chunkName": "pages/contact",
-    "_name": "_bbf663d8"
+    "chunkName": "pages/contact"
   },
   {
     "name": "blog-slug",
     "path": "/blog/:slug",
     "component": "C:\\\\Users\\\\Enma\\\\Desktop\\\\landing3\\\\pages\\\\blog\\\\_slug.vue",
-    "chunkName": "pages/blog/_slug",
-    "_name": "_11df761c"
+    "chunkName": "pages/blog/_slug"
   },
   {
     "name": "index",
     "path": "/",
     "component": "C:\\\\Users\\\\Enma\\\\Desktop\\\\landing3\\\\pages\\\\index.vue",
-    "chunkName": "pages/index",
-    "_name": "_66755e74"
+    "chunkName": "pages/index"
   },
   {
     "name": "slug",
     "path": "/:slug",
     "component": "C:\\\\Users\\\\Enma\\\\Desktop\\\\landing3\\\\pages\\\\_slug.vue",
-    "chunkName": "pages/_slug",
-    "_name": "_69e2a104"
+    "chunkName": "pages/_slug"
   }
 ]
