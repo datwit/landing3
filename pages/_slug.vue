@@ -1,5 +1,6 @@
 <template>
   <main class="container prose mx-auto">
+    <cheader></cheader>
     <nuxt-content class="py-28" :document="doc" />
   </main>
 </template>

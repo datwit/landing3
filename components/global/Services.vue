@@ -1,5 +1,6 @@
 <template>
   <section class="mt-10 py-12 bg-white mx-auto px-4">
+    <cheader></cheader>
     <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="lg:text-center">
         <h3

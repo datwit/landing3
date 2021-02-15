@@ -23,7 +23,10 @@ module.exports = {
       screens:{
         'xs': '360px', 
         ...defaultTheme.screens       
-      },           
+      },
+      /* margin: {
+        '100': '30rem'
+      } */           
     },
   },
   variants: {
@@ -45,7 +48,7 @@ module.exports = {
             backgroundColor: theme('colors.primary'),
             borderColor: 'white',
             'transform': 'translateY(-3px)', 
-            'transition': ' .7s ease-in'                              
+            'transition': ' .3s ease-in-out'                              
           },          
         },
       }

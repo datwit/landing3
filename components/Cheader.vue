@@ -6,43 +6,43 @@
           <div class="flex-shrink-0">
             <nuxt-link
               active-class="active"
-              class="font-semibold text-xl text-white tracking-tight"
+              class=" font-semibold text-xl text-secondary2 tracking-tight border-transparent"
               to="/"
             >
-              <img src="/images/logo.png" alt="logo" width="130" height="50" />
+              <img src="/images/logo.png" alt="logo" width="140" height="60" />
             </nuxt-link>
           </div>
-          <div class="hidden md:block">
-            <div class="ml-10 flex items-baseline">
-              <nuxt-link
-                to="/services"
-                class="ml-4 px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-blue-700 focus:outline-none focus:text-white focus:bg-blue-700"
+          <div class="hidden md:block relative md:left-1/4 lg:left-2/4 xl:left-full">
+            <div class="flex items-baseline"><!-- md:ml-20 lg:ml-72 xl:ml-100 -->
+              <nuxt-link                
+                to="/"
+                class=" nav-link ml-5 2xl:ml-8 py-2 text-sm font-semibold text-primary hover:text-secondary1 focus:outline-none focus:text-secondary1"
               >
-                Services
+                Home
               </nuxt-link>
               <nuxt-link
                 to="/cases-studies"
-                class="ml-4 px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-blue-700 focus:outline-none focus:text-white focus:bg-blue-700"
+                class="nav-link ml-5 2xl:ml-8 py-2 text-sm font-semibold text-primary hover:text-secondary1 focus:outline-none focus:text-secondary1"
               >
-                Cases Studies
-              </nuxt-link>
-              <nuxt-link
-                to="/blog"
-                class="ml-4 px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-blue-700 focus:outline-none focus:text-white focus:bg-blue-700"
-              >
-                Blog
-              </nuxt-link>
+                Study Cases
+              </nuxt-link>              
               <nuxt-link
                 to="/about"
-                class="ml-4 px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-blue-700 focus:outline-none focus:text-white focus:bg-blue-700"
+                class="nav-link ml-5 2xl:ml-8 py-2 text-sm font-semibold text-primary hover:text-secondary1 focus:outline-none focus:text-secondary1"
               >
                 About us
               </nuxt-link>
               <nuxt-link
                 to="/contact"
-                class="ml-4 px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-blue-700 focus:outline-none focus:text-white focus:bg-blue-700"
+                class="nav-link ml-5 2xl:ml-8 py-2 text-sm font-semibold text-primary hover:text-secondary1 focus:outline-none focus:text-secondary1"
               >
                 Contact us
+              </nuxt-link>
+              <nuxt-link
+                to="/blog"
+                class="nav-link ml-5 2xl:ml-8 py-2 text-sm font-semibold text-primary hover:text-secondary1 focus:outline-none focus:text-secondary1"
+              >
+                Blog
               </nuxt-link>
             </div>
           </div>
