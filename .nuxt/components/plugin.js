@@ -6,6 +6,7 @@ const globalComponents = {
   Goals: () => import('../..\\components\\global\\Goals.vue' /* webpackChunkName: "components_global/Goals" */).then(c => c.default || c),
   Hero: () => import('../..\\components\\global\\Hero.vue' /* webpackChunkName: "components_global/Hero" */).then(c => c.default || c),
   Resources: () => import('../..\\components\\global\\Resources.vue' /* webpackChunkName: "components_global/Resources" */).then(c => c.default || c),
+  Scrollsign: () => import('../..\\components\\global\\Scrollsign.vue' /* webpackChunkName: "components_global/Scrollsign" */).then(c => c.default || c),
   Services: () => import('../..\\components\\global\\Services.vue' /* webpackChunkName: "components_global/Services" */).then(c => c.default || c)
 }
 

@@ -29,6 +29,12 @@
   "LazyResources": {
     "description": "Auto imported from components/global/Resources.vue"
   },
+  "Scrollsign": {
+    "description": "Auto imported from components/global/Scrollsign.vue"
+  },
+  "LazyScrollsign": {
+    "description": "Auto imported from components/global/Scrollsign.vue"
+  },
   "Services": {
     "description": "Auto imported from components/global/Services.vue"
   },
