@@ -15,6 +15,7 @@
         <a class="btn" href="/contact">Contact us</a>        
       </div>
     </div>
+    <scrollsign></scrollsign>
   </section>
 </template>
 

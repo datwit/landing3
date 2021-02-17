@@ -23,10 +23,7 @@ module.exports = {
       screens:{
         'xs': '360px', 
         ...defaultTheme.screens       
-      },
-      /* margin: {
-        '100': '30rem'
-      } */           
+      },               
     },
   },
   variants: {
