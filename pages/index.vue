@@ -4,7 +4,7 @@
 
     <services></services>
 
-    <goals></goals>
+    <scases></scases>
 
     <resources></resources>
 

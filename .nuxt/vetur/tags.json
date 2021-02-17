@@ -11,12 +11,6 @@
   "LazyCta": {
     "description": "Auto imported from components/global/CTA.vue"
   },
-  "Goals": {
-    "description": "Auto imported from components/global/Goals.vue"
-  },
-  "LazyGoals": {
-    "description": "Auto imported from components/global/Goals.vue"
-  },
   "Hero": {
     "description": "Auto imported from components/global/Hero.vue"
   },
@@ -28,6 +22,12 @@
   },
   "LazyResources": {
     "description": "Auto imported from components/global/Resources.vue"
+  },
+  "Scases": {
+    "description": "Auto imported from components/global/Scases.vue"
+  },
+  "LazyScases": {
+    "description": "Auto imported from components/global/Scases.vue"
   },
   "Scrollsign": {
     "description": "Auto imported from components/global/Scrollsign.vue"

@@ -189,14 +189,38 @@
   </nav>
 </template>
 
+<style scoped>
+/*******main menu**********************/
+.nav-link{  
+  transition: all ease 0.3s;
+  position: relative;
+  transition: 0.5s;
+  
+}
+.nav-link::after{
+  position: absolute;
+  content: "";
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background: #e69c24; 
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.5s; 
+}
+.nav-link:hover::after{
+  transform: scaleX(1);
+  transform-origin: left;
+}
+</style>
+
 <script lang="ts">
 import Vue from "vue";
 
 export default Vue.extend({
   data() {
-    return {
-      mobileMenu: false,
-      profileMenu: false,
+    return {      
       isOpen: false
     };
   },
