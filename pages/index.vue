@@ -6,6 +6,8 @@
 
     <scases></scases>
 
+    <mainpricing></mainpricing>
+
     <resources></resources>
 
     <cta></cta>

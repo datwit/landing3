@@ -17,6 +17,12 @@
   "LazyHero": {
     "description": "Auto imported from components/global/Hero.vue"
   },
+  "Mainpricing": {
+    "description": "Auto imported from components/global/Mainpricing.vue"
+  },
+  "LazyMainpricing": {
+    "description": "Auto imported from components/global/Mainpricing.vue"
+  },
   "Resources": {
     "description": "Auto imported from components/global/Resources.vue"
   },
