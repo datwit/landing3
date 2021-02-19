@@ -33,4 +33,8 @@ export default {
   content: {},
 
   build: {},
+
+  server: {
+    port: 3333 // default: 3000
+  },
 };

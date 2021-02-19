@@ -21,9 +21,9 @@ module.exports = {
         bggray: ' #eaebec'
       },
       screens:{
-        'xs': '360px', 
-        ...defaultTheme.screens       
-      },               
+        'xs': '360px',
+        ...defaultTheme.screens
+      },
     },
   },
   variants: {
@@ -31,25 +31,25 @@ module.exports = {
   },
   plugins: [
     require("@tailwindcss/typography"),
-    
+
     plugin(function({addComponents, theme}){
       const buttons = {
-        '.btn': {         
+        '.btn': {
           padding: '.5rem 1rem',
           'border-radius': '9999px',
           boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)',
           backgroundColor: theme('colors.secondary2'),
           color: 'white',
-          fontWeight: '600',           
+          fontWeight: '600',
           '&:hover': {
             backgroundColor: theme('colors.primary'),
             borderColor: 'white',
-            'transform': 'translateY(-3px)', 
-            'transition': ' .3s ease-in-out'                              
-          },          
+            'transform': 'translateY(-3px)',
+            'transition': ' .3s ease-in-out'
+          },
         },
       }
-    addComponents(buttons)  
+    addComponents(buttons)
     })
   ]
 }

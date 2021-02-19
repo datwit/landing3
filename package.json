@@ -26,15 +26,15 @@
     "@nuxtjs/eslint-config-typescript": "^4.0.0",
     "@nuxtjs/eslint-module": "^3.0.0",
     "@nuxtjs/tailwindcss": "^3.4.2",
-    "@tailwindcss/postcss7-compat": "^2.0.2",
-    "autoprefixer": "^9.8.6",
+    "autoprefixer": "^10.2.4",
     "babel-eslint": "^10.1.0",
     "eslint": "^7.13.0",
     "eslint-config-prettier": "^6.15.0",
     "eslint-plugin-nuxt": "^1.0.0",
     "eslint-plugin-prettier": "^3.1.4",
-    "postcss": "^7.0.35",
+    "postcss": "^8.2.6",
     "prettier": "^2.1.1",
-    "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.0.2"
+    "style-loader": "^2.0.0",
+    "tailwindcss": "^2.0.3"
   }
 }

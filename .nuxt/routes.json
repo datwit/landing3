@@ -2,36 +2,36 @@
   {
     "name": "blog",
     "path": "/blog",
-    "component": "C:\\\\Users\\\\Enma\\\\Desktop\\\\landing3\\\\pages\\\\blog\\\\index.vue",
+    "component": "/home/enma/Documentos/landing3/pages/blog/index.vue",
     "chunkName": "pages/blog/index",
-    "_name": "_13961764"
+    "_name": "_46155a74"
   },
   {
     "name": "contact",
     "path": "/contact",
-    "component": "C:\\\\Users\\\\Enma\\\\Desktop\\\\landing3\\\\pages\\\\contact.vue",
+    "component": "/home/enma/Documentos/landing3/pages/contact.vue",
     "chunkName": "pages/contact",
-    "_name": "_bbf663d8"
+    "_name": "_077d9ccf"
   },
   {
     "name": "blog-slug",
     "path": "/blog/:slug",
-    "component": "C:\\\\Users\\\\Enma\\\\Desktop\\\\landing3\\\\pages\\\\blog\\\\_slug.vue",
+    "component": "/home/enma/Documentos/landing3/pages/blog/_slug.vue",
     "chunkName": "pages/blog/_slug",
-    "_name": "_11df761c"
+    "_name": "_49829d04"
   },
   {
     "name": "index",
     "path": "/",
-    "component": "C:\\\\Users\\\\Enma\\\\Desktop\\\\landing3\\\\pages\\\\index.vue",
+    "component": "/home/enma/Documentos/landing3/pages/index.vue",
     "chunkName": "pages/index",
-    "_name": "_66755e74"
+    "_name": "_76089241"
   },
   {
     "name": "slug",
     "path": "/:slug",
-    "component": "C:\\\\Users\\\\Enma\\\\Desktop\\\\landing3\\\\pages\\\\_slug.vue",
+    "component": "/home/enma/Documentos/landing3/pages/_slug.vue",
     "chunkName": "pages/_slug",
-    "_name": "_69e2a104"
+    "_name": "_7451f0f9"
   }
 ]
