@@ -24,6 +24,10 @@ module.exports = {
         'xs': '360px',
         ...defaultTheme.screens
       },
+      padding:{
+        '1/3': '25%',
+        '1/35': '40%'
+      }
     },
   },
   variants: {
