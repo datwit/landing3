@@ -41,6 +41,12 @@
   "LazyScrollsign": {
     "description": "Auto imported from components/global/Scrollsign.vue"
   },
+  "Selection": {
+    "description": "Auto imported from components/global/Selection.vue"
+  },
+  "LazySelection": {
+    "description": "Auto imported from components/global/Selection.vue"
+  },
   "Services": {
     "description": "Auto imported from components/global/Services.vue"
   },

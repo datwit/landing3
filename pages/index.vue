@@ -1,5 +1,5 @@
 <template>
-  <main>    
+  <main>
     <hero></hero>
 
     <services></services>
@@ -8,8 +8,7 @@
 
     <mainpricing></mainpricing>
 
-    <resources></resources>
+    <selection></selection>
 
-    <cta></cta>
   </main>
 </template>

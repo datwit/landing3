@@ -1,7 +1,7 @@
 <template>
   <footer>
     <section class="bg-primary mx-auto px-10 relative">
-      <div class="sm:pt-1/35 lg:pt-1/3 mb-6">
+      <div class="sm:pt-1/35 lg:pt-1/3 xl:pt-64 2xl:pt-56  mb-6">
         <img class="mx-auto mb-6" src="/images/logo-grande.png" alt="logo" width="350px">
         <h1 class="text-white text-center text-4xl">Let's work together</h1>
       </div>
