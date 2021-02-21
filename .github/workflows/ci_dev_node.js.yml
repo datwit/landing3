@@ -1,0 +1,58 @@
+name: Nodejs CI-CD Development
+
+on:
+  push:
+    branches: [ development ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [14.x]
+
+    steps:
+      - uses: actions/checkout@v2
+      
+      - name: Use Node.js ${{ matrix.node-version }}
+      
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+
+      - run: npm install
+      - run: npm run generate
+
+      - uses: actions/upload-artifact@v2
+        with:
+          name: website
+          path: './dist'
+
+  deploy:
+    name: Deploy to AWS
+    runs-on: ubuntu-latest
+    needs: build
+    steps: 
+      - name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: eu-west-1
+
+      # download assets to current dir
+      - uses: actions/download-artifact@v2
+        with:
+          name: website
+
+      - name: Push files to bucket
+        run: |
+          aws s3 sync . s3://development.datwit.com --delete
+
+      # invalidated the entery distribution
+      - name: Invalidate entry point
+        run: |
+          aws cloudfront create-invalidation \
+            --distribution-id E1P9TLGJEOYVG3 \
+            --paths "/*"

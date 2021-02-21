@@ -1,0 +1,68 @@
+{
+  "Author": {
+    "description": "Auto imported from components/global/Author.vue"
+  },
+  "LazyAuthor": {
+    "description": "Auto imported from components/global/Author.vue"
+  },
+  "Cta": {
+    "description": "Auto imported from components/global/CTA.vue"
+  },
+  "LazyCta": {
+    "description": "Auto imported from components/global/CTA.vue"
+  },
+  "Hero": {
+    "description": "Auto imported from components/global/Hero.vue"
+  },
+  "LazyHero": {
+    "description": "Auto imported from components/global/Hero.vue"
+  },
+  "Mainpricing": {
+    "description": "Auto imported from components/global/Mainpricing.vue"
+  },
+  "LazyMainpricing": {
+    "description": "Auto imported from components/global/Mainpricing.vue"
+  },
+  "Resources": {
+    "description": "Auto imported from components/global/Resources.vue"
+  },
+  "LazyResources": {
+    "description": "Auto imported from components/global/Resources.vue"
+  },
+  "Scases": {
+    "description": "Auto imported from components/global/Scases.vue"
+  },
+  "LazyScases": {
+    "description": "Auto imported from components/global/Scases.vue"
+  },
+  "Scrollsign": {
+    "description": "Auto imported from components/global/Scrollsign.vue"
+  },
+  "LazyScrollsign": {
+    "description": "Auto imported from components/global/Scrollsign.vue"
+  },
+  "Selection": {
+    "description": "Auto imported from components/global/Selection.vue"
+  },
+  "LazySelection": {
+    "description": "Auto imported from components/global/Selection.vue"
+  },
+  "Services": {
+    "description": "Auto imported from components/global/Services.vue"
+  },
+  "LazyServices": {
+    "description": "Auto imported from components/global/Services.vue"
+  },
+  "Cheader": {
+    "description": "Auto imported from components/Cheader.vue"
+  },
+  "LazyCheader": {
+    "description": "Auto imported from components/Cheader.vue"
+  },
+  "Footer": {
+    "description": "Auto imported from components/Footer.vue"
+  },
+  "LazyFooter": {
+    "description": "Auto imported from components/Footer.vue"
+  }
+}
