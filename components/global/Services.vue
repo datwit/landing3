@@ -1,10 +1,11 @@
 <template>
   <section class="bg-white mx-auto max-w-screen-xl px-10" id="tabs">
     <cheader></cheader>
+    <div class="flex items-center">
     <div class="container px-5 mx-auto">
       <h4 class="mb-6">Lorem ipsum dolor sit amet consectetur adipisicing elit.</h4>
       <div class="flex flex-wrap -m-4">
-
+        <!----------------------------------------------------------------->
         <div class="sm:w-1/3 h-full w-full">
           <ul class="flex mb-0 list-none flex-wrap pt-3 pb-4 flex-row sm:flex-col">
             <li class="-mb-px mr-2 flex-auto text-center flex items-center sm:pb-12 flex-col">
@@ -32,9 +33,9 @@
             </li>
           </ul>
         </div>
-        <div class="sm:w-2/3 h-full relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg">
+        <div class="sm:w-2/3 h-full relative flex flex-col min-w-0 break-words bg-white w-full h-full mb-6 shadow-lg">
           <div class="px-4 flex-auto border-2 border-gray-200 border-opacity-60">
-            <div class="tab-content tab-space h-60">
+            <div class="tab-content tab-space">
               <div v-bind:class="{'hidden': openTab !== 1, 'block': openTab === 1}">
                 <p class="text-base">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit voluptate labore tempore necessitatibus, nobis obcaecati quibusdam cupiditate reiciendis quasi suscipit et, pariatur culpa facere illum soluta molestiae ad libero quia!
@@ -49,9 +50,11 @@
             </div>
           </div>
         </div>
-
+        <!------------------------------------------------------------------------------------->
       </div>
     </div>
+    </div>
+    <scrollsign></scrollsign>
   </section>
 </template>
 
