@@ -1,6 +1,6 @@
 <template>
   <nav class=" top-0 inset-x-0 bg-white z-10">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="container max-w-7xl mx-auto px-4 sm:px-6">
       <div class="flex items-center justify-between h-16">
         <div class="flex items-center">
           <div class="flex-shrink-0">
@@ -14,7 +14,7 @@
           </div>
           <div class="hidden md:block relative md:left-1/4 lg:left-2/4 xl:left-full">
             <div class="flex items-baseline"><!-- md:ml-20 lg:ml-72 xl:ml-100 -->
-              <nuxt-link                
+              <nuxt-link
                 to="/"
                 class=" nav-link ml-5 2xl:ml-8 py-2 text-sm font-semibold text-primary hover:text-secondary1 focus:outline-none focus:text-secondary1"
               >
@@ -25,7 +25,7 @@
                 class="nav-link ml-5 2xl:ml-8 py-2 text-sm font-semibold text-primary hover:text-secondary1 focus:outline-none focus:text-secondary1"
               >
                 Study Cases
-              </nuxt-link>              
+              </nuxt-link>
               <nuxt-link
                 to="/about"
                 class="nav-link ml-5 2xl:ml-8 py-2 text-sm font-semibold text-primary hover:text-secondary1 focus:outline-none focus:text-secondary1"
@@ -147,7 +147,7 @@
             <path
               d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z">
             </path>
-          </svg> 
+          </svg>
         </span>
         <span><nuxt-link to="/about">About Us</nuxt-link></span></span>
       <span
@@ -165,7 +165,7 @@
             <path
               d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">
             </path>
-          </svg>          
+          </svg>
         </span>
         <span><nuxt-link to="/contact">Contact Us</nuxt-link></span></span>
         <span
@@ -181,21 +181,21 @@
             viewBox="0 0 24 24"
             class="w-6 h-6">
             <path d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z"></path>
-          </svg> 
-        
+          </svg>
+
         </span>
-        <span><nuxt-link to="/blog">Blog</nuxt-link></span></span>      
-    </aside>   
+        <span><nuxt-link to="/blog">Blog</nuxt-link></span></span>
+    </aside>
   </nav>
 </template>
 
 <style scoped>
 /*******main menu**********************/
-.nav-link{  
+.nav-link{
   transition: all ease 0.3s;
   position: relative;
   transition: 0.5s;
-  
+
 }
 .nav-link::after{
   position: absolute;
@@ -204,10 +204,10 @@
   left: 0;
   width: 100%;
   height: 5px;
-  background: #e69c24; 
+  background: #e69c24;
   transform: scaleX(0);
   transform-origin: right;
-  transition: transform 0.5s; 
+  transition: transform 0.5s;
 }
 .nav-link:hover::after{
   transform: scaleX(1);
@@ -220,7 +220,7 @@ import Vue from "vue";
 
 export default Vue.extend({
   data() {
-    return {      
+    return {
       isOpen: false
     };
   },
@@ -240,9 +240,10 @@ export default Vue.extend({
       }
     }
   },
-   mounted() {
+  mounted() {
     document.addEventListener("keydown", e => {
-      if (e.keyCode == 27 && this.isOpen) this.isOpen = false;
+      if (e.keyCode == 27 && this.isOpen)
+        this.isOpen = false;
     });
   }
 });

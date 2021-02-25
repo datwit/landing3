@@ -1,153 +1,99 @@
 <template>
-  <section class="bg-white mx-auto px-4">
+  <section class="bg-white mx-auto max-w-screen-xl px-10" id="tabs">
     <cheader></cheader>
-    <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="lg:text-center">
-        <h3
-          class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl sm:leading-10"
-        >
-          Our Services
-        </h3>
-      </div>
-
-      <div class="mt-10">
-        <ul
-          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 md:gap-x-8 md:gap-y-10"
-        >
-          <li>
-            <div class="flex">
-              <div class="flex-shrink-0">
-                <div
-                  class="flex items-center justify-center h-12 w-12 rounded-md bg-blue-900 text-white"
-                >
-                  <svg
-                    class="h-6 w-6"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"
-                    />
-                  </svg>
-                </div>
+    <div class="flex items-center">
+    <div class="container px-5 mx-auto">
+      <h4 class="mb-6">Lorem ipsum dolor sit amet consectetur adipisicing elit.</h4>
+      <div class="flex flex-wrap -m-4">
+        <!----------------------------------------------------------------->
+        <div class="sm:w-1/3 h-full w-full">
+          <ul class="flex mb-0 list-none flex-wrap pt-3 pb-4 flex-row sm:flex-col">
+            <li class="-mb-px mr-2 flex-auto text-center flex items-center sm:pb-12 flex-col">
+              <svg class="h-8 w-8"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"
+                v-bind:class="{'text-primary bg-white': openTab !== 1, 'text-secondary2 bg-white sub': openTab === 1}">
+                <polyline points="16 18 22 12 16 6" />  <polyline points="8 6 2 12 8 18" />
+              </svg>
+              <a class="text-base font-bold  block leading-normal relative" v-on:click="toggleTabs(1)" v-bind:class="{'text-primary bg-white': openTab !== 1, 'text-secondary2 bg-white sub': openTab === 1}">
+                Software
+                <br />
+                Development
+              </a>
+            </li>
+            <li class="-mb-px mr-2 flex-auto text-center flex items-center flex-col">
+              <svg class="h-8 w-8"  width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"
+                v-bind:class="{'text-secondary2 bg-white': openTab !== 1, 'text-primary bg-white sub': openTab === 1}">  <path stroke="none" d="M0 0h24v24H0z"/>
+                <ellipse cx="12" cy="6" rx="8" ry="3"></ellipse>  <path d="M4 6v6a8 3 0 0 0 16 0v-6" />
+                <path d="M4 12v6a8 3 0 0 0 16 0v-6" />
+               </svg>
+              <a class="text-base font-bold leading-normal relative" v-on:click="toggleTabs(2)" v-bind:class="{'text-primary bg-white': openTab !== 2, 'text-secondary2  bg-white sub': openTab === 2}">
+                Data
+                <br />
+                Science
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="sm:w-2/3 h-full relative flex flex-col min-w-0 break-words bg-white w-full h-full mb-6 shadow-lg">
+          <div class="px-4 flex-auto border-2 border-gray-200 border-opacity-60">
+            <div class="tab-content tab-space">
+              <div v-bind:class="{'hidden': openTab !== 1, 'block': openTab === 1}">
+                <p class="text-base">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit voluptate labore tempore necessitatibus, nobis obcaecati quibusdam cupiditate reiciendis quasi suscipit et, pariatur culpa facere illum soluta molestiae ad libero quia!
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit voluptate labore tempore necessitatibus, nobis obcaecati quibusdam cupiditate reiciendis quasi suscipit et, pariatur culpa facere illum soluta molestiae ad libero quia!
+                </p>
               </div>
-              <div class="ml-4">
-                <h4 class="text-lg leading-6 font-medium text-gray-900">
-                  Software Development
-                </h4>
-                <p class="mt-2 text-base leading-6 text-gray-500">
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                  Maiores impedit perferendis suscipit eaque, iste dolor
-                  cupiditate blanditiis ratione.
+              <div v-bind:class="{'hidden': openTab !== 2, 'block': openTab === 2}">
+                <p class="text-base">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta quos vel iure illo quidem quod fuga natus deleniti fugiat ex minus, dolorum delectus. Porro officia error expedita non modi deserunt!
                 </p>
               </div>
             </div>
-          </li>
-          <li class="mt-10 md:mt-0">
-            <div class="flex">
-              <div class="flex-shrink-0">
-                <div
-                  class="flex items-center justify-center h-12 w-12 rounded-md bg-blue-900 text-white"
-                >
-                  <svg
-                    class="w-6 h-6"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M10 21h7a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v11m0 5l4.879-4.879m0 0a3 3 0 104.243-4.242 3 3 0 00-4.243 4.242z"
-                    />
-                  </svg>
-                </div>
-              </div>
-              <div class="ml-4">
-                <h4 class="text-lg leading-6 font-medium text-gray-900">
-                  Data Analysis
-                </h4>
-                <p class="mt-2 text-base leading-6 text-gray-500">
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                  Maiores impedit perferendis suscipit eaque, iste dolor
-                  cupiditate blanditiis ratione.
-                </p>
-              </div>
-            </div>
-          </li>
-          <li class="mt-10 md:mt-0">
-            <div class="flex">
-              <div class="flex-shrink-0">
-                <div
-                  class="flex items-center justify-center h-12 w-12 rounded-md bg-blue-900 text-white"
-                >
-                  <svg
-                    class="w-6 h-6"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"
-                    />
-                  </svg>
-                </div>
-              </div>
-              <div class="ml-4">
-                <h4 class="text-lg leading-6 font-medium text-gray-900">
-                  Data Visualization
-                </h4>
-                <p class="mt-2 text-base leading-6 text-gray-500">
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                  Maiores impedit perferendis suscipit eaque, iste dolor
-                  cupiditate blanditiis ratione.
-                </p>
-              </div>
-            </div>
-          </li>
-          <li class="mt-10 md:mt-0">
-            <div class="flex">
-              <div class="flex-shrink-0">
-                <div
-                  class="flex items-center justify-center h-12 w-12 rounded-md bg-blue-900 text-white"
-                >
-                  <svg
-                    class="w-6 h-6"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"
-                    />
-                  </svg>
-                </div>
-              </div>
-              <div class="ml-4">
-                <h4 class="text-lg leading-6 font-medium text-gray-900">
-                  Internet of Things
-                </h4>
-                <p class="mt-2 text-base leading-6 text-gray-500">
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                  Maiores impedit perferendis suscipit eaque, iste dolor
-                  cupiditate blanditiis ratione.
-                </p>
-              </div>
-            </div>
-          </li>
-        </ul>
+          </div>
+        </div>
+        <!------------------------------------------------------------------------------------->
       </div>
     </div>
+    </div>
+    <scrollsign></scrollsign>
   </section>
 </template>
+
+<style lang="css">
+
+a{
+  cursor: pointer;
+}
+a.sub::after{
+  position: absolute;
+  content: "";
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background: #e69c24;
+}
+
+</style>
+
+<script>
+
+export default {
+
+  data() {
+    return {
+      openTab: 1
+    }
+  },
+  methods: {
+    toggleTabs: function(tabNumber){
+      this.openTab = tabNumber
+    }
+  }
+}
+
+</script>
+
+
+
+
+
