@@ -88,7 +88,7 @@
           <div class="md:hidden">
             <VueSlickCarousel :arrows="true" :dots="true" v-bind="settings">
               <div class="c-cont">
-                <div class="p-3 border-2 border-gray-200 border-opacity-60 overflow-hidden">
+                <div class="h-full p-3 border-2 border-gray-200 border-opacity-60 overflow-hidden mx-4 md:mx-0">
                   <h2 class="text-sm tracking-widest title-font mb-1 font-medium pt-2 h-12">DATA SCIENCE</h2>
                   <h1 class="text-5xl text-primary mb-1 leading-none mx-auto">$69</h1>
                   <p class="text-xs text-gray-500 mt-3 border-b border-gray-200">Literally you probably haven't heard of them jean shorts.</p>
@@ -111,7 +111,7 @@
               </div>
               <!-------------------------------------------------------------------->
               <div class="c-cont">
-                <div class=" p-3 border-2 border-secondary2 border-opacity-60 overflow-hidden relative">
+                <div class="h-full p-3 border-2 border-secondary2 border-opacity-60 overflow-hidden relative mx-4 md:mx-0">
                   <span class="bg-secondary2 text-white px-3 py-1 tracking-widest text-xs absolute right-0 top-0 rounded-bl">POPULAR</span>
                   <h2 class="text-sm tracking-widest title-font mb-1 font-medium pt-2 h-12">SOFTWARE DEVELOPMENT</h2>
                   <h1 class="text-5xl text-primary leading-none mb-1 mx-auto">$38</h1>
@@ -135,7 +135,7 @@
               </div>
               <!------------------------------------------------------------------------->
               <div class="c-cont">
-                <div class="p-3 border-2 border-gray-200 border-opacity-60 overflow-hidden">
+                <div class="h-full p-3 border-2 border-gray-200 border-opacity-60 overflow-hidden mx-4 md:mx-0">
                   <h2 class="text-sm tracking-widest title-font mb-1 font-medium pt-2 h-12">DATA SCIENCE</h2>
                   <h1 class="text-5xl text-primary leading-none mb-4 mx-auto">$56</h1>
                   <p class="text-xs text-gray-500 mt-3 border-b border-gray-200">Literally you probably haven't heard of them jean shorts.</p>
@@ -163,13 +163,56 @@
       </section>
 </template>
 
-<style scoped>
-div.c-cont{
+<style>
+/* div.c-cont{
   width: 227px;
   height: 319px;
+} */
+
+/*overriding slick theme*/
+.slick-dots li.slick-active button::before {
+    opacity: 1;
+    color: #1e4158;
 }
-.slick-prev::before,.slick-next::before{
-  color: black !important;
+.slick-dots li button {
+  width: 25px;
+  height: 5px;
+  background: transparent;
+}
+.slick-dots li button::before {
+  width: 25px;
+  height: 5px;
+  content: '';
+  background: #00baff;
+}
+
+.slick-prev, .slick-next {
+  width: 25px;
+  height: 25px;
+  position: absolute;
+
+}
+.slick-prev{
+  transform: rotate(135deg);
+}
+.slick-next{
+  transform: rotate(45deg);
+}
+
+.slick-next::before {
+    width: 25px;
+    height: 25px;
+    border-top: 5px solid #00baff;
+    border-right: 5px solid #00baff;
+    /* position: absolute; */
+    transform: rotate(45deg);
+}
+.slick-prev::before {
+    width: 25px;
+    height: 25px;
+    border-bottom: 5px solid #00baff;
+    border-right: 5px solid #00baff;
+    transform: rotate(135deg);
 }
 
 </style>
