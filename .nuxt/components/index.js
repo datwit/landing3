@@ -9,6 +9,7 @@ export { default as Selection } from '../..\\components\\global\\Selection.vue'
 export { default as Services } from '../..\\components\\global\\Services.vue'
 export { default as Cheader } from '../..\\components\\Cheader.vue'
 export { default as Footer } from '../..\\components\\Footer.vue'
+export { default as Studycase } from '../..\\components\\partial\\Studycase.vue'
 
 export const LazyAuthor = import('../..\\components\\global\\Author.vue' /* webpackChunkName: "components_global/Author" */).then(c => c.default || c)
 export const LazyCta = import('../..\\components\\global\\CTA.vue' /* webpackChunkName: "components_global/CTA" */).then(c => c.default || c)
@@ -21,3 +22,4 @@ export const LazySelection = import('../..\\components\\global\\Selection.vue' /
 export const LazyServices = import('../..\\components\\global\\Services.vue' /* webpackChunkName: "components_global/Services" */).then(c => c.default || c)
 export const LazyCheader = import('../..\\components\\Cheader.vue' /* webpackChunkName: "components_Cheader" */).then(c => c.default || c)
 export const LazyFooter = import('../..\\components\\Footer.vue' /* webpackChunkName: "components_Footer" */).then(c => c.default || c)
+export const LazyStudycase = import('../..\\components\\partial\\Studycase.vue' /* webpackChunkName: "components_partial/Studycase" */).then(c => c.default || c)

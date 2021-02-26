@@ -64,5 +64,11 @@
   },
   "LazyFooter": {
     "description": "Auto imported from components/Footer.vue"
+  },
+  "Studycase": {
+    "description": "Auto imported from components/partial/Studycase.vue"
+  },
+  "LazyStudycase": {
+    "description": "Auto imported from components/partial/Studycase.vue"
   }
 }

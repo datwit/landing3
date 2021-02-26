@@ -228,6 +228,7 @@ import 'vue-slick-carousel/dist/vue-slick-carousel-theme.css'
     components: { VueSlickCarousel },
      data() {
       return {
+
         settings: {
           infinite: false,
           speed: 500,
