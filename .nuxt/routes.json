@@ -14,6 +14,13 @@
     "_name": "_6a19ac18"
   },
   {
+    "name": "team",
+    "path": "/team",
+    "component": "C:\\\\Users\\\\elmunozg\\\\Desktop\\\\landing3\\\\pages\\\\team.vue",
+    "chunkName": "pages/team",
+    "_name": "_3af1768e"
+  },
+  {
     "name": "blog-slug",
     "path": "/blog/:slug",
     "component": "C:\\\\Users\\\\elmunozg\\\\Desktop\\\\landing3\\\\pages\\\\blog\\\\_slug.vue",

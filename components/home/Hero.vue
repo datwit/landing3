@@ -1,5 +1,5 @@
 <template>
-  <section class="mx-auto max-w-screen-xl">
+  <section class="bg-white mx-auto max-w-screen-xl">
     <cheader></cheader>
     <div class="text-center relative" id= "hero-id"> <!-- mt-28 sm:mt-52 -->
       <h1>Bring your idea,
@@ -10,9 +10,9 @@
         Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem
         <br/>
         cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat aliqua.
-      </h4>      
+      </h4>
       <div class="justify-center my-8 select-none flex">
-        <a class="btn" href="/contact">Contact us</a>        
+        <a class="btn" href="/contact">Contact us</a>
       </div>
     </div>
     <scrollsign></scrollsign>

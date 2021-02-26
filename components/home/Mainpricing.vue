@@ -87,7 +87,7 @@
 
           <div class="md:hidden">
             <VueSlickCarousel :arrows="true" :dots="true" v-bind="settings">
-              <div class="c-cont">
+              <div>
                 <div class="h-full p-3 border-2 border-gray-200 border-opacity-60 overflow-hidden mx-4 md:mx-0">
                   <h2 class="text-sm tracking-widest title-font mb-1 font-medium pt-2 h-12">DATA SCIENCE</h2>
                   <h1 class="text-5xl text-primary mb-1 leading-none mx-auto">$69</h1>
@@ -110,7 +110,7 @@
                 </div>
               </div>
               <!-------------------------------------------------------------------->
-              <div class="c-cont">
+              <div>
                 <div class="h-full p-3 border-2 border-secondary2 border-opacity-60 overflow-hidden relative mx-4 md:mx-0">
                   <span class="bg-secondary2 text-white px-3 py-1 tracking-widest text-xs absolute right-0 top-0 rounded-bl">POPULAR</span>
                   <h2 class="text-sm tracking-widest title-font mb-1 font-medium pt-2 h-12">SOFTWARE DEVELOPMENT</h2>
@@ -134,7 +134,7 @@
                 </div>
               </div>
               <!------------------------------------------------------------------------->
-              <div class="c-cont">
+              <div>
                 <div class="h-full p-3 border-2 border-gray-200 border-opacity-60 overflow-hidden mx-4 md:mx-0">
                   <h2 class="text-sm tracking-widest title-font mb-1 font-medium pt-2 h-12">DATA SCIENCE</h2>
                   <h1 class="text-5xl text-primary leading-none mb-4 mx-auto">$56</h1>
