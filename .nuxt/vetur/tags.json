@@ -59,6 +59,12 @@
   "LazyServices": {
     "description": "Auto imported from components/home/Services.vue"
   },
+  "Iconblock": {
+    "description": "Auto imported from components/partial/Iconblock.vue"
+  },
+  "LazyIconblock": {
+    "description": "Auto imported from components/partial/Iconblock.vue"
+  },
   "Scrollsign": {
     "description": "Auto imported from components/partial/Scrollsign.vue"
   },
@@ -70,6 +76,12 @@
   },
   "LazyStudycase": {
     "description": "Auto imported from components/partial/Studycase.vue"
+  },
+  "Benefits": {
+    "description": "Auto imported from components/team/Benefits.vue"
+  },
+  "LazyBenefits": {
+    "description": "Auto imported from components/team/Benefits.vue"
   },
   "Tech": {
     "description": "Auto imported from components/team/Tech.vue"
