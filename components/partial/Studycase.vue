@@ -1,5 +1,6 @@
 <template>
-  <div class="h-full border-2 border-gray-200 border-opacity-60 overflow-hidden">
+<div>
+  <div class="h-full border-2 border-gray-200 border-opacity-60 overflow-hidden mx-4 md:mx-0">
     <img class="lg:h-48 md:h-36 w-full object-cover object-center" :src="img" :alt="alt">
     <div class="p-4">
       <!--  <h2 class="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">CATEGORY</h2> -->
@@ -15,6 +16,7 @@
       </div>
     </div>
   </div>
+</div>
 </template>
 
 

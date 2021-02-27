@@ -164,10 +164,6 @@
 </template>
 
 <style>
-/* div.c-cont{
-  width: 227px;
-  height: 319px;
-} */
 
 /*overriding slick theme*/
 .slick-dots li.slick-active button::before {
@@ -220,7 +216,6 @@
 <script lang = "js">
 import VueSlickCarousel from 'vue-slick-carousel'
 import 'vue-slick-carousel/dist/vue-slick-carousel.css'
-// optional style for arrows & dots
 import 'vue-slick-carousel/dist/vue-slick-carousel-theme.css'
 
   export default {
@@ -232,8 +227,8 @@ import 'vue-slick-carousel/dist/vue-slick-carousel-theme.css'
         settings: {
           infinite: false,
           speed: 500,
-          slidesToShow: 4,
-          slidesToScroll: 4,
+          slidesToShow: 3,
+          slidesToScroll: 3,
           initialSlide: 0,
           responsive: [
 
@@ -242,7 +237,7 @@ import 'vue-slick-carousel/dist/vue-slick-carousel-theme.css'
         settings: {
           slidesToShow: 2,
           slidesToScroll: 2,
-          initialSlide: 2
+          initialSlide: 0
         }
       },
       {

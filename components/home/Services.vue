@@ -33,7 +33,7 @@
             </li>
           </ul>
         </div>
-        <div class="sm:w-2/3 h-full relative flex flex-col min-w-0 break-words bg-white w-full h-full mb-6 shadow-lg">
+        <div class="sm:w-2/3 relative flex flex-col min-w-0 break-words bg-white w-full h-full mb-6 shadow-lg">
           <div class="px-4 flex-auto border-2 border-gray-200 border-opacity-60">
             <div class="tab-content tab-space">
               <div v-bind:class="{'hidden': openTab !== 1, 'block': openTab === 1}">
