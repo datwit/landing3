@@ -59,12 +59,6 @@
   "LazyServices": {
     "description": "Auto imported from components/home/Services.vue"
   },
-  "Tech": {
-    "description": "Auto imported from components/team/Tech.vue"
-  },
-  "LazyTech": {
-    "description": "Auto imported from components/team/Tech.vue"
-  },
   "Scrollsign": {
     "description": "Auto imported from components/partial/Scrollsign.vue"
   },
@@ -76,5 +70,11 @@
   },
   "LazyStudycase": {
     "description": "Auto imported from components/partial/Studycase.vue"
+  },
+  "Tech": {
+    "description": "Auto imported from components/team/Tech.vue"
+  },
+  "LazyTech": {
+    "description": "Auto imported from components/team/Tech.vue"
   }
 }

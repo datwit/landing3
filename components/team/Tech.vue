@@ -4,7 +4,7 @@
       <div class="container px-5 mx-auto">
         <h2 class="mt-4">Lorem ipsum dolor sit amet consectetur. </h2>
         <h4 class="mb-6">Blanditiis enim nihil earum qui, a non fugit consectetur nobis natus quasi...</h4>
-        <div class="flex flex-wrap -m-4 absolute top-1/3">
+        <div class="flex flex-wrap -m-4 relative sm:mt-1/3 lg:mt-1/4">
           <div v-for="image in images" :key="image"  class="p-4 w-1/2 sm:w-1/5">
             <img :src="image.src" :alt="image.alt">
           </div>
@@ -13,6 +13,7 @@
       <scrollsign></scrollsign>
   </section>
 </template>
+
 
 <script>
 export default {

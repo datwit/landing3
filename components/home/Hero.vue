@@ -1,7 +1,7 @@
 <template>
   <section class="bg-white mx-auto max-w-screen-xl">
     <cheader></cheader>
-    <div class="text-center relative" id= "hero-id"> <!-- mt-28 sm:mt-52 -->
+    <div class="text-center relative" id= "hero-id">
       <h1>Bring your idea,
         <br/>
         <span class="text-primary">we will make it real!</span>
