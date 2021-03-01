@@ -83,6 +83,12 @@
   "LazyFinding": {
     "description": "Auto imported from components/partner/Finding.vue"
   },
+  "Partnerchoosing": {
+    "description": "Auto imported from components/partner/Partnerchoosing.vue"
+  },
+  "LazyPartnerchoosing": {
+    "description": "Auto imported from components/partner/Partnerchoosing.vue"
+  },
   "Benefits": {
     "description": "Auto imported from components/team/Benefits.vue"
   },
