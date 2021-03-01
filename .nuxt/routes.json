@@ -12,6 +12,18 @@
     "chunkName": "pages/contact"
   },
   {
+    "name": "partner",
+    "path": "/partner",
+    "component": "C:\\\\Users\\\\elmunozg\\\\Desktop\\\\landing3\\\\pages\\\\partner.vue",
+    "chunkName": "pages/partner"
+  },
+  {
+    "name": "team",
+    "path": "/team",
+    "component": "C:\\\\Users\\\\elmunozg\\\\Desktop\\\\landing3\\\\pages\\\\team.vue",
+    "chunkName": "pages/team"
+  },
+  {
     "name": "blog-slug",
     "path": "/blog/:slug",
     "component": "C:\\\\Users\\\\elmunozg\\\\Desktop\\\\landing3\\\\pages\\\\blog\\\\_slug.vue",
