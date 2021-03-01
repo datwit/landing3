@@ -14,6 +14,13 @@
     "_name": "_6a19ac18"
   },
   {
+    "name": "partner",
+    "path": "/partner",
+    "component": "C:\\\\Users\\\\elmunozg\\\\Desktop\\\\landing3\\\\pages\\\\partner.vue",
+    "chunkName": "pages/partner",
+    "_name": "_029c4e9c"
+  },
+  {
     "name": "team",
     "path": "/team",
     "component": "C:\\\\Users\\\\elmunozg\\\\Desktop\\\\landing3\\\\pages\\\\team.vue",
