@@ -11,6 +11,7 @@ export { default as Services } from '../..\\components\\home\\Services.vue'
 export { default as Iconblock } from '../..\\components\\partial\\Iconblock.vue'
 export { default as Scrollsign } from '../..\\components\\partial\\Scrollsign.vue'
 export { default as Studycase } from '../..\\components\\partial\\Studycase.vue'
+export { default as Faqs } from '../..\\components\\partner\\Faqs.vue'
 export { default as Finding } from '../..\\components\\partner\\Finding.vue'
 export { default as Partnerchoosing } from '../..\\components\\partner\\Partnerchoosing.vue'
 export { default as Benefits } from '../..\\components\\team\\Benefits.vue'
@@ -29,6 +30,7 @@ export const LazyServices = import('../..\\components\\home\\Services.vue' /* we
 export const LazyIconblock = import('../..\\components\\partial\\Iconblock.vue' /* webpackChunkName: "components_partial/Iconblock" */).then(c => c.default || c)
 export const LazyScrollsign = import('../..\\components\\partial\\Scrollsign.vue' /* webpackChunkName: "components_partial/Scrollsign" */).then(c => c.default || c)
 export const LazyStudycase = import('../..\\components\\partial\\Studycase.vue' /* webpackChunkName: "components_partial/Studycase" */).then(c => c.default || c)
+export const LazyFaqs = import('../..\\components\\partner\\Faqs.vue' /* webpackChunkName: "components_partner/Faqs" */).then(c => c.default || c)
 export const LazyFinding = import('../..\\components\\partner\\Finding.vue' /* webpackChunkName: "components_partner/Finding" */).then(c => c.default || c)
 export const LazyPartnerchoosing = import('../..\\components\\partner\\Partnerchoosing.vue' /* webpackChunkName: "components_partner/Partnerchoosing" */).then(c => c.default || c)
 export const LazyBenefits = import('../..\\components\\team\\Benefits.vue' /* webpackChunkName: "components_team/Benefits" */).then(c => c.default || c)

@@ -77,6 +77,12 @@
   "LazyStudycase": {
     "description": "Auto imported from components/partial/Studycase.vue"
   },
+  "Faqs": {
+    "description": "Auto imported from components/partner/Faqs.vue"
+  },
+  "LazyFaqs": {
+    "description": "Auto imported from components/partner/Faqs.vue"
+  },
   "Finding": {
     "description": "Auto imported from components/partner/Finding.vue"
   },
