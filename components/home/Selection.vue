@@ -1,5 +1,5 @@
 <template>
-    <section class="bg-white mx-auto max-w-screen-xl px-10">
+    <section class="bg-white mx-auto max-w-screen-xl">
         <cheader></cheader>
         <div class="container px-5 mx-auto 2xl:pt-20">
             <h4 class="mb-6 text-primary">Lorem ipsum dolor, sit amet consectetur adipisicing elit...</h4>

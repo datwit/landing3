@@ -1,5 +1,5 @@
 <template>
-  <section class="bg-white mx-auto max-w-screen-xl px-10">
+  <section class="bg-white mx-auto max-w-screen-xl">
     <cheader></cheader>
     <div class="flex items-center">
     <div class="container px-5 mx-auto">

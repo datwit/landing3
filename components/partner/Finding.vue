@@ -1,5 +1,5 @@
 <template>
-  <section class="bg-white mx-auto max-w-screen-xl px-10">
+  <section class="bg-white mx-auto max-w-screen-xl">
     <cheader></cheader>
     <div class="container px-5 mx-auto">
       <h2 class="mt-0">Find the right partnership</h2>
@@ -31,5 +31,6 @@
           </div>
         </div>
     </div>
+    <scrollsign></scrollsign>
   </section>
 </template>
