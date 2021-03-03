@@ -59,24 +59,6 @@
   "LazyServices": {
     "description": "Auto imported from components/home/Services.vue"
   },
-  "Iconblock": {
-    "description": "Auto imported from components/partial/Iconblock.vue"
-  },
-  "LazyIconblock": {
-    "description": "Auto imported from components/partial/Iconblock.vue"
-  },
-  "Scrollsign": {
-    "description": "Auto imported from components/partial/Scrollsign.vue"
-  },
-  "LazyScrollsign": {
-    "description": "Auto imported from components/partial/Scrollsign.vue"
-  },
-  "Studycase": {
-    "description": "Auto imported from components/partial/Studycase.vue"
-  },
-  "LazyStudycase": {
-    "description": "Auto imported from components/partial/Studycase.vue"
-  },
   "Faqs": {
     "description": "Auto imported from components/partner/Faqs.vue"
   },
@@ -106,5 +88,29 @@
   },
   "LazyTech": {
     "description": "Auto imported from components/team/Tech.vue"
+  },
+  "Collapsible": {
+    "description": "Auto imported from components/partial/Collapsible.vue"
+  },
+  "LazyCollapsible": {
+    "description": "Auto imported from components/partial/Collapsible.vue"
+  },
+  "Iconblock": {
+    "description": "Auto imported from components/partial/Iconblock.vue"
+  },
+  "LazyIconblock": {
+    "description": "Auto imported from components/partial/Iconblock.vue"
+  },
+  "Scrollsign": {
+    "description": "Auto imported from components/partial/Scrollsign.vue"
+  },
+  "LazyScrollsign": {
+    "description": "Auto imported from components/partial/Scrollsign.vue"
+  },
+  "Studycase": {
+    "description": "Auto imported from components/partial/Studycase.vue"
+  },
+  "LazyStudycase": {
+    "description": "Auto imported from components/partial/Studycase.vue"
   }
 }
