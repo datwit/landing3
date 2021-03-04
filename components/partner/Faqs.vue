@@ -4,9 +4,8 @@
     <div class="container px-5 mx-auto">
       <h2 class="mt-0">Frequently ask questions</h2>
       <h4 class="mb-6">Lorem, ipsum dolor sit amet consectetur adipisicing elit...</h4>
-
         <!------------------------------------>
-        <div class="collapsible-wrap" id="app">
+        <div class="collapsible-wrap mb-16" id="app">
           <Collapsible
           title="Question 1"
           cont = "Lorem ipsum"
@@ -21,7 +20,10 @@
           />
         </div>
         <!------------------------------------->
-
+        <div class="mx-auto flex justify-center items-center flex-col">
+          <h3 class="mb-5">Let's work together</h3>
+          <a class="btn" href="/contact">Contact us</a>
+        </div>
     </div>
     <scrollsign></scrollsign>
   </section>

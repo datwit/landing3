@@ -5,17 +5,41 @@
   "LazyAuthor": {
     "description": "Auto imported from components/global/Author.vue"
   },
+  "Collapsible": {
+    "description": "Auto imported from components/global/Collapsible.vue"
+  },
+  "LazyCollapsible": {
+    "description": "Auto imported from components/global/Collapsible.vue"
+  },
   "Cta": {
     "description": "Auto imported from components/global/CTA.vue"
   },
   "LazyCta": {
     "description": "Auto imported from components/global/CTA.vue"
   },
+  "Iconblock": {
+    "description": "Auto imported from components/global/Iconblock.vue"
+  },
+  "LazyIconblock": {
+    "description": "Auto imported from components/global/Iconblock.vue"
+  },
   "Resources": {
     "description": "Auto imported from components/global/Resources.vue"
   },
   "LazyResources": {
     "description": "Auto imported from components/global/Resources.vue"
+  },
+  "Scrollsign": {
+    "description": "Auto imported from components/global/Scrollsign.vue"
+  },
+  "LazyScrollsign": {
+    "description": "Auto imported from components/global/Scrollsign.vue"
+  },
+  "Studycase": {
+    "description": "Auto imported from components/global/Studycase.vue"
+  },
+  "LazyStudycase": {
+    "description": "Auto imported from components/global/Studycase.vue"
   },
   "Cheader": {
     "description": "Auto imported from components/Cheader.vue"
@@ -28,36 +52,6 @@
   },
   "LazyFooter": {
     "description": "Auto imported from components/Footer.vue"
-  },
-  "Hero": {
-    "description": "Auto imported from components/home/Hero.vue"
-  },
-  "LazyHero": {
-    "description": "Auto imported from components/home/Hero.vue"
-  },
-  "Mainpricing": {
-    "description": "Auto imported from components/home/Mainpricing.vue"
-  },
-  "LazyMainpricing": {
-    "description": "Auto imported from components/home/Mainpricing.vue"
-  },
-  "Scases": {
-    "description": "Auto imported from components/home/Scases.vue"
-  },
-  "LazyScases": {
-    "description": "Auto imported from components/home/Scases.vue"
-  },
-  "Selection": {
-    "description": "Auto imported from components/home/Selection.vue"
-  },
-  "LazySelection": {
-    "description": "Auto imported from components/home/Selection.vue"
-  },
-  "Services": {
-    "description": "Auto imported from components/home/Services.vue"
-  },
-  "LazyServices": {
-    "description": "Auto imported from components/home/Services.vue"
   },
   "Faqs": {
     "description": "Auto imported from components/partner/Faqs.vue"
@@ -89,28 +83,34 @@
   "LazyTech": {
     "description": "Auto imported from components/team/Tech.vue"
   },
-  "Collapsible": {
-    "description": "Auto imported from components/partial/Collapsible.vue"
+  "Hero": {
+    "description": "Auto imported from components/home/Hero.vue"
   },
-  "LazyCollapsible": {
-    "description": "Auto imported from components/partial/Collapsible.vue"
+  "LazyHero": {
+    "description": "Auto imported from components/home/Hero.vue"
   },
-  "Iconblock": {
-    "description": "Auto imported from components/partial/Iconblock.vue"
+  "Mainpricing": {
+    "description": "Auto imported from components/home/Mainpricing.vue"
   },
-  "LazyIconblock": {
-    "description": "Auto imported from components/partial/Iconblock.vue"
+  "LazyMainpricing": {
+    "description": "Auto imported from components/home/Mainpricing.vue"
   },
-  "Scrollsign": {
-    "description": "Auto imported from components/partial/Scrollsign.vue"
+  "Scases": {
+    "description": "Auto imported from components/home/Scases.vue"
   },
-  "LazyScrollsign": {
-    "description": "Auto imported from components/partial/Scrollsign.vue"
+  "LazyScases": {
+    "description": "Auto imported from components/home/Scases.vue"
   },
-  "Studycase": {
-    "description": "Auto imported from components/partial/Studycase.vue"
+  "Selection": {
+    "description": "Auto imported from components/home/Selection.vue"
   },
-  "LazyStudycase": {
-    "description": "Auto imported from components/partial/Studycase.vue"
+  "LazySelection": {
+    "description": "Auto imported from components/home/Selection.vue"
+  },
+  "Services": {
+    "description": "Auto imported from components/home/Services.vue"
+  },
+  "LazyServices": {
+    "description": "Auto imported from components/home/Services.vue"
   }
 }
