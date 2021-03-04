@@ -53,35 +53,11 @@
   "LazyFooter": {
     "description": "Auto imported from components/Footer.vue"
   },
-  "Faqs": {
-    "description": "Auto imported from components/partner/Faqs.vue"
+  "Adatwit": {
+    "description": "Auto imported from components/aboutus/Adatwit.vue"
   },
-  "LazyFaqs": {
-    "description": "Auto imported from components/partner/Faqs.vue"
-  },
-  "Finding": {
-    "description": "Auto imported from components/partner/Finding.vue"
-  },
-  "LazyFinding": {
-    "description": "Auto imported from components/partner/Finding.vue"
-  },
-  "Partnerchoosing": {
-    "description": "Auto imported from components/partner/Partnerchoosing.vue"
-  },
-  "LazyPartnerchoosing": {
-    "description": "Auto imported from components/partner/Partnerchoosing.vue"
-  },
-  "Benefits": {
-    "description": "Auto imported from components/team/Benefits.vue"
-  },
-  "LazyBenefits": {
-    "description": "Auto imported from components/team/Benefits.vue"
-  },
-  "Tech": {
-    "description": "Auto imported from components/team/Tech.vue"
-  },
-  "LazyTech": {
-    "description": "Auto imported from components/team/Tech.vue"
+  "LazyAdatwit": {
+    "description": "Auto imported from components/aboutus/Adatwit.vue"
   },
   "Hero": {
     "description": "Auto imported from components/home/Hero.vue"
@@ -112,5 +88,35 @@
   },
   "LazyServices": {
     "description": "Auto imported from components/home/Services.vue"
+  },
+  "Faqs": {
+    "description": "Auto imported from components/partner/Faqs.vue"
+  },
+  "LazyFaqs": {
+    "description": "Auto imported from components/partner/Faqs.vue"
+  },
+  "Finding": {
+    "description": "Auto imported from components/partner/Finding.vue"
+  },
+  "LazyFinding": {
+    "description": "Auto imported from components/partner/Finding.vue"
+  },
+  "Partnerchoosing": {
+    "description": "Auto imported from components/partner/Partnerchoosing.vue"
+  },
+  "LazyPartnerchoosing": {
+    "description": "Auto imported from components/partner/Partnerchoosing.vue"
+  },
+  "Benefits": {
+    "description": "Auto imported from components/team/Benefits.vue"
+  },
+  "LazyBenefits": {
+    "description": "Auto imported from components/team/Benefits.vue"
+  },
+  "Tech": {
+    "description": "Auto imported from components/team/Tech.vue"
+  },
+  "LazyTech": {
+    "description": "Auto imported from components/team/Tech.vue"
   }
 }

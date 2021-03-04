@@ -1,5 +1,12 @@
 [
   {
+    "name": "about",
+    "path": "/about",
+    "component": "C:\\\\Users\\\\elmunozg\\\\Desktop\\\\landing3\\\\pages\\\\about.vue",
+    "chunkName": "pages/about",
+    "_name": "_2ba149e1"
+  },
+  {
     "name": "blog",
     "path": "/blog",
     "component": "C:\\\\Users\\\\elmunozg\\\\Desktop\\\\landing3\\\\pages\\\\blog\\\\index.vue",
