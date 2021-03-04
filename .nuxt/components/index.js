@@ -8,6 +8,8 @@ export { default as Studycase } from '../..\\components\\global\\Studycase.vue'
 export { default as Cheader } from '../..\\components\\Cheader.vue'
 export { default as Footer } from '../..\\components\\Footer.vue'
 export { default as Adatwit } from '../..\\components\\aboutus\\Adatwit.vue'
+export { default as Collaborators } from '../..\\components\\aboutus\\Collaborators.vue'
+export { default as Team } from '../..\\components\\aboutus\\Team.vue'
 export { default as Hero } from '../..\\components\\home\\Hero.vue'
 export { default as Mainpricing } from '../..\\components\\home\\Mainpricing.vue'
 export { default as Scases } from '../..\\components\\home\\Scases.vue'
@@ -29,6 +31,8 @@ export const LazyStudycase = import('../..\\components\\global\\Studycase.vue' /
 export const LazyCheader = import('../..\\components\\Cheader.vue' /* webpackChunkName: "components_Cheader" */).then(c => c.default || c)
 export const LazyFooter = import('../..\\components\\Footer.vue' /* webpackChunkName: "components_Footer" */).then(c => c.default || c)
 export const LazyAdatwit = import('../..\\components\\aboutus\\Adatwit.vue' /* webpackChunkName: "components_aboutus/Adatwit" */).then(c => c.default || c)
+export const LazyCollaborators = import('../..\\components\\aboutus\\Collaborators.vue' /* webpackChunkName: "components_aboutus/Collaborators" */).then(c => c.default || c)
+export const LazyTeam = import('../..\\components\\aboutus\\Team.vue' /* webpackChunkName: "components_aboutus/Team" */).then(c => c.default || c)
 export const LazyHero = import('../..\\components\\home\\Hero.vue' /* webpackChunkName: "components_home/Hero" */).then(c => c.default || c)
 export const LazyMainpricing = import('../..\\components\\home\\Mainpricing.vue' /* webpackChunkName: "components_home/Mainpricing" */).then(c => c.default || c)
 export const LazyScases = import('../..\\components\\home\\Scases.vue' /* webpackChunkName: "components_home/Scases" */).then(c => c.default || c)

@@ -59,6 +59,18 @@
   "LazyAdatwit": {
     "description": "Auto imported from components/aboutus/Adatwit.vue"
   },
+  "Collaborators": {
+    "description": "Auto imported from components/aboutus/Collaborators.vue"
+  },
+  "LazyCollaborators": {
+    "description": "Auto imported from components/aboutus/Collaborators.vue"
+  },
+  "Team": {
+    "description": "Auto imported from components/aboutus/Team.vue"
+  },
+  "LazyTeam": {
+    "description": "Auto imported from components/aboutus/Team.vue"
+  },
   "Hero": {
     "description": "Auto imported from components/home/Hero.vue"
   },
