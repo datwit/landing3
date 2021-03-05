@@ -6,12 +6,12 @@ import scrollBehavior from './router.scrollBehavior.js'
 
 const _2ba149e1 = () => interopDefault(import('..\\pages\\about.vue' /* webpackChunkName: "pages/about" */))
 const _24338344 = () => interopDefault(import('..\\pages\\blog\\index.vue' /* webpackChunkName: "pages/blog/index" */))
+const _0410e571 = () => interopDefault(import('..\\pages\\cases-studies\\index.vue' /* webpackChunkName: "pages/cases-studies/index" */))
 const _6a19ac18 = () => interopDefault(import('..\\pages\\contact.vue' /* webpackChunkName: "pages/contact" */))
 const _029c4e9c = () => interopDefault(import('..\\pages\\partner.vue' /* webpackChunkName: "pages/partner" */))
 const _3af1768e = () => interopDefault(import('..\\pages\\team.vue' /* webpackChunkName: "pages/team" */))
 const _227ce1fc = () => interopDefault(import('..\\pages\\blog\\_slug.vue' /* webpackChunkName: "pages/blog/_slug" */))
 const _4b5924a6 = () => interopDefault(import('..\\pages\\index.vue' /* webpackChunkName: "pages/index" */))
-const _49a2835e = () => interopDefault(import('..\\pages\\_slug.vue' /* webpackChunkName: "pages/_slug" */))
 
 // TODO: remove in Nuxt 3
 const emptyFn = () => {}
@@ -38,6 +38,10 @@ export const routerOptions = {
     component: _24338344,
     name: "blog"
   }, {
+    path: "/cases-studies",
+    component: _0410e571,
+    name: "cases-studies"
+  }, {
     path: "/contact",
     component: _6a19ac18,
     name: "contact"
@@ -57,10 +61,6 @@ export const routerOptions = {
     path: "/",
     component: _4b5924a6,
     name: "index"
-  }, {
-    path: "/:slug",
-    component: _49a2835e,
-    name: "slug"
   }],
 
   fallback: false

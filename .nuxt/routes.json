@@ -14,6 +14,13 @@
     "_name": "_24338344"
   },
   {
+    "name": "cases-studies",
+    "path": "/cases-studies",
+    "component": "C:\\\\Users\\\\elmunozg\\\\Desktop\\\\landing3\\\\pages\\\\cases-studies\\\\index.vue",
+    "chunkName": "pages/cases-studies/index",
+    "_name": "_0410e571"
+  },
+  {
     "name": "contact",
     "path": "/contact",
     "component": "C:\\\\Users\\\\elmunozg\\\\Desktop\\\\landing3\\\\pages\\\\contact.vue",
@@ -47,12 +54,5 @@
     "component": "C:\\\\Users\\\\elmunozg\\\\Desktop\\\\landing3\\\\pages\\\\index.vue",
     "chunkName": "pages/index",
     "_name": "_4b5924a6"
-  },
-  {
-    "name": "slug",
-    "path": "/:slug",
-    "component": "C:\\\\Users\\\\elmunozg\\\\Desktop\\\\landing3\\\\pages\\\\_slug.vue",
-    "chunkName": "pages/_slug",
-    "_name": "_49a2835e"
   }
 ]
