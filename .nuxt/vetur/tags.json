@@ -53,6 +53,12 @@
   "LazyFooter": {
     "description": "Auto imported from components/Footer.vue"
   },
+  "Test": {
+    "description": "Auto imported from components/test.vue"
+  },
+  "LazyTest": {
+    "description": "Auto imported from components/test.vue"
+  },
   "Adatwit": {
     "description": "Auto imported from components/aboutus/Adatwit.vue"
   },

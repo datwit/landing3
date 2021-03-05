@@ -7,6 +7,7 @@ export { default as Scrollsign } from '../..\\components\\global\\Scrollsign.vue
 export { default as Studycase } from '../..\\components\\global\\Studycase.vue'
 export { default as Cheader } from '../..\\components\\Cheader.vue'
 export { default as Footer } from '../..\\components\\Footer.vue'
+export { default as Test } from '../..\\components\\test.vue'
 export { default as Adatwit } from '../..\\components\\aboutus\\Adatwit.vue'
 export { default as Collaborators } from '../..\\components\\aboutus\\Collaborators.vue'
 export { default as Team } from '../..\\components\\aboutus\\Team.vue'
@@ -30,6 +31,7 @@ export const LazyScrollsign = import('../..\\components\\global\\Scrollsign.vue'
 export const LazyStudycase = import('../..\\components\\global\\Studycase.vue' /* webpackChunkName: "components_global/Studycase" */).then(c => c.default || c)
 export const LazyCheader = import('../..\\components\\Cheader.vue' /* webpackChunkName: "components_Cheader" */).then(c => c.default || c)
 export const LazyFooter = import('../..\\components\\Footer.vue' /* webpackChunkName: "components_Footer" */).then(c => c.default || c)
+export const LazyTest = import('../..\\components\\test.vue' /* webpackChunkName: "components_test" */).then(c => c.default || c)
 export const LazyAdatwit = import('../..\\components\\aboutus\\Adatwit.vue' /* webpackChunkName: "components_aboutus/Adatwit" */).then(c => c.default || c)
 export const LazyCollaborators = import('../..\\components\\aboutus\\Collaborators.vue' /* webpackChunkName: "components_aboutus/Collaborators" */).then(c => c.default || c)
 export const LazyTeam = import('../..\\components\\aboutus\\Team.vue' /* webpackChunkName: "components_aboutus/Team" */).then(c => c.default || c)
