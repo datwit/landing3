@@ -1,9 +1,15 @@
-import React from 'react'
+import React, { Fragment } from 'react'
+import Section from './components/Section';
+
 
 function App() {
-  let msg = 'Hola Mundo'
+
   return (
-    <div>{msg}</div>
+    <Fragment>
+      <Section name="Section 1" />
+      <Section name="Section 2" />
+      <Section name="Section 3" />
+    </Fragment>
   );
 }
 
