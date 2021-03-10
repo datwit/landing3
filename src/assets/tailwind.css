@@ -3,3 +3,16 @@
 @tailwind utilities;
 
 
+:disabled{
+    border: 2px solid #cacaca !important;
+    background: transparent;
+}
+
+#control{
+    border-radius: 50%;    
+    margin: 0 10px 0 10px;
+    width: 15px;
+    height: 15px;
+    background: #cacaca;
+    border: transparent;
+}

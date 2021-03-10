@@ -1,16 +1,15 @@
-import React, { Fragment } from 'react'
-import Section from './components/Section';
+import React from 'react'
+import FullPageExampleCustomControls from './components/FullPageExampleCustomControls';
+// import Section from './components/Section';
 
 
-function App() {
 
-  return (
-    <Fragment>
-      <Section name="Section 1" />
-      <Section name="Section 2" />
-      <Section name="Section 3" />
-    </Fragment>
-  );
-}
+ const  App = () => (
+   <FullPageExampleCustomControls />
+ )
 
 export default App;
+
+
+
+
