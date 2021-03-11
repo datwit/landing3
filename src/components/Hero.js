@@ -1,4 +1,5 @@
 import React from 'react'
+import CTA from './CTA'
 
 
 const Hero = ()=>(
@@ -12,6 +13,7 @@ const Hero = ()=>(
         <br/>
         cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat aliqua.
       </h4>
+      <CTA/>
     </div>    
 )
 export default Hero
