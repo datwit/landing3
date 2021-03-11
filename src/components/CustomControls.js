@@ -11,14 +11,6 @@ class CustomControls extends React.Component {
     slidesCount: PropTypes.number.isRequired,
     style: PropTypes.object,
   }
-
-
-
-
-
-
-
-
   static defaultProps = {
     className: 'full-page-controls',
     style: {
@@ -47,22 +39,18 @@ class CustomControls extends React.Component {
   }
 
   render() {
-    const { scrollToSlide, slidesCount } = this.props;
-    let cont = 0;
+    const { scrollToSlide } = this.props;
+    
     const handler = (event) => {
       switch (event.keyCode) {
         case 40:
-          if (cont < slidesCount && cont >= 0) {
-            cont++
-          }
-          console.log(cont)
-          scrollToSlide(cont)
+          if (getCurrentSlideIndex===0) {
+            scrollToSlide(2);
+          }          
+          scrollToSlide(getCurrentSlideIndex() +1);
           break;
         case 38:
-          if (cont < slidesCount && cont > 0) {
-            cont--
-          }
-          scrollToSlide(cont)
+          scrollToSlide(getCurrentSlideIndex() -1)
           break;
 
         default:
@@ -70,14 +58,13 @@ class CustomControls extends React.Component {
       }
     }
     window.addEventListener('keydown', handler)
+
     const {
-      getCurrentSlideIndex, style, className,
-    } = this.props;
-    const currentSlideIndex = getCurrentSlideIndex();
+      getCurrentSlideIndex, style, className,} = this.props;    
 
     return (
       <div className={className} style={style}>
-        {this.renderSlidesNumbers(currentSlideIndex)}
+        {this.renderSlidesNumbers(getCurrentSlideIndex)}
       </div>
 
     );
