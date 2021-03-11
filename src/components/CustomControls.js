@@ -1,7 +1,9 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import PropTypes from 'prop-types';
 
 class CustomControls extends React.Component {
+
+ 
   static propTypes = {
     className: PropTypes.string,
     getCurrentSlideIndex: PropTypes.func.isRequired,
@@ -13,14 +15,16 @@ class CustomControls extends React.Component {
   }
   static defaultProps = {
     className: 'full-page-controls',
-    style: {
-      left: '50%',
-      paddingTop: '10px',
+    style: {          
+      display:'flex',
+      flexFlow: 'column',
       position: 'fixed',
-      transform: 'translateX(-50%)',
+      top: '50%',
+      transform: 'translateY(-50%)',
+      paddingLeft: '20px'
     },
-  }
-
+  }  
+    
   renderSlidesNumbers(currentSlideIndex) {
 
     const { slidesCount, scrollToSlide } = this.props;
@@ -29,16 +33,18 @@ class CustomControls extends React.Component {
       const buttonProps = {
         disabled: currentSlideIndex === i,
         key: i,
-        id: "control",
-        onClick: () => scrollToSlide(i),
-      };
-      slidesNumbers.push(<button {...buttonProps}></button>);
-
-    }
+        id: "control",        
+        onClick: () => scrollToSlide(i),                       
+      };              
+        slidesNumbers.push(<button {...buttonProps}></button>);
+     
+    }     
     return slidesNumbers;
+    
   }
 
-  render() {
+   render() {    
+
     const { scrollToSlide } = this.props;
     
     const handler = (event) => {
@@ -59,13 +65,15 @@ class CustomControls extends React.Component {
     }
     window.addEventListener('keydown', handler)
 
+
+   
     const {
       getCurrentSlideIndex, style, className,} = this.props;    
 
     return (
       <div className={className} style={style}>
         {this.renderSlidesNumbers(getCurrentSlideIndex)}
-      </div>
+      </div>     
 
     );
   }
