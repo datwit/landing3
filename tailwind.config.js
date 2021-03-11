@@ -4,6 +4,9 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
+      fontFamily: {
+        'Numans': ['Numans', 'sans-serif']
+      },
       colors:{
         primary: '#1e4158',
         secondary1:'#00baff',
