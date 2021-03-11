@@ -1,19 +1,18 @@
 import React from 'react'
 import CustomControls from './CustomControls'
 import { FullPage, Slide } from 'react-full-page';
-import Section from './Section';
+import Section from './Section'
+import Hero from './Hero'
 
 
 const  FullPageExampleCustomControls = () => {
-    const baseStyle = {
-      alignItems: 'center',
-      display: 'flex',
-      justifyContent: 'center',
-    };
+    
     return (
       <FullPage controls={CustomControls}>
         <Slide>
-         <Section  name = "Section 1"/>        
+        <Section>
+          <Hero />
+        </Section>        
         </Slide>
         <Slide>
         <Section  name = "Section 2"/> 

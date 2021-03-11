@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types';
 
+
 class CustomControls extends React.Component {
 
  
@@ -23,27 +24,30 @@ class CustomControls extends React.Component {
       transform: 'translateY(-50%)',
       paddingLeft: '20px'
     },
-  }  
-    
+  } 
+     
   renderSlidesNumbers(currentSlideIndex) {
 
-    const { slidesCount, scrollToSlide } = this.props;
+    const { slidesCount, scrollToSlide } = this.props;   
     const slidesNumbers = [];
     for (let i = 0; i < slidesCount; i++) {
       const buttonProps = {
         disabled: currentSlideIndex === i,
         key: i,
         id: "control",        
-        onClick: () => scrollToSlide(i),                       
-      };              
-        slidesNumbers.push(<button {...buttonProps}></button>);
+        onClick: () => scrollToSlide(i),      
+                            
+      };               
+      slidesNumbers.push(<button {...buttonProps}></button>);
      
     }     
     return slidesNumbers;
     
   }
+  
 
-   render() {    
+   render() {       
+   
 
     const { scrollToSlide } = this.props;
     
@@ -68,12 +72,12 @@ class CustomControls extends React.Component {
 
    
     const {
-      getCurrentSlideIndex, style, className,} = this.props;    
+      getCurrentSlideIndex, style, className} = this.props;    
 
     return (
       <div className={className} style={style}>
         {this.renderSlidesNumbers(getCurrentSlideIndex)}
-      </div>     
+      </div>         
 
     );
   }
