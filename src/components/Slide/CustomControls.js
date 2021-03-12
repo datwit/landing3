@@ -72,7 +72,7 @@ class CustomControls extends React.Component {
 
     return (
       <div className={className} style={style}>
-        {this.renderSlidesNumbers(getCurrentSlideIndex)}
+        {this.renderSlidesNumbers(getCurrentSlideIndex())}
       </div>         
 
     );

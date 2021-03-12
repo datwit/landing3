@@ -47,6 +47,10 @@
     height: calc(100vh + 5px);
   } */
 /***************Navigation*****************************/  
+:disabled{
+    border: 10px solid #cacaca !important;
+    background: transparent;
+}
 #control{
     border-radius: 50%;    
     margin-bottom:15px ;
