@@ -1,8 +1,8 @@
 import React from 'react'
 import CustomControls from './CustomControls'
 import { FullPage, Slide } from 'react-full-page';
-import Section from './Section'
-import Hero from './Hero'
+import Section from '../Section'
+import Hero from '../Home/Hero'
 
 
 const  FullPageExampleCustomControls = () => {

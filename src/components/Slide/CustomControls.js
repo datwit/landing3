@@ -50,18 +50,15 @@ class CustomControls extends React.Component {
    render() {       
    
 
-    const { scrollToSlide } = this.props;
+    const {  onNext, onPrev } = this.props;
     
     const handler = (event) => {
       switch (event.keyCode) {
         case 40:
-          if (getCurrentSlideIndex===0) {
-            scrollToSlide(2);
-          }          
-          scrollToSlide(getCurrentSlideIndex() +1);
+          onNext()
           break;
         case 38:
-          scrollToSlide(getCurrentSlideIndex() -1)
+          onPrev()
           break;
 
         default:
@@ -70,10 +67,8 @@ class CustomControls extends React.Component {
     }
     window.addEventListener('keydown', handler)
 
-
    
-    const {
-      getCurrentSlideIndex, style, className} = this.props;    
+    const { getCurrentSlideIndex, style, className} = this.props;    
 
     return (
       <div className={className} style={style}>

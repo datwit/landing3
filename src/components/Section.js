@@ -1,11 +1,16 @@
-import React from 'react'
+import React, {Fragment} from 'react'
+
+
+
 
 
 
 const Section = ({children}) => {
 
-    return (
+    return ( 
+        <Fragment>        
         <section className= "w-full h-screen flex justify-center items-center">{children}</section>
+        </Fragment>  
     )
 
 }
