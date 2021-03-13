@@ -21,8 +21,8 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
 
-      - run: npm install
-      - run: npm run generate
+      - run: yarn install
+      - run: yarn build
 
       - uses: actions/upload-artifact@v2
         with:
