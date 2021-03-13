@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Numans&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base{
+    /* @font-face {
+      font-family: 'Numans';
+      src: url('../fonts/Numans-Regular.ttf') format('truetype');
+    } */
+    /*main header hero section*/
+    h1{
+      @apply tracking-tight font-black text-primary text-4xl sm:text-5xl md:text-6xl;
+      font-family: 'Numans';
+    }
+    /*section headers*/
+    h2{
+      @apply tracking-tight font-black text-primary text-xl sm:text-2xl md:text-3xl text-center;
+      font-family: 'Numans';
+    }
+    h3{
+      @apply text-base leading-6 font-semibold text-black text-opacity-70 text-center;
+      font-family: 'Numans';
+    }
+    /*section sub headers*/
+    h4{
+      @apply text-base md:text-lg leading-6 font-medium text-black text-opacity-70 text-center;
+    }
+  
+    a{
+      font-family: 'Numans';
+    }
+    p{
+      @apply text-base text-gray-500 sm:mt-5 sm:text-lg sm:mx-auto md:mt-5 md:text-xl;
+    }
+    section{
+      @apply w-full overflow-hidden relative px-3 sm:px-10 ;
+    }
+  }
+  /**************************************************/
+  /* #hero-id{
+    top: 45%;
+    transform: translateY(-45%);
+  }
+  
+  section{
+    height: calc(100vh + 5px);
+  } */
+/***************Navigation*****************************/  
+:disabled{
+    border: 10px solid #cacaca !important;
+    background: transparent;
+}
+#control{
+    border-radius: 50%;    
+    margin-bottom:15px ;
+    width: 15px;
+    height: 15px;   
+    background: #cacaca;
+   
+}
+/**************CTA************************************/
+.btn{
+  padding: .5rem 1rem;
+  border-radius: 9999px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  background-color: #e69c24;
+  color: white;
+  font-weight: 600;          
+}
+.btn:hover {
+  background-color: #1e4158;
+  border-color: white;
+  transform: translateY(-3px);
+  transition:  .3s ease-in-out
+}
+
+/****************Navbar*********************************/
+.nav-link{
+  transition: all ease 0.3s;
+  position: relative;
+  transition: 0.5s;
+}
+
+.nav-link::after{
+  position: absolute;
+  content: "";
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background: #e69c24;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.5s;
+}
+
+.nav-link:hover::after{
+  transform: scaleX(1);
+  transform-origin: left;
+}
