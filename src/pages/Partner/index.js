@@ -4,6 +4,8 @@ import Section from '../../components/Section'
 import CustomControls from '../../components/Slide/CustomControls'
 import Footer from '../../components/Footer'
 import Find from '../../components/Find'
+import Faqs from '../../components/Faqs'
+import PartPricing from '../../components/PartPricing'
 
 const Partner = () => {
     return (
@@ -16,7 +18,13 @@ const Partner = () => {
 
         <Slide>
           <Section>
-           
+            <PartPricing />
+          </Section>        
+        </Slide>
+
+        <Slide>
+          <Section>
+            <Faqs />
           </Section>        
         </Slide>
 
