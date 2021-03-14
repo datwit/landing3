@@ -3,13 +3,14 @@ import { FullPage, Slide } from 'react-full-page'
 import Section from '../../components/Section'
 import CustomControls from '../../components/Slide/CustomControls'
 import Footer from '../../components/Footer'
+import Find from '../../components/Find'
 
 const Partner = () => {
     return (
         <FullPage controls={CustomControls}>
         <Slide>
           <Section>
-            
+            <Find />
           </Section>        
         </Slide>
 
