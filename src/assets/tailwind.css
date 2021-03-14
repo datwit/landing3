@@ -34,18 +34,18 @@
       @apply text-base text-gray-500 sm:mt-5 sm:text-lg sm:mx-auto md:mt-5 md:text-xl;
     }
     section{
-      @apply w-full overflow-hidden relative px-3 sm:px-10 ;
+      @apply  overflow-hidden relative px-3 sm:px-10 bg-white;
     }
   }
   /**************************************************/
-   #hero-id{
+  #hero-id{
     top: 45%;
     transform: translateY(-45%);
   }
-  /*
-  section{
-    height: calc(100vh + 5px);
-  } */
+  #footer-cont{
+    top: 20%;
+    transform: translateY(-20%);
+  } 
 /***************Navigation*****************************/  
 :disabled{
     border: 10px solid #cacaca !important;

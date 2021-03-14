@@ -6,6 +6,7 @@ import Hero from '../Home/Hero'
 import StudyCases from '../Home/StudyCases'
 import Services from '../Home/Services'
 import Pricing from '../Home/Pricing'
+import Footer from '../Footer'
 
 
 const  FullPageExampleCustomControls = () => {
@@ -34,6 +35,12 @@ const  FullPageExampleCustomControls = () => {
           <Section>
             <Pricing />
           </Section>          
+        </Slide>
+
+        <Slide>
+          <section className= "w-full h-screen bg-primary mx-auto px-10">
+            <Footer />
+          </section>                  
         </Slide>
              
       </FullPage>
