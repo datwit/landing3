@@ -1,0 +1,3 @@
+export const CASE1 = { img: "", alt: "alt", title:"Lorem ipsum", description:"Labore nisi dolor proident dolore exercitation non enim cillum do officia." };
+export const CASE2 = { img: "", alt: "alt", title:"Lorem ipsum", description:"Labore nisi dolor proident dolore exercitation non enim cillum do officia." };
+export const CASE3 = { img: "", alt: "alt", title:"Lorem ipsum", description:"Labore nisi dolor proident dolore exercitation non enim cillum do officia." };

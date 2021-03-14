@@ -38,11 +38,11 @@
     }
   }
   /**************************************************/
-  /* #hero-id{
+   #hero-id{
     top: 45%;
     transform: translateY(-45%);
   }
-  
+  /*
   section{
     height: calc(100vh + 5px);
   } */

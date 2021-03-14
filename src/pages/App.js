@@ -5,13 +5,13 @@ import StudyCases from './StudyCases';
 import Contact from './Contact';
 import Blog from './Blog';
 import Home from './Home';
-import Navbar from '../components/Navbar';
+
 
 
 function App() {
   return (
     <Router> 
-        <Navbar/>                   
+                          
         <Route exact path="/" component={Home}/>
         <Route exact path="/about" component={About} />
         <Route exact path="/studyCases" component={StudyCases} />
