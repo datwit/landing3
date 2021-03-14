@@ -4,10 +4,10 @@
 @tailwind utilities;
 
 @layer base{
-    /* @font-face {
+    @font-face {
       font-family: 'Numans';
-      src: url('../fonts/Numans-Regular.ttf') format('truetype');
-    } */
+      src: url('./fonts/Numans-Regular.ttf') format('truetype');
+    }
     /*main header hero section*/
     h1{
       @apply tracking-tight font-black text-primary text-4xl sm:text-5xl md:text-6xl;
@@ -46,6 +46,9 @@
     top: 20%;
     transform: translateY(-20%);
   } 
+  #copy{
+    left:40%;
+  }
 /***************Navigation*****************************/  
 :disabled{
     border: 10px solid #cacaca !important;

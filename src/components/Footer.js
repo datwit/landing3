@@ -59,7 +59,7 @@ const Footer = () => {
                         </div>
                     </div>                    
                 </div>                
-                <p className="text-gray-500 text-md absolute bottom-0 left-1/2 -translate-x-1/2">&copy; {year} DatWit</p>
+                <p className="text-gray-500 text-md absolute bottom-0" id="copy">&copy; {year} DatWit</p>
                   
            
                     
