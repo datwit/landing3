@@ -5,6 +5,7 @@ import Section from '../Section'
 import Hero from '../Home/Hero'
 import StudyCases from '../Home/StudyCases'
 import Services from '../Home/Services'
+import Pricing from '../Home/Pricing'
 
 
 const  FullPageExampleCustomControls = () => {
@@ -16,17 +17,25 @@ const  FullPageExampleCustomControls = () => {
             <Hero />
           </Section>        
         </Slide>
-          <Section>
+
+        <Slide>
+        <Section>
             <Services />
-          </Section>         
+          </Section>
+        </Slide> 
+
         <Slide>
           <Section>
             <StudyCases />
           </Section>          
         </Slide>
+        
         <Slide>
-        <Section  name = "Section 3"/> 
-        </Slide>        
+          <Section>
+            <Pricing />
+          </Section>          
+        </Slide>
+             
       </FullPage>
     );
   }
