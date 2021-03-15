@@ -19,17 +19,17 @@ const index = () => {
                                 <p className="text-xs text-gray-500 mt-3 border-b border-gray-200">{DATA.CARD1.description}</p>
                                 <p className="flex items-center text-gray-600 mb-2 text-xs sm:text-sm">
                                     <span className="w-5 h-5 mr-2 inline-flex items-center justify-center flex-shrink-0">
-                                    <svg className="h-5 w-5 text-secondary2"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="4"  stroke-linecap="round"  stroke-linejoin="round">  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />  <polyline points="22 4 12 14.01 9 11.01" /></svg>
+                                    <svg className="h-5 w-5 text-secondary2"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  strokeWidth="4"  strokeLinecap="round"  strokeLinejoin="round">  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />  <polyline points="22 4 12 14.01 9 11.01" /></svg>
                                     </span>{DATA.CARD1.b1}
                                 </p>
                                 <p className="flex items-center text-gray-600 mb-2 text-xs sm:text-sm">
                                     <span className="w-5 h-5 mr-2 inline-flex items-center justify-center flex-shrink-0">
-                                    <svg className="h-5 w-5 text-secondary2"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="4"  stroke-linecap="round"  stroke-linejoin="round">  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />  <polyline points="22 4 12 14.01 9 11.01" /></svg>
+                                    <svg className="h-5 w-5 text-secondary2"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  strokeWidth="4"  strokeLinecap="round"  strokeLinejoin="round">  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />  <polyline points="22 4 12 14.01 9 11.01" /></svg>
                                     </span>{DATA.CARD1.b2}
                                 </p>
                                 <p className="flex items-center text-gray-600 mb-2 text-xs sm:text-sm">
                                     <span className="w-5 h-5 mr-2 inline-flex items-center justify-center flex-shrink-0">
-                                    <svg className="h-5 w-5 text-secondary2"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="4"  stroke-linecap="round"  stroke-linejoin="round">  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />  <polyline points="22 4 12 14.01 9 11.01" /></svg>
+                                    <svg className="h-5 w-5 text-secondary2"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  strokeWidth="4"  strokeLinecap="round"  strokeLinejoin="round">  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />  <polyline points="22 4 12 14.01 9 11.01" /></svg>
                                     </span>{DATA.CARD1.b3}
                                 </p>
                             </div>
@@ -42,17 +42,17 @@ const index = () => {
                                 <p className="text-xs text-gray-500 mt-3 border-b border-gray-200">{DATA.CARD2.description}</p>
                                 <p className="flex items-center text-gray-600 mb-2 text-xs sm:text-sm">
                                     <span className="w-5 h-5 mr-2 inline-flex items-center justify-center flex-shrink-0">
-                                    <svg className="h-5 w-5 text-secondary2"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="4"  stroke-linecap="round"  stroke-linejoin="round">  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />  <polyline points="22 4 12 14.01 9 11.01" /></svg>
+                                    <svg className="h-5 w-5 text-secondary2"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  strokeWidth="4"  strokeLinecap="round"  strokeLinejoin="round">  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />  <polyline points="22 4 12 14.01 9 11.01" /></svg>
                                     </span>{DATA.CARD2.b1}
                                 </p>
                                 <p className="flex items-center text-gray-600 mb-2 text-xs sm:text-sm">
                                     <span className="w-5 h-5 mr-2 inline-flex items-center justify-center flex-shrink-0">
-                                    <svg className="h-5 w-5 text-secondary2"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="4"  stroke-linecap="round"  stroke-linejoin="round">  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />  <polyline points="22 4 12 14.01 9 11.01" /></svg>
+                                    <svg className="h-5 w-5 text-secondary2"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  strokeWidth="4"  strokeLinecap="round"  strokeLinejoin="round">  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />  <polyline points="22 4 12 14.01 9 11.01" /></svg>
                                     </span>{DATA.CARD2.b2}
                                 </p>
                                 <p className="flex items-center text-gray-600 mb-2 text-xs sm:text-sm">
                                     <span className="w-5 h-5 mr-2 inline-flex items-center justify-center flex-shrink-0">
-                                    <svg className="h-5 w-5 text-secondary2"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="4"  stroke-linecap="round"  stroke-linejoin="round">  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />  <polyline points="22 4 12 14.01 9 11.01" /></svg>
+                                    <svg className="h-5 w-5 text-secondary2"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  strokeWidth="4"  strokeLinecap="round"  strokeLinejoin="round">  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />  <polyline points="22 4 12 14.01 9 11.01" /></svg>
                                     </span>{DATA.CARD2.b3}
                                 </p>
                             </div>
@@ -65,17 +65,17 @@ const index = () => {
                                 <p className="text-xs text-gray-500 mt-3 border-b border-gray-200">{DATA.CARD1.description}</p>
                                 <p className="flex items-center text-gray-600 mb-2 text-xs sm:text-sm">
                                     <span className="w-5 h-5 mr-2 inline-flex items-center justify-center flex-shrink-0">
-                                    <svg className="h-5 w-5 text-secondary2"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="4"  stroke-linecap="round"  stroke-linejoin="round">  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />  <polyline points="22 4 12 14.01 9 11.01" /></svg>
+                                    <svg className="h-5 w-5 text-secondary2"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  strokeWidth="4"  strokeLinecap="round"  strokeLinejoin="round">  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />  <polyline points="22 4 12 14.01 9 11.01" /></svg>
                                     </span>{DATA.CARD3.b1}
                                 </p>
                                 <p className="flex items-center text-gray-600 mb-2 text-xs sm:text-sm">
                                     <span className="w-5 h-5 mr-2 inline-flex items-center justify-center flex-shrink-0">
-                                    <svg className="h-5 w-5 text-secondary2"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="4"  stroke-linecap="round"  stroke-linejoin="round">  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />  <polyline points="22 4 12 14.01 9 11.01" /></svg>
+                                    <svg className="h-5 w-5 text-secondary2"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  strokeWidth="4"  strokeLinecap="round"  strokeLinejoin="round">  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />  <polyline points="22 4 12 14.01 9 11.01" /></svg>
                                     </span>{DATA.CARD3.b2}
                                 </p>
                                 <p className="flex items-center text-gray-600 mb-2 text-xs sm:text-sm">
                                     <span className="w-5 h-5 mr-2 inline-flex items-center justify-center flex-shrink-0">
-                                    <svg className="h-5 w-5 text-secondary2"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="4"  stroke-linecap="round"  stroke-linejoin="round">  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />  <polyline points="22 4 12 14.01 9 11.01" /></svg>
+                                    <svg className="h-5 w-5 text-secondary2"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  strokeWidth="4"  strokeLinecap="round"  strokeLinejoin="round">  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />  <polyline points="22 4 12 14.01 9 11.01" /></svg>
                                     </span>{DATA.CARD3.b3}
                                 </p>
                             </div>
