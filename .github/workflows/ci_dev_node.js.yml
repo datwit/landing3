@@ -17,16 +17,14 @@ jobs:
       
       - name: Use Node.js ${{ matrix.node-version }}
       
-      # remove this env var in production
-        env:
-          CI: false
-      
         uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node-version }}
 
       - run: yarn install
-      - run: yarn build
+      
+      # remove CI=false in production
+      - run: CI=false yarn build
 
       - uses: actions/upload-artifact@v2
         with:
