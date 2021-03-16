@@ -17,6 +17,10 @@ jobs:
       
       - name: Use Node.js ${{ matrix.node-version }}
       
+      # remove this env var in production
+        env:
+          CI: ""
+      
         uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node-version }}
