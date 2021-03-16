@@ -1,4 +1,5 @@
 import React, {Fragment} from 'react'
+import Navbar from './Navbar'
 
 
 
@@ -9,7 +10,10 @@ const Section = ({children}) => {
 
     return ( 
         <Fragment>        
-        <section className= "w-full h-screen flex justify-center items-center">{children}</section>
+        <section className= "w-full h-screen">
+            <Navbar />
+            {children}        
+        </section>
         </Fragment>  
     )
 

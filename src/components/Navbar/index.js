@@ -16,14 +16,14 @@ const Navbar = () => (
                             <NavLink exact to={ROUTES.HOME.link} activeClassName="font-semibold text-base text-secondary2 tracking-tight">{ROUTES.HOME.name}</NavLink>
                             </li>
                             <li className="nav-link ml-5 2xl:ml-8 py-2 text-sm font-semibold text-primary hover:text-secondary1 focus:outline-none focus:text-secondary1">
+                            <NavLink exact to={ROUTES.STUDYCASES.link} activeClassName="font-semibold text-base text-secondary2 tracking-tight">{ROUTES.STUDYCASES.name}</NavLink>
+                            </li>
+                            <li className="nav-link ml-5 2xl:ml-8 py-2 text-sm font-semibold text-primary hover:text-secondary1 focus:outline-none focus:text-secondary1">
                             <NavLink exact to={ROUTES.ABOUT.link} activeClassName="font-semibold text-base text-secondary2 tracking-tight">{ROUTES.ABOUT.name}</NavLink>
                             </li>
                             <li className="nav-link ml-5 2xl:ml-8 py-2 text-sm font-semibold text-primary hover:text-secondary1 focus:outline-none focus:text-secondary1">
                             <NavLink exact to={ROUTES.CONTACT.link} activeClassName="font-semibold text-base text-secondary2 tracking-tight">{ROUTES.CONTACT.name}</NavLink>
-                            </li>
-                            <li className="nav-link ml-5 2xl:ml-8 py-2 text-sm font-semibold text-primary hover:text-secondary1 focus:outline-none focus:text-secondary1">
-                            <NavLink exact to={ROUTES.STUDYCASES.link} activeClassName="font-semibold text-base text-secondary2 tracking-tight">{ROUTES.STUDYCASES.name}</NavLink>
-                            </li>
+                            </li>                            
                             <li className="nav-link ml-5 2xl:ml-8 py-2 text-sm font-semibold text-primary hover:text-secondary1 focus:outline-none focus:text-secondary1">
                             <NavLink exact to={ROUTES.BLOG.link} activeClassName="font-semibold text-base text-secondary2 tracking-tight">{ROUTES.BLOG.name}</NavLink>
                             </li>

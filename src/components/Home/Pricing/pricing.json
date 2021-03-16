@@ -1,0 +1,32 @@
+[
+  {
+    "field":"DATA SCIENCE",
+    "price": "$89",
+    "descrip": "Literally you probably haven't heard of them jean shorts.",
+    "bullets": [
+      {"title":"Vexillologist pitchfork"},
+      {"title":"Tumeric plaid portland"},
+      {"title":"Mixtape chillwave tumeric"}
+    ]
+  },
+  {
+    "field":"SOFTWARE DEVELOPMENT",
+    "price": "$69",
+    "descrip": "Literally you probably haven't heard of them jean shorts.",
+    "bullets": [
+      {"title":"Vexillologist pitchfork"},
+      {"title":"Tumeric plaid portland"},
+      {"title":"Mixtape chillwave tumeric"}
+    ]
+  },
+  {
+    "field":"DATA SCIENCE",
+    "price": "$72",
+    "descrip": "Literally you probably haven't heard of them jean shorts.",
+    "bullets": [
+      {"title":"Vexillologist pitchfork"},
+      {"title":"Tumeric plaid portland"},
+      {"title":"Mixtape chillwave tumeric"}
+    ]
+  }
+]
