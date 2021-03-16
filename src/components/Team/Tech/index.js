@@ -1,14 +1,14 @@
 import React from 'react'
-import altair from "../../assets/images/technologies/altair.png"
-import aws from "../../assets/images/technologies/aws.png"
-import bokeh from "../../assets/images/technologies/bokeh.png"
-import chalice from "../../assets/images/technologies/chalice.png"
-import keras from "../../assets/images/technologies/keras.png"
-import mat from "../../assets/images/technologies/matplotlib.png"
-import nuxt from "../../assets/images/technologies/nuxtjs.png"
-import python from "../../assets/images/technologies/python.png"
-import sage from "../../assets/images/technologies/sagemaker.png"
-import sklearn from "../../assets/images/technologies/sklearn.png"
+import altair from "../../../assets/images/technologies/altair.png"
+import aws from "../../../assets/images/technologies/aws.png"
+import bokeh from "../../../assets/images/technologies/bokeh.png"
+import chalice from "../../../assets/images/technologies/chalice.png"
+import keras from "../../../assets/images/technologies/keras.png"
+import mat from "../../../assets/images/technologies/matplotlib.png"
+import nuxt from "../../../assets/images/technologies/nuxtjs.png"
+import python from "../../../assets/images/technologies/python.png"
+import sage from "../../../assets/images/technologies/sagemaker.png"
+import sklearn from "../../../assets/images/technologies/sklearn.png"
 
 const Tech = () => {
     return (

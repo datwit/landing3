@@ -3,9 +3,9 @@ import { FullPage, Slide } from 'react-full-page'
 import Section from '../../components/Section'
 import CustomControls from '../../components/Slide/CustomControls'
 import Footer from '../../components/Footer'
-import Find from '../../components/Find'
-import Faqs from '../../components/Faqs'
-import PartPricing from '../../components/PartPricing'
+import Find from '../../components/Partner/Find'
+import Faqs from '../../components/Partner/Faqs'
+import PartPricing from '../../components/Partner/PartPricing'
 
 const Partner = () => {
     return (
