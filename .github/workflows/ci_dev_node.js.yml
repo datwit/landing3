@@ -19,7 +19,7 @@ jobs:
       
       # remove this env var in production
         env:
-          CI: ""
+          CI: false
       
         uses: actions/setup-node@v1
         with:
