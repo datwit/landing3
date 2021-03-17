@@ -23,7 +23,7 @@ class CustomControls extends React.Component {
       top: '50%',
       transform: 'translateY(-50%)',
       paddingLeft: '20px',
-      zIndex: 1
+      zIndex: 1 
     },
   } 
      
