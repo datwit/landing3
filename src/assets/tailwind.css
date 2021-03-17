@@ -90,6 +90,17 @@
     transition: height .5s ease;  
    
 }
+/*******tooltip************************/
+#control:hover .tooltip{
+  visibility: visible;
+  z-index: 100;
+}
+.tooltip{
+  visibility: hidden;
+  position: absolute;
+  font-family: 'Numans';
+  border-radius: 25px;
+}
 /**************CTA************************************/
 .btn{
   padding: .5rem 1rem;
