@@ -51,16 +51,55 @@
   }
 /***************Navigation*****************************/  
 :disabled{
-    border: 10px solid #cacaca !important;
-    background: transparent;
+    
+    animation: pill .6s ease-in-out normal forwards;     
+    position:relative;
+    z-index:0;
+    background-color: transparent !important;     
+}  
+:disabled::before{
+  content:"";
+  position:absolute;
+  z-index:-1;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  padding: 3px;
+  border-radius: 15px;
+  background: linear-gradient(to right, #00baff, #e69c24);
+  -webkit-mask: 
+     linear-gradient(#fff 0 0) content-box, 
+     linear-gradient(#fff 0 0);
+  -webkit-mask-composite: destination-out;
+  mask-composite: exclude; 
 }
-#control{
-    border-radius: 50%;    
+@keyframes pill{
+  
+  100%{   
+    height: 45px;    
+      
+  }
+}
+#control{   
     margin-bottom:15px ;
     width: 15px;
     height: 15px;   
-    background: #cacaca;
+    background: #eaebec;
+    border-radius: 25px;
+    transition: height .5s ease;  
    
+}
+/*******tooltip************************/
+#control:hover .tooltip{
+  visibility: visible;
+  z-index: 100;
+}
+.tooltip{
+  visibility: hidden;
+  position: absolute;
+  font-family: 'Numans';
+  border-radius: 25px;
 }
 /**************CTA************************************/
 .btn{

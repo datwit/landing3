@@ -2,10 +2,10 @@ import React from 'react'
 import PropTypes from 'prop-types';
 
 
-class CustomControls extends React.Component {
+const CustomControls = ({ slidesCount, scrollToSlide,onNext, onPrev,getCurrentSlideIndex, style, className })=> {
 
  
-  static propTypes = {
+ CustomControls.propTypes = {
     className: PropTypes.string,
     getCurrentSlideIndex: PropTypes.func.isRequired,
     onNext: PropTypes.func.isRequired,
@@ -14,7 +14,7 @@ class CustomControls extends React.Component {
     slidesCount: PropTypes.number.isRequired,
     style: PropTypes.object,
   }
-  static defaultProps = {
+  CustomControls.defaultProps = {
     className: 'full-page-controls',
     style: {          
       display:'flex',
@@ -23,35 +23,32 @@ class CustomControls extends React.Component {
       top: '50%',
       transform: 'translateY(-50%)',
       paddingLeft: '20px',
-      zIndex: 1
+      zIndex: 1 
     },
   } 
      
-  renderSlidesNumbers(currentSlideIndex) {
-
-    const { slidesCount, scrollToSlide } = this.props;   
+  const renderSlidesNumbers=(currentSlideIndex)=> {
+      
     const slidesNumbers = [];
+    const tip=['Top','Services','Study cases','Pricing', 'Bottom'];
     for (let i = 0; i < slidesCount; i++) {
       const buttonProps = {
         disabled: currentSlideIndex === i,
         key: i,
         id: "control",        
-        onClick: () => scrollToSlide(i),      
-                            
-      };               
-      slidesNumbers.push(<button {...buttonProps}></button>);
+        onClick: () => scrollToSlide(i),  
+        className: 'has-tooltip'                            
+      }; 
+      const toolProps = {
+        className: "tooltip shadow-lg ml-5 bg-bggray text-primary px-3 py-2"
+      }              
+      slidesNumbers.push(<button {...buttonProps}><span {...toolProps}>{tip[i]}</span></button>);
      
     }     
     return slidesNumbers;
     
   }
   
-
-   render() {       
-   
-
-    const {  onNext, onPrev } = this.props;
-    
     const handler = (event) => {
       switch (event.keyCode) {
         case 40:
@@ -67,16 +64,13 @@ class CustomControls extends React.Component {
     }
     window.addEventListener('keydown', handler)
 
-   
-    const { getCurrentSlideIndex, style, className} = this.props;    
-
     return (
       <div className={className} style={style}>
-        {this.renderSlidesNumbers(getCurrentSlideIndex())}
+        {renderSlidesNumbers(getCurrentSlideIndex())}
       </div>         
 
     );
   }
-}
+
 
 export default CustomControls
