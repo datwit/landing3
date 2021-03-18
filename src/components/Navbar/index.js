@@ -15,21 +15,20 @@ function Navbar({ fixed }) {
 				<div className="flex-shrink-0">
 					<img src={img} alt="logo" width="140" height="60" />
 				</div> 
-				<button
-					className="flex lg:hidden items-center px-3 py-2 border rounded text-teal-200 border-teal-400 hover:text-black hover:border-black"
+				<button type="button" class="lg:hidden inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white" aria-controls="mobile-menu" aria-expanded="false"
 					onClick={() => setNavbarOpen(!navbarOpen)}
 				>
-				  <svg className="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Menu</title><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/></svg>
+					<svg class={(navbarOpen ? "hidden" : "flex") + " block h-6 w-6"} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+					</svg>
+					
+					<svg className={(navbarOpen ? "flex" : "hidden") + " h-6 w-6"} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+					</svg>
 				</button>
 			  </div>
-			  <div
-				className={
-				  "lg:flex flex-grow items-center" +
-				  (navbarOpen ? " flex" : " hidden")
-				}
-				id="example-navbar-danger"
-			  >
-				<ul className="flex flex-col lg:flex-row list-none lg:ml-auto">
+			  <div className={"lg:flex flex-grow items-center justify-center" + (navbarOpen ? " flex" : " hidden")}>
+				<ul className="flex flex-col lg:flex-row list-none lg:ml-auto items-center justify-center">
 					<li className="nav-item nav-link ml-5 2xl:ml-8 py-2 text-sm font-semibold text-primary hover:text-secondary1 focus:outline-none focus:text-secondary1">
 						<NavLink exact to={ROUTES.HOME.link} activeClassName="font-semibold text-base text-secondary2 tracking-tight">{ROUTES.HOME.name}</NavLink>
 					</li>
