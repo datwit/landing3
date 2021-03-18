@@ -15,34 +15,34 @@ function Navbar({ fixed }) {
 				<div className="flex-shrink-0">
 					<img src={img} alt="logo" width="140" height="60" />
 				</div> 
-				<button type="button" class="lg:hidden inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white" aria-controls="mobile-menu" aria-expanded="false"
+				<button type="button" className="lg:hidden inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white" aria-controls="mobile-menu" aria-expanded="false"
 					onClick={() => setNavbarOpen(!navbarOpen)}
 				>
-					<svg class={(navbarOpen ? "hidden" : "flex") + " block h-6 w-6"} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+					<svg className={(navbarOpen ? "hidden" : "flex") + " block h-6 w-6"} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+						<path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16" />
 					</svg>
 					
 					<svg className={(navbarOpen ? "flex" : "hidden") + " h-6 w-6"} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+						<path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
 					</svg>
 				</button>
 			  </div>
 			  <div className={"lg:flex flex-grow items-center justify-center" + (navbarOpen ? " flex" : " hidden")}>
 				<ul className="flex flex-col lg:flex-row list-none lg:ml-auto items-center justify-center">
 					<li className="nav-item nav-link ml-5 2xl:ml-8 py-2 text-sm font-semibold text-primary hover:text-secondary1 focus:outline-none focus:text-secondary1">
-						<NavLink exact to={ROUTES.HOME.link} activeClassName="font-semibold text-base text-secondary2 tracking-tight">{ROUTES.HOME.name}</NavLink>
+						<NavLink exact to={ROUTES.HOME.link} activeclassName="font-semibold text-base text-secondary2 tracking-tight">{ROUTES.HOME.name}</NavLink>
 					</li>
 					<li className="nav-item nav-link ml-5 2xl:ml-8 py-2 text-sm font-semibold text-primary hover:text-secondary1 focus:outline-none focus:text-secondary1">
-						<NavLink exact to={ROUTES.STUDYCASES.link} activeClassName="font-semibold text-base text-secondary2 tracking-tight">{ROUTES.STUDYCASES.name}</NavLink>
+						<NavLink exact to={ROUTES.STUDYCASES.link} activeclassName="font-semibold text-base text-secondary2 tracking-tight">{ROUTES.STUDYCASES.name}</NavLink>
 					</li>
 					<li className="nav-item nav-link ml-5 2xl:ml-8 py-2 text-sm font-semibold text-primary hover:text-secondary1 focus:outline-none focus:text-secondary1">
-						<NavLink exact to={ROUTES.ABOUT.link} activeClassName="font-semibold text-base text-secondary2 tracking-tight">{ROUTES.ABOUT.name}</NavLink>
+						<NavLink exact to={ROUTES.ABOUT.link} activeclassName="font-semibold text-base text-secondary2 tracking-tight">{ROUTES.ABOUT.name}</NavLink>
 					</li>
 					<li className="nav-item nav-link ml-5 2xl:ml-8 py-2 text-sm font-semibold text-primary hover:text-secondary1 focus:outline-none focus:text-secondary1">
-						<NavLink exact to={ROUTES.CONTACT.link} activeClassName="font-semibold text-base text-secondary2 tracking-tight">{ROUTES.CONTACT.name}</NavLink>
+						<NavLink exact to={ROUTES.CONTACT.link} activeclassName="font-semibold text-base text-secondary2 tracking-tight">{ROUTES.CONTACT.name}</NavLink>
 					</li>                            
 					<li className="nav-item nav-link ml-5 2xl:ml-8 py-2 text-sm font-semibold text-primary hover:text-secondary1 focus:outline-none focus:text-secondary1">
-						<NavLink exact to={ROUTES.BLOG.link} activeClassName="font-semibold text-base text-secondary2 tracking-tight">{ROUTES.BLOG.name}</NavLink>
+						<NavLink exact to={ROUTES.BLOG.link} activeclassName="font-semibold text-base text-secondary2 tracking-tight">{ROUTES.BLOG.name}</NavLink>
 					</li>
 				</ul>
 			  </div>

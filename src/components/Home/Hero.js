@@ -15,7 +15,7 @@ const Hero = ()=>(
           <br/>
           cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat aliqua.
         </h4>
-        <CTA/>
+        <CTA buttonName={'Contact us'}/>
       </div>     
 )
 export default Hero
