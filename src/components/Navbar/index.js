@@ -30,19 +30,19 @@ function Navbar({ fixed }) {
 			  <div className={"lg:flex flex-grow items-center justify-center" + (navbarOpen ? " flex" : " hidden")}>
 				<ul className="flex flex-col lg:flex-row list-none lg:ml-auto items-center justify-center">
 					<li className="nav-item nav-link ml-5 2xl:ml-8 py-2 text-sm font-semibold text-primary hover:text-secondary1 focus:outline-none focus:text-secondary1">
-						<NavLink exact to={ROUTES.HOME.link} activeclassName="font-semibold text-base text-secondary2 tracking-tight">{ROUTES.HOME.name}</NavLink>
+						<NavLink exact to={ROUTES.HOME.link} activeclassname="font-semibold text-base text-secondary2 tracking-tight">{ROUTES.HOME.name}</NavLink>
 					</li>
 					<li className="nav-item nav-link ml-5 2xl:ml-8 py-2 text-sm font-semibold text-primary hover:text-secondary1 focus:outline-none focus:text-secondary1">
-						<NavLink exact to={ROUTES.STUDYCASES.link} activeclassName="font-semibold text-base text-secondary2 tracking-tight">{ROUTES.STUDYCASES.name}</NavLink>
+						<NavLink exact to={ROUTES.STUDYCASES.link} activeclassname="font-semibold text-base text-secondary2 tracking-tight">{ROUTES.STUDYCASES.name}</NavLink>
 					</li>
 					<li className="nav-item nav-link ml-5 2xl:ml-8 py-2 text-sm font-semibold text-primary hover:text-secondary1 focus:outline-none focus:text-secondary1">
-						<NavLink exact to={ROUTES.ABOUT.link} activeclassName="font-semibold text-base text-secondary2 tracking-tight">{ROUTES.ABOUT.name}</NavLink>
+						<NavLink exact to={ROUTES.ABOUT.link} activeclassname="font-semibold text-base text-secondary2 tracking-tight">{ROUTES.ABOUT.name}</NavLink>
 					</li>
 					<li className="nav-item nav-link ml-5 2xl:ml-8 py-2 text-sm font-semibold text-primary hover:text-secondary1 focus:outline-none focus:text-secondary1">
-						<NavLink exact to={ROUTES.CONTACT.link} activeclassName="font-semibold text-base text-secondary2 tracking-tight">{ROUTES.CONTACT.name}</NavLink>
+						<NavLink exact to={ROUTES.CONTACT.link} activeclassname="font-semibold text-base text-secondary2 tracking-tight">{ROUTES.CONTACT.name}</NavLink>
 					</li>                            
 					<li className="nav-item nav-link ml-5 2xl:ml-8 py-2 text-sm font-semibold text-primary hover:text-secondary1 focus:outline-none focus:text-secondary1">
-						<NavLink exact to={ROUTES.BLOG.link} activeclassName="font-semibold text-base text-secondary2 tracking-tight">{ROUTES.BLOG.name}</NavLink>
+						<NavLink exact to={ROUTES.BLOG.link} activeclassname="font-semibold text-base text-secondary2 tracking-tight">{ROUTES.BLOG.name}</NavLink>
 					</li>
 				</ul>
 			  </div>
