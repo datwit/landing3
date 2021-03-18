@@ -1,11 +1,13 @@
 import React from 'react'
 import PropTypes from 'prop-types';
+import { useLocation } from 'react-router-dom'
 
 
-class CustomControls extends React.Component {
+const CustomControls = ({ slidesCount, scrollToSlide, onNext, onPrev, getCurrentSlideIndex, style, className }) => {
 
- 
-  static propTypes = {
+  const { pathname } = useLocation();
+
+  CustomControls.propTypes = {
     className: PropTypes.string,
     getCurrentSlideIndex: PropTypes.func.isRequired,
     onNext: PropTypes.func.isRequired,
@@ -14,10 +16,10 @@ class CustomControls extends React.Component {
     slidesCount: PropTypes.number.isRequired,
     style: PropTypes.object,
   }
-  static defaultProps = {
+  CustomControls.defaultProps = {
     className: 'full-page-controls',
-    style: {          
-      display:'flex',
+    style: {
+      display: 'flex',
       flexFlow: 'column',
       position: 'fixed',
       top: '50%',
@@ -25,58 +27,70 @@ class CustomControls extends React.Component {
       paddingLeft: '20px',
       zIndex: 1
     },
-  } 
-     
-  renderSlidesNumbers(currentSlideIndex) {
+  }
 
-    const { slidesCount, scrollToSlide } = this.props;   
+  const renderSlidesNumbers = (currentSlideIndex) => {
+
     const slidesNumbers = [];
+    let tip = [];
+
+    switch (pathname) {
+      case '/':
+        tip = [...tip, 'Top', 'Services', 'Study cases', 'Pricing', 'Bottom']
+        break
+      case '/studyCases':
+        tip = [...tip, 'Study Cases', 'Bottom']
+        break
+      case '/about':
+        tip = [...tip, 'About Datwit', 'Team', 'Collaborators', 'Bottom']
+        break
+      case '/contact':
+        tip = [...tip, 'Contact us', 'Bottom']
+        break
+      default:
+        break;
+    }
+
     for (let i = 0; i < slidesCount; i++) {
       const buttonProps = {
         disabled: currentSlideIndex === i,
         key: i,
-        id: "control",        
-        onClick: () => scrollToSlide(i),      
-                            
-      };               
-      slidesNumbers.push(<button {...buttonProps}></button>);
-     
-    }     
-    return slidesNumbers;
-    
-  }
-  
-
-   render() {       
-   
-
-    const {  onNext, onPrev } = this.props;
-    
-    const handler = (event) => {
-      switch (event.keyCode) {
-        case 40:
-          onNext()
-          break;
-        case 38:
-          onPrev()
-          break;
-
-        default:
-          break;
+        id: "control",
+        onClick: () => scrollToSlide(i),
+        className: 'has-tooltip'
+      };
+      const toolProps = {
+        className: "tooltip shadow-lg ml-5 bg-bggray text-primary px-3 py-2"
       }
+      slidesNumbers.push(<button {...buttonProps}><span {...toolProps}>{tip[i]}</span></button>);
+
     }
-    window.addEventListener('keydown', handler)
+    return slidesNumbers;
 
-   
-    const { getCurrentSlideIndex, style, className} = this.props;    
-
-    return (
-      <div className={className} style={style}>
-        {this.renderSlidesNumbers(getCurrentSlideIndex())}
-      </div>         
-
-    );
   }
+
+  const handler = (event) => {
+    switch (event.keyCode) {
+      case 40:
+        onNext()
+        break;
+      case 38:
+        onPrev()
+        break;
+
+      default:
+        break;
+    }
+  }
+  window.addEventListener('keydown', handler)
+
+  return (
+    <div className={className} style={style}>
+      {renderSlidesNumbers(getCurrentSlideIndex())}
+    </div>
+
+  );
 }
+
 
 export default CustomControls

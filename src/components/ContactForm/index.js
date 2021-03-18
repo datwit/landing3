@@ -1,6 +1,10 @@
 import React from 'react'
+import CTA from '../Home/CTA'
+
+
 
 const ContacthtmlForm = () => {
+    const message="Send"
     return (
         <div className="container px-5 mx-auto">
             <h2 className="mt-4">Check out our solutions</h2>
@@ -48,11 +52,9 @@ const ContacthtmlForm = () => {
                                 className="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"
                             ></textarea>
                         </div>
-                        <div className="justify-center select-none flex">
-                            <a className="btn inline-flex" href="/contact">Send
-                            <svg className="h-6 w-6 text-white ml-2"  width="24" height="24" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">  <path stroke="none" d="M0 0h24v24H0z"/>  <line x1="10" y1="14" x2="21" y2="3" />  <path d="M21 3L14.5 21a.55 .55 0 0 1 -1 0L10 14L3 10.5a.55 .55 0 0 1 0 -1L21 3" /></svg>
-                            </a>
-                        </div>
+
+                        <CTA buttonName={'Send'}/>
+                        
                         <p className="text-xs text-gray-500 mt-3">Chicharrones blog helvetica normcore iceland tousled brook viral artisan.</p>
                     </div>
                 </div>                
