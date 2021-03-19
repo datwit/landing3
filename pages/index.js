@@ -1,0 +1,45 @@
+import CustomControls from '../components/Slide/CustomControls'
+import { FullPage, Slide } from 'react-full-page'
+import Section from '../components/Section'
+import Hero from '../components/Home/Hero'
+import StudyCases from '../components/Home/StudyCases'
+import Services from '../components/Services'
+import Pricing from '../components/Home/Pricing'
+import Footer from '../components/Footer'
+
+export default function Home() {
+  return (
+    <FullPage controls={CustomControls}>
+        <Slide>
+          <Section>
+            <Hero />
+          </Section>        
+        </Slide>
+
+        <Slide>
+        <Section>
+            <Services />
+          </Section>
+        </Slide> 
+
+        <Slide>
+          <Section>
+            <StudyCases />
+          </Section>          
+        </Slide>
+        
+        <Slide>
+          <Section>
+            <Pricing />
+          </Section>          
+        </Slide>
+
+        <Slide>
+          <section className= "w-full h-screen bg-primary mx-auto px-10">
+            <Footer />
+          </section>                  
+        </Slide>
+             
+      </FullPage>
+  )
+}
