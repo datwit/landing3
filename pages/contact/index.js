@@ -1,9 +1,9 @@
 import React from 'react'
-import CustomControls from '../components/Slide/CustomControls'
+import CustomControls from '../../components/Slide/CustomControls'
 import { FullPage, Slide } from 'react-full-page'
-import Section from '../components/Section'
-import Footer from '../components/Footer'
-import ContactForm from '../components/ContactForm'
+import Section from '../../components/Section'
+import Footer from '../../components/Footer'
+import ContactForm from '../../components/ContactForm'
 
 const Contact = () => {
     return (

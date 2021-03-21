@@ -6,7 +6,7 @@
 @layer base{
     @font-face {
       font-family: 'Numans';
-      src: url('../assets/fonts/Numans-Regular.ttf') format('truetype');
+      src: url('../public/fonts/Numans-Regular.ttf') format('truetype');
     }
     /*main header hero section*/
     h1{

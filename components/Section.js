@@ -1,9 +1,5 @@
 import React, {Fragment} from 'react'
-// import Navbar from './Navbar'
-
-
-
-
+import Navbar from '../components/Navbar' 
 
 
 const Section = ({children}) => {
@@ -11,7 +7,7 @@ const Section = ({children}) => {
     return ( 
         <Fragment>        
         <section className= "w-full h-screen">
-            {/* <Navbar /> */}
+            <Navbar />
             {children}        
         </section>
         </Fragment>  

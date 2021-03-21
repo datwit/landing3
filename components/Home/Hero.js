@@ -3,7 +3,8 @@ import CTA from './CTA'
 
 
 
-const Hero = ()=>(   
+const Hero = ()=>(
+         
       
       <div className="text-center relative" id= "hero-id">
         <h1>Bring your idea,
