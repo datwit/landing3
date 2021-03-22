@@ -48,7 +48,7 @@ const index = () => {
                                 <p className="text-xs text-gray-500 mt-3 border-b border-gray-200">{data.description}</p>
                                 {
                                     data.bullets.map((data,key)=>(
-                                        <p className="flex items-center text-gray-600 mb-2 text-xs sm:text-sm">
+                                        <p className="flex items-center text-gray-600 mb-2 text-xs sm:text-sm" key={key}>
                                         <span className="w-5 h-5 mr-2 inline-flex items-center justify-center flex-shrink-0">
                                         <svg className="h-5 w-5 text-secondary2"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  strokeWidth="4"  strokeLinecap="round"  strokeLinejoin="round">  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />  <polyline points="22 4 12 14.01 9 11.01" /></svg>
                                         </span>{data.title}
@@ -74,7 +74,7 @@ const index = () => {
                                 <p className="text-xs text-gray-500 mt-3 border-b border-gray-200">{data.description}</p>
                                 {
                                     data.bullets.map((data,key)=>(
-                                        <p className="flex items-center text-gray-600 mb-2 text-xs sm:text-sm">
+                                        <p className="flex items-center text-gray-600 mb-2 text-xs sm:text-sm" key={key}>
                                         <span className="w-5 h-5 mr-2 inline-flex items-center justify-center flex-shrink-0">
                                         <svg className="h-5 w-5 text-secondary2"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  strokeWidth="4"  strokeLinecap="round"  strokeLinejoin="round">  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />  <polyline points="22 4 12 14.01 9 11.01" /></svg>
                                         </span>{data.title}

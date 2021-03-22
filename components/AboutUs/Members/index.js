@@ -60,8 +60,8 @@ const Members = () => {
                     ))
                     }
                     {                       
-                    datas.list2.map((data, key) => (
-                        <div className=" sm:w-1/2 lg:w-1/5 w-full" key={key}>
+                    datas.list2.map((data, key1) => (
+                        <div className=" sm:w-1/2 lg:w-1/5 w-full" key={key1}>
                             <div className="h-full flex flex-col items-center text-center">
                                 <img alt="team" className="flex-shrink-0 rounded-lg w-40 h-40 object-cover object-center mb-4" src="" />
                                 <div className="w-full">

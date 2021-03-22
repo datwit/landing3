@@ -10,7 +10,7 @@ function Navbar() {
 	const styles= 
       {
         container:{
-			position: 'absolute',
+			position: 'fixed',
 			top: 0,
 			left: 0,
 			height: active ? '100%': 0,
@@ -21,6 +21,7 @@ function Navbar() {
 			opacity: 0.95,			
 			transition: 'height 1s ease',
 			zIndex: 2,
+			overflowY:'auto'
 						
         }  
         
@@ -31,10 +32,11 @@ function Navbar() {
 	};
 	
 	
+	
 
 	return (	
 
-		<nav className='flex items-center flex-wrap bg-white p-3 '>
+		<nav className='flex items-center flex-wrap bg-white p-3'>
 			<div className="container max-w-7xl mx-auto px-4 sm:px-6">
 				<div className="flex items-center justify-between h-16">
 					
@@ -45,7 +47,7 @@ function Navbar() {
 								</a>
 							</Link>
 						</div>
-						<div className="hidden md:block relative items-center">
+						<div className="hidden md:block items-center">
 							<Link href={ROUTES.HOME.link}><a className="nav-link ml-5 2xl:ml-8 py-2 text-sm font-semibold text-primary hover:text-secondary1 focus:text-secondary1">{ROUTES.HOME.name}</a></Link>
 							<Link href={ROUTES.STUDYCASES.link}><a className="nav-link ml-5 2xl:ml-8 py-2 text-sm font-semibold text-primary hover:text-secondary1  focus:text-secondary1">{ROUTES.STUDYCASES.name}</a></Link>
 							<Link href={ROUTES.ABOUT.link}><a className="nav-link ml-5 2xl:ml-8 py-2 text-sm font-semibold text-primary hover:text-secondary1  focus:text-secondary1">{ROUTES.ABOUT.name}</a></Link>
@@ -70,22 +72,26 @@ function Navbar() {
 						</div>
 						
 				</div>
-				<aside className={`${active ? 'flex' : 'hidden'} w-full lg:inline-flex lg:flex-grow lg:w-auto`}>							
-							
-					<div style={styles.container}>
-						<button className="mr-2 flex justify-end" onClick= {handleClick} >
-							<svg xmlns="http://www.w3.org/2000/svg" className="w-9 h-9 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-								<path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
-							</svg>
-						</button>
-						<div className="md:hidden flex flex-col items-center">
-						<Link href={ROUTES.HOME.link}><a className=" ml-5 2xl:ml-8 py-2 text-sm font-semibold text-white hover:text-secondary1 focus:text-secondary1">{ROUTES.HOME.name}</a></Link>
-						<Link href={ROUTES.STUDYCASES.link}><a className=" ml-5 2xl:ml-8 py-2 text-sm font-semibold text-white hover:text-secondary1  focus:text-secondary1">{ROUTES.STUDYCASES.name}</a></Link>
-						<Link href={ROUTES.ABOUT.link}><a className=" ml-5 2xl:ml-8 py-2 text-sm font-semibold text-white hover:text-secondary1  focus:text-secondary1">{ROUTES.ABOUT.name}</a></Link>
-						<Link href={ROUTES.CONTACT.link}><a className=" ml-5 2xl:ml-8 py-2 text-sm font-semibold text-white hover:text-secondary1  focus:text-secondary1">{ROUTES.CONTACT.name}</a></Link>
-						<Link href={ROUTES.BLOG.link}><a className=" ml-5 2xl:ml-8 py-2 text-sm font-semibold text-white hover:text-secondary1  focus:text-secondary1">{ROUTES.BLOG.name}</a></Link>	
+				<aside id="cont-aside" style={styles.container} className={`${active ? 'flex' : 'hidden'} w-full lg:inline-flex lg:flex-grow lg:w-auto h-full justify-center md:hidden`}>							
+
+						<div className='h-16 absolute top-0 w-full px-10 pt-4'>
+							<div className='flex justify-between items-center'>
+								<Image src="/images/logo-grande.png" alt="logo" width="180" height="64" />	
+								<button className="mr-2 flex justify-end" onClick= {handleClick} >
+									<svg xmlns="http://www.w3.org/2000/svg" className="w-9 h-9 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+										<path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
+									</svg>
+								</button>
+							</div>							
+						</div>													 
+						<div className="md:hidden flex flex-col relative  items-center">
+							<Link href={ROUTES.HOME.link}><a className="nav-link ml-5 2xl:ml-8 pb-2 text-xl font-semibold text-white hover:text-secondary1 focus:text-secondary1">{ROUTES.HOME.name}</a></Link>
+							<Link href={ROUTES.STUDYCASES.link}><a className="nav-link ml-5 2xl:ml-8 pb-2 pt-9 text-xl font-semibold text-white hover:text-secondary1  focus:text-secondary1">{ROUTES.STUDYCASES.name}</a></Link>
+							<Link href={ROUTES.ABOUT.link}><a className="nav-link ml-5 2xl:ml-8 pb-2 pt-9 text-xl font-semibold text-white hover:text-secondary1  focus:text-secondary1">{ROUTES.ABOUT.name}</a></Link>
+							<Link href={ROUTES.CONTACT.link}><a className="nav-link ml-5 2xl:ml-8 pb-2 pt-9 text-xl font-semibold text-white hover:text-secondary1  focus:text-secondary1">{ROUTES.CONTACT.name}</a></Link>
+							<Link href={ROUTES.BLOG.link}><a className="nav-link ml-5 2xl:ml-8 pb-2 pt-9 text-xl font-semibold text-white hover:text-secondary1  focus:text-secondary1">{ROUTES.BLOG.name}</a></Link>	
 						</div>
-					</div>
+					
 				</aside>
 			</div>
 		</nav>

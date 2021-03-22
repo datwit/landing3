@@ -36,7 +36,8 @@
     section{
       @apply  overflow-hidden relative px-3 sm:px-10 bg-white;
     }
-  }
+  } 
+
   /**************************************************/
   #hero-id{
     top: 45%;
@@ -141,6 +142,7 @@
   transform: scaleX(1);
   transform-origin: left;
 }
+
 /*overriding slick theme*/
 .slick-dots li.slick-active button::before {
   opacity: 1;
