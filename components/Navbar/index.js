@@ -5,34 +5,14 @@ import * as ROUTES from './routes'
 import { useState } from 'react';
 
 
+
 function Navbar() {
 	const [active, setActive] = useState(false);
-	const styles= 
-      {
-        container:{
-			position: 'fixed',
-			top: 0,
-			left: 0,
-			height: active ? '100%': 0,
-			width: '100vw',
-			display: 'flex',
-			flexDirection: 'column',
-			background: '#1e4158',
-			opacity: 0.95,			
-			transition: 'height 1s ease',
-			zIndex: 2,
-			overflowY:'auto'
-						
-        }  
-        
-      }   
+	
 
 	const handleClick = () => {
 		setActive(!active);
-	};
-	
-	
-	
+	};	
 
 	return (	
 
@@ -72,7 +52,7 @@ function Navbar() {
 						</div>
 						
 				</div>
-				<aside id="cont-aside" style={styles.container} className={`${active ? 'flex' : 'hidden'} w-full lg:inline-flex lg:flex-grow lg:w-auto h-full justify-center md:hidden`}>							
+				<aside id="cont-aside" className={`${active ? 'h-full' : 'hidden h-0'} md:invisible`}>							
 
 						<div className='h-16 absolute top-0 w-full px-10 pt-4'>
 							<div className='flex justify-between items-center'>
