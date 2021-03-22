@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{useEffect} from 'react'
 import PropTypes from 'prop-types';
 import { useRouter } from "next/router"
 
@@ -51,9 +51,7 @@ const CustomControls = ({ slidesCount, scrollToSlide, onNext, onPrev, getCurrent
         break
       default:
         break;
-    }
-
-    
+    }   
 
     for (let i = 0; i < slidesCount; i++) {
       const buttonProps = {
@@ -67,26 +65,28 @@ const CustomControls = ({ slidesCount, scrollToSlide, onNext, onPrev, getCurrent
         className: "tooltip shadow-lg ml-5 bg-bggray text-primary px-3 py-2"
       }
       slidesNumbers.push(<button {...buttonProps}><span {...toolProps}>{tip[i]}</span></button>);
-
     }
     return slidesNumbers;
-
   }
+  useEffect(() => {
+    window.addEventListener('keydown', handler);
+    return () => window.removeEventListener('keydown', handler);
+  }, []);
 
-  // const handler = (event) => {
-  //   switch (event.keyCode) {
-  //     case 40:
-  //       onNext()
-  //       break;
-  //     case 38:
-  //       onPrev()
-  //       break;
+  const handler = (event) => {
+    
+    switch (event.keyCode) {
+      case 40:
+        onNext()
+        break;
+      case 38:
+        onPrev()
+        break;
 
-  //     default:
-  //       break;
-  //   }
-  // }
-  // window.addEventListener('keydown', handler)
+      default:
+        break;
+    }
+  }
 
   return (
     <div className={className} style={style}>
