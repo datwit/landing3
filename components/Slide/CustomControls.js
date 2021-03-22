@@ -1,11 +1,13 @@
 import React from 'react'
 import PropTypes from 'prop-types';
-// import { useLocation } from 'react-router-dom'
+import { useRouter } from "next/router"
 
 
 const CustomControls = ({ slidesCount, scrollToSlide, onNext, onPrev, getCurrentSlideIndex, style, className }) => {
 
-  // const { pathname } = useLocation();
+ 
+  const {pathname} = useRouter()
+  
 
   CustomControls.propTypes = {
     className: PropTypes.string,
@@ -32,26 +34,26 @@ const CustomControls = ({ slidesCount, scrollToSlide, onNext, onPrev, getCurrent
   const renderSlidesNumbers = (currentSlideIndex) => {
 
     const slidesNumbers = [];
-    // let tip = [];
+    let tip = [];
 
-    // switch (pathname) {
-    //   case '/':
-    //     tip = [...tip, 'Top', 'Services', 'Study cases', 'Pricing', 'Bottom']
-    //     break
-    //   case '/studyCases':
-    //     tip = [...tip, 'Study Cases', 'Bottom']
-    //     break
-    //   case '/about':
-    //     tip = [...tip, 'About Datwit', 'Team', 'Collaborators', 'Bottom']
-    //     break
-    //   case '/contact':
-    //     tip = [...tip, 'Contact us', 'Bottom']
-    //     break
-    //   default:
-    //     break;
-    // }
+    switch (pathname) {
+      case '/':
+        tip = [...tip, 'Top', 'Services', 'Study cases', 'Pricing', 'Bottom']
+        break
+      case '/studycases':
+        tip = [...tip, 'Study Cases', 'Bottom']
+        break
+      case '/about':
+        tip = [...tip, 'About Datwit', 'Team', 'Collaborators', 'Bottom']
+        break
+      case '/contact':
+        tip = [...tip, 'Contact us', 'Bottom']
+        break
+      default:
+        break;
+    }
 
-    // <span {...toolProps}>{tip[i]}</span>
+    
 
     for (let i = 0; i < slidesCount; i++) {
       const buttonProps = {
@@ -64,7 +66,7 @@ const CustomControls = ({ slidesCount, scrollToSlide, onNext, onPrev, getCurrent
       const toolProps = {
         className: "tooltip shadow-lg ml-5 bg-bggray text-primary px-3 py-2"
       }
-      slidesNumbers.push(<button {...buttonProps}></button>);
+      slidesNumbers.push(<button {...buttonProps}><span {...toolProps}>{tip[i]}</span></button>);
 
     }
     return slidesNumbers;
