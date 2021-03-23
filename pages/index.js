@@ -3,7 +3,7 @@ import { FullPage, Slide } from 'react-full-page'
 import Section from '../components/Section'
 import Hero from '../components/Home/Hero'
 import StudyCases from '../components/Home/StudyCases'
-import Services from '../components/Services'
+import Services from '../components/Home/Services'
 import Pricing from '../components/Home/Pricing'
 import Footer from '../components/Footer'
 
