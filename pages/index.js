@@ -6,6 +6,7 @@ import StudyCases from '../components/Home/StudyCases'
 import Services from '../components/Home/Services'
 import Pricing from '../components/Home/Pricing'
 import Footer from '../components/Footer'
+import Selection from '../components/Selection'
 
 export default function Home() {
   return (
@@ -31,6 +32,12 @@ export default function Home() {
         <Slide>
           <Section>
             <Pricing />
+          </Section>          
+        </Slide>
+
+        <Slide>
+          <Section>
+            <Selection />
           </Section>          
         </Slide>
 
