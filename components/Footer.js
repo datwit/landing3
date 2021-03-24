@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import React,{Fragment} from 'react'
 // import logo from '../assets/images/logo-grande.png'
 
@@ -55,8 +56,8 @@ const Footer = () => {
                     
                         <div className="sm:w-2/4 lg:w-1/4 overflow-hidden lg:my-2 lg:px-2">
                             <h2 className="text-white font-bold flex justify-start text-lg mb-5">DATA PROTECTION</h2>
-                            <h3 className="text-white text-left mb-5" >Privacy Policy</h3>
-                            <h3 className="text-white text-left" >Terms and Conditions</h3>
+                            <Link href='/info/privacy-police'><h3 className="text-white text-left mb-5 cursor-pointer">Privacy Policy</h3></Link>
+                            <Link href='/info/terms-conditions'><h3 className="text-white text-left cursor-pointer" >Terms and Conditions</h3></Link>
                         </div>
                     </div>                    
                 </div>                
