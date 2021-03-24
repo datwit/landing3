@@ -1,10 +1,39 @@
-import {} from '../../styles/global'
-import {SectionHeader, SectionSubheader, ContentWrapper} from '../../styles/global'
-import {DHeader} from '../AboutUs/Datwit/style'
-import {BlockOuterContainer, BlockBorder} from './style'
+import { } from '../../styles/global'
+import { SectionHeader, SectionSubheader, ContentWrapper } from '../../styles/global'
+import { DHeader } from '../AboutUs/Datwit/style'
+import { BlockOuterContainer, BlockBorder } from './style'
+import CTA from '../Home/CTA'
+import { useState } from 'react'
 
 
 const Selection = () => {
+
+    const [card1, isCard1] = useState(false);
+    const [card2, isCard2] = useState(false)
+    const [init, setInit] = useState(true)
+
+    const handleToggle1 = () => {
+        if (init) {
+            isCard1(true)
+            setInit(false)
+        } else {
+            isCard1(card1 => !card1);
+            isCard2(false);
+        }
+    };
+    const handleToggle2 = () => {
+        if (init) {
+            isCard2(true)
+            setInit(false)
+        } else {
+            isCard1(false);
+            isCard2(card2 => !card2);
+        }
+    };
+
+
+
+
     return (
         <div className="container px-5 mx-auto">
             <SectionHeader>Sit ea irure veniam voluptate id incididunt ...</SectionHeader>
@@ -12,19 +41,22 @@ const Selection = () => {
             <ContentWrapper>
                 <>
                     <BlockOuterContainer>
-                        <BlockBorder>
-                            <img src="" alt="img" className="md:h-60 h-40"/>
+                        <BlockBorder onClick={handleToggle1} className={card1 ? 'active' : ''}>
+                            <img src="" alt="img" className="md:h-60 h-40" />
                             <DHeader>Partner</DHeader>
                         </BlockBorder>
                     </BlockOuterContainer>
                     <BlockOuterContainer>
-                        <BlockBorder>
-                            <img src="" alt="img" className="md:h-60 h-40"/>
+                        <BlockBorder onClick={handleToggle2} className={card2 ? 'active' : ''}>
+                            <img src="" alt="img" className="md:h-60 h-40" />
                             <DHeader>Team</DHeader>
                         </BlockBorder>
                     </BlockOuterContainer>
-                </>    
-            </ContentWrapper>            
+                </>
+            </ContentWrapper>
+            <div className="flex justify-center pt-8">
+                <CTA buttonName={'Confirm'} />
+            </div>
         </div>
     )
 }
