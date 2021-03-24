@@ -52,19 +52,20 @@ const Services = () => {
                             <div className={tab1 ? 'block' : 'hidden'}>
                             {
                                 datas.soft.map((data, key) => (
-                                    <>
-                                    <h2 className= "text-lg mt-2 text-left" key={key}>{data.title}</h2>
-                                    <p className="text-base mt-2">{data.subtitle}</p>
+                                    <div key={key}>
+                                        <h2 className= "text-lg mt-2 text-left">{data.title}</h2>
+                                        <p className="text-base mt-2">{data.subtitle}</p>
                                     {
-                                      data.items.map((data,key)=>(
-                                        <p className="text-base mt-2 flex items-baseline" key={key}>
+                                      data.items.map((data,key1)=>(
+                                        <div  key={key1}> 
+                                        <p className="text-base mt-2 flex items-baseline">
                                         <span className="w-5 h-5 mr-2 inline-flex items-center justify-center flex-shrink-0">
-                                        <svg className="h-8 w-8 text-secondary2"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round">  <circle cx="12" cy="12" r="10" />  <polyline points="12 16 16 12 12 8" />  <line x1="8" y1="12" x2="16" y2="12" /></svg>
+                                        <svg className="h-8 w-8 text-secondary2"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  strokeWidth="2"  strokeLinecap="round"  strokeLinejoin="round">  <circle cx="12" cy="12" r="10" />  <polyline points="12 16 16 12 12 8" />  <line x1="8" y1="12" x2="16" y2="12" /></svg>
                                         </span>{data.tit}</p>
-
+                                        </div>
                                       ))
                                     }
-                                    </>
+                                    </div>
                                 ))
                             }
                                 
@@ -72,45 +73,27 @@ const Services = () => {
                             <div className={tab2 ? 'block' : 'hidden'}>
                             {
                                 datas.data.map((data, key) => (
-                                    <>
-                                    <h2 className= "text-lg mt-2 text-left" key={key}>{data.title}</h2>
+                                    <div  key={key}>
+                                    <h2 className= "text-lg mt-2 text-left">{data.title}</h2>
                                     <p className="text-base mt-2">{data.subtitle}</p>
                                     {
-                                      data.items.map((data,key)=>(
-                                        <p className="text-base mt-2 flex items-baseline" key={key}>
-                                        <span className="w-5 h-5 mr-2 inline-flex items-center justify-center flex-shrink-0">
-                                        <svg className="h-8 w-8 text-secondary2"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round">  <circle cx="12" cy="12" r="10" />  <polyline points="12 16 16 12 12 8" />  <line x1="8" y1="12" x2="16" y2="12" /></svg>
-                                        </span>{data.tit}</p>
-
+                                      data.items.map((data,key1)=>(
+                                        <div  key={key1}>
+                                            <p className="text-base mt-2 flex items-baseline">
+                                            <span className="w-5 h-5 mr-2 inline-flex items-center justify-center flex-shrink-0">
+                                            <svg className="h-8 w-8 text-secondary2"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  strokeWidth="2"  strokeLinecap="round"  strokeLinejoin="round">  <circle cx="12" cy="12" r="10" />  <polyline points="12 16 16 12 12 8" />  <line x1="8" y1="12" x2="16" y2="12" /></svg>
+                                            </span>{data.tit}</p>
+                                        </div>  
                                       ))
                                     }
-                                    </>
+                                    </div>
                                 ))
                             }
                             </div>                       
                     </div>
                 </div>
             </div>
-        </div>
-        // <TabContainer>
-        //     <TabHead>
-        //         <Tab onClick={isTabOne}>     
-                    
-        //                 <a>Tab 1</a>
-                    
-        //         </Tab>     
-        //         <Tab onClick={isTabTwo}>
-                
-        //             <a>Tab 2</a>
-               
-        //         </Tab>
-        //     </TabHead>
-        //     <TabBody>
-        //         {isTabOne && <Fragment>This is tab one content</Fragment>}
-        //         {isTabTwo && <Fragment>This is tab two content</Fragment>}
-        //     </TabBody>
-           
-        // </TabContainer>
+        </div>       
         
     )
 }
