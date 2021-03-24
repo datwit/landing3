@@ -1,8 +1,3 @@
-import React,{useState} from 'react'
-
-
-
-
 
 const CTA = ({buttonName}) => { 
 
