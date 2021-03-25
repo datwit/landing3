@@ -1,5 +1,5 @@
 import { } from '../../styles/global'
-import { SectionHeader, SectionSubheader, ContentWrapper } from '../../styles/global'
+import { SectionHeader, SectionSubheader, ContentWrapper, Button } from '../../styles/global'
 import { DHeader } from '../AboutUs/Datwit/style'
 import { BlockOuterContainer, BlockBorder, ButtonWrapper } from './style'
 import Link from 'next/link' 
@@ -53,16 +53,16 @@ const Selection = () => {
             </ContentWrapper>                       
             <ButtonWrapper className={card1 ? 'block': 'hidden'}>
                 <Link href='/partner'>
-                    <a className="btn inline-flex mt-8">Confirm your choice
+                    <Button>Confirm your choice
                     <svg className="h-6 w-6 text-white ml-2"  width="24" height="24" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">  <path stroke="none" d="M0 0h24v24H0z"/>  <line x1="10" y1="14" x2="21" y2="3" />  <path d="M21 3L14.5 21a.55 .55 0 0 1 -1 0L10 14L3 10.5a.55 .55 0 0 1 0 -1L21 3" /></svg>
-                    </a>
+                    </Button>
                 </Link>
             </ButtonWrapper>
             <ButtonWrapper className={card2 ? 'block': 'hidden'}>
                 <Link href='/team'>
-                    <a className="btn inline-flex mt-8">Confirm your choice
+                    <Button>Confirm your choice
                     <svg className="h-6 w-6 text-white ml-2"  width="24" height="24" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">  <path stroke="none" d="M0 0h24v24H0z"/>  <line x1="10" y1="14" x2="21" y2="3" />  <path d="M21 3L14.5 21a.55 .55 0 0 1 -1 0L10 14L3 10.5a.55 .55 0 0 1 0 -1L21 3" /></svg>
-                    </a>
+                    </Button>
                 </Link>                
             </ButtonWrapper>
         </div>

@@ -48,19 +48,5 @@
     left:40%;
   }
 
-/**************CTA************************************/
-.btn{
-  padding: .5rem 1rem;
-  border-radius: 9999px;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-  background-color: #e69c24;
-  color: white;
-  font-weight: 600;          
-}
-.btn:hover {
-  background-color: #1e4158;
-  border-color: white;
-  transform: translateY(-3px);
-  transition:  .3s ease-in-out
-}
+
 
