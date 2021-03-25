@@ -42,7 +42,7 @@ const index = () => {
                 <div className="md:hidden">
                  {/*********responsive************** */} 
                 </div>
-               <CTA buttonName={'Contact us'} hRef='/contact'/>
+               <CTA buttonName={'Contact us'}/>
             </div>
         
         

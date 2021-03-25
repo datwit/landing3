@@ -5,8 +5,7 @@ import {MapWrapper, FormBlock, FormIntro, InputWrapper, FInput, TInput, FormLabe
 
 
 
-const ContacthtmlForm = () => {
-    const message="Send"
+const ContacthtmlForm = () => {    
     return (
         <div className="container px-5 mx-auto">            
             <SectionSubheader>Commitment and creativity mark our creations. By all means, stroll along...</SectionSubheader>

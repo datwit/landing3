@@ -49,8 +49,8 @@ const Footer = () => {
                     
                         <div className="sm:w-2/4 lg:w-1/4 overflow-hidden lg:my-2 lg:px-2">
                             <div>
-                                <h3 className="text-white text-left mb-5" >Partner area</h3>
-                                <h3 className="text-white text-left" >Team member area</h3>
+                                <Link href='/partner'><h3 className="text-white text-left mb-5 cursor-pointer" >Partner area</h3></Link>
+                                <Link href='/team'><h3 className="text-white text-left cursor-pointer" >Team member area</h3></Link>
                             </div>
                         </div>
                     

@@ -16,7 +16,7 @@ const Hero = ()=>(
             <br/>
             cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat aliqua.
           </h4>
-          <CTA buttonName={'Contact us'} hRef='/contact'/>
+          <CTA buttonName={'Contact us'}/>
       </MainHeaderCont>     
 )
 export default Hero
