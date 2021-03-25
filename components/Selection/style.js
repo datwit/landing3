@@ -15,3 +15,6 @@ export const BlockBorder = styled.a.attrs({
         box-shadow: inset 0px 0px 5px #c1c1c1;
     }
 `;
+export const ButtonWrapper = styled.div.attrs({
+    className: "flex justify-center pt-8"
+})``;

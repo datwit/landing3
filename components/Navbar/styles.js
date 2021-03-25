@@ -5,6 +5,7 @@ const HoverLine = css
     transition: all ease 0.3s;
     position: relative;
     transition: 0.5s;
+    cursor: pointer;
     &::after{
         position: absolute;
         content: "";

@@ -1,7 +1,7 @@
 import { } from '../../styles/global'
 import { SectionHeader, SectionSubheader, ContentWrapper } from '../../styles/global'
 import { DHeader } from '../AboutUs/Datwit/style'
-import { BlockOuterContainer, BlockBorder } from './style'
+import { BlockOuterContainer, BlockBorder, ButtonWrapper } from './style'
 import CTA from '../Home/CTA'
 import { useState } from 'react'
 
@@ -30,10 +30,7 @@ const Selection = () => {
             isCard2(card2 => !card2);
         }
     };
-
-
-
-
+ 
     return (
         <div className="container px-5 mx-auto">
             <SectionHeader>Sit ea irure veniam voluptate id incididunt ...</SectionHeader>
@@ -53,10 +50,13 @@ const Selection = () => {
                         </BlockBorder>
                     </BlockOuterContainer>
                 </>
-            </ContentWrapper>
-            <div className="flex justify-center pt-8">
-                <CTA buttonName={'Confirm'} />
-            </div>
+            </ContentWrapper>                       
+            <ButtonWrapper className={card1 ? 'block': 'hidden'}>
+                <CTA buttonName={'Confirm your choice'} hRef='/partner' />
+            </ButtonWrapper>
+            <ButtonWrapper className={card2 ? 'block': 'hidden'}>
+                <CTA buttonName={'Confirm your choice'} hRef='/team' />
+            </ButtonWrapper>
         </div>
     )
 }
