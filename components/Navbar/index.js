@@ -3,6 +3,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import * as ROUTES from './routes'
 import { useState } from 'react';
+import {NavContainer, ImgWrapper, LogoLink, LinkItem, ButtonContainer, LinkItem2, HamburguerWrapper, HeaderElements, AligningElements} from './styles'
 
 
 
@@ -18,24 +19,24 @@ function Navbar() {
 
 		<nav className='flex items-center flex-wrap bg-white p-3'>
 			<div className="container max-w-7xl mx-auto px-4 sm:px-6">
-				<div className="flex items-center justify-between h-16">
+				<NavContainer>
 					
-						<div className="flex-shrink-0">
+						<ImgWrapper>
 							<Link href='/'>
-								<a className='inline-flex items-center'>
+								<LogoLink>
 									<Image src="/images/logo.png" alt="logo" width="160" height="50" />								
-								</a>
+								</LogoLink>
 							</Link>
-						</div>
+						</ImgWrapper>
 						<div className="hidden md:block items-center">
-							<Link href={ROUTES.HOME.link}><a className="nav-link ml-5 2xl:ml-8 py-2 text-sm font-semibold text-primary hover:text-secondary1 focus:text-secondary1">{ROUTES.HOME.name}</a></Link>
-							<Link href={ROUTES.STUDYCASES.link}><a className="nav-link ml-5 2xl:ml-8 py-2 text-sm font-semibold text-primary hover:text-secondary1  focus:text-secondary1">{ROUTES.STUDYCASES.name}</a></Link>
-							<Link href={ROUTES.ABOUT.link}><a className="nav-link ml-5 2xl:ml-8 py-2 text-sm font-semibold text-primary hover:text-secondary1  focus:text-secondary1">{ROUTES.ABOUT.name}</a></Link>
-							<Link href={ROUTES.CONTACT.link}><a className="nav-link ml-5 2xl:ml-8 py-2 text-sm font-semibold text-primary hover:text-secondary1  focus:text-secondary1">{ROUTES.CONTACT.name}</a></Link>
-							<Link href={ROUTES.BLOG.link}><a className="nav-link ml-5 2xl:ml-8 py-2 text-sm font-semibold text-primary hover:text-secondary1  focus:text-secondary1">{ROUTES.BLOG.name}</a></Link>
+							<Link href={ROUTES.HOME.link}><LinkItem className="nav-link">{ROUTES.HOME.name}</LinkItem></Link>
+							<Link href={ROUTES.STUDYCASES.link}><LinkItem className="nav-link">{ROUTES.STUDYCASES.name}</LinkItem></Link>
+							<Link href={ROUTES.ABOUT.link}><LinkItem className="nav-link">{ROUTES.ABOUT.name}</LinkItem></Link>
+							<Link href={ROUTES.CONTACT.link}><LinkItem className="nav-link">{ROUTES.CONTACT.name}</LinkItem></Link>
+							<Link href={ROUTES.BLOG.link}><LinkItem className="nav-link">{ROUTES.BLOG.name}</LinkItem></Link>
 							
 						</div>
-						<div className="-mr-2 flex md:hidden">							
+						<ButtonContainer className="md:hidden">							
 							<button className="mr-2 justify-end" onClick={setActive}>
 								<svg
 									fill="none"
@@ -49,30 +50,30 @@ function Navbar() {
 									<path d="M4 6h16M4 12h16M4 18h16"></path>
 								</svg>
 							</button>
-						</div>
+						</ButtonContainer>
 						
-				</div>
-				<aside id="cont-aside" className={`${active ? 'h-full' : 'hidden h-0'} md:invisible`}>							
+				</NavContainer>
+				<HamburguerWrapper className={`${active ? 'h-full' : 'hidden h-0'} cont-aside`}>							
 
-						<div className='h-16 absolute top-0 w-full px-10 pt-4'>
-							<div className='flex justify-between items-center'>
+						<HeaderElements>
+							<AligningElements>
 								<Image src="/images/logo-grande.png" alt="logo" width="180" height="64" />	
 								<button className="mr-2 flex justify-end" onClick= {handleClick} >
 									<svg xmlns="http://www.w3.org/2000/svg" className="w-9 h-9 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
 										<path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
 									</svg>
 								</button>
-							</div>							
-						</div>													 
+							</AligningElements>							
+						</HeaderElements>													 
 						<div className="md:hidden flex flex-col relative  items-center">
-							<Link href={ROUTES.HOME.link}><a className="nav-link ml-5 2xl:ml-8 pb-2 text-xl font-semibold text-white hover:text-secondary1 focus:text-secondary1">{ROUTES.HOME.name}</a></Link>
-							<Link href={ROUTES.STUDYCASES.link}><a className="nav-link ml-5 2xl:ml-8 pb-2 pt-9 text-xl font-semibold text-white hover:text-secondary1  focus:text-secondary1">{ROUTES.STUDYCASES.name}</a></Link>
-							<Link href={ROUTES.ABOUT.link}><a className="nav-link ml-5 2xl:ml-8 pb-2 pt-9 text-xl font-semibold text-white hover:text-secondary1  focus:text-secondary1">{ROUTES.ABOUT.name}</a></Link>
-							<Link href={ROUTES.CONTACT.link}><a className="nav-link ml-5 2xl:ml-8 pb-2 pt-9 text-xl font-semibold text-white hover:text-secondary1  focus:text-secondary1">{ROUTES.CONTACT.name}</a></Link>
-							<Link href={ROUTES.BLOG.link}><a className="nav-link ml-5 2xl:ml-8 pb-2 pt-9 text-xl font-semibold text-white hover:text-secondary1  focus:text-secondary1">{ROUTES.BLOG.name}</a></Link>	
+							<Link href={ROUTES.HOME.link}><LinkItem2 className="nav-link">{ROUTES.HOME.name}</LinkItem2></Link>
+							<Link href={ROUTES.STUDYCASES.link}><LinkItem2 className="nav-link pt-9">{ROUTES.STUDYCASES.name}</LinkItem2></Link>
+							<Link href={ROUTES.ABOUT.link}><LinkItem2 className="nav-link pt-9">{ROUTES.ABOUT.name}</LinkItem2></Link>
+							<Link href={ROUTES.CONTACT.link}><LinkItem2 className="nav-link pt-9">{ROUTES.CONTACT.name}</LinkItem2></Link>
+							<Link href={ROUTES.BLOG.link}><LinkItem2 className="nav-link pt-9 ">{ROUTES.BLOG.name}</LinkItem2></Link>	
 						</div>
 					
-				</aside>
+				</HamburguerWrapper>
 			</div>
 		</nav>
 

@@ -67,19 +67,3 @@
   transition:  .3s ease-in-out
 }
 
-/*overriding slick theme*/
-.slick-dots li.slick-active button::before {
-  opacity: 1;
-  color: #1e4158;
-}
-.slick-dots li button {
-width: 25px;
-height: 5px;
-background: transparent;
-}
-.slick-dots li button::before {
-width: 25px;
-height: 5px;
-content: '';
-background: #00baff;
-}
