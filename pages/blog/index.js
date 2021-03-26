@@ -1,15 +1,27 @@
 import CustomControls from '../../components/Slide/CustomControls'
 import { FullPage, Slide } from 'react-full-page'
 import Section from '../../components/Section'
-import BlogList from '../../components/Blog'
 import Footer from '../../components/Footer'
+import Link from "next/link";
+import fs from "fs";
 
-const Blog = () => {
+const Blog = ({slugs}) => {
     return (
         <FullPage controls={CustomControls}>
         <Slide>
           <Section>
-            <BlogList />
+          <div>
+          slugs:
+          {slugs.map(slug => {
+            return (
+              <div key={slug}>
+                <Link href={"/blog/" + slug}>
+                  <a>{"/blog/" + slug}</a>
+                </Link>
+              </div>
+            );
+          })}
+          </div>           
           </Section>        
         </Slide>       
 
@@ -21,5 +33,18 @@ const Blog = () => {
         </FullPage>
     )
 }
+
+export const getStaticProps = async () => {
+  const files = fs.readdirSync("posts");
+  return {
+    props: {
+      slugs: files.map(filename => filename.replace(".md", ""))
+    }
+  };
+};
+
+
+
+
 
 export default Blog
