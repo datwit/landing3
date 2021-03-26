@@ -1,6 +1,7 @@
 ---
 title: Post 1
 img:
+date: 2021-02-14T19:05:27.220Z
 author:
   name: Benjamin
   bio: All about Benjamin
