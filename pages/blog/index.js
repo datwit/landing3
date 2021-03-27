@@ -1,28 +1,36 @@
-import CustomControls from '../../components/Slide/CustomControls'
 import { FullPage, Slide } from 'react-full-page'
 import Section from '../../components/Section'
 import Footer from '../../components/Footer'
 import Link from "next/link";
-import path from "path";
 import { getAllPosts } from './GetPosts';
-import Head from "next/head";
 import { format, parseISO } from 'date-fns';
+import CustomControls from '../../components/Slide/CustomControls'
+
+
 
 const Blog = ({ posts }) =>{
   return (
     //Posts listing template
-    <div>
-      <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+    
+      <FullPage controls={CustomControls}>
+        <Slide>
+          <Section>
+            <div className="space-y-4">
+              {posts.map((item) => (
+                <BlogListItem key={item.slug} {...item} />
+              ))}
+            </div> 
+               
+          </Section>        
+        </Slide>       
 
-      <div className="space-y-4">
-        {posts.map((item) => (
-          <BlogListItem key={item.slug} {...item} />
-        ))}
-      </div>
-    </div>
+        <Slide>
+          <section className= "w-full h-screen bg-primary mx-auto px-10">
+            <Footer />
+          </section>                  
+        </Slide>
+      </FullPage>      
+  
   );
 }
 export default Blog
@@ -58,5 +66,8 @@ const BlogListItem = ({ slug, title, date, content })=> {
     </div>
   );
 }
+
+
+
 
 
