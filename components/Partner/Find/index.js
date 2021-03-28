@@ -1,6 +1,6 @@
 import {ContentWrapper, SectionHeader, SectionSubheader} from '../../../styles/global'
 import {IconBlock, IconContent, IconTitle, IconText} from './style'
-import {SCardWrapper} from '../../Home/StudyCases/style'
+import {IconWrapper} from '../../Team/Benefits/style'
 import datas from './data.json'
 
 const Find = () => {
@@ -11,15 +11,15 @@ const Find = () => {
                 <ContentWrapper>
                     {
                         datas.map((data,key)=>(
-                            <SCardWrapper key={key}>                       
+                            <IconWrapper key={key}>                       
                                 <IconBlock>
-                                    <img className="lg:h-48 md:h-36 w-full object-cover object-center px-8" src="" alt="img" />
+                                    <img className="lg:h-48 md:h-36 w-full object-cover object-center px-8" src={data.src} alt="img" />
                                     <IconContent>
-                                        <IconTitle>Lorem ipsum dolor si amet</IconTitle>
-                                        <IconText>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aperiam consequuntur facilis</IconText>
+                                        <IconTitle>{data.title}</IconTitle>
+                                        <IconText>{data.description}</IconText>
                                     </IconContent>
                                 </IconBlock>                                              
-                            </SCardWrapper>
+                            </IconWrapper>
 
                         ))
                     }                                   
