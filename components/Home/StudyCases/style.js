@@ -17,10 +17,10 @@ export const SCardWrapper = styled.div.attrs({
   })``;
 
   export const CardTitle = styled.h1.attrs({
-    className: "title-font text-lg font-bold text-primary mb-3"
+    className: "title-font text-lg font-bold text-primary mb-1"
   })``;
   export const CardSubtitle = styled.p.attrs({
-    className: "mt-2 text-base leading-6 text-gray-500"
+    className: "mt-0 text-base leading-6 text-gray-500"
   })``;
   export const ReadMore = styled.a.attrs({
     className: "text-secondary2 inline-flex items-center md:mb-2 lg:mb-0"
