@@ -29,11 +29,11 @@ function Navbar() {
 							</Link>
 						</ImgWrapper>
 						<div className="hidden md:block items-center">
-							<Link href={ROUTES.HOME.link}><LinkItem className="nav-link">{ROUTES.HOME.name}</LinkItem></Link>
-							<Link href={ROUTES.STUDYCASES.link}><LinkItem className="nav-link">{ROUTES.STUDYCASES.name}</LinkItem></Link>
-							<Link href={ROUTES.ABOUT.link}><LinkItem className="nav-link">{ROUTES.ABOUT.name}</LinkItem></Link>
-							<Link href={ROUTES.CONTACT.link}><LinkItem className="nav-link">{ROUTES.CONTACT.name}</LinkItem></Link>
-							<Link href={ROUTES.BLOG.link}><LinkItem className="nav-link">{ROUTES.BLOG.name}</LinkItem></Link>
+							<Link href={ROUTES.HOME.link}><LinkItem>{ROUTES.HOME.name}</LinkItem></Link>
+							<Link href={ROUTES.STUDYCASES.link}><LinkItem>{ROUTES.STUDYCASES.name}</LinkItem></Link>
+							<Link href={ROUTES.ABOUT.link}><LinkItem>{ROUTES.ABOUT.name}</LinkItem></Link>
+							<Link href={ROUTES.CONTACT.link}><LinkItem>{ROUTES.CONTACT.name}</LinkItem></Link>
+							<Link href={ROUTES.BLOG.link}><LinkItem>{ROUTES.BLOG.name}</LinkItem></Link>
 							
 						</div>
 						<ButtonContainer className="md:hidden">							
@@ -66,11 +66,11 @@ function Navbar() {
 							</AligningElements>							
 						</HeaderElements>													 
 						<div className="md:hidden flex flex-col relative  items-center">
-							<Link href={ROUTES.HOME.link}><LinkItem2 className="nav-link">{ROUTES.HOME.name}</LinkItem2></Link>
-							<Link href={ROUTES.STUDYCASES.link}><LinkItem2 className="nav-link pt-9">{ROUTES.STUDYCASES.name}</LinkItem2></Link>
-							<Link href={ROUTES.ABOUT.link}><LinkItem2 className="nav-link pt-9">{ROUTES.ABOUT.name}</LinkItem2></Link>
-							<Link href={ROUTES.CONTACT.link}><LinkItem2 className="nav-link pt-9">{ROUTES.CONTACT.name}</LinkItem2></Link>
-							<Link href={ROUTES.BLOG.link}><LinkItem2 className="nav-link pt-9 ">{ROUTES.BLOG.name}</LinkItem2></Link>	
+							<Link href={ROUTES.HOME.link}><LinkItem2>{ROUTES.HOME.name}</LinkItem2></Link>
+							<Link href={ROUTES.STUDYCASES.link}><LinkItem2 className="pt-9">{ROUTES.STUDYCASES.name}</LinkItem2></Link>
+							<Link href={ROUTES.ABOUT.link}><LinkItem2 className="pt-9">{ROUTES.ABOUT.name}</LinkItem2></Link>
+							<Link href={ROUTES.CONTACT.link}><LinkItem2 className="pt-9">{ROUTES.CONTACT.name}</LinkItem2></Link>
+							<Link href={ROUTES.BLOG.link}><LinkItem2 className="pt-9 ">{ROUTES.BLOG.name}</LinkItem2></Link>	
 						</div>
 					
 				</HamburguerWrapper>

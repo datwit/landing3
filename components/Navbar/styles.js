@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components'
 
 const HoverLine = css
-`&.nav-link{
+`
     transition: all ease 0.3s;
     position: relative;
     transition: 0.5s;
@@ -22,7 +22,7 @@ const HoverLine = css
         transform: scaleX(1);
         transform-origin: left;
       }   
-  }
+  
 `
 
 export const NavContainer = styled.div.attrs({

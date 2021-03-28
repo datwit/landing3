@@ -6,7 +6,7 @@ import {MainHeaderCont} from './style';
 const Hero = ()=>(
          
       
-      <MainHeaderCont id= "hero-id">
+      <MainHeaderCont>
           <h1>Bring your idea,
             <br/>
             we will make it real!
