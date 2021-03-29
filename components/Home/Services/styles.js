@@ -26,7 +26,7 @@ export const BulletSubtitle = styled.p.attrs({
   className: "text-base mt-2"
 })``;
 export const ServiceBulletsOuter = styled.p.attrs({
-  className: "text-base mt-2 flex items-baseline"
+  className: "text-base mt-2 flex"
 })``;
 export const ServiceBulletsSpan = styled.span.attrs({
   className: "w-5 h-5 mr-2 inline-flex items-center justify-center flex-shrink-0"

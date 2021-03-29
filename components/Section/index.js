@@ -1,5 +1,5 @@
-import React, {Fragment} from 'react'
-import Navbar from '../components/Navbar' 
+import {Fragment} from 'react'
+import Navbar from '../Navbar' 
 
 
 const Section = ({children}) => {
