@@ -2,31 +2,45 @@ import Head from 'next/head';
 import { format, parseISO } from 'date-fns';
 import renderToString from 'next-mdx-remote/render-to-string';
 import hydrate from 'next-mdx-remote/hydrate';
+import Navbar from '../../components/Navbar'
+import Footer from '../../components/Footer'
+import {ImgContainer, DateAuthorWrapper, PostTitle} from '../../components/Blog/style'
 
 import { getAllPosts } from './GetPosts';
 
-const BlogPage = ({ title, date, content })=> {
+const BlogPage = ({ title, date, content, img, author})=> {
 
   const hydratedContent = hydrate(content);
 
   return (
     //Post page template
-    <div>
+    <>
       <Head>
         <title>{title}</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <main>
-        <div className="border-b-2 border-gray-200 mb-4">
-          <h2 className="text-3xl font-bold">{title}</h2>
-          <div className="text-gray-600 text-md">
-            {format(parseISO(date), 'MMMM do, uuu')}
-          </div>
-        </div>
-        <div className="prose">{hydratedContent}</div>
-      </main>
-    </div>
+        <Navbar />
+        <section>
+            <div className="container px-5 mx-auto">  
+                  <ImgContainer>
+                      <img src={img} alt={title}/>
+                  </ImgContainer>              
+                  <DateAuthorWrapper>
+                    <a>{`By: ${format(parseISO(date), 'MMMM do, uuu')}`}</a>
+                    <a>{`On: ${author.name}`}</a>
+                  </DateAuthorWrapper>        
+                  <h2 className="text-3xl font-bold">{title}</h2>                  
+                  <PostTitle>{hydratedContent}</PostTitle>
+            </div>        
+        </section> 
+        <section className= "w-full h-screen bg-primary mx-auto px-10">
+            <Footer />
+        </section>           
+      </main>       
+    </>
+    
   );
 }
 export default BlogPage
