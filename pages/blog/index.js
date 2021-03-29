@@ -6,7 +6,7 @@ import { getAllPosts } from './GetPosts';
 import { format, parseISO } from 'date-fns';
 import CustomControls from '../../components/Slide/CustomControls'
 import {SectionSubheader, ContentWrapper} from '../../styles/global'
-import {UpperRowBlog, DropdownWrapper, SearchWrapper, BlogCardWrapper, BlogCardBlock, CardSummary, BlogCardBorder} from '../../components/Blog/style'
+import {UpperRowBlog, DropdownWrapper, SearchWrapper, BlogCardWrapper, BlogCardBlock, CardSummary, BlogCardBorder, RespBlock,BlogTitle1, BlogTitle2, DateWrapper} from '../../components/Blog/style'
 
 
 
@@ -21,7 +21,7 @@ const Blog = ({ posts }) =>{
             <UpperRowBlog>
                {/*dropdown*/}
                 <DropdownWrapper>                    
-                    <button className= "w-1/2 rounded border border-gray-300 bg-white text-gray-700 font-bold text-sm px-3 py-4 outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150 "></button>                    
+                    <button className= "w-1/2 rounded border border-gray-300 bg-white text-gray-700 font-bold text-sm px-3 py-4 outline-none focus:outline-none ease-linear transition-all duration-150 "></button>                    
                 </DropdownWrapper>
                 {/* search box*/}
                 <SearchWrapper>
@@ -92,7 +92,7 @@ const BlogListItem = ({ slug, title, date, summary })=> {
                           {format(parseISO(date), 'MMMM do, uuu')}
                       </div>
                       {/* <h2 className="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">CATEGORY</h2> */}
-                      <Link href={`/blog/${slug}`}><h1 className="title-font text-lg font-bold text-primary mb-1 cursor-pointer">{title}</h1></Link> 
+                      <Link href={`/blog/${slug}`}><BlogTitle1>{title}</BlogTitle1></Link> 
                       <CardSummary>{summary}</CardSummary>                  
                       {/* <div className="flex items-center flex-wrap ">
                           <a className="text-secondary2 inline-flex items-center md:mb-2 lg:mb-0">Learn More
@@ -108,17 +108,20 @@ const BlogListItem = ({ slug, title, date, summary })=> {
       </BlogCardWrapper>
       <div className="md:hidden">
           <Link href={`/blog/${slug}`}>
-              <div className="border border-gray-300 shadow hover:shadow-lg transition duration-200 ease-in mb-3 p-3 cursor-pointer">
-                  <div>
-                      <Link href={`/blog/${slug}`}>
-                          <a className="font-bold">{title}</a>
-                      </Link>
-                  </div>
-                  <div className="text-gray-600 text-xs">
-                      {format(parseISO(date), 'MMMM do, uuu')}
-                  </div>
-                  <div>{summary}</div>
-              </div>
+              <BlogCardBorder className="mb-3">
+                  <div className="flex">
+                      <img src="/images/dummy-image.png"  className="sm:w-1/4 w-1/2"  alt=""/>
+                      <RespBlock>
+                          <Link href={`/blog/${slug}`}>
+                              <BlogTitle2>{title}</BlogTitle2>
+                          </Link>                  
+                          <DateWrapper>
+                              {format(parseISO(date), 'MMMM do, uuu')}
+                          </DateWrapper>
+                          <CardSummary className="hidden sm:block">{summary}</CardSummary>
+                      </RespBlock>  
+                  </div>                        
+              </BlogCardBorder>
           </Link>
       </div>  
       </>         

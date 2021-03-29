@@ -1,7 +1,7 @@
 import styled from "styled-components"
 
 export const ContentWrapper = styled.div.attrs({
-    className: "flex flex-wrap -m-4"
+    className: "flex flex-wrap"
 })``;
 export const SectionHeader = styled.h2.attrs({
     className: "mt-4"

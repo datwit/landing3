@@ -19,7 +19,21 @@ export const CardSummary = styled.p.attrs({
     className: "mt-0 text-base leading-6 text-gray-500"
 })``;
 export const BlogCardBorder = styled.div.attrs({
-    className: "h-full border border-gray-300 shadow hover:shadow-lg transition duration-200 ease-in overflow-hidden mx-4 md:mx-0"
+    className: "border border-gray-300 shadow hover:shadow-lg transition duration-200 ease-in overflow-hidden mx-4 md:mx-0"
 })``;
+export const RespBlock = styled.div.attrs({
+    className: "p-2 w-full"
+})``;
+export const BlogTitle1 = styled.h1.attrs({
+    className: "title-font text-lg font-bold text-primary mb-1 cursor-pointer"
+})``;
+export const BlogTitle2 = styled.a.attrs({
+    className: "font-bold text-primary cursor-pointer"
+})``;
+export const DateWrapper= styled.div.attrs({
+    className: "text-gray-600 text-xs"
+})``;
+
+
 
 
