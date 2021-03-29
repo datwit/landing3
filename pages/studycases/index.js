@@ -6,26 +6,36 @@ import { format, parseISO } from 'date-fns';
 import CustomControls from '../../components/Slide/CustomControls'
 import { getAllCases } from './GetCases';
 import {SectionSubheader, ContentWrapper, SectionHeader} from '../../styles/global'
-import {BlogCardWrapper, BlogCardBorder,BlogCardBlock, BlogTitle1, CardSummary} from '../../components/Blog/style'
+import {BlogCardWrapper, BlogCardBorder,BlogCardBlock, BlogTitle1, BlogTitle2, CardSummary, RespBlock, DateWrapper} from '../../components/Blog/style'
 
 
 const AllStudyCases = ({ stc }) =>{
   return (
-    //Posts listing template   
-    
+    //Posts listing template       
     <FullPage controls={CustomControls}>
         <Slide>
             <Section>
             <div className="container px-5 mx-auto"> 
                 <SectionHeader>Check out our solutions</SectionHeader>
-                <SectionSubheader>Commitment and creativity mark our creations. BBy all means, stroll along...</SectionSubheader>
-                <ContentWrapper>                
-                  {
-                  stc.map((item) => (
-                      <StudyCasesListing key={item.slug} {...item} />
-                  ))
-                  }                           
-              </ContentWrapper>
+                <SectionSubheader>Commitment and creativity mark our creations. By all means, stroll along...</SectionSubheader>
+                <div className="hidden md:block">
+                    <ContentWrapper>                
+                      {
+                      stc.map((item) => (
+                          <StudyCasesListing key={item.slug} {...item} />
+                      ))
+                      }                           
+                    </ContentWrapper>
+                </div>
+                <div className="md:hidden">
+                    <ContentWrapper>                
+                      {
+                      stc.map((item) => (
+                          <StudyCasesListing key={item.slug} {...item} />
+                      ))
+                      }                           
+                    </ContentWrapper>
+                </div>
             </div>
             </Section>
         </Slide>
@@ -79,7 +89,25 @@ const StudyCasesListing = ({ slug, title, date, summary })=> {
                     </BlogCardBlock>
                 </BlogCardBorder>
             </Link>
-        </BlogCardWrapper>    
+        </BlogCardWrapper>
+        <div className="md:hidden">
+          <Link href={`/studycases/${slug}`}>
+              <BlogCardBorder className="mb-3">
+                  <div className="flex">
+                      <img src="/images/dummy-image.png"  className="sm:w-1/4 w-1/2"  alt=""/>
+                      <RespBlock>
+                          <Link href={`/blog/${slug}`}>
+                              <BlogTitle2>{title}</BlogTitle2>
+                          </Link>                  
+                          <DateWrapper>
+                              {format(parseISO(date), 'MMMM do, uuu')}
+                          </DateWrapper>
+                          <CardSummary className="hidden sm:block">{summary}</CardSummary>
+                      </RespBlock>  
+                  </div>                        
+              </BlogCardBorder>
+          </Link>
+      </div>      
       </>         
   );
 }
