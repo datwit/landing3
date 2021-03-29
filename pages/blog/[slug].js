@@ -6,7 +6,7 @@ import hydrate from 'next-mdx-remote/hydrate';
 import { getAllPosts } from './GetPosts';
 
 const BlogPage = ({ title, date, content })=> {
-// const BlogPage = ({ title, content })=> {
+
   const hydratedContent = hydrate(content);
 
   return (
