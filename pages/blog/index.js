@@ -6,6 +6,7 @@ import { getAllPosts } from './GetPosts';
 import { format, parseISO } from 'date-fns';
 import CustomControls from '../../components/Slide/CustomControls'
 import {SectionSubheader, ContentWrapper} from '../../styles/global'
+import {UpperRowBlog, DropdownWrapper, SearchWrapper} from '../../components/Blog/style'
 
 
 
@@ -17,6 +18,17 @@ const Blog = ({ posts }) =>{
           <Section>
           <div className="container px-5 mx-auto">        
             <SectionSubheader>Discover interesting ideas and unique perspectives from our amazing crew</SectionSubheader>
+            <UpperRowBlog>
+               {/*dropdown*/}
+                <DropdownWrapper>                    
+                    <button className= "w-1/2 rounded border border-gray-300 bg-white text-gray-700 font-bold text-sm px-3 py-4 outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150 "></button>                    
+                </DropdownWrapper>
+                {/* search box*/}
+                <SearchWrapper>
+                    <input type="text" name="search" placeholder="Search here" className="w-3/4 rounded border border-gray-300 bg-white  text-base outline-none text-gray-700 px-3 leading-8 focus:border-primary focus:ring-2 focus:ring-indigo-200 transition-colors duration-200 ease-in-out"/>
+                    <svg className="h-6 w-6 text-gray-700 opacity-40"  width="24" height="24" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">  <path stroke="none" d="M0 0h24v24H0z"/>  <circle cx="10" cy="10" r="7" />  <line x1="21" y1="21" x2="15" y2="15" /></svg>
+                </SearchWrapper>
+            </UpperRowBlog>              
             <div className="hidden md:block">
               <ContentWrapper>                
                   {
