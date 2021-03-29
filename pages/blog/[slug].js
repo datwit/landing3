@@ -31,8 +31,8 @@ const BlogPage = ({ title, date, content, img, author})=> {
                     <a>{`By: ${format(parseISO(date), 'MMMM do, uuu')}`}</a>
                     <a>{`On: ${author.name}`}</a>
                   </DateAuthorWrapper>        
-                  <h2 className="text-3xl font-bold">{title}</h2>                  
-                  <PostTitle>{hydratedContent}</PostTitle>
+                  <PostTitle>{title}</PostTitle>                  
+                  <div className="prose text-justify">{hydratedContent}</div>
             </div>        
         </section> 
         <section className= "w-full h-screen bg-primary mx-auto px-10">
