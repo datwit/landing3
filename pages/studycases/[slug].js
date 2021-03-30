@@ -5,7 +5,7 @@ import hydrate from 'next-mdx-remote/hydrate';
 import Navbar from '../../components/Navbar'
 import Footer from '../../components/Footer'
 
-import { getAllCases } from './GetCases';
+import { getAllData } from '../../components/Contents/GetPosts';
 
 const StudyCasesPage = ({ title, date, content, img, author})=> {
 
@@ -39,7 +39,7 @@ const StudyCasesPage = ({ title, date, content, img, author})=> {
   //fetching data from markdown files
   export const getStaticProps = async (context) => {
     const { params } = context;
-    const allCases = getAllCases();
+    const allCases = getAllData('studycases');
     const { data, content } = allCases.find((item) => item.slug === params.slug);
     const mdxSource = await renderToString(content);
   
@@ -54,7 +54,7 @@ const StudyCasesPage = ({ title, date, content, img, author})=> {
   //Creating the paths
   export const getStaticPaths = async () => {
     return {
-      paths: getAllCases().map((case1) => ({
+      paths: getAllData('studycases').map((case1) => ({
         params: {
           slug: case1.slug,
         },

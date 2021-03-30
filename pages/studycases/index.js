@@ -4,12 +4,12 @@ import Footer from '../../components/Footer'
 import Link from "next/link";
 import { format, parseISO } from 'date-fns';
 import CustomControls from '../../components/Slide/CustomControls'
-import { getAllCases } from './GetCases';
 import {SectionSubheader, ContentWrapper, SectionHeader} from '../../styles/global'
 import {BlogCardWrapper, BlogCardBorder,BlogCardBlock, BlogTitle1, BlogTitle2, CardSummary, RespBlock, DateWrapper} from '../../components/Blog/style'
+import { getAllData } from '../../components/Contents/GetPosts';
 
 
-const AllStudyCases = ({ stc }) =>{
+const AllStudyCases = ({ studycases }) =>{
   return (
     //Posts listing template       
     <FullPage controls={CustomControls}>
@@ -21,7 +21,7 @@ const AllStudyCases = ({ stc }) =>{
                 <div className="hidden md:block">
                     <ContentWrapper>                
                       {
-                      stc.map((item) => (
+                        studycases.map((item) => (
                           <StudyCasesListing key={item.slug} {...item} />
                       ))
                       }                           
@@ -30,7 +30,7 @@ const AllStudyCases = ({ stc }) =>{
                 <div className="md:hidden">
                     <ContentWrapper>                
                       {
-                      stc.map((item) => (
+                        studycases.map((item) => (
                           <StudyCasesListing key={item.slug} {...item} />
                       ))
                       }                           
@@ -53,10 +53,10 @@ export default AllStudyCases
 
 //fetching data from markdown files
 export const getStaticProps = async () => {  
-  const allCases = getAllCases();  
+  const allCases = getAllData('studycases');  
   return {
     props: {
-      stc: allCases.map(({ data, slug }) => ({
+      studycases: allCases.map(({ data, slug }) => ({
         ...data,
         date: data.date.toISOString(),        
         slug,
@@ -96,7 +96,7 @@ const StudyCasesListing = ({ slug, title, date, summary })=> {
                   <div className="flex">
                       <img src="/images/dummy-image.png"  className="sm:w-1/4 w-1/2"  alt=""/>
                       <RespBlock>
-                          <Link href={`/blog/${slug}`}>
+                          <Link href={`/studycases/${slug}`}>
                               <BlogTitle2>{title}</BlogTitle2>
                           </Link>                  
                           <DateWrapper>

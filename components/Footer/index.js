@@ -48,10 +48,10 @@ const Footer = () => {
                     </ColumnContent>                
                     <ColumnContent>
                         <ColumnTitle>DATA PROTECTION</ColumnTitle>
-                        {/*  <Link href='/info/privacy-police'><h3 className="text-white text-left mb-5 cursor-pointer">Privacy Policy</h3></Link>
-                        <Link href='/info/terms-conditions'><h3 className="text-white text-left cursor-pointer" >Terms and Conditions</h3></Link> */}
-                        <UpperH3>Privacy Policy</UpperH3>
-                        <DownH3>Terms and Conditions</DownH3>
+                        <Link href='/info/policy'><h3 className="text-white text-left mb-5 cursor-pointer">Privacy Policy</h3></Link>
+                        <Link href='/info/terms'><h3 className="text-white text-left cursor-pointer" >Terms and Conditions</h3></Link>
+                        {/*<UpperH3>Privacy Policy</UpperH3>
+                        <DownH3>Terms and Conditions</DownH3>*/}
                     </ColumnContent>
                 </FooterLinksWrapper>                    
             </FooterContainer>                

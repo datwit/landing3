@@ -5,8 +5,8 @@ import hydrate from 'next-mdx-remote/hydrate';
 import Navbar from '../../components/Navbar'
 import Footer from '../../components/Footer'
 import {ImgContainer, DateAuthorWrapper, PostTitle} from '../../components/Blog/style'
+import { getAllData } from '../../components/Contents/GetPosts';
 
-import { getAllPosts } from './GetPosts';
 
 const BlogPage = ({ title, date, content, img, author})=> {
 
@@ -48,7 +48,7 @@ export default BlogPage
 //fetching data from markdown files
 export const getStaticProps = async (context) => {
   const { params } = context;
-  const allPosts = getAllPosts();
+  const allPosts = getAllData('posts');
   const { data, content } = allPosts.find((item) => item.slug === params.slug);
   const mdxSource = await renderToString(content);
 
@@ -63,7 +63,7 @@ export const getStaticProps = async (context) => {
 //Creating the paths
 export const getStaticPaths = async () => {
   return {
-    paths: getAllPosts().map((post) => ({
+    paths: getAllData('posts').map((post) => ({
       params: {
         slug: post.slug,
       },
