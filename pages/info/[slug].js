@@ -4,11 +4,12 @@ import renderToString from 'next-mdx-remote/render-to-string';
 import hydrate from 'next-mdx-remote/hydrate';
 import Navbar from '../../components/Navbar'
 import Footer from '../../components/Footer'
-import {ImgContainer, DateAuthorWrapper, PostTitle} from '../../components/Blog/style'
+import {MarkdownContent} from './style'
+import {PostTitle} from '../../components/Blog/style'
 
 import { getAllData } from '../../components/Contents/GetPosts';
 
-const BlogPage = ({ title, date, content, img, author})=> {
+const Info = ({ title, date, content, img, author})=> {
 
   const hydratedContent = hydrate(content);
 
@@ -22,10 +23,10 @@ const BlogPage = ({ title, date, content, img, author})=> {
 
       <main>
         <Navbar />
-        <section>
+        <section className="pb-16">
             <div className="container px-5 mx-auto">  
               <PostTitle>{title}</PostTitle>                  
-              <div className="prose text-justify">{hydratedContent}</div>
+              <MarkdownContent>{hydratedContent}</MarkdownContent>
             </div>        
         </section> 
         <section className= "w-full h-screen bg-primary mx-auto px-10">
@@ -36,7 +37,7 @@ const BlogPage = ({ title, date, content, img, author})=> {
     
   );
 }
-export default BlogPage
+export default Info
 
 //fetching data from markdown files
 export const getStaticProps = async (context) => {

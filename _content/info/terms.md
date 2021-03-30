@@ -6,7 +6,7 @@ date: 2021-02-14T19:05:27.220Z
 author:
 ---
 
-Last Updated: August 25, 2020
+> Last Updated: August 25, 2020
 
 Introduction
 -------------

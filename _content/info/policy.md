@@ -6,7 +6,8 @@ date: 2021-02-14T19:05:27.220Z
 author:
 ---
 
-Last Updated: September 2nd, 2020
+> Last Updated: September 2nd, 2020
+
 
 This Privacy Policy describes how we collect and use your personal information in relation to Datwit websites, applications, products, and services.
 
