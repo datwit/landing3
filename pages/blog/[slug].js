@@ -6,6 +6,7 @@ import Navbar from '../../components/Navbar'
 import Footer from '../../components/Footer'
 import {ImgContainer, DateAuthorWrapper, PostTitle} from '../../components/Blog/style'
 import { getAllData } from '../../components/Contents/GetPosts';
+import {MarkdownContent} from '../info/style'
 
 
 const BlogPage = ({ title, date, content, img, author})=> {
@@ -32,7 +33,7 @@ const BlogPage = ({ title, date, content, img, author})=> {
                     <a>{`On: ${author.name}`}</a>
                   </DateAuthorWrapper>        
                   <PostTitle>{title}</PostTitle>                  
-                  <div className="prose text-justify">{hydratedContent}</div>
+                  <MarkdownContent>{hydratedContent}</MarkdownContent>
             </div>        
         </section> 
         <section className= "w-full h-screen bg-primary mx-auto px-10">

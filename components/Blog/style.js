@@ -37,7 +37,7 @@ export const ImgContainer= styled.div.attrs({
     className: "flex justify-center"
 })``;
 export const DateAuthorWrapper= styled.div.attrs({
-    className: "text-gray-600 text-md flex justify-between w-3/4 mx-auto"
+    className: "text-gray-600 text-md flex justify-between lg:w-2/4 mx-auto"
 })``;
 export const PostTitle= styled.h2.attrs({
     className: "text-3xl font-bold"

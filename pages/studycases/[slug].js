@@ -4,6 +4,7 @@ import renderToString from 'next-mdx-remote/render-to-string';
 import hydrate from 'next-mdx-remote/hydrate';
 import Navbar from '../../components/Navbar'
 import Footer from '../../components/Footer'
+import {MarkdownContent} from '../info/style'
 
 import { getAllData } from '../../components/Contents/GetPosts';
 
@@ -23,7 +24,7 @@ const StudyCasesPage = ({ title, date, content, img, author})=> {
             <Navbar />
             <section>
               <div className="container px-5 mx-auto">  
-                <div className="prose text-justify">{hydratedContent}</div>      
+                <MarkdownContent>{hydratedContent}</MarkdownContent>      
               </div>        
             </section> 
             <section className= "w-full h-screen bg-primary mx-auto px-10">
