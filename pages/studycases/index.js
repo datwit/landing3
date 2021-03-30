@@ -1,10 +1,10 @@
 import { FullPage, Slide } from 'react-full-page'
 import Section from '../../components/Section'
 import Footer from '../../components/Footer'
-import Link from "next/link";
-import { format, parseISO } from 'date-fns';
+import Link from "next/link"
+import { format, parseISO } from 'date-fns'
 import CustomControls from '../../components/Slide/CustomControls'
-import { getAllCases } from './GetCases';
+import { getAllPosts } from '../../components/Contents/GetPosts'
 import {SectionSubheader, ContentWrapper, SectionHeader} from '../../styles/global'
 import {BlogCardWrapper, BlogCardBorder,BlogCardBlock, BlogTitle1, BlogTitle2, CardSummary, RespBlock, DateWrapper} from '../../components/Blog/style'
 
@@ -53,7 +53,7 @@ export default AllStudyCases
 
 //fetching data from markdown files
 export const getStaticProps = async () => {  
-  const allCases = getAllCases();  
+  const allCases = getAllPosts('studycases');  
   return {
     props: {
       stc: allCases.map(({ data, slug }) => ({
@@ -96,7 +96,7 @@ const StudyCasesListing = ({ slug, title, date, summary })=> {
                   <div className="flex">
                       <img src="/images/dummy-image.png"  className="sm:w-1/4 w-1/2"  alt=""/>
                       <RespBlock>
-                          <Link href={`/blog/${slug}`}>
+                          <Link href={`/studycases/${slug}`}>
                               <BlogTitle2>{title}</BlogTitle2>
                           </Link>                  
                           <DateWrapper>

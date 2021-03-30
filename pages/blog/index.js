@@ -2,7 +2,7 @@ import { FullPage, Slide } from 'react-full-page'
 import Section from '../../components/Section'
 import Footer from '../../components/Footer'
 import Link from "next/link";
-import { getAllPosts } from './GetPosts';
+import { getAllPosts } from '../../components/Contents/GetPosts';
 import { format, parseISO } from 'date-fns';
 import CustomControls from '../../components/Slide/CustomControls'
 import {SectionSubheader, ContentWrapper} from '../../styles/global'
@@ -65,7 +65,7 @@ export default Blog
 
 //fetching data from markdown files
 export const getStaticProps = async () => {  
-  const allPosts = getAllPosts();  
+  const allPosts = getAllPosts('posts');  
   return {
     props: {
       posts: allPosts.map(({ data, slug }) => ({

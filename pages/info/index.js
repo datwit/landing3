@@ -65,7 +65,7 @@ export default Blog
 
 //fetching data from markdown files
 export const getStaticProps = async () => {  
-  const allPosts = getAllPosts();  
+  const allPosts = getAllPosts('info');  
   return {
     props: {
       posts: allPosts.map(({ data, slug }) => ({
@@ -84,7 +84,7 @@ const BlogListItem = ({ slug, title, date, summary })=> {
   return (
     <>        
       <BlogCardWrapper>
-          <Link href={`/blog/${slug}`}>
+          <Link href={`/info/${slug}`}>
               <BlogCardBorder>
                   <img className="lg:h-48 md:h-28 w-full object-cover object-center" src="/images/dummy-image.png" alt="" />              
                   <BlogCardBlock>
@@ -92,7 +92,7 @@ const BlogListItem = ({ slug, title, date, summary })=> {
                           {format(parseISO(date), 'MMMM do, uuu')}
                       </div>
                       {/* <h2 className="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">CATEGORY</h2> */}
-                      <Link href={`/blog/${slug}`}><BlogTitle1>{title}</BlogTitle1></Link> 
+                      <Link href={`/info/${slug}`}><BlogTitle1>{title}</BlogTitle1></Link> 
                       <CardSummary>{summary}</CardSummary>                  
                       {/* <div className="flex items-center flex-wrap ">
                           <a className="text-secondary2 inline-flex items-center md:mb-2 lg:mb-0">Learn More
