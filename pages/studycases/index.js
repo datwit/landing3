@@ -1,8 +1,8 @@
 import { FullPage, Slide } from 'react-full-page'
 import Section from '../../components/Section'
 import Footer from '../../components/Footer'
-import Link from "next/link";
-import { format, parseISO } from 'date-fns';
+import Link from "next/link"
+import { format, parseISO } from 'date-fns'
 import CustomControls from '../../components/Slide/CustomControls'
 import {SectionSubheader, ContentWrapper, SectionHeader} from '../../styles/global'
 import {BlogCardWrapper, BlogCardBorder,BlogCardBlock, BlogTitle1, BlogTitle2, CardSummary, RespBlock, DateWrapper} from '../../components/Blog/style'
