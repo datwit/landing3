@@ -2,6 +2,7 @@ import { FullPage, Slide } from 'react-full-page'
 import Section from '../../components/Section'
 import Footer from '../../components/Footer'
 import Link from "next/link";
+import { useCallback, useRef, useState } from 'react'
 import { getAllData } from '../../components/Contents/GetPosts';
 import { format, parseISO } from 'date-fns';
 import CustomControls from '../../components/Slide/CustomControls'
@@ -11,6 +12,46 @@ import {UpperRowBlog, DropdownWrapper, SearchWrapper, BlogCardWrapper, BlogCardB
 
 
 const Blog = ({ posts }) =>{
+  const searchRef = useRef(null)
+  const [query, setQuery] = useState('')
+  const [active, setActive] = useState(false)
+  const [results, setResults] = useState([])
+
+  const searchEndpoint = (query) => `/api/search?q=${query}`
+
+  const onChange = useCallback((event) => {
+    const query = event.target.value;
+    setQuery(query)
+    if (query.length) {
+      fetch(searchEndpoint(query))
+        .then(res => res.json())
+        .then(res => {
+          setResults(res.results)
+        })
+    } else {
+      setResults([])
+    }
+  }, [])
+
+  const onFocus = useCallback(() => {
+    setActive(true)
+    window.addEventListener('click', onClick)
+  }, [])
+
+  const onClick = useCallback((event) => {
+    if (searchRef.current && !searchRef.current.contains(event.target)) {
+      setActive(false)
+      window.removeEventListener('click', onClick)
+    }
+  }, [])
+
+
+
+
+
+
+
+
   return (
     //Posts listing template    
       <FullPage controls={CustomControls}>
@@ -25,8 +66,33 @@ const Blog = ({ posts }) =>{
                 </DropdownWrapper>
                 {/* search box*/}
                 <SearchWrapper>
-                    <input type="text" name="search" placeholder="Search here" className="w-3/4 rounded border border-gray-300 bg-white  text-base outline-none text-gray-700 px-3 leading-8 focus:ring-2 focus:ring-secondary2 transition-colors duration-200 ease-in-out"/>
+                    <input 
+                      onChange={onChange}
+                      onFocus={onFocus}
+                      placeholder='Search posts'
+                      type='text'
+                      value={query}
+                      type="text" 
+                      name="search" 
+                      placeholder="Search here" 
+                      className="w-3/4 rounded border border-gray-300 bg-white  text-base outline-none text-gray-700 px-3 leading-8 focus:ring-2 focus:ring-secondary2 transition-colors duration-200 ease-in-out"
+                    />
                     <svg className="h-6 w-6 text-gray-700 opacity-40"  width="24" height="24" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">  <path stroke="none" d="M0 0h24v24H0z"/>  <circle cx="10" cy="10" r="7" />  <line x1="21" y1="21" x2="15" y2="15" /></svg>
+
+                    { console.log(results.length),
+                    active && results.length > 0 && (
+                      <ul>
+                          {results.map(({ id, title }) => (
+                         <li key={id}>
+                        <Link href="/blog/[id]" as={`/blog/${id}`}>
+                          <a>{title}</a>
+                          </Link>
+                        </li>
+                        ))}
+                      </ul>
+                    ) 
+                    }
+
                 </SearchWrapper>
             </UpperRowBlog>              
             <div className="hidden md:block">
