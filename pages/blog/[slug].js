@@ -5,7 +5,7 @@ import hydrate from 'next-mdx-remote/hydrate';
 import Navbar from '../../components/Navbar'
 import Footer from '../../components/Footer'
 import {ImgContainer, DateAuthorWrapper, PostTitle} from '../../components/Blog/style'
-import { getAllData } from '../../components/Contents/GetPosts';
+import { getAllData } from '../../lib/posts';
 import {MarkdownContent} from '../info/style'
 
 
