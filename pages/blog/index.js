@@ -1,10 +1,10 @@
 import { FullPage, Slide } from 'react-full-page'
 import Section from '../../components/Section'
 import Footer from '../../components/Footer'
-import Link from "next/link";
+import Link from "next/link"
 import { useCallback, useRef, useState } from 'react'
-import { getAllData } from '../../components/Contents/GetPosts';
-import { format, parseISO } from 'date-fns';
+import { getAllData } from '../../lib/posts'
+import { format, parseISO } from 'date-fns'
 import CustomControls from '../../components/Slide/CustomControls'
 import {SectionSubheader, ContentWrapper} from '../../styles/global'
 import {UpperRowBlog, DropdownWrapper, SearchWrapper, BlogCardWrapper, BlogCardBlock, CardSummary, BlogCardBorder, RespBlock,BlogTitle1, BlogTitle2, DateWrapper} from '../../components/Blog/style'
@@ -46,12 +46,6 @@ const Blog = ({ posts }) =>{
   }, [])
 
 
-
-
-
-
-
-
   return (
     //Posts listing template    
       <FullPage controls={CustomControls}>
@@ -78,41 +72,45 @@ const Blog = ({ posts }) =>{
                       className="w-3/4 rounded border border-gray-300 bg-white  text-base outline-none text-gray-700 px-3 leading-8 focus:ring-2 focus:ring-secondary2 transition-colors duration-200 ease-in-out"
                     />
                     <svg className="h-6 w-6 text-gray-700 opacity-40"  width="24" height="24" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">  <path stroke="none" d="M0 0h24v24H0z"/>  <circle cx="10" cy="10" r="7" />  <line x1="21" y1="21" x2="15" y2="15" /></svg>
-
-                    { console.log(results.length),
-                    active && results.length > 0 && (
-                      <ul>
-                          {results.map(({ id, title }) => (
-                         <li key={id}>
-                        <Link href="/blog/[id]" as={`/blog/${id}`}>
-                          <a>{title}</a>
-                          </Link>
-                        </li>
-                        ))}
-                      </ul>
-                    ) 
-                    }
-
                 </SearchWrapper>
-            </UpperRowBlog>              
-            <div className="hidden md:block">
-              <ContentWrapper>                
-                  {
-                  posts.map((item) => (
-                      <BlogListItem key={item.slug} {...item} />
-                  ))
-                  }                           
-              </ContentWrapper>
-            </div>
-            <div className="md:hidden">
-              <ContentWrapper>                
-                  {
-                  posts.map((item) => (
-                      <BlogListItem key={item.slug} {...item} />
-                  ))
-                  }                           
-              </ContentWrapper>
-            </div>
+            </UpperRowBlog>  
+            { active && results.length > 0 && (
+                <div>
+                  <ul>
+                    {results.map(({ slug, title }) => (
+                      <li key={slug}>
+                        <Link href="/blog/[slug]" as={`/blog/${slug}`}>
+                          <a>{title}</a>
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </div>  
+              )
+            }   
+
+            {results.length == 0 && (
+                <div>
+                  <div className="hidden md:block">
+                    <ContentWrapper>                
+                      {
+                      posts.map((item) => (
+                          <BlogListItem key={item.slug} {...item} />
+                      ))
+                      }                           
+                    </ContentWrapper>
+                  </div>
+                  <div className="md:hidden">
+                  <ContentWrapper>                
+                      {
+                      posts.map((item) => (
+                          <BlogListItem key={item.slug} {...item} />
+                      ))
+                      }                           
+                  </ContentWrapper>
+                  </div>
+                </div>
+              )}
                         
             </div>               
           </Section>        
@@ -145,8 +143,6 @@ export const getStaticProps = async () => {
 
 //Extracting  visual component
 const BlogListItem = ({ slug, title, date, summary })=> {
-
-  
   return (
     <>        
       <BlogCardWrapper>

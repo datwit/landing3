@@ -6,7 +6,7 @@ import Navbar from '../../components/Navbar'
 import Footer from '../../components/Footer'
 import {MarkdownContent} from '../info/style'
 
-import { getAllData } from '../../components/Contents/GetPosts';
+import { getAllData } from '../../lib/posts';
 
 const StudyCasesPage = ({ title, date, content, img, author})=> {
 

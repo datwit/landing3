@@ -6,7 +6,7 @@ import { format, parseISO } from 'date-fns'
 import CustomControls from '../../components/Slide/CustomControls'
 import {SectionSubheader, ContentWrapper, SectionHeader} from '../../styles/global'
 import {BlogCardWrapper, BlogCardBorder,BlogCardBlock, BlogTitle1, BlogTitle2, CardSummary, RespBlock, DateWrapper} from '../../components/Blog/style'
-import { getAllData } from '../../components/Contents/GetPosts';
+import { getAllData } from '../../lib/posts'
 
 
 const AllStudyCases = ({ studycases }) =>{
