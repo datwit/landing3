@@ -7,8 +7,8 @@ import { getAllData } from '../../lib/posts'
 import { format, parseISO } from 'date-fns'
 import CustomControls from '../../components/Slide/CustomControls'
 import {SectionSubheader, ContentWrapper} from '../../styles/global'
-import {UpperRowBlog, DropdownWrapper, SearchWrapper, BlogCardWrapper, BlogCardBlock, CardSummary, BlogCardBorder, RespBlock,BlogTitle1, BlogTitle2, DateWrapper} from '../../components/Blog/style'
-
+import {SearchWrapper, BlogCardWrapper, BlogCardBlock, CardSummary, BlogCardBorder, RespBlock,BlogTitle1, BlogTitle2, DateWrapper} from '../../components/Blog/style'
+import Image from 'next/image'
 
 
 const Blog = ({ posts }) =>{
@@ -53,11 +53,7 @@ const Blog = ({ posts }) =>{
           <Section>
           <div className="container px-5 mx-auto">        
             <SectionSubheader>Discover interesting ideas and unique perspectives from our amazing crew</SectionSubheader>
-            <UpperRowBlog>
-               {/*dropdown*/}
-                <DropdownWrapper>                    
-                    <button className= "w-1/2 rounded border border-gray-300 bg-white text-gray-700 font-bold text-sm px-3 py-4 outline-none focus:outline-none ease-linear transition-all duration-150 "></button>                    
-                </DropdownWrapper>
+                        
                 {/* search box*/}
                 <SearchWrapper>
                     <input 
@@ -69,19 +65,34 @@ const Blog = ({ posts }) =>{
                       type="text" 
                       name="search" 
                       placeholder="Search here" 
-                      className="w-3/4 rounded border border-gray-300 bg-white  text-base outline-none text-gray-700 px-3 leading-8 focus:ring-2 focus:ring-secondary2 transition-colors duration-200 ease-in-out"
+                      className="w-1/2 rounded border border-gray-300 bg-white  text-base outline-none text-gray-700 px-3 leading-8 focus:ring-2 focus:ring-secondary2 transition-colors duration-200 ease-in-out"
                     />
                     <svg className="h-6 w-6 text-gray-700 opacity-40"  width="24" height="24" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">  <path stroke="none" d="M0 0h24v24H0z"/>  <circle cx="10" cy="10" r="7" />  <line x1="21" y1="21" x2="15" y2="15" /></svg>
                 </SearchWrapper>
-            </UpperRowBlog>  
+            
             { active && results.length > 0 && (
                 <div>
                   <ul>
-                    {results.map(({ slug, title }) => (
+                    {results.map(({ slug, title, summary, date, img }) => (
                       <li key={slug}>
-                        <Link href="/blog/[slug]" as={`/blog/${slug}`}>
+                        {/* <Link href="/blog/[slug]" as={`/blog/${slug}`}>
                           <a>{title}</a>
                         </Link>
+                        <CardSummary>{summary}</CardSummary> */}
+                        <div className="mx-4 md:mx-0 mb-3">
+                          <div className="flex">
+                              <img src={img}  className="sm:w-1/5 w-1/2"  alt=""/>
+                              <RespBlock>
+                                  <Link href={`/blog/${slug}`}>
+                                      <BlogTitle2>{title}</BlogTitle2>
+                                  </Link>                  
+                                  <DateWrapper>
+                                      {format(parseISO(date), 'MMMM do, uuu')}
+                                  </DateWrapper>
+                                  <CardSummary className="hidden sm:block">{summary}</CardSummary>
+                                </RespBlock>  
+                          </div>                        
+                        </div>
                       </li>
                     ))}
                   </ul>
@@ -142,13 +153,13 @@ export const getStaticProps = async () => {
 }
 
 //Extracting  visual component
-const BlogListItem = ({ slug, title, date, summary })=> {
+const BlogListItem = ({ slug, title, date, summary, img })=> {
   return (
     <>        
       <BlogCardWrapper>
           <Link href={`/blog/${slug}`}>
               <BlogCardBorder>
-                  <img className="lg:h-48 md:h-28 w-full object-cover object-center" src="/images/dummy-image.png" alt="" />              
+                  <img className="lg:h-48 md:h-28 w-full object-cover object-center" src={img} alt="" />              
                   <BlogCardBlock>
                       <div className="text-gray-600 text-xs">
                           {format(parseISO(date), 'MMMM do, uuu')}
@@ -172,7 +183,7 @@ const BlogListItem = ({ slug, title, date, summary })=> {
           <Link href={`/blog/${slug}`}>
               <BlogCardBorder className="mb-3">
                   <div className="flex">
-                      <img src="/images/dummy-image.png"  className="sm:w-1/4 w-1/2"  alt=""/>
+                      <img src={img}  className="sm:w-1/4 w-1/2"  alt=""/>
                       <RespBlock>
                           <Link href={`/blog/${slug}`}>
                               <BlogTitle2>{title}</BlogTitle2>

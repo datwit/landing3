@@ -1,13 +1,7 @@
 import styled from 'styled-components'
 
-export const UpperRowBlog = styled.div.attrs({
-    className: "grid grid-cols-2 gap-4 mb-4"
-})``;
-export const DropdownWrapper = styled.div.attrs({
-    className: "w-full flex items-center"
-})``;
 export const SearchWrapper = styled.div.attrs({
-    className: "flex items-center justify-end"
+    className: "flex items-center justify-end w-full"
 })``;
 export const BlogCardWrapper = styled.div.attrs({
     className: "p-4 md:w-1/3 w-full hidden md:block"
