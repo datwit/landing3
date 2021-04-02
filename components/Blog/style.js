@@ -36,6 +36,17 @@ export const DateAuthorWrapper= styled.div.attrs({
 export const PostTitle= styled.h2.attrs({
     className: "text-3xl font-bold"
 })``;
+export const Category= styled.a
+`
+padding: .05rem .8rem;
+border-radius: 3rem;
+background: #f5f2f2;
+color: #e69c24;
+border: 2px solid #e69c24;
+font-size: 14px;
+margin-right: 5px;
+cursor:pointer;
+`;
 
 
 

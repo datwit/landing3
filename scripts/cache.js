@@ -33,3 +33,4 @@ fs.writeFile('cache/data.json', postData(), function (err) {
   if (err) return console.log(err);
   console.log('Posts cached.');
 })
+
