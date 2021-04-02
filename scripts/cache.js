@@ -12,10 +12,15 @@ function postData() {
     const matterResult = matter(fileContents)
     return {
       id,
-      title: matterResult.data.title
+      title: matterResult.data.title,
+      author: matterResult.data.author.name,
+      summary: matterResult.data.summary,
+      img: matterResult.data.img,
+      tags: matterResult.data.tags,
+      date: matterResult.data.date
     }
   })
-  return `export const posts = ${JSON.stringify(posts)}`
+  return JSON.stringify(posts)
 }
 
 try {
@@ -24,7 +29,7 @@ try {
   fs.mkdirSync('cache')
 }
 
-fs.writeFile('cache/data.js', postData(), function (err) {
+fs.writeFile('cache/data.json', postData(), function (err) {
   if (err) return console.log(err);
   console.log('Posts cached.');
 })
