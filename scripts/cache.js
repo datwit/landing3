@@ -17,6 +17,7 @@ function postData() {
       summary: matterResult.data.summary,
       img: matterResult.data.img,
       tags: matterResult.data.tags,
+      Stringtags: matterResult.data.tags.toString(),
       date: matterResult.data.date
     }
   })

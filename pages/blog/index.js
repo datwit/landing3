@@ -26,7 +26,7 @@ const Blog = () =>{
     setQueryCat(queryCat) 
     console.log("cat:",queryCat)      
     if (queryCat.length) {
-      fetch(searchEndpoint(queryCat, 'tags'))
+      fetch(searchEndpoint(queryCat, 'Stringtags'))
         .then(res => res.json())
         .then(res => {
           setResults(res.results)
