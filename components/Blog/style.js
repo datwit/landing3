@@ -4,7 +4,7 @@ export const SearchWrapper = styled.div.attrs({
     className: "flex items-center justify-end w-full"
 })``;
 export const BlogCardWrapper = styled.div.attrs({
-    className: "p-4 md:w-1/3 w-full hidden md:block"
+    className: "p-4 md:w-1/3 w-full"
 })``;
 export const BlogCardBlock = styled.div.attrs({
     className: "p-3"
@@ -45,7 +45,6 @@ color: #e69c24;
 border: 2px solid #e69c24;
 font-size: 14px;
 margin-right: 5px;
-cursor:pointer;
 `;
 
 

@@ -7,9 +7,10 @@ import Footer from '../../components/Footer'
 import {ImgContainer, DateAuthorWrapper, PostTitle} from '../../components/Blog/style'
 import { getAllData } from '../../lib/posts';
 import {MarkdownContent} from '../info/style'
+import {Category} from '../../components/Blog/style'
 
 
-const BlogPage = ({ title, date, content, img, author})=> {
+const BlogPage = ({ title, date, content, img, author, tags})=> {
 
   const hydratedContent = hydrate(content);
 
@@ -31,7 +32,17 @@ const BlogPage = ({ title, date, content, img, author})=> {
                   <DateAuthorWrapper>
                     <a>{`By: ${format(parseISO(date), 'MMMM do, uuu')}`}</a>
                     <a>{`On: ${author.name}`}</a>
-                  </DateAuthorWrapper>        
+                  </DateAuthorWrapper>   
+                  <div className="flex flex-wrap">
+                      {
+                        tags.map((tags, key3) => (
+                        <Category
+                          key={key3}                                            
+                        >{tags}
+                        </Category>
+                      ))
+                      }
+                  </div>        
                   <PostTitle>{title}</PostTitle>                  
                   <MarkdownContent>{hydratedContent}</MarkdownContent>
             </div>        
