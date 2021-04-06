@@ -2,19 +2,18 @@ import { FullPage, Slide } from 'react-full-page'
 import Section from '../../components/Section'
 import Footer from '../../components/Footer'
 import Link from "next/link"
-import { useCallback, useRef, useState, Fragment, useEffect } from 'react'
+import { useCallback,  useState, useEffect } from 'react'
 import { getAllData } from '../../lib/posts'
 import { format, parseISO } from 'date-fns'
 import CustomControls from '../../components/Slide/CustomControls'
-import { SectionSubheader, ContentWrapper } from '../../styles/global'
-import { Pagination, SearchWrapper, BlogCardWrapper, BlogCardBlock, CardSummary, BlogCardBorder, RespBlock, BlogTitle1, BlogTitle2, DateWrapper, Category } from '../../components/Blog/style'
+import { SectionSubheader } from '../../styles/global'
+import { PaginationWrapper,SearchWrapper, BlogCardWrapper, BlogCardBlock, CardSummary, BlogCardBorder, RespBlock, BlogTitle1, BlogTitle2, DateWrapper, SearchField} from '../../components/Blog/style'
 import ReactPaginate from 'react-paginate';
 
 import posts from '../../cache/data.json'
 
 const Blog = () => {  
-  const [query, setQuery] = useState('')  
-  const [results, setResults] = useState([])
+  const [query, setQuery] = useState('')    
 
   //pagination states
   const [offset, setOffset] = useState(0);
@@ -89,6 +88,10 @@ const Blog = () => {
     setQuery(query)   
   }, [])
 
+  const nextSVG=<svg className="h-8 w-8 text-secondary2"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  strokeWidth="2"  strokeLinecap="round"  strokeLinejoin="round">  <polyline points="13 17 18 12 13 7" />  <polyline points="6 17 11 12 6 7" /></svg>
+  const prevSVG=<svg className="h-8 w-8 text-secondary2"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  strokeWidth="2"  strokeLinecap="round"  strokeLinejoin="round">  <polyline points="11 17 6 12 11 7" />  <polyline points="18 17 13 12 18 7" /></svg>
+ 
+
   return (
     //Posts listing template    
     <FullPage controls={CustomControls}>
@@ -99,26 +102,26 @@ const Blog = () => {
 
             {/* search box*/}
             <SearchWrapper>
-              <input
-                onChange={handleChange}                
-                placeholder='Search posts'
-                type='text'
-                value={query}
-                type="text"
-                name="search"
-                placeholder="Search here"
-                className="w-1/2 rounded border border-gray-300 bg-white  text-base outline-none text-gray-700 px-3 leading-8 focus:ring-2 focus:ring-secondary2 transition-colors duration-200 ease-in-out"
-              />
-              <Link href={query === "" ? `/blog/search?p=${query}`:`/blog/search?q=${query}`} ><svg className="h-6 w-6 text-gray-700 opacity-40" width="24" height="24" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">  <path stroke="none" d="M0 0h24v24H0z" />  <circle cx="10" cy="10" r="7" />  <line x1="21" y1="21" x2="15" y2="15" /></svg></Link>
+              <SearchField
+                  onChange={handleChange}                
+                  placeholder='Search posts'
+                  type='text'
+                  value={query}
+                  type="text"
+                  name="search"
+                  placeholder="Search here">              
+              </SearchField>
+              <Link href={query === "" ? `/blog/search?p=${query}`:`/blog/search?q=${query}`} ><svg className="h-6 w-6 text-secondary2" width="24" height="24" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">  <path stroke="none" d="M0 0h24v24H0z" />  <circle cx="10" cy="10" r="7" />  <line x1="21" y1="21" x2="15" y2="15" /></svg></Link>
               
             </SearchWrapper>
 
             {/*pagination*/}
             <div className="App flex flex-wrap">
               {data}
+              <PaginationWrapper>
               <ReactPaginate
-                previousLabel={"prev"}
-                nextLabel={"next"}
+                previousLabel={prevSVG}
+                nextLabel={nextSVG}
                 breakLabel={"..."}
                 breakClassName={"break-me"}
                 pageCount={pageCount}
@@ -129,6 +132,8 @@ const Blog = () => {
                 subContainerClassName={"pages pagination"}
                 activeClassName={"active"}
               />
+              </PaginationWrapper>
+              
             </div>          
           </div>
         </Section>

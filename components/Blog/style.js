@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 export const SearchWrapper = styled.div.attrs({
-    className: "flex items-center justify-end w-full"
+    className: "flex items-center justify-center w-full pb-4"
 })``;
 export const BlogCardWrapper = styled.div.attrs({
     className: "p-4 md:w-1/3 w-full"
@@ -45,6 +45,62 @@ color: #e69c24;
 border: 2px solid #e69c24;
 font-size: 14px;
 margin-right: 5px;
+`;
+export const SearchField= styled.input.attrs({
+    className: "w-1/2 border border-gray-300 bg-white text-base outline-none text-gray-700 px-3 leading-8 focus:ring-2 focus:ring-secondary2 transition-colors duration-200 ease-in-out"
+})
+`
+border-radius: 25px;
+`;
+export const PaginationWrapper= styled.div.attrs({
+    className:""
+})        
+`
+.pagination{
+    margin: 15px auto;
+    display: flex;
+    list-style: none;
+    outline: none;
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform:translateX(-50%);    
+    
+    li{
+        display: inline !important;
+        width: 40px;
+        height: 40px;
+        border: 2px solid #e69c24;
+        border-radius: 50%;
+        justify-content:center;
+        align-items:center;
+        a{
+            color: #e69c24;  
+            // margin: 1px 10px;     
+            outline: none;
+            cursor: pointer;
+            text-align: center;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            font-size: 20px;
+            // svg{
+            //     display: inline;
+            // }
+        }        
+        &.active{
+            background-color: #e69c24 ;
+            a{
+                
+                
+                color: #fff;
+            }            
+        }
+    }    
+
+}
+    
+
 `;
 
 

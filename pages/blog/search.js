@@ -4,7 +4,7 @@ import Footer from '../../components/Footer'
 import { format, parseISO } from 'date-fns'
 import CustomControls from '../../components/Slide/CustomControls'
 import {SectionSubheader, ContentWrapper} from '../../styles/global'
-import { CardSummary,BlogTitle2, DateWrapper} from '../../components/Blog/style'
+import { CardSummary,BlogTitle2, DateWrapper, RespBlock} from '../../components/Blog/style'
 
 import posts from '../../cache/data.json'
     posts.map(post => (
@@ -56,7 +56,7 @@ return (
                     <div className="mx-4 md:mx-0 mb-3">
                       <div className="flex">
                           <img src={img}  className="sm:w-1/5 w-1/2"  alt=""/>
-                          <RespBlock>                                  
+                            <RespBlock>                                  
                               <BlogTitle2>{title}</BlogTitle2>                                                    
                               <DateWrapper>
                                   {format(parseISO(date), 'MMMM do, uuu')}
