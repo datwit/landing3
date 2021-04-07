@@ -10,8 +10,11 @@ export const SCardWrapper = styled.div.attrs({
     className: "bg-secondary2 h-8 flex justify-start items-center"
   })``;
   export const CategoryTitle = styled.h2.attrs({
-    className: "tracking-widest text-sm font-semibold text-white ml-2"
-  })``;
+    className: "tracking-widest text-sm font-semibold text-white ml-2 cursor-pointer"
+  })
+  `
+  cursor:pointer;
+  `;
   export const CardContent = styled.div.attrs({
     className: "p-4"
   })``;
