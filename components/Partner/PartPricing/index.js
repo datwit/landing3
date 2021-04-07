@@ -1,8 +1,12 @@
 import {ContentWrapper, SectionHeader} from '../../../styles/global'
-import React from 'react'
+import CTA from '../../Home/CTA';
+import {useState} from 'react';
+import datas from './data.json'
 
-const PartPricing = () => {
-    const [openTab, setOpenTab] = React.useState(1);
+const PartPricing = () => {    
+
+    const [openTab, setOpenTab] = useState(1);
+
     return (
         <div className="container px-5 mx-auto">
             <SectionHeader>Lorem ipsum dolor sit amet consectetur adipisicing elit.</SectionHeader>            
@@ -28,9 +32,7 @@ const PartPricing = () => {
                         role="tablist"
                     >
                         Profile
-                    </a>
-                    
-                    
+                    </a>                   
                     <a
                         className={
                         "py-1 px-4  rounded-full text-xs sm:text-base flex items-center" +
@@ -68,44 +70,38 @@ const PartPricing = () => {
                         Options
                     </a>                   
                 </div>                
-            </div>
+            </div>           
+            
             <ContentWrapper className={openTab === 1 ? "block" : "hidden"} id="link1" >            
                     
-                <div className="p-4 md:w-1/3 w-full bg-gray-100 bg-opacity-75 px-4 lg:px-8 py-4 lg:py-10 rounded-lg overflow-hidden text-center"  id="link1">
-                    <p>
-                        Collaboratively administrate empowered markets via
-                        plug-and-play networks. Dynamically procrastinate B2C users
-                        after installed base benefits.
-                        <br />
-                        <br /> Dramatically visualize customer directed convergence
-                        without revolutionary ROI.
-                    </p>
+                <div className="p-4 md:w-1/3 w-full bg-gray-100 bg-opacity-75 px-4 py-4 lg:px-8 lg:py-10 rounded-lg overflow-hidden text-center"  id="link1">
+                    <h1 className="title-font sm:text-2xl text-lg font-medium text-primary sm:mb-3">{datas[0].title}</h1>
+                    <p className="leading-relaxed mb-3 text-sm sm:text-base">{datas[0].description}</p>
+                    <h2 className="text-black" >{datas[0].price}</h2>
+                    <div className="justify-center mt-2 md:my-8 select-none flex">
+                        <CTA buttonName={'Contact us'}/>
+                    </div>
                 </div>
             </ContentWrapper>  
             <ContentWrapper className={openTab === 2 ? "block" : "hidden"} id="link2">
-                <div className="p-4 md:w-1/3 w-full bg-gray-100 bg-opacity-75 px-4 lg:px-8 py-4 lg:py-10 rounded-lg overflow-hidden text-center"  id="link1">
-                    <p>
-                        Completely synergize resource taxing relationships via
-                        premier niche markets. Professionally cultivate one-to-one
-                        customer service with robust ideas.
-                        <br />
-                        <br />
-                        Dynamically innovate resource-leveling customer service for
-                        state of the art customer service.
-                    </p>
+                <div className="p-4 md:w-1/3 w-full bg-gray-100 bg-opacity-75 px-4 py-4 lg:px-8 lg:py-10 rounded-lg overflow-hidden text-center"  id="link1">
+                    <h1 className="title-font sm:text-2xl text-lg font-medium text-primary sm:mb-3">{datas[1].title}</h1>
+                    <p className="leading-relaxed mb-3 text-sm sm:text-base">{datas[1].description}</p>
+                    <h2 className="text-black" >{datas[1].price}</h2>
+                    <div className="justify-center mt-2 md:my-8 select-none flex">
+                        <CTA buttonName={'Contact us'}/>
+                    </div>
                 </div>
 
             </ContentWrapper>   
             <ContentWrapper className={openTab === 3 ? "block" : "hidden"} id="link3">
-                <div className="p-4 md:w-1/3 w-full bg-gray-100 bg-opacity-75 px-4 lg:px-8 py-4 lg:py-10 rounded-lg overflow-hidden text-center"  id="link1">
-                    <p>
-                        Efficiently unleash cross-media information without
-                        cross-media value. Quickly maximize timely deliverables for
-                        real-time schemas.
-                        <br />
-                        <br /> Dramatically maintain clicks-and-mortar solutions
-                        without functional solutions.
-                    </p>
+                <div className="p-4 md:w-1/3 w-full bg-gray-100 bg-opacity-75 px-4 py-4 lg:px-8 lg:py-10 rounded-lg overflow-hidden text-center"  id="link1">
+                    <h1 className="title-font sm:text-2xl text-lg font-medium text-primary sm:mb-3">{datas[2].title}</h1>
+                    <p className="leading-relaxed mb-3 text-sm sm:text-base">{datas[2].description}</p>
+                    <h2 className="text-black" >{datas[2].price}</h2>
+                    <div className="justify-center mt-2 md:my-8 select-none flex">
+                        <CTA buttonName={'Contact us'}/>
+                    </div>
                 </div>
             </ContentWrapper>   
         </div>
