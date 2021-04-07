@@ -7,7 +7,7 @@ import { getAllData } from '../../lib/posts'
 import { format, parseISO } from 'date-fns'
 import CustomControls from '../../components/Slide/CustomControls'
 import { SectionSubheader } from '../../styles/global'
-import { PaginationWrapper,SearchWrapper, BlogCardWrapper, BlogCardBlock, CardSummary, BlogCardBorder, RespBlock, BlogTitle1, BlogTitle2, DateWrapper, SearchField} from '../../components/Blog/style'
+import { Category,PaginationWrapper,SearchWrapper, BlogCardWrapper, BlogCardBlock, CardSummary, BlogCardBorder, RespBlock, BlogTitle1, BlogTitle2, DateWrapper, SearchField} from '../../components/Blog/style'
 import ReactPaginate from 'react-paginate';
 
 import posts from '../../cache/data.json'
@@ -19,7 +19,9 @@ const Blog = () => {
   const [offset, setOffset] = useState(0);
   const [data, setData] = useState([]);
   const [perPage] = useState(3);
-  const [pageCount, setPageCount] = useState(0)
+  const [pageCount, setPageCount] = useState(0) 
+  
+  
   
   //getting our data 
   const getData = () => {
@@ -32,6 +34,18 @@ const Blog = () => {
                 <BlogCardBorder>
                   <img className="lg:h-48 md:h-28 w-full object-cover object-center" src={item.img} alt="" />
                   <BlogCardBlock>
+                    <div className="flex flex-wrap">
+                        { 
+                          item.tags.map(tags => (                           
+                          <Link href=""><Category                                                                           
+                            id={tags}
+                            
+                            >{tags}
+                          </Category></Link>                           
+                          ))
+                          
+                        }                        
+                    </div> 
                     <div className="text-gray-600 text-xs">
                       {format(parseISO(item.date), 'MMMM do, uuu')}
                     </div>                                
@@ -111,7 +125,7 @@ const Blog = () => {
                   name="search"
                   placeholder="Search here">              
               </SearchField>
-              <Link href={query === "" ? `/blog/search?p=${query}`:`/blog/search?q=${query}`} ><svg className="h-6 w-6 text-secondary2" width="24" height="24" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">  <path stroke="none" d="M0 0h24v24H0z" />  <circle cx="10" cy="10" r="7" />  <line x1="21" y1="21" x2="15" y2="15" /></svg></Link>
+              <Link href={`/blog/search?q=${query}`}><svg className="h-6 w-6 text-secondary2" width="24" height="24" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">  <path stroke="none" d="M0 0h24v24H0z" />  <circle cx="10" cy="10" r="7" />  <line x1="21" y1="21" x2="15" y2="15" /></svg></Link>
               
             </SearchWrapper>
 
