@@ -9,17 +9,46 @@ import CustomControls from '../../components/Slide/CustomControls'
 import { SectionSubheader } from '../../styles/global'
 import { Category, PaginationWrapper, SearchWrapper, BlogCardWrapper, BlogCardBlock, CardSummary, BlogCardBorder, RespBlock, BlogTitle1, BlogTitle2, DateWrapper, SearchField } from '../../components/Blog/style'
 import ReactPaginate from 'react-paginate';
+import { useRouter } from 'next/router'
 
 import posts from '../../cache/data.json'
 
 const Blog = () => {
-  const [query, setQuery] = useState('')
+  const [query, setQuery] = useState('') 
 
   //pagination states
   const [offset, setOffset] = useState(0);
   const [data, setData] = useState([]);
   const [perPage] = useState(3);
   const [pageCount, setPageCount] = useState(0)
+
+  const router = useRouter()  
+
+  //custom hook to trigger search pressing enter
+  const useKeyPress=(targetKey)=> {   
+    const [keyPressed, setKeyPressed] = useState(false);   
+    function downHandler({ key }) {
+      if (key === targetKey) {
+        setKeyPressed(true);
+      }
+    }    
+    useEffect(() => {
+      window.addEventListener("keydown", downHandler);     
+      return () => {
+        window.removeEventListener("keydown", downHandler);
+       
+      };
+    }, []); // Empty array ensures that effect is only run on mount and unmount
+    return keyPressed;
+  }
+  //calling hook passing the key
+  const pressEnter = useKeyPress("Enter");
+
+  //redirecting using router
+  const searchRedirect=()=>{
+    router.push(`/blog/search?q=${query.toLowerCase()}`)
+  }
+
 
   //getting our data 
   const getData = () => {
@@ -98,11 +127,11 @@ const Blog = () => {
     const query = event.target.value.toLowerCase();
     setQuery(query)
   }, [])
-
+  
   const nextSVG = <svg className="h-8 w-8 text-secondary2" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">  <polyline points="13 17 18 12 13 7" />  <polyline points="6 17 11 12 6 7" /></svg>
   const prevSVG = <svg className="h-8 w-8 text-secondary2" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">  <polyline points="11 17 6 12 11 7" />  <polyline points="18 17 13 12 18 7" /></svg>
 
-
+  // () => router.push(`/blog/search?p=${tags.toLowerCase()}`)
   return (
     //Posts listing template    
     <FullPage controls={CustomControls}>
@@ -110,7 +139,8 @@ const Blog = () => {
         <Section>
           <div className="container px-5 mx-auto">
             <SectionSubheader>Discover interesting ideas and unique perspectives from our amazing crew</SectionSubheader>
-
+            {/* {pressEnter && console.log(`/blog/search?q=${query}`)} */}
+            {pressEnter && searchRedirect()}
             {/* search box*/}
             <SearchWrapper>
               <SearchField
