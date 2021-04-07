@@ -8,6 +8,7 @@ import {ImgContainer, DateAuthorWrapper, PostTitle} from '../../components/Blog/
 import { getAllData } from '../../lib/posts';
 import {MarkdownContent} from '../info/style'
 import {Category} from '../../components/Blog/style'
+import { Link } from 'react-router-dom';
 
 
 const BlogPage = ({ title, date, content, img, author, tags})=> {
@@ -36,10 +37,13 @@ const BlogPage = ({ title, date, content, img, author, tags})=> {
                   <div className="flex flex-wrap">
                       {
                         tags.map((tags, key3) => (
-                        <Category
-                          key={key3}                                            
-                        >{tags}
-                        </Category>
+                          <div key={key3} >
+                            {/* <Link href={`/blog/search?p=${tags.toLowerCase()}`}> */}
+                                <Category                                                                             
+                                >{tags}
+                                </Category>
+                            {/* </Link> */}
+                          </div>                        
                       ))
                       }
                   </div>        

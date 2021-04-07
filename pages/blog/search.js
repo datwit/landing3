@@ -5,6 +5,8 @@ import { format, parseISO } from 'date-fns'
 import CustomControls from '../../components/Slide/CustomControls'
 import {SectionSubheader, ContentWrapper} from '../../styles/global'
 import { CardSummary,BlogTitle2, DateWrapper, RespBlock} from '../../components/Blog/style'
+import Link from "next/link"
+
 
 import posts from '../../cache/data.json'
     posts.map(post => (
@@ -30,7 +32,7 @@ export const getServerSideProps = async(context) => {
 }
 
 const Blog = (data) => {
-  
+ 
 return (
 
 <FullPage controls={CustomControls}>
@@ -51,13 +53,13 @@ return (
           <div>
               <ul>
                 {
-                  data.results.map(({title, summary, date, img },key1) => (
+                  data.results.map(({title, summary, date, img, id },key1) => (
                   <li key={key1}>                        
                     <div className="mx-4 md:mx-0 mb-3">
                       <div className="flex">
                           <img src={img}  className="sm:w-1/5 w-1/2"  alt=""/>
                             <RespBlock>                                  
-                              <BlogTitle2>{title}</BlogTitle2>                                                    
+                              <Link href={`/blog/${id}`}><BlogTitle2>{title}</BlogTitle2></Link>                                                  
                               <DateWrapper>
                                   {format(parseISO(date), 'MMMM do, uuu')}
                               </DateWrapper>
@@ -86,3 +88,4 @@ return (
 );
 }
 export default Blog
+
