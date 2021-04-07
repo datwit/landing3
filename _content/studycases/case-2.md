@@ -1,6 +1,7 @@
 ---
 title: Study Case 2
 summary: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+tags: Software Development
 img:
 date: 2021-02-14T19:05:27.220Z
 author:

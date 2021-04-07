@@ -2,6 +2,7 @@
 title: Study Case 1
 summary: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 img:
+tags: Data Science
 date: 2021-02-14T19:05:27.220Z
 author:
   name: Benjamin

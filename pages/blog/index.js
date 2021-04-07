@@ -11,7 +11,7 @@ import { Category, PaginationWrapper, SearchWrapper, BlogCardWrapper, BlogCardBl
 import ReactPaginate from 'react-paginate';
 import { useRouter } from 'next/router'
 
-import posts from '../../cache/data.json'
+import posts from '../../cache/posts.json'
 
 const Blog = () => {
   const [query, setQuery] = useState('') 

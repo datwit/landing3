@@ -3,12 +3,12 @@ import Section from '../../components/Section'
 import Footer from '../../components/Footer'
 import { format, parseISO } from 'date-fns'
 import CustomControls from '../../components/Slide/CustomControls'
-import {SectionSubheader, ContentWrapper, SectionHeader} from '../../styles/global'
+import { ContentWrapper, SectionHeader} from '../../styles/global'
 import { CardSummary,BlogTitle2, DateWrapper, RespBlock} from '../../components/Blog/style'
 import Link from "next/link"
 
 
-import posts from '../../cache/data.json'
+import posts from '../../cache/posts.json'
     posts.map(post => (
       post.Stringtags='',
       post.tags.map(tag =>( 
@@ -31,7 +31,7 @@ export const getServerSideProps = async(context) => {
   return { props: {results} };
 }
 
-const Blog = (data) => {
+const BlogResults = (data) => {
  
 return (
 
@@ -83,5 +83,5 @@ return (
 
 );
 }
-export default Blog
+export default BlogResults
 

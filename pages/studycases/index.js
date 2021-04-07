@@ -7,9 +7,11 @@ import CustomControls from '../../components/Slide/CustomControls'
 import {SectionSubheader, ContentWrapper, SectionHeader} from '../../styles/global'
 import {BlogCardWrapper, BlogCardBorder,BlogCardBlock, BlogTitle1, BlogTitle2, CardSummary, RespBlock, DateWrapper} from '../../components/Blog/style'
 import { getAllData } from '../../lib/posts'
+import {CategoryRect, CategoryTitle} from '../../components/Home/StudyCases/style'
 
+import cases from '../../cache/cases.json'
 
-const AllStudyCases = ({ studycases }) =>{
+const AllStudyCases = () =>{
   return (
     //Posts listing template       
     <FullPage controls={CustomControls}>
@@ -21,8 +23,8 @@ const AllStudyCases = ({ studycases }) =>{
                 <div className="hidden md:block">
                     <ContentWrapper>                
                       {
-                        studycases.map((item) => (
-                          <StudyCasesListing key={item.slug} {...item} />
+                        cases.map((item) => (
+                          <StudyCasesListing key={item.id} {...item} />
                       ))
                       }                           
                     </ContentWrapper>
@@ -30,8 +32,8 @@ const AllStudyCases = ({ studycases }) =>{
                 <div className="md:hidden">
                     <ContentWrapper>                
                       {
-                        studycases.map((item) => (
-                          <StudyCasesListing key={item.slug} {...item} />
+                        cases.map((item) => (
+                          <StudyCasesListing key={item.id} {...item} />
                       ))
                       }                           
                     </ContentWrapper>
@@ -66,17 +68,21 @@ export const getStaticProps = async () => {
 }
 
 //Extracting  visual component
-const StudyCasesListing = ({ slug, title, date, summary })=> {
+const StudyCasesListing = ({id,title,summary,date,tags})=> {
   
   return (
       <>                     
         <BlogCardWrapper>
-            <Link href={`/studycases/${slug}`}>
+            <Link href={`/studycases/${id}`}>
                 <BlogCardBorder>
-                    <img className="lg:h-48 md:h-28 w-full object-cover object-center" src="/images/dummy-image.png" alt="" />              
-                    <BlogCardBlock>                      
-                        {/* <h2 className="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">CATEGORY</h2> */}
-                        <Link href={`/studycases/${slug}`}><BlogTitle1>{title}</BlogTitle1></Link> 
+                    <img className="lg:h-48 md:h-28 w-full object-cover object-center" src="/images/dummy-image.png" alt="" />  
+                    <CategoryRect>
+                        <Link href={`/studycases/search?p=${tags.toLowerCase()}`}>
+                            <CategoryTitle>{tags}</CategoryTitle>
+                        </Link>
+                    </CategoryRect>            
+                    <BlogCardBlock>                         
+                        <Link href={`/studycases/${id}`}><BlogTitle1>{title}</BlogTitle1></Link> 
                         <CardSummary>{summary}</CardSummary>                  
                         {/* <div className="flex items-center flex-wrap ">
                             <a className="text-secondary2 inline-flex items-center md:mb-2 lg:mb-0">Learn More
@@ -91,12 +97,12 @@ const StudyCasesListing = ({ slug, title, date, summary })=> {
             </Link>
         </BlogCardWrapper>
         <div className="md:hidden">
-          <Link href={`/studycases/${slug}`}>
+          <Link href={`/studycases/${id}`}>
               <BlogCardBorder className="mb-3">
                   <div className="flex">
                       <img src="/images/dummy-image.png"  className="sm:w-1/4 w-1/2"  alt=""/>
                       <RespBlock>
-                          <Link href={`/studycases/${slug}`}>
+                          <Link href={`/studycases/${id}`}>
                               <BlogTitle2>{title}</BlogTitle2>
                           </Link>                  
                           <DateWrapper>

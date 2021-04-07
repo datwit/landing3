@@ -2,12 +2,14 @@ const fs = require('fs')
 const path = require('path')
 const matter = require('gray-matter')
 
-function postData() {
-  const postsDirectory = path.join(process.cwd(), '_content/posts')
-  const fileNames = fs.readdirSync(postsDirectory)
-  const posts = fileNames.map(fileName => {
+
+
+function getjsonData(fileDir) {
+  const filesDirectory = path.join(process.cwd(), `_content/${fileDir}`)
+  const fileNames = fs.readdirSync(filesDirectory)
+  const files = fileNames.map(fileName => {
     const id = fileName.replace(/\.md$/, '')
-    const fullPath = path.join(postsDirectory, fileName)
+    const fullPath = path.join(filesDirectory, fileName)
     const fileContents = fs.readFileSync(fullPath, 'utf8')
     const matterResult = matter(fileContents)
     return {
@@ -20,7 +22,7 @@ function postData() {
       date: matterResult.data.date
     }
   })
-  return JSON.stringify(posts)
+  return JSON.stringify(files)
 }
 
 try {
@@ -29,8 +31,12 @@ try {
   fs.mkdirSync('cache')
 }
 
-fs.writeFile('cache/data.json', postData(), function (err) {
+fs.writeFile('cache/posts.json', getjsonData('posts'), function (err) {
   if (err) return console.log(err);
   console.log('Posts cached.');
+})
+fs.writeFile('cache/cases.json', getjsonData('studycases'), function (err) {
+  if (err) return console.log(err);
+  console.log('Study cases cached.');
 })
 
