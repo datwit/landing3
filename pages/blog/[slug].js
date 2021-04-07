@@ -9,11 +9,13 @@ import { getAllData } from '../../lib/posts';
 import {MarkdownContent} from '../info/style'
 import {Category} from '../../components/Blog/style'
 import { Link } from 'react-router-dom';
+import { useRouter } from 'next/router'
 
 
-const BlogPage = ({ title, date, content, img, author, tags})=> {
+const BlogPage = ({ title, date, content, img, author, tags, id})=> {
 
   const hydratedContent = hydrate(content);
+  const router = useRouter()
 
   return (
     //Post page template
@@ -37,12 +39,12 @@ const BlogPage = ({ title, date, content, img, author, tags})=> {
                   <div className="flex flex-wrap">
                       {
                         tags.map((tags, key3) => (
-                          <div key={key3} >
-                            {/* <Link href={`/blog/search?p=${tags.toLowerCase()}`}> */}
-                                <Category                                                                             
-                                >{tags}
-                                </Category>
-                            {/* </Link> */}
+                          <div key={key3} >                            
+                              <a onClick={() => router.push(`/blog/search?p=${tags.toLowerCase()}`)}>
+                                  <Category                                                                             
+                                  >{tags}
+                                  </Category>
+                              </a>                          
                           </div>                        
                       ))
                       }

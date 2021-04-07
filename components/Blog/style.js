@@ -45,6 +45,7 @@ color: #e69c24;
 border: 2px solid #e69c24;
 font-size: 14px;
 margin-right: 5px;
+cursor:pointer;
 `;
 export const SearchField= styled.input.attrs({
     className: "w-1/2 border border-gray-300 bg-white text-base outline-none text-gray-700 px-3 leading-8 focus:ring-2 focus:ring-secondary2 transition-colors duration-200 ease-in-out"
