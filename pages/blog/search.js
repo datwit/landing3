@@ -3,7 +3,7 @@ import Section from '../../components/Section'
 import Footer from '../../components/Footer'
 import { format, parseISO } from 'date-fns'
 import CustomControls from '../../components/Slide/CustomControls'
-import {SectionSubheader, ContentWrapper} from '../../styles/global'
+import {SectionSubheader, ContentWrapper, SectionHeader} from '../../styles/global'
 import { CardSummary,BlogTitle2, DateWrapper, RespBlock} from '../../components/Blog/style'
 import Link from "next/link"
 
@@ -39,18 +39,11 @@ return (
   <Slide>
     <Section>
     <div className="container px-5 mx-auto">        
-      <SectionSubheader>Discover interesting ideas and unique perspectives from our amazing crew</SectionSubheader>
+      <SectionHeader>Search Results</SectionHeader>
       <ContentWrapper>     
       { 
-        data.results.length === 0 && (
-          <h1>No hay resultados</h1>
-          ),
-        console.log(posts),
-        console.log(data.results.length),
-
-       
-        data.results.length > 0 && (
-          <div>
+        data.results.length > 0 
+        ? <div>
               <ul>
                 {
                   data.results.map(({title, summary, date, img, id },key1) => (
@@ -72,7 +65,10 @@ return (
                 }
               </ul>
           </div>
-        )}
+        : <div className="mx-auto">
+          <p>No results found 😢 </p>
+         </div>
+      }
         </ContentWrapper>           
       </div>               
     </Section>        
