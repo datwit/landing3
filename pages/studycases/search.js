@@ -38,7 +38,7 @@ const CasesResults = (data) => {
                                                             <div className="flex">
                                                                 <img src={img} className="sm:w-1/5 w-1/2" alt="" />
                                                                 <RespBlock>
-                                                                    <Link href={`/blog/${id}`}><BlogTitle2>{title}</BlogTitle2></Link>
+                                                                    <Link href={`/studycases/${id}`}><BlogTitle2>{title}</BlogTitle2></Link>
                                                                     <DateWrapper>
                                                                         {format(parseISO(date), 'MMMM do, uuu')}
                                                                     </DateWrapper>
