@@ -99,9 +99,47 @@ export const PaginationWrapper= styled.div.attrs({
         }
     }    
 
-}
-    
+}   
 
+`;
+export const BulletWrapper= styled.ul
+`
+&.slide-right{
+    position: relative;
+    right: -1000px;
+    -webkit-animation: slider 0.8s forwards;
+    -webkit-animation-delay: 0.3s;
+    animation: slider 0.8s forwards;
+    animation-delay: 0.3s;
+
+}
+@-webkit-keyframes slider {
+    100% { right: 0; }
+}
+
+@keyframes slider {
+    100% { right: 0; }
+}
+`;
+export const PricingCardGray= styled.div.attrs({
+    className: "p-4 md:w-1/3 w-full bg-gray-100 bg-opacity-75 px-4 py-4 lg:px-8 lg:py-10 rounded-lg overflow-hidden text-center"
+})
+`
+&.slide-left{
+    position: relative;
+    left: -1000px;
+    -webkit-animation: slidel 0.8s forwards;
+    -webkit-animation-delay: 0.3s;
+    animation: slidel 0.8s forwards;
+    animation-delay: 0.3s;
+}
+@-webkit-keyframes slidel {
+    100% { left: 0; }
+}
+
+@keyframes slidel {
+    100% { left: 0; }
+}
 `;
 
 

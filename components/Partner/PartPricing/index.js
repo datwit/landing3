@@ -1,7 +1,9 @@
 import {ContentWrapper, SectionHeader} from '../../../styles/global'
-import CTA from '../../Home/CTA';
-import {useState} from 'react';
+import CTA from '../../Home/CTA'
+import {useState} from 'react'
 import datas from './data.json'
+import uuid from 'react-uuid'
+import {BulletWrapper, PricingCardGray} from '../../Blog/style';
 
 const PartPricing = () => {    
 
@@ -31,7 +33,7 @@ const PartPricing = () => {
                         href="#link1"
                         role="tablist"
                     >
-                        Profile
+                        Bundle 1
                     </a>                   
                     <a
                         className={
@@ -48,7 +50,7 @@ const PartPricing = () => {
                         href="#link2"
                         role="tablist"
                     >
-                        Settings
+                        Bundle 2
                     </a>
                     
                     
@@ -67,41 +69,85 @@ const PartPricing = () => {
                         href="#link3"
                         role="tablist"
                     >
-                        Options
+                        Bundle 3
                     </a>                   
                 </div>                
             </div>           
             
             <ContentWrapper className={openTab === 1 ? "block" : "hidden"} id="link1" >            
                     
-                <div className="p-4 md:w-1/3 w-full bg-gray-100 bg-opacity-75 px-4 py-4 lg:px-8 lg:py-10 rounded-lg overflow-hidden text-center"  id="link1">
+                <PricingCardGray className={openTab === 1 ? "block slide-left" : "hidden"}  id="link1">
                     <h1 className="title-font sm:text-2xl text-lg font-medium text-primary sm:mb-3">{datas[0].title}</h1>
                     <p className="leading-relaxed mb-3 text-sm sm:text-base">{datas[0].description}</p>
                     <h2 className="text-black" >{datas[0].price}</h2>
                     <div className="justify-center mt-2 md:my-8 select-none flex">
                         <CTA buttonName={'Contact us'}/>
                     </div>
+                </PricingCardGray>
+                <div className=" px-4 sm:p-4 md:w-2/3 w-full flex items-center wrapper-list">
+                    <BulletWrapper className={ openTab === 1 ? 'block slide-right': 'hidden'} >
+                        {
+                            datas[0].bullets.map(d => (
+                                <li key={uuid()}>
+                                    <p className="flex items-center text-gray-600 md:mb-6 text-sm sm:text-base">
+                                        <span className="w-8 h-8 mr-2 inline-flex items-center justify-center flex-shrink-0">
+                                        <svg className="h-8 w-8 text-secondary2"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  strokeWidth="2"  strokeLinecap="round"  strokeLinejoin="round">  <polyline points="20 6 9 17 4 12" /></svg>
+                                        </span>{d.title}
+                                    </p>
+                                </li>
+                            ))
+                        }                        
+                    </BulletWrapper>
                 </div>
             </ContentWrapper>  
             <ContentWrapper className={openTab === 2 ? "block" : "hidden"} id="link2">
-                <div className="p-4 md:w-1/3 w-full bg-gray-100 bg-opacity-75 px-4 py-4 lg:px-8 lg:py-10 rounded-lg overflow-hidden text-center"  id="link1">
+                <PricingCardGray className={openTab === 2 ? "block slide-left" : "hidden"}  id="link1">
                     <h1 className="title-font sm:text-2xl text-lg font-medium text-primary sm:mb-3">{datas[1].title}</h1>
                     <p className="leading-relaxed mb-3 text-sm sm:text-base">{datas[1].description}</p>
                     <h2 className="text-black" >{datas[1].price}</h2>
                     <div className="justify-center mt-2 md:my-8 select-none flex">
                         <CTA buttonName={'Contact us'}/>
                     </div>
+                </PricingCardGray>
+                <div className=" px-4 sm:p-4 md:w-2/3 w-full flex items-center wrapper-list">
+                    <BulletWrapper className={ openTab === 2 ? 'block slide-right': 'hidden'} >
+                        {
+                            datas[1].bullets.map(d => (
+                                <li key={uuid()}>
+                                    <p className="flex items-center text-gray-600 md:mb-6 text-sm sm:text-base">
+                                        <span className="w-8 h-8 mr-2 inline-flex items-center justify-center flex-shrink-0">
+                                        <svg className="h-8 w-8 text-secondary2"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  strokeWidth="2"  strokeLinecap="round"  strokeLinejoin="round">  <polyline points="20 6 9 17 4 12" /></svg>
+                                        </span>{d.title}
+                                    </p>
+                                </li>
+                            ))
+                        }                        
+                    </BulletWrapper>
                 </div>
-
             </ContentWrapper>   
             <ContentWrapper className={openTab === 3 ? "block" : "hidden"} id="link3">
-                <div className="p-4 md:w-1/3 w-full bg-gray-100 bg-opacity-75 px-4 py-4 lg:px-8 lg:py-10 rounded-lg overflow-hidden text-center"  id="link1">
+                <PricingCardGray className={openTab === 3 ? "block slide-left" : "hidden"}  id="link1">
                     <h1 className="title-font sm:text-2xl text-lg font-medium text-primary sm:mb-3">{datas[2].title}</h1>
                     <p className="leading-relaxed mb-3 text-sm sm:text-base">{datas[2].description}</p>
                     <h2 className="text-black" >{datas[2].price}</h2>
                     <div className="justify-center mt-2 md:my-8 select-none flex">
                         <CTA buttonName={'Contact us'}/>
                     </div>
+                </PricingCardGray>
+                <div className=" px-4 sm:p-4 md:w-2/3 w-full flex items-center wrapper-list">
+                    <BulletWrapper className={ openTab === 3 ? 'block slide-right': 'hidden'} >
+                        {
+                            datas[2].bullets.map(d => (
+                                <li key={uuid()}>
+                                    <p className="flex items-center text-gray-600 md:mb-6 text-sm sm:text-base">
+                                        <span className="w-8 h-8 mr-2 inline-flex items-center justify-center flex-shrink-0">
+                                        <svg className="h-8 w-8 text-secondary2"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  strokeWidth="2"  strokeLinecap="round"  strokeLinejoin="round">  <polyline points="20 6 9 17 4 12" /></svg>
+                                        </span>{d.title}
+                                    </p>
+                                </li>
+                            ))
+                        }                        
+                    </BulletWrapper>
                 </div>
             </ContentWrapper>   
         </div>
