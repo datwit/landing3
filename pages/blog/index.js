@@ -10,6 +10,7 @@ import { SectionSubheader } from '../../styles/global'
 import { Category, PaginationWrapper, SearchWrapper, BlogCardWrapper, BlogCardBlock, CardSummary, BlogCardBorder, RespBlock, BlogTitle1, BlogTitle2, DateWrapper, SearchField } from '../../components/Blog/style'
 import ReactPaginate from 'react-paginate';
 import { useRouter } from 'next/router'
+import Image from 'next/image'
 
 import posts from '../../cache/posts.json'
 
@@ -59,7 +60,7 @@ const Blog = () => {
       <BlogCardWrapper key={key6}>
         <div className="hidden md:block">
           <BlogCardBorder>
-            <img className="lg:h-48 md:h-28 w-full object-cover object-center" src={item.img} alt="" />
+            <img className="lg:h-48 md:h-28 w-full object-cover object-center" src={item.img} alt="" />         
             <BlogCardBlock>
               <div className="flex flex-wrap">
                 {

@@ -4,7 +4,7 @@ import renderToString from 'next-mdx-remote/render-to-string';
 import hydrate from 'next-mdx-remote/hydrate';
 import Navbar from '../../components/Navbar'
 import Footer from '../../components/Footer'
-import {MarkdownContent} from '../info/style'
+import {MarkdownContent} from '../../components/Markdown/style'
 
 import { getAllData } from '../../lib/posts';
 

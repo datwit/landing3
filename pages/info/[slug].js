@@ -4,10 +4,10 @@ import renderToString from 'next-mdx-remote/render-to-string';
 import hydrate from 'next-mdx-remote/hydrate';
 import Navbar from '../../components/Navbar'
 import Footer from '../../components/Footer'
-import {MarkdownContent} from './style'
+import {MarkdownContent} from '../../components/Markdown/style'
 import {PostTitle} from '../../components/Blog/style'
 
-import { getAllData } from '../../components/Contents/GetPosts';
+import { getAllData } from '../../lib/posts';
 
 const Info = ({ title, date, content, img, author})=> {
 

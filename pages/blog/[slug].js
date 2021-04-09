@@ -6,9 +6,8 @@ import Navbar from '../../components/Navbar'
 import Footer from '../../components/Footer'
 import {ImgContainer, DateAuthorWrapper, PostTitle} from '../../components/Blog/style'
 import { getAllData } from '../../lib/posts';
-import {MarkdownContent} from '../info/style'
+import {MarkdownContent} from '../../components/Markdown/style'
 import {Category} from '../../components/Blog/style'
-import { Link } from 'react-router-dom';
 import { useRouter } from 'next/router'
 
 
