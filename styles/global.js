@@ -27,10 +27,10 @@ export const Button = styled.a
     }
     
     &:hover {
-        color: #1e4158;
+        color: #00baff;
         border-color: white;
         svg{
-            color: #1e4158;  
+            color: #00baff;  
         }
         
     }
