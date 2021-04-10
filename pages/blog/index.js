@@ -10,7 +10,7 @@ import { SectionSubheader } from '../../styles/global'
 import { Category, PaginationWrapper, SearchWrapper, BlogCardWrapper, BlogCardBlock, CardSummary, BlogCardBorder, RespBlock, BlogTitle1, BlogTitle2, DateWrapper, SearchField } from '../../components/Blog/style'
 import ReactPaginate from 'react-paginate';
 import { useRouter } from 'next/router'
-import Image from 'next/image'
+
 
 import posts from '../../cache/posts.json'
 
