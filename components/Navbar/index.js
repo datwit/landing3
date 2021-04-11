@@ -3,7 +3,7 @@ import Link from 'next/link'
 import * as ROUTES from './routes'
 import { useState } from 'react';
 import {NavWrapper, ImgWrapper, LogoLink, LinkItem, ButtonContainer, LinkItem2, HamburguerWrapper, HeaderElements, AligningElements} from './styles'
-
+import { useRouter } from 'next/router'
 
 
 function Navbar() {
@@ -13,6 +13,8 @@ function Navbar() {
 	const handleClick = () => {
 		setActive(!active);
 	};	
+
+	const router = useRouter()
 
 	return (	
 		<div className="flex items-center flex-wrap h-20 w-full fixed top-0 bg-fixed bg-white z-10">
@@ -27,12 +29,11 @@ function Navbar() {
 							</Link>
 						</ImgWrapper>
 						<div className="hidden md:block items-center">
-							<Link href={ROUTES.HOME.link}><LinkItem>{ROUTES.HOME.name}</LinkItem></Link>
-							<Link href={ROUTES.STUDYCASES.link}><LinkItem>{ROUTES.STUDYCASES.name}</LinkItem></Link>
-							<Link href={ROUTES.ABOUT.link}><LinkItem>{ROUTES.ABOUT.name}</LinkItem></Link>
-							<Link href={ROUTES.CONTACT.link}><LinkItem>{ROUTES.CONTACT.name}</LinkItem></Link>
-							<Link href={ROUTES.BLOG.link}><LinkItem>{ROUTES.BLOG.name}</LinkItem></Link>
-							
+							<LinkItem className={router.pathname=="/" ? "text-secondary2": "text-primary"}s><Link href={ROUTES.HOME.link}>{ROUTES.HOME.name}</Link></LinkItem> 
+							<LinkItem className={router.pathname=="/studycases" ? "text-secondary2": "text-primary"}s><Link href={ROUTES.STUDYCASES.link}>{ROUTES.STUDYCASES.name}</Link></LinkItem>
+							<LinkItem className={router.pathname=="/about" ? "text-secondary2": "text-primary"}s><Link href={ROUTES.ABOUT.link}>{ROUTES.ABOUT.name}</Link></LinkItem>
+							<LinkItem className={router.pathname=="/contact" ? "text-secondary2": "text-primary"}s><Link href={ROUTES.CONTACT.link}>{ROUTES.CONTACT.name}</Link></LinkItem>
+							<LinkItem className={router.pathname=="/blog" ? "text-secondary2": "text-primary"}s><Link href={ROUTES.BLOG.link}>{ROUTES.BLOG.name}</Link></LinkItem>					
 						</div>
 						<ButtonContainer className="md:hidden">							
 							<button className="mr-2 justify-end" onClick={setActive}>

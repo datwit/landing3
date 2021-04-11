@@ -61,7 +61,7 @@ export const NavWrapper = styled.div.attrs({
     className: "ml-5 2xl:ml-8 py-2 text-sm font-semibold text-primary hover:text-secondary1 focus:text-secondary1"
   })
   `${HoverLine}`;  
-  export const LinkItem2 = styled.a.attrs({
+  export const LinkItem2 = styled.p.attrs({
     className: "ml-5 2xl:ml-8 pb-2 text-xl font-semibold text-white hover:text-secondary1 focus:text-secondary1"
   })
   `${HoverLine}`;  
