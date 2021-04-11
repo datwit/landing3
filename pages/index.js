@@ -7,7 +7,8 @@ import Services from '../components/Home/Services'
 import Pricing from '../components/Home/Pricing'
 import Footer from '../components/Footer'
 import Selection from '../components/Selection'
-import Navbar from '../components/Navbar' 
+import Navbar from '../components/Navbar'
+import { motion } from 'framer-motion'
 
 export default function Home() {
   const style={
@@ -15,44 +16,46 @@ export default function Home() {
   } 
   
   return (
-    <FullPage controls={CustomControls}>        
-        <Slide {...style}>
-          <Navbar />
-          <Section>
-            <Hero />
-          </Section>        
-        </Slide>
+    <motion.div initial={{opacity:0}} animate={{opacity:1}}> 
+        <FullPage controls={CustomControls}>        
+            <Slide {...style}>
+              <Navbar />
+              <Section>
+                <Hero />
+              </Section>        
+            </Slide>
 
-        <Slide>
-        <Section>
-            <Services />
-          </Section>
-        </Slide> 
+            <Slide>
+            <Section>
+                <Services />
+              </Section>
+            </Slide> 
 
-        <Slide>
-          <Section>
-            <StudyCases />
-          </Section>          
-        </Slide>
-        
-        <Slide>
-          <Section>
-            <Pricing />
-          </Section>          
-        </Slide>
+            <Slide>
+              <Section>
+                <StudyCases />
+              </Section>          
+            </Slide>
+            
+            <Slide>
+              <Section>
+                <Pricing />
+              </Section>          
+            </Slide>
 
-        <Slide>
-          <Section>
-            <Selection />
-          </Section>          
-        </Slide>
+            <Slide>
+              <Section>
+                <Selection />
+              </Section>          
+            </Slide>
 
-        <Slide>
-          <section className= "w-full h-screen bg-primary mx-auto px-10">
-            <Footer />
-          </section>                  
-        </Slide>
-             
-      </FullPage>
+            <Slide>
+              <section className= "w-full h-screen bg-primary mx-auto px-10">
+                <Footer />
+              </section>                  
+            </Slide>
+                
+          </FullPage>
+      </motion.div> 
   )
 }
