@@ -6,22 +6,21 @@ import CustomControls from '../../components/Slide/CustomControls'
 import { ContentWrapper, SectionHeader } from '../../styles/global'
 import { CardSummary, BlogTitle2, DateWrapper, RespBlock } from '../../components/Blog/style'
 import Link from "next/link"
+import { useRouter } from 'next/router'
 import Navbar from '../../components/Navbar' 
 
 import cases from '../../cache/cases.json'
 
-export const getServerSideProps = async (context) => {
-    const cat = context.query.p 
-    const results = cat != null ? 
-        cases.filter(post => post.tags.toLowerCase().includes(cat)) : []
-
-    return { props: { results } };
-}
-
-const CasesResults = (data) => {
+const CasesResults = () => {
     const style={
         height:'calc(100% - 80px)',    
     } 
+
+    const router = useRouter()
+    const cat = router.query.p 
+    const results = cat != null ? 
+        cases.filter(post => post.tags.toLowerCase().includes(cat)) : []
+
     return (
         <FullPage controls={CustomControls}>
             <Slide {...style}>
@@ -31,11 +30,11 @@ const CasesResults = (data) => {
                         <SectionHeader>Search Results</SectionHeader>
                         <ContentWrapper>
                             {
-                                data.results.length > 0
+                                results.length > 0
                                     ? <div>
                                         <ul>
                                             {
-                                                data.results.map(({ title, summary, date, img, id }, key1) => (
+                                                results.map(({ title, summary, date, img, id }, key1) => (
                                                     <li key={key1}>
                                                         <div className="mx-4 md:mx-0 mb-3">
                                                             <div className="flex">

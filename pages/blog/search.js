@@ -6,6 +6,7 @@ import CustomControls from '../../components/Slide/CustomControls'
 import { ContentWrapper, SectionHeader} from '../../styles/global'
 import { CardSummary,BlogTitle2, DateWrapper, RespBlock} from '../../components/Blog/style'
 import Link from "next/link"
+import { useRouter } from 'next/router'
 import Navbar from '../../components/Navbar'
 
 import posts from '../../cache/posts.json'
@@ -16,9 +17,16 @@ import posts from '../../cache/posts.json'
       ))
     ))
 
-export const getServerSideProps = async(context) => {
-  const cat = context.query.p  
-  const que = context.query.q
+
+const BlogResults = () => {
+  const style={
+    height:'calc(100% - 80px)',    
+  }  
+
+  const router = useRouter()
+
+  const cat = router.query.p  
+  const que = router.query.q
   const results = cat != null ? 
     posts.filter(post => post.Stringtags.toLowerCase().includes(cat)) : 
     
@@ -28,13 +36,7 @@ export const getServerSideProps = async(context) => {
     | post.Stringtags.toLowerCase().includes(que)
       )
     )
-  return { props: {results} };
-}
-
-const BlogResults = (data) => {
-  const style={
-    height:'calc(100% - 80px)',    
-  }  
+  
 return (
 
 <FullPage controls={CustomControls}>
@@ -43,13 +45,13 @@ return (
     <Section>
     <div className="container px-5 mx-auto">        
       <SectionHeader>Search Results</SectionHeader>
-      <ContentWrapper>     
+      <ContentWrapper>            
       { 
-        data.results.length > 0 
+        results.length > 0         
         ? <div>
               <ul>
                 {
-                  data.results.map(({title, summary, date, img, id },key1) => (
+                  results.map(({title, summary, date, img, id },key1) => (
                   <li key={key1}>                        
                     <div className="mx-4 md:mx-0 mb-3">
                       <div className="flex">
