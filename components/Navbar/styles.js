@@ -25,7 +25,7 @@ const HoverLine = css
   
 `
 
-export const NavContainer = styled.div.attrs({
+export const NavWrapper = styled.div.attrs({
     className: "flex items-center justify-between h-16"
   })``;
   export const ImgWrapper = styled.div.attrs({
@@ -71,7 +71,8 @@ export const NavContainer = styled.div.attrs({
   export const AligningElements = styled.div.attrs({
     className: "flex justify-between items-center"
   })``;  
-  
+
+
   
 
   

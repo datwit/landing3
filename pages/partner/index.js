@@ -5,11 +5,17 @@ import Footer from '../../components/Footer'
 import Find from '../../components/Partner/Find'
 import Faqs from '../../components/Partner/Faqs'
 import PartPricing from '../../components/Partner/PartPricing'
+import Navbar from '../../components/Navbar' 
 
 const Partner = () => {
+    const style={
+      height:'calc(100% - 80px)',    
+    } 
+
     return (
         <FullPage controls={CustomControls}>
-        <Slide>
+        <Slide {...style}>
+          <Navbar />
           <Section>
             <Find />
           </Section>        

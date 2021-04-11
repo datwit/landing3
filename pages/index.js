@@ -7,11 +7,17 @@ import Services from '../components/Home/Services'
 import Pricing from '../components/Home/Pricing'
 import Footer from '../components/Footer'
 import Selection from '../components/Selection'
+import Navbar from '../components/Navbar' 
 
 export default function Home() {
+  const style={
+    height:'calc(100% - 80px)',    
+  } 
+  
   return (
-    <FullPage controls={CustomControls}>
-        <Slide>
+    <FullPage controls={CustomControls}>        
+        <Slide {...style}>
+          <Navbar />
           <Section>
             <Hero />
           </Section>        

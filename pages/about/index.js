@@ -5,11 +5,17 @@ import Footer from '../../components/Footer'
 import Datwit from '../../components/AboutUs/Datwit'
 import Members from '../../components/AboutUs/Members'
 import Collaborators from '../../components/AboutUs/Collaborators'
+import Navbar from '../../components/Navbar' 
 
 const About = () => {
+  const style={
+    height:'calc(100% - 80px)',    
+  } 
+  
     return (
         <FullPage controls={CustomControls}>
-        <Slide>
+        <Slide {...style}>
+          <Navbar />
           <Section>
             <Datwit />
           </Section>        

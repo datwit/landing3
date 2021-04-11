@@ -6,10 +6,11 @@ import Navbar from '../../components/Navbar'
 import Footer from '../../components/Footer'
 import {MarkdownContent} from '../../components/Markdown/style'
 import {PostTitle} from '../../components/Blog/style'
+ 
 
 import { getAllData } from '../../lib/posts';
 
-const Info = ({ title, date, content, img, author})=> {
+const Info = ({ title, content})=> {
 
   const hydratedContent = hydrate(content);
 
@@ -23,7 +24,7 @@ const Info = ({ title, date, content, img, author})=> {
 
       <main>
         <Navbar />
-        <section className="pb-16">
+        <section className="pb-16 pt-20">
             <div className="container px-5 mx-auto">  
               <PostTitle>{title}</PostTitle>                  
               <MarkdownContent>{hydratedContent}</MarkdownContent>

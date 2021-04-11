@@ -6,7 +6,7 @@ import CustomControls from '../../components/Slide/CustomControls'
 import { ContentWrapper, SectionHeader } from '../../styles/global'
 import { CardSummary, BlogTitle2, DateWrapper, RespBlock } from '../../components/Blog/style'
 import Link from "next/link"
-
+import Navbar from '../../components/Navbar' 
 
 import cases from '../../cache/cases.json'
 
@@ -19,10 +19,13 @@ export const getServerSideProps = async (context) => {
 }
 
 const CasesResults = (data) => {
-
+    const style={
+        height:'calc(100% - 80px)',    
+    } 
     return (
         <FullPage controls={CustomControls}>
-            <Slide>
+            <Slide {...style}>
+                <Navbar />
                 <Section>
                     <div className="container px-5 mx-auto">
                         <SectionHeader>Search Results</SectionHeader>

@@ -26,7 +26,7 @@ const BlogPage = ({ title, date, content, img, author, tags, id})=> {
 
       <main>
         <Navbar />
-        <section>
+        <section className="pt-20">
             <div className="container px-5 mx-auto">  
                   <ImgContainer>
                       <img src={img} alt={title}/>

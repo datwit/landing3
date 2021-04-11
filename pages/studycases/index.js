@@ -8,14 +8,20 @@ import {SectionSubheader, ContentWrapper, SectionHeader} from '../../styles/glob
 import {BlogCardWrapper, BlogCardBorder,BlogCardBlock, BlogTitle1, BlogTitle2, CardSummary, RespBlock, DateWrapper} from '../../components/Blog/style'
 import { getAllData } from '../../lib/posts'
 import {CategoryRect, CategoryTitle} from '../../components/Home/StudyCases/style'
+import Navbar from '../../components/Navbar'
 
 import cases from '../../cache/cases.json'
 
 const AllStudyCases = () =>{
+  const style={
+    height:'calc(100% - 80px)',    
+  } 
+
   return (
     //Posts listing template       
     <FullPage controls={CustomControls}>
-        <Slide>
+        <Slide {...style}>
+            <Navbar />
             <Section>
             <div className="container px-5 mx-auto"> 
                 <SectionHeader>Check out our solutions</SectionHeader>

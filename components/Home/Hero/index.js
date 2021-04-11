@@ -3,8 +3,7 @@ import {MainHeaderCont} from './style';
 
 
 
-const Hero = ()=>(
-         
+const Hero = ()=>(         
       
       <MainHeaderCont>
           <h1>Bring your idea,

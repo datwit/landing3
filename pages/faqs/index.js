@@ -3,12 +3,13 @@ import datas from '../../components/Partner/Faqs/data.json'
 import uuid from 'react-uuid'
 import {SectionHeader,SectionSubheader} from '../../styles/global'
 import {QuestionText} from '../../components/Partner/Faqs/style'
+import Navbar from '../../components/Navbar' 
 
-
-const FaqsQandA = () => {
-   
+const FaqsQandA = () => {       
      
     return (
+        <>
+        <Navbar />
         <div className="container px-5 mx-auto">
             <SectionHeader>Frequently asked questions</SectionHeader>
             <SectionSubheader>Lorem ipsum dolor sit amet consectetur adipisicing elit...</SectionSubheader>
@@ -23,6 +24,7 @@ const FaqsQandA = () => {
                 ))
             }        
         </div>
+        </>
     )
 }
 

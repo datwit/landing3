@@ -10,11 +10,15 @@ import { SectionSubheader } from '../../styles/global'
 import { Category, PaginationWrapper, SearchWrapper, BlogCardWrapper, BlogCardBlock, CardSummary, BlogCardBorder, RespBlock, BlogTitle1, BlogTitle2, DateWrapper, SearchField } from '../../components/Blog/style'
 import ReactPaginate from 'react-paginate';
 import { useRouter } from 'next/router'
+import Navbar from '../../components/Navbar' 
 
 
 import posts from '../../cache/posts.json'
 
 const Blog = () => {
+  const style={
+    height:'calc(100% - 80px)',    
+  } 
   const [query, setQuery] = useState('') 
 
   //pagination states
@@ -136,7 +140,8 @@ const Blog = () => {
   return (
     //Posts listing template    
     <FullPage controls={CustomControls}>
-      <Slide>
+      <Slide {...style}>
+        <Navbar />
         <Section>
           <div className="container px-5 mx-auto">
             <SectionSubheader>Discover interesting ideas and unique perspectives from our amazing crew</SectionSubheader>

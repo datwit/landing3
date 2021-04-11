@@ -2,7 +2,7 @@
 import Link from 'next/link'
 import * as ROUTES from './routes'
 import { useState } from 'react';
-import {NavContainer, ImgWrapper, LogoLink, LinkItem, ButtonContainer, LinkItem2, HamburguerWrapper, HeaderElements, AligningElements} from './styles'
+import {NavWrapper, ImgWrapper, LogoLink, LinkItem, ButtonContainer, LinkItem2, HamburguerWrapper, HeaderElements, AligningElements} from './styles'
 
 
 
@@ -15,11 +15,10 @@ function Navbar() {
 	};	
 
 	return (	
-
-		<nav className='flex items-center flex-wrap bg-white p-3'>
-			<div className="container max-w-7xl mx-auto px-4 sm:px-6">
-				<NavContainer>
-					
+		<div className="flex items-center flex-wrap h-20 w-full fixed top-0 bg-fixed bg-white z-10">
+			<nav className='container max-w-7xl mx-auto px-4 sm:px-6 p-3'>
+			{/* <div className=""> */}
+				<NavWrapper>					
 						<ImgWrapper>
 							<Link href='/'>
 								<LogoLink>
@@ -49,9 +48,8 @@ function Navbar() {
 									<path d="M4 6h16M4 12h16M4 18h16"></path>
 								</svg>
 							</button>
-						</ButtonContainer>
-						
-				</NavContainer>
+						</ButtonContainer>						
+				</NavWrapper>
 				<HamburguerWrapper className={`${active ? 'h-full' : 'hidden h-0'} cont-aside`}>							
 
 						<HeaderElements>
@@ -73,8 +71,11 @@ function Navbar() {
 						</div>
 					
 				</HamburguerWrapper>
-			</div>
+			{/* </div> */}
 		</nav>
+
+		</div>
+		
 
 	)
 	

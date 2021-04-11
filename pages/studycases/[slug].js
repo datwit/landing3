@@ -22,7 +22,7 @@ const StudyCasesPage = ({ title, date, content, img, author})=> {
   
         <main>
             <Navbar />
-            <section>
+            <section className="pt-20">
               <div className="container px-5 mx-auto">  
                 <MarkdownContent>{hydratedContent}</MarkdownContent>      
               </div>        
