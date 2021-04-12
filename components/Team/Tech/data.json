@@ -1,0 +1,42 @@
+[
+    {
+        "src": "/images/technologies/altair.png",
+        "alt": "Altair"
+    },
+    {
+        "src": "/images/technologies/aws.png",
+        "alt": "Amazon Web Services"
+    },
+    {
+        "src": "/images/technologies/bokeh.png",
+        "alt": "Bokeh"
+    },
+    {
+        "src": "/images/technologies/chalice.png",
+        "alt": "Chalice"
+    },
+    {
+        "src":"/images/technologies/keras.png",
+        "alt": "Keras"
+    },
+    {
+        "src":"/images/technologies/matplotlib.png",
+        "alt":"Matplotlib"
+    },
+    {
+        "src":"/images/technologies/chalice.png",
+        "alt":"Nuxtjs"
+    },
+    {
+       "src":"/images/technologies/python.png",
+       "alt":"Python"
+    },
+    {
+       "src":"/images/technologies/sagemaker.png",
+       "alt":"Sagemaker"
+    },
+    {
+       "src":"/images/technologies/sklearn.png",
+       "alt":"Sklearn"
+    }
+]

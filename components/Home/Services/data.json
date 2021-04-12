@@ -1,0 +1,50 @@
+{
+        
+    "soft": [{
+        "title": "Frontend",
+        "subtitle": "Tempor incididunt fugiat consequat ex esse culpa pariatur",
+        "items":[
+            {"tit":"Tempor incididunt fugiat consequat ex esse culpa pariatur"},
+            {"tit":"Tempor incididunt fugiat consequat ex esse culpa pariatur"}
+            
+        ]
+    },       
+    {
+        "title": "Backend",
+        "subtitle": "Tempor incididunt fugiat consequat ex esse culpa pariatur",
+        "items":[
+            {"tit":"Tempor incididunt fugiat consequat ex esse culpa pariatur"},
+            {"tit":"Tempor incididunt fugiat consequat ex esse culpa pariatur"}
+            
+        ]
+    },
+    {
+        "title": "Deployment",
+        "subtitle": "Tempor incididunt fugiat consequat ex esse culpa pariatur",
+        "items":[
+            {"tit":"Tempor incididunt fugiat consequat ex esse culpa pariatur"},
+            {"tit":"Tempor incididunt fugiat consequat ex esse culpa pariatur"}
+            
+        ]
+    }],
+    "data" : [
+        {
+            "title": "Data Analysis",
+            "subtitle": "Tempor incididunt fugiat consequat ex esse culpa pariatur",
+            "items":[
+                {"tit":"Tempor incididunt fugiat consequat ex esse culpa pariatur"},
+                {"tit":"Tempor incididunt fugiat consequat ex esse culpa pariatur"}
+                
+            ]  
+        },
+        {
+            "title": "Data Visualization",
+            "subtitle": "Tempor incididunt fugiat consequat ex esse culpa pariatur",
+            "items":[
+                {"tit":"Tempor incididunt fugiat consequat ex esse culpa pariatur"},
+                {"tit":"Tempor incididunt fugiat consequat ex esse culpa pariatur"}
+                
+            ]  
+        }
+    ]    
+}
