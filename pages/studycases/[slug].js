@@ -5,6 +5,7 @@ import hydrate from 'next-mdx-remote/hydrate';
 import Navbar from '../../components/Navbar'
 import Footer from '../../components/Footer'
 import {MarkdownContent} from '../../components/Markdown/style'
+import { motion } from 'framer-motion'
 
 import { getAllData } from '../../lib/posts';
 
@@ -19,7 +20,8 @@ const StudyCasesPage = ({ title, date, content, img, author})=> {
           <title>{title}</title>
           <link rel="icon" href="/favicon.ico" />
         </Head>
-  
+
+        <motion.div initial={{opacity:0,  y: 200}} animate={{opacity:1, y:0}}>
         <main>
             <Navbar />
             <section className="pt-20">
@@ -30,7 +32,8 @@ const StudyCasesPage = ({ title, date, content, img, author})=> {
             <section className= "w-full h-screen bg-primary mx-auto px-10">
                <Footer />
             </section>           
-        </main>       
+        </main>
+        </motion.div>       
       </>
       
     );

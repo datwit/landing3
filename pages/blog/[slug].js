@@ -9,7 +9,7 @@ import { getAllData } from '../../lib/posts';
 import {MarkdownContent} from '../../components/Markdown/style'
 import {Category} from '../../components/Blog/style'
 import { useRouter } from 'next/router'
-
+import { motion } from 'framer-motion'
 
 const BlogPage = ({ title, date, content, img, author, tags, id})=> {
 
@@ -23,39 +23,40 @@ const BlogPage = ({ title, date, content, img, author, tags, id})=> {
         <title>{title}</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
-      <main>
-        <Navbar />
-        <section className="pt-20">
-            <div className="container px-5 mx-auto">  
-                  <ImgContainer>
-                      <img src={img} alt={title}/>
-                  </ImgContainer>              
-                  <DateAuthorWrapper>
-                    <a>{`By: ${format(parseISO(date), 'MMMM do, uuu')}`}</a>
-                    <a>{`On: ${author.name}`}</a>
-                  </DateAuthorWrapper>   
-                  <div className="flex flex-wrap">
-                      {
-                        tags.map((tags, key3) => (
-                          <div key={key3} >                            
-                              <a onClick={() => router.push(`/blog/search?p=${tags.toLowerCase()}`)}>
-                                  <Category                                                                             
-                                  >{tags}
-                                  </Category>
-                              </a>                          
-                          </div>                        
-                      ))
-                      }
+      <motion.div initial={{opacity:0,  y: 200}} animate={{opacity:1, y:0}}> 
+          <main>
+              <Navbar />
+              <section className="pt-20">
+                  <div className="container px-5 mx-auto">  
+                        <ImgContainer>
+                            <img src={img} alt={title}/>
+                        </ImgContainer>              
+                        <DateAuthorWrapper>
+                          <a>{`By: ${format(parseISO(date), 'MMMM do, uuu')}`}</a>
+                          <a>{`On: ${author.name}`}</a>
+                        </DateAuthorWrapper>   
+                        <div className="flex flex-wrap">
+                            {
+                              tags.map((tags, key3) => (
+                                <div key={key3} >                            
+                                    <a onClick={() => router.push(`/blog/search?p=${tags.toLowerCase()}`)}>
+                                        <Category                                                                             
+                                        >{tags}
+                                        </Category>
+                                    </a>                          
+                                </div>                        
+                            ))
+                            }
+                        </div>        
+                        <PostTitle>{title}</PostTitle>                  
+                        <MarkdownContent>{hydratedContent}</MarkdownContent>
                   </div>        
-                  <PostTitle>{title}</PostTitle>                  
-                  <MarkdownContent>{hydratedContent}</MarkdownContent>
-            </div>        
-        </section> 
-        <section className= "w-full h-screen bg-primary mx-auto px-10">
-            <Footer />
-        </section>           
-      </main>       
+              </section> 
+              <section className= "w-full h-screen bg-primary mx-auto px-10">
+                  <Footer />
+              </section>           
+          </main> 
+      </motion.div>      
     </>
     
   );

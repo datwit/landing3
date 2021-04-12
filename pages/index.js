@@ -14,59 +14,48 @@ export default function Home() {
   const style = {
     height: 'calc(100% - 80px)',
   }
-
+  
   return (
-    <motion.div
-      initial=
-      {{ 
-        opacity: 0,
-        /*slide up*/  /*slide down: y:'-50vh'*/       
-        y: '50vh',
-      }}
-      animate=
-      {{ 
-        opacity: 1,        
-        y:'0vh',
-      }}>
-      <FullPage controls={CustomControls}>
-        <Slide {...style}>
-          <Navbar />
-          <Section>
-            <Hero />
-          </Section>
-        </Slide>
+    <motion.div initial={{opacity:0,  y: 200}} animate={{opacity:1, y:0}}> 
+        <FullPage controls={CustomControls}>
+          <Slide {...style}>
+            <Navbar />
+            <Section>
+              <Hero />
+            </Section>
+          </Slide>
 
-        <Slide>
-          <Section>
-            <Services />
-          </Section>
-        </Slide>
+          <Slide>
+            <Section>
+              <Services />
+            </Section>
+          </Slide>
 
-        <Slide>
-          <Section>
-            <StudyCases />
-          </Section>
-        </Slide>
+          <Slide>
+            <Section>
+              <StudyCases />
+            </Section>
+          </Slide>
 
-        <Slide>
-          <Section>
-            <Pricing />
-          </Section>
-        </Slide>
+          <Slide>
+            <Section>
+              <Pricing />
+            </Section>
+          </Slide>
 
-        <Slide>
-          <Section>
-            <Selection />
-          </Section>
-        </Slide>
+          <Slide>
+            <Section>
+              <Selection />
+            </Section>
+          </Slide>
 
-        <Slide>
-          <section className="w-full h-screen bg-primary mx-auto px-10">
-            <Footer />
-          </section>
-        </Slide>
+          <Slide>
+            <section className="w-full h-screen bg-primary mx-auto px-10">
+              <Footer />
+            </section>
+          </Slide>
 
-      </FullPage>
+        </FullPage>
     </motion.div>
   )
 }

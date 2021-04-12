@@ -9,6 +9,7 @@ import {BlogCardWrapper, BlogCardBorder,BlogCardBlock, BlogTitle1, BlogTitle2, C
 import { getAllData } from '../../lib/posts'
 import {CategoryRect, CategoryTitle} from '../../components/Home/StudyCases/style'
 import Navbar from '../../components/Navbar'
+import { motion } from 'framer-motion'
 
 import cases from '../../cache/cases.json'
 
@@ -18,41 +19,42 @@ const AllStudyCases = () =>{
   } 
 
   return (
-    //Posts listing template       
-    <FullPage controls={CustomControls}>
-        <Slide {...style}>
-            <Navbar />
-            <Section>
-            <div className="container px-5 mx-auto"> 
-                <SectionHeader>Check out our solutions</SectionHeader>
-                <SectionSubheader>Commitment and creativity mark our creations. By all means, stroll along...</SectionSubheader>
-                <div className="hidden md:block">
-                    <ContentWrapper>                
-                      {
-                        cases.map((item) => (
-                          <StudyCasesListing key={item.id} {...item} />
-                      ))
-                      }                           
-                    </ContentWrapper>
+    <motion.div initial={{opacity:0,  y: 200}} animate={{opacity:1, y:0}}>          
+        <FullPage controls={CustomControls}>
+            <Slide {...style}>
+                <Navbar />
+                <Section>
+                <div className="container px-5 mx-auto"> 
+                    <SectionHeader>Check out our solutions</SectionHeader>
+                    <SectionSubheader>Commitment and creativity mark our creations. By all means, stroll along...</SectionSubheader>
+                    <div className="hidden md:block">
+                        <ContentWrapper>                
+                          {
+                            cases.map((item) => (
+                              <StudyCasesListing key={item.id} {...item} />
+                          ))
+                          }                           
+                        </ContentWrapper>
+                    </div>
+                    <div className="md:hidden">
+                        <ContentWrapper>                
+                          {
+                            cases.map((item) => (
+                              <StudyCasesListing key={item.id} {...item} />
+                          ))
+                          }                           
+                        </ContentWrapper>
+                    </div>
                 </div>
-                <div className="md:hidden">
-                    <ContentWrapper>                
-                      {
-                        cases.map((item) => (
-                          <StudyCasesListing key={item.id} {...item} />
-                      ))
-                      }                           
-                    </ContentWrapper>
-                </div>
-            </div>
-            </Section>
-        </Slide>
-        <Slide>
-          <section className= "w-full h-screen bg-primary mx-auto px-10">
-            <Footer />
-          </section>                  
-        </Slide>
-    </FullPage>                                         
+                </Section>
+            </Slide>
+            <Slide>
+              <section className= "w-full h-screen bg-primary mx-auto px-10">
+                <Footer />
+              </section>                  
+            </Slide>
+        </FullPage> 
+    </motion.div>                                        
              
   
   );

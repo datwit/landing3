@@ -6,7 +6,7 @@ import Navbar from '../../components/Navbar'
 import Footer from '../../components/Footer'
 import {MarkdownContent} from '../../components/Markdown/style'
 import {PostTitle} from '../../components/Blog/style'
- 
+import { motion } from 'framer-motion' 
 
 import { getAllData } from '../../lib/posts';
 
@@ -22,6 +22,7 @@ const Info = ({ title, content})=> {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
+      <motion.div initial={{opacity:0,  y: 200}} animate={{opacity:1, y:0}}>
       <main>
         <Navbar />
         <section className="pb-16 pt-20">
@@ -33,7 +34,8 @@ const Info = ({ title, content})=> {
         <section className= "w-full h-screen bg-primary mx-auto px-10">
             <Footer />
         </section>           
-      </main>       
+      </main>
+      </motion.div>       
     </>
     
   );
