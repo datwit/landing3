@@ -1,5 +1,5 @@
 import datas from "./data.json";
-import {SCardWrapper, SCardBorder, CategoryRect, CategoryTitle, CardContent, CardTitle, CardSubtitle, ReadMore} from './style';
+import {SCardWrapper, SCardBorder, CardContent, CardTitle, CardSubtitle, ReadMore} from './style';
 import {ContentWrapper, SectionSubheader, SectionHeader} from '../../../styles/global';
 
 
@@ -15,10 +15,7 @@ const StudyCases = () => {
                     datas.map((data, key) => (
                         <SCardWrapper key={key}>                
                             <SCardBorder>
-                                <img className="lg:h-48 md:h-36 w-full object-cover object-center" src={data.src} alt={data.alt} />
-                                <CategoryRect>
-                                    <CategoryTitle>CATEGORY</CategoryTitle>
-                                </CategoryRect>  
+                                <img className="lg:h-48 md:h-36 w-full object-cover object-center" src={data.src} alt={data.alt} />                                
                                 <CardContent>                                                      
                                     <CardTitle>{data.title}</CardTitle>
                                     <CardSubtitle>{data.description}</CardSubtitle>                                    
