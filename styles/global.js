@@ -20,15 +20,17 @@ export const Button = styled.a
     font-weight: 600;    
     display: inline-flex;
     cursor:pointer;
+    border: 3px solid #e69c24;
 
     &:active{
-        box-shadow: inset 4px 4px 4px #BD7300;
+        box-shadow: inset 4px 4px 4px #9cd4e6;
         transform: translate(4px,4px);
     }
     
     &:hover {
         color: #00baff;
-        border-color: white;
+        border: 3px solid #00baff;        
+        background: white;
         svg{
             color: #00baff;  
         }
