@@ -1,11 +1,12 @@
 import React,{useEffect} from 'react'
 import PropTypes from 'prop-types';
 import { useRouter } from "next/router"
+import { useMediaPredicate } from "react-media-hook";
 
 
 const CustomControls = ({ slidesCount, scrollToSlide, onNext, onPrev, getCurrentSlideIndex, style, className }) => {
 
- 
+  const biggerThanMobile = useMediaPredicate("(min-width: 768px)");
   const {pathname} = useRouter()
   
 
@@ -92,10 +93,15 @@ const CustomControls = ({ slidesCount, scrollToSlide, onNext, onPrev, getCurrent
   }
 
   return (
-    <div className={className} style={style}>
-      {renderSlidesNumbers(getCurrentSlideIndex())}
-    </div>
-
+        <div>
+          {biggerThanMobile &&
+            <div className={className} style={style}>
+              {renderSlidesNumbers(getCurrentSlideIndex())}
+            </div>    
+          }
+        </div>
+       
+        
   );
 }
 
