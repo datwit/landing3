@@ -1,12 +1,12 @@
 import React,{useEffect} from 'react'
 import PropTypes from 'prop-types';
 import { useRouter } from "next/router"
-import { useMediaPredicate } from "react-media-hook";
+
 
 
 const CustomControls = ({ slidesCount, scrollToSlide, onNext, onPrev, getCurrentSlideIndex, style, className }) => {
 
-  const biggerThanMobile = useMediaPredicate("(min-width: 768px)");
+ 
   const {pathname} = useRouter()
   
 
@@ -20,16 +20,8 @@ const CustomControls = ({ slidesCount, scrollToSlide, onNext, onPrev, getCurrent
     style: PropTypes.object,
   }
   CustomControls.defaultProps = {
-    className: 'full-page-controls',
-    style: {
-      display: 'flex',
-      flexFlow: 'column',
-      position: 'fixed',
-      top: '50%',
-      transform: 'translateY(-50%)',
-      paddingLeft: '20px',
-      zIndex: 1
-    },
+    className: 'flex flex-col fixed top-2/4 transform -translate-y-2/4 pl-5 z-10 invisible md:visible',
+  
   }
 
   const renderSlidesNumbers = (currentSlideIndex) => {
@@ -93,13 +85,11 @@ const CustomControls = ({ slidesCount, scrollToSlide, onNext, onPrev, getCurrent
   }
 
   return (
-        <div>
-          {biggerThanMobile &&
-            <div className={className} style={style}>
+        
+            <div className={className}>
               {renderSlidesNumbers(getCurrentSlideIndex())}
             </div>    
-          }
-        </div>
+        
        
         
   );
