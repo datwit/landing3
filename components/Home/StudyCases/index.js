@@ -1,7 +1,8 @@
 import datas from "./data.json";
 import {SCardWrapper, SCardBorder, CardContent, CardTitle, CardSubtitle, ReadMore} from './style';
 import {ContentWrapper, SectionSubheader, SectionHeader} from '../../../styles/global';
-
+import { CardSummary, BlogCardBorder, RespBlock, BlogTitle2, DateWrapper} from '../../../components/Blog/style'
+import Link from "next/link"
 
 const StudyCases = () => {
     
@@ -34,8 +35,26 @@ const StudyCases = () => {
         </div> 
         <div className="md:hidden">                                      
          {/**********responsive************** */}
-        </div>   
-
+         <ul>
+            {
+                datas.map((data, key1) => (
+                    <li className="" key={key1}>                        
+                        <div className="mx-4 md:mx-0 mb-3">
+                            <div className="flex">
+                                <img src={data.src}  className="sm:w-1/5 w-1/2"  alt={data.alt}/>
+                                <RespBlock>                                  
+                                    <Link href={`/studycases/${data.id}`}><BlogTitle2>{data.title}</BlogTitle2></Link>                                      
+                                    
+                                    <p className="">{data.summary}</p>
+                                </RespBlock>  
+                            </div>                        
+                        </div>
+                    </li>
+                )) 
+            }
+         </ul>
+           
+        </div>  
     </div>  
         
         
