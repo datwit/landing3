@@ -27,15 +27,15 @@ const BlogPage = ({ title, date, content, img, author, tags, id})=> {
           <main>
               <Navbar />
               <section className="pt-20">
-                  <div className="container px-5 mx-auto">  
+                  <div className="mx-8 md:mx-auto">  
                         <ImgContainer>
                             <img src={img} alt={title}/>
                         </ImgContainer>              
                         <DateAuthorWrapper>
-                          <a>{`By: ${format(parseISO(date), 'MMMM do, uuu')}`}</a>
-                          <a>{`On: ${author.name}`}</a>
+                          <div className="w-full md:w-2/4"><p>{`On: ${author.name}`}</p></div>
+                          <div className="w-full md:w-2/4"><p>{`By: ${format(parseISO(date), 'MMMM do, uuu')}`}</p></div>                                                    
                         </DateAuthorWrapper>   
-                        <div className="flex flex-wrap">
+                        <div className="flex flex-wrap py-5">
                             {
                               tags.map((tags, key3) => (
                                 <div key={key3} >                            

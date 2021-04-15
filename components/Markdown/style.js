@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 export const MarkdownContent = styled.div.attrs({
-    className: "prose text-justify"
+    className: "prose text-justify mb-8"
 })
 `
 h2{

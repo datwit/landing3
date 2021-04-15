@@ -28,10 +28,10 @@ export const DateWrapper= styled.div.attrs({
     className: "text-gray-600 text-xs"
 })``;
 export const ImgContainer= styled.div.attrs({
-    className: "flex justify-center"
+    className: "flex justify-center mb-4"
 })``;
 export const DateAuthorWrapper= styled.div.attrs({
-    className: "text-gray-600 text-md flex justify-between lg:w-2/4 mx-auto"
+    className: "text-gray-600 text-md w-full mx-auto md:inline-flex"
 })``;
 export const PostTitle= styled.h2.attrs({
     className: "text-3xl font-bold"
