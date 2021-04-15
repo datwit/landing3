@@ -161,7 +161,7 @@ const Blog = () => {
                 </SearchWrapper>
 
                 {/*pagination*/}
-                <div className="App flex flex-wrap">
+                <div className="flex flex-wrap">
                   {data}
                   <PaginationWrapper>
                     <ReactPaginate

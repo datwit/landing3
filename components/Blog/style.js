@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 export const SearchWrapper = styled.div.attrs({
-    className: "flex items-center justify-center w-full pb-4"
+    className: "flex items-center justify-center w-full"
 })``;
 export const BlogCardWrapper = styled.div.attrs({
     className: "p-4 md:w-1/3 w-full"
@@ -10,8 +10,12 @@ export const BlogCardBlock = styled.div.attrs({
     className: "p-3"
 })``;
 export const CardSummary = styled.p.attrs({
-    className: "mt-0 text-base leading-6 text-gray-500"
-})``;
+    className: "mt-0 text-gray-500"
+})
+`
+font-size: 0.90rem;
+line-height: 1.2rem;
+`;
 export const BlogCardBorder = styled.div.attrs({
     className: "border border-gray-300 shadow hover:shadow-lg transition duration-200 ease-in overflow-hidden mx-4 md:mx-0"
 })``;
@@ -48,14 +52,12 @@ margin-right: 5px;
 cursor:pointer;
 `;
 export const SearchField= styled.input.attrs({
-    className: "w-1/2 border border-gray-300 bg-white text-base outline-none text-gray-700 px-3 leading-8 focus:ring-2 focus:ring-secondary2 transition-colors duration-200 ease-in-out"
+    className: "w-1/2 border border-gray-300 focus:border-transparent bg-white text-base outline-none text-gray-700 px-3 leading-8 focus:ring-2 focus:ring-secondary2 transition-colors duration-200 ease-in-out"
 })
 `
 border-radius: 25px;
 `;
-export const PaginationWrapper= styled.div.attrs({
-    className:""
-})        
+export const PaginationWrapper= styled.div        
 `
 .pagination{
     margin: 15px auto;
@@ -63,7 +65,7 @@ export const PaginationWrapper= styled.div.attrs({
     list-style: none;
     outline: none;
     position: absolute;
-    bottom: 10%;
+    bottom: 1%;
     left: 50%;
     transform:translateX(-50%);    
     
