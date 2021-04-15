@@ -23,8 +23,15 @@ export const SocialList = styled.ul.attrs({
     className: "inline-flex"
 })``;
 export const SocialListItem = styled.li.attrs({
-    className: "mr-2"
-})``;
+    className: "mr-2 h-8 w-8 cursor-pointer"
+})
+`
+svg{
+    width:1.75rem;
+    height:1.75rem;
+    color: white;
+}
+`;
 export const ContactWrapper = styled.span.attrs({
     className: "flex items-center"
 })``;
