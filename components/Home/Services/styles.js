@@ -17,8 +17,15 @@ export const TabContent = styled.div.attrs({
   className: "sm:w-3/4 relative flex flex-col min-w-0 break-words bg-white w-full h-full mb-6 shadow-lg"
 })``;
 export const TabContentInner = styled.div.attrs({
-  className: "px-4 flex-auto border-2 border-gray-200 border-opacity-60"
-})``;
+  className: "px-4 flex-auto border-2 border-gray-200 border-opacity-60 md:h-full"
+})
+`
+@media (max-width: 767px) {
+  height: 400px;
+  overflow:hidden !important;
+  overflow: scroll !important;
+}
+`;
 export const BulletTitle = styled.h2.attrs({
   className: "text-lg mt-2 text-left"
 })``;
