@@ -9,7 +9,7 @@ const Footer = () => {
     return (
         <Fragment>            
             <FooterContainer>                                    
-                    <img className="mx-auto mb-6" src="/images/logo-grande.png" alt="logo" width="350px" />
+                   {/*  <img className="mx-auto mb-6" src="/images/logo-grande.png" alt="logo" width="350px" /> */}
                     <FooterHeader>Let's work together</FooterHeader>                
                 <FooterLinksWrapper>        
                     <ColumnContent>

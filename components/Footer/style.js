@@ -1,12 +1,8 @@
 import styled from 'styled-components'
 
 export const FooterContainer = styled.div.attrs({
-    className: "px-5 relative"
-})
-`
-    top: 20%;
-    transform: translateY(-20%);
-`;
+    className: "px-5 relative top-2/4 transform -translate-y-2/4"
+})``;
 export const FooterHeader = styled.h1.attrs({
     className: "text-white text-center text-4xl"
 })``;
