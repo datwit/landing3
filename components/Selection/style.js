@@ -28,7 +28,7 @@ export const ButtonWrapper = styled.div.attrs({
     className: "flex justify-center pt-8"
 })``;
 
-export const SHeader = styled.div.attrs({
+export const SHeader = styled.h1.attrs({
     className: "text-primary text-xl sm:text-2xl md:text-3xl title-font font-semibold mb-1 text-center"
 })``;
 

@@ -5,7 +5,15 @@ export const SCardWrapper = styled.div.attrs({
   })``;
   export const SCardBorder = styled.div.attrs({
     className: "h-full border border-gray-300 overflow-hidden mx-4 md:mx-0 shadow hover:shadow-lg transition duration-200 ease-in"
-  })``;
+  })
+  `
+   &:hover{
+    h1{
+      color: #00baff;
+    }
+   }
+    
+  `;
   export const CategoryRect = styled.div.attrs({
     className: "bg-secondary2 h-8 flex justify-start items-center"
   })``;
