@@ -1,10 +1,10 @@
 import styled from 'styled-components'
 
 export const BlockOuterContainer = styled.div.attrs({
-    className: "w-full md:w-1/2 flex justify-center"
+    className: "w-full sm:w-1/2 flex justify-center"
 })``;
 export const BlockBorder = styled.a.attrs({
-    className: "md:h-full p-3 border-1 border-gray-600 border-opacity-100 shadow-md overflow-hidden w-64 cursor-pointer"
+    className: "p-3 border-1 border-gray-600 border-opacity-100 shadow-md overflow-hidden w-36 h-40 sm:w-48 sm:h-52 md:w-64 md:h-full cursor-pointer mb-2 sm:mb-0"
 })
 `
     &.active{
@@ -27,3 +27,8 @@ export const BlockBorder = styled.a.attrs({
 export const ButtonWrapper = styled.div.attrs({
     className: "flex justify-center pt-8"
 })``;
+
+export const SHeader = styled.div.attrs({
+    className: "text-primary text-xl sm:text-2xl md:text-3xl title-font font-semibold mb-1 text-center"
+})``;
+

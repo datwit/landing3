@@ -1,7 +1,6 @@
 import { } from '../../styles/global'
 import { SectionHeader, SectionSubheader, ContentWrapper, Button } from '../../styles/global'
-import { DHeader } from '../AboutUs/Datwit/style'
-import { BlockOuterContainer, BlockBorder, ButtonWrapper } from './style'
+import { BlockOuterContainer, BlockBorder, ButtonWrapper, SHeader } from './style'
 import Link from 'next/link' 
 import { useState } from 'react'
 
@@ -39,14 +38,14 @@ const Selection = () => {
                 <>
                     <BlockOuterContainer>
                         <BlockBorder onClick={handleToggle1} className={card1 ? 'active' : ''}>
-                            <img src="" alt="img" className="md:h-60 h-40" />
-                            <DHeader>Partner</DHeader>
+                            <img src="" alt="img" className="h-28 sm:h-40 md:h-60" />
+                            <SHeader>Partner</SHeader>
                         </BlockBorder>
                     </BlockOuterContainer>
                     <BlockOuterContainer>
                         <BlockBorder onClick={handleToggle2} className={card2 ? 'active' : ''}>
-                            <img src="" alt="img" className="md:h-60 h-40" />
-                            <DHeader>Team</DHeader>
+                            <img src="" alt="img" className="h-28 sm:h-40 md:h-60" />
+                            <SHeader>Team</SHeader>
                         </BlockBorder>
                     </BlockOuterContainer>
                 </>
