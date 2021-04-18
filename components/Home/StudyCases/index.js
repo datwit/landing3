@@ -38,7 +38,8 @@ const StudyCases = () => {
         </div> 
         <div className="md:hidden">                                      
          {/**********responsive************** */}
-            <ul className="-top-2/4 transform translate-y-2/4">
+            {/* <ul className="-top-2/4 transform translate-y-2/4"> */}
+            <ul>
                 {
                     datas.map(data => (
                         <BlogCardBorder key={uuid()} className="mb-3">
