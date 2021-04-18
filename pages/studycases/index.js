@@ -4,7 +4,7 @@ import Footer from '../../components/Footer'
 import Link from "next/link"
 import { format, parseISO } from 'date-fns'
 import CustomControls from '../../components/Slide/CustomControls'
-import {SectionSubheader, ContentWrapper, SectionHeader} from '../../styles/global'
+import {SectionSubheader, SectionHeader} from '../../styles/global'
 import {PaginationWrapper, BlogCardWrapper, BlogCardBorder,BlogCardBlock, BlogTitle1, BlogTitle2, CardSummary, RespBlock, DateWrapper} from '../../components/Blog/style'
 import { getAllData } from '../../lib/posts'
 import {CategoryRect, CategoryTitle} from '../../components/Home/StudyCases/style'
@@ -55,18 +55,22 @@ const AllStudyCases = () =>{
               </BlogCardBorder>                 
           </div>
             <div className="md:hidden">                 
-                  <BlogCardBorder className="mb-3">
-                      <div className="flex">
+                  <BlogCardBorder>
+                      <div className="flex">                        
                           <img src="/images/dummy-image.png"  className="sm:w-1/4 w-1/2"  alt=""/>
-                          <RespBlock>
-                              <Link href={`/studycases/${item.id}`}>
-                                  <BlogTitle2>{item.title}</BlogTitle2>
-                              </Link>                  
-                              <DateWrapper>
-                                  {format(parseISO(item.date), 'MMMM do, uuu')}
-                              </DateWrapper>
-                              <CardSummary className="hidden sm:block">{item.summary}</CardSummary>
-                          </RespBlock>  
+                          <div className="w-full">
+                              <CategoryRect>
+                                  <Link href={`/studycases/search?p=${item.tags.toLowerCase()}`}>
+                                      <CategoryTitle>{item.tags}</CategoryTitle>
+                                  </Link>
+                              </CategoryRect>
+                              <div className="p-2">
+                                  <Link href={`/studycases/${item.id}`}>
+                                      <BlogTitle2>{item.title}</BlogTitle2>
+                                  </Link>                  
+                                  {/* <p>{`By: ${item.author}`}</p> */}                                  
+                              </div>                                
+                          </div>  
                       </div>                        
                   </BlogCardBorder>                                 
             </div>
@@ -102,7 +106,7 @@ return (
                     <SectionSubheader>Commitment and creativity mark our creations. By all means, stroll along...</SectionSubheader>
                     {/*pagination*/}
                     <div className="flex flex-wrap">
-                        {data}
+                        {data}                       
                         <PaginationWrapper>
                             <ReactPaginate
                               previousLabel={prevSVG}
@@ -117,7 +121,7 @@ return (
                               subContainerClassName={"pages pagination"}
                               activeClassName={"active"}
                             />
-                        </PaginationWrapper> 
+                        </PaginationWrapper>                                              
                     </div>
                 </div>
                 </Section>

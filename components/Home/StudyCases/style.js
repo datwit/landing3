@@ -18,10 +18,12 @@ export const SCardWrapper = styled.div.attrs({
     className: "bg-secondary2 h-8 flex justify-start items-center"
   })``;
   export const CategoryTitle = styled.h2.attrs({
-    className: "tracking-widest text-sm font-semibold text-white ml-2 cursor-pointer"
+    className: "tracking-widest m-0 font-semibold text-white ml-2 cursor-pointer"
   })
   `
   cursor:pointer;
+  font-size: 12px;
+  line-height: 1.1rem;
   `;
   export const CardContent = styled.div.attrs({
     className: "p-4"

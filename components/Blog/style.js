@@ -4,7 +4,7 @@ export const SearchWrapper = styled.div.attrs({
     className: "flex items-center justify-center w-full"
 })``;
 export const BlogCardWrapper = styled.div.attrs({
-    className: "p-4 md:w-1/3 w-full"
+    className: "pb-3 md:w-1/3 w-full"
 })``;
 export const BlogCardBlock = styled.div.attrs({
     className: "p-3"
@@ -17,7 +17,7 @@ font-size: 0.90rem;
 line-height: 1.2rem;
 `;
 export const BlogCardBorder = styled.div.attrs({
-    className: "border border-gray-300 shadow hover:shadow-lg transition duration-200 ease-in overflow-hidden mx-4 md:mx-0"
+    className: "border border-gray-300 shadow hover:shadow-lg transition duration-200 ease-in overflow-hidden"
 })``;
 export const RespBlock = styled.div.attrs({
     className: "p-2 w-full"

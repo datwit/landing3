@@ -32,8 +32,8 @@ const BlogPage = ({ title, date, content, img, author, tags, id})=> {
                             <img src={img} alt={title}/>
                         </ImgContainer>              
                         <DateAuthorWrapper>
-                          <div className="w-full md:w-2/4"><p>{`On: ${author.name}`}</p></div>
-                          <div className="w-full md:w-2/4"><p>{`By: ${format(parseISO(date), 'MMMM do, uuu')}`}</p></div>                                                    
+                          <div className="w-full md:w-2/4"><p>{`By: ${author}`}</p></div>
+                          <div className="w-full md:w-2/4"><p>{`On: ${format(parseISO(date), 'MMMM do, uuu')}`}</p></div>                                                    
                         </DateAuthorWrapper>   
                         <div className="flex flex-wrap py-5">
                             {

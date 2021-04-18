@@ -7,10 +7,7 @@ tags:
 - "Tips"
 img: https://images.unsplash.com/photo-1556740758-90de374c12ad?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1000&q=80
 date: 2021-02-14T19:05:27.220Z
-author:
-  name: Benjamin
-  bio: All about Benjamin
-  image: https://images.unsplash.com/photo-1535295972055-1c762f4483e5?q=75&fm=jpg&w=200&fit=max
+author: Benjamin 
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis convallis convallis tellus id interdum velit laoreet id donec. Eget sit amet tellus cras adipiscing enim eu turpis egestas. Egestas tellus rutrum tellus pellentesque eu tincidunt. Nunc sed id semper risus in hendrerit gravida rutrum quisque. Non consectetur a erat nam at lectus. Ut sem nulla pharetra diam sit amet. Tempor orci dapibus ultrices in iaculis nunc sed augue. Nibh nisl condimentum id venenatis. Vel quam elementum pulvinar etiam non. Ornare arcu odio ut sem nulla pharetra. Tristique nulla aliquet enim tortor at auctor urna nunc.
