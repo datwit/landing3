@@ -1,6 +1,7 @@
 import React,{useEffect} from 'react'
 import PropTypes from 'prop-types';
 import { useRouter } from "next/router"
+import Navbar from '../Navbar'
 
 
 
@@ -85,11 +86,15 @@ const CustomControls = ({ slidesCount, scrollToSlide, onNext, onPrev, getCurrent
   }
 
   return (
-        
-            <div className={className}>
-              {renderSlidesNumbers(getCurrentSlideIndex())}
-            </div>    
-        
+        <>
+          <div className="flex items-center flex-wrap h-20 w-full fixed top-0 bg-fixed bg-white z-10" id='navbar'>              
+            <Navbar scrollToSlide={ scrollToSlide }/> 
+          </div> 
+
+          <div className={className}>
+            {renderSlidesNumbers(getCurrentSlideIndex())}
+          </div>    
+        </>
        
         
   );

@@ -26,7 +26,6 @@ const CasesResults = () => {
         <motion.div initial={{opacity:0,  y: 200}} animate={{opacity:1, y:0}}>
             <FullPage controls={CustomControls}>
                 <Slide {...style}>
-                    <Navbar />
                     <Section>
                         <div className="container px-5 mx-auto">
                             <SectionHeader>Search Results</SectionHeader>
