@@ -1,25 +1,52 @@
 
 import Link from 'next/link'
 import * as ROUTES from './routes'
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import {NavWrapper, ImgWrapper, LogoLink, LinkItem, ButtonContainer, LinkItem2, HamburguerWrapper, HeaderElements, AligningElements} from './styles'
 import { useRouter } from 'next/router'
 
 
-function Navbar() {
+const Navbar=({scrollToSlide}) => {
 	const [active, setActive] = useState(false);
+	const router = useRouter();
 	
-
 	const handleClick = () => {
 		setActive(!active);
 	};	
 
-	const router = useRouter()
+	const reset = (event) => {
+		scrollToSlide(0);
+	};
+	const some = (event) => {
+		console.log('esto es solo para evitar el warning')
+	};
+
+	const handleS=(event) =>{
+		const windowHeight = "innerHeight" in window ? window.innerHeight : document.documentElement.offsetHeight;
+		const body = document.body;
+		const html = document.documentElement;
+		const docHeight = Math.max(body.scrollHeight, body.offsetHeight, html.clientHeight,  html.scrollHeight, html.offsetHeight);
+		const windowBottom = windowHeight + window.pageYOffset;
+		const navb = document.getElementById('navbar')
+		if (windowBottom >= docHeight) {
+			navb.classList.replace('bg-white','bar-vanished')
+			
+		  
+		} else {
+			navb.classList.replace('bar-vanished','bg-white')
+		}
+	  };
+
+	  useEffect(() => {
+		window.addEventListener('scroll', handleS);
+		return () => window.removeEventListener('scroll', handleS);
+	  }, []);
+
 
 	return (		
 		<nav className='container max-w-7xl mx-auto px-4 sm:px-6 p-3'>			
 			<NavWrapper>					
-					<ImgWrapper>
+					<ImgWrapper onClick={router.pathname=="/" ? reset : some} >
 						<Link href='/'>
 							<LogoLink>
 								{/* <img src="/images/transp.svg" alt="logo" width="160" height="50" /> */}	
@@ -42,11 +69,11 @@ function Navbar() {
 					</ImgWrapper>
 					<div className="hidden md:block items-center">
 						<ul className="list-none flex">
-							<LinkItem className={router.pathname=="/" ? "text-secondary2": "text-primary"}><Link href={ROUTES.HOME.link}>{ROUTES.HOME.name}</Link></LinkItem> 
-							<LinkItem className={router.pathname=="/studycases" ? "text-secondary2": "text-primary"}><Link href={ROUTES.STUDYCASES.link}>{ROUTES.STUDYCASES.name}</Link></LinkItem>
-							<LinkItem className={router.pathname=="/about" ? "text-secondary2": "text-primary"}><Link href={ROUTES.ABOUT.link}>{ROUTES.ABOUT.name}</Link></LinkItem>
-							<LinkItem className={router.pathname=="/contact" ? "text-secondary2": "text-primary"}><Link href={ROUTES.CONTACT.link}>{ROUTES.CONTACT.name}</Link></LinkItem>
-							<LinkItem className={router.pathname=="/blog" ? "text-secondary2": "text-primary"}><Link href={ROUTES.BLOG.link}>{ROUTES.BLOG.name}</Link></LinkItem>		
+							<LinkItem onClick={router.pathname=="/" ? reset : some} className={router.pathname=="/" ? "text-secondary2": "text-primary"}><Link href={ROUTES.HOME.link}>{ROUTES.HOME.name}</Link></LinkItem> 
+							<LinkItem onClick={router.pathname=="/studycases" ? reset : some} className={router.pathname=="/studycases" ? "text-secondary2": "text-primary"}><Link href={ROUTES.STUDYCASES.link}>{ROUTES.STUDYCASES.name}</Link></LinkItem>
+							<LinkItem onClick={router.pathname=="/about" ? reset : some} className={router.pathname=="/about" ? "text-secondary2": "text-primary"}><Link href={ROUTES.ABOUT.link}>{ROUTES.ABOUT.name}</Link></LinkItem>
+							<LinkItem onClick={router.pathname=="/contact" ? reset : some} className={router.pathname=="/contact" ? "text-secondary2": "text-primary"}><Link href={ROUTES.CONTACT.link}>{ROUTES.CONTACT.name}</Link></LinkItem>
+							<LinkItem onClick={router.pathname=="/blog" ? reset : some} className={router.pathname=="/blog" ? "text-secondary2": "text-primary"}><Link href={ROUTES.BLOG.link}>{ROUTES.BLOG.name}</Link></LinkItem>		
 						</ul>
 					</div>
 					<ButtonContainer className="md:hidden">							
@@ -79,11 +106,11 @@ function Navbar() {
 				</HeaderElements>													 
 				<div className="md:hidden">
 					<ul className="list-none flex flex-col items-center">
-						<LinkItem2 className={router.pathname=="/" ? "text-secondary2": "text-white"}><Link href={ROUTES.HOME.link}>{ROUTES.HOME.name}</Link></LinkItem2>
-						<LinkItem2 className={router.pathname=="/studycases" ? "text-secondary2" : "text-white pt-9"}><Link href={ROUTES.STUDYCASES.link}>{ROUTES.STUDYCASES.name}</Link></LinkItem2>
-						<LinkItem2 className={router.pathname=="/about" ? "text-secondary2 pt-9": "text-white pt-9"}><Link href={ROUTES.ABOUT.link}>{ROUTES.ABOUT.name}</Link></LinkItem2>
-						<LinkItem2 className={router.pathname=="/contact" ? "text-secondary2 pt-9": "text-white pt-9"}><Link href={ROUTES.CONTACT.link}>{ROUTES.CONTACT.name}</Link></LinkItem2>
-						<LinkItem2 className={router.pathname=="/blog" ? "text-secondary2 pt-9": "text-white pt-9"}><Link href={ROUTES.BLOG.link}>{ROUTES.BLOG.name}</Link></LinkItem2>	
+						<LinkItem2 onClick={router.pathname=="/" ? reset : some} className={router.pathname=="/" ? "text-secondary2": "text-white"}><Link href={ROUTES.HOME.link}>{ROUTES.HOME.name}</Link></LinkItem2>
+						<LinkItem2 onClick={router.pathname=="/studycases" ? reset : some} className={router.pathname=="/studycases" ? "text-secondary2" : "text-white pt-9"}><Link href={ROUTES.STUDYCASES.link}>{ROUTES.STUDYCASES.name}</Link></LinkItem2>
+						<LinkItem2 onClick={router.pathname=="/about" ? reset : some} className={router.pathname=="/about" ? "text-secondary2 pt-9": "text-white pt-9"}><Link href={ROUTES.ABOUT.link}>{ROUTES.ABOUT.name}</Link></LinkItem2>
+						<LinkItem2 onClick={router.pathname=="/contact" ? reset : some} className={router.pathname=="/contact" ? "text-secondary2 pt-9": "text-white pt-9"}><Link href={ROUTES.CONTACT.link}>{ROUTES.CONTACT.name}</Link></LinkItem2>
+						<LinkItem2 onClick={router.pathname=="/blog" ? reset : some} className={router.pathname=="/blog" ? "text-secondary2 pt-9": "text-white pt-9"}><Link href={ROUTES.BLOG.link}>{ROUTES.BLOG.name}</Link></LinkItem2>	
 					</ul>							
 				</div>					
 			</HamburguerWrapper>			

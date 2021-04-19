@@ -6,8 +6,7 @@ import StudyCases from '../components/Home/StudyCases'
 import Services from '../components/Home/Services'
 import Pricing from '../components/Home/Pricing'
 import Footer from '../components/Footer'
-import Selection from '../components/Selection'
-import Navbar from '../components/Navbar' 
+import Selection from '../components/Selection' 
 import { motion } from 'framer-motion'
 
 export default function Home() {
@@ -15,27 +14,11 @@ export default function Home() {
     height:'calc(100% - 80px)',    
   }  
 
-  const before = (event) => {
-    const navb = document.getElementById('navbar')
-    if(event.from === 5){
-      navb.classList.replace('bar-vanished','bg-white')
-    }
-  }
-  const after = (event) => {
-    const navb = document.getElementById('navbar')
-    if(event.to === 5 ){
-      navb.classList.replace('bg-white','bar-vanished')
-    }
-  }  
-  
   return (
     <motion.div initial={{opacity:0,  y: 200}} animate={{opacity:1, y:0}}> 
-            <FullPage controls={CustomControls} beforeChange={before} afterChange={after}> 
+            <FullPage controls={CustomControls}> 
 
-              <Slide {...style}>
-                <div className="flex items-center flex-wrap h-20 w-full fixed top-0 bg-fixed bg-white z-10" id='navbar'>              
-                  <Navbar/> 
-                </div>       
+              <Slide {...style}>      
                 <Section>                  
                     <Hero />                  
                 </Section>        
