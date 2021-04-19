@@ -5,7 +5,7 @@ import Navbar from '../Navbar'
 
 
 
-const CustomControls = ({ slidesCount, scrollToSlide, onNext, onPrev, getCurrentSlideIndex, style, className }) => {
+const CustomControls = ({ slidesCount, scrollToSlide, onNext, onPrev, getCurrentSlideIndex, className }) => {
 
  
   const {pathname} = useRouter()
