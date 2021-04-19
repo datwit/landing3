@@ -94,11 +94,19 @@ border-radius: 25px;
 .bar-vanished{
   background-color:transparent;
   transition: background-color 330ms ease-in-out;
+  -webkit-transition: background-color 330ms ease-in-out;
+  
 }
 
 .bar-vanished a{
   color: white;
-  transition: color 500ms ease-in-out 200ms ;
+  transition: color 500ms ease-in-out 200ms;
+  -webkit-transition: color 500ms ease-in-out 200ms;
 }
 
+.bar-vanished svg{
+  fill: white;
+   transition: fill 500ms ease-in-out 200ms;
+  -webkit-transition: color 500ms ease-in-out 200ms;
+}
 
