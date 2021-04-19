@@ -23,7 +23,6 @@ const StudyCasesPage = ({ title, date, content, img, author})=> {
 
         <motion.div initial={{opacity:0,  y: 200}} animate={{opacity:1, y:0}}>
         <main>
-            <Navbar />
             <section className="pt-20">
               <div className="container px-5 mx-auto">  
                 <MarkdownContent>{hydratedContent}</MarkdownContent>      

@@ -24,7 +24,6 @@ const Info = ({ title, content})=> {
 
       <motion.div initial={{opacity:0,  y: 200}} animate={{opacity:1, y:0}}>
       <main>
-        <Navbar />
         <section className="pb-16 pt-20">
             <div className="container px-5 mx-auto">  
               <PostTitle>{title}</PostTitle>                  

@@ -16,10 +16,8 @@ const About = () => {
   
     return (      
       <motion.div initial={{opacity:0,  y: 200}} animate={{opacity:1, y:0}}>      
-          <FullPage controls={CustomControls}>     
-          <Navbar />
+          <FullPage controls={CustomControls}> 
             <Slide {...style}>
-              
               <Section>
                 <Datwit />
               </Section>        
