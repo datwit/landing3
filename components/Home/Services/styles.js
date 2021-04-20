@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 
 export const IconWrapper = styled.div.attrs({
-  className: "sm:w-1/4 h-full w-full"
+  className: "sm:w-1/3 h-full w-full"
 })``;
 export const IconListWrapper = styled.ul.attrs({
   className: "flex mb-0 list-none flex-wrap pt-3 pb-4 flex-row sm:flex-col"
@@ -14,7 +14,7 @@ export const IconTitle = styled.a.attrs({
   className: "text-base font-bold  block leading-normal relative cursor-pointer"
 })``;
 export const TabContent = styled.div.attrs({
-  className: "sm:w-3/4 relative flex flex-col min-w-0 break-words bg-white w-full h-full mb-6 shadow-lg"
+  className: "sm:w-2/3 relative flex flex-col min-w-0 break-words bg-white w-full h-full mb-6 shadow-lg"
 })``;
 export const TabContentInner = styled.div.attrs({
   className: "px-4 flex-auto border-2 border-gray-200 border-opacity-60 md:h-full"
