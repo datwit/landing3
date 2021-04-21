@@ -5,7 +5,7 @@ import Navbar from '../Navbar'
 
 
 
-const CustomControls = ({ slidesCount, scrollToSlide, onNext, onPrev, getCurrentSlideIndex, className }) => {
+const CustomControls = ({ slidesCount, scrollToSlide, onNext, onPrev, getCurrentSlideIndex}) => {
 
  
   const {pathname} = useRouter()
@@ -20,11 +20,9 @@ const CustomControls = ({ slidesCount, scrollToSlide, onNext, onPrev, getCurrent
     slidesCount: PropTypes.number.isRequired,
     style: PropTypes.object,
   }
-  CustomControls.defaultProps = {
-    className: 'flex flex-col fixed top-2/4 transform -translate-y-2/4 pl-5 z-10 invisible md:visible',
-  
-  }
 
+  const className = 'flex flex-col fixed top-2/4 transform -translate-y-2/4 pl-5 z-10 invisible md:visible'
+  
   const renderSlidesNumbers = (currentSlideIndex) => {
 
     const slidesNumbers = [];
