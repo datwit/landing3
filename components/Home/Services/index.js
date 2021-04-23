@@ -1,34 +1,34 @@
 import datas from "./data.json";
 import {useState} from 'react'
 import {ContentWrapper, SectionSubheader}from '../../../styles/global';
-import {IconWrapper, IconListWrapper, IconListItem, IconTitle, TabContent, TabContentInner, BulletTitle, BulletSubtitle, ServiceBulletsOuter, ServiceBulletsSpan} from './styles';
+import {IconWrapper, IconTitle, TabContent, BulletTitle, BulletSubtitle, ServiceBulletsOuter, ServiceBulletsSpan} from './styles';
 
 
 const Services = () => {
     
-    const [tab1, isTabOne] = useState(true);
-	const [tab2, isTabTwo] = useState(false)
+    // const [tab1, isTabOne] = useState(true);
+	// const [tab2, isTabTwo] = useState(false)
 
-    const handleClick1 = () => {
-		isTabOne(tab1=>!tab1);
-		isTabTwo(tab2=>!tab2);
-	};	
-    const handleClick2 = () => {
-		isTabOne(tab1=>!tab1);
-		isTabTwo(tab2=>!tab2);
-    };    
+    // const handleClick1 = () => {
+	// 	isTabOne(tab1=>!tab1);
+	// 	isTabTwo(tab2=>!tab2);
+	// };	
+    // const handleClick2 = () => {
+	// 	isTabOne(tab1=>!tab1);
+	// 	isTabTwo(tab2=>!tab2);
+    // }; 
+    const [openTab, setOpenTab] = useState(0);   
    
     return (
         <div className="container px-5 mx-auto">
             <SectionSubheader>Lorem ipsum dolor sit amet consectetur adipisicing elit.</SectionSubheader>
-            <ContentWrapper>
-                <IconWrapper>
-                    <IconListWrapper>
-                        <IconListItem>
+            <ContentWrapper className="relative maxHeight">
+                <IconWrapper>                   
+                        <div className="sm:w-2/4 flex flex-col justify-center items-center">
                             {/* <svg className={`${tab1 ? 'text-secondary2':'text-primary'} h-8 w-8`}  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  strokeWidth="2"  strokeLinecap="round"  strokeLinejoin="round">
                                 <polyline points="16 18 22 12 16 6" />  <polyline points="8 6 2 12 8 18" />
                             </svg> */}
-                            <svg className={`${tab1 ? 'text-secondary2':'text-primary'}`} width="293" height="175" viewBox="0 0 293 175" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <svg width="293" height="175" viewBox="0 0 293 175" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <g id="Recurso 5 1" clipPath="url(#clip0)">
                                 <path id="Vector" fillRule="evenodd" clipRule="evenodd" d="M165.083 153.387L163.563 132.823H138.401L136.87 153.387C136.356 158.366 134.038 162.988 130.351 166.39V166.449H171.602V166.39C167.915 162.988 165.598 158.366 165.083 153.387V153.387Z" fill="#EAEAEC"/>
                                 <path id="Vector_2" opacity="0.28" fillRule="evenodd" clipRule="evenodd" d="M139.047 132.813L138.182 146.321H163.672L162.807 132.813H139.047Z" fill="#B9C2D3" stroke="#B9C2D3" strokeWidth="2.45" strokeLinecap="round" strokeLinejoin="round"/>
@@ -118,19 +118,24 @@ const Services = () => {
                                 </clipPath>
                                 </defs>
                             </svg>
-                        <IconTitle className={tab1 ? 'text-secondary2':'text-primary'} onClick = {handleClick1}>
-                            Software
-                            <br />
-                            Development
+                        <IconTitle onClick={e => 
+                        { 
+                        e.preventDefault();
+                        setOpenTab(1);
+                        }}
+                        data-toggle="tab"
+                        href="#link1"
+                        role="tablist">
+                            Software Development
                         </IconTitle>
-                        </IconListItem>
-                        <IconListItem>
+                        </div>
+                        <div className="sm:w-2/4 flex flex-col justify-center items-center">
                             {/* <svg className={`${tab2 ? 'text-secondary2':'text-primary'} h-8 w-8`}  width="24" height="24" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">  
                             <path stroke="none" d="M0 0h24v24H0z"/>
                                 <ellipse cx="12" cy="6" rx="8" ry="3"></ellipse>  <path d="M4 6v6a8 3 0 0 0 16 0v-6" />
                                 <path d="M4 12v6a8 3 0 0 0 16 0v-6" />
                             </svg> */}
-                            <svg className={`${tab2 ? 'text-secondary2':'text-primary'}`} width="301" height="151" viewBox="0 0 301 151" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <svg width="301" height="151" viewBox="0 0 301 151" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <g id="Recurso 4 1" clipPath="url(#clip0)">
                                 <path id="Vector" opacity="0.15" fillRule="evenodd" clipRule="evenodd" d="M92.82 30.07H92.66C92.416 30.07 92.182 29.9731 92.0095 29.8005C91.8369 29.628 91.74 29.394 91.74 29.15C91.74 28.906 91.8369 28.672 92.0095 28.4995C92.182 28.3269 92.416 28.23 92.66 28.23H92.82C93.064 28.23 93.298 28.3269 93.4705 28.4995C93.6431 28.672 93.74 28.906 93.74 29.15C93.74 29.394 93.6431 29.628 93.4705 29.8005C93.298 29.9731 93.064 30.07 92.82 30.07V30.07Z" fill="#002B36"/>
                                 <path id="Vector_2" opacity="0.15" fillRule="evenodd" clipRule="evenodd" d="M99 30.07H95.63C95.386 30.07 95.152 29.9731 94.9795 29.8005C94.8069 29.628 94.71 29.394 94.71 29.15C94.71 28.906 94.8069 28.672 94.9795 28.4995C95.152 28.3269 95.386 28.23 95.63 28.23H97.33V19.06H70.81V28.23H86.21C86.454 28.23 86.688 28.3269 86.8605 28.4995C87.0331 28.672 87.13 28.906 87.13 29.15C87.13 29.394 87.0331 29.628 86.8605 29.8005C86.688 29.9731 86.454 30.07 86.21 30.07H69.07V17.18H99V30.07Z" fill="#002B36"/>
@@ -219,20 +224,31 @@ const Services = () => {
                                 </clipPath>
                                 </defs>
                             </svg>
-                        <IconTitle  className={tab2 ? 'text-secondary2':'text-primary'} onClick = {handleClick2}>
-                            Data
-                            <br />
-                            Science
+                        <IconTitle onClick={e => 
+                        {
+                        e.preventDefault();
+                        setOpenTab(2);
+                        }}
+                        data-toggle="tab"
+                        href="#link2"
+                        role="tablist">
+                            Data Science
                         </IconTitle>
-                        </IconListItem>
-                    </IconListWrapper>
+                        </div>                    
                 </IconWrapper>
-                <TabContent>
-                    <TabContentInner>                       
-                            <div className={tab1 ? 'block' : 'hidden'}>
+                <TabContent>                   
+                                                  
+                            <div className={`${openTab === 1 ? "open" : "hidden"} pl-2`} id="link1" >
+                            <a className="flex justify-end" href="#" onClick={e =>
+                            {
+                            e.preventDefault();
+                            setOpenTab(0);
+                            }} >
+                            <svg className="h-8 w-8 text-primary"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  strokeWidth="2"  strokeLinecap="round"  strokeLinejoin="round">  <line x1="18" y1="6" x2="6" y2="18" />  <line x1="6" y1="6" x2="18" y2="18" /></svg>
+                            </a>
                             {
                                 datas.soft.map((data, key) => (
-                                    <div key={key}>
+                                    <div className="ml-2" key={key}>
                                         <BulletTitle>{data.title}</BulletTitle>
                                         <BulletSubtitle>{data.subtitle}</BulletSubtitle>
                                     {
@@ -251,7 +267,14 @@ const Services = () => {
                             }
                                 
                             </div>
-                            <div className={tab2 ? 'block' : 'hidden'}>
+                            <div className={`${openTab === 2 ? "open" : "hidden"} pl-2`} id="link2">
+                            <a className="flex justify-end" href="#" onClick={e =>
+                            {
+                            e.preventDefault();
+                            setOpenTab(0);
+                            }} >
+                            <svg className="h-8 w-8 text-primary"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  strokeWidth="2"  strokeLinecap="round"  strokeLinejoin="round">  <line x1="18" y1="6" x2="6" y2="18" />  <line x1="6" y1="6" x2="18" y2="18" /></svg>
+                            </a>
                             {
                                 datas.data.map((data, key) => (
                                     <div  key={key}>
@@ -272,7 +295,7 @@ const Services = () => {
                                 ))
                             }
                             </div>                       
-                    </TabContentInner>
+                    
                 </TabContent>
             </ContentWrapper>
         </div>       

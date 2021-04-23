@@ -2,7 +2,12 @@ import styled from "styled-components"
 
 export const ContentWrapper = styled.div.attrs({
     className: "flex flex-wrap"
-})``;
+})
+`
+    &.maxHeight{
+        height: 100%;
+    }
+`;
 export const SectionHeader = styled.h2.attrs({
     className: "mt-4"
 })``;
