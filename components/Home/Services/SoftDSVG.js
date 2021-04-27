@@ -3,7 +3,8 @@ import React from 'react'
 const SoftDSVG = () => {
     return (
         <>
-            <svg width="293" height="175" viewBox="0 0 293 175" fill="none" xmlns="http://www.w3.org/2000/svg">
+            {/*width="293" height="175"*/}
+            <svg viewBox="0 0 293 175" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g id="Recurso 5 1" clipPath="url(#clip0)">
                 <path id="Vector" fillRule="evenodd" clipRule="evenodd" d="M165.083 153.387L163.563 132.823H138.401L136.87 153.387C136.356 158.366 134.038 162.988 130.351 166.39V166.449H171.602V166.39C167.915 162.988 165.598 158.366 165.083 153.387V153.387Z" fill="#EAEAEC"/>
                 <path id="Vector_2" opacity="0.28" fillRule="evenodd" clipRule="evenodd" d="M139.047 132.813L138.182 146.321H163.672L162.807 132.813H139.047Z" fill="#B9C2D3" stroke="#B9C2D3" strokeWidth="2.45" strokeLinecap="round" strokeLinejoin="round"/>

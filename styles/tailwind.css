@@ -110,3 +110,9 @@ border-radius: 25px;
   -webkit-transition: color 500ms ease-in-out 200ms;
 }
 
+.test{
+  position: absolute;
+  right: 0;
+  width: 50%;
+}
+

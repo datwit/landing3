@@ -28,45 +28,46 @@ export const TabContent = styled.div.attrs({
 
 .open{  
   display:block;
-  position: absolute; /* Sit on top of the page content */ 
+  position: absolute; 
   bottom: 0%;
   right: 0%;  
-  z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
-  cursor: pointer; /* Add a pointer on hover */
-  background: #eaebec; 
+  z-index: 2; 
+  cursor: pointer; 
+  /* background: #eaebec;  */
   width: 0%;
   height:0%;
   animation: panel-anime 300ms ease-in-out normal forwards;
-  border-left: 3px solid #e69c24;
-
-   
+  /* border-left: 3px solid #e69c24;    */
+  
+  @media (max-width: 768px){
+    overflow:scroll;
+  }
 }
 
 @keyframes panel-anime{  
   0% {
     width: 20%;
-    height:20%;
+    height:25%;
+  }  
+  25% {
+    width: 25%;
+    height:50%;
   }
-  25%{
-    width: 40%;
-    height:40%;
+  75% {
+    width: 50%;
+    height:75%;
   }
-  50%{
-    width: 60%;
-    height:60%;
-  }
-  75%{
-    width: 80%;
-    height:80%;
-  }
-  100% {
-    width: 100%;
+  100%{
+    width: 75%;
     height:100%;
-  }
+  }  
 }
 
 .close{
   display:none;
+}
+#link2, #link1{
+  background: #f6f7f8;
 }
 `;
 export const TabContentInner = styled.div.attrs({
