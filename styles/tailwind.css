@@ -107,12 +107,46 @@ border-radius: 25px;
 .bar-vanished svg{
   fill: white;
    transition: fill 500ms ease-in-out 200ms;
-  -webkit-transition: color 500ms ease-in-out 200ms;
+  -webkit-transition: color 2s ease-in-out 200ms;
 }
 
-.test{
-  position: absolute;
-  right: 0;
-  width: 50%;
+
+.test{ 
+  display: block;
+  transform: translateY(0%);
+  pointer-events: none;
+  transition: transform 0.3s; 
+  
 }
+.test:active,.test:hover{
+  display: block;
+  transform: translateY(calc(-100% - 1px));
+}
+
+.open{  
+  display:block;
+  position: absolute; /* Sit on top of the page content */ 
+  bottom: 0%;
+  /* left: 0%;   */
+  z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+  cursor: pointer; /* Add a pointer on hover */
+  background: #eaebec; 
+  width: 50%;
+  height:0%;
+  animation: panel-anime 300ms ease-in-out normal forwards;    
+  overflow-y: auto;  
+}
+
+
+@keyframes panel-anime{  
+  0% {
+    /* width: 20%; */
+    height:20%;
+  }
+  100%{
+    /* width: 50%; */
+    height:100%;
+  }  
+}
+
 
