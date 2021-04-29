@@ -131,7 +131,7 @@ border-radius: 25px;
   z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
   cursor: pointer; /* Add a pointer on hover */
   background: #eaebec; 
-  width: 50%;
+  width: 100%;
   height:0%;
   animation: panel-anime 300ms ease-in-out normal forwards;    
   overflow-y: auto;  
