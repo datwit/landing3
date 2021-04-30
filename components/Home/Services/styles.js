@@ -18,32 +18,33 @@ export const TabContent = styled.div.attrs({
 `
   &.open{  
   display:block;
-  position: absolute; /* Sit on top of the page content */ 
-  bottom: 0%;
-  /* left: 0%;   */
-  z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
-  cursor: pointer; /* Add a pointer on hover */
+  position: absolute; 
+  bottom: 0%;  
+  z-index: 1; 
+  cursor: pointer; 
   background: #eaebec; 
   width: 100%;
   height:0%;
-  animation: panel-anime 300ms ease-in-out normal forwards;    
+  animation: panel-anime-open 300ms ease-in-out normal forwards;    
   overflow-y: auto;  
 }
 
-@keyframes panel-anime{  
-  0% {
-    /* width: 20%; */
+@keyframes panel-anime-open{  
+  0% {    
     height:20%;
   }
-  100%{
-    /* width: 50%; */
+  100%{    
     height:100%;
   }  
 }
 
-.close{
-  display:none;
+&.close{
+  display:none;  
 }
+
+
+
+
 #link2, #link1{
   background: #f6f7f8;
 }

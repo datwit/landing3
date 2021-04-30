@@ -1,11 +1,36 @@
 import datas from "./data.json";
-import {useState} from 'react'
+import {useState, useRef, useEffect} from 'react'
 import {ContentWrapper, SectionSubheader}from '../../../styles/global';
 import {CardRevealWrapper, IconTitle, TabContent, BulletTitle, BulletSubtitle, ServiceBulletsOuter, ServiceBulletsSpan, CardRevealBorder} from './styles';
 import SoftDSVG from './SoftDSVG'
 import DataScSVG from './DataScSVG'
 
 const Services = () => {
+
+    const [openTab, setOpenTab] = useState(0);   
+
+    function useOutsideAlerter(ref) {
+        useEffect(() => {
+            /**
+             * Alert if clicked on outside of element
+             */
+            function handleClickOutside(event) {
+                if (ref.current && !ref.current.contains(event.target)) {
+                    setOpenTab(0);
+                }
+            }
+    
+            // Bind the event listener
+            document.addEventListener("mousedown", handleClickOutside);
+            return () => {
+                // Unbind the event listener on clean up
+                document.removeEventListener("mousedown", handleClickOutside);
+            };
+        }, [ref]);
+    }
+
+    const wrapperRef = useRef(null);
+    useOutsideAlerter(wrapperRef);   
     
     // const [tab1, isTabOne] = useState(true);
 	// const [tab2, isTabTwo] = useState(false)
@@ -18,10 +43,12 @@ const Services = () => {
 	// 	isTabOne(tab1=>!tab1);
 	// 	isTabTwo(tab2=>!tab2);
     // }; 
-    const [openTab, setOpenTab] = useState(0);   
+    
+
+         
    
-    return (
-        <div className="container px-5 mx-auto">
+    return (        
+        <div ref={wrapperRef} className="container px-5 mx-auto">
             <SectionSubheader>Lorem ipsum dolor sit amet consectetur adipisicing elit.</SectionSubheader>
             
                 <div className="hidden md:block">
@@ -46,7 +73,7 @@ const Services = () => {
                                          Development</h2>                                        
                                 </IconTitle>
                                 {/*card content-reveal*/}
-                                <TabContent className={openTab === 1 ? "open" : "hidden"} id="link1" >                             
+                                <TabContent className={openTab === 1 ? "open" : "close"} id="link1" >                             
                                     <a className="flex justify-end" href="#" onClick={e =>
                                     {
                                     e.preventDefault();
@@ -97,7 +124,7 @@ const Services = () => {
                                         Science</h2>
                                 </IconTitle>
                                 {/*card content-reveal*/}
-                                <TabContent className={openTab === 2 ? "open" : "hidden"} id="link2">                   
+                                <TabContent className={openTab === 2 ? "open" : "close"} id="link2">                   
                                     <a className="flex justify-end" href="#" onClick={e =>
                                     {
                                     e.preventDefault();
