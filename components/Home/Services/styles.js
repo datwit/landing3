@@ -13,7 +13,7 @@ h2:hover{
   color: #00baff;
 }
 `;
-export const TabContent = styled.div.attrs({  
+export const CardContent = styled.div.attrs({  
 }) 
 `  
   position: absolute; 
@@ -30,6 +30,13 @@ export const TabContent = styled.div.attrs({
   background: #f6f7f8;
 }
 `;
+export const ServTabContent = styled.div.attrs({
+  className:"sm:w-3/4 relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg overflow-auto"
+})
+`
+height: 50vh;
+`;
+
 export const CardRevealBorder = styled.div.attrs({
   className: "border border-gray-300 shadow hover:shadow-lg transition duration-200 ease-in relative overflow-hidden"
 })
