@@ -15,35 +15,16 @@ h2:hover{
 `;
 export const TabContent = styled.div.attrs({  
 }) 
-`
-  &.open{  
-  display:block;
+`  
   position: absolute; 
-  bottom: 0%;  
-  z-index: 1; 
-  cursor: pointer; 
+  bottom: 0%;
   background: #eaebec; 
   width: 100%;
-  height:0%;
-  animation: panel-anime-open 300ms ease-in-out normal forwards;    
-  overflow-y: auto;  
-}
-
-@keyframes panel-anime-open{  
-  0% {    
-    height:20%;
-  }
-  100%{    
-    height:100%;
-  }  
-}
-
-&.close{
-  display:none;  
-}
-
-
-
+  cursor: pointer; 
+  z-index: 1; 
+  overflow-y: auto; 
+  transition: height 300ms ease-in-out;  
+  -webkit-transition: height 300ms ease-in-out;
 
 #link2, #link1{
   background: #f6f7f8;
