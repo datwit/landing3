@@ -1,64 +1,42 @@
 import styled from 'styled-components'
 
 
-export const IconWrapper = styled.div.attrs({
-  className: "w-full inline-flex"
+export const CardRevealWrapper = styled.div.attrs({
+  className: "p-4 md:w-2/4"
 })``;
-// export const IconListWrapper = styled.ul.attrs({
-//   className: " mb-0 list-none pt-3 pb-4 flex-row sm:flex-col"
-// })``;
-// export const IconListItem = styled.li.attrs({
-//   className: "sm:w-2/4 h-full -mb-px mr-2 flex-auto text-center flex items-center sm:pb-12 flex-col"
-// })``;
+
 export const IconTitle = styled.a.attrs({
-  className: "text-base font-bold  block leading-normal relative cursor-pointer"
-})``;
-export const TabContent = styled.div.attrs({
-  // className: "z-10 w-full flex flex-col min-w-0 break-words bg-white w-full h-full mb-6 shadow-lg"
+  className: "text-base font-bold  block leading-normal relative cursor-pointer py-4"
 })
 `
-  height: 50vh;
-
-  @media (min-width: 1280px){
-    height: 55vh;
-  }
-  @media (min-width: 1536px){
-    height: 60vh;
-  }
-
-.open{  
+h2:hover{
+  color: #00baff;
+}
+`;
+export const TabContent = styled.div.attrs({  
+}) 
+`
+  &.open{  
   display:block;
-  position: absolute; 
+  position: absolute; /* Sit on top of the page content */ 
   bottom: 0%;
-  right: 0%;  
-  z-index: 2; 
-  cursor: pointer; 
-  /* background: #eaebec;  */
-  width: 0%;
+  /* left: 0%;   */
+  z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+  cursor: pointer; /* Add a pointer on hover */
+  background: #eaebec; 
+  width: 100%;
   height:0%;
-  animation: panel-anime 300ms ease-in-out normal forwards;
-  /* border-left: 3px solid #e69c24;    */
-  
-  @media (max-width: 768px){
-    overflow:scroll;
-  }
+  animation: panel-anime 300ms ease-in-out normal forwards;    
+  overflow-y: auto;  
 }
 
 @keyframes panel-anime{  
   0% {
-    width: 20%;
-    height:25%;
-  }  
-  25% {
-    width: 25%;
-    height:50%;
-  }
-  75% {
-    width: 50%;
-    height:75%;
+    /* width: 20%; */
+    height:20%;
   }
   100%{
-    width: 75%;
+    /* width: 50%; */
     height:100%;
   }  
 }
@@ -70,14 +48,16 @@ export const TabContent = styled.div.attrs({
   background: #f6f7f8;
 }
 `;
-export const TabContentInner = styled.div.attrs({
-  className: "px-4 flex-auto border-2 border-gray-200 border-opacity-60 md:h-full"
+export const CardRevealBorder = styled.div.attrs({
+  className: "border border-gray-300 shadow hover:shadow-lg transition duration-200 ease-in relative overflow-hidden"
 })
 `
-@media (max-width: 767px) {
-  height: 400px;
-  overflow:hidden !important;
-  overflow: scroll !important;
+svg.resizes{
+  @media (max-width: 800px){
+    object-fit:cover;
+    width: 85%;
+    height:85%;
+  }
 }
 `;
 export const BulletTitle = styled.h2.attrs({

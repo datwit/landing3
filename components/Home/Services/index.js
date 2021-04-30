@@ -1,7 +1,7 @@
 import datas from "./data.json";
 import {useState} from 'react'
 import {ContentWrapper, SectionSubheader}from '../../../styles/global';
-import {IconWrapper, IconTitle, TabContent, BulletTitle, BulletSubtitle, ServiceBulletsOuter, ServiceBulletsSpan} from './styles';
+import {CardRevealWrapper, IconTitle, TabContent, BulletTitle, BulletSubtitle, ServiceBulletsOuter, ServiceBulletsSpan, CardRevealBorder} from './styles';
 import SoftDSVG from './SoftDSVG'
 import DataScSVG from './DataScSVG'
 
@@ -26,10 +26,12 @@ const Services = () => {
             
                 <div className="hidden md:block">
                     <ContentWrapper>
-                        <div className="p-4 md:w-2/4">                                                
-                            <div className="border border-gray-300 shadow hover:shadow-lg transition duration-200 ease-in relative overflow-hidden">                           
+                        <CardRevealWrapper>                                                
+                            <CardRevealBorder>                           
                                 {/*card image*/}
-                                <SoftDSVG/>  
+                                <div className="py-6">
+                                    <SoftDSVG/> 
+                                </div>                                 
                                 {/*card title */}                         
                                 <IconTitle onClick={e => 
                                     { 
@@ -39,10 +41,12 @@ const Services = () => {
                                     data-toggle="tab"
                                     href="#link1"
                                     role="tablist">
-                                        <h2>Software Development</h2>                                        
+                                        <h2>Software
+                                        <br/>
+                                         Development</h2>                                        
                                 </IconTitle>
                                 {/*card content-reveal*/}
-                                <div className={openTab === 1 ? "open" : "hidden"} id="link1" >                             
+                                <TabContent className={openTab === 1 ? "open" : "hidden"} id="link1" >                             
                                     <a className="flex justify-end" href="#" onClick={e =>
                                     {
                                     e.preventDefault();
@@ -69,14 +73,16 @@ const Services = () => {
                                             </div>
                                         ))
                                     }                         
-                                </div>
+                                </TabContent>
                                 {/*/card content-reveal*/}
-                            </div> 
-                        </div>
-                        <div className="p-4 md:w-2/4">
-                            <div className="border border-gray-300 shadow hover:shadow-lg transition duration-200 ease-in relative overflow-hidden">                                                                               
+                            </CardRevealBorder> 
+                        </CardRevealWrapper>
+                        <CardRevealWrapper>
+                            <CardRevealBorder>                                                                               
                                 {/*card image*/}
-                                <DataScSVG />  
+                                <div className="py-6">
+                                    <DataScSVG /> 
+                                </div>                                 
                                 {/*card title */}                           
                                 <IconTitle onClick={e => 
                                     {
@@ -86,10 +92,12 @@ const Services = () => {
                                     data-toggle="tab"
                                     href="#link2"
                                     role="tablist">
-                                        <h2>Data Science</h2>
+                                        <h2>Data 
+                                        <br/>
+                                        Science</h2>
                                 </IconTitle>
                                 {/*card content-reveal*/}
-                                <div className={openTab === 2 ? "open" : "hidden"} id="link2">                   
+                                <TabContent className={openTab === 2 ? "open" : "hidden"} id="link2">                   
                                     <a className="flex justify-end" href="#" onClick={e =>
                                     {
                                     e.preventDefault();
@@ -116,10 +124,10 @@ const Services = () => {
                                             </div>
                                         ))
                                     }
-                                </div>
+                                </TabContent>
                                 {/*/card content-reveal*/}
-                            </div>
-                        </div>                  
+                            </CardRevealBorder>
+                        </CardRevealWrapper>                  
                     </ContentWrapper>
                 </div>
                 {/* <IconWrapper className={openTab === 2 || openTab === 1 ? "hidden" : "block" }>                                   

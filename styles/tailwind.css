@@ -110,32 +110,25 @@ border-radius: 25px;
   -webkit-transition: color 2s ease-in-out 200ms;
 }
 
-
-.test{ 
-  display: block;
-  transform: translateY(0%);
-  pointer-events: none;
-  transition: transform 0.3s; 
-  
-}
-.test:active,.test:hover{
-  display: block;
-  transform: translateY(calc(-100% - 1px));
-}
-
-.open{  
+/* .open{  
   display:block;
-  position: absolute; /* Sit on top of the page content */ 
+  position: absolute; 
   bottom: 0%;
-  /* left: 0%;   */
-  z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
-  cursor: pointer; /* Add a pointer on hover */
+  
+  z-index: 2; 
+  cursor: pointer; 
   background: #eaebec; 
   width: 100%;
   height:0%;
   animation: panel-anime 300ms ease-in-out normal forwards;    
   overflow-y: auto;  
 }
+
+.resize{
+  @media (max-width: 767px){
+    
+  }
+} */
 
 
 @keyframes panel-anime{  
