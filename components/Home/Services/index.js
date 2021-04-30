@@ -8,13 +8,16 @@ import DataScSVG from './DataScSVG'
 const Services = () => {
 
     const [openTab, setOpenTab] = useState(0); 
-    const [openTab1, setOpenTab1] = useState(1);   
+    const [openTab1, setOpenTab1] = useState(1); 
+    const [openCard1, setOpenCard1] = useState(false)
+    const [openCard2, setOpenCard2] = useState(false) 
 
     function useOutsideAlerter(ref) {
         useEffect(() => {           
             function handleClickOutside(event) {
                 if (ref.current && !ref.current.contains(event.target)) {
-                    setOpenTab(0);
+                    setOpenCard1(openCard1)
+                    setOpenCard2(openCard2)
                 }
             }             
             document.addEventListener("mousedown", handleClickOutside);
@@ -58,7 +61,7 @@ const Services = () => {
                                 <IconTitle onClick={e => 
                                     { 
                                     e.preventDefault();
-                                    setOpenTab(1);
+                                    setOpenCard1(!openCard1);
                                     }}
                                     data-toggle="tab"
                                     href="#link1"
@@ -68,12 +71,12 @@ const Services = () => {
                                          Development</h2>                                        
                                 </IconTitle>
                                 {/*card content-reveal*/}
-                                <CardContent className={openTab === 1 ? "block h-full" : "h-0"} id="link1" > 
+                                <CardContent className={openCard1 ? "block h-full" : "h-0"} id="link1" > 
                                     <div className="p-3">
                                         <a className="flex justify-end" href="#" onClick={e =>
                                         {
                                         e.preventDefault();
-                                        setOpenTab(0);
+                                        setOpenCard1(!openCard1);
                                         }} >
                                         <svg className="h-8 w-8 text-primary"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  strokeWidth="2"  strokeLinecap="round"  strokeLinejoin="round">  <line x1="18" y1="6" x2="6" y2="18" />  <line x1="6" y1="6" x2="18" y2="18" /></svg>
                                         </a>
@@ -111,7 +114,7 @@ const Services = () => {
                                 <IconTitle onClick={e => 
                                     {
                                     e.preventDefault();
-                                    setOpenTab(2);
+                                    setOpenCard2(!openCard2);
                                     }}
                                     data-toggle="tab"
                                     href="#link2"
@@ -121,12 +124,12 @@ const Services = () => {
                                         Science</h2>
                                 </IconTitle>
                                 {/*card content-reveal*/}
-                                <CardContent className={openTab === 2 ? "block h-full" : "h-0"} id="link2"> 
+                                <CardContent className={openCard2 ? "block h-full" : "h-0"} id="link2"> 
                                     <div className="p-3">
                                         <a className="flex justify-end" href="#" onClick={e =>
                                         {
                                         e.preventDefault();
-                                        setOpenTab(0);
+                                        setOpenCard2(!openCard2);
                                         }} >
                                         <svg className="h-8 w-8 text-primary"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  strokeWidth="2"  strokeLinecap="round"  strokeLinejoin="round">  <line x1="18" y1="6" x2="6" y2="18" />  <line x1="6" y1="6" x2="18" y2="18" /></svg>
                                         </a>
