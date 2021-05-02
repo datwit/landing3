@@ -11,8 +11,7 @@ const FaqsQandA = () => {
      
     return (
         
-        <motion.div initial={{opacity:0,  y: 200}} animate={{opacity:1, y:0}}>            
-            <Navbar />           
+        <motion.div initial={{opacity:0,  y: 200}} animate={{opacity:1, y:0}}>         
                 <section className="pt-20">  
                     <div className="container px-5 mx-auto">              
                         <SectionHeader>Frequently asked questions</SectionHeader>

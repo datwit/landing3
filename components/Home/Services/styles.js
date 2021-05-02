@@ -1,24 +1,54 @@
 import styled from 'styled-components'
 
 
-export const IconWrapper = styled.div.attrs({
-  className: "sm:w-1/4 h-full w-full"
+export const CardRevealWrapper = styled.div.attrs({
+  className: "p-4 md:w-2/4"
 })``;
-export const IconListWrapper = styled.ul.attrs({
-  className: "flex mb-0 list-none flex-wrap pt-3 pb-4 flex-row sm:flex-col"
-})``;
-export const IconListItem = styled.li.attrs({
-  className: "-mb-px mr-2 flex-auto text-center flex items-center sm:pb-12 flex-col"
-})``;
+
 export const IconTitle = styled.a.attrs({
-  className: "text-base font-bold  block leading-normal relative cursor-pointer"
-})``;
-export const TabContent = styled.div.attrs({
-  className: "sm:w-3/4 relative flex flex-col min-w-0 break-words bg-white w-full h-full mb-6 shadow-lg"
-})``;
-export const TabContentInner = styled.div.attrs({
-  className: "px-4 flex-auto border-2 border-gray-200 border-opacity-60"
-})``;
+  className: "text-base font-bold  block leading-normal relative cursor-pointer py-4"
+})
+`
+h2:hover{
+  color: #00baff;
+}
+`;
+export const CardContent = styled.div.attrs({  
+}) 
+`  
+  position: absolute; 
+  bottom: 0%;
+  background: #eaebec; 
+  width: 100%;
+  cursor: pointer; 
+  z-index: 1; 
+  overflow-y: auto; 
+  transition: height 300ms ease-in-out;  
+  -webkit-transition: height 300ms ease-in-out;
+
+#link2, #link1{
+  background: #f6f7f8;
+}
+`;
+export const ServTabContent = styled.div.attrs({
+  className:"sm:w-3/4 relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg overflow-auto"
+})
+`
+height: 50vh;
+`;
+
+export const CardRevealBorder = styled.div.attrs({
+  className: "border border-gray-300 shadow hover:shadow-lg transition duration-200 ease-in relative overflow-hidden"
+})
+`
+svg.resizes{
+  @media (max-width: 800px){
+    object-fit:cover;
+    width: 85%;
+    height:85%;
+  }
+}
+`;
 export const BulletTitle = styled.h2.attrs({
   className: "text-lg mt-2 text-left"
 })``;

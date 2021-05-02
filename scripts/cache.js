@@ -15,7 +15,7 @@ function getjsonData(fileDir) {
     return {
       id,
       title: matterResult.data.title,
-      author: matterResult.data.author.name,
+      author: matterResult.data.author,
       summary: matterResult.data.summary,
       img: matterResult.data.img,
       tags: matterResult.data.tags,

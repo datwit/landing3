@@ -2,7 +2,6 @@ import Head from 'next/head';
 import { format, parseISO } from 'date-fns';
 import renderToString from 'next-mdx-remote/render-to-string';
 import hydrate from 'next-mdx-remote/hydrate';
-import Navbar from '../../components/Navbar'
 import Footer from '../../components/Footer'
 import {ImgContainer, DateAuthorWrapper, PostTitle} from '../../components/Blog/style'
 import { getAllData } from '../../lib/posts';
@@ -10,6 +9,8 @@ import {MarkdownContent} from '../../components/Markdown/style'
 import {Category} from '../../components/Blog/style'
 import { useRouter } from 'next/router'
 import { motion } from 'framer-motion'
+import { FullPage } from 'react-full-page'
+import CustomControls from '../../components/Slide/CustomControls'
 
 const BlogPage = ({ title, date, content, img, author, tags, id})=> {
 
@@ -24,18 +25,18 @@ const BlogPage = ({ title, date, content, img, author, tags, id})=> {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <motion.div initial={{opacity:0,  y: 200}} animate={{opacity:1, y:0}}> 
+      <FullPage controls={CustomControls} scrollMode='normal'>
           <main>
-              <Navbar />
               <section className="pt-20">
-                  <div className="container px-5 mx-auto">  
+                  <div className="mx-8 md:mx-auto">  
                         <ImgContainer>
                             <img src={img} alt={title}/>
                         </ImgContainer>              
                         <DateAuthorWrapper>
-                          <a>{`By: ${format(parseISO(date), 'MMMM do, uuu')}`}</a>
-                          <a>{`On: ${author.name}`}</a>
+                          <div className="w-full md:w-2/4"><p>{`By: ${author}`}</p></div>
+                          <div className="w-full md:w-2/4"><p>{`On: ${format(parseISO(date), 'MMMM do, uuu')}`}</p></div>                                                    
                         </DateAuthorWrapper>   
-                        <div className="flex flex-wrap">
+                        <div className="flex flex-wrap py-5">
                             {
                               tags.map((tags, key3) => (
                                 <div key={key3} >                            
@@ -55,7 +56,8 @@ const BlogPage = ({ title, date, content, img, author, tags, id})=> {
               <section className= "w-full h-screen bg-primary mx-auto px-10">
                   <Footer />
               </section>           
-          </main> 
+          </main>
+          </FullPage> 
       </motion.div>      
     </>
     

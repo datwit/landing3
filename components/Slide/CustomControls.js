@@ -1,9 +1,11 @@
 import React,{useEffect} from 'react'
 import PropTypes from 'prop-types';
 import { useRouter } from "next/router"
+import Navbar from '../Navbar'
 
 
-const CustomControls = ({ slidesCount, scrollToSlide, onNext, onPrev, getCurrentSlideIndex, style, className }) => {
+
+const CustomControls = ({ slidesCount, scrollToSlide, onNext, onPrev, getCurrentSlideIndex}) => {
 
  
   const {pathname} = useRouter()
@@ -18,19 +20,9 @@ const CustomControls = ({ slidesCount, scrollToSlide, onNext, onPrev, getCurrent
     slidesCount: PropTypes.number.isRequired,
     style: PropTypes.object,
   }
-  CustomControls.defaultProps = {
-    className: 'full-page-controls',
-    style: {
-      display: 'flex',
-      flexFlow: 'column',
-      position: 'fixed',
-      top: '50%',
-      transform: 'translateY(-50%)',
-      paddingLeft: '20px',
-      zIndex: 1
-    },
-  }
 
+  const className = 'flex flex-col fixed top-2/4 transform -translate-y-2/4 pl-5 z-10 invisible md:visible'
+  
   const renderSlidesNumbers = (currentSlideIndex) => {
 
     const slidesNumbers = [];
@@ -92,10 +84,17 @@ const CustomControls = ({ slidesCount, scrollToSlide, onNext, onPrev, getCurrent
   }
 
   return (
-    <div className={className} style={style}>
-      {renderSlidesNumbers(getCurrentSlideIndex())}
-    </div>
+        <>
+          <div className="flex items-center flex-wrap h-20 w-full fixed top-0 bg-fixed bg-white z-10" id='navbar'>              
+            <Navbar scrollToSlide={ scrollToSlide }/> 
+          </div> 
 
+          <div className={className}>
+            {renderSlidesNumbers(getCurrentSlideIndex())}
+          </div>    
+        </>
+       
+        
   );
 }
 

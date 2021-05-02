@@ -1,13 +1,10 @@
 ---
-title: Post 1
+title: Study Case 3
 summary: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-tags: 
-- "Coding"
-- "Research"
-- "Tips"
-img: https://images.unsplash.com/photo-1556740758-90de374c12ad?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1000&q=80
+tags: Software Development
+img:
 date: 2021-02-14T19:05:27.220Z
-author: Benjamin  
+author: Benjamin 
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ornare quam viverra orci sagittis eu volutpat. Amet nulla facilisi morbi tempus iaculis urna id. Augue interdum velit euismod in pellentesque massa. Hac habitasse platea dictumst quisque sagittis purus. Donec massa sapien faucibus et molestie ac feugiat sed lectus. Euismod in pellentesque massa placerat duis. Tortor at risus viverra adipiscing at in. Ultrices tincidunt arcu non sodales neque sodales. Urna nec tincidunt praesent semper feugiat nibh. Faucibus ornare suspendisse sed nisi lacus sed viverra tellus. Faucibus vitae aliquet nec ullamcorper sit. Tempus egestas sed sed risus pretium quam vulputate dignissim. Fames ac turpis egestas sed tempus urna et. Morbi leo urna molestie at elementum eu facilisis. Gravida in fermentum et sollicitudin ac orci phasellus. Mauris nunc congue nisi vitae suscipit tellus. A scelerisque purus semper eget duis.
@@ -19,16 +16,3 @@ Lorem ipsum dolor sit amet consectetur. Rutrum tellus pellentesque eu tincidunt 
 ### Sub header
 
 Lorem ipsum dolor sit amet consectetur adipiscing elit. Id donec ultrices tincidunt arcu non sodales. Id diam maecenas ultricies mi eget. Pharetra convallis posuere morbi leo urna molestie at. Eleifend quam adipiscing vitae proin sagittis. Ipsum a arcu cursus vitae congue mauris. Condimentum id venenatis a condimentum vitae sapien pellentesque. Aenean euismod elementum nisi quis eleifend. Quam vulputate dignissim suspendisse in est ante in nibh. Odio facilisis mauris sit amet. Ut tortor pretium viverra suspendisse potenti nullam. Purus ut faucibus pulvinar elementum integer enim. Duis convallis convallis tellus id. Amet massa vitae tortor condimentum. Sed id semper risus in hendrerit gravida rutrum.
-
-<figure>
-  <img
-    src="https://images.unsplash.com/photo-1556740758-90de374c12ad?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1000&q=80"
-    alt=""
-  />
-  <figcaption>
-    Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of
-    classical Latin literature from 45 BC, making it over 2000 years old.
-  </figcaption>
-</figure>
-
-Commodo odio aenean sed adipiscing diam donec adipiscing. Nullam vehicula ipsum a arcu. Phasellus vestibulum lorem sed risus ultricies tristique nulla aliquet enim. Nibh sed pulvinar proin gravida hendrerit. Volutpat ac tincidunt vitae semper quis lectus nulla. Consectetur lorem donec massa sapien faucibus et molestie ac feugiat. Amet dictum sit amet justo donec enim. Quis commodo odio aenean sed adipiscing diam. Habitant morbi tristique senectus et netus et malesuada fames ac. Pellentesque habitant morbi tristique senectus et. Enim ut tellus elementum sagittis vitae et leo duis. Interdum velit euismod in pellentesque massa placerat. Congue quisque egestas diam in arcu cursus euismod quis. Quis imperdiet massa tincidunt nunc.

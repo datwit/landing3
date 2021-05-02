@@ -140,7 +140,6 @@ const Blog = () => {
     <motion.div initial={{opacity:0,  y: 200}} animate={{opacity:1, y:0}}>       
         <FullPage controls={CustomControls}>
           <Slide {...style}>
-            <Navbar />
             <Section>
               <div className="container px-5 mx-auto">
                 <SectionSubheader>Discover interesting ideas and unique perspectives from our amazing crew</SectionSubheader>                
@@ -161,7 +160,7 @@ const Blog = () => {
                 </SearchWrapper>
 
                 {/*pagination*/}
-                <div className="App flex flex-wrap">
+                <div className="flex flex-wrap">
                   {data}
                   <PaginationWrapper>
                     <ReactPaginate

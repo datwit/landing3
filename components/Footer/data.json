@@ -1,18 +1,19 @@
+
 [
     {
-        "name":"linkedin",
-        "url":""
+        "name":"linkedin",       
+        "url":"https://linkedin.com/datwit"
     },
     {
-        "name":"facebook",
-        "url":"" 
+        "name":"facebook",        
+        "url":"https://facebook.com/datwit" 
     },
     {
-        "name":"github",
-        "url":""
-    }
+        "name":"github",        
+        "url":"https://github.com/datwit"
+    },
     {
-        "name":"twitter",
-        "url":""
+        "name":"twitter",        
+        "url":"https://twitter.com/datwit"
     }
 ]

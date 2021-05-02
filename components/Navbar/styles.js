@@ -32,7 +32,7 @@ export const NavWrapper = styled.div.attrs({
     className: "flex-shrink-0"
   })``;  
   export const LogoLink = styled.a.attrs({
-    className: "inline-flex items-center"
+    className: "inline-flex items-center cursor-pointer"
   })``; 
   //Hidding left behind for understanding purposes
   export const ButtonContainer = styled.div.attrs({

@@ -1,43 +1,54 @@
 import styled from 'styled-components'
 
 export const FooterContainer = styled.div.attrs({
-    className: "px-5 relative"
-})
-`
-    top: 20%;
-    transform: translateY(-20%);
-`;
+    className: "px-5 relative top-2/4 transform -translate-y-2/4"
+})``;
 export const FooterHeader = styled.h1.attrs({
-    className: "text-white text-center text-4xl"
+    className: "text-white text-center text-4xl my-2"
 })``;
 export const FooterLinksWrapper = styled.div.attrs({
-    className: "flex flex-wrap overflow-hidden lg:-mx-2"
+    className: "flex flex-wrap overflow-hidden lg:-mx-2 justify-center sm:justify-start"
 })``;
 export const ColumnContent = styled.div.attrs({
-    className: "sm:w-2/4 lg:w-1/4 overflow-hidden lg:my-2 lg:px-2"
+    className: "sm:w-2/4 lg:w-1/4 overflow-hidden lg:my-2 lg:px-2 mb-4"
 })``;
 export const ColumnTitle = styled.h2.attrs({
-    className: "text-white font-bold flex justify-start text-lg mb-5"
+    className: "text-white font-bold flex justify-start text-lg sm:mb-5 justify-center sm:justify-start"
 })``;
 export const SocialList = styled.ul.attrs({
     className: "inline-flex"
 })``;
 export const SocialListItem = styled.li.attrs({
-    className: "mr-2"
-})``;
-export const ContactWrapper = styled.span.attrs({
-    className: "flex items-center"
-})``;
-export const UpperH3 = styled.h3.attrs({
-    className: "text-white text-left mb-5 cursor-pointer"
-})``;
-export const DownH3 = styled.h3.attrs({
-    className: "text-white text-left cursor-pointer"
-})``;
-export const CopyRight = styled.p.attrs({
-    className: "text-gray-500 text-md absolute bottom-0"
+    className: "mr-2 h-8 w-8 cursor-pointer"
 })
 `
-left:40%;
+svg{
+    width:1.75rem;
+    height:1.75rem;
+    color: white;
+}
+`;
+export const ContactWrapper = styled.span.attrs({
+    className: "flex"
+})``;
+export const UpperH3 = styled.h3.attrs({
+    className: "text-white text-left sm:mb-5 cursor-pointer flex justify-center sm:justify-start"
+})``;
+export const DownH3 = styled.h3.attrs({
+    className: "text-white text-left cursor-pointer flex justify-center sm:justify-start"
+})``;
+export const CopyRight = styled.p.attrs({
+    className: "text-md absolute bottom-0"
+})
+`
+left:50%;
+transform: translateX(-50%);
+color: #b7b7bc;
+`;
+export const Divider = styled.div.attrs({
+    className: "w-8 h-1 mx-auto mt-4 bg-secondary2 block sm:hidden"
+})
+`
+// background: #b7b7bc;
 `;
 
