@@ -31,10 +31,12 @@ export const CardContent = styled.div.attrs({
 }
 `;
 export const ServTabContent = styled.div.attrs({
-  className:"sm:w-3/4 relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg overflow-auto"
+  className:"relative flex flex-col min-w-0 break-words bg-white w-full mb-6"
 })
 `
-height: 50vh;
+#inner-content{
+  height:50vh;
+}
 `;
 
 export const CardRevealBorder = styled.div.attrs({
@@ -61,3 +63,33 @@ export const ServiceBulletsOuter = styled.p.attrs({
 export const ServiceBulletsSpan = styled.span.attrs({
   className: "w-5 h-5 mr-2 inline-flex items-center justify-center flex-shrink-0"
 })``;
+export const TabResponsive = styled.div.attrs({
+  className: ""
+})
+`
+  position: absolute; 
+  bottom: 0;  
+  background: #e69c24; 
+  width: 100%;
+  cursor: pointer;   
+  transition: height 300ms ease-in-out;  
+  -webkit-transition: height 300ms ease-in-out;
+  display: flex;
+  justify-content: center;
+`;
+export const TabTitle = styled.a.attrs({
+  className: "flex flex-col items-center"
+})
+`
+    position:absolute;
+    top: 100%;
+    transform: translateY(-100%);
+    z-index: 1;
+
+`;
+export const TabTitle1 = styled.a.attrs({
+  className: "flex flex-col items-center"
+})
+`    
+    z-index: 0;    
+`;
