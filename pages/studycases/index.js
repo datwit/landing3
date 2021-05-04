@@ -23,13 +23,15 @@ const AllStudyCases = () =>{
   //pagination states
   const [offset, setOffset] = useState(0);
   const [data, setData] = useState([]);
-  const [perPage] = useState(3);
+  const [perPage, setPerPage] = useState(3);
   const [pageCount, setPageCount] = useState(0)
 
   const getData = () => {
     const data = cases
+    const cant = window.innerHeight <= 600 ? 2:3
+    setPerPage(cant)
     //slicing data   
-    const slice = data.slice(offset, offset + perPage)
+    const slice = data.slice(offset, offset + cant)
     const casesData = slice.map((item, key6) =>           
       <BlogCardWrapper key={key6}>
           <div className="hidden md:block">                  
@@ -78,7 +80,7 @@ const AllStudyCases = () =>{
 
 )
 setData(casesData)
-setPageCount(Math.ceil(data.length / perPage))
+setPageCount(Math.ceil(data.length / cant))
 }
 
  //callingData
