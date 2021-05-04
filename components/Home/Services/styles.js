@@ -50,6 +50,86 @@ svg.resizes{
     height:85%;
   }
 }
+#leaf1{
+  animation: leaf-anime1 4s linear infinite;
+  -webkit-animation:leaf-anime1 4s linear infinite;
+  transform-origin:bottom;
+  transform-box: fill-box;
+}
+#leaf2{
+  animation: leaf-anime2 4s linear infinite;
+  -webkit-animation: leaf-anime2 4s linear infinite;
+  transform-origin:bottom;
+  transform-box: fill-box;
+}
+#cup{
+  animation: cup-anime 4.1s linear infinite; 
+  -webkit-animation: cup-anime 4.1s linear infinite;
+}
+#dot1{
+  animation: dots 800ms ease-in-out infinite;
+  -webkit-animation: dots 800ms ease-in-out infinite;
+  
+}
+#dot2{
+  animation: dots 800ms ease-in-out infinite 200ms;
+  -webkit-animation: dots 800ms ease-in-out infinite 200ms;
+}
+#dot3{
+  animation: dots 800ms ease-in-out infinite 300ms;
+  -webkit-animation: dots 800ms ease-in-out infinite 300ms;
+}
+#dot4{
+  animation: dots 800ms ease-in-out infinite 400ms;
+  -webkit-animation: dots 800ms ease-in-out infinite 400ms;
+}
+@keyframes dots {
+  100%{
+    fill: white;
+  }
+}
+@keyframes leaf-anime1 {
+  0%{
+    transform: rotateZ(0);
+  }
+  50%{
+    transform: rotateZ(8deg);
+  }
+  75%{
+    transform: rotateZ(0deg);
+  }
+  100%{
+    transform: rotateZ(-5deg);
+  }
+}
+@keyframes leaf-anime2 {
+  0%{
+    transform: rotateZ(0);
+  }
+  50%{
+    transform: rotateZ(10deg);
+  }
+  75%{
+    transform: rotateZ(0deg);
+  }
+  100%{
+    transform: rotateZ(-10deg);
+  }
+}
+@keyframes cup-anime {
+  0%{
+    transform: translateY(0);
+  }
+  50%{
+    transform: translateY(5px);
+  }
+  75%{
+    transform: translateY(0);
+  }
+  100%{
+    transform: translateY(-5px);
+  }
+}
 `;
 export const BulletTitle = styled.h2.attrs({
   className: "text-lg mt-2 text-left"
