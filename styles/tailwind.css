@@ -36,9 +36,9 @@
     section{
       @apply  overflow-hidden relative px-3 sm:px-10 bg-white;
     } 
-    body{
+    /* body{
       @apply overflow-hidden;
-    }   
+    }    */
   } 
 
 /***********************************************************************************************/

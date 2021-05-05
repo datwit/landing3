@@ -14,7 +14,7 @@ export default function Home() {
     height:'calc(100% - 80px)',    
   }  
 
-  return (
+  return (    
     <motion.div initial={{opacity:0,  y: 200}} animate={{opacity:1, y:0}}> 
             <FullPage controls={CustomControls}> 
 
@@ -56,6 +56,6 @@ export default function Home() {
               
           </FullPage>
       
-      </motion.div>       
+      </motion.div>        
   )
 }

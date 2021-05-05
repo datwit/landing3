@@ -6,12 +6,15 @@ import {QuestionText} from '../../components/Partner/Faqs/style'
 import Navbar from '../../components/Navbar' 
 import Footer from '../../components/Footer'
 import { motion } from 'framer-motion'
+import { FullPage } from 'react-full-page'
+import CustomControls from '../../components/Slide/CustomControls'
 
 const FaqsQandA = () => {       
      
     return (
         
-        <motion.div initial={{opacity:0,  y: 200}} animate={{opacity:1, y:0}}>         
+        <motion.div initial={{opacity:0,  y: 200}} animate={{opacity:1, y:0}}>  
+            <FullPage controls={CustomControls} scrollMode='normal'>
                 <section className="pt-20">  
                     <div className="container px-5 mx-auto">              
                         <SectionHeader>Frequently asked questions</SectionHeader>
@@ -30,7 +33,10 @@ const FaqsQandA = () => {
                 </section>
                 <section className= "w-full h-screen bg-primary mx-auto px-10">
                     <Footer />
-                </section>            
+                </section>
+                
+            </FullPage>       
+                        
         </motion.div>
         
     )
