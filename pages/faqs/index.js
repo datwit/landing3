@@ -21,14 +21,22 @@ const FaqsQandA = () => {
                         <SectionSubheader>Lorem ipsum dolor sit amet consectetur adipisicing elit...</SectionSubheader>
                         {
                             datas.map(data => (
-                                <div key={uuid()} id={data.id}>
+                                <div key={uuid()}>
+                                    <a href={`#${data.id}`}><h4>{data.question}</h4></a>                                    
+                                </div>
+                            ))
+                        }
+                        {
+                            datas.map(data => (
+                                <div key={uuid()} id={data.id} className="pt-20">
                                     <h4>{data.question}</h4>
                                     <div>
                                         <p className="text-base mt-3">{data.answer}</p>
                                     </div>
                                 </div>
                             ))
-                        }  
+                        }
+
                     </div>   
                 </section>
                 <section className= "w-full h-screen bg-primary mx-auto px-10">
