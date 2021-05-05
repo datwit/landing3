@@ -51,20 +51,20 @@ svg.resizes{
   }
 }
 #leaf1{
-  animation: leaf-anime1 4s linear infinite;
-  -webkit-animation:leaf-anime1 4s linear infinite;
+  animation: leaf-anime1 2s linear infinite alternate;
+  -webkit-animation:leaf-anime1 2s linear infinite alternate;
   transform-origin:bottom;
   transform-box: fill-box;
 }
 #leaf2{
-  animation: leaf-anime2 4s linear infinite;
-  -webkit-animation: leaf-anime2 4s linear infinite;
+  animation: leaf-anime2 2.2s linear infinite alternate;
+  -webkit-animation: leaf-anime2 2.2s linear infinite alternate;
   transform-origin:bottom;
   transform-box: fill-box;
 }
 #cup{
-  animation: cup-anime 4.1s linear infinite; 
-  -webkit-animation: cup-anime 4.1s linear infinite;
+  animation: cup-anime 1.9s linear infinite alternate; 
+  -webkit-animation: cup-anime 1.9s linear infinite alternate;
 }
 #dot1{
   animation: dots 800ms ease-in-out infinite;
@@ -92,42 +92,24 @@ svg.resizes{
   0%{
     transform: rotateZ(0);
   }
-  50%{
-    transform: rotateZ(8deg);
-  }
-  75%{
-    transform: rotateZ(0deg);
-  }
   100%{
-    transform: rotateZ(-5deg);
-  }
+    transform: rotateZ(12deg);
+  }  
 }
 @keyframes leaf-anime2 {
   0%{
     transform: rotateZ(0);
   }
-  50%{
-    transform: rotateZ(10deg);
-  }
-  75%{
-    transform: rotateZ(0deg);
-  }
   100%{
-    transform: rotateZ(-10deg);
-  }
+    transform: rotateZ(15deg);
+  }  
 }
 @keyframes cup-anime {
   0%{
     transform: translateY(0);
   }
-  50%{
-    transform: translateY(5px);
-  }
-  75%{
-    transform: translateY(0);
-  }
   100%{
-    transform: translateY(-5px);
+    transform: translateY(5px);
   }
 }
 `;
