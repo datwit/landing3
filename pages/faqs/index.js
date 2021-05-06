@@ -2,7 +2,7 @@
 import datas from '../../components/Partner/Faqs/data.json'
 import uuid from 'react-uuid'
 import {SectionHeader,SectionSubheader} from '../../styles/global'
-import {QuestionText, Accordion} from '../../components/Partner/Faqs/style'
+import {QuestionText, AccordionList, AccordionWrapper} from '../../components/Partner/Faqs/style'
 import Navbar from '../../components/Navbar' 
 import Footer from '../../components/Footer'
 import { motion } from 'framer-motion'
@@ -21,8 +21,8 @@ const FaqsQandA = () => {
                         <SectionHeader>Frequently asked questions</SectionHeader>
                         <SectionSubheader>Lorem ipsum dolor sit amet consectetur adipisicing elit...</SectionSubheader>
                         {/*accordion component*/}
-                        <div {...{ className: 'wrapper' }}>
-                            <ul {...{ className: 'accordion-list' }}>
+                        <AccordionWrapper>
+                            <AccordionList>
                             {datas.map((data, key) => {
                                 return (
                                 <li {...{ className: 'accordion-list__item', key }}>
@@ -30,8 +30,8 @@ const FaqsQandA = () => {
                                 </li>
                                 )
                             })}
-                            </ul>
-                        </div>
+                            </AccordionList>
+                        </AccordionWrapper>
                         {/*********************/}
                     </div>   
                 </section>

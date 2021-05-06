@@ -12,3 +12,68 @@ cursor:pointer;
     color: #e69c24;
 }
 `;
+export const AccItem = styled.div
+`
+padding-bottom:20px; 
+`;
+export const AccordionIcon= styled.svg
+`
+    width: 1.2rem;
+    height: 1.2rem;
+    transition: transform 0.3s ease-in-out;
+    background-size: contain;
+    background-repeat: no-repeat;  
+    opacity: 0.6;
+
+`;
+export const AccordionWrapper = styled.div
+`
+padding-bottom: 30px;
+`;
+export const AccordionList = styled.div
+`
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    // background-color: #fff;    
+    overflow: hidden;
+    // box-shadow: 0 0 0.8rem 0.1rem rgba(15, 72, 179, 0.06), 0 20px 30px -10px rgba(15, 72, 179, 0.2);
+
+    // .accordion-list__item + .accordion-list__item {
+    //     border-top: 1px solid rgba(0, 0, 0, 0.1);       
+    // }      
+`;
+export const AccordionTitleWrapper = styled.div
+`
+    display: block;
+    padding: 0.8rem 1.2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    z-index: 2;
+    position: relative;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+
+    .icon-rotate {       
+        transform: rotate(180deg);               
+    }
+
+`;
+export const AccItemInner = styled.div
+`
+    max-height: 0;
+    overflow: hidden;
+    text-transform: cubic-bezier(0.95, 0.05, 0.795, 0.035);
+    transition-duration: 0.5s;
+    transition-property: max-height;
+    z-index: 1;
+    position: relative; 
+    
+    .inner-open{
+        max-height: 100rem;
+        transition-timing-function: cubic-bezier(0.895, 0.03, 0.685, 0.22);
+        transition-duration: 0.5s;
+        transition-property: max-height;
+    }
+`;
