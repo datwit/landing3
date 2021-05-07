@@ -60,6 +60,14 @@ export const AccordionTitleWrapper = styled.div
     }
 
 `;
+export const AccordionTitle = styled.h3
+`
+    font-size: 1.6rem;
+    margin: 0;
+    font-weight: 700;
+    color: #121212;
+
+`;
 export const AccItemInner = styled.div
 `
     max-height: 0;
@@ -68,12 +76,24 @@ export const AccItemInner = styled.div
     transition-duration: 0.5s;
     transition-property: max-height;
     z-index: 1;
-    position: relative; 
-    
-    .inner-open{
-        max-height: 100rem;
-        transition-timing-function: cubic-bezier(0.895, 0.03, 0.685, 0.22);
-        transition-duration: 0.5s;
-        transition-property: max-height;
-    }
+    position: relative;       
+        
+`;
+export const AccItemContent = styled.div
+`
+    // opacity: 0;
+    // transform: translateY(-1rem);
+    transition-timing-function: linear, ease;
+    transition-duration: 0.1s;
+    transition-property: opacity, transform;
+    transition-delay: 0.5s;
+    padding: 0 1.2rem 1.2rem;
+`;
+export const AccItemParagraph = styled.div
+`
+    margin: 0;
+    font-size: 1rem;
+    color: #333;
+    font-weight: 300;
+    line-height: 1.3;
 `;
