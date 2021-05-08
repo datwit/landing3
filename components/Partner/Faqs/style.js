@@ -7,10 +7,7 @@ export const QuestionText = styled.h1.attrs({
     className: "text-base mt-4 text-center"
 })
 `
-cursor:pointer;
-&:hover{
-    color: #e69c24;
-}
+text-align: left;
 `;
 export const AccItem = styled.div
 `
@@ -23,7 +20,8 @@ export const AccordionIcon= styled.svg
     transition: transform 0.3s ease-in-out;
     background-size: contain;
     background-repeat: no-repeat;  
-    opacity: 0.6;
+    /* opacity: 0.6; */
+    color:#e69c24;
 
 `;
 export const AccordionWrapper = styled.div
@@ -34,39 +32,35 @@ export const AccordionList = styled.div
 `
     list-style: none;
     margin: 0;
-    padding: 0;
-    // background-color: #fff;    
-    overflow: hidden;
-    // box-shadow: 0 0 0.8rem 0.1rem rgba(15, 72, 179, 0.06), 0 20px 30px -10px rgba(15, 72, 179, 0.2);
-
-    // .accordion-list__item + .accordion-list__item {
-    //     border-top: 1px solid rgba(0, 0, 0, 0.1);       
-    // }      
+    padding: 0;       
+    overflow: hidden;        
 `;
-export const AccordionTitleWrapper = styled.div
+export const AccordionTitleWrapper = styled.div.attrs({
+    className: "border border-gray-300 shadow hover:shadow-md transition duration-200 ease-in"
+})
 `
     display: block;
-    padding: 0.8rem 1.2rem;
+    padding: 0.5rem 1.2rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: #fff;
     z-index: 2;
     position: relative;
-    border: 1px solid rgba(0, 0, 0, 0.1);
+    cursor:pointer;
 
     .icon-rotate {       
         transform: rotate(180deg);               
-    }
+    }   
 
 `;
-export const AccordionTitle = styled.h3
+export const AccordionTitle = styled.h3.attrs({
+    className: "text-lg text-primary"
+})
 `
-    font-size: 1.6rem;
-    margin: 0;
-    font-weight: 700;
-    color: #121212;
-
+&:hover{
+    color: #00baff;
+}
 `;
 export const AccItemInner = styled.div
 `
@@ -74,9 +68,10 @@ export const AccItemInner = styled.div
     overflow: hidden;
     text-transform: cubic-bezier(0.95, 0.05, 0.795, 0.035);
     transition-duration: 0.5s;
-    transition-property: max-height;
-    z-index: 1;
-    position: relative;       
+    transition-property: max-height;    
+    position: relative;
+    background:#eaebec;  
+    border-left: 3px solid #e69c24;     
         
 `;
 export const AccItemContent = styled.div
@@ -89,11 +84,10 @@ export const AccItemContent = styled.div
     transition-delay: 0.5s;
     padding: 0 1.2rem 1.2rem;
 `;
-export const AccItemParagraph = styled.div
+export const AccItemParagraph = styled.p.attrs({
+    className: "text-base"
+})
 `
-    margin: 0;
-    font-size: 1rem;
-    color: #333;
-    font-weight: 300;
-    line-height: 1.3;
+    text-align: justify;
+    
 `;
