@@ -14,11 +14,12 @@ const Navbar=({scrollToSlide}) => {
 		setActive(!active);
 	};	
 
-	const reset = (event) => {
+	const reset = () => {
 		scrollToSlide(0);
+		setActive(false);
 	};
-	const some = (event) => {
-		console.log('esto es solo para evitar el warning')
+	const some = () => {
+		return null; 
 	};
 
 	const handleS=(event) =>{
@@ -28,12 +29,29 @@ const Navbar=({scrollToSlide}) => {
 		const docHeight = Math.max(body.scrollHeight, body.offsetHeight, html.clientHeight,  html.scrollHeight, html.offsetHeight);
 		const windowBottom = windowHeight + window.pageYOffset;
 		const navb = document.getElementById('navbar')
+		const hamb = document.getElementById('hamb')
+		const home = document.getElementById('home')
+		const study = document.getElementById('study')
+		const contact = document.getElementById('contact')
+		const abaut = document.getElementById('abaut')
+		const blog = document.getElementById('blog')
+
 		if (windowBottom >= docHeight) {
 			navb.classList.replace('bg-white','bar-vanished')
-			
-		  
+			hamb.classList.replace('text-primary','text-white')
+			home.classList.replace('text-primary','text-white')
+			contact.classList.replace('text-primary','text-white')
+			abaut.classList.replace('text-primary','text-white')
+			study.classList.replace('text-primary','text-white')
+			blog.classList.replace('text-primary','text-white')
 		} else {
-			navb.classList.replace('bar-vanished','bg-white')
+			navb.classList.replace('bar-vanished', 'bg-white')
+			hamb.classList.replace('text-white', 'text-primary')
+			home.classList.replace('text-white', 'text-primary')
+			contact.classList.replace('text-white', 'text-primary')
+			abaut.classList.replace('text-white', 'text-primary')
+			study.classList.replace('text-white', 'text-primary')
+			blog.classList.replace('text-white', 'text-primary')
 		}
 	  };
 
@@ -69,16 +87,17 @@ const Navbar=({scrollToSlide}) => {
 					</ImgWrapper>
 					<div className="hidden md:block items-center">
 						<ul className="list-none flex">
-							<LinkItem onClick={router.pathname=="/" ? reset : some} className={router.pathname=="/" ? "text-secondary2": "text-primary"}><Link href={ROUTES.HOME.link}>{ROUTES.HOME.name}</Link></LinkItem> 
-							<LinkItem onClick={router.pathname=="/studycases" ? reset : some} className={router.pathname=="/studycases" ? "text-secondary2": "text-primary"}><Link href={ROUTES.STUDYCASES.link}>{ROUTES.STUDYCASES.name}</Link></LinkItem>
-							<LinkItem onClick={router.pathname=="/about" ? reset : some} className={router.pathname=="/about" ? "text-secondary2": "text-primary"}><Link href={ROUTES.ABOUT.link}>{ROUTES.ABOUT.name}</Link></LinkItem>
-							<LinkItem onClick={router.pathname=="/contact" ? reset : some} className={router.pathname=="/contact" ? "text-secondary2": "text-primary"}><Link href={ROUTES.CONTACT.link}>{ROUTES.CONTACT.name}</Link></LinkItem>
-							<LinkItem onClick={router.pathname=="/blog" ? reset : some} className={router.pathname=="/blog" ? "text-secondary2": "text-primary"}><Link href={ROUTES.BLOG.link}>{ROUTES.BLOG.name}</Link></LinkItem>		
+							<Link href={ROUTES.HOME.link}><LinkItem id="home" onClick={router.pathname=="/" ? reset : some} className={router.pathname=="/" ? "text-secondary2": "text-primary"}>{ROUTES.HOME.name}</LinkItem></Link> 
+							<Link href={ROUTES.STUDYCASES.link}><LinkItem id="study" onClick={router.pathname=="/studycases" ? reset : some} className={router.pathname=="/studycases" ? "text-secondary2": "text-primary"}>{ROUTES.STUDYCASES.name}</LinkItem></Link>
+							<Link href={ROUTES.ABOUT.link}><LinkItem id="abaut" onClick={router.pathname=="/about" ? reset : some} className={router.pathname=="/about" ? "text-secondary2": "text-primary"}>{ROUTES.ABOUT.name}</LinkItem></Link>
+							<Link href={ROUTES.CONTACT.link}><LinkItem id="contact" onClick={router.pathname=="/contact" ? reset : some} className={router.pathname=="/contact" ? "text-secondary2": "text-primary"}>{ROUTES.CONTACT.name}</LinkItem></Link>
+							<Link href={ROUTES.BLOG.link}><LinkItem id="blog" onClick={router.pathname=="/blog" ? reset : some} className={router.pathname=="/blog" ? "text-secondary2": "text-primary"}>{ROUTES.BLOG.name}</LinkItem></Link>		
 						</ul>
 					</div>
 					<ButtonContainer className="md:hidden">							
 						<button className="mr-2 justify-end" onClick={setActive}>
-							<svg
+							<svg 
+								id="hamb"
 								fill="none"
 								stroke="currentColor"
 								strokeLinecap="round"
@@ -106,11 +125,11 @@ const Navbar=({scrollToSlide}) => {
 				</HeaderElements>													 
 				<div className="md:hidden">
 					<ul className="list-none flex flex-col items-center">
-						<LinkItem2 onClick={router.pathname=="/" ? reset : some} className={router.pathname=="/" ? "text-secondary2": "text-white"}><Link href={ROUTES.HOME.link}>{ROUTES.HOME.name}</Link></LinkItem2>
-						<LinkItem2 onClick={router.pathname=="/studycases" ? reset : some} className={router.pathname=="/studycases" ? "text-secondary2" : "text-white pt-9"}><Link href={ROUTES.STUDYCASES.link}>{ROUTES.STUDYCASES.name}</Link></LinkItem2>
-						<LinkItem2 onClick={router.pathname=="/about" ? reset : some} className={router.pathname=="/about" ? "text-secondary2 pt-9": "text-white pt-9"}><Link href={ROUTES.ABOUT.link}>{ROUTES.ABOUT.name}</Link></LinkItem2>
-						<LinkItem2 onClick={router.pathname=="/contact" ? reset : some} className={router.pathname=="/contact" ? "text-secondary2 pt-9": "text-white pt-9"}><Link href={ROUTES.CONTACT.link}>{ROUTES.CONTACT.name}</Link></LinkItem2>
-						<LinkItem2 onClick={router.pathname=="/blog" ? reset : some} className={router.pathname=="/blog" ? "text-secondary2 pt-9": "text-white pt-9"}><Link href={ROUTES.BLOG.link}>{ROUTES.BLOG.name}</Link></LinkItem2>	
+						<Link href={ROUTES.HOME.link}><LinkItem2 onClick={router.pathname=="/" ? reset : some } className={router.pathname=="/" ? "text-secondary2": "text-white"}>{ROUTES.HOME.name}</LinkItem2></Link>
+						<Link href={ROUTES.STUDYCASES.link}><LinkItem2 onClick={router.pathname=="/studycases" ? reset : some} className={router.pathname=="/studycases" ? "text-secondary2 pt-9" : "text-white pt-9"}>{ROUTES.STUDYCASES.name}</LinkItem2></Link>
+						<Link href={ROUTES.ABOUT.link}><LinkItem2 onClick={router.pathname=="/about" ? reset : some} className={router.pathname=="/about" ? "text-secondary2 pt-9": "text-white pt-9"}>{ROUTES.ABOUT.name}</LinkItem2></Link>
+						<Link href={ROUTES.CONTACT.link}><LinkItem2 onClick={router.pathname=="/contact" ? reset : some} className={router.pathname=="/contact" ? "text-secondary2 pt-9": "text-white pt-9"}>{ROUTES.CONTACT.name}</LinkItem2></Link>
+						<Link href={ROUTES.BLOG.link}><LinkItem2 onClick={router.pathname=="/blog" ? reset : some} className={router.pathname=="/blog" ? "text-secondary2 pt-9": "text-white pt-9"}>{ROUTES.BLOG.name}</LinkItem2></Link>	
 					</ul>							
 				</div>					
 			</HamburguerWrapper>			
