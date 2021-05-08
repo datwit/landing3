@@ -7,6 +7,7 @@ import Faqs from '../../components/Partner/Faqs'
 import PartPricing from '../../components/Partner/PartPricing'
 import Navbar from '../../components/Navbar' 
 import { motion } from 'framer-motion'
+import Head from 'next/head';
 
 const Partner = () => {
     const style={
@@ -14,33 +15,39 @@ const Partner = () => {
     } 
 
     return (
-      <motion.div initial={{opacity:0,  y: 200}} animate={{opacity:1, y:0}}> 
-          <FullPage controls={CustomControls}>
-          <Slide {...style}>
-            <Section>
-              <Find />
-            </Section>        
-          </Slide>
+      <> 
+        <Head>
+        <title>Datwit | Partner</title>
+        <link rel="icon" href="/favicon.ico" />
+        </Head>  
+        <motion.div initial={{opacity:0,  y: 200}} animate={{opacity:1, y:0}}> 
+            <FullPage controls={CustomControls}>
+            <Slide {...style}>
+              <Section>
+                <Find />
+              </Section>        
+            </Slide>
 
-          <Slide>
-            <Section>
-              <PartPricing />
-            </Section>        
-          </Slide>
+            <Slide>
+              <Section>
+                <PartPricing />
+              </Section>        
+            </Slide>
 
-          <Slide>
-            <Section>
-              <Faqs />
-            </Section>        
-          </Slide>
+            <Slide>
+              <Section>
+                <Faqs />
+              </Section>        
+            </Slide>
 
-          <Slide>
-            <section className= "w-full h-screen bg-primary mx-auto px-10">
-              <Footer />
-            </section>                  
-          </Slide>
-          </FullPage>
-      </motion.div>  
+            <Slide>
+              <section className= "w-full h-screen bg-primary mx-auto px-10">
+                <Footer />
+              </section>                  
+            </Slide>
+            </FullPage>
+        </motion.div>  
+      </>
     )
 }
 

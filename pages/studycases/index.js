@@ -12,6 +12,7 @@ import Navbar from '../../components/Navbar'
 import { motion } from 'framer-motion'
 import { useState, useEffect } from 'react'
 import ReactPaginate from 'react-paginate';
+import Head from 'next/head';
 
 import cases from '../../cache/cases.json'
 
@@ -98,42 +99,48 @@ const nextSVG = <svg className="h-8 w-8 text-secondary2" viewBox="0 0 24 24" fil
 const prevSVG = <svg className="h-8 w-8 text-secondary2" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">  <polyline points="11 17 6 12 11 7" />  <polyline points="18 17 13 12 18 7" /></svg>
   
 return (
-    <motion.div initial={{opacity:0,  y: 200}} animate={{opacity:1, y:0}}>          
-        <FullPage controls={CustomControls}>
-            <Slide {...style}>
-                <Section>
-                <div className="container px-5 mx-auto"> 
-                    <SectionHeader>Check out our solutions</SectionHeader>
-                    <SectionSubheader>Commitment and creativity mark our creations. By all means, stroll along...</SectionSubheader>
-                    {/*pagination*/}
-                    <div className="flex flex-wrap">
-                        {data}                       
-                        <PaginationWrapper>
-                            <ReactPaginate
-                              previousLabel={prevSVG}
-                              nextLabel={nextSVG}
-                              breakLabel={"..."}
-                              breakClassName={"break-me"}
-                              pageCount={pageCount}
-                              marginPagesDisplayed={3}
-                              pageRangeDisplayed={3}
-                              onPageChange={handlePageClick}
-                              containerClassName={"pagination"}
-                              subContainerClassName={"pages pagination"}
-                              activeClassName={"active"}
-                            />
-                        </PaginationWrapper>                                              
-                    </div>
-                </div>
-                </Section>
-            </Slide>
-            <Slide>
-              <section className= "w-full h-screen bg-primary mx-auto px-10">
-                <Footer />
-              </section>                  
-            </Slide>
-        </FullPage> 
-    </motion.div>   
+    <> 
+      <Head>
+      <title>Datwit | Study Cases</title>
+      <link rel="icon" href="/favicon.ico" />
+      </Head> 
+      <motion.div initial={{opacity:0,  y: 200}} animate={{opacity:1, y:0}}>          
+          <FullPage controls={CustomControls}>
+              <Slide {...style}>
+                  <Section>
+                  <div className="container px-5 mx-auto"> 
+                      <SectionHeader>Check out our solutions</SectionHeader>
+                      <SectionSubheader>Commitment and creativity mark our creations. By all means, stroll along...</SectionSubheader>
+                      {/*pagination*/}
+                      <div className="flex flex-wrap">
+                          {data}                       
+                          <PaginationWrapper>
+                              <ReactPaginate
+                                previousLabel={prevSVG}
+                                nextLabel={nextSVG}
+                                breakLabel={"..."}
+                                breakClassName={"break-me"}
+                                pageCount={pageCount}
+                                marginPagesDisplayed={3}
+                                pageRangeDisplayed={3}
+                                onPageChange={handlePageClick}
+                                containerClassName={"pagination"}
+                                subContainerClassName={"pages pagination"}
+                                activeClassName={"active"}
+                              />
+                          </PaginationWrapper>                                              
+                      </div>
+                  </div>
+                  </Section>
+              </Slide>
+              <Slide>
+                <section className= "w-full h-screen bg-primary mx-auto px-10">
+                  <Footer />
+                </section>                  
+              </Slide>
+          </FullPage> 
+      </motion.div> 
+    </>  
   );
 }
 export default AllStudyCases

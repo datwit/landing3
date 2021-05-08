@@ -9,6 +9,7 @@ import Link from "next/link"
 import { useRouter } from 'next/router'
 import Navbar from '../../components/Navbar'
 import { motion } from 'framer-motion'
+import Head from 'next/head';
 
 import posts from '../../cache/posts.json'
     posts.map(post => (
@@ -39,6 +40,11 @@ const BlogResults = () => {
     )
   
 return (
+  <>
+    <Head>
+    <title>Datwit | Search results</title>
+    <link rel="icon" href="/favicon.ico" />
+    </Head>  
     <motion.div initial={{opacity:0,  y: 200}} animate={{opacity:1, y:0}}> 
         <FullPage controls={CustomControls}>
           <Slide {...style}>
@@ -86,6 +92,7 @@ return (
           </Slide>
         </FullPage>      
     </motion.div>
+  </>  
   );
 }
 export default BlogResults

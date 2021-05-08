@@ -8,54 +8,61 @@ import Pricing from '../components/Home/Pricing'
 import Footer from '../components/Footer'
 import Selection from '../components/Selection' 
 import { motion } from 'framer-motion'
+import Head from 'next/head';
 
 export default function Home() {
   const style={
     height:'calc(100% - 80px)',    
   }  
 
-  return (    
-    <motion.div initial={{opacity:0,  y: 200}} animate={{opacity:1, y:0}}> 
-            <FullPage controls={CustomControls}> 
+  return ( 
+    <> 
+      <Head>
+      <title>Datwit | Home</title>
+      <link rel="icon" href="/favicon.ico" />
+      </Head>     
+      <motion.div initial={{opacity:0,  y: 200}} animate={{opacity:1, y:0}}> 
+              <FullPage controls={CustomControls}> 
 
-              <Slide {...style}>      
-                <Section>                  
-                    <Hero />                  
-                </Section>        
-              </Slide>
+                <Slide {...style}>      
+                  <Section>                  
+                      <Hero />                  
+                  </Section>        
+                </Slide>
 
-              <Slide>
-              <Section>
-                  <Services />
-                </Section>
-              </Slide> 
-
-              <Slide>
+                <Slide>
                 <Section>
-                  <StudyCases />
-                </Section>          
-              </Slide>
-              
-              <Slide>
-                <Section>
-                  <Pricing />
-                </Section>          
-              </Slide>
+                    <Services />
+                  </Section>
+                </Slide> 
 
-              <Slide>
-                <Section>
-                  <Selection />
-                </Section>          
-              </Slide>
+                <Slide>
+                  <Section>
+                    <StudyCases />
+                  </Section>          
+                </Slide>
+                
+                <Slide>
+                  <Section>
+                    <Pricing />
+                  </Section>          
+                </Slide>
 
-              <Slide>
-                <section className= "w-full h-screen bg-primary mx-auto px-10">
-                  <Footer />
-                </section>                 
-              </Slide>
-              
-          </FullPage>
-      
-      </motion.div>        
+                <Slide>
+                  <Section>
+                    <Selection />
+                  </Section>          
+                </Slide>
+
+                <Slide>
+                  <section className= "w-full h-screen bg-primary mx-auto px-10">
+                    <Footer />
+                  </section>                 
+                </Slide>
+                
+            </FullPage>
+        
+        </motion.div> 
+    </>         
   )
 }

@@ -9,11 +9,16 @@ import { motion } from 'framer-motion'
 import { FullPage } from 'react-full-page'
 import CustomControls from '../../components/Slide/CustomControls'
 import AccordionItem from '../../components/Partner/Faqs/AccordionItem'
+import Head from 'next/head';
 
 const FaqsQandA = () => {       
      
     return (
-        
+        <> 
+        <Head>
+        <title>Datwit | FAQs</title>
+        <link rel="icon" href="/favicon.ico" />
+        </Head>
         <motion.div initial={{opacity:0,  y: 200}} animate={{opacity:1, y:0}}>  
             <FullPage controls={CustomControls} scrollMode='normal'>
                 <section className="pt-20">  
@@ -39,10 +44,9 @@ const FaqsQandA = () => {
                     <Footer />
                 </section>
                 
-            </FullPage>       
-                        
+            </FullPage>                         
         </motion.div>
-        
+        </>
     )
 }
 
