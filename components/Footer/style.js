@@ -7,14 +7,22 @@ export const FooterHeader = styled.h1.attrs({
     className: "text-white text-center text-4xl my-2"
 })``;
 export const FooterLinksWrapper = styled.div.attrs({
-    className: "flex flex-wrap overflow-hidden lg:-mx-2 justify-center sm:justify-start"
+    className: "flex flex-wrap overflow-hidden lg:-mx-2 justify-center sm:justify-start md:px-8"
 })``;
 export const ColumnContent = styled.div.attrs({
     className: "sm:w-2/4 lg:w-1/4 overflow-hidden lg:my-2 lg:px-2 mb-4"
 })``;
 export const ColumnTitle = styled.h2.attrs({
-    className: "text-white font-bold flex justify-start text-lg sm:mb-5 justify-center sm:justify-start"
-})``;
+    className: "text-white font-bold text-lg sm:mb-5"
+})
+`
+@media (max-width: 639px){
+    text-align: center !important;
+}
+@media (min-width: 640px){
+    text-align: left !important;
+}
+`;
 export const SocialList = styled.ul.attrs({
     className: "inline-flex"
 })``;
@@ -30,7 +38,15 @@ svg{
 `;
 export const ContactWrapper = styled.span.attrs({
     className: "flex"
-})``;
+})
+`
+@media (max-width: 639px){
+    text-align: center !important;
+}
+@media (min-width: 640px){
+    text-align: left !important;
+}
+`;
 export const UpperH3 = styled.h3.attrs({
     className: "text-white text-left sm:mb-5 cursor-pointer flex justify-center sm:justify-start"
 })``;
