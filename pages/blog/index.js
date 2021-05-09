@@ -68,7 +68,7 @@ const Blog = () => {
       <BlogCardWrapper key={key6}>
         <div className="hidden md:block">
           <BlogCardBorder>
-            <img className="lg:h-48 md:h-28 w-full object-cover object-center" src={item.img} alt="" />         
+          <Link href={`/blog/${item.id}`}><img className="lg:h-48 md:h-28 w-full object-cover object-center cursor-pointer" src={item.img} alt="" /></Link>         
             <BlogCardBlock>
               <div className="flex flex-wrap">
                 {
