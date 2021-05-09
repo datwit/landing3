@@ -7,6 +7,9 @@ export const ContentWrapper = styled.div.attrs({
     &.maxHeight{
         height: 100%;
     }
+    /* position: absolute;
+    top: 50%;
+    transform: translateY(-50%); */
 `;
 export const SectionHeader = styled.h2.attrs({
     className: "mt-4"
