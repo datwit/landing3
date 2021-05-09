@@ -4,7 +4,7 @@ export const BlockOuterContainer = styled.div.attrs({
     className: "w-full sm:w-1/2 flex justify-center"
 })``;
 export const BlockBorder = styled.a.attrs({
-    className: "p-3 border-1 border-gray-600 border-opacity-100 shadow-md overflow-hidden w-36 h-40 sm:w-48 sm:h-52 md:w-64 md:h-full cursor-pointer mb-2 sm:mb-0"
+    className: "p-3 border-1 border-gray-600 border-opacity-100 shadow-md overflow-hidden w-36 h-40 sm:w-48 sm:h-52 md:w-64 md:h-full xl:w-72 cursor-pointer mb-2 sm:mb-0"
 })
 `
     &.active{

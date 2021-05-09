@@ -37,13 +37,13 @@ const Selection = () => {
             <ContentWrapper>
                 <>
                     <BlockOuterContainer>
-                        <BlockBorder onClick={handleToggle1} className={card1 ? 'active' : ''}>
+                        <BlockBorder onClick={handleToggle1} className={`${card1 ? 'active' : ''} ml-16`}>
                             <img src="" alt="img" className="h-28 sm:h-40 md:h-60" />
                             <SHeader>Partner</SHeader>
                         </BlockBorder>
                     </BlockOuterContainer>
                     <BlockOuterContainer>
-                        <BlockBorder onClick={handleToggle2} className={card2 ? 'active' : ''}>
+                        <BlockBorder onClick={handleToggle2} className={`${card2 ? 'active' : ''} mr-16`}>
                             <img src="" alt="img" className="h-28 sm:h-40 md:h-60" />
                             <SHeader>Team</SHeader>
                         </BlockBorder>
