@@ -60,8 +60,8 @@ const Blog = () => {
     const data = posts
     const cant = window.innerHeight <= 600 && window.innerWidth <= window.innerHeight ? 
        2 : window.innerHeight >= 800 && window.innerWidth <= window.innerHeight ? 4 : 3
-    setPerPage(cant) 
-       
+
+    setPerPage(cant)    
     //slicing data   
     const slice = data.slice(offset, offset + cant)
     const postData = slice.map((item, key6) =>
@@ -142,14 +142,14 @@ const Blog = () => {
   
   return (
     <>
-      <Head>
-      <title>Datwit | Blog</title>
-      <link rel="icon" href="/favicon.ico" />
-      </Head> 
-      <motion.div initial={{opacity:0,  y: 200}} animate={{opacity:1, y:0}}>       
-          <FullPage controls={CustomControls}>
-            <Slide {...style}>
-              <Section>
+    <Head>
+    <title>Datwit | Blog</title>
+    <link rel="icon" href="/favicon.ico" />
+    </Head> 
+    <motion.div initial={{opacity:0,  y: 200}} animate={{opacity:1, y:0}}>       
+        <FullPage controls={CustomControls}>
+          <Slide {...style}>
+            <Section>
                 <div className="container px-5 mx-auto relative top-2/4 transform -translate-y-2/4">
                   <SectionSubheader>Discover interesting ideas and unique perspectives from our amazing crew</SectionSubheader>        
                   {pressEnter && searchRedirect()}
@@ -171,21 +171,27 @@ const Blog = () => {
                   {/*pagination*/}
                   <div className="flex flex-wrap">
                     {data}
-                    <PaginationWrapper>
-                      <ReactPaginate
-                        previousLabel={prevSVG}
-                        nextLabel={nextSVG}
-                        breakLabel={"..."}
-                        breakClassName={"break-me"}
-                        pageCount={pageCount}
-                        marginPagesDisplayed={3}
-                        pageRangeDisplayed={3}
-                        onPageChange={handlePageClick}
-                        containerClassName={"pagination"}
-                        subContainerClassName={"pages pagination"}
-                        activeClassName={"active"}
-                      />
-                    </PaginationWrapper>
+                    {
+                    pageCount >= 2 
+                      ?
+                      <PaginationWrapper>
+                        <ReactPaginate
+                          previousLabel={prevSVG}
+                          nextLabel={nextSVG}
+                          breakLabel={"..."}
+                          breakClassName={"break-me"}
+                          pageCount={pageCount}
+                          marginPagesDisplayed={3}
+                          pageRangeDisplayed={3}
+                          onPageChange={handlePageClick}
+                          containerClassName={"pagination"}
+                          subContainerClassName={"pages pagination"}
+                          activeClassName={"deactivate"}
+                          />
+                        </PaginationWrapper>
+                        :
+                        [] 
+                      }                
 
                   </div>
                 </div>

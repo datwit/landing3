@@ -115,8 +115,11 @@ return (
                       <SectionSubheader>Commitment and creativity mark our creations. By all means, stroll along...</SectionSubheader>
                       {/*pagination*/}
                       <div className="flex flex-wrap">
-                          {data}                       
-                          <PaginationWrapper>
+                          {data} 
+                          {
+                          pageCount >= 2 
+                          ?                      
+                            <PaginationWrapper>
                               <ReactPaginate
                                 previousLabel={prevSVG}
                                 nextLabel={nextSVG}
@@ -130,7 +133,10 @@ return (
                                 subContainerClassName={"pages pagination"}
                                 activeClassName={"active"}
                               />
-                          </PaginationWrapper>                                              
+                            </PaginationWrapper>
+                          :
+                            [] 
+                          }                                                 
                       </div>
                   </div>
                   </Section>
