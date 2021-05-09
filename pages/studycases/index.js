@@ -29,8 +29,10 @@ const AllStudyCases = () =>{
 
   const getData = () => {
     const data = cases
-    const cant = window.innerHeight <= 600 ? 2:3
+    const cant = window.innerHeight <= 600 && window.innerWidth <= window.innerHeight ? 
+       2 : window.innerHeight >= 800 && window.innerWidth <= window.innerHeight ? 4 : 3
     setPerPage(cant)
+    
     //slicing data   
     const slice = data.slice(offset, offset + cant)
     const casesData = slice.map((item, key6) =>           

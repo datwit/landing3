@@ -58,8 +58,10 @@ const Blog = () => {
   //getting our data 
   const getData = () => {
     const data = posts
-    const cant = window.innerHeight <= 600 ? 2 : 3
-    setPerPage(cant)    
+    const cant = window.innerHeight <= 600 && window.innerWidth <= window.innerHeight ? 
+       2 : window.innerHeight >= 800 && window.innerWidth <= window.innerHeight ? 4 : 3
+    setPerPage(cant) 
+       
     //slicing data   
     const slice = data.slice(offset, offset + cant)
     const postData = slice.map((item, key6) =>
@@ -149,7 +151,7 @@ const Blog = () => {
             <Slide {...style}>
               <Section>
                 <div className="container px-5 mx-auto relative top-2/4 transform -translate-y-2/4">
-                  <SectionSubheader>Discover interesting ideas and unique perspectives from our amazing crew</SectionSubheader>                
+                  <SectionSubheader>Discover interesting ideas and unique perspectives from our amazing crew</SectionSubheader>        
                   {pressEnter && searchRedirect()}
                   {/* search box*/}
                   <SearchWrapper>
