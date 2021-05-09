@@ -39,7 +39,7 @@ const Services = () => {
                         <CardRevealWrapper>                                                
                             <CardRevealBorder>                           
                                 {/*card image*/}
-                                <div className="py-6">
+                                <div className="py-6 lg:py-14">
                                     <SoftDSVG/> 
                                 </div>                                 
                                 {/*card title */}                         
@@ -92,7 +92,7 @@ const Services = () => {
                         <CardRevealWrapper>
                             <CardRevealBorder>                                                                               
                                 {/*card image*/}
-                                <div className="py-6">
+                                <div className="py-6 lg:py-14">
                                     <DataScSVG /> 
                                 </div>                                 
                                 {/*card title */}                           
