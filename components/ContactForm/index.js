@@ -23,7 +23,7 @@ const ContacthtmlForm = () => {
                     </iframe>
                 </MapWrapper>
                 <FormBlock>                                          
-                    <FormIntro>Our doors are always open, so feel free to drop by and spot us in our natural habitat</FormIntro>
+                    <FormIntro>Our doors are always open, so feel free to drop by and spot us in our natural habitat.</FormIntro>
                     <InputWrapper>
                         <FormLabels>Name</FormLabels>
                         <FInput
