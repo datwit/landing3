@@ -71,8 +71,8 @@ export const PaginationWrapper= styled.div
     
     li{
         display: inline !important;
-        width: 40px;
-        height: 40px;
+        width: 35px;
+        height: 35px;
         border: 2px solid #e69c24;
         border-radius: 50%;
         justify-content:center;
@@ -104,6 +104,3 @@ export const PaginationWrapper= styled.div
 }   
 
 `;
-
-
-

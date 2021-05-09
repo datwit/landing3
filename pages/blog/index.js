@@ -59,7 +59,7 @@ const Blog = () => {
   const getData = () => {
     const data = posts
     const cant = window.innerHeight <= 600 && window.innerWidth <= window.innerHeight ? 
-       2 : window.innerHeight >= 800 && window.innerWidth <= window.innerHeight ? 4 : 3
+       2 : window.innerHeight >= 800 && window.innerWidth <= 765 ? 4 : 3
 
     setPerPage(cant)    
     //slicing data   
@@ -142,69 +142,69 @@ const Blog = () => {
   
   return (
     <>
-    <Head>
-    <title>Datwit | Blog</title>
-    <link rel="icon" href="/favicon.ico" />
-    </Head> 
-    <motion.div initial={{opacity:0,  y: 200}} animate={{opacity:1, y:0}}>       
-        <FullPage controls={CustomControls}>
-          <Slide {...style}>
-            <Section>
+        <Head>
+        <title>Datwit | Blog</title>
+        <link rel="icon" href="/favicon.ico" />
+        </Head> 
+        <motion.div initial={{opacity:0,  y: 200}} animate={{opacity:1, y:0}}>       
+            <FullPage controls={CustomControls}>
+              <Slide {...style}>
+                <Section>
                 <div className="container px-5 mx-auto relative top-2/4 transform -translate-y-2/4">
-                  <SectionSubheader>Discover interesting ideas and unique perspectives from our amazing crew</SectionSubheader>        
-                  {pressEnter && searchRedirect()}
-                  {/* search box*/}
-                  <SearchWrapper>
-                    <SearchField
-                      onChange={handleChange}
-                      placeholder='Search posts'
-                      type='text'
-                      value={query}
-                      type="text"
-                      name="search"
-                      placeholder="Search here">
-                    </SearchField>
-                    <Link href={`/blog/search?q=${query}`}><svg className="h-6 w-6 text-secondary2" width="24" height="24" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">  <path stroke="none" d="M0 0h24v24H0z" />  <circle cx="10" cy="10" r="7" />  <line x1="21" y1="21" x2="15" y2="15" /></svg></Link>
+                      <SectionSubheader>Discover interesting ideas and unique perspectives from our amazing crew</SectionSubheader>        
+                      {pressEnter && searchRedirect()}
+                      {/* search box*/}
+                      <SearchWrapper>
+                        <SearchField
+                          onChange={handleChange}
+                          placeholder='Search posts'
+                          type='text'
+                          value={query}
+                          type="text"
+                          name="search"
+                          placeholder="Search here">
+                        </SearchField>
+                        <Link href={`/blog/search?q=${query}`}><svg className="h-6 w-6 text-secondary2" width="24" height="24" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">  <path stroke="none" d="M0 0h24v24H0z" />  <circle cx="10" cy="10" r="7" />  <line x1="21" y1="21" x2="15" y2="15" /></svg></Link>
 
-                  </SearchWrapper>
+                    </SearchWrapper>
 
-                  {/*pagination*/}
-                  <div className="flex flex-wrap">
-                    {data}
-                    {
-                    pageCount >= 2 
-                      ?
-                      <PaginationWrapper>
-                        <ReactPaginate
-                          previousLabel={prevSVG}
-                          nextLabel={nextSVG}
-                          breakLabel={"..."}
-                          breakClassName={"break-me"}
-                          pageCount={pageCount}
-                          marginPagesDisplayed={3}
-                          pageRangeDisplayed={3}
-                          onPageChange={handlePageClick}
-                          containerClassName={"pagination"}
-                          subContainerClassName={"pages pagination"}
-                          activeClassName={"deactivate"}
-                          />
-                        </PaginationWrapper>
-                        :
-                        [] 
-                      }                
+                    {/*pagination*/}
+                    <div className="flex flex-wrap">
+                      {data}
+                      {
+                      pageCount >= 2 
+                        ?
+                        <PaginationWrapper>
+                          <ReactPaginate
+                            previousLabel={prevSVG}
+                            nextLabel={nextSVG}
+                            breakLabel={"..."}
+                            breakClassName={"break-me"}
+                            pageCount={pageCount}
+                            onPageChange={handlePageClick}
+                            containerClassName={"pagination"}
+                            subContainerClassName={"pages pagination"}
+                            activeClassName={"active"}
+                            />
+                          </PaginationWrapper>
+                          :
+                          [] 
+                        }
+                        
+                      
 
+                    </div>
                   </div>
-                </div>
-              </Section>
-            </Slide>
+                </Section>
+              </Slide>
 
-            <Slide>
-              <section className="w-full h-screen bg-primary mx-auto px-10">
-                <Footer />
-              </section>
-            </Slide>
-          </FullPage>
-      </motion.div>
+              <Slide>
+                <section className="w-full h-screen bg-primary mx-auto px-10">
+                  <Footer />
+                </section>
+              </Slide>
+            </FullPage>
+        </motion.div>
     </>
   );
 }
@@ -223,3 +223,4 @@ export const getStaticProps = async () => {
     },
   };
 }
+
