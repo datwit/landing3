@@ -37,7 +37,16 @@ const Services = () => {
                 <div className="hidden md:block">
                     <ContentWrapper>
                         <CardRevealWrapper>                                                
-                            <CardRevealBorder>                           
+                            <CardRevealBorder onClick={e => 
+                                    { 
+                                    e.preventDefault();
+                                    setOpenCard1(!openCard1);
+                                    }}
+                                    data-toggle="tab"
+                                    href="#link1"
+                                    role="tablist"
+                                    className="cursor-pointer"
+                                    >                           
                                 {/*card image*/}
                                 <div className="py-6 lg:py-14">
                                     <SoftDSVG/> 
@@ -90,7 +99,15 @@ const Services = () => {
                             </CardRevealBorder> 
                         </CardRevealWrapper>
                         <CardRevealWrapper>
-                            <CardRevealBorder>                                                                               
+                            <CardRevealBorder onClick={e => 
+                                    { 
+                                    e.preventDefault();
+                                    setOpenCard2(!openCard2);
+                                    }}
+                                    data-toggle="tab"
+                                    href="#link2"
+                                    role="tablist"
+                                    className="cursor-pointer">                                                                               
                                 {/*card image*/}
                                 <div className="py-6 lg:py-14">
                                     <DataScSVG /> 
