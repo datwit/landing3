@@ -5,7 +5,7 @@ import Link from 'next/link';
 const CTA = ({buttonName, children,hhref}) => { 
      
       return (
-        <div className="justify-center my-8 select-none flex">
+        <div className="flex justify-center my-8 select-none">
             <Link href={hhref}>
               <Button>{buttonName}            
               {children}
