@@ -65,7 +65,7 @@ export const PaginationWrapper= styled.div
     list-style: none;
     outline: none;
     position: absolute;
-    bottom: 1%;
+    bottom: -60px;
     left: 50%;
     transform:translateX(-50%);    
     

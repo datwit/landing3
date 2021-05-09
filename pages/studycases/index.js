@@ -108,7 +108,7 @@ return (
           <FullPage controls={CustomControls}>
               <Slide {...style}>
                   <Section>
-                  <div className="container px-5 mx-auto"> 
+                  <div className="container px-5 mx-auto relative top-2/4 transform -translate-y-2/4"> 
                       <SectionHeader>Check out our solutions</SectionHeader>
                       <SectionSubheader>Commitment and creativity mark our creations. By all means, stroll along...</SectionSubheader>
                       {/*pagination*/}

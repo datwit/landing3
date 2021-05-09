@@ -5,7 +5,7 @@ import datas from './data.json'
 
 const Find = () => {
     return (
-        <div className="container px-5 mx-auto">
+        <div className="container px-5 mx-auto relative top-2/4 transform -translate-y-2/4">
             <SectionHeader>Find the right partnership</SectionHeader>
             <SectionSubheader>Lorem, ipsum dolor sit amet consectetur adipisicing elit...</SectionSubheader>
                 <ContentWrapper>

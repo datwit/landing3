@@ -6,7 +6,7 @@ import {Button} from '../../styles/global'
 
 const ContacthtmlForm = () => {    
     return (
-        <div className="container px-5 mx-auto">            
+        <div className="container px-5 mx-auto relative top-2/4 transform -translate-y-2/4 mt-6">            
             <SectionSubheader>Commitment and creativity mark our creations. By all means, stroll along...</SectionSubheader>
             <ContentWrapper>
                 <MapWrapper>
