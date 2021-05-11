@@ -50,7 +50,8 @@ export const AccordionTitleWrapper = styled.div.attrs({
     cursor:pointer;
 
     .icon-rotate {       
-        transform: rotate(180deg);               
+        transform: rotate(180deg); 
+        color: #00baff;              
     }   
 
 `;

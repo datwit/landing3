@@ -12,8 +12,8 @@ const AccordionItem = ({ question, answer}) => {
         >
         <AccordionTitleWrapper>
             <AccordionTitle>{question}</AccordionTitle>          
-            <AccordionIcon  className={!opened ? 'icon-rotate' : '' } fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" d="M19 9l-7 7-7-7"/>
+            <AccordionIcon  className={!opened ? '' : 'icon-rotate' } fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
             </AccordionIcon>         
         </AccordionTitleWrapper>
           <AccItemInner {...{className:'accordion-item__inner'}}>
