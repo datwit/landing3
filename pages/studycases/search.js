@@ -33,7 +33,7 @@ const CasesResults = () => {
                 <FullPage controls={CustomControls}>
                     <Slide {...style}>
                         <Section>
-                            <div className="container px-5 mx-auto">
+                            <div className="container px-5 mx-auto mt-20">
                                 <SectionHeader>Search Results</SectionHeader>
                                 <ContentWrapper>
                                     {

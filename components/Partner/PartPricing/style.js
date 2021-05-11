@@ -41,7 +41,7 @@ export const PricingCardGray= styled.div.attrs({
 }
 `;
 export const ToggleWrapper = styled.div.attrs({
-    className: "flex mx-auto border-2 border-gray-200 border-opacity-60 rounded-full overflow-hidden mt-6 mb-6 justify-between lg:max-w-lg xl:max-w-xl"
+    className: "flex mx-auto border-2 border-gray-200 border-opacity-60 rounded-full overflow-hidden my-3 justify-between lg:max-w-lg xl:max-w-xl"
 })``;
 export const BundleChooser = styled.a.attrs({
     className: "py-1 px-4  rounded-full text-xs sm:text-base flex items-center"

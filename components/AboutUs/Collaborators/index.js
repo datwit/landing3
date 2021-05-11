@@ -6,7 +6,7 @@ import {ContentWrapper} from '../../../styles/global';
 const Collaborators = () => {
     
     return (
-        <div className="container px-5 mx-auto relative top-2/4 transform -translate-y-2/4 mt-24">
+        <div className="container px-5 mx-auto relative top-2/4 transform -translate-y-2/4 mt-32 lg:mt-0">
             <h2 className="mt-4">Collaborators</h2>
             <h4 className="mb-6">Our amazing collaborators help drive Datwit towards being a cutting-edge company</h4>
             <div className="hidden md:block">
