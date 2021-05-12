@@ -5,7 +5,7 @@ import {ContentWrapper, SectionHeader, SectionSubheader} from '../../../styles/g
 import {OuterWrapper, Field, Price, LilDescrip, PBulletsWrapper, PBullets, CarouselContainer} from './style';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 
-var Carousel = require('react-responsive-carousel').Carousel;
+const Carousel = require('react-responsive-carousel').Carousel;
 
 const index = () => {
     
