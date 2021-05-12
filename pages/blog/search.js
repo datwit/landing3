@@ -60,18 +60,18 @@ const BlogResults = () => {
     //slicing data   
     const slice = data.slice(offset, offset + cant)
     const postData = slice.map((item, key6) =>
-      <div key={key6}>
+      <div className="w-full" key={key6}>
         <div className="mx-4 md:mx-0 mb-3">
             <div className="flex">
               <Link href={`/blog/${item.id}`}><img className="sm:w-1/6 w-1/2" src={item.img} alt="" /></Link>         
               <RespBlock>
-              <DateWrapper>
-                  {format(parseISO(item.date), 'MMMM do, uuu')}
-              </DateWrapper>
-                <Link href={`/blog/${item.id}`}><BlogTitle1>{item.title}</BlogTitle1></Link>
-                <CardSummary className="hidden sm:block">{item.summary}</CardSummary>
+                <DateWrapper>
+                    {format(parseISO(item.date), 'MMMM do, uuu')}
+                </DateWrapper>
+                  <Link href={`/blog/${item.id}`}><BlogTitle1>{item.title}</BlogTitle1></Link>
+                  <CardSummary className="hidden sm:block">{item.summary}</CardSummary>
               </RespBlock>
-          </div>
+            </div>
         </div>
       </div>
     )

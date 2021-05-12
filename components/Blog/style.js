@@ -20,7 +20,7 @@ export const BlogCardBorder = styled.div.attrs({
     className: "border border-gray-300 shadow hover:shadow-lg transition duration-200 ease-in overflow-hidden"
 })``;
 export const RespBlock = styled.div.attrs({
-    className: "p-2 w-full"
+    className: "p-2 sm:w-5/6 w-1/2"
 })``;
 export const BlogTitle1 = styled.h1.attrs({
     className: "title-font text-lg font-bold text-primary mb-1 cursor-pointer"

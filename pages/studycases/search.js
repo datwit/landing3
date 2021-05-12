@@ -38,14 +38,14 @@ const CasesResults = () => {
                                 <ContentWrapper>
                                     {
                                     results.length > 0
-                                    ?   <div>
+                                    ?   <div className="w-full">
                                             <ul>
                                             {
                                             results.map(({ title, summary, date, img, id }, key1) => (
                                                 <li key={key1}>
                                                     <div className="mx-4 md:mx-0 mb-3">
                                                         <div className="flex">
-                                                            <img src={img} className="sm:w-1/5 w-1/2" alt="" />
+                                                            <img src={img} className="sm:w-1/6 w-1/2" alt="" />
                                                             <RespBlock>
                                                                 <Link href={`/studycases/${id}`}><BlogTitle2>{title}</BlogTitle2></Link>
                                                                 <DateWrapper>
