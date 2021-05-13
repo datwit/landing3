@@ -4,16 +4,15 @@ import Footer from '../../components/Footer'
 import { format, parseISO } from 'date-fns'
 import CustomControls from '../../components/Slide/CustomControls'
 import { ContentWrapper, SectionHeader} from '../../styles/global'
-import { CardSummary,BlogTitle2, DateWrapper, RespBlock} from '../../components/Blog/style'
+import { CardSummary,BlogTitle2, DateWrapper, RespBlock, BlogTitle1, PaginationWrapper, PaginationSection } from '../../components/Blog/style'
 import Link from "next/link"
 import { useRouter } from 'next/router'
-import Navbar from '../../components/Navbar'
 import { motion } from 'framer-motion'
 import Head from 'next/head';
 
 import ReactPaginate from 'react-paginate'
 import { useEffect, useState } from 'react'
-import { BlogTitle1, PaginationWrapper } from '../../components/Blog/style'
+
 
 
 
@@ -108,8 +107,10 @@ return (
             <div className="container px-5 mx-auto relative transform mt-20">
             <SectionHeader>Search Results</SectionHeader>
               {/*pagination*/}
-                <div className="flex flex-wrap">
-                  {data}
+                <PaginationSection>
+                  <div className="w-full" id="pag-section">
+                    {data}
+                  </div>                 
                   { results ==0 ?
                       <div className="mx-auto">
                       <p>No results found 😢 </p>
@@ -132,7 +133,7 @@ return (
                       :
                       []
                   }
-                </div>
+                </PaginationSection>
               </div>            
             </Section>        
           </Slide>       

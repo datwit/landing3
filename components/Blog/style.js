@@ -104,3 +104,12 @@ export const PaginationWrapper= styled.div
 }   
 
 `;
+export const PaginationSection= styled.div.attrs({
+    className: "flex flex-wrap"
+})
+`
+#pag-section{
+    height: 70vh;
+}
+
+`;
