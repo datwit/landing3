@@ -2,9 +2,18 @@ import React from 'react'
 import {SectionSubheader, ContentWrapper} from '../../styles/global';
 import {MapWrapper, FormBlock, FormIntro, InputWrapper, FInput, TInput, FormLabels, ExplanationForm} from './style';
 import {Button} from '../../styles/global'
+import {useEffect} from 'react'
 
+const ContacthtmlForm = () => {  
+    
+/*****hiding scroll bar******/
+useEffect(()=>{
+document.body.style.overflow = "hidden";
+return () => {
+    document.body.style.overflow = "visible";
+};
+})
 
-const ContacthtmlForm = () => {    
     return (
         <div className="container px-5 mx-auto relative top-2/4 transform -translate-y-2/4 mt-6">            
             <SectionSubheader>Commitment and creativity mark our creations. By all means, stroll along...</SectionSubheader>

@@ -9,11 +9,20 @@ import Footer from '../components/Footer'
 import Selection from '../components/Selection' 
 import { motion } from 'framer-motion'
 import Head from 'next/head';
+import {useEffect} from 'react'
 
 export default function Home() {
   const style={
     height:'calc(100% - 80px)',    
-  }  
+  } 
+  
+  /*****hiding scroll bar*/
+  useEffect(()=>{
+    document.body.style.overflow = "hidden";
+    return () => {
+      document.body.style.overflow = "visible";
+    };
+  })
 
   return ( 
     <> 

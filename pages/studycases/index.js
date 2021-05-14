@@ -20,6 +20,12 @@ const AllStudyCases = () =>{
   const style={
     height:'calc(100% - 80px)',    
   } 
+  useEffect(()=>{
+    document.body.style.overflow = "hidden";
+    return () => {
+      document.body.style.overflow = "visible";
+    };
+  })
 
   //pagination states
   const [offset, setOffset] = useState(0);

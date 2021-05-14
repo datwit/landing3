@@ -4,15 +4,22 @@ import CustomControls from '../../components/Slide/CustomControls'
 import Footer from '../../components/Footer'
 import Find from '../../components/Partner/Find'
 import Faqs from '../../components/Partner/Faqs'
-import PartPricing from '../../components/Partner/PartPricing'
-import Navbar from '../../components/Navbar' 
+import PartPricing from '../../components/Partner/PartPricing' 
 import { motion } from 'framer-motion'
 import Head from 'next/head';
+import {useEffect} from 'react'
 
 const Partner = () => {
     const style={
       height:'calc(100% - 80px)',    
     } 
+  /*****hiding scroll bar*/
+  useEffect(()=>{
+    document.body.style.overflow = "hidden";
+    return () => {
+      document.body.style.overflow = "visible";
+    };
+  })
 
     return (
       <> 

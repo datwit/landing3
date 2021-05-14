@@ -7,12 +7,21 @@ import Members from '../../components/AboutUs/Members'
 import Collaborators from '../../components/AboutUs/Collaborators' 
 import { motion } from 'framer-motion'
 import Head from 'next/head';
+import {useEffect} from 'react'
 
 
 const About = () => {
   const style={
     height:'calc(100% - 80px)',    
-  }  
+  } 
+
+   /*****hiding scroll bar*/
+  useEffect(()=>{
+    document.body.style.overflow = "hidden";
+    return () => {
+      document.body.style.overflow = "visible";
+    };
+  }) 
   
     return ( 
       <> 

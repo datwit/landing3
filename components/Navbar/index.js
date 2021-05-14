@@ -35,6 +35,7 @@ const Navbar=({scrollToSlide}) => {
 		const contact = document.getElementById('contact')
 		const abaut = document.getElementById('abaut')
 		const blog = document.getElementById('blog')
+		
 
 		if (windowBottom >= docHeight) {
 			navb.classList.replace('bg-white','bar-vanished')

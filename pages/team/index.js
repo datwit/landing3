@@ -6,11 +6,20 @@ import Benefits from '../../components/Team/Benefits'
 import Footer from '../../components/Footer'
 import { motion } from 'framer-motion'
 import Head from 'next/head';
+import {useEffect} from 'react'
 
 const Team = () => {
     const style={
       height:'calc(100% - 80px)',    
     } 
+    /*****hiding scroll bar*/
+    useEffect(()=>{
+      document.body.style.overflow = "hidden";
+      return () => {
+        document.body.style.overflow = "visible";
+      };
+    })
+
     return (
       <> 
         <Head>

@@ -13,12 +13,22 @@ import { useRouter } from 'next/router'
 import { motion } from 'framer-motion'
 import Head from 'next/head';
 
+
 import posts from '../../cache/posts.json'
 
 const Blog = () => {
   const style={
     height:'calc(100% - 80px)',    
-  } 
+  }
+
+  /*****hiding scroll bar*/
+  useEffect(()=>{
+    document.body.style.overflow = "hidden";
+    return () => {
+      document.body.style.overflow = "visible";
+    };
+  }) 
+
   const [query, setQuery] = useState('') 
 
   //pagination states

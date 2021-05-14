@@ -31,7 +31,7 @@ const Services = () => {
     
    /* relative top-2/4 transform -translate-y-2/4*/
     return (        
-        <div ref={wrapperRef} className="container px-5 mx-auto relative top-2/4 transform -translate-y-2/4">
+        <div ref={wrapperRef} className="container px-5 mx-auto relative top-2/4 transform -translate-y-2/4 md:mt-8">
             <SectionSubheader>Lorem ipsum dolor sit amet consectetur adipisicing elit.</SectionSubheader>
             
                 <div className="hidden md:block">
