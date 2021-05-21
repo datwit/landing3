@@ -4,7 +4,7 @@ import FoundersIllustration from './FoundersIllustration'
 
 const Datwit = () => {
     return (
-        <div className="container px-5 mx-auto">
+        <div className="container px-5 mx-auto relative top-2/4 transform -translate-y-2/4 lg:mt-20">
             <DatwitWrapper>
                 <ImgWrapper>
                     {/* <img alt="img" className="lg:w-1/2 w-full lg:h-auto h-64 object-cover object-center rounded" src="" />   */}
