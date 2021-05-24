@@ -15,7 +15,7 @@ const CollaboratorsCard = ({name, designation, twitter, linkedin, github}) => {
 
     return (
         <>
-        <img alt="team" className="flex-shrink-0 h-44 object-cover object-center" src="/images/dummy-image.png"/>
+        <img alt="team" className="flex-shrink-0 h-44 w-full object-cover object-center" src="/images/dummy-image.png"/>
         <SocialCard onMouseEnter={toggleHoverON} onMouseLeave={toggleHoverOFF} className={hover ? "h-full" : "h-7"}>
             <ColName>{name}</ColName>
             <ColRol>{designation}</ColRol>

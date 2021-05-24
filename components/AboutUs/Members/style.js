@@ -15,7 +15,7 @@ export const SocialCard = styled.div
         rgba(255,255,255,0.7),
         rgba(255,255,255,0.3)
         );
-    backdrop-filter:blur(2rem)    
+    backdrop-filter:blur(2rem);    
     width: 100%;
     cursor: pointer; 
     z-index: 1;     

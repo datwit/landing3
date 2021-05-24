@@ -1,7 +1,7 @@
 import datas from "./data.json";
 import {useState, useRef, useEffect} from 'react'
 import {ContentWrapper, SectionSubheader}from '../../../styles/global';
-import {TabTitle, TabTitle1, ServTabContent, CardRevealWrapper, IconTitle, CardContent, BulletTitle, BulletSubtitle, ServiceBulletsOuter, ServiceBulletsSpan, CardRevealBorder, TabResponsive} from './styles';
+import {GlassInner, TabTitle, TabTitle1, ServTabContent, CardRevealWrapper, IconTitle, CardContent, BulletTitle, BulletSubtitle, ServiceBulletsOuter, ServiceBulletsSpan, CardRevealBorder, TabResponsive} from './styles';
 import SoftDSVG from './SoftDSVG'
 import DataScSVG from './DataScSVG'
 
@@ -66,7 +66,7 @@ const Services = () => {
                                 </IconTitle>
                                 {/*card content-reveal*/}
                                 <CardContent className={openCard1 ? "block h-full" : "h-0"} id="link1" > 
-                                    <div className="p-3">
+                                    <GlassInner>
                                         <a className="flex justify-end" href="#" onClick={e =>
                                         {
                                         e.preventDefault();
@@ -93,7 +93,7 @@ const Services = () => {
                                                 </div>
                                             ))
                                         }
-                                    </div>                                                            
+                                    </GlassInner>                                                            
                                 </CardContent>
                                 {/*/card content-reveal*/}
                             </CardRevealBorder> 
@@ -127,7 +127,7 @@ const Services = () => {
                                 </IconTitle>
                                 {/*card content-reveal*/}
                                 <CardContent className={openCard2 ? "block h-full" : "h-0"} id="link2"> 
-                                    <div className="p-3">
+                                    <GlassInner>
                                         <a className="flex justify-end" href="#" onClick={e =>
                                         {
                                         e.preventDefault();
@@ -154,7 +154,7 @@ const Services = () => {
                                                 </div>
                                             ))
                                         }
-                                    </div>                                    
+                                    </GlassInner>                                    
                                 </CardContent>
                                 {/*/card content-reveal*/}
                             </CardRevealBorder>

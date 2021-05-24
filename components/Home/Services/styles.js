@@ -5,6 +5,20 @@ export const CardRevealWrapper = styled.div.attrs({
   className: "p-4 md:w-2/4"
 })``;
 
+export const GlassInner = styled.div.attrs({
+  className: "p-3"
+})
+`
+  background:white;
+  background: linear-gradient(
+      to right bottom,
+      rgba(255,255,255,0.7),
+      rgba(255,255,255,0.3)
+      );
+  backdrop-filter:blur(2rem);
+  min-height:100%;
+`;
+
 export const IconTitle = styled.a.attrs({
   className: "text-base font-bold  block leading-normal relative cursor-pointer py-4"
 })
@@ -17,8 +31,7 @@ export const CardContent = styled.div.attrs({
 }) 
 `  
   position: absolute; 
-  bottom: 0%;
-  background: #eaebec; 
+  bottom: 0%;  
   width: 100%;
   cursor: pointer; 
   z-index: 1; 

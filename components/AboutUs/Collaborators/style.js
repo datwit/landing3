@@ -5,7 +5,7 @@ export const ColWrapper = styled.div.attrs({
 })``;
 
 export const ColName = styled.h2.attrs({
-    className: "title-font font-medium text-lg text-gray-900"
+    className: "title-font font-medium text-lg text-primary"
 })``; 
 
 export const ColRol = styled.h4.attrs({
