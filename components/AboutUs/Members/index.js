@@ -5,6 +5,7 @@ import uuid from 'react-uuid'
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import {OuterWrapper, CarouselContainer} from '../../Home/Pricing/style';
 import MemberCard from './MemberCard'
+import {DataBlock, ColName, SocialWrapper} from '../Collaborators/style'
 
 const Carousel = require('react-responsive-carousel').Carousel;
 
@@ -41,13 +42,13 @@ const Members = () => {
             </div> 
             {/******responsive********************/}
             <div className="md:hidden">
-                {/* <CarouselContainer>
+                <CarouselContainer>
                     <Carousel showArrows={true} showThumbs={false}>
                     {
                         datas.list1.map(data => (   
                         <OuterWrapper key={uuid()}>
-                                <MemberCol>                            
-                                <img alt="team" className="flex-shrink-0 rounded-lg w-40 h-40 object-cover object-center mb-4" src="" />
+                                <div>                            
+                                <img alt="team" className="flex-shrink-0 rounded-lg h-36 w-36 object-cover object-center mb-4" src="" />
                                 <DataBlock>
                                     <ColName>{data.name}</ColName>
                                     <MemberDesig>{data.designation}</MemberDesig>
@@ -64,15 +65,15 @@ const Members = () => {
                                         </a>
                                     </SocialWrapper>
                                 </DataBlock>                            
-                            </MemberCol>
+                            </div>
                         </OuterWrapper>  
                         ))
                     }
                     {
                         datas.list2.map(data => (   
                         <OuterWrapper key={uuid()}>
-                                <MemberCol>                            
-                                <img alt="team" className="flex-shrink-0 rounded-lg w-40 h-40 object-cover object-center mb-4" src="" />
+                                <div>                            
+                                <img alt="team" className="flex-shrink-0 rounded-lg h-36 w-36 object-cover object-center mb-4" src="" />
                                 <DataBlock>
                                     <ColName>{data.name}</ColName>
                                     <MemberDesig>{data.designation}</MemberDesig>
@@ -89,12 +90,12 @@ const Members = () => {
                                         </a>
                                     </SocialWrapper>
                                 </DataBlock>                            
-                            </MemberCol>
+                            </div>
                         </OuterWrapper>  
                         ))
                     }                           
                     </Carousel>
-                 </CarouselContainer> */}
+                </CarouselContainer>
 
             </div>
                 
