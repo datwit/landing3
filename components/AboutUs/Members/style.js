@@ -43,6 +43,6 @@ export const SocialWrapper2 = styled.span.attrs({
     className: "flex justify-center"
 })
 `
-position:relative;
-bottom: -30px;
+/* position:relative;
+bottom: -30px; */
 `; 
