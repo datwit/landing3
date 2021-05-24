@@ -17,6 +17,6 @@ export const ColRol = styled.h4.attrs({
 })``; 
 
 export const SocialWrapper = styled.span.attrs({
-    className: "inline-flex"
+    className: "flex justify-center mt-10"
 })``; 
 
