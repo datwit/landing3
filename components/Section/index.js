@@ -6,10 +6,10 @@ const Section = ({children}) => {
 
     return ( 
         <Fragment>        
-        <section className= "w-full h-screen">
-            {/* <Navbar /> */}
-            {children}        
-        </section>
+            <section className= "w-full h-screen">
+                {/* <Navbar /> */}
+                {children}        
+            </section>
         </Fragment>  
     )
 
