@@ -12,6 +12,7 @@ import ReactPaginate from 'react-paginate';
 import { useRouter } from 'next/router'
 import { motion } from 'framer-motion'
 import Head from 'next/head';
+import uuid from 'react-uuid'
 
 
 import posts from '../../cache/posts.json'
@@ -74,16 +75,16 @@ const Blog = () => {
     setPerPage(cant)    
     //slicing data   
     const slice = data.slice(offset, offset + cant)
-    const postData = slice.map((item, key6) =>
-      <BlogCardWrapper key={key6}>
+    const postData = slice.map(item =>
+      <BlogCardWrapper key={uuid()}>
         <div className="hidden md:block">
           <BlogCardBorder>
           <Link href={`/blog/${item.id}`}><img className="lg:h-48 md:h-28 w-full object-cover object-center cursor-pointer" src={item.img} alt="" /></Link>         
             <BlogCardBlock>
               <div className="flex flex-wrap">
                 {
-                  item.tags.map((tags, key3) => (
-                    <div key={key3}>
+                  item.tags.map(tags => (
+                    <div key={uuid()}>
                       <Link href={`/blog/search?p=${tags.toLowerCase()}`}>
                         <Category>{tags}</Category>
                       </Link>
@@ -95,15 +96,7 @@ const Blog = () => {
                 {format(parseISO(item.date), 'MMMM do, uuu')}
               </div>
               <Link href={`/blog/${item.id}`}><BlogTitle1>{item.title}</BlogTitle1></Link>
-              <CardSummary>{item.summary}</CardSummary>
-              {/* <div className="flex items-center flex-wrap ">
-                                  <a className="text-secondary2 inline-flex items-center md:mb-2 lg:mb-0">Learn More
-                                      <svg className="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round">
-                                          <path d="M5 12h14"></path>
-                                          <path d="M12 5l7 7-7 7"></path>
-                                      </svg>
-                                  </a>
-                              </div> */}
+              <CardSummary>{item.summary}</CardSummary>              
             </BlogCardBlock>
           </BlogCardBorder>
         </div>
@@ -175,8 +168,7 @@ const Blog = () => {
                           placeholder="Search here">
                         </SearchField>
                         <Link href={`/blog/search?q=${query}`}><svg className="h-6 w-6 text-secondary2" width="24" height="24" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">  <path stroke="none" d="M0 0h24v24H0z" />  <circle cx="10" cy="10" r="7" />  <line x1="21" y1="21" x2="15" y2="15" /></svg></Link>
-
-                    </SearchWrapper>
+                      </SearchWrapper>
 
                     {/*pagination*/}
                     <div className="flex flex-wrap">
@@ -199,11 +191,8 @@ const Blog = () => {
                           </PaginationWrapper>
                           :
                           [] 
-                        }
-                        
-                      
-
-                    </div>
+                        }          
+                      </div>
                   </div>
                 </Section>
               </Slide>

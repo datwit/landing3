@@ -27,19 +27,19 @@ const StudyCases = () => {
          {/**********responsive************** */}            
             <ul>
                 {
-                    datas.map(data => (
-                        <BlogCardBorder key={uuid()} className="mb-3">
-                            <div className="flex">
-                            <img src={data.img} className="sm:w-1/4 w-1/2" alt="" />
-                            <RespBlock>
-                                <Link href={`/studycases/${data.id}`}>
-                                    <BlogTitle2>{data.title}</BlogTitle2>
-                                </Link>                            
-                                <p>{data.author}</p>
-                            </RespBlock>
-                            </div>
-                        </BlogCardBorder>
-                    )) 
+                datas.map(data => (
+                    <BlogCardBorder key={uuid()} className="mb-3">
+                        <div className="flex">
+                        <img src={data.img} className="sm:w-1/4 w-1/2" alt="" />
+                        <RespBlock>
+                            <Link href={`/studycases/${data.id}`}>
+                                <BlogTitle2>{data.title}</BlogTitle2>
+                            </Link>                            
+                            <p>{data.author}</p>
+                        </RespBlock>
+                        </div>
+                    </BlogCardBorder>
+                )) 
                 }
             </ul>           
         </div>  
