@@ -4,7 +4,7 @@ export const SearchWrapper = styled.div.attrs({
     className: "flex items-center justify-center w-full"
 })``;
 export const BlogCardWrapper = styled.div.attrs({
-    className: "pb-3 md:w-1/3 w-full"
+    className: "p-3 md:w-1/3 w-full"
 })``;
 export const BlogCardBlock = styled.div.attrs({
     className: "p-3"
@@ -20,7 +20,7 @@ export const BlogCardBorder = styled.div.attrs({
     className: "border border-gray-300 shadow hover:shadow-lg transition duration-200 ease-in overflow-hidden"
 })``;
 export const RespBlock = styled.div.attrs({
-    className: "p-2 w-full"
+    className: "p-2 sm:w-5/6 w-1/2"
 })``;
 export const BlogTitle1 = styled.h1.attrs({
     className: "title-font text-lg font-bold text-primary mb-1 cursor-pointer"
@@ -65,14 +65,14 @@ export const PaginationWrapper= styled.div
     list-style: none;
     outline: none;
     position: absolute;
-    bottom: 1%;
+    bottom: -60px;
     left: 50%;
     transform:translateX(-50%);    
     
     li{
         display: inline !important;
-        width: 40px;
-        height: 40px;
+        width: 35px;
+        height: 35px;
         border: 2px solid #e69c24;
         border-radius: 50%;
         justify-content:center;
@@ -104,6 +104,12 @@ export const PaginationWrapper= styled.div
 }   
 
 `;
+export const PaginationSection= styled.div.attrs({
+    className: "flex flex-wrap"
+})
+`
+#pag-section{
+    height: 70vh;
+}
 
-
-
+`;

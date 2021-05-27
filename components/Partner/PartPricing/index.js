@@ -1,16 +1,18 @@
 import {ContentWrapper, SectionHeader} from '../../../styles/global'
-import CTA from '../../Home/CTA'
+// import CTA from '../../Home/CTA'
 import {useState} from 'react'
 import datas from './data.json'
 import uuid from 'react-uuid'
-import {BulletWrapper, PricingCardGray, ToggleWrapper, BundleChooser, PriceTitle, PriceDescription, BulletText, BulletTextSpan, BulletsContainer} from './style';
+import {BulletWrapper, PricingCardGray, ToggleWrapper, BundleChooser, BulletsContainer} from './style';
+import BulletsContent from './BulletsContent'
+import PartnerCard from './PartnerCard'
 
 const PartPricing = () => {    
 
     const [openTab, setOpenTab] = useState(1);
 
     return (
-        <div className="container px-5 mx-auto">
+        <div className="container px-5 mx-auto relative top-2/4 transform -translate-y-2/4 mt-20">
             <SectionHeader>Lorem ipsum dolor sit amet consectetur adipisicing elit.</SectionHeader>            
             <div className="w-full">
                 <ToggleWrapper role="tablist">                    
@@ -49,23 +51,14 @@ const PartPricing = () => {
             
             <ContentWrapper className={openTab === 1 ? "block" : "hidden"} id="link1" >                   
                 <PricingCardGray className={openTab === 1 ? "block slide-left" : "hidden"}  id="link1">
-                    <PriceTitle>{datas[0].title}</PriceTitle>
-                    <PriceDescription>{datas[0].description}</PriceDescription>
-                    <h2 className="text-black" >{datas[0].price}</h2>
-                    <div className="justify-center mt-2 md:my-8 select-none flex">
-                        <CTA buttonName={'Contact us'}/>
-                    </div>
+                        <PartnerCard  title={datas[0].title} description={datas[0].description} price={datas[0].price}/>                     
                 </PricingCardGray>
                 <BulletsContainer>
                     <BulletWrapper className={ openTab === 1 ? 'block slide-right': 'hidden'} >
                         {
                             datas[0].bullets.map(d => (
                                 <li key={uuid()}>
-                                    <BulletText>
-                                        <BulletTextSpan>
-                                        <svg className="h-8 w-8 text-secondary2"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  strokeWidth="2"  strokeLinecap="round"  strokeLinejoin="round">  <polyline points="20 6 9 17 4 12" /></svg>
-                                        </BulletTextSpan>{d.title}
-                                    </BulletText>
+                                    <BulletsContent title={d.title}/>
                                 </li>
                             ))
                         }                        
@@ -74,23 +67,14 @@ const PartPricing = () => {
             </ContentWrapper>  
             <ContentWrapper className={openTab === 2 ? "block" : "hidden"} id="link2">
                 <PricingCardGray className={openTab === 2 ? "block slide-left" : "hidden"}  id="link1">
-                    <PriceTitle>{datas[1].title}</PriceTitle>
-                    <PriceDescription>{datas[1].description}</PriceDescription>
-                    <h2 className="text-black" >{datas[1].price}</h2>
-                    <div className="justify-center mt-2 md:my-8 select-none flex">
-                        <CTA buttonName={'Contact us'}/>
-                    </div>
+                    <PartnerCard  title={datas[1].title} description={datas[1].description} price={datas[1].price}/>
                 </PricingCardGray>
                 <BulletsContainer>
                     <BulletWrapper className={ openTab === 2 ? 'block slide-right': 'hidden'} >
                         {
                             datas[1].bullets.map(d => (
                                 <li key={uuid()}>
-                                    <BulletText>
-                                        <BulletTextSpan>
-                                        <svg className="h-8 w-8 text-secondary2"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  strokeWidth="2"  strokeLinecap="round"  strokeLinejoin="round">  <polyline points="20 6 9 17 4 12" /></svg>
-                                        </BulletTextSpan>{d.title}
-                                    </BulletText>
+                                    <BulletsContent title={d.title}/>
                                 </li>
                             ))
                         }                        
@@ -99,23 +83,14 @@ const PartPricing = () => {
             </ContentWrapper>   
             <ContentWrapper className={openTab === 3 ? "block" : "hidden"} id="link3">
                 <PricingCardGray className={openTab === 3 ? "block slide-left" : "hidden"}  id="link1">
-                    <PriceTitle>{datas[2].title}</PriceTitle>
-                    <PriceDescription>{datas[2].description}</PriceDescription>
-                    <h2 className="text-black" >{datas[2].price}</h2>
-                    <div className="justify-center mt-2 md:my-8 select-none flex">
-                        <CTA buttonName={'Contact us'}/>
-                    </div>
+                    <PartnerCard  title={datas[2].title} description={datas[2].description} price={datas[2].price}/>
                 </PricingCardGray>
                 <BulletsContainer>
                     <BulletWrapper className={ openTab === 3 ? 'block slide-right': 'hidden'} >
                         {
                             datas[2].bullets.map(d => (
                                 <li key={uuid()}>
-                                    <BulletText>
-                                        <BulletTextSpan>
-                                        <svg className="h-8 w-8 text-secondary2"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  strokeWidth="2"  strokeLinecap="round"  strokeLinejoin="round">  <polyline points="20 6 9 17 4 12" /></svg>
-                                        </BulletTextSpan>{d.title}
-                                    </BulletText>
+                                    <BulletsContent title={d.title}/>
                                 </li>
                             ))
                         }                        

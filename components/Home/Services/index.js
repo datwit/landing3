@@ -1,13 +1,12 @@
 import datas from "./data.json";
 import {useState, useRef, useEffect} from 'react'
 import {ContentWrapper, SectionSubheader}from '../../../styles/global';
-import {ServTabContent, CardRevealWrapper, IconTitle, CardContent, BulletTitle, BulletSubtitle, ServiceBulletsOuter, ServiceBulletsSpan, CardRevealBorder} from './styles';
+import {GlassInner, TabTitle, TabTitle1, ServTabContent, CardRevealWrapper, IconTitle, CardContent, BulletTitle, BulletSubtitle, ServiceBulletsOuter, ServiceBulletsSpan, CardRevealBorder, TabResponsive} from './styles';
 import SoftDSVG from './SoftDSVG'
 import DataScSVG from './DataScSVG'
 
 const Services = () => {
-
-    const [openTab, setOpenTab] = useState(0); 
+    
     const [openTab1, setOpenTab1] = useState(1); 
     const [openCard1, setOpenCard1] = useState(false)
     const [openCard2, setOpenCard2] = useState(false) 
@@ -28,33 +27,28 @@ const Services = () => {
     }
 
     const wrapperRef = useRef(null);
-    useOutsideAlerter(wrapperRef);   
+    useOutsideAlerter(wrapperRef);      
     
-    // const [tab1, isTabOne] = useState(true);
-	// const [tab2, isTabTwo] = useState(false)
-
-    // const handleClick1 = () => {
-	// 	isTabOne(tab1=>!tab1);
-	// 	isTabTwo(tab2=>!tab2);
-	// };	
-    // const handleClick2 = () => {
-	// 	isTabOne(tab1=>!tab1);
-	// 	isTabTwo(tab2=>!tab2);
-    // }; 
-    
-
-         
    
     return (        
-        <div ref={wrapperRef} className="container px-5 mx-auto">
+        <div ref={wrapperRef} className="container px-5 mx-auto relative top-2/4 transform -translate-y-2/4 md:mt-8">
             <SectionSubheader>Lorem ipsum dolor sit amet consectetur adipisicing elit.</SectionSubheader>
             
                 <div className="hidden md:block">
                     <ContentWrapper>
                         <CardRevealWrapper>                                                
-                            <CardRevealBorder>                           
+                            <CardRevealBorder onClick={e => 
+                                    { 
+                                    e.preventDefault();
+                                    setOpenCard1(!openCard1);
+                                    }}
+                                    data-toggle="tab"
+                                    href="#link1"
+                                    role="tablist"
+                                    className="cursor-pointer"
+                                    >                           
                                 {/*card image*/}
-                                <div className="py-6">
+                                <div className="py-6 lg:py-14">
                                     <SoftDSVG/> 
                                 </div>                                 
                                 {/*card title */}                         
@@ -71,8 +65,8 @@ const Services = () => {
                                          Development</h2>                                        
                                 </IconTitle>
                                 {/*card content-reveal*/}
-                                <CardContent className={openCard1 ? "block h-full" : "h-0"} id="link1" > 
-                                    <div className="p-3">
+                                <CardContent onWheel={e => e.stopPropagation()} className={openCard1 ? "block h-full" : "h-0"} id="link1" > 
+                                    <div className="p-4">
                                         <a className="flex justify-end" href="#" onClick={e =>
                                         {
                                         e.preventDefault();
@@ -99,15 +93,23 @@ const Services = () => {
                                                 </div>
                                             ))
                                         }
-                                    </div>                                                            
+                                    </div>                                                          
                                 </CardContent>
                                 {/*/card content-reveal*/}
                             </CardRevealBorder> 
                         </CardRevealWrapper>
                         <CardRevealWrapper>
-                            <CardRevealBorder>                                                                               
+                            <CardRevealBorder onClick={e => 
+                                    { 
+                                    e.preventDefault();
+                                    setOpenCard2(!openCard2);
+                                    }}
+                                    data-toggle="tab"
+                                    href="#link2"
+                                    role="tablist"
+                                    className="cursor-pointer">                                                                               
                                 {/*card image*/}
-                                <div className="py-6">
+                                <div className="py-6 lg:py-14">
                                     <DataScSVG /> 
                                 </div>                                 
                                 {/*card title */}                           
@@ -124,8 +126,8 @@ const Services = () => {
                                         Science</h2>
                                 </IconTitle>
                                 {/*card content-reveal*/}
-                                <CardContent className={openCard2 ? "block h-full" : "h-0"} id="link2"> 
-                                    <div className="p-3">
+                                <CardContent onWheel={e => e.stopPropagation()} className={openCard2 ? "block h-full" : "h-0"} id="link2"> 
+                                    <div className="p-4">
                                         <a className="flex justify-end" href="#" onClick={e =>
                                         {
                                         e.preventDefault();
@@ -152,7 +154,7 @@ const Services = () => {
                                                 </div>
                                             ))
                                         }
-                                    </div>                                    
+                                    </div>                                  
                                 </CardContent>
                                 {/*/card content-reveal*/}
                             </CardRevealBorder>
@@ -162,51 +164,53 @@ const Services = () => {
                 {/*responsive*/}
                 <div className="md:hidden">
                     <ContentWrapper>
-                        <div className="sm:w-1/4 h-full w-full">
-                            <div className="flex mb-0 list-none flex-wrap pt-3 pb-4 flex-row sm:flex-col">
-                                <div className="-mb-px mr-2 flex-auto text-center flex items-center sm:pb-12 flex-col">
-                                    <a href="#" className={`${openTab1 === 1 ? "text-secondary2" : "text-primary"} flex flex-col items-center`} onClick={e => 
-                                    {
-                                    e.preventDefault();
-                                    setOpenTab1(1);
-                                    }}
-                                    data-toggle="tab"
-                                    href="#link1">
-                                    <svg className= "h-8 w-8"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  strokeWidth="2"  strokeLinecap="round"  strokeLinejoin="round">
-                                        <polyline points="16 18 22 12 16 6" />  <polyline points="8 6 2 12 8 18" />
-                                    </svg>
-                                    <div className="text-base font-bold  block leading-normal relative cursor-pointer">
-                                        Software
-                                        <br />
-                                        Development
-                                    </div>
-                                    </a> 
-                                </div>
-                                <div className="-mb-px mr-2 flex-auto text-center flex items-center sm:pb-12 flex-col">
-                                    <a href="#" className={`${openTab1 === 2 ? "text-secondary2" : "text-primary"} flex flex-col items-center`} onClick={e => 
-                                    {
-                                    e.preventDefault();
-                                    setOpenTab1(2);
-                                    }}
-                                    data-toggle="tab"
-                                    href="#link2">
-                                        <svg className= "h-8 w-8"  width="24" height="24" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">  
-                                            <path stroke="none" d="M0 0h24v24H0z"/>
-                                            <ellipse cx="12" cy="6" rx="8" ry="3"></ellipse>  
-                                            <path d="M4 6v6a8 3 0 0 0 16 0v-6" />
-                                            <path d="M4 12v6a8 3 0 0 0 16 0v-6" />
+                        <div className="h-full w-full">
+                            <div className="flex mb-0 list-none flex-wrap pt-3 flex-row w-full">
+                                <div className="w-2/4 -mb-px flex-auto text-center flex items-center flex-col relative">
+                                    <TabResponsive className={openTab1===1 ? "h-full" : "h-1"}></TabResponsive> 
+                                    <TabTitle className={openTab1===1 ? "text-white" : "text-primary"} href="#" onClick={e => 
+                                        {
+                                        e.preventDefault();
+                                        setOpenTab1(1);
+                                        }}
+                                        data-toggle="tab"
+                                        href="#link1">
+                                        <svg className= "h-8 w-8"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  strokeWidth="2"  strokeLinecap="round"  strokeLinejoin="round">
+                                            <polyline points="16 18 22 12 16 6" />  <polyline points="8 6 2 12 8 18" />
                                         </svg>
-                                        <div className="text-base font-bold  block leading-normal relative cursor-pointer">
-                                            Data 
+                                        <div className="text-base font-bold  block leading-normal cursor-pointer">
+                                            Software
                                             <br />
-                                            Science
+                                            Development
                                         </div>
-                                    </a>
+                                    </TabTitle>                                                                  
+                                </div>
+                                <div className="w-2/4 -mb-px flex-auto text-center flex items-center flex-col relative">
+                                    <TabResponsive className={openTab1===2 ? "block h-full" : "h-1"}></TabResponsive>
+                                    <TabTitle1 className={openTab1===2 ? "text-white" : "text-primary"} href="#" onClick={e => 
+                                        {
+                                        e.preventDefault();
+                                        setOpenTab1(2);
+                                        }}
+                                        data-toggle="tab"
+                                        href="#link2">
+                                            <svg className= "h-8 w-8"  width="24" height="24" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">  
+                                                <path stroke="none" d="M0 0h24v24H0z"/>
+                                                <ellipse cx="12" cy="6" rx="8" ry="3"></ellipse>  
+                                                <path d="M4 6v6a8 3 0 0 0 16 0v-6" />
+                                                <path d="M4 12v6a8 3 0 0 0 16 0v-6" />
+                                            </svg>
+                                            <div className="text-base font-bold  block leading-normal cursor-pointer">
+                                                Data 
+                                                <br />
+                                                Science
+                                            </div>
+                                    </TabTitle1>                                   
                                 </div>
                             </div>
                         </div>
-                        <ServTabContent>
-                            <div className="px-4 flex-auto border-2 border-gray-200 border-opacity-60">
+                        <ServTabContent onWheel={e => e.stopPropagation()}>
+                            <div className="px-4 border border-gray-300 overflow-y-auto" id="inner-content">
                                 <div className={openTab1 === 1 ? "block" : "hidden"}>
                                     {
                                     datas.soft.map((data, key) => (

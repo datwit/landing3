@@ -1,0 +1,32 @@
+[
+    {
+        "name": "Home",
+        "link": "/",
+        "id":"home"       
+
+    },
+    {
+        "name": "Study cases",
+        "link": "/studycases",
+        "id":"study"
+
+    },
+    {
+        "name": "About us",
+        "link": "/about",
+        "id":"abaut"
+
+    },
+    {
+        "name": "Contact us",
+        "link": "/contact",
+        "id":"contact"
+
+    },
+    {
+        "name": "Blog",
+        "link": "/blog",
+        "id":"blog"
+
+    }
+]

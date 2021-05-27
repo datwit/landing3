@@ -60,11 +60,17 @@ export const NavWrapper = styled.div.attrs({
   export const LinkItem = styled.li.attrs({
     className: "ml-5 2xl:ml-8 py-2 text-sm font-semibold text-primary hover:text-secondary1 focus:text-secondary1"
   })
-  `${HoverLine}`;  
+  `
+  ${HoverLine}
+  font-family: 'Numans';
+  `;  
   export const LinkItem2 = styled.li.attrs({
     className: "ml-5 2xl:ml-8 pb-2 text-xl font-semibold text-white hover:text-secondary1 focus:text-secondary1"
   })
-  `${HoverLine}`;  
+  `
+  ${HoverLine}
+  font-family: 'Numans';
+  `;  
   export const HeaderElements = styled.div.attrs({
     className: "h-16 absolute top-0 w-full px-10 pt-4"
   })``;  

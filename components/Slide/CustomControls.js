@@ -44,6 +44,12 @@ const CustomControls = ({ slidesCount, scrollToSlide, onNext, onPrev, getCurrent
       case '/blog':
         tip = [...tip, 'Blogs', 'Bottom']
         break
+      case '/partner':
+        tip = [...tip, 'Find partnership','Partnership pricing','FAQs', 'Bottom']
+        break
+      case '/team':
+      tip = [...tip, 'Technologies','Benefits', 'Bottom']
+      break
       default:
         break;
     }   

@@ -6,7 +6,7 @@ export const ContentWrapper = styled.div.attrs({
 `
     &.maxHeight{
         height: 100%;
-    }
+    }    
 `;
 export const SectionHeader = styled.h2.attrs({
     className: "mt-4"
@@ -26,7 +26,7 @@ export const Button = styled.a
     display: inline-flex;
     cursor:pointer;
     border: 3px solid #e69c24;
-
+    
     &:active{
         box-shadow: inset 4px 4px 4px #9cd4e6;
         transform: translate(4px,4px);

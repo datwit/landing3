@@ -2,37 +2,51 @@
 import datas from '../../components/Partner/Faqs/data.json'
 import uuid from 'react-uuid'
 import {SectionHeader,SectionSubheader} from '../../styles/global'
-import {QuestionText} from '../../components/Partner/Faqs/style'
+import {QuestionText, AccordionList, AccordionWrapper} from '../../components/Partner/Faqs/style'
 import Navbar from '../../components/Navbar' 
 import Footer from '../../components/Footer'
 import { motion } from 'framer-motion'
+import { FullPage } from 'react-full-page'
+import CustomControls from '../../components/Slide/CustomControls'
+import AccordionItem from '../../components/Partner/Faqs/AccordionItem'
+import Head from 'next/head';
 
 const FaqsQandA = () => {       
      
     return (
-        
-        <motion.div initial={{opacity:0,  y: 200}} animate={{opacity:1, y:0}}>         
+        <> 
+        <Head>
+        <title>Datwit | FAQs</title>
+        <link rel="icon" href="/favicon.ico" />
+        </Head>
+        <motion.div initial={{opacity:0,  y: 200}} animate={{opacity:1, y:0}}>  
+            <FullPage controls={CustomControls} scrollMode='normal'>
                 <section className="pt-20">  
                     <div className="container px-5 mx-auto">              
                         <SectionHeader>Frequently asked questions</SectionHeader>
                         <SectionSubheader>Lorem ipsum dolor sit amet consectetur adipisicing elit...</SectionSubheader>
-                        {
-                            datas.map(data => (
-                                <div key={uuid()} id={data.id}>
-                                    <h4>{data.question}</h4>
-                                    <div>
-                                        <p className="text-base mt-3">{data.answer}</p>
-                                    </div>
-                                </div>
-                            ))
-                        }  
+                        {/*accordion component*/}
+                        <AccordionWrapper>
+                            <AccordionList>
+                            {datas.map((data, key) => {
+                                return (
+                                <li {...{ className: 'accordion-list__item', key }}>
+                                    <AccordionItem {...data} />
+                                </li>
+                                )
+                            })}
+                            </AccordionList>
+                        </AccordionWrapper>
+                        {/*********************/}
                     </div>   
                 </section>
                 <section className= "w-full h-screen bg-primary mx-auto px-10">
                     <Footer />
-                </section>            
+                </section>
+                
+            </FullPage>                         
         </motion.div>
-        
+        </>
     )
 }
 

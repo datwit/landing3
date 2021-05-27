@@ -10,21 +10,32 @@ import { SectionSubheader } from '../../styles/global'
 import { Category, PaginationWrapper, SearchWrapper, BlogCardWrapper, BlogCardBlock, CardSummary, BlogCardBorder, RespBlock, BlogTitle1, BlogTitle2, DateWrapper, SearchField } from '../../components/Blog/style'
 import ReactPaginate from 'react-paginate';
 import { useRouter } from 'next/router'
-import Navbar from '../../components/Navbar' 
 import { motion } from 'framer-motion'
+import Head from 'next/head';
+import uuid from 'react-uuid'
+
 
 import posts from '../../cache/posts.json'
 
 const Blog = () => {
   const style={
     height:'calc(100% - 80px)',    
-  } 
+  }
+
+  /*****hiding scroll bar*/
+  useEffect(()=>{
+    document.body.style.overflow = "hidden";
+    return () => {
+      document.body.style.overflow = "visible";
+    };
+  }) 
+
   const [query, setQuery] = useState('') 
 
   //pagination states
   const [offset, setOffset] = useState(0);
   const [data, setData] = useState([]);
-  const [perPage] = useState(3);
+  const [perPage, setPerPage] = useState(3);
   const [pageCount, setPageCount] = useState(0)
 
   const router = useRouter()  
@@ -58,18 +69,22 @@ const Blog = () => {
   //getting our data 
   const getData = () => {
     const data = posts
+    const cant = window.innerHeight <= 600 && window.innerWidth <= window.innerHeight ? 
+       2 : window.innerHeight >= 800 && window.innerWidth <= 765 ? 4 : 3
+
+    setPerPage(cant)    
     //slicing data   
-    const slice = data.slice(offset, offset + perPage)
-    const postData = slice.map((item, key6) =>
-      <BlogCardWrapper key={key6}>
+    const slice = data.slice(offset, offset + cant)
+    const postData = slice.map(item =>
+      <BlogCardWrapper key={uuid()}>
         <div className="hidden md:block">
           <BlogCardBorder>
-            <img className="lg:h-48 md:h-28 w-full object-cover object-center" src={item.img} alt="" />         
+          <Link href={`/blog/${item.id}`}><img className="lg:h-48 md:h-28 w-full object-cover object-center cursor-pointer" src={item.img} alt="" /></Link>         
             <BlogCardBlock>
               <div className="flex flex-wrap">
                 {
-                  item.tags.map((tags, key3) => (
-                    <div key={key3}>
+                  item.tags.map(tags => (
+                    <div key={uuid()}>
                       <Link href={`/blog/search?p=${tags.toLowerCase()}`}>
                         <Category>{tags}</Category>
                       </Link>
@@ -81,15 +96,7 @@ const Blog = () => {
                 {format(parseISO(item.date), 'MMMM do, uuu')}
               </div>
               <Link href={`/blog/${item.id}`}><BlogTitle1>{item.title}</BlogTitle1></Link>
-              <CardSummary>{item.summary}</CardSummary>
-              {/* <div className="flex items-center flex-wrap ">
-                                  <a className="text-secondary2 inline-flex items-center md:mb-2 lg:mb-0">Learn More
-                                      <svg className="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round">
-                                          <path d="M5 12h14"></path>
-                                          <path d="M12 5l7 7-7 7"></path>
-                                      </svg>
-                                  </a>
-                              </div> */}
+              <CardSummary>{item.summary}</CardSummary>              
             </BlogCardBlock>
           </BlogCardBorder>
         </div>
@@ -112,7 +119,7 @@ const Blog = () => {
       </BlogCardWrapper>
     )
     setData(postData)
-    setPageCount(Math.ceil(data.length / perPage))
+    setPageCount(Math.ceil(data.length / cant))
 
 
   }
@@ -137,59 +144,67 @@ const Blog = () => {
   const prevSVG = <svg className="h-8 w-8 text-secondary2" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">  <polyline points="11 17 6 12 11 7" />  <polyline points="18 17 13 12 18 7" /></svg>
   
   return (
-    <motion.div initial={{opacity:0,  y: 200}} animate={{opacity:1, y:0}}>       
-        <FullPage controls={CustomControls}>
-          <Slide {...style}>
-            <Section>
-              <div className="container px-5 mx-auto">
-                <SectionSubheader>Discover interesting ideas and unique perspectives from our amazing crew</SectionSubheader>                
-                {pressEnter && searchRedirect()}
-                {/* search box*/}
-                <SearchWrapper>
-                  <SearchField
-                    onChange={handleChange}
-                    placeholder='Search posts'
-                    type='text'
-                    value={query}
-                    type="text"
-                    name="search"
-                    placeholder="Search here">
-                  </SearchField>
-                  <Link href={`/blog/search?q=${query}`}><svg className="h-6 w-6 text-secondary2" width="24" height="24" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">  <path stroke="none" d="M0 0h24v24H0z" />  <circle cx="10" cy="10" r="7" />  <line x1="21" y1="21" x2="15" y2="15" /></svg></Link>
+    <>
+        <Head>
+        <title>Datwit | Blog</title>
+        <link rel="icon" href="/favicon.ico" />
+        </Head> 
+        <motion.div initial={{opacity:0,  y: 200}} animate={{opacity:1, y:0}}>       
+            <FullPage controls={CustomControls}>
+              <Slide {...style}>
+                <Section>
+                <div className="container px-5 mx-auto relative top-2/4 transform -translate-y-2/4">
+                      <SectionSubheader>Discover interesting ideas and unique perspectives from our amazing crew</SectionSubheader>        
+                      {pressEnter && searchRedirect()}
+                      {/* search box*/}
+                      <SearchWrapper>
+                        <SearchField
+                          onChange={handleChange}
+                          placeholder='Search posts'
+                          type='text'
+                          value={query}
+                          type="text"
+                          name="search"
+                          placeholder="Search here">
+                        </SearchField>
+                        <Link href={`/blog/search?q=${query}`}><svg className="h-6 w-6 text-secondary2" width="24" height="24" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">  <path stroke="none" d="M0 0h24v24H0z" />  <circle cx="10" cy="10" r="7" />  <line x1="21" y1="21" x2="15" y2="15" /></svg></Link>
+                      </SearchWrapper>
 
-                </SearchWrapper>
+                    {/*pagination*/}
+                    <div className="flex flex-wrap">
+                      {data}
+                      {
+                      pageCount >= 2 
+                        ?
+                        <PaginationWrapper>
+                          <ReactPaginate
+                            previousLabel={prevSVG}
+                            nextLabel={nextSVG}
+                            breakLabel={"..."}
+                            breakClassName={"break-me"}
+                            pageCount={pageCount}
+                            onPageChange={handlePageClick}
+                            containerClassName={"pagination"}
+                            subContainerClassName={"pages pagination"}
+                            activeClassName={"active"}
+                            />
+                          </PaginationWrapper>
+                          :
+                          [] 
+                        }          
+                      </div>
+                  </div>
+                </Section>
+              </Slide>
 
-                {/*pagination*/}
-                <div className="flex flex-wrap">
-                  {data}
-                  <PaginationWrapper>
-                    <ReactPaginate
-                      previousLabel={prevSVG}
-                      nextLabel={nextSVG}
-                      breakLabel={"..."}
-                      breakClassName={"break-me"}
-                      pageCount={pageCount}
-                      marginPagesDisplayed={3}
-                      pageRangeDisplayed={3}
-                      onPageChange={handlePageClick}
-                      containerClassName={"pagination"}
-                      subContainerClassName={"pages pagination"}
-                      activeClassName={"active"}
-                    />
-                  </PaginationWrapper>
-
-                </div>
-              </div>
-            </Section>
-          </Slide>
-
-          <Slide>
-            <section className="w-full h-screen bg-primary mx-auto px-10">
-              <Footer />
-            </section>
-          </Slide>
-        </FullPage>
-    </motion.div>
+              <Slide>
+                <section className="w-full h-screen bg-primary mx-auto px-10">
+                  <Footer />
+                </section>
+              </Slide>
+            </FullPage>
+        </motion.div>
+    </>
   );
 }
 export default Blog
@@ -207,3 +222,4 @@ export const getStaticProps = async () => {
     },
   };
 }
+
