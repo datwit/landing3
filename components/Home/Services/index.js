@@ -65,8 +65,8 @@ const Services = () => {
                                          Development</h2>                                        
                                 </IconTitle>
                                 {/*card content-reveal*/}
-                                <CardContent className={openCard1 ? "block h-full" : "h-0"} id="link1" > 
-                                    <GlassInner>
+                                <CardContent onWheel={e => e.stopPropagation()} className={openCard1 ? "block h-full" : "h-0"} id="link1" > 
+                                    <div className="p-4">
                                         <a className="flex justify-end" href="#" onClick={e =>
                                         {
                                         e.preventDefault();
@@ -93,7 +93,7 @@ const Services = () => {
                                                 </div>
                                             ))
                                         }
-                                    </GlassInner>                                                            
+                                    </div>                                                          
                                 </CardContent>
                                 {/*/card content-reveal*/}
                             </CardRevealBorder> 
@@ -126,8 +126,8 @@ const Services = () => {
                                         Science</h2>
                                 </IconTitle>
                                 {/*card content-reveal*/}
-                                <CardContent className={openCard2 ? "block h-full" : "h-0"} id="link2"> 
-                                    <GlassInner>
+                                <CardContent onWheel={e => e.stopPropagation()} className={openCard2 ? "block h-full" : "h-0"} id="link2"> 
+                                    <div className="p-4">
                                         <a className="flex justify-end" href="#" onClick={e =>
                                         {
                                         e.preventDefault();
@@ -154,7 +154,7 @@ const Services = () => {
                                                 </div>
                                             ))
                                         }
-                                    </GlassInner>                                    
+                                    </div>                                  
                                 </CardContent>
                                 {/*/card content-reveal*/}
                             </CardRevealBorder>
@@ -209,7 +209,7 @@ const Services = () => {
                                 </div>
                             </div>
                         </div>
-                        <ServTabContent>
+                        <ServTabContent onWheel={e => e.stopPropagation()}>
                             <div className="px-4 border border-gray-300 overflow-y-auto" id="inner-content">
                                 <div className={openTab1 === 1 ? "block" : "hidden"}>
                                     {
