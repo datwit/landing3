@@ -10,6 +10,12 @@ h2{
     font-size: 25px;
     
 }
+h3{
+    margin-top: 1rem;
+    margin-bottom: .8rem;
+    font-size: 20px;
+    
+}
 p{
     color: #413f3f;
     opacity: .72;
