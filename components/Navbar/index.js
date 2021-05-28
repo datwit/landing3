@@ -103,7 +103,7 @@ const Navbar=({scrollToSlide}) => {
 					<ul className="list-none flex flex-col items-center">
 						{
 							datas.map(data => (
-								<Link key={uuid()} href={data.link}><LinkItem2 id={data.id} onClick={router.pathname == data.link ? reset : some} className={router.pathname == data.link ? "text-secondary2": "text-white pt-9"}>{data.name}</LinkItem2></Link>
+								<Link key={uuid()} href={data.link}><LinkItem2 id={data.id} onClick={router.pathname == data.link ? reset : some} className={router.pathname == data.link ? "text-secondary2": "text-white"}>{data.name}</LinkItem2></Link>
 							))
 						}						
 					</ul>							
