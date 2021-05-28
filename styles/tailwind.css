@@ -130,4 +130,11 @@ border-radius: 25px;
   transition-property: opacity, transform;
 }
 
+/* html, body {
+  margin: 0;
+  height: 100%;
+  overflow: hidden;
+  -webkit-overflow-scrolling: touch;
+} */
+
 
