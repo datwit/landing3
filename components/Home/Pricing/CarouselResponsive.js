@@ -7,7 +7,7 @@ import datas from "./pricing.json";
 
 const CarouselResponsive = () => {
     return (
-        <CarouselContainer onWheel={e => e.stopPropagation()}>                    
+        <CarouselContainer onTouchMove={e => e.stopPropagation()}>                    
             <Carousel showArrows={true} showThumbs={false}>
             {
                 datas.map(data => (  
