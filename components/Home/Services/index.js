@@ -209,7 +209,7 @@ const Services = () => {
                                 </div>
                             </div>
                         </div>
-                        <ServTabContent onWheel={e => e.stopPropagation()}>
+                        <ServTabContent onTouchMove={e => e.stopPropagation()}>
                             <div className="px-4 border border-gray-300 overflow-y-auto" id="inner-content">
                                 <div className={openTab1 === 1 ? "block" : "hidden"}>
                                     {
