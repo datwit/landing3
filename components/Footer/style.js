@@ -34,12 +34,21 @@ svg{
     width:1.75rem;
     height:1.75rem;
     color: white;
+    
+    &:hover{
+        color: #00baff;    
+    }
 }
 `;
 export const ContactWrapper = styled.span.attrs({
     className: "flex"
 })
 `
+svg{
+    &:hover{
+        color: #00baff;    
+    }
+}
 @media (max-width: 639px){
     text-align: center !important;
 }
@@ -48,11 +57,12 @@ export const ContactWrapper = styled.span.attrs({
 }
 `;
 export const UpperH3 = styled.h3.attrs({
-    className: "text-white text-left sm:mb-5 cursor-pointer flex justify-center sm:justify-start"
+    className: "text-white font-medium text-left sm:mb-5 cursor-pointer flex justify-center sm:justify-start hover:text-secondary1"
 })``;
 export const DownH3 = styled.h3.attrs({
-    className: "text-white text-left cursor-pointer flex justify-center sm:justify-start"
-})``;
+    className: "text-white font-medium text-left cursor-pointer flex justify-center sm:justify-start hover:text-secondary1"
+})
+``;
 export const CopyRight = styled.p.attrs({
     className: "text-md absolute bottom-0"
 })
