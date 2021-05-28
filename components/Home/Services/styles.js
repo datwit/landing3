@@ -24,7 +24,7 @@ export const CardContent = styled.div.attrs({
   overflow-y: auto; 
   transition: height 300ms ease-in-out;  
   -webkit-transition: height 300ms ease-in-out;
-  background-color: rgba(255, 255, 255, .9);
+  background-color: rgba(255, 255, 255, .96);
   
 
 #link2, #link1{
@@ -123,10 +123,10 @@ export const BulletTitle = styled.h2.attrs({
   className: "text-lg mt-2 text-left"
 })``;
 export const BulletSubtitle = styled.p.attrs({
-  className: "text-base mt-2"
+  className: "text-base mt-2 text-gray-700"
 })``;
 export const ServiceBulletsOuter = styled.p.attrs({
-  className: "text-base mt-2 flex"
+  className: "text-base mt-2 flex text-gray-700"
 })``;
 export const ServiceBulletsSpan = styled.span.attrs({
   className: "w-5 h-5 mr-2 inline-flex items-center justify-center flex-shrink-0"
