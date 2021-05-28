@@ -17,12 +17,12 @@ export default function Home() {
   } 
   
   /*****hiding scroll bar*/
-  useEffect(()=>{
-    document.body.style.overflow = "hidden";
-    return () => {
-      document.body.style.overflow = "visible";
-    };
-  })
+  // useEffect(()=>{
+  //   document.body.style.overflow = "hidden";
+  //   return () => {
+  //     document.body.style.overflow = "visible";
+  //   };
+  // })
 
   return ( 
     <> 
