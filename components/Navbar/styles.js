@@ -65,7 +65,7 @@ export const NavWrapper = styled.div.attrs({
   font-family: 'Numans';
   `;  
   export const LinkItem2 = styled.li.attrs({
-    className: "ml-5 2xl:ml-8 pb-2 text-xl font-semibold text-white hover:text-secondary1 focus:text-secondary1"
+    className: "  pt-9 ml-5 2xl:ml-8 text-xl font-semibold text-white hover:text-secondary1 focus:text-secondary1"
   })
   `
   ${HoverLine}

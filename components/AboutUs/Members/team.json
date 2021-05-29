@@ -1,5 +1,5 @@
-{
-  "list1":[
+
+[
     {
       "name": "Leonel Salazar",
       "designation": "Founder / CEO",
@@ -29,9 +29,7 @@
       "github": "https://github.com/yanetcg1983"
 
 
-    }
-  ],
-  "list2":[
+    }, 
     {
 
       "name": "Enma Lidia Muñoz",
@@ -52,6 +50,6 @@
       "github": "https://github.com/ybenitezf"
     }
 
-  ]
+]
 
-}
+

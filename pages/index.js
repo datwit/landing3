@@ -17,18 +17,19 @@ export default function Home() {
   } 
   
   /*****hiding scroll bar*/
-  // useEffect(()=>{
-  //   document.body.style.overflow = "hidden";
-  //   return () => {
-  //     document.body.style.overflow = "visible";
-  //   };
-  // })
+  useEffect(()=>{
+    document.body.style.overflow = "hidden";
+    return () => {
+      document.body.style.overflow = "visible";
+    };
+  })
 
   return ( 
     <> 
       <Head>
       <title>Datwit | Home</title>
       <link rel="icon" href="/favicon.ico" />
+      <meta name="apple-mobile-web-app-capable" content="yes" />
       </Head>     
       <motion.div initial={{opacity:0,  y: 200}} animate={{opacity:1, y:0}}> 
               <FullPage controls={CustomControls}> 

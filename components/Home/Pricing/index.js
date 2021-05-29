@@ -11,7 +11,7 @@ const index = () => {
     
     return (
         
-        <div className="container px-5 mx-auto relative top-2/4 transform -translate-y-2/4 mt-8">
+        <div className="container px-5 mx-auto relative top-2/4 transform -translate-y-2/4 md:mt-8">
             <SectionHeader>Choose your product</SectionHeader>
             <SectionSubheader>Lorem ipsum dolor, sit amet consectetur adipisicing elit...</SectionSubheader>
 
