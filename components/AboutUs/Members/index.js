@@ -2,12 +2,13 @@ import datas from "./team.json";
 import {MemberCol, MemberDesig, MemberRol, MemberCol2} from './style'
 import {ContentWrapper} from '../../../styles/global';
 import uuid from 'react-uuid'
-import 'react-responsive-carousel/lib/styles/carousel.min.css';
+// import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import {OuterWrapper, CarouselContainer} from '../../Home/Pricing/style';
 import MemberCard from './MemberCard'
 import {DataBlock, ColName, SocialWrapper} from '../Collaborators/style'
+import Carousel from 'react-elastic-carousel'
 
-const Carousel = require('react-responsive-carousel').Carousel;
+// const Carousel = require('react-responsive-carousel').Carousel;
 
 const Members = () => {      
    
@@ -18,8 +19,22 @@ const Members = () => {
             <h4 className="mb-4">Whatever cardigan tote bag tumblr hexagon brooklyn asymmetrical gentrify, subway tile poke farm-to-table. Franzen you probably haven't heard of them.</h4>
             <div className="hidden md:block">
                 <ContentWrapper>
-                     
-                    {                       
+                <Carousel itemsToShow={3}>
+                {                       
+                    datas.map(data => (
+                        <div className="" key={uuid()}>
+                            <MemberCol> 
+                                <MemberCard name={data.name} designation={data.designation} rol={data.rol} twitter={data.twitter} linkedin={data.linkedin} github={data.github} />                          
+                            </MemberCol> 
+                        </div>
+                                              
+                    ))
+                }
+                    
+                    
+                    
+                </Carousel>                     
+                    {/* {                       
                     datas.list1.map(data => (
                         <div className="p-5 sm:w-1/3 lg:w-1/5" key={uuid()}>
                             <MemberCol> 
@@ -37,7 +52,8 @@ const Members = () => {
                             </MemberCol2>
                         </div>                      
                     ))
-                    }                    
+                    }                     */}
+
                 </ContentWrapper>
             </div> 
             {/******responsive********************/}
@@ -45,7 +61,7 @@ const Members = () => {
                 <CarouselContainer>
                     <Carousel showArrows={true} showThumbs={false}>
                     {
-                        datas.list1.map(data => (   
+                        datas.map(data => (   
                         <OuterWrapper key={uuid()}>
                                 <div>                            
                                 <img alt="team" className="flex-shrink-0 rounded-lg h-36 w-36 object-cover object-center mb-4" src="" />
@@ -69,7 +85,7 @@ const Members = () => {
                         </OuterWrapper>  
                         ))
                     }
-                    {
+                    {/* {
                         datas.list2.map(data => (   
                         <OuterWrapper key={uuid()}>
                                 <div>                            
@@ -93,7 +109,7 @@ const Members = () => {
                             </div>
                         </OuterWrapper>  
                         ))
-                    }                           
+                    }                            */}
                     </Carousel>
                 </CarouselContainer>
 

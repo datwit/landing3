@@ -20,17 +20,17 @@ export const SocialCard = styled.div
 
     /* if backdrop support: very transparent and blurred */
     // background-color: rgba(255, 255, 255, .4);
-    @supports ((-webkit-backdrop-filter: blur(2rem)) or (backdrop-filter: blur(2rem))) {    
+    // @supports ((-webkit-backdrop-filter: blur(2rem)) or (backdrop-filter: blur(2rem))) {    
         
-        background: linear-gradient(
-            to right bottom,
-            rgba(255,255,255,0.5),
-            rgba(255,255,255,0.3)
-            );
-        -webkit-backdrop-filter: blur(2rem);
-        backdrop-filter: blur(2rem);
+    //     background: linear-gradient(
+    //         to right bottom,
+    //         rgba(255,255,255,0.5),
+    //         rgba(255,255,255,0.3)
+    //         );
+    //     -webkit-backdrop-filter: blur(2rem);
+    //     backdrop-filter: blur(2rem);
     
-    }
+    // }
 `;
 export const MemberCol2 = styled.div.attrs({
     className: "border border-gray-300 shadow hover:shadow-lg transition duration-200 ease-in relative overflow-hidden"
