@@ -9,7 +9,7 @@ import StudyCasesCard from './StudyCasesCard';
 const StudyCases = () => {
     
     return (        
-    <div className="container px-5 mx-auto relative top-2/4 transform -translate-y-2/4 mt-8">
+    <div className="container px-5 mx-auto relative top-2/4 transform -translate-y-2/4 md:mt-8">
         <SectionHeader>Check out our solutions</SectionHeader>
         <SectionSubheader>Commitment and creativity mark our creations. By all means, stroll along...</SectionSubheader>
         <div className="hidden md:block">
