@@ -52,7 +52,5 @@ export const MemberRol = styled.h4.attrs({
 export const SocialWrapper2 = styled.span.attrs({
     className: "flex justify-center"
 })
-`
-/* position:relative;
-bottom: -30px; */
-`; 
+``; 
+

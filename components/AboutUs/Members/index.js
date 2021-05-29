@@ -1,5 +1,5 @@
 import datas from "./team.json";
-import {MemberCol, MemberDesig, MemberRol, MemberCol2} from './style'
+import {MemberCol, MemberDesig, MemberRol, MemberCol2, CarouselInner} from './style'
 import {ContentWrapper} from '../../../styles/global';
 import uuid from 'react-uuid'
 // import 'react-responsive-carousel/lib/styles/carousel.min.css';
@@ -19,20 +19,17 @@ const Members = () => {
             <h4 className="mb-4">Whatever cardigan tote bag tumblr hexagon brooklyn asymmetrical gentrify, subway tile poke farm-to-table. Franzen you probably haven't heard of them.</h4>
             <div className="hidden md:block">
                 <ContentWrapper>
-                <Carousel itemsToShow={3}>
-                {                       
-                    datas.map(data => (
-                        <div className="" key={uuid()}>
-                            <MemberCol> 
-                                <MemberCard name={data.name} designation={data.designation} rol={data.rol} twitter={data.twitter} linkedin={data.linkedin} github={data.github} />                          
-                            </MemberCol> 
-                        </div>
-                                              
-                    ))
-                }
-                    
-                    
-                    
+                    <Carousel itemsToShow={3}>
+                    {                       
+                        datas.map(data => (
+                            <div key={uuid()}>
+                                <MemberCol> 
+                                    <MemberCard name={data.name} designation={data.designation} rol={data.rol} twitter={data.twitter} linkedin={data.linkedin} github={data.github} />                          
+                                </MemberCol> 
+                            </div>
+                                                
+                        ))
+                    }                                   
                 </Carousel>                     
                     {/* {                       
                     datas.list1.map(data => (
