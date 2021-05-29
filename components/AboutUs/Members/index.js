@@ -1,5 +1,5 @@
 import datas from "./team.json";
-import {MemberCol, MemberDesig, MemberRol, MemberCol2, CarouselInner} from './style'
+import {MemberCol} from './style'
 import {ContentWrapper} from '../../../styles/global';
 import uuid from 'react-uuid'
 import MemberCard from './MemberCard'
@@ -20,7 +20,7 @@ const Members = () => {
             <h4 className="mb-4">Whatever cardigan tote bag tumblr hexagon brooklyn asymmetrical gentrify, subway tile poke farm-to-table. Franzen you probably haven't heard of them.</h4>
             
                 <ContentWrapper>
-                    <Carousel itemsToShow={3} breakPoints={breakPoints}>
+                    <Carousel itemsToShow={3} breakPoints={breakPoints} onTouchMove={e => e.stopPropagation()}>
                     {                       
                         datas.map(data => (
                             <div key={uuid()}>
