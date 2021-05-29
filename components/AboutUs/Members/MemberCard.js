@@ -1,6 +1,6 @@
 import React from 'react'
-import {DataBlock, ColName} from '../Collaborators/style'
-import {MemberCol, MemberDesig, MemberRol, MemberCol2, SocialCard, SocialWrapper2} from './style'
+import {ColName} from '../Collaborators/style'
+import { MemberDesig, MemberRol, SocialCard, SocialWrapper2} from './style'
 import {useState} from 'react'
 
 const MemberCard = ({name, designation, rol, twitter, linkedin, github}) => {

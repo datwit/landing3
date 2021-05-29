@@ -32,17 +32,6 @@ export const SocialCard = styled.div
     
     // }
 `;
-export const MemberCol2 = styled.div.attrs({
-    className: "border border-gray-300 shadow hover:shadow-lg transition duration-200 ease-in relative overflow-hidden"
-})
-`
-    @media (min-width: 640px){
-        width:60%;
-    }
-    @media (min-width: 1024px){
-        width:100%;
-    }
-`;
 export const MemberDesig = styled.h3.attrs({
     className: "text-gray-500"
 })``;

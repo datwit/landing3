@@ -142,7 +142,20 @@ border-radius: 25px;
   display: flex;
   justify-content: center;
   align-items: center;
+  
 }
+@media (max-width: 400px){
+  .rec.rec-arrow {
+    display: none;
+  }
+  
+}
+@media (max-width: 639px){
+  .rec.rec-item-wrapper{
+    padding: 5px !important;
+  }
+}
+
 /* round buttons on hover */
 .rec.rec-arrow:hover:enabled, .rec.rec-arrow:focus:enabled {
   border-radius: 50%;
