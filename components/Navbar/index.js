@@ -63,7 +63,8 @@ const Navbar=({scrollToSlide}) => {
 	  }, []);
 
 
-	return (		
+	return (	
+		<div  id='navbar' className="flex items-center flex-wrap h-20 w-full fixed top-0 bg-fixed bg-white z-10">
 		<nav className='container max-w-7xl mx-auto px-4 sm:px-6 p-3'>			
 			<NavWrapper>					
 					<ImgWrapper onClick={router.pathname=="/" ? reset : some} >
@@ -110,7 +111,7 @@ const Navbar=({scrollToSlide}) => {
 				</div>					
 			</HamburguerWrapper>			
 		</nav>
-		
+		</div>	
 	)	
 }
 
