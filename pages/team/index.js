@@ -7,14 +7,24 @@ import Footer from '../../components/Footer'
 import { motion } from 'framer-motion'
 import Head from 'next/head';
 import {useEffect} from 'react'
+import DeviceDetect from "../../lib/deviceDetect"
+import Navbar from '../../components/Navbar'
 
 const Team = () => {
+    const {isMobile} = DeviceDetect()
+
     const style={
       height:'calc(100% - 80px)',    
     } 
+    function scrollToTop() {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      });
+    }
     /*****hiding scroll bar*/
     useEffect(()=>{
-      document.body.style.overflow = "hidden";
+      isMobile ? [] : document.body.style.overflow = "hidden";
       return () => {
         document.body.style.overflow = "visible";
       };
@@ -27,25 +37,48 @@ const Team = () => {
         <link rel="icon" href="/favicon.ico" />
         </Head> 
         <motion.div initial={{opacity:0,  y: 200}} animate={{opacity:1, y:0}}>
+          { !isMobile ? 
             <FullPage controls={CustomControls}>
             <Slide {...style}>
-              <Section>
-                <Tech /> 
+              <Section classes={'w-full h-screen'}>
+                <Tech classes={"container px-5 mx-auto relative top-2/4 transform -translate-y-2/4"}/> 
               </Section>        
             </Slide>
 
             <Slide>
-              <Section>
-                <Benefits />
+              <Section classes={'w-full h-screen'}>
+                <Benefits classes={"container px-5 mx-auto relative top-2/4 transform -translate-y-2/4"} />
               </Section>        
             </Slide>
 
             <Slide>
-              <section className= "w-full h-screen bg-primary mx-auto px-10">
+              <Section classes={"w-full h-screen bg-primary mx-auto px-10"}>
                 <Footer />
-              </section>                  
+              </Section>                  
             </Slide>
             </FullPage>
+            :
+            <>
+              <Navbar scrollToSlide={ scrollToTop }/>
+              <Slide {...style}>
+                <Section classes={''}>
+                  <Tech classes={"container px-5 mx-auto"}/> 
+                </Section>        
+              </Slide>
+
+              <Slide>
+                <Section classes={''}>
+                  <Benefits classes={"container px-5 mx-auto"} />
+                </Section>        
+              </Slide>
+
+              <Slide>
+                <Section classes={"w-full h-screen bg-primary mx-auto px-10"}>
+                  <Footer />
+                </Section>                  
+              </Slide>
+            </>
+          }  
         </motion.div>
       </>
     )

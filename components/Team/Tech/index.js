@@ -5,9 +5,9 @@ import {ImgContainer, ImgWrapper} from './style'
 import uuid from 'react-uuid'
 
 
-const Tech = () => {
+const Tech = ({classes}) => {
     return (
-        <div className="container px-5 mx-auto relative top-2/4 transform -translate-y-2/4">
+        <div className={classes}>
             <SectionHeader>Lorem ipsum dolor sit amet consectetur. </SectionHeader>
             <SectionSubheader>Blanditiis enim nihil earum qui, a non fugit consectetur nobis natus quasi...</SectionSubheader>
             <ImgContainer>
