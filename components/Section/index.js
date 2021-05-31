@@ -2,11 +2,11 @@ import {Fragment} from 'react'
 /* import Navbar from '../Navbar'  */
 
 
-const Section = ({children}) => {
+const Section = ({children, classes}) => {
 
     return ( 
         <Fragment>        
-            <section className= "w-full h-screen">
+            <section className= {classes}>
                 {/* <Navbar /> */}
                 {children}        
             </section>

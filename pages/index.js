@@ -48,39 +48,39 @@ export default function Home() {
               <FullPage controls={CustomControls}> 
 
                 <Slide {...style}>      
-                  <Section>                  
+                  <Section classes={'w-full h-screen'}>                  
                       <Hero />                  
                   </Section>        
                 </Slide>
 
                 <Slide>
-                <Section>
-                    <Services />
+                <Section classes={'w-full h-screen'}>
+                    <Services classes={"container px-5 mx-auto relative top-2/4 transform -translate-y-2/4"} />
                   </Section>
                 </Slide> 
 
                 <Slide>
-                  <Section>
-                    <StudyCases />
+                  <Section classes={'w-full h-screen'}>
+                    <StudyCases classes={"container px-5 mx-auto relative top-2/4 transform -translate-y-2/4"}/>
                   </Section>          
                 </Slide>
                 
                 <Slide>
-                  <Section>
-                    <Pricing />
+                  <Section classes={'w-full h-screen'}>
+                    <Pricing classes={"container px-5 mx-auto relative top-2/4 transform -translate-y-2/4"} />
                   </Section>          
                 </Slide>
 
                 <Slide>
-                  <Section>
-                    <Selection />
+                  <Section classes={'w-full h-screen'}>
+                    <Selection classes={"container px-5 mx-auto relative top-2/4 transform -translate-y-2/4"}/>
                   </Section>          
                 </Slide>
 
                 <Slide>
-                  <section className= "w-full h-screen bg-primary mx-auto px-10">
+                  <Section classes={"w-full h-screen bg-primary mx-auto px-10"}>
                     <Footer />
-                  </section>                 
+                  </Section>                 
                 </Slide>
                 
               </FullPage>
@@ -91,39 +91,39 @@ export default function Home() {
             <Navbar scrollToSlide={ scrollToTop }/>
 
             <Slide {...style}>      
-              <Section>                  
+                <Section classes={'w-full h-screen'}>           
                   <Hero />                  
-              </Section>        
+                </Section>      
             </Slide>
 
             <Slide>
-            <Section>
-                <Services />
+              <Section classes={''}>
+                <Services  classes={"container px-5 mx-auto"}/>
               </Section>
             </Slide> 
 
             <Slide>
-              <Section>
-                <StudyCases />
+              <Section classes={''}>
+                <StudyCases classes={"container px-5 mx-auto"} />
               </Section>          
             </Slide>
             
             <Slide>
-              <Section>
-                <Pricing />
+              <Section classes={''}>
+                <Pricing classes={"container px-5 mx-auto"} />
               </Section>          
             </Slide>
 
             <Slide>
-              <Section>
-                <Selection />
+              <Section classes={''}>
+                <Selection classes={"container px-5 mx-auto"} />
               </Section>          
             </Slide>
 
-            <Slide>
-              <section className= "w-full h-screen bg-primary mx-auto px-10">
+            <Slide>              
+              <Section classes={"w-full h-screen bg-primary mx-auto px-10"}>
                 <Footer />
-              </section>                 
+              </Section>                             
             </Slide>
           </>
 

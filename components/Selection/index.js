@@ -5,7 +5,7 @@ import { useState } from 'react'
 import SelectionButton from './SelectionButton';
 
 
-const Selection = () => {
+const Selection = ({classes}) => {
 
     const [card1, isCard1] = useState(false);
     const [card2, isCard2] = useState(false)
@@ -31,7 +31,7 @@ const Selection = () => {
     };
  
     return (
-        <div className="container px-5 mx-auto relative top-2/4 transform -translate-y-2/4">
+        <div className={classes}>
             <SectionHeader>Sit ea irure veniam voluptate id incididunt ...</SectionHeader>
             <SectionSubheader>Sit ea irure veniam voluptate id incididunt consectetur amet. Pariatur proident duis exercitation consequat ipsum velit anim dolor fugiat esse ea.</SectionSubheader>
             <ContentWrapper>

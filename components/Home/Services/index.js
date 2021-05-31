@@ -5,7 +5,7 @@ import {GlassInner, TabTitle, TabTitle1, ServTabContent, CardRevealWrapper, Icon
 import SoftDSVG from './SoftDSVG'
 import DataScSVG from './DataScSVG'
 
-const Services = () => {
+const Services = ({classes}) => {
     
     const [openTab1, setOpenTab1] = useState(1); 
     const [openCard1, setOpenCard1] = useState(false)
@@ -31,7 +31,7 @@ const Services = () => {
     
    
     return (        
-        <div ref={wrapperRef} className="container px-5 mx-auto relative top-2/4 transform -translate-y-2/4 md:mt-8">
+        <div ref={wrapperRef} className={classes}>
             <SectionSubheader>Lorem ipsum dolor sit amet consectetur adipisicing elit.</SectionSubheader>
             
                 <div className="hidden md:block">
