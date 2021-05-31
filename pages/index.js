@@ -86,48 +86,48 @@ export default function Home() {
               </FullPage>
             </>
               
-              :
-              <>
-                <Navbar scrollToSlide={ scrollToTop }/>
+          :
+          <>
+            <Navbar scrollToSlide={ scrollToTop }/>
 
-                <Slide {...style}>      
-                  <Section>                  
-                      <Hero />                  
-                  </Section>        
-                </Slide>
+            <Slide {...style}>      
+              <Section>                  
+                  <Hero />                  
+              </Section>        
+            </Slide>
 
-                <Slide>
-                <Section>
-                    <Services />
-                  </Section>
-                </Slide> 
+            <Slide>
+            <Section>
+                <Services />
+              </Section>
+            </Slide> 
 
-                <Slide>
-                  <Section>
-                    <StudyCases />
-                  </Section>          
-                </Slide>
-                
-                <Slide>
-                  <Section>
-                    <Pricing />
-                  </Section>          
-                </Slide>
+            <Slide>
+              <Section>
+                <StudyCases />
+              </Section>          
+            </Slide>
+            
+            <Slide>
+              <Section>
+                <Pricing />
+              </Section>          
+            </Slide>
 
-                <Slide>
-                  <Section>
-                    <Selection />
-                  </Section>          
-                </Slide>
+            <Slide>
+              <Section>
+                <Selection />
+              </Section>          
+            </Slide>
 
-                <Slide>
-                  <section className= "w-full h-screen bg-primary mx-auto px-10">
-                    <Footer />
-                  </section>                 
-                </Slide>
-              </>
+            <Slide>
+              <section className= "w-full h-screen bg-primary mx-auto px-10">
+                <Footer />
+              </section>                 
+            </Slide>
+          </>
 
-        }
+          }
         </motion.div> 
     </>         
   )
