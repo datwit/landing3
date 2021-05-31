@@ -13,22 +13,32 @@ import { useRouter } from 'next/router'
 import { motion } from 'framer-motion'
 import Head from 'next/head';
 import uuid from 'react-uuid'
+import DeviceDetect from "../../lib/deviceDetect";
+import Navbar from '../../components/Navbar'
 
 
 import posts from '../../cache/posts.json'
 
 const Blog = () => {
+  const {isMobile} = DeviceDetect()
+
   const style={
     height:'calc(100% - 80px)',    
   }
 
+  function scrollToTop() {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  }
   /*****hiding scroll bar*/
   useEffect(()=>{
-    document.body.style.overflow = "hidden";
+    isMobile ? [] : document.body.style.overflow = "hidden";
     return () => {
       document.body.style.overflow = "visible";
     };
-  }) 
+  })
 
   const [query, setQuery] = useState('') 
 
@@ -149,10 +159,11 @@ const Blog = () => {
         <title>Datwit | Blog</title>
         <link rel="icon" href="/favicon.ico" />
         </Head> 
-        <motion.div initial={{opacity:0,  y: 200}} animate={{opacity:1, y:0}}>       
+        <motion.div initial={{opacity:0,  y: 200}} animate={{opacity:1, y:0}}> 
+          { !isMobile ?       
             <FullPage controls={CustomControls}>
               <Slide {...style}>
-                <Section>
+                <Section classes={'w-full h-screen'}>
                 <div className="container px-5 mx-auto relative top-2/4 transform -translate-y-2/4">
                       <SectionSubheader>Discover interesting ideas and unique perspectives from our amazing crew</SectionSubheader>        
                       {pressEnter && searchRedirect()}
@@ -198,11 +209,67 @@ const Blog = () => {
               </Slide>
 
               <Slide>
-                <section className="w-full h-screen bg-primary mx-auto px-10">
+                <Section classes={"w-full h-screen bg-primary mx-auto px-10"}>
                   <Footer />
-                </section>
+                </Section>
               </Slide>
             </FullPage>
+            :
+            <>
+              <Navbar scrollToSlide={ scrollToTop }/>
+              <Slide {...style}>
+                <Section classes={''}>
+                <div className="container px-5 mx-auto">
+                      <SectionSubheader>Discover interesting ideas and unique perspectives from our amazing crew</SectionSubheader>        
+                      {pressEnter && searchRedirect()}
+                      {/* search box*/}
+                      <SearchWrapper>
+                        <SearchField
+                          onChange={handleChange}
+                          placeholder='Search posts'
+                          type='text'
+                          value={query}
+                          type="text"
+                          name="search"
+                          placeholder="Search here">
+                        </SearchField>
+                        <Link href={`/blog/search?q=${query}`}><svg className="h-6 w-6 text-secondary2" width="24" height="24" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">  <path stroke="none" d="M0 0h24v24H0z" />  <circle cx="10" cy="10" r="7" />  <line x1="21" y1="21" x2="15" y2="15" /></svg></Link>
+                      </SearchWrapper>
+
+                    {/*pagination*/}
+                    <div className="flex flex-wrap">
+                      {data}
+                      {
+                      pageCount >= 2 
+                        ?
+                        <PaginationWrapper>
+                          <ReactPaginate
+                            previousLabel={prevSVG}
+                            nextLabel={nextSVG}
+                            breakLabel={"..."}
+                            breakClassName={"break-me"}
+                            pageCount={pageCount}
+                            onPageChange={handlePageClick}
+                            containerClassName={"pagination"}
+                            subContainerClassName={"pages pagination"}
+                            activeClassName={"active"}
+                            />
+                          </PaginationWrapper>
+                          :
+                          [] 
+                        }          
+                      </div>
+                  </div>
+                </Section>
+              </Slide>
+
+              <Slide>
+                <Section classes={"w-full h-screen bg-primary mx-auto px-10"}>
+                  <Footer />
+                </Section>
+              </Slide>
+            </>          
+          }  
         </motion.div>
     </>
   );
