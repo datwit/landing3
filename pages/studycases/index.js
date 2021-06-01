@@ -161,7 +161,7 @@ return (
           <>
             <Navbar scrollToSlide={ scrollToTop }/>            
               <Slide {...style}>
-                <Section classes={''}>
+                <Section classes={'pb-16'}>
                 <div className="container px-5 mx-auto mt-20"> 
                     <SectionHeader>Check out our solutions</SectionHeader>
                     <SectionSubheader>Commitment and creativity mark our creations. By all means, stroll along...</SectionSubheader>

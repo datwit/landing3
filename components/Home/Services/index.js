@@ -34,7 +34,7 @@ const Services = ({classes}) => {
         <div ref={wrapperRef} className={classes}>
             <SectionSubheader>Lorem ipsum dolor sit amet consectetur adipisicing elit.</SectionSubheader>
             
-                <div className="hidden md:block">
+                <div className="">
                     <ContentWrapper>
                         <CardRevealWrapper>                                                
                             <CardRevealBorder onClick={e => 
@@ -162,7 +162,7 @@ const Services = ({classes}) => {
                     </ContentWrapper>
                 </div> 
                 {/*responsive*/}
-                <div className="md:hidden">
+                {/* <div className="md:hidden">
                     <ContentWrapper>
                         <div className="h-full w-full">
                             <div className="flex mb-0 list-none flex-wrap pt-3 flex-row w-full">
@@ -259,7 +259,7 @@ const Services = ({classes}) => {
 
                     </ContentWrapper>
 
-                </div>              
+                </div>               */}
         </div>       
         
     )

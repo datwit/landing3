@@ -2,17 +2,9 @@ import React from 'react'
 import {SectionSubheader, ContentWrapper} from '../../styles/global';
 import {MapWrapper, FormBlock, FormIntro, InputWrapper, FInput, TInput, FormLabels, ExplanationForm} from './style';
 import {Button} from '../../styles/global'
-import {useEffect} from 'react'
 
-const ContacthtmlForm = ({classes}) => {  
-    
-/*****hiding scroll bar******/
-useEffect(()=>{
-document.body.style.overflow = "hidden";
-return () => {
-    document.body.style.overflow = "visible";
-};
-})
+
+const ContacthtmlForm = ({classes}) => {     
 
     return (
         <div className={classes}>            
@@ -21,8 +13,7 @@ return () => {
                 <MapWrapper>
                     <iframe
                         width="100%"
-                        height="100%"
-                        className="absolute inset-0"
+                        height="100%"                        
                         frameBorder="0"
                         title="map"
                         marginHeight="0"

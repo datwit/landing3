@@ -158,7 +158,7 @@ return (
         <>
           <Navbar scrollToSlide={ scrollToTop }/>
           <Slide {...style}>
-            <Section classes={''}>
+            <Section classes={'pb-16'}>
               <div className="container px-5 mx-auto mt-20">
               <SectionHeader>Search Results</SectionHeader>
                 {/*pagination*/}
