@@ -98,7 +98,7 @@ const CasesResults = () => {
                 <Navbar scrollToSlide={ scrollToTop }/>
         
                 <Slide {...style}>
-                    <Section>
+                    <Section Section classes={'pb-16'}>
                         <div className="container px-5 mx-auto mt-20">
                             <SectionHeader>Search Results</SectionHeader>
                             <ContentWrapper>
@@ -135,9 +135,9 @@ const CasesResults = () => {
                     </Section>
                 </Slide>
                 <Slide>
-                    <section className="w-full h-screen bg-primary mx-auto px-10">
+                    <Section classes={"w-full h-screen bg-primary mx-auto px-10"}>
                         <Footer />
-                    </section>
+                    </Section>
                 </Slide>            
             </>            
             }

@@ -61,13 +61,13 @@ const Team = () => {
             <>
               <Navbar scrollToSlide={ scrollToTop }/>
               <Slide {...style}>
-                <Section classes={''}>
+                <Section classes={'pb-16 pt-20'}>
                   <Tech classes={"container px-5 mx-auto"}/> 
                 </Section>        
               </Slide>
 
               <Slide>
-                <Section classes={''}>
+                <Section classes={'pb-16'}>
                   <Benefits classes={"container px-5 mx-auto"} />
                 </Section>        
               </Slide>

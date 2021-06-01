@@ -1,10 +1,10 @@
 import styled from "styled-components"
 
 export const MapWrapper = styled.div.attrs({
-    className: "w-full md:w-1/2 lg:w-2/3 relative"
+    className: "w-full md:w-1/2"
 })``;
 export const FormBlock = styled.div.attrs({
-    className: "w-full md:w-1/2 lg:w-1/3 pl-10"
+    className: "w-full md:w-1/2 md:pl-10"
 })``;
 export const FormIntro = styled.p.attrs({
     className: "text-base m-0 text-gray-600 text-justify"
