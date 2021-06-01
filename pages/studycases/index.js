@@ -12,15 +12,27 @@ import { useState, useEffect } from 'react'
 import ReactPaginate from 'react-paginate';
 import Head from 'next/head';
 import uuid from 'react-uuid'
+import Navbar from '../../components/Navbar'
+import DeviceDetect from "../../lib/deviceDetect";
 
 import cases from '../../cache/cases.json'
 
 const AllStudyCases = () =>{
+  const {isMobile} = DeviceDetect()
+
+  function scrollToTop() {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  }
+
   const style={
     height:'calc(100% - 80px)',    
   } 
+
   useEffect(()=>{
-    document.body.style.overflow = "hidden";
+    isMobile ? [] : document.body.style.overflow = "hidden";
     return () => {
       document.body.style.overflow = "visible";
     };
@@ -103,10 +115,11 @@ return (
       <title>Datwit | Study Cases</title>
       <link rel="icon" href="/favicon.ico" />
       </Head> 
-      <motion.div initial={{opacity:0,  y: 200}} animate={{opacity:1, y:0}}>          
+      <motion.div initial={{opacity:0,  y: 200}} animate={{opacity:1, y:0}}>  
+      { !isMobile ?         
           <FullPage controls={CustomControls}>
               <Slide {...style}>
-                  <Section>
+                  <Section classes={'w-full h-screen'}>
                   <div className="container px-5 mx-auto relative top-2/4 transform -translate-y-2/4"> 
                       <SectionHeader>Check out our solutions</SectionHeader>
                       <SectionSubheader>Commitment and creativity mark our creations. By all means, stroll along...</SectionSubheader>
@@ -139,11 +152,55 @@ return (
                   </Section>
               </Slide>
               <Slide>
-                <section className= "w-full h-screen bg-primary mx-auto px-10">
+                <Section classes={"w-full h-screen bg-primary mx-auto px-10"}>
                   <Footer />
-                </section>                  
+                </Section>                  
               </Slide>
           </FullPage> 
+          :
+          <>
+            <Navbar scrollToSlide={ scrollToTop }/>            
+              <Slide {...style}>
+                <Section classes={''}>
+                <div className="container px-5 mx-auto mt-20"> 
+                    <SectionHeader>Check out our solutions</SectionHeader>
+                    <SectionSubheader>Commitment and creativity mark our creations. By all means, stroll along...</SectionSubheader>
+                    {/*pagination*/}
+                    <div className="flex flex-wrap">
+                        {data} 
+                        {
+                        pageCount >= 2 
+                        ?                      
+                          <PaginationWrapper>
+                            <ReactPaginate
+                              previousLabel={prevSVG}
+                              nextLabel={nextSVG}
+                              breakLabel={"..."}
+                              breakClassName={"break-me"}
+                              pageCount={pageCount}
+                              marginPagesDisplayed={3}
+                              pageRangeDisplayed={3}
+                              onPageChange={handlePageClick}
+                              containerClassName={"pagination"}
+                              subContainerClassName={"pages pagination"}
+                              activeClassName={"active"}
+                            />
+                          </PaginationWrapper>
+                        :
+                          [] 
+                        }                                                 
+                    </div>
+                </div>
+                </Section>
+              </Slide>
+              <Slide>
+                <Section classes={"w-full h-screen bg-primary mx-auto px-10"}>
+                  <Footer />
+                </Section>                  
+              </Slide>
+           
+          </>
+      }  
       </motion.div> 
     </>  
   );

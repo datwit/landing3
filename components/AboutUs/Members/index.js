@@ -7,7 +7,7 @@ import Carousel from 'react-elastic-carousel'
 
 // const Carousel = require('react-responsive-carousel').Carousel;
 
-const Members = () => {   
+const Members = ({classes}) => {   
     const breakPoints = [
         { width: 1, itemsToShow: 1 },
         { width: 550, itemsToShow: 2 },
@@ -15,7 +15,7 @@ const Members = () => {
     ]   
 
     return (
-        <div className="container px-5 mx-auto relative top-2/4 transform -translate-y-2/4 mt-0 md:mt-12">
+        <div className={classes}>
             <h2 className="mt-4">Meet our team</h2>
             <h4 className="mb-4">Whatever cardigan tote bag tumblr hexagon brooklyn asymmetrical gentrify, subway tile poke farm-to-table. Franzen you probably haven't heard of them.</h4>
             

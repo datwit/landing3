@@ -96,10 +96,8 @@ const CustomControls = ({ slidesCount, scrollToSlide, onNext, onPrev, getCurrent
   }
 
   return (
-        <>
-          <div className="flex items-center flex-wrap h-20 w-full fixed top-0 bg-fixed bg-white z-10" id='navbar'>              
-            <Navbar scrollToSlide={ scrollToSlide }/> 
-          </div> 
+        <>      
+          <Navbar scrollToSlide={ scrollToSlide }/> 
 
           <div className={className}>
             {renderSlidesNumbers(getCurrentSlideIndex())}

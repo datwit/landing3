@@ -4,7 +4,7 @@ import {MapWrapper, FormBlock, FormIntro, InputWrapper, FInput, TInput, FormLabe
 import {Button} from '../../styles/global'
 import {useEffect} from 'react'
 
-const ContacthtmlForm = () => {  
+const ContacthtmlForm = ({classes}) => {  
     
 /*****hiding scroll bar******/
 useEffect(()=>{
@@ -15,7 +15,7 @@ return () => {
 })
 
     return (
-        <div className="container px-5 mx-auto relative top-2/4 transform -translate-y-2/4 mt-6">            
+        <div className={classes}>            
             <SectionSubheader>Commitment and creativity mark our creations. By all means, stroll along...</SectionSubheader>
             <ContentWrapper>
                 <MapWrapper>

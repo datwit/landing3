@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Numans&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -36,11 +37,9 @@
     section{
       @apply  overflow-hidden relative px-3 sm:px-10 bg-white;
     } 
-    /* body{
-      @apply overflow-hidden;
-    }    */
+    
   } 
-
+  
 /***********************************************************************************************/
 /***************Navigation*****************************/  
 :disabled{

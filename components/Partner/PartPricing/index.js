@@ -7,12 +7,12 @@ import {BulletWrapper, PricingCardGray, ToggleWrapper, BundleChooser, BulletsCon
 import BulletsContent from './BulletsContent'
 import PartnerCard from './PartnerCard'
 
-const PartPricing = () => {    
+const PartPricing = ({classes}) => {    
 
     const [openTab, setOpenTab] = useState(1);
 
     return (
-        <div className="container px-5 mx-auto relative top-2/4 transform -translate-y-2/4 mt-20">
+        <div className={classes}>
             <SectionHeader>Lorem ipsum dolor sit amet consectetur adipisicing elit.</SectionHeader>            
             <div className="w-full">
                 <ToggleWrapper role="tablist">                    

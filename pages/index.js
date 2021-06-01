@@ -6,23 +6,34 @@ import StudyCases from '../components/Home/StudyCases'
 import Services from '../components/Home/Services'
 import Pricing from '../components/Home/Pricing'
 import Footer from '../components/Footer'
+import Navbar from '../components/Navbar'
 import Selection from '../components/Selection' 
 import { motion } from 'framer-motion'
 import Head from 'next/head';
 import {useEffect} from 'react'
+import DeviceDetect from "../lib/deviceDetect";
 
 export default function Home() {
+  const {isMobile} = DeviceDetect()
+  
   const style={
     height:'calc(100% - 80px)',    
   } 
   
-  /*****hiding scroll bar*/
+  function scrollToTop() {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  }
+
   useEffect(()=>{
-    document.body.style.overflow = "hidden";
+    isMobile ? [] : document.body.style.overflow = "hidden";
     return () => {
       document.body.style.overflow = "visible";
     };
   })
+  
 
   return ( 
     <> 
@@ -32,46 +43,91 @@ export default function Home() {
       <meta name="apple-mobile-web-app-capable" content="yes" />
       </Head>     
       <motion.div initial={{opacity:0,  y: 200}} animate={{opacity:1, y:0}}> 
+          { !isMobile ? 
+            <>
               <FullPage controls={CustomControls}> 
 
                 <Slide {...style}>      
-                  <Section>                  
+                  <Section classes={'w-full h-screen'}>                  
                       <Hero />                  
                   </Section>        
                 </Slide>
 
                 <Slide>
-                <Section>
-                    <Services />
+                <Section classes={'w-full h-screen'}>
+                    <Services classes={"container px-5 mx-auto relative top-2/4 transform -translate-y-2/4"} />
                   </Section>
                 </Slide> 
 
                 <Slide>
-                  <Section>
-                    <StudyCases />
+                  <Section classes={'w-full h-screen'}>
+                    <StudyCases classes={"container px-5 mx-auto relative top-2/4 transform -translate-y-2/4"}/>
                   </Section>          
                 </Slide>
                 
                 <Slide>
-                  <Section>
-                    <Pricing />
+                  <Section classes={'w-full h-screen'}>
+                    <Pricing classes={"container px-5 mx-auto relative top-2/4 transform -translate-y-2/4"} />
                   </Section>          
                 </Slide>
 
                 <Slide>
-                  <Section>
-                    <Selection />
+                  <Section classes={'w-full h-screen'}>
+                    <Selection classes={"container px-5 mx-auto relative top-2/4 transform -translate-y-2/4"}/>
                   </Section>          
                 </Slide>
 
                 <Slide>
-                  <section className= "w-full h-screen bg-primary mx-auto px-10">
+                  <Section classes={"w-full h-screen bg-primary mx-auto px-10"}>
                     <Footer />
-                  </section>                 
+                  </Section>                 
                 </Slide>
                 
-            </FullPage>
-        
+              </FullPage>
+            </>
+              
+          :
+          <>
+            <Navbar scrollToSlide={ scrollToTop }/>
+
+            <Slide {...style}>      
+                <Section classes={'w-full h-screen'}>           
+                  <Hero />                  
+                </Section>      
+            </Slide>
+
+            <Slide>
+              <Section classes={''}>
+                <Services  classes={"container px-5 mx-auto"}/>
+              </Section>
+            </Slide> 
+
+            <Slide>
+              <Section classes={''}>
+                <StudyCases classes={"container px-5 mx-auto"} />
+              </Section>          
+            </Slide>
+            
+            <Slide>
+              <Section classes={''}>
+                <Pricing classes={"container px-5 mx-auto"} />
+              </Section>          
+            </Slide>
+
+            <Slide>
+              <Section classes={''}>
+                <Selection classes={"container px-5 mx-auto"} />
+              </Section>          
+            </Slide>
+
+            <Slide>              
+              <Section classes={"w-full h-screen bg-primary mx-auto px-10"}>
+                <Footer />
+              </Section>                             
+            </Slide>
+          </>
+
+          }
         </motion.div> 
     </>         
   )

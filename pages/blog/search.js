@@ -9,12 +9,11 @@ import Link from "next/link"
 import { useRouter } from 'next/router'
 import { motion } from 'framer-motion'
 import Head from 'next/head';
+import DeviceDetect from "../../lib/deviceDetect";
+import Navbar from '../../components/Navbar'
 
 import ReactPaginate from 'react-paginate'
 import { useEffect, useState } from 'react'
-
-
-
 
 import posts from '../../cache/posts.json'
     posts.map(post => (
@@ -26,9 +25,19 @@ import posts from '../../cache/posts.json'
 
 
 const BlogResults = () => {
+  const {isMobile} = DeviceDetect()
+
   const style={
     height:'calc(100% - 80px)',    
-  }  
+  } 
+
+  function scrollToTop() {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  }
+
 
 
   const [offset, setOffset] = useState(0);
@@ -101,10 +110,11 @@ return (
     <link rel="icon" href="/favicon.ico" />
     </Head>  
     <motion.div initial={{opacity:0,  y: 200}} animate={{opacity:1, y:0}}> 
+        { !isMobile ? 
         <FullPage controls={CustomControls}>
           <Slide {...style}>
-            <Section>
-            <div className="container px-5 mx-auto relative transform mt-20">
+            <Section classes={'w-full h-screen'}>
+            <div className="container px-5 mx-auto mt-20">
             <SectionHeader>Search Results</SectionHeader>
               {/*pagination*/}
                 <PaginationSection>
@@ -139,11 +149,57 @@ return (
           </Slide>       
 
           <Slide>
-            <section className= "w-full h-screen bg-primary mx-auto px-10">
+            <Section classes={"w-full h-screen bg-primary mx-auto px-10"}>
               <Footer />
-            </section>                  
+            </Section>                  
           </Slide>
-        </FullPage>      
+        </FullPage> 
+        :
+        <>
+          <Navbar scrollToSlide={ scrollToTop }/>
+          <Slide {...style}>
+            <Section classes={''}>
+              <div className="container px-5 mx-auto mt-20">
+              <SectionHeader>Search Results</SectionHeader>
+                {/*pagination*/}
+                  <PaginationSection>
+                    <div className="w-full" id="pag-section">
+                      {data}
+                    </div>                 
+                    { results ==0 ?
+                        <div className="mx-auto">
+                        <p>No results found 😢 </p>
+                        </div>
+                        :
+                        pageCount >= 2 ?
+                        <PaginationWrapper>
+                          <ReactPaginate
+                            previousLabel={prevSVG}
+                            nextLabel={nextSVG}
+                            breakLabel={"..."}
+                            breakClassName={"break-me"}
+                            pageCount={pageCount}
+                            onPageChange={handlePageClick}
+                            containerClassName={"pagination"}
+                            subContainerClassName={"pages pagination"}
+                            activeClassName={"active"}
+                          />
+                        </PaginationWrapper>
+                        :
+                        []
+                    }
+                  </PaginationSection>
+              </div>            
+            </Section>        
+          </Slide>       
+
+          <Slide>
+            <Section classes={"w-full h-screen bg-primary mx-auto px-10"}>
+              <Footer />
+            </Section>                  
+          </Slide>        
+        </>
+        }     
     </motion.div>
   </>  
   );

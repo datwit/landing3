@@ -5,7 +5,7 @@ import uuid from 'react-uuid'
 import CollaboratorsCard from './CollaboratorsCard'
 import Carousel from 'react-elastic-carousel'
 
-const Collaborators = () => {
+const Collaborators = ({classes}) => {
     const breakPoints = [
         { width: 1, itemsToShow: 1 },
         { width: 550, itemsToShow: 2 },
@@ -13,7 +13,7 @@ const Collaborators = () => {
     ]   
     
     return (
-        <div className="container px-5 mx-auto relative top-2/4 transform -translate-y-2/4  mt-0 lg:mt-14">
+        <div className={classes}>
             <h2 className="mt-4">Collaborators</h2>
             <h4 className="mb-6">Our amazing collaborators help drive Datwit towards being a cutting-edge company</h4>            
                 <ContentWrapper>

@@ -4,9 +4,9 @@ import datas from './data.json'
 import FindBlock from './FindBlock'
 import uuid from 'react-uuid'
 
-const Find = () => {
+const Find = ({classes}) => {
     return (
-        <div className="container px-5 mx-auto relative top-2/4 transform -translate-y-2/4">
+        <div className={classes}>
             <SectionHeader>Find the right partnership</SectionHeader>
             <SectionSubheader>Lorem, ipsum dolor sit amet consectetur adipisicing elit...</SectionSubheader>
                 <ContentWrapper>
