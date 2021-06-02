@@ -4,13 +4,13 @@ export const SearchWrapper = styled.div.attrs({
     className: "flex items-center justify-center w-full"
 })``;
 export const BlogCardWrapper = styled.div.attrs({
-    className: "p-3 md:w-1/3 w-full"
+    className: "p-3 w-full sm:w-2/4 md:w-1/3 w-full"
 })``;
 export const BlogCardBlock = styled.div.attrs({
     className: "p-3"
 })``;
 export const CardSummary = styled.p.attrs({
-    className: "mt-0 text-gray-500"
+    className: "mt-0 text-gray-500 hidden md:block"
 })
 `
 font-size: 0.90rem;

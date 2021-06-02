@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 export const SCardWrapper = styled.div.attrs({
-    className: "md:p-4 w-full sm:w-1/3"
+    className: "py-2 md:py-0 md:p-4 w-full sm:w-1/3"
   })``;
   export const SCardBorder = styled.div.attrs({
     className: "h-full border border-gray-300 overflow-hidden mx-4 md:mx-0 shadow hover:shadow-lg transition duration-200 ease-in"
