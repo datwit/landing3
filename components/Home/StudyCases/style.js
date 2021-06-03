@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 export const SCardWrapper = styled.div.attrs({
-    className: "p-4 md:w-1/3"
+    className: "py-2 md:py-0 md:p-4 w-full sm:w-1/3"
   })``;
   export const SCardBorder = styled.div.attrs({
     className: "h-full border border-gray-300 overflow-hidden mx-4 md:mx-0 shadow hover:shadow-lg transition duration-200 ease-in"
@@ -33,9 +33,9 @@ export const SCardWrapper = styled.div.attrs({
     className: "title-font text-lg font-bold text-primary mb-1 cursor-pointer"
   })``;
   export const CardSubtitle = styled.p.attrs({
-    className: "mt-0 text-base leading-6 text-gray-500"
+    className: "mt-0 text-base leading-6 text-gray-500 hidden lg:block"
   })``;
   export const ReadMore = styled.a.attrs({
-    className: "text-secondary2 inline-flex items-center md:mb-2 lg:mb-0 cursor-pointer"
+    className: "text-secondary2 inline-flex items-center md:mb-2 lg:mb-0 cursor-pointer hidden lg:block"
   })``;
 

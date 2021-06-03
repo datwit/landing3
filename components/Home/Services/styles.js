@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 
 export const CardRevealWrapper = styled.div.attrs({
-  className: "p-4 md:w-2/4"
+  className: "p-4 w-full sm:w-2/4"
 })``;
 
 export const IconTitle = styled.a.attrs({

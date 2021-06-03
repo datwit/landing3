@@ -12,7 +12,7 @@ const StudyCases = ({classes}) => {
     <div className={classes}>
         <SectionHeader>Check out our solutions</SectionHeader>
         <SectionSubheader>Commitment and creativity mark our creations. By all means, stroll along...</SectionSubheader>
-        <div className="hidden md:block">
+        <div className="">
             <ContentWrapper>    
                {
                     datas.map(data => (
@@ -23,8 +23,8 @@ const StudyCases = ({classes}) => {
                }                    
             </ContentWrapper>
         </div> 
-        <div className="md:hidden">                                      
-         {/**********responsive************** */}            
+        {/* <div className="md:hidden">                                      
+                     
             <ul>
                 {
                 datas.map(data => (
@@ -42,7 +42,7 @@ const StudyCases = ({classes}) => {
                 )) 
                 }
             </ul>           
-        </div>  
+        </div>   */}
     </div>  
         
         

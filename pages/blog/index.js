@@ -87,7 +87,7 @@ const Blog = () => {
     const slice = data.slice(offset, offset + cant)
     const postData = slice.map(item =>
       <BlogCardWrapper key={uuid()}>
-        <div className="hidden md:block">
+        <div className="">
           <BlogCardBorder>
           <Link href={`/blog/${item.id}`}><img className="lg:h-48 md:h-28 w-full object-cover object-center cursor-pointer" src={item.img} alt="" /></Link>         
             <BlogCardBlock>
@@ -110,7 +110,7 @@ const Blog = () => {
             </BlogCardBlock>
           </BlogCardBorder>
         </div>
-        <div className="md:hidden">
+        {/* <div className="md:hidden">
           <BlogCardBorder className="mb-3">
             <div className="flex">
               <img src={item.img} className="sm:w-1/4 w-1/2" alt="" />
@@ -125,7 +125,7 @@ const Blog = () => {
               </RespBlock>
             </div>
           </BlogCardBorder>
-        </div>
+        </div> */}
       </BlogCardWrapper>
     )
     setData(postData)
