@@ -1,0 +1,16 @@
+[
+    {
+        "title": "specialized content",
+        "items":[
+            {"title": "Partner area", "url": "/partner"},
+            {"title": "Team member area", "url": "/team"}
+        ]
+    },
+    {
+        "title": "data protection",
+        "items":[
+            {"title": "Privacy Policy", "url": "/info/policy"},
+            {"title": "Terms and Conditions","url": "/info/terms"}
+        ]  
+    }
+]
