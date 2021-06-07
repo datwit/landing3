@@ -3,6 +3,8 @@ import { SectionHeader, SectionSubheader, ContentWrapper} from '../../styles/glo
 import { BlockOuterContainer, BlockBorder, ButtonWrapper, SHeader } from './style'
 import { useState } from 'react'
 import SelectionButton from './SelectionButton';
+import PartnerSVG from './PartnerSVG';
+import TeamSVG from './TeamSVG';
 
 
 const Selection = ({classes}) => {
@@ -38,13 +40,15 @@ const Selection = ({classes}) => {
                 <>
                     <BlockOuterContainer>
                         <BlockBorder onClick={handleToggle1} className={`${card1 ? 'active' : ''} md:ml-16`}>
-                            <img src="" alt="img" className="h-28 sm:h-40 md:h-60" />
+                            {/* <img src="" alt="img" className="h-28 sm:h-40 md:h-60" /> */}
+                            {/* <PartnerSVG /> */}
                             <SHeader>Partner</SHeader>
                         </BlockBorder>
                     </BlockOuterContainer>
                     <BlockOuterContainer>
                         <BlockBorder onClick={handleToggle2} className={`${card2 ? 'active' : ''} md:mr-16`}>
-                            <img src="" alt="img" className="h-28 sm:h-40 md:h-60" />
+                            {/* <img src="" alt="img" className="h-28 sm:h-40 md:h-60" /> */}
+                            {/* <TeamSVG /> */}
                             <SHeader>Team</SHeader>
                         </BlockBorder>
                     </BlockOuterContainer>
