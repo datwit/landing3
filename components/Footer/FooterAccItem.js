@@ -24,8 +24,8 @@ const FooterAccItem = ({ title, items}) => {
             <AccItemContent {...{ className: 'accordion-item__content' }}>
                 {
                     items.map(l =>(
-                      <a href={l.url}>
-                        <FooterAccItemLinks {...{ className: 'accordion-item__paragraph' }} key={uuid()}>
+                      <a href={l.url} key={uuid()}>
+                        <FooterAccItemLinks {...{ className: 'accordion-item__paragraph' }}>
                           {l.title}                            
                         </FooterAccItemLinks>
                       </a>
