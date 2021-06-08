@@ -12,6 +12,7 @@ import { motion } from 'framer-motion'
 import Head from 'next/head';
 import DeviceDetect from "../../lib/deviceDetect";
 import {useEffect} from 'react'
+import {FiChevronLeft} from 'react-icons/fi'
 
 import cases from '../../cache/cases.json'
 
@@ -53,6 +54,12 @@ const CasesResults = () => {
                     <Slide {...style}>
                         <Section>
                             <div className="container px-5 mx-auto mt-20">
+                                <Link href="/studycases/">
+                                <h3 className="flex pt-10 pb-6 cursor-pointer hover:text-secondary1">
+                                    <FiChevronLeft  className="h-6 w-6 mr-2"/>                                    
+                                    <span>Back</span>
+                                </h3>
+                                </Link>
                                 <SectionHeader>Search Results</SectionHeader>
                                 <ContentWrapper>
                                     {
@@ -100,6 +107,12 @@ const CasesResults = () => {
                 <Slide {...style}>
                     <Section Section classes={'pb-16'}>
                         <div className="container px-5 mx-auto mt-20">
+                            <Link href="/studycases/">
+                                <h3 className="flex pt-10 pb-6 cursor-pointer hover:text-secondary1">
+                                    <FiChevronLeft  className="h-6 w-6 mr-2"/>                                    
+                                    <span>Back</span>
+                                </h3>
+                            </Link>
                             <SectionHeader>Search Results</SectionHeader>
                             <ContentWrapper>
                                 {
