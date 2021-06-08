@@ -1,6 +1,6 @@
 import { } from '../../styles/global'
 import { SectionHeader, SectionSubheader, ContentWrapper} from '../../styles/global'
-import { BlockOuterContainer, BlockBorder, ButtonWrapper, SHeader } from './style'
+import { BlockOuterContainer, BlockBorder, ButtonWrapper, SHeader, SVGWrapper } from './style'
 import { useState } from 'react'
 import SelectionButton from './SelectionButton';
 import PartnerSVG from './PartnerSVG';
@@ -39,16 +39,20 @@ const Selection = ({classes}) => {
             <ContentWrapper>
                 <>
                     <BlockOuterContainer>
-                        <BlockBorder onClick={handleToggle1} className={`${card1 ? 'active' : ''} md:ml-16`}>
-                            {/* <img src="" alt="img" className="h-28 sm:h-40 md:h-60" /> */}
-                            {/* <PartnerSVG /> */}
+                        <BlockBorder onClick={handleToggle1}>                            
+                            <SVGWrapper>
+                                <PartnerSVG />
+                                <svg className={`${card1 ? 'fadeIn' : ''} checkmark absolute top-0 right-0`} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52"><circle className="checkmark-circle" cx="26" cy="26" r="25" fill="none"/><path className="checkmark-check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/></svg>
+                            </SVGWrapper>                            
                             <SHeader>Partner</SHeader>
                         </BlockBorder>
                     </BlockOuterContainer>
                     <BlockOuterContainer>
-                        <BlockBorder onClick={handleToggle2} className={`${card2 ? 'active' : ''} md:mr-16`}>
-                            {/* <img src="" alt="img" className="h-28 sm:h-40 md:h-60" /> */}
-                            {/* <TeamSVG /> */}
+                        <BlockBorder onClick={handleToggle2} className={`${card2 ? 'active' : ''}`}> 
+                            <SVGWrapper>                      
+                                <TeamSVG />
+                                <svg className={`${card2 ? 'fadeIn' : ''} checkmark absolute top-0 -right-5`} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52"><circle className="checkmark-circle" cx="26" cy="26" r="25" fill="none"/><path className="checkmark-check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/></svg>
+                            </SVGWrapper> 
                             <SHeader>Team</SHeader>
                         </BlockBorder>
                     </BlockOuterContainer>
