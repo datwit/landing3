@@ -41,6 +41,14 @@ export const SVGWrapper = styled.div.attrs({
     stroke-miterlimit: 10;    
     box-shadow: inset 0px 0px 0px #00baff;    
     opacity: 0;
+    @media (max-width: 639px){        
+        width: 20px;
+        height:20px;
+        right: -0.5rem;
+    }
+       
+
+
 }
 
 .checkmark-circle {
