@@ -86,8 +86,7 @@ const Blog = () => {
     //slicing data   
     const slice = data.slice(offset, offset + cant)
     const postData = slice.map(item =>
-      <BlogCardWrapper key={uuid()}>
-        <div className="">
+      <BlogCardWrapper key={uuid()}>        
           <BlogCardBorder>
           <Link href={`/blog/${item.id}`}><img className="lg:h-48 md:h-28 w-full object-cover object-center cursor-pointer" src={item.img} alt="" /></Link>         
             <BlogCardBlock>
@@ -108,8 +107,7 @@ const Blog = () => {
               <Link href={`/blog/${item.id}`}><BlogTitle1>{item.title}</BlogTitle1></Link>
               <CardSummary>{item.summary}</CardSummary>              
             </BlogCardBlock>
-          </BlogCardBorder>
-        </div>
+          </BlogCardBorder>        
         {/* <div className="md:hidden">
           <BlogCardBorder className="mb-3">
             <div className="flex">
