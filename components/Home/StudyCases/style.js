@@ -2,16 +2,26 @@ import styled from 'styled-components'
 
 export const SCardWrapper = styled.div.attrs({
     className: "py-2 md:py-0 md:p-4 w-full sm:w-1/3"
-  })``;
+  })
+  ``;
   export const SCardBorder = styled.div.attrs({
     className: "h-full border border-gray-300 overflow-hidden mx-4 md:mx-0 shadow hover:shadow-lg transition duration-200 ease-in"
   })
   `
-   &:hover{
-    h1{
-      color: #00baff;
+     @media (min-width: 360px){
+        
+        display:flex;
+        flex-direction: row;
     }
-   }
+     @media (min-width: 640px){
+        
+        flex-direction: column;
+    }
+    &:hover{
+      h1{
+        color: #00baff;
+      }
+    }
     
   `;
   export const CategoryRect = styled.div.attrs({

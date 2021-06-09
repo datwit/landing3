@@ -11,6 +11,7 @@ import { motion } from 'framer-motion'
 import Head from 'next/head';
 import DeviceDetect from "../../lib/deviceDetect";
 import Navbar from '../../components/Navbar'
+import {FiChevronLeft} from 'react-icons/fi'
 
 import ReactPaginate from 'react-paginate'
 import { useEffect, useState } from 'react'
@@ -115,6 +116,12 @@ return (
           <Slide {...style}>
             <Section classes={'w-full h-screen'}>
             <div className="container px-5 mx-auto mt-20">
+              <Link href="/blog/">
+                <h3 className="flex pt-10 pb-6 cursor-pointer hover:text-secondary1">
+                    <FiChevronLeft  className="h-6 w-6 mr-2"/>                                    
+                    <span>Back</span>
+                </h3>
+              </Link>
             <SectionHeader>Search Results</SectionHeader>
               {/*pagination*/}
                 <PaginationSection>
@@ -160,6 +167,12 @@ return (
           <Slide {...style}>
             <Section classes={'pb-16'}>
               <div className="container px-5 mx-auto mt-20">
+                <Link href="/blog/">
+                  <h3 className="flex pt-10 pb-6 cursor-pointer hover:text-secondary1">
+                      <FiChevronLeft  className="h-6 w-6 mr-2"/>                                    
+                      <span>Back</span>
+                  </h3>
+                </Link>
               <SectionHeader>Search Results</SectionHeader>
                 {/*pagination*/}
                   <PaginationSection>

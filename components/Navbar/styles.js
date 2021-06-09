@@ -72,10 +72,10 @@ export const NavWrapper = styled.div.attrs({
   font-family: 'Numans';
   `;  
   export const HeaderElements = styled.div.attrs({
-    className: "h-16 absolute top-0 w-full px-10 pt-4"
+    className: "h-16 absolute top-0 w-full px-5 pt-4"
   })``;  
   export const AligningElements = styled.div.attrs({
-    className: "flex justify-between items-center"
+    className: "flex justify-end"
   })``;  
 
 
