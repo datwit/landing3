@@ -5,7 +5,7 @@ import Link from "next/link"
 const StudyCasesCard = ({img, title,summary,id}) => {
     return (
         <SCardBorder>
-            <img className="lg:h-48 h-36 w-full object-cover object-center re-img" src={img} alt="" />                                
+            <img className="lg:h-48 h-36 w-full object-cover object-center res-img" src={img} alt="" />                                
             <CardContent>                                                      
                 <CardTitle>{title}</CardTitle>
                 <CardSubtitle>{summary}</CardSubtitle>                                    

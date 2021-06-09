@@ -4,7 +4,7 @@ export const DatwitWrapper = styled.div.attrs({
     className: "mx-auto flex flex-wrap"
 })``;
 export const ImgWrapper = styled.div.attrs({
-    className: "md:w-1/2 w-full"
+    className: "sm:w-1/2 w-full"
 })
 `
     svg {
@@ -33,7 +33,7 @@ export const ImgWrapper = styled.div.attrs({
     }
 `;
 export const TextBlock = styled.div.attrs({
-    className: "md:w-1/2 w-full md:pl-10 lg:py-6"
+    className: "sm:w-1/2 w-full md:pl-10 lg:py-6"
 })``;
 export const DHeader = styled.h1.attrs({
     className: "text-primary text-3xl title-font font-semibold mb-1 text-center"

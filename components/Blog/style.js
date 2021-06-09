@@ -89,12 +89,17 @@ export const PaginationWrapper= styled.div
     list-style: none;
     outline: none;
     position: absolute;
-    bottom: -60px;
+    bottom: 0px;
     left: 50%;
-    transform:translateX(-50%);    
+    transform:translateX(-50%); 
+    // @media (min-width: 1024px){
+        
+    //     bottom: -60px;        
+    // }
+    
     
     li{
-        display: inline !important;
+        // display: inline !important;
         width: 35px;
         height: 35px;
         border: 2px solid #e69c24;
