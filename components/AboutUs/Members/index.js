@@ -5,7 +5,6 @@ import uuid from 'react-uuid'
 import MemberCard from './MemberCard'
 import Carousel from 'react-elastic-carousel'
 
-// const Carousel = require('react-responsive-carousel').Carousel;
 
 const Members = ({classes}) => {   
     const breakPoints = [

@@ -1,14 +1,18 @@
 import React from 'react'
 import uuid from 'react-uuid'
 import {OuterWrapper, Field, Price, LilDescrip, PBulletsWrapper, CarouselContainer} from './style';
-const Carousel = require('react-responsive-carousel').Carousel;
 import PricingBullets from './PricingBullets';
 import datas from "./pricing.json";
+import Carousel from 'react-elastic-carousel'
 
 const CarouselResponsive = () => {
+    const breakPoints = [
+        { width: 1, itemsToShow: 1 },
+        { width: 400, itemsToShow: 2 }               
+    ]   
     return (
         <CarouselContainer onTouchMove={e => e.stopPropagation()}>                    
-            <Carousel showArrows={true} showThumbs={false}>
+            <Carousel breakPoints={breakPoints} onTouchMove={e => e.stopPropagation()}>
             {
                 datas.map(data => (  
                     <OuterWrapper key={uuid()}>
