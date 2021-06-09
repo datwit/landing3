@@ -22,7 +22,17 @@ export const SCardWrapper = styled.div.attrs({
         color: #00baff;
       }
     }
-    
+    img.re-img{
+        @media (min-width: 360px){
+        
+        width:40%;
+        }
+         @media (min-width: 640px){
+        
+        width:100%;
+        
+        }
+    }    
   `;
   export const CategoryRect = styled.div.attrs({
     className: "bg-secondary2 h-8 flex justify-start items-center"
