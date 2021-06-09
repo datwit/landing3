@@ -88,7 +88,7 @@ const Blog = () => {
     const postData = slice.map(item =>
       <BlogCardWrapper key={uuid()}>        
           <BlogCardBorder>
-          <Link href={`/blog/${item.id}`}><img className="lg:h-48 md:h-28 w-full object-cover object-center cursor-pointer" src={item.img} alt="" /></Link>         
+          <Link href={`/blog/${item.id}`}><img className="lg:h-48 md:h-28 md:w-full object-cover object-center cursor-pointer res-img" src={item.img} alt="" /></Link>         
             <BlogCardBlock>
               <div className="flex flex-wrap">
                 {

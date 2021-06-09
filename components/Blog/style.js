@@ -4,8 +4,9 @@ export const SearchWrapper = styled.div.attrs({
     className: "flex items-center justify-center w-full"
 })``;
 export const BlogCardWrapper = styled.div.attrs({
-    className: "p-3 w-full sm:w-2/4 md:w-1/3 w-full"
-})``;
+    className: "p-3 w-full sm:w-1/3 w-full"
+})
+``;
 export const BlogCardBlock = styled.div.attrs({
     className: "p-3"
 })``;
@@ -18,7 +19,30 @@ line-height: 1.2rem;
 `;
 export const BlogCardBorder = styled.div.attrs({
     className: "border border-gray-300 shadow hover:shadow-lg transition duration-200 ease-in overflow-hidden"
-})``;
+})
+`
+    @media (min-width: 430px){
+        
+        display:flex;
+        flex-direction: row;
+    }
+     @media (min-width: 640px){
+        
+        flex-direction: column;
+    }
+    img.res-img{
+        @media (min-width: 430px){
+        
+        width:40%;
+        }
+         @media (min-width: 640px){
+        
+        width:100%;
+        height:100%;
+        }
+
+    }
+`;
 export const RespBlock = styled.div.attrs({
     className: "p-2 sm:w-5/6 w-1/2"
 })``;
