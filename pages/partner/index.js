@@ -71,19 +71,19 @@ const Partner = () => {
             <Navbar scrollToSlide={ scrollToTop }/>
             <Slide {...style}>
                 <Section classes={'pb-16 pt-20'}>
-                  <Find classes={"container px-5 mx-auto"}/>
+                  <Find classes={"px-5 mx-auto"}/>
                 </Section>        
               </Slide>
 
               <Slide>
                 <Section classes={'pb-16'}>
-                  <PartPricing classes={"container px-5 mx-auto"} />
+                  <PartPricing classes={"px-5 mx-auto"} />
                 </Section>        
               </Slide>
 
               <Slide>
                 <Section classes={'pb-16'}>
-                  <Faqs classes={"container px-5 mx-auto"} />
+                  <Faqs classes={"px-5 mx-auto"} />
                 </Section>        
               </Slide>
 

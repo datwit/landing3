@@ -98,25 +98,25 @@ export default function Home() {
 
             <Slide>
               <Section classes={'pb-16'}>
-                <Services  classes={"container px-5 mx-auto"}/>
+                <Services  classes={"px-5 mx-auto"}/>
               </Section>
             </Slide> 
 
             <Slide>
               <Section classes={'pb-16'}>
-                <StudyCases classes={"container px-5 mx-auto"} />
+                <StudyCases classes={"px-5 mx-auto"} />
               </Section>          
             </Slide>
             
             <Slide>
               <Section classes={'pb-16'}>
-                <Pricing classes={"container px-5 mx-auto"} />
+                <Pricing classes={"px-5 mx-auto"} />
               </Section>          
             </Slide>
 
             <Slide>
               <Section classes={'pb-16'}>
-                <Selection classes={"container px-5 mx-auto"} />
+                <Selection classes={"px-5 mx-auto"} />
               </Section>          
             </Slide>
 

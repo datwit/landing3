@@ -22,7 +22,7 @@ const FaqsQandA = () => {
         <motion.div initial={{opacity:0,  y: 200}} animate={{opacity:1, y:0}}>  
             <FullPage controls={CustomControls} scrollMode='normal'>
                 <section className="pt-20">  
-                    <div className="container px-5 mx-auto">              
+                    <div className="px-5 mx-auto">              
                         <SectionHeader>Frequently asked questions</SectionHeader>
                         <SectionSubheader>Lorem ipsum dolor sit amet consectetur adipisicing elit...</SectionSubheader>
                         {/*accordion component*/}

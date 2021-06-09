@@ -72,19 +72,19 @@ const About = () => {
             <Navbar scrollToSlide={ scrollToTop }/>            
               <Slide {...style}>
                 <Section classes={'pb-16 pt-20'}>
-                  <Datwit classes={"container px-5 mx-auto"}/>
+                  <Datwit classes={"px-5 mx-auto"}/>
                 </Section>        
               </Slide>
 
               <Slide>
                 <Section classes={'pb-16'}>
-                  <Members classes={"container px-5 mx-auto"}/>
+                  <Members classes={"px-5 mx-auto"}/>
                 </Section>        
               </Slide>
 
               <Slide>
                 <Section classes={'pb-16'}>
-                  <Collaborators classes={"container px-5 mx-auto"}/>
+                  <Collaborators classes={"px-5 mx-auto"}/>
                 </Section>        
               </Slide>
 

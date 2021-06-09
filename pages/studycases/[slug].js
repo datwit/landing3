@@ -27,7 +27,7 @@ const StudyCasesPage = ({ title, date, content, author})=> {
             <FullPage controls={CustomControls} scrollMode='normal'>
                 <main>
                     <section className="pt-20">
-                      <div className="container px-5 mx-auto">  
+                      <div className="px-5 mx-auto">  
                         <PostTitle>{title}</PostTitle>
                         <div className="mt-3 mb-5">
                           <div className="w-full"><p className="mt-2"><span className="text-gray-700 font-medium">By: </span><span>{author}</span></p></div>

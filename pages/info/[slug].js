@@ -26,7 +26,7 @@ const Info = ({ title, content})=> {
           <FullPage controls={CustomControls} scrollMode='normal'>
               <main>
                 <section className="pb-16 pt-20">
-                    <div className="container px-5 mx-auto">  
+                    <div className="px-5 mx-auto">  
                       <PostTitle>{title}</PostTitle>                  
                       <MarkdownContent>{hydratedContent}</MarkdownContent>
                     </div>        
