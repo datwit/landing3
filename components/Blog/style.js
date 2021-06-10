@@ -83,12 +83,17 @@ border-radius: 25px;
 `;
 export const PaginationWrapper= styled.div        
 `
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    transform: translateX(50%);
+
 .pagination{
     margin: 15px auto;
     display: flex;
     list-style: none;
     outline: none;
-    position: absolute;
+    // position: absolute;
     bottom: 0px;
     left: 50%;
     transform:translateX(-50%); 
