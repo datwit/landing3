@@ -2,7 +2,8 @@ import styled from 'styled-components'
 
 export const IconBlock = styled.div.attrs({
     className: "h-full overflow-hidden mx-4 md:mx-0"
-})``;
+})
+``;
 export const IconContent = styled.div.attrs({
     className: "md:p-4 text-center"
 })``;
