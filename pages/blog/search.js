@@ -62,9 +62,11 @@ const BlogResults = () => {
   //getting our data 
   const getData = () => {
     const data = results
-    const cant = window.innerHeight <= 640 && window.innerWidth <= window.innerHeight ? 
+    const cant1 = window.innerHeight <= 640 && window.innerWidth <= window.innerHeight ? 
        4 : window.innerHeight >= 800 && window.innerWidth <= 765 ? 4 : 3
     
+    const cant = window.innerWidth <= window.innerHeight ? 2 : window.innerHeight >= 800 ? 4 : 3;
+
     setPerPage(cant)
     //slicing data   
     const slice = data.slice(offset, offset + cant)
@@ -85,6 +87,7 @@ const BlogResults = () => {
       </div>
     )
     setData(postData)
+    
     setPageCount(Math.ceil(data.length / cant))
   }
 
@@ -96,6 +99,7 @@ const BlogResults = () => {
   //clicking from page to page
   const handlePageClick = (e) => {
     const selectedPage = e.selected;
+    scrollToTop();
     setOffset(selectedPage * perPage)
   };
 
@@ -117,7 +121,7 @@ return (
             <Section classes={'w-full h-screen'}>
             <div className="container px-5 mx-auto mt-20">
               <Link href="/blog/">
-                <h3 className="flex pt-10 pb-6 cursor-pointer hover:text-secondary1">
+                <h3 className="flex cursor-pointer hover:text-secondary1">
                     <FiChevronLeft  className="h-6 w-6 mr-2"/>                                    
                     <span>Back</span>
                 </h3>
@@ -165,10 +169,10 @@ return (
         <>
           <Navbar scrollToSlide={ scrollToTop }/>
           <Slide {...style}>
-            <Section classes={'pb-16'}>
+            <Section classes={'min-h-screen'}>
               <div className="container px-5 mx-auto mt-20">
                 <Link href="/blog/">
-                  <h3 className="flex pt-10 pb-6 cursor-pointer hover:text-secondary1">
+                  <h3 className="flex cursor-pointer hover:text-secondary1">
                       <FiChevronLeft  className="h-6 w-6 mr-2"/>                                    
                       <span>Back</span>
                   </h3>
@@ -176,9 +180,7 @@ return (
               <SectionHeader>Search Results</SectionHeader>
                 {/*pagination*/}
                   <PaginationSection>
-                    <div className="w-full" id="pag-section">
-                      {data}
-                    </div>                 
+                      {data}              
                     { results ==0 ?
                         <div className="mx-auto">
                         <p>No results found 😢 </p>
