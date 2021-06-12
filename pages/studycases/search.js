@@ -105,7 +105,7 @@ const CasesResults = () => {
                 <Navbar scrollToSlide={ scrollToTop }/>
         
                 <Slide {...style}>
-                    <Section Section classes={'pb-16'}>
+                    <Section Section classes={'min-h-screen'}>
                         <div className="container px-5 mx-auto mt-20">
                             <Link href="/studycases/">
                                 <h3 className="flex pt-10 pb-6 cursor-pointer hover:text-secondary1">
