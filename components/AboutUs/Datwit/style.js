@@ -19,16 +19,19 @@ export const ImgWrapper = styled.div.attrs({
         height:90%;
     }
 }
-    #sign, #hand2, #hand1{
+    #sign{
         animation: sign-anime 1s linear infinite alternate; 
-        -webkit-animation: sign-anime 1s linear infinite alternate;
+        -webkit-animation: sign-anime 1s linear infinite alternate;          
     }
+    
     @keyframes sign-anime {
         0%{
             transform: translateY(0);
+            
         }
         100%{
             transform: translateY(10px);
+            
         }
     }
 `;
