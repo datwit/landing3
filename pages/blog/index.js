@@ -180,8 +180,8 @@ const Blog = () => {
                       </SearchWrapper>
 
                     {/*pagination*/}
-                    <div className="flex flex-wrap">
-                      {data}
+                    <div className="flex flex-wrap pb-20 relative">                      
+                        {data}                                            
                       {
                       pageCount >= 2 
                         ?
