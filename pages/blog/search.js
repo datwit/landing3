@@ -71,8 +71,8 @@ const BlogResults = () => {
     const postData = slice.map((item, key6) =>
       <div className="w-full" key={key6}>
         <div className="mx-4 md:mx-0 mb-3">
-            <div className="flex">
-              <Link href={`/blog/${item.id}`}><img className="sm:w-1/6 w-1/2" src={item.img} alt="" /></Link>         
+            <div className="flex">              
+              <img className="sm:w-1/6 w-1/2" src={item.img} alt="" />        
               <RespBlock>
                 <DateWrapper>
                     {format(parseISO(item.date), 'MMMM do, uuu')}
@@ -125,7 +125,7 @@ return (
             <SectionHeader>Search Results</SectionHeader>
               {/*pagination*/}
                 <PaginationSection>
-                  <div className="w-full" id="pag-section">
+                  <div className="w-full">
                     {data}
                   </div>                 
                   { results ==0 ?
