@@ -1,8 +1,11 @@
 import styled from 'styled-components'
 
 export const SearchWrapper = styled.div.attrs({
-    className: "flex items-center justify-center w-full"
-})``;
+    className: "flex items-center w-1/2 relative"
+})
+`
+transform: translateX(50%);
+`;
 export const BlogCardWrapper = styled.div.attrs({
     className: "p-3 w-full sm:w-1/3 w-full"
 })
@@ -76,32 +79,24 @@ margin-right: 5px;
 cursor:pointer;
 `;
 export const SearchField= styled.input.attrs({
-    className: "w-1/2 border border-gray-300 focus:border-transparent bg-white text-base outline-none text-gray-700 px-3 leading-8 focus:ring-2 focus:ring-secondary2 transition-colors duration-200 ease-in-out"
+    className: "w-full border border-gray-300 focus:border-transparent bg-white text-base outline-none text-gray-700 px-3 leading-8 focus:ring-2 focus:ring-secondary2 transition-colors duration-200 ease-in-out"
 })
 `
 border-radius: 25px;
 `;
 export const PaginationWrapper= styled.div        
 `
-    margin-left: auto;
-    margin-right: auto;
-    position: relative;
-    transform: translateX(50%);
-
-.pagination{
-    margin: 15px auto;
-    display: flex;
-    list-style: none;
-    outline: none;
-    // position: absolute;
-    bottom: 0px;
-    left: 50%;
-    transform:translateX(-50%); 
-    // @media (min-width: 1024px){
-        
-    //     bottom: -60px;        
-    // }
     
+    position: absolute;    
+    bottom:0px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    .pagination{
+        margin: 15px 0;
+        display: flex;
+        list-style: none; 
+        
     
     li{
         // display: inline !important;

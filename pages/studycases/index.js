@@ -123,7 +123,7 @@ return (
                       <SectionHeader>Check out our solutions</SectionHeader>
                       <SectionSubheader>Commitment and creativity mark our creations. By all means, stroll along...</SectionSubheader>
                       {/*pagination*/}
-                      <div className="flex flex-wrap">
+                      <div className="flex flex-wrap relative pb-20">
                           {data} 
                           {
                           pageCount >= 2 
