@@ -216,7 +216,7 @@ const Blog = () => {
               <Navbar scrollToSlide={ scrollToTop }/>
               <Slide {...style}>
                 <Section classes={'min-h-screen'}>
-                <div className="px-5 mx-auto">
+                <div className="px-5 mx-auto pb-16 mt-20">
                       <SectionSubheader>Discover interesting ideas and unique perspectives from our amazing crew</SectionSubheader>        
                       {pressEnter && searchRedirect()}
                       {/* search box*/}
