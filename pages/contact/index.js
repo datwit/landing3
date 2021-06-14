@@ -35,8 +35,7 @@ const Contact = () => {
     return (
       <>
         <Head>
-        <title>Datwit | Contact us</title>
-        <link rel="icon" href="/favicon.ico" />
+        <title>Datwit | Contact us</title>        
         </Head>
         <motion.div initial={{opacity:0,  y: 200}} animate={{opacity:1, y:0}}> 
         { !isMobile ? 
@@ -58,7 +57,7 @@ const Contact = () => {
             <Navbar scrollToSlide={ scrollToTop }/>
             <Slide {...style}>
                 <Section classes={'pb-16 pt-20'}>
-                  <ContactForm classes={"container px-5 mx-auto"} />
+                  <ContactForm classes={"px-5 mx-auto"} />
                 </Section>        
             </Slide>                
 

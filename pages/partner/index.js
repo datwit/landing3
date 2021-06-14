@@ -36,8 +36,7 @@ const Partner = () => {
     return (
       <> 
         <Head>
-        <title>Datwit | Partner</title>
-        <link rel="icon" href="/favicon.ico" />
+        <title>Datwit | Partner</title>       
         </Head>  
         <motion.div initial={{opacity:0,  y: 200}} animate={{opacity:1, y:0}}> 
         { !isMobile ? 
@@ -71,19 +70,19 @@ const Partner = () => {
             <Navbar scrollToSlide={ scrollToTop }/>
             <Slide {...style}>
                 <Section classes={'pb-16 pt-20'}>
-                  <Find classes={"container px-5 mx-auto"}/>
+                  <Find classes={"px-5 mx-auto"}/>
                 </Section>        
               </Slide>
 
               <Slide>
                 <Section classes={'pb-16'}>
-                  <PartPricing classes={"container px-5 mx-auto"} />
+                  <PartPricing classes={"px-5 mx-auto"} />
                 </Section>        
               </Slide>
 
               <Slide>
                 <Section classes={'pb-16'}>
-                  <Faqs classes={"container px-5 mx-auto"} />
+                  <Faqs classes={"px-5 mx-auto"} />
                 </Section>        
               </Slide>
 

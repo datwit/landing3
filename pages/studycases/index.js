@@ -54,9 +54,9 @@ const AllStudyCases = () =>{
     const slice = data.slice(offset, offset + cant)
     const casesData = slice.map(item =>           
       <BlogCardWrapper key={uuid()}>
-          <div className="hidden md:block">                  
+                           
               <BlogCardBorder>
-                  <img className="lg:h-48 md:h-28 w-full object-cover object-center" src="/images/dummy-image.png" alt="" />  
+                  <img className="lg:h-48 md:h-28 md:w-full object-cover object-center" src="/images/dummy-image.png" alt="" />  
                   <CategoryRect>
                       <Link href={`/studycases/search?p=${item.tags.toLowerCase()}`}>
                           <CategoryTitle>{item.tags}</CategoryTitle>
@@ -67,8 +67,8 @@ const AllStudyCases = () =>{
                       <CardSummary>{item.summary}</CardSummary>                      
                   </BlogCardBlock>
               </BlogCardBorder>                 
-          </div>
-            <div className="md:hidden">                 
+         
+            {/* <div className="md:hidden">                 
                   <BlogCardBorder>
                       <div className="flex">                        
                           <img src="/images/dummy-image.png"  className="sm:w-1/4 w-1/2"  alt=""/>
@@ -81,13 +81,12 @@ const AllStudyCases = () =>{
                               <div className="p-2">
                                   <Link href={`/studycases/${item.id}`}>
                                       <BlogTitle2>{item.title}</BlogTitle2>
-                                  </Link>                  
-                                  {/* <p>{`By: ${item.author}`}</p> */}                                  
+                                  </Link>                                                              
                               </div>                                
                           </div>  
                       </div>                        
                   </BlogCardBorder>                                 
-            </div>
+            </div> */}
       </BlogCardWrapper>          
 
 )
@@ -112,8 +111,7 @@ const prevSVG = <svg className="h-8 w-8 text-secondary2" viewBox="0 0 24 24" fil
 return (
     <> 
       <Head>
-      <title>Datwit | Study Cases</title>
-      <link rel="icon" href="/favicon.ico" />
+      <title>Datwit | Study Cases</title>      
       </Head> 
       <motion.div initial={{opacity:0,  y: 200}} animate={{opacity:1, y:0}}>  
       { !isMobile ?         
@@ -124,7 +122,7 @@ return (
                       <SectionHeader>Check out our solutions</SectionHeader>
                       <SectionSubheader>Commitment and creativity mark our creations. By all means, stroll along...</SectionSubheader>
                       {/*pagination*/}
-                      <div className="flex flex-wrap">
+                      <div className="flex flex-wrap relative pb-20">
                           {data} 
                           {
                           pageCount >= 2 
@@ -162,7 +160,7 @@ return (
             <Navbar scrollToSlide={ scrollToTop }/>            
               <Slide {...style}>
                 <Section classes={'pb-16'}>
-                <div className="container px-5 mx-auto mt-20"> 
+                <div className="px-5 mx-auto mt-20"> 
                     <SectionHeader>Check out our solutions</SectionHeader>
                     <SectionSubheader>Commitment and creativity mark our creations. By all means, stroll along...</SectionSubheader>
                     {/*pagination*/}

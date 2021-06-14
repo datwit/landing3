@@ -18,15 +18,14 @@ const Info = ({ title, content})=> {
     //Post page template
     <>
       <Head>
-        <title>{title}</title>
-        <link rel="icon" href="/favicon.ico" />
+        <title>{title}</title>        
       </Head>
 
       <motion.div initial={{opacity:0,  y: 200}} animate={{opacity:1, y:0}}>
           <FullPage controls={CustomControls} scrollMode='normal'>
               <main>
                 <section className="pb-16 pt-20">
-                    <div className="container px-5 mx-auto">  
+                    <div className="px-5 mx-auto">  
                       <PostTitle>{title}</PostTitle>                  
                       <MarkdownContent>{hydratedContent}</MarkdownContent>
                     </div>        

@@ -181,4 +181,7 @@ border-radius: 25px;
   background: #00baff;
   opacity: 1;
 }
+.rec.rec-item-wrapper{
+  padding: 30px !important;
+}
 

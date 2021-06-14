@@ -62,17 +62,19 @@ const BlogResults = () => {
   //getting our data 
   const getData = () => {
     const data = results
-    const cant = window.innerHeight <= 640 && window.innerWidth <= window.innerHeight ? 
+    const cant1 = window.innerHeight <= 640 && window.innerWidth <= window.innerHeight ? 
        4 : window.innerHeight >= 800 && window.innerWidth <= 765 ? 4 : 3
     
+    const cant = window.innerWidth <= window.innerHeight ? 2 : window.innerHeight >= 800 ? 4 : 3;
+
     setPerPage(cant)
     //slicing data   
     const slice = data.slice(offset, offset + cant)
     const postData = slice.map((item, key6) =>
       <div className="w-full" key={key6}>
         <div className="mx-4 md:mx-0 mb-3">
-            <div className="flex">
-              <Link href={`/blog/${item.id}`}><img className="sm:w-1/6 w-1/2" src={item.img} alt="" /></Link>         
+            <div className="flex">              
+              <img className="sm:w-1/6 w-1/2" src={item.img} alt="" />        
               <RespBlock>
                 <DateWrapper>
                     {format(parseISO(item.date), 'MMMM do, uuu')}
@@ -85,6 +87,7 @@ const BlogResults = () => {
       </div>
     )
     setData(postData)
+    
     setPageCount(Math.ceil(data.length / cant))
   }
 
@@ -96,6 +99,7 @@ const BlogResults = () => {
   //clicking from page to page
   const handlePageClick = (e) => {
     const selectedPage = e.selected;
+    scrollToTop();
     setOffset(selectedPage * perPage)
   };
 
@@ -107,8 +111,7 @@ const BlogResults = () => {
 return (
   <>
     <Head>
-    <title>Datwit | Search results</title>
-    <link rel="icon" href="/favicon.ico" />
+    <title>Datwit | Search results</title>  
     </Head>  
     <motion.div initial={{opacity:0,  y: 200}} animate={{opacity:1, y:0}}> 
         { !isMobile ? 
@@ -117,7 +120,7 @@ return (
             <Section classes={'w-full h-screen'}>
             <div className="container px-5 mx-auto mt-20">
               <Link href="/blog/">
-                <h3 className="flex pt-10 pb-6 cursor-pointer hover:text-secondary1">
+                <h3 className="flex cursor-pointer hover:text-secondary1">
                     <FiChevronLeft  className="h-6 w-6 mr-2"/>                                    
                     <span>Back</span>
                 </h3>
@@ -125,7 +128,7 @@ return (
             <SectionHeader>Search Results</SectionHeader>
               {/*pagination*/}
                 <PaginationSection>
-                  <div className="w-full" id="pag-section">
+                  <div className="w-full">
                     {data}
                   </div>                 
                   { results ==0 ?
@@ -165,10 +168,10 @@ return (
         <>
           <Navbar scrollToSlide={ scrollToTop }/>
           <Slide {...style}>
-            <Section classes={'pb-16'}>
+            <Section classes={'min-h-screen'}>
               <div className="container px-5 mx-auto mt-20">
                 <Link href="/blog/">
-                  <h3 className="flex pt-10 pb-6 cursor-pointer hover:text-secondary1">
+                  <h3 className="flex cursor-pointer hover:text-secondary1">
                       <FiChevronLeft  className="h-6 w-6 mr-2"/>                                    
                       <span>Back</span>
                   </h3>
@@ -176,9 +179,7 @@ return (
               <SectionHeader>Search Results</SectionHeader>
                 {/*pagination*/}
                   <PaginationSection>
-                    <div className="w-full" id="pag-section">
-                      {data}
-                    </div>                 
+                      {data}              
                     { results ==0 ?
                         <div className="mx-auto">
                         <p>No results found 😢 </p>

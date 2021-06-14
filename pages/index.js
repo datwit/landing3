@@ -38,9 +38,7 @@ export default function Home() {
   return ( 
     <> 
       <Head>
-      <title>Datwit | Home</title>
-      <link rel="icon" href="/favicon.ico" />
-      <meta name="apple-mobile-web-app-capable" content="yes" />
+      <title>Datwit | Home</title>    
       </Head>     
       <motion.div initial={{opacity:0,  y: 200}} animate={{opacity:1, y:0}}> 
           { !isMobile ? 
@@ -98,25 +96,25 @@ export default function Home() {
 
             <Slide>
               <Section classes={'pb-16'}>
-                <Services  classes={"container px-5 mx-auto"}/>
+                <Services  classes={"px-5 mx-auto"}/>
               </Section>
             </Slide> 
 
             <Slide>
               <Section classes={'pb-16'}>
-                <StudyCases classes={"container px-5 mx-auto"} />
+                <StudyCases classes={"px-5 mx-auto"} />
               </Section>          
             </Slide>
             
             <Slide>
               <Section classes={'pb-16'}>
-                <Pricing classes={"container px-5 mx-auto"} />
+                <Pricing classes={"px-5 mx-auto"} />
               </Section>          
             </Slide>
 
             <Slide>
               <Section classes={'pb-16'}>
-                <Selection classes={"container px-5 mx-auto"} />
+                <Selection classes={"px-5 mx-auto"} />
               </Section>          
             </Slide>
 

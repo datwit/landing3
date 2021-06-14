@@ -88,7 +88,7 @@ const Blog = () => {
     const postData = slice.map(item =>
       <BlogCardWrapper key={uuid()}>        
           <BlogCardBorder>
-          <Link href={`/blog/${item.id}`}><img className="lg:h-48 md:h-28 w-full object-cover object-center cursor-pointer" src={item.img} alt="" /></Link>         
+          <Link href={`/blog/${item.id}`}><img className="lg:h-48 md:h-28 md:w-full object-cover object-center cursor-pointer res-img" src={item.img} alt="" /></Link>         
             <BlogCardBlock>
               <div className="flex flex-wrap">
                 {
@@ -154,8 +154,7 @@ const Blog = () => {
   return (
     <>
         <Head>
-        <title>Datwit | Blog</title>
-        <link rel="icon" href="/favicon.ico" />
+        <title>Datwit | Blog</title>        
         </Head> 
         <motion.div initial={{opacity:0,  y: 200}} animate={{opacity:1, y:0}}> 
           { !isMobile ?       
@@ -176,12 +175,12 @@ const Blog = () => {
                           name="search"
                           placeholder="Search here">
                         </SearchField>
-                        <Link href={`/blog/search?q=${query}`}><svg className="h-6 w-6 text-secondary2" width="24" height="24" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">  <path stroke="none" d="M0 0h24v24H0z" />  <circle cx="10" cy="10" r="7" />  <line x1="21" y1="21" x2="15" y2="15" /></svg></Link>
+                        <Link href={`/blog/search?q=${query}`}><svg className="h-6 w-6 text-gray-300 absolute right-1 hover:text-secondary1" width="24" height="24" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">  <path stroke="none" d="M0 0h24v24H0z" />  <circle cx="10" cy="10" r="7" />  <line x1="21" y1="21" x2="15" y2="15" /></svg></Link>
                       </SearchWrapper>
 
                     {/*pagination*/}
-                    <div className="flex flex-wrap">
-                      {data}
+                    <div className="flex flex-wrap pb-20 relative">                      
+                        {data}                                            
                       {
                       pageCount >= 2 
                         ?
@@ -216,8 +215,8 @@ const Blog = () => {
             <>
               <Navbar scrollToSlide={ scrollToTop }/>
               <Slide {...style}>
-                <Section classes={'pb-16 pt-20'}>
-                <div className="container px-5 mx-auto">
+                <Section classes={'min-h-screen'}>
+                <div className="px-5 mx-auto pb-16 mt-20">
                       <SectionSubheader>Discover interesting ideas and unique perspectives from our amazing crew</SectionSubheader>        
                       {pressEnter && searchRedirect()}
                       {/* search box*/}
@@ -231,7 +230,7 @@ const Blog = () => {
                           name="search"
                           placeholder="Search here">
                         </SearchField>
-                        <Link href={`/blog/search?q=${query}`}><svg className="h-6 w-6 text-secondary2" width="24" height="24" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">  <path stroke="none" d="M0 0h24v24H0z" />  <circle cx="10" cy="10" r="7" />  <line x1="21" y1="21" x2="15" y2="15" /></svg></Link>
+                        <Link href={`/blog/search?q=${query}`}><svg className="h-6 w-6 text-gray-300 absolute right-1 hover:text-secondary1" width="24" height="24" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">  <path stroke="none" d="M0 0h24v24H0z" />  <circle cx="10" cy="10" r="7" />  <line x1="21" y1="21" x2="15" y2="15" /></svg></Link>
                       </SearchWrapper>
 
                     {/*pagination*/}

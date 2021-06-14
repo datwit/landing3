@@ -33,8 +33,7 @@ const Team = () => {
     return (
       <> 
         <Head>
-        <title>Datwit | Team</title>
-        <link rel="icon" href="/favicon.ico" />
+        <title>Datwit | Team</title>        
         </Head> 
         <motion.div initial={{opacity:0,  y: 200}} animate={{opacity:1, y:0}}>
           { !isMobile ? 
@@ -62,13 +61,13 @@ const Team = () => {
               <Navbar scrollToSlide={ scrollToTop }/>
               <Slide {...style}>
                 <Section classes={'pb-16 pt-20'}>
-                  <Tech classes={"container px-5 mx-auto"}/> 
+                  <Tech classes={"px-5 mx-auto"}/> 
                 </Section>        
               </Slide>
 
               <Slide>
                 <Section classes={'pb-16'}>
-                  <Benefits classes={"container px-5 mx-auto"} />
+                  <Benefits classes={"px-5 mx-auto"} />
                 </Section>        
               </Slide>
 

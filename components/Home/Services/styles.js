@@ -49,12 +49,7 @@ svg.resizes{
     object-fit:cover;
     width: 85%;
     height:85%;
-  }
-  @media (min-width: 1024px){
-    /* object-fit:cover;
-    width: 110%;
-    height:110%; */
-  }
+  }  
 }
 #leaf1{
   animation: leaf-anime1 2s linear infinite alternate;

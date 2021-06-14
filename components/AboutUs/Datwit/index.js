@@ -6,8 +6,7 @@ const Datwit = ({classes}) => {
     return (
         <div className={classes}>
             <DatwitWrapper>
-                <ImgWrapper>
-                    {/* <img alt="img" className="lg:w-1/2 w-full lg:h-auto h-64 object-cover object-center rounded" src="" />   */}
+                <ImgWrapper>                   
                     <FoundersIllustration />
                 </ImgWrapper>                
                 <TextBlock>

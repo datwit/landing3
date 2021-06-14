@@ -1,7 +1,7 @@
 import { } from '../../styles/global'
 import { SectionHeader, SectionSubheader, ContentWrapper} from '../../styles/global'
 import { BlockOuterContainer, BlockBorder, ButtonWrapper, SHeader, SVGWrapper } from './style'
-import { useState } from 'react'
+import { useState} from 'react'
 import SelectionButton from './SelectionButton';
 import PartnerSVG from './PartnerSVG';
 import TeamSVG from './TeamSVG';
@@ -9,28 +9,32 @@ import TeamSVG from './TeamSVG';
 
 const Selection = ({classes}) => {
 
-    const [card1, isCard1] = useState(false);
+    const [card1, isCard1] = useState(false)
     const [card2, isCard2] = useState(false)
-    const [init, setInit] = useState(true)
+    const [init, setInit] = useState(true)   
+    
 
     const handleToggle1 = () => {
         if (init) {
             isCard1(true)
             setInit(false)
+            
         } else {
             isCard1(card1 => !card1);
-            isCard2(false);
+            isCard2(false);            
         }
     };
     const handleToggle2 = () => {
         if (init) {
             isCard2(true)
-            setInit(false)
+            setInit(false)            
+            
         } else {
             isCard1(false);
-            isCard2(card2 => !card2);
-        }
+            isCard2(card2 => !card2);               
+        }        
     };
+        
  
     return (
         <div className={classes}>
@@ -57,13 +61,10 @@ const Selection = ({classes}) => {
                         </BlockBorder>
                     </BlockOuterContainer>
                 </>
-            </ContentWrapper>                       
-            <ButtonWrapper className={card1 ? 'block': 'hidden'}>                
-                <SelectionButton hhref="/partner"/>
-            </ButtonWrapper>
-            <ButtonWrapper className={card2 ? 'block': 'hidden'}>            
-                <SelectionButton hhref="/team"/>
-            </ButtonWrapper>
+            </ContentWrapper>                                           
+            <ButtonWrapper className={card1 || card2 ? 'visible': 'invisible'}>                
+                <SelectionButton hhref={card1 ? "/partner" : "/team"}/>                
+            </ButtonWrapper>   
         </div>
     )
 }

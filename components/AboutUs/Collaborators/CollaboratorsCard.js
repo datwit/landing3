@@ -3,7 +3,7 @@ import { ColName, ColRol} from './style';
 import {useState} from 'react'
 import {SocialCard, SocialWrapper2} from '../Members/style'
 
-const CollaboratorsCard = ({name, designation, twitter, linkedin, github}) => {
+const CollaboratorsCard = ({name, designation, twitter, linkedin, github, src}) => {
     const [hover, setHover] = useState(false)
 
     const toggleHoverON = () => {
@@ -15,7 +15,7 @@ const CollaboratorsCard = ({name, designation, twitter, linkedin, github}) => {
 
     return (
         <>
-        <img alt="team" className="flex-shrink-0 h-44 object-cover object-center" src="/images/dummy-image.png"/>
+        <img alt="team" className="flex-shrink-0 h-44 object-cover object-center" src={src}/>
         <SocialCard onMouseEnter={toggleHoverON} onMouseLeave={toggleHoverOFF} className={hover ? "h-full" : "h-7"}>
             <ColName>{name}</ColName>
             <ColRol>{designation}</ColRol>

@@ -37,8 +37,7 @@ const About = () => {
     return ( 
       <> 
         <Head>
-        <title>Datwit | About us</title>
-        <link rel="icon" href="/favicon.ico" />
+        <title>Datwit | About us</title>        
         </Head>    
         <motion.div initial={{opacity:0,  y: 200}} animate={{opacity:1, y:0}}>
         { !isMobile ?       
@@ -72,19 +71,19 @@ const About = () => {
             <Navbar scrollToSlide={ scrollToTop }/>            
               <Slide {...style}>
                 <Section classes={'pb-16 pt-20'}>
-                  <Datwit classes={"container px-5 mx-auto"}/>
+                  <Datwit classes={"px-5 mx-auto"}/>
                 </Section>        
               </Slide>
 
               <Slide>
                 <Section classes={'pb-16'}>
-                  <Members classes={"container px-5 mx-auto"}/>
+                  <Members classes={"px-5 mx-auto"}/>
                 </Section>        
               </Slide>
 
               <Slide>
                 <Section classes={'pb-16'}>
-                  <Collaborators classes={"container px-5 mx-auto"}/>
+                  <Collaborators classes={"px-5 mx-auto"}/>
                 </Section>        
               </Slide>
 
