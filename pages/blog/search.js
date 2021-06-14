@@ -111,8 +111,7 @@ const BlogResults = () => {
 return (
   <>
     <Head>
-    <title>Datwit | Search results</title>
-    <link rel="icon" href="/favicon.ico" />
+    <title>Datwit | Search results</title>  
     </Head>  
     <motion.div initial={{opacity:0,  y: 200}} animate={{opacity:1, y:0}}> 
         { !isMobile ? 

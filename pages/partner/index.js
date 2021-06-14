@@ -36,8 +36,7 @@ const Partner = () => {
     return (
       <> 
         <Head>
-        <title>Datwit | Partner</title>
-        <link rel="icon" href="/favicon.ico" />
+        <title>Datwit | Partner</title>       
         </Head>  
         <motion.div initial={{opacity:0,  y: 200}} animate={{opacity:1, y:0}}> 
         { !isMobile ? 

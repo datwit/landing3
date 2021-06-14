@@ -111,8 +111,7 @@ const prevSVG = <svg className="h-8 w-8 text-secondary2" viewBox="0 0 24 24" fil
 return (
     <> 
       <Head>
-      <title>Datwit | Study Cases</title>
-      <link rel="icon" href="/favicon.ico" />
+      <title>Datwit | Study Cases</title>      
       </Head> 
       <motion.div initial={{opacity:0,  y: 200}} animate={{opacity:1, y:0}}>  
       { !isMobile ?         

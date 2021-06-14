@@ -38,9 +38,7 @@ export default function Home() {
   return ( 
     <> 
       <Head>
-      <title>Datwit | Home</title>
-      <link rel="icon" href="/favicon.ico" />
-      <meta name="apple-mobile-web-app-capable" content="yes" />
+      <title>Datwit | Home</title>    
       </Head>     
       <motion.div initial={{opacity:0,  y: 200}} animate={{opacity:1, y:0}}> 
           { !isMobile ? 

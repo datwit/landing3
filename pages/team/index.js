@@ -33,8 +33,7 @@ const Team = () => {
     return (
       <> 
         <Head>
-        <title>Datwit | Team</title>
-        <link rel="icon" href="/favicon.ico" />
+        <title>Datwit | Team</title>        
         </Head> 
         <motion.div initial={{opacity:0,  y: 200}} animate={{opacity:1, y:0}}>
           { !isMobile ? 
