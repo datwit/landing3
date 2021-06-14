@@ -24,7 +24,7 @@ const Members = ({classes}) => {
                         datas.map(data => (
                             <div key={uuid()}>
                                 <MemberCol> 
-                                    <MemberCard name={data.name} designation={data.designation} rol={data.rol} twitter={data.twitter} linkedin={data.linkedin} github={data.github} />                          
+                                    <MemberCard name={data.name} designation={data.designation} rol={data.rol} twitter={data.twitter} linkedin={data.linkedin} github={data.github} src={data.src} />                          
                                 </MemberCol> 
                             </div>                                               
                         ))

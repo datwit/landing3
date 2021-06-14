@@ -4,27 +4,39 @@
       "designation": "Backend Developer",
       "twitter":"https://github.com/DanayMeneses",
       "linkedin": "https://www.linkedin.com/in/danaymeneses",
-      "github": "https://twitter.com/DanayMeneses"
+      "github": "https://twitter.com/DanayMeneses",
+      "src": ""
   },
   {
     "name": "Karell Lexander Garcés",
       "designation": "Firmware Engineering",
       "twitter":"https://github.com/KarellGarces",
       "linkedin": "https://www.linkedin.com/in/karellgarces",
-      "github": "https://twitter.com/KarellGarces"
+      "github": "https://twitter.com/KarellGarces",
+      "src": ""
   },
   {
     "name": "Karel Rodríguez Varona",
       "designation": "DataSci Team Member",
       "twitter":"",
       "linkedin": "https://www.linkedin.com/in/karel-rodr%C3%ADguez-varona-5609aaa5/",
-      "github": "https://github.com/kwaref"
+      "github": "https://github.com/kwaref",
+      "src": ""
   },
   {
     "name": "Oskar L. Garcell",
       "designation": "DataSci Team Member",
       "twitter":"https://twitter.com/codeshard",
       "linkedin": "https://www.linkedin.com/in/ozkar-garcell/",
-      "github": "https://github.com/codeshard"
+      "github": "https://github.com/codeshard",
+      "src": ""
+  },
+  {
+    "name": "Ailan Alcantara Espinosa",
+      "designation": "Software Engineering",
+      "twitter":"",
+      "linkedin": "https://github.com/alcantara2575",
+      "github": "https://www.linkedin.com/in/ailan-alcantara-a97b131a4",
+      "src": ""
   }
 ]

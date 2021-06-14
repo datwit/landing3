@@ -15,7 +15,7 @@ export const SocialCard = styled.div
 
     //glassmorphism workaround
     /* slightly transparent fallback */ 
-    background-color: rgba(255, 255, 255, .5);
+    background-color: rgba(255, 255, 255, .87);
     
 
     /* if backdrop support: very transparent and blurred */

@@ -6,9 +6,8 @@
       "rol": "Software Engineer",
       "twitter":"https://twitter.com/leonel_lordford",
       "linkedin": "https://www.linkedin.com/in/leonel-salazar-videaux",
-      "github": "https://github.com/leonel-lordford"
-
-
+      "github": "https://github.com/leonel-lordford",
+      "src": "/members/lordford.png"
     },
     {
       "name": "Abel Meneses",
@@ -16,8 +15,8 @@
       "rol": "Data Scientist",
       "twitter":"https://twitter.com/abelma1980",
       "linkedin": "https://www.linkedin.com/in/meneses-abad",
-      "github": "https://github.com/sorice"
-
+      "github": "https://github.com/sorice",
+      "src": "/members/abelma.png"
     },
     {
 
@@ -26,9 +25,8 @@
       "rol": "Customer Relationship",
       "twitter":"",
       "linkedin": "https://www.linkedin.com/in/yanetcg1983/",
-      "github": "https://github.com/yanetcg1983"
-
-
+      "github": "https://github.com/yanetcg1983",
+      "src": "/members/yanet.png"
     }, 
     {
 
@@ -37,9 +35,8 @@
       "rol": "Frontend Developer",
       "twitter":"https://twitter.com/enma_lidia",
       "linkedin": "https://www.linkedin.com/in/enma-lidia-muñoz-garcía",
-      "github": "https://github.com/enmalidia"
-
-
+      "github": "https://github.com/enmalidia",
+      "src": "/members/enma.png"
     },
     {
       "name": "Yoel Benítez Fonseca",
@@ -47,7 +44,8 @@
       "rol": "DevOps",
       "twitter":"",
       "linkedin": "https://www.linkedin.com/in/",
-      "github": "https://github.com/ybenitezf"
+      "github": "https://github.com/ybenitezf",
+      "src": "/members/yoel.png"
     }
 
 ]
