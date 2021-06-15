@@ -23,7 +23,7 @@ const Collaborators = ({classes}) => {
                             
                             <div key={uuid()}>
                                 <ColWrapper>                            
-                                    <CollaboratorsCard name={data.name} designation={data.designation} twitter={data.twitter} linkedin={data.linkedin} github={data.github}/>                             
+                                    <CollaboratorsCard name={data.name} designation={data.designation} twitter={data.twitter} linkedin={data.linkedin} github={data.github} src={data.src}/>                             
                                 </ColWrapper>
                             </div>
                                                 

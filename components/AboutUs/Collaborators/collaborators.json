@@ -5,7 +5,7 @@
       "twitter":"https://github.com/DanayMeneses",
       "linkedin": "https://www.linkedin.com/in/danaymeneses",
       "github": "https://twitter.com/DanayMeneses",
-      "src": ""
+      "src": "/members/danay.png"
   },
   {
     "name": "Karell Lexander Garcés",
@@ -13,7 +13,7 @@
       "twitter":"https://github.com/KarellGarces",
       "linkedin": "https://www.linkedin.com/in/karellgarces",
       "github": "https://twitter.com/KarellGarces",
-      "src": ""
+      "src": "/members/karell.png"
   },
   {
     "name": "Karel Rodríguez Varona",
@@ -21,7 +21,7 @@
       "twitter":"",
       "linkedin": "https://www.linkedin.com/in/karel-rodr%C3%ADguez-varona-5609aaa5/",
       "github": "https://github.com/kwaref",
-      "src": ""
+      "src": "/members/karel.png"
   },
   {
     "name": "Oskar L. Garcell",
@@ -29,7 +29,15 @@
       "twitter":"https://twitter.com/codeshard",
       "linkedin": "https://www.linkedin.com/in/ozkar-garcell/",
       "github": "https://github.com/codeshard",
-      "src": ""
+      "src": "/members/oskar.png"
+  },
+  {
+    "name": "Eriberto Vanegas Lago",
+      "designation": "DataSci Team Member",
+      "twitter":"https://twitter.com/LagoEriberto?s=09",
+      "linkedin": "https://www.linkedin.com/in/evanegasl2020/",
+      "github": "https://github.com/Vanegas2020",
+      "src": "/members/vanegas.png"
   },
   {
     "name": "Ailan Alcantara Espinosa",
@@ -37,6 +45,6 @@
       "twitter":"",
       "linkedin": "https://github.com/alcantara2575",
       "github": "https://www.linkedin.com/in/ailan-alcantara-a97b131a4",
-      "src": ""
+      "src": "/members/ailan.png"
   }
 ]
