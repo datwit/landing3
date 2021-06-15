@@ -1,6 +1,6 @@
 import datas from "./data.json";
 import {useState, useRef, useEffect} from 'react'
-import {ContentWrapper, SectionSubheader}from '../../../styles/global';
+import {ContentWrapper, SectionSubheader, SectionHeader}from '../../../styles/global';
 import {GlassInner, TabTitle, TabTitle1, ServTabContent, CardRevealWrapper, IconTitle, CardContent, BulletTitle, BulletSubtitle, ServiceBulletsOuter, ServiceBulletsSpan, CardRevealBorder, TabResponsive} from './styles';
 import SoftDSVG from './SoftDSVG'
 import DataScSVG from './DataScSVG'
@@ -32,6 +32,7 @@ const Services = ({classes}) => {
    
     return (        
         <div ref={wrapperRef} className={classes}>
+            <SectionHeader>What we do</SectionHeader>
             <SectionSubheader>Our goal is to get close to the product you have in mind through intuitive designs and great tools to back them up.</SectionSubheader>
             
                 <div className="">
