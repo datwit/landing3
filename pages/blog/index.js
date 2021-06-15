@@ -161,7 +161,7 @@ const Blog = () => {
             <FullPage controls={CustomControls}>
               <Slide {...style}>
                 <Section classes={'w-full h-screen'}>
-                <div className="container px-5 mx-auto relative top-2/4 transform -translate-y-2/4">
+                <div className="container px-5 mx-auto relative top-2/4 transform -translate-y-2/4 mt-10">
                       <SectionSubheader>Discover interesting ideas and unique perspectives from our amazing crew</SectionSubheader>        
                       {pressEnter && searchRedirect()}
                       {/* search box*/}

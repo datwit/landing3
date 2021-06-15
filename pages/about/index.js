@@ -44,7 +44,7 @@ const About = () => {
             <FullPage controls={CustomControls}> 
               <Slide {...style}>
                 <Section classes={'w-full h-screen'}>
-                  <Datwit classes={"container px-5 mx-auto relative top-2/4 transform -translate-y-2/4"}/>
+                  <Datwit classes={"container px-5 mx-auto relative top-2/4 transform -translate-y-2/4 mt-20"}/>
                 </Section>        
               </Slide>
 
