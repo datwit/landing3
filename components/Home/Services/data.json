@@ -2,48 +2,54 @@
         
     "soft": [{
         "title": "Frontend",
-        "subtitle": "Tempor incididunt fugiat consequat ex esse culpa pariatur",
+        "subtitle": "We offer visually appealing and accessible apps, built using:",
         "items":[
-            {"tit":"Tempor incididunt fugiat consequat ex esse culpa pariatur"},
-            {"tit":"Tempor incididunt fugiat consequat ex esse culpa pariatur"}
+            {"tit":"HTML5 & CSS3"},
+            {"tit":"JavaScript/Vue.js + Nuxt.js/ Reactjs + Nextjs"}
             
         ]
     },       
     {
         "title": "Backend",
-        "subtitle": "Tempor incididunt fugiat consequat ex esse culpa pariatur",
+        "subtitle": "Our services focus on creating functional applications, tailored to your specifications, therefore we use:",
         "items":[
-            {"tit":"Tempor incididunt fugiat consequat ex esse culpa pariatur"},
-            {"tit":"Tempor incididunt fugiat consequat ex esse culpa pariatur"}
+            {"tit":"Flask/Chalice"},
+            {"tit":"Python scripts"}
             
         ]
     },
     {
         "title": "Deployment",
-        "subtitle": "Tempor incididunt fugiat consequat ex esse culpa pariatur",
+        "subtitle": "We can get involved and support our clients when the final product goes live by implementing:",
         "items":[
-            {"tit":"Tempor incididunt fugiat consequat ex esse culpa pariatur"},
-            {"tit":"Tempor incididunt fugiat consequat ex esse culpa pariatur"}
+            {"tit":"On-cloud services"},
+            {"tit":"On-premises services"}
             
         ]
     }],
     "data" : [
         {
             "title": "Data Analysis",
-            "subtitle": "Tempor incididunt fugiat consequat ex esse culpa pariatur",
+            "subtitle": "By using machine learning state of the art algorithms with customized apps, we ensure:",
             "items":[
-                {"tit":"Tempor incididunt fugiat consequat ex esse culpa pariatur"},
-                {"tit":"Tempor incididunt fugiat consequat ex esse culpa pariatur"}
-                
+                {"tit":"Data exploration"},
+                {"tit":"Data collection from streaming data sources"},
+                {"tit":"Data cleaning and anonymization"},
+                {"tit":"Study of relationship between variables"},
+                {"tit":"APIs that serve your data"},
+                {"tit":"Data management tech consulting"}            
             ]  
         },
         {
             "title": "Data Visualization",
-            "subtitle": "Tempor incididunt fugiat consequat ex esse culpa pariatur",
+            "subtitle": "Our dashboard philosophy allows faster discoveries with small changes to your apps, so we supply:",
             "items":[
-                {"tit":"Tempor incididunt fugiat consequat ex esse culpa pariatur"},
-                {"tit":"Tempor incididunt fugiat consequat ex esse culpa pariatur"}
-                
+                {"tit":"Descriptive reports"},
+                {"tit":"Graphic reports about your data"},
+                {"tit":"Strategic and operational dashboards"},
+                {"tit":"Addons with business variables of interest"},
+                {"tit":"Models monitoring"},
+                {"tit":"Feedback interface to improve human-in-the-loop"}                
             ]  
         }
     ]    

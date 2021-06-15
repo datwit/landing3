@@ -60,7 +60,7 @@ const Team = () => {
             <>
               <Navbar scrollToSlide={ scrollToTop }/>
               <Slide {...style}>
-                <Section classes={'pb-16 pt-20'}>
+                <Section classes={'pb-16 mt-20'}>
                   <Tech classes={"px-5 mx-auto"}/> 
                 </Section>        
               </Slide>

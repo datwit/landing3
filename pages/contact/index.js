@@ -56,7 +56,7 @@ const Contact = () => {
           <>
             <Navbar scrollToSlide={ scrollToTop }/>
             <Slide {...style}>
-                <Section classes={'pb-16 pt-20'}>
+                <Section classes={'min-h-screen pt-20'}>
                   <ContactForm classes={"px-5 mx-auto"} />
                 </Section>        
             </Slide>                

@@ -38,8 +38,8 @@ const Selection = ({classes}) => {
  
     return (
         <div className={classes}>
-            <SectionHeader>Sit ea irure veniam voluptate id incididunt ...</SectionHeader>
-            <SectionSubheader>Sit ea irure veniam voluptate id incididunt consectetur amet. Pariatur proident duis exercitation consequat ipsum velit anim dolor fugiat esse ea.</SectionSubheader>
+            <SectionHeader>Join us...</SectionHeader>
+            <SectionSubheader>Stop being who you were and discover who you really are as a part of our family. Select wich member do you want to be. </SectionSubheader>
             <ContentWrapper>
                 <>
                     <BlockOuterContainer>

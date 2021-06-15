@@ -12,14 +12,13 @@
     {
       "name": "Abel Meneses",
       "designation": "Founder / COO",
-      "rol": "Data Scientist",
+      "rol": "Head of DataSci Team",
       "twitter":"https://twitter.com/abelma1980",
       "linkedin": "https://www.linkedin.com/in/meneses-abad",
       "github": "https://github.com/sorice",
       "src": "/members/abelma.png"
     },
     {
-
       "name": "Yanet Conde",
       "designation": "CCO",
       "rol": "Customer Relationship",
@@ -41,7 +40,7 @@
     {
       "name": "Yoel Benítez Fonseca",
       "designation": "CTO",
-      "rol": "DevOps",
+      "rol": "Reliability Engineer",
       "twitter":"",
       "linkedin": "https://www.linkedin.com/in/",
       "github": "https://github.com/ybenitezf",

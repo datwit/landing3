@@ -1,6 +1,6 @@
 import datas from "./data.json";
 import {useState, useRef, useEffect} from 'react'
-import {ContentWrapper, SectionSubheader}from '../../../styles/global';
+import {ContentWrapper, SectionSubheader, SectionHeader}from '../../../styles/global';
 import {GlassInner, TabTitle, TabTitle1, ServTabContent, CardRevealWrapper, IconTitle, CardContent, BulletTitle, BulletSubtitle, ServiceBulletsOuter, ServiceBulletsSpan, CardRevealBorder, TabResponsive} from './styles';
 import SoftDSVG from './SoftDSVG'
 import DataScSVG from './DataScSVG'
@@ -32,7 +32,8 @@ const Services = ({classes}) => {
    
     return (        
         <div ref={wrapperRef} className={classes}>
-            <SectionSubheader>Lorem ipsum dolor sit amet consectetur adipisicing elit.</SectionSubheader>
+            <SectionHeader>What we do</SectionHeader>
+            <SectionSubheader>Our goal is to get close to the product you have in mind through intuitive designs and great tools to back them up.</SectionSubheader>
             
                 <div className="">
                     <ContentWrapper>
@@ -66,13 +67,13 @@ const Services = ({classes}) => {
                                 </IconTitle>
                                 {/*card content-reveal*/}
                                 <CardContent onWheel={e => e.stopPropagation()} className={openCard1 ? "block h-full" : "h-0"} id="link1" > 
-                                    <div className="p-4">
-                                        <a className="flex justify-end" href="#" onClick={e =>
+                                    <div className="p-4 relative">
+                                        <a className="flex justify-end absolute right-1" href="#" onClick={e =>
                                         {
                                         e.preventDefault();
                                         setOpenCard1(!openCard1);
                                         }} >
-                                        <svg className="h-8 w-8 text-primary"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  strokeWidth="2"  strokeLinecap="round"  strokeLinejoin="round">  <line x1="18" y1="6" x2="6" y2="18" />  <line x1="6" y1="6" x2="18" y2="18" /></svg>
+                                        <svg className="h-8 w-8 text-primary hover:text-secondary1"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  strokeWidth="2"  strokeLinecap="round"  strokeLinejoin="round">  <line x1="18" y1="6" x2="6" y2="18" />  <line x1="6" y1="6" x2="18" y2="18" /></svg>
                                         </a>
                                         {
                                             datas.soft.map((data, key) => (
@@ -123,17 +124,17 @@ const Services = ({classes}) => {
                                     role="tablist">
                                         <h2>Data 
                                         <br/>
-                                        Science</h2>
+                                        Intelligence</h2>
                                 </IconTitle>
                                 {/*card content-reveal*/}
                                 <CardContent onWheel={e => e.stopPropagation()} className={openCard2 ? "block h-full" : "h-0"} id="link2"> 
-                                    <div className="p-4">
-                                        <a className="flex justify-end" href="#" onClick={e =>
+                                    <div className="p-4 relative">
+                                        <a className="flex justify-end absolute right-1" href="#" onClick={e =>
                                         {
                                         e.preventDefault();
                                         setOpenCard2(!openCard2);
                                         }} >
-                                        <svg className="h-8 w-8 text-primary"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  strokeWidth="2"  strokeLinecap="round"  strokeLinejoin="round">  <line x1="18" y1="6" x2="6" y2="18" />  <line x1="6" y1="6" x2="18" y2="18" /></svg>
+                                        <svg className="h-8 w-8 text-primary hover:text-secondary1"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  strokeWidth="2"  strokeLinecap="round"  strokeLinejoin="round">  <line x1="18" y1="6" x2="6" y2="18" />  <line x1="6" y1="6" x2="18" y2="18" /></svg>
                                         </a>
                                         {
                                             datas.data.map((data, key) => (
