@@ -14,7 +14,7 @@ const Believe = ({classes}) => {
                 datas.map(data => (
                     <div  className="m-3 flex items-center" key={uuid()}>
                         <PBullets>
-                            <svg class="h-8 w-8 text-secondary2"  viewBox="0 0 24 24"  fill="currentColor"  stroke="none"  strokeWidth="2"  strokeLinecap="round"  strokeLinejoin="round">  <circle cx="12" cy="12" r="10" />  <polygon fill="#fff" points="10 8 16 12 10 16 10 8" /></svg>
+                            <svg className="h-8 w-8 text-secondary2"  viewBox="0 0 24 24"  fill="currentColor"  stroke="none"  strokeWidth="2"  strokeLinecap="round"  strokeLinejoin="round">  <circle cx="12" cy="12" r="10" />  <polygon fill="#fff" points="10 8 16 12 10 16 10 8" /></svg>
                         </PBullets>
                         {data}
                     </div>
