@@ -16,7 +16,7 @@ const Members = ({classes}) => {
     return (
         <div className={classes}>
             <h2 className="mt-4">Meet our team</h2>
-            <h4 className="mb-4">Whatever cardigan tote bag tumblr hexagon brooklyn asymmetrical gentrify, subway tile poke farm-to-table. Franzen you probably haven't heard of them.</h4>
+            <h4 className="mb-4">We are dreamers disguised as data scientists, engineers and designers...</h4>
             
                 <ContentWrapper>
                     <Carousel itemsToShow={3} breakPoints={breakPoints} onTouchMove={e => e.stopPropagation()}>
