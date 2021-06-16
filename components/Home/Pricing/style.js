@@ -48,10 +48,7 @@ export const CarouselContainer = styled.div.attrs({
     &.control-next, &.control-prev{
         &::before{            
             visibility:hidden;               
-        }
-     
-
-
-    
+        }   
+    }     
 }
 `;

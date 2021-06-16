@@ -9,7 +9,7 @@ const Find = ({classes}) => {
         <div className={classes}>
             <SectionHeader>Why you should hire us</SectionHeader>
             <SectionSubheader>We can work together to build the product you have in mind through intuitive designs and great tools to back them up.</SectionSubheader>
-            <h3 className="text-primary">Our experience creating IT solutions includes:</h3>   
+            <h3 className="text-gray-600">Our experience creating IT solutions includes:</h3>   
                 <ContentWrapper>                    
                     {
                         datas.map(data => (

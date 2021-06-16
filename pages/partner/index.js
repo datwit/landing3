@@ -10,6 +10,7 @@ import Head from 'next/head';
 import {useEffect} from 'react'
 import Navbar from '../../components/Navbar'
 import DeviceDetect from "../../lib/deviceDetect";
+import Believe from '../../components/Partner/Believe';
 
 
 const Partner = () => {
@@ -48,10 +49,16 @@ const Partner = () => {
             </Slide>
 
             <Slide>
+                <Section classes={'w-full h-screen'}>
+                  <Believe classes={"container px-5 mx-auto relative top-2/4 transform -translate-y-2/4"} />
+                </Section>        
+              </Slide>
+
+            <Slide>
               <Section classes={'w-full h-screen'}>
                 <PartPricing  classes={"container px-5 mx-auto relative top-2/4 transform -translate-y-2/4"}/>
               </Section>        
-            </Slide>
+            </Slide>            
 
             <Slide>
               <Section classes={'w-full h-screen'}>
@@ -76,9 +83,15 @@ const Partner = () => {
 
               <Slide>
                 <Section classes={'pb-16'}>
-                  <PartPricing classes={"px-5 mx-auto"} />
+                  <Believe classes={"px-5 mx-auto"} />
                 </Section>        
               </Slide>
+
+              <Slide>
+                <Section classes={'pb-16'}>
+                  <PartPricing classes={"px-5 mx-auto"} />
+                </Section>        
+              </Slide>            
 
               <Slide>
                 <Section classes={'pb-16'}>
