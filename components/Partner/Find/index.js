@@ -7,9 +7,10 @@ import uuid from 'react-uuid'
 const Find = ({classes}) => {
     return (
         <div className={classes}>
-            <SectionHeader>Find the right partnership</SectionHeader>
-            <SectionSubheader>Lorem, ipsum dolor sit amet consectetur adipisicing elit...</SectionSubheader>
-                <ContentWrapper>
+            <SectionHeader>Why you should hire us</SectionHeader>
+            <SectionSubheader>We can work together to build the product you have in mind through intuitive designs and great tools to back them up.</SectionSubheader>
+            <h3 className="text-primary">Our experience creating IT solutions includes:</h3>   
+                <ContentWrapper>                    
                     {
                         datas.map(data => (
                             <IconWrapper key={uuid()}>                       

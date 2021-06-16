@@ -13,7 +13,7 @@ const PartPricing = ({classes}) => {
 
     return (
         <div className={classes}>
-            <SectionHeader>Lorem ipsum dolor sit amet consectetur adipisicing elit.</SectionHeader>            
+            <SectionHeader>Our pricing strategy</SectionHeader>            
             <div className="w-full">
                 <ToggleWrapper role="tablist">                    
                     <BundleChooser  className={openTab === 1 ? "text-white bg-secondary2" : "text-secondary2 bg-white"}

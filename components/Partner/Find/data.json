@@ -1,17 +1,17 @@
 [
     {
-        "title": "Lorem ipsum dolor si amet",
-        "description":"Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aperiam consequuntur facilis",
+        "title": "Custom software",
+        "description":"We help companies launch their businesses, highlighting qualities as their main assets, creating complete software solutions according to each client's requirements.",
         "src": ""
     },
     {
-        "title": "Lorem ipsum dolor si amet",
-        "description":"Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aperiam consequuntur facilis",
+        "title": "Software integrations",
+        "description":"We offer the support that other companies need to preserve and improve their long lasting solutions.",
         "src": ""
     },
     {
-        "title": "Lorem ipsum dolor si amet",
-        "description":"Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aperiam consequuntur facilis",
+        "title": "We are Agile",
+        "description":"In order to make sure your initial idea becomes a working product we take advantage of the great benefits of Scrum and some of the best practices of XP.",
         "src": ""
     }
 
