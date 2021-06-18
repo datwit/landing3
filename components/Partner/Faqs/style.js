@@ -4,11 +4,9 @@ export const QuestionWrapper = styled.div.attrs({
     className: "mb-4"
 })``;
 export const QuestionText = styled.h1.attrs({
-    className: "text-base mt-4 text-center"
+    className: "text-xl text-center cursor-pointer hover:text-secondary1"
 })
-`
-text-align: left;
-`;
+``;
 export const AccItem = styled.div
 `
 padding-bottom:20px; 

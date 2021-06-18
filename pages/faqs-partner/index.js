@@ -1,5 +1,5 @@
 
-import datas from '../../components/Partner/Faqs/data.json'
+import datas from '../../components/Partner/Faqs/data-partner.json'
 import uuid from 'react-uuid'
 import {SectionHeader,SectionSubheader} from '../../styles/global'
 import {QuestionText, AccordionList, AccordionWrapper} from '../../components/Partner/Faqs/style'
@@ -16,7 +16,7 @@ const FaqsPartner = () => {
     return (
         <> 
         <Head>
-        <title>Datwit | FAQs</title>        
+        <title>Datwit | FAQs for Partners</title>        
         </Head>
         <motion.div initial={{opacity:0,  y: 200}} animate={{opacity:1, y:0}}>  
             <FullPage controls={CustomControls} scrollMode='normal'>
