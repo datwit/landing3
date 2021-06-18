@@ -85,7 +85,7 @@ export const AccItemContent = styled.div
     transition-delay: 0.5s;
     padding: 0 1.2rem 1.2rem;
 `;
-export const AccItemParagraph = styled.p.attrs({
+export const AccItemParagraph = styled.div.attrs({
     className: "text-base"
 })
 `

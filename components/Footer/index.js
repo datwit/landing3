@@ -5,6 +5,7 @@ import datas from './data.json'
 import links from './pageslink.json';
 import {FiGithub, FiFacebook, FiTwitter, FiLinkedin} from 'react-icons/fi'
 import FooterAccItem from './FooterAccItem';
+import uuid from 'react-uuid'
 
 const Footer = () => {
     const year = new Date().getFullYear()
@@ -36,18 +37,19 @@ const Footer = () => {
                                 <svg className="h-7 w-7 text-white"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  strokeWidth="2"  strokeLinecap="round"  strokeLinejoin="round">  <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" /></svg>
                                 <DownH3>+58 658 987</DownH3>
                             </ContactWrapper>                            
-                        </ColumnContent>                                  
-                        <ColumnContent>
-                            <ColumnTitle>SPECIALIZED CONTENT</ColumnTitle>                        
-                            <Link href='/partner'><UpperH3>Partner area</UpperH3></Link>
-                            <Link href='/team'><DownH3>Team member area</DownH3></Link>
-                        <Divider className="sm:hidden" />                          
-                        </ColumnContent>                
-                        <ColumnContent>
-                            <ColumnTitle>DATA PROTECTION</ColumnTitle>
-                            <Link href='/info/policy'><UpperH3>Privacy Policy</UpperH3></Link>
-                            <Link href='/info/terms'><DownH3>Terms and Conditions</DownH3></Link>                     
-                        </ColumnContent>                                      
+                        </ColumnContent> 
+                        {
+                            links.map(llink => (
+                                <ColumnContent>
+                                    <ColumnTitle>{llink.title}</ColumnTitle>
+                                    {
+                                        llink.items.map(l =>(
+                                            <Link href={l.url} key={uuid()}><UpperH3>{l.title}</UpperH3></Link>
+                                        ))
+                                    }
+                                </ColumnContent>
+                            ))
+                        }    
                     </FooterLinksWrapper>  
                 </div> 
                 <div className="sm:hidden">

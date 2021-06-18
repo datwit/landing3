@@ -11,9 +11,21 @@ const Faqs = ({classes}) => {
             <SectionHeader>Frequently asked questions</SectionHeader> 
             <SectionSubheader>These are some of our more frequently asked questions</SectionSubheader>
             <QuestionWrapper>
-               <QuestionText>Question 1</QuestionText>
-               <QuestionText>Question 2</QuestionText>
-               <QuestionText>Question 3</QuestionText>                               
+            <div className="flex flex-wrap">
+                <div className="w-full sm:w-2/4 p-4">
+                    <div className="shadow border border-gray-300 p-4">
+                        <QuestionText>For partners</QuestionText>
+                    </div>                    
+               </div>
+               <div className="w-full sm:w-2/4 p-4">
+                    <div className="shadow border border-gray-300 p-4">
+                        <QuestionText>For team members</QuestionText>
+                    </div>
+                   
+               </div> 
+
+            </div>
+                                            
             </QuestionWrapper>
             <SectionSubheader>If you want to know its answers and a bunch of other questions, feel free to click below...</SectionSubheader>
             
