@@ -11,23 +11,22 @@ const Faqs = ({classes}) => {
         <div className={classes}>
             <SectionHeader>Frequently asked questions</SectionHeader> 
             <SectionSubheader>These are some of our more frequently asked questions</SectionSubheader>
-            <QuestionWrapper>
+            
             <div className="flex flex-wrap">
                 <div className="w-full sm:w-2/4 p-10">
-                    <div className="shadow border border-gray-300 p-6 shadow hover:shadow-lg transition duration-200 ease-in">
+                    <QuestionWrapper>
                         <Link href="/faqs-partner"><QuestionText>For <br/> Partners</QuestionText></Link>
-                    </div>                    
+                    </QuestionWrapper>                    
                </div>
                <div className="w-full sm:w-2/4 p-10">
-                    <div className="shadow border border-gray-300 p-6 shadow hover:shadow-lg transition duration-200 ease-in">
-                    <Link href="/faqs-team"><QuestionText>For <br/> Developers</QuestionText></Link>
-                    </div>
-                   
+                    <QuestionWrapper>
+                        <Link href="/faqs-team"><QuestionText>For <br/> Developers</QuestionText></Link>
+                    </QuestionWrapper>                   
                </div> 
 
             </div>
                                             
-            </QuestionWrapper>
+            
             {/* <SectionSubheader>If you want to know its answers and a bunch of other questions, feel free to click below...</SectionSubheader>
             
                 <CTA buttonName={'Read more'} hhref='/faqs'>                

@@ -1,8 +1,28 @@
 import styled from 'styled-components';
 
 export const QuestionWrapper = styled.div.attrs({
-    className: "mb-4"
-})``;
+    className: "shadow border border-gray-300 p-6 shadow hover:shadow-lg transition duration-200 ease-in"
+})
+`  
+    position: relative;
+   
+&::after{
+    content: '';
+    display: block;
+    height: 4px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    background: #e69c24;
+    width: 0;
+    transition: width .2s linear;
+}
+&:hover::after{
+    width: 100%;
+}
+`;
 export const QuestionText = styled.h1.attrs({
     className: "text-xl text-center cursor-pointer hover:text-secondary1"
 })
