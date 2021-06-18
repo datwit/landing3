@@ -40,7 +40,7 @@ const Footer = () => {
                         </ColumnContent> 
                         {
                             links.map(llink => (
-                                <ColumnContent>
+                                <ColumnContent key={uuid()}>
                                     <ColumnTitle>{llink.title}</ColumnTitle>
                                     {
                                         llink.items.map(l =>(
