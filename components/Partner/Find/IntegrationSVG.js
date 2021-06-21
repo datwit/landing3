@@ -3,7 +3,7 @@ import React from 'react'
 const IntegrationSVG = () => {
     return (
         <>
-            <svg viewBox="0 0 231 208" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg className="mx-auto resizes mb-5 sm:mb-0" viewBox="0 0 231 208" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g id="2Recurso 1 1" clipPath="url(#clip0)">
                 <path id="Vector" d="M230.09 0H0.24C0.107452 0 0 0.107452 0 0.24V207.36C0 207.493 0.107452 207.6 0.24 207.6H230.09C230.223 207.6 230.33 207.493 230.33 207.36V0.24C230.33 0.107452 230.223 0 230.09 0Z" fill="white"/>
                 <g id="circle">

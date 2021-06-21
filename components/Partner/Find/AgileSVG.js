@@ -3,7 +3,7 @@ import React from 'react'
 const AgileSVG = () => {
     return (
         <>
-            <svg viewBox="0 0 231 208" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg className="mx-auto resizes" viewBox="0 0 231 208" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g id="Recurso 1 1" clipPath="url(#clip0)">
                 <path id="Vector" d="M230.09 0H0.24C0.107452 0 0 0.107452 0 0.24V207.36C0 207.493 0.107452 207.6 0.24 207.6H230.09C230.223 207.6 230.33 207.493 230.33 207.36V0.24C230.33 0.107452 230.223 0 230.09 0Z" fill="white"/>
                 <path id="Vector_2" d="M110.26 173.38C152.918 173.38 187.5 138.472 187.5 95.41C187.5 52.3484 152.918 17.44 110.26 17.44C67.6015 17.44 33.02 52.3484 33.02 95.41C33.02 138.472 67.6015 173.38 110.26 173.38Z" fill="white"/>
