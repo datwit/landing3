@@ -11,6 +11,63 @@ svg.resizes{
     height:189px;
   }  
 }
+#wheel1{
+  animation: wheel-rotate 5s linear infinite ;
+  -webkit-animation: wheel-rotate 5s linear infinite;
+  transform-origin:center;
+  transform-box: fill-box;
+}
+#wheel2{
+  animation: wheel-rotate 5s linear infinite ;
+  -webkit-animation: wheel-rotate 5s linear infinite;
+  animation-delay: .2s;
+  -webkit-animation-delay: .2s;
+  transform-origin:center;
+  transform-box: fill-box;
+}
+#circle{
+  animation: wheel-rotate 10s linear infinite ;
+  -webkit-animation: wheel-rotate 10s linear infinite;
+  transform-origin:center;
+  transform-box: fill-box;
+}
+#arrow{
+  animation: wheel-rotate-reverse 10s linear infinite ;
+  -webkit-animation: wheel-rotate-reverse 10s linear infinite;
+  transform-origin:center;
+  transform-box: fill-box;
+}
+#fast{  
+  animation: left-right 5s linear infinite ;
+  -webkit-animation: left-right 5s linear infinite;
+  transform-origin:left;
+  transform-box: fill-box;
+}
+@keyframes wheel-rotate {
+  0%{
+    transform: rotateZ(0);
+  }
+  100%{
+    transform: rotateZ(360deg);
+  }  
+}
+@keyframes wheel-rotate-reverse {
+  0%{
+    transform: rotateZ(360deg);
+  }
+  100%{
+    transform: rotateZ(0);
+  }  
+}
+@keyframes left-right {
+  0%{    
+    transform: translateX(-5px);
+    
+  }
+  100%{   
+    transform: translateX(5px);
+  }
+}
 `;
 export const IconContent = styled.div.attrs({
     className: "md:p-2 text-center"
