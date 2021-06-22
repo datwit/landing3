@@ -3,75 +3,94 @@
         "id":"q1",
         "question": "What can you help me with?",
         "answer": "With whatever we can. Defining business goals,creating roadmaps, key business values, target users, main features, prioritising. We can find you similar projects that are already active on the market to benchmark against. In terms of project development we prepare server-side architecture, front end, back end, graphic and UX design. When it comes to machine learning we can...",
-        "link": "",
-        "clases": "hidden"
-
-    },
-    {
-        "id":"q1",
-        "question": "How can I become a Datwit partner?",
-        "answer": "It's great you want to join us! We would really like to get to know your business better and discuss the possibilities of our future collaboration. If you have an idea contact us by our online form, e-mail or phone. We'll meet and talk it over. Just be sure to prepare as much info about your idea as possible.",
+        "list":[],
         "link": "",
         "clases": "hidden"
 
     },
     {
         "id":"q2",
+        "question": "How can I become a Datwit partner?",
+        "answer": "It's great you want to join us! We would really like to get to know your business better and discuss the possibilities of our future collaboration. If you have an idea contact us by our online form, e-mail or phone. We'll meet and talk it over. Just be sure to prepare as much info about your idea as possible.",
+        "list":[],
+        "link": "",
+        "clases": "hidden"
+
+    },
+    {
+        "id":"q3",
         "question": "What do I need to know before contacting you?",
         "answer": "Well, the most important thing to know is what do you want to accomplish. Why do I need this software? What for? What should it do? Having a clear vision in mind is crucial when ordering a software application. You don't want to spend many months developing it with us without being sure what you need. We'll also be glad to help you get started, building projects from scratch is nothing new for us. Also check out more details about our partnership strategy",
+        "list":[],
         "link": "/partner",
         "clases": "text-gray-500 font-semibold"
 
     },
     {
-        "id":"q3",
+        "id":"q4",
         "question": "How much time will it take for you to make my app?",
         "answer": "To give you a precise answer we must prepare a project scope and create a budget. We shall tell you how much of that scope can be completed within the budget and we'll be able to estimate how long will it take after at least a month of work.",
+        "list":[],
         "link": "",
         "clases": "hidden"
     },
     {
-        "id":"q3",
+        "id":"q5",
         "question": "How do you guarantee product quality?",
         "answer": "We evaluate the result after every two weeks, we test our work (we conduct both development and acceptance tests), we present it to you, we apply your feedback so you know you get what you are paying for.",
+        "list":[],
         "link": "",
         "clases": "hidden"
     },
     {
-        "id":"q3",
+        "id":"q6",
         "question": "How can I be sure you work at my project as much as you declare?",
         "answer": "We thoroughly monitor our developers and control how much time they spend on each task down to the exact minute. We use... to track time spent on your project.",
+        "list":[],
         "link": "",
         "clases": "hidden"
     },
     {
-        "id":"q3",
+        "id":"q7",
         "question": "What happens after you finish my app?",
         "answer": "Hopefully the app is exactly what you dreamed of :) But apart from delivering a finished product, we are happy to provide you with technical support and app maintenance should you need it. After all, we know our work inside out. Of course if you want to maintain the app by yourself the source code and all technical data is at your disposal, but even in that case, feel free to contact us if you need any help.",
+        "list":[],
         "link": "",
         "clases": "hidden"
     },
     {
-        "id":"q3",
+        "id":"q8",
         "question": "Will development include the creation of prototypes and demo versions that I can try out?",
         "answer": "Agile Methodolgy compels us to create operating software as soon as possible and later just add next features along the process. Therefore, you'll be able to examine and test your software very early.",
+        "list":[],
         "link": "",
         "clases": "hidden"
     },
     {
-        "id":"q3",
+        "id":"q9",
         "question": "How much do you charge?",
         "answer": "It depends on many things: project scope, time spent on the project and technological issues. We know it sounds vague but its simply honest. Remember that each software project is different, especially if you had a particularly original idea. We do not want to give you an unrealistic estimate, instead we want to provide you with the best quality possible within your budget. For starters check out",
+        "list":[],
         "link": "/partner",
         "clases": "text-gray-500 font-semibold"
     },
     {
-        "id":"q3",
+        "id":"q10",
         "question": "What is your experience?",
-        "answer": "We are professionals ",
+        "answer": "We are professionals with more than 10 years of experience. We are experienced in creating web applications of all kind using modern techniques and including machine learning algorithms",
+        "list":[],
+        "link": "",
+        "clases": "hidden"
+    },
+    {
+        "id":"q11",
+        "question": " What technology do you use? Are there any reasons why you chose those particular technologies?",
+        "answer": "For back-end we use Python which gives the developers a lot of possibilities when it comes to prototyping, allows them to take advantage of ready-to-use components, and speeds up the development process. Indeed - the first results are visible almost immediately. Python is also an amazing language to use when it comes  to machine learnign For front-end we use React.js. We use React because it is perfect for a wide range of projects, fast iterations, implementations, prototyping and creating a proof of concept. It’s simple and scalable. A library very loved and widelly adopted all over the development world.",
+        "list":[],
         "link": "",
         "clases": "hidden"
     }
+
 
 
 

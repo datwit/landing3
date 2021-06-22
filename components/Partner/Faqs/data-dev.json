@@ -1,24 +1,64 @@
 [
     {
         "id":"q1",
-        "question": "How can I become a Datwit partner?",
-        "answer": "It's great you want to join us! We would really like to get to know your business better and discuss the possibilities of our future collaboration. Please get in touch with us real-time using this phone number: +586987410",
+        "question": "How can I become a Datwit team member?",
+        "answer": "It's great you want to join us! We would really like to get to know you as a part of our family. Please get in touch with us real-time using this phone number: +586987410",
+        "list":[],
         "link": "",
         "clases": "hidden"
 
     },
     {
         "id":"q2",
-        "question": "What is the process of partnering up with you?",
-        "answer": "If your are committed to growing your business by using one of our services, then we will be a great fit working together! For more details about our partnership program feel free to contact us by contact@datwit.com. Also check out more details",
-        "link": "/partner",
-        "clases": "text-gray-500 font-semibold"
+        "question": "What are the main industries we serve?",
+        "answer": "To provide the best services in the market we mainly focus our software development services on product development for several primary industries like: Data Intelligence applications...",
+        "list":[],
+        "link": "",
+        "clases": "hidden"
 
     },
     {
         "id":"q3",
-        "question": "Question 3",
-        "answer": "Incididunt cillum anim voluptate magna ad qui ad velit reprehenderit ea. Aliqua tempor magna et quis ex mollit elit pariatur Lorem do pariatur. Culpa adipisicing aliquip dolore aute consequat tempor exercitation qui ut consectetur. Ex sunt occaecat aliquip anim excepteur ipsum nulla mollit. Magna labore occaecat consequat tempor et enim. Incididunt sit elit sit sunt voluptate.Magna enim occaecat voluptate Lorem laboris deserunt. Exercitation laborum eu non non labore. Cillum excepteur sunt commodo do aliqua esse dolor anim. Ullamco cupidatat adipisicing magna eiusmod. Exercitation cupidatat do do fugiat non ex laboris non exercitation ea culpa esse.Lorem incididunt labore esse elit. Ea sit qui fugiat qui reprehenderit. Mollit officia aliqua qui velit.Ullamco cillum exercitation eiusmod nostrud magna sunt ut ea ipsum id. Aliquip incididunt laboris veniam labore aute commodo mollit laborum officia ea ipsum ipsum labore. Cupidatat eiusmod velit consectetur ipsum velit. Duis minim est aliqua consectetur consequat voluptate enim cupidatat labore elit elit."
+        "question": "What technologies do we use in software development?",
+        "answer": "Our team includes only high-experienced professionals who have experience in different software development fields such as:",
+        "list":[
+            {"title":"Python"},
+            {"title":"JavaScript"},
+            {"title":"React.js"},
+            {"title":"Bootstrap"},
+            {"title":"Tailwindcss"},
+            {"title":"Bulma"},
+            {"title":"HTML 5"},
+            {"title":"CSS 3"},
+            {"title":"Web API Services"}    
+        ],        
+        "link": "",
+        "clases": "hidden"
+    },
+    {
+        "id":"q4",
+        "question": "What software development methodologies do we use?",
+        "answer": "All our development and software testing processes are running while adhering to highly effective methodologies including Agile, Scrum, DevOps, and other methodologies to meet the highest KPIs in every project. We also document all the operations required to handle the development just to ensure the optimum project lifecycle.",
+        "list":[],
+        "link": "",
+        "clases": "hidden"
+    },
+    {
+        "id":"q5",
+        "question": "Which payment model do you practice?",
+        "answer": "Incididunt cillum anim voluptate magna ad qui ad velit reprehenderit ea. Aliqua tempor magna et quis ex mollit elit pariatur Lorem do pariatur. Culpa adipisicing aliquip dolore aute consequat tempor exercitation qui ut consectetur. Ex sunt occaecat aliquip anim excepteur ipsum nulla mollit. Magna labore occaecat consequat tempor et enim. Incididunt sit elit sit sunt voluptate.Magna enim occaecat voluptate Lorem laboris deserunt. Exercitation laborum eu non non labore. Cillum excepteur sunt commodo do aliqua esse dolor anim. Ullamco cupidatat adipisicing magna eiusmod. Exercitation cupidatat do do fugiat non ex laboris non exercitation ea culpa esse.Lorem incididunt labore esse elit. Ea sit qui fugiat qui reprehenderit. Mollit officia aliqua qui velit.Ullamco cillum exercitation eiusmod nostrud magna sunt ut ea ipsum id. Aliquip incididunt laboris veniam labore aute commodo mollit laborum officia ea ipsum ipsum labore. Cupidatat eiusmod velit consectetur ipsum velit. Duis minim est aliqua consectetur consequat voluptate enim cupidatat labore elit elit.",
+        "list":[],
+        "link": "",
+        "clases": "hidden"
+    },
+    {
+        "id":"q6",
+        "question": "Where are your company's office and  employees located?",
+        "answer": "Our headquarters and some of our employees are located in Serbia, the rest of our people is in Cuba. So we are pretty open to remote work as long as there's a real commitment and job philosophy.",
+        "list":[],
+        "link": "",
+        "clases": "hidden"
     }
+
 
 ]

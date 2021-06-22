@@ -22,10 +22,10 @@ export const SCardWrapper = styled.div.attrs({
         color: #00baff;
       }
     }
-    img.re-img{
+    img.res-img{
         @media (min-width: 360px){
         
-        width:40%;
+        width:35%;
         }
          @media (min-width: 640px){
         
@@ -47,7 +47,18 @@ export const SCardWrapper = styled.div.attrs({
   `;
   export const CardContent = styled.div.attrs({
     className: "p-4"
-  })``;
+  })
+  `
+   @media (min-width: 360px){
+        
+        width:65%;
+        }
+         @media (min-width: 640px){
+        
+        width:100%;
+        
+        }
+  `;
 
   export const CardTitle = styled.h1.attrs({
     className: "title-font text-lg font-bold text-primary mb-1 cursor-pointer"

@@ -114,7 +114,7 @@ export const AccordionTitleWrapper = styled.div.attrs({
 
 `;
 export const AccordionTitle = styled.h3.attrs({
-    className: "text-base sm:text-lg text-primary"
+    className: "text-base sm:text-lg text-primary text-left"
 })
 `
 &:hover{

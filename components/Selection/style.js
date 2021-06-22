@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 export const BlockOuterContainer = styled.div.attrs({
-    className: "w-1/2 flex justify-center"
+    className: "w-1/2 flex justify-center cursor-pointer"
 })
 `
 `;

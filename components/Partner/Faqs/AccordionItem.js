@@ -1,7 +1,8 @@
 import {useState} from 'react'
 import {AccItemContent, AccItemParagraph, AccordionTitle, AccItem, AccordionTitleWrapper, AccordionIcon, AccItemInner} from '../../../components/Partner/Faqs/style'
+import uuid from 'react-uuid'
 
-const AccordionItem = ({ question, answer, clases, link}) => {
+const AccordionItem = ({ question, answer, clases, link, list}) => {
 
     const [opened, setOpened]=useState(false)
     
@@ -21,6 +22,15 @@ const AccordionItem = ({ question, answer, clases, link}) => {
               <AccItemParagraph {...{ className: 'accordion-item__paragraph' }}>
                 <span className="text-base text-gray-500">{answer}</span>
                 <span><a className={clases} href={link}> here</a></span>
+                <ul>
+                {                 
+                 list.map(d=>(
+                   <li key={uuid()} className="text-base text-gray-600 list-disc ml-4">{d.title}</li>
+                 ))
+                }                    
+                </ul>
+               
+               
               </AccItemParagraph>
             </AccItemContent>
           </AccItemInner>
