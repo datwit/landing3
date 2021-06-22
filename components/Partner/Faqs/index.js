@@ -2,6 +2,8 @@ import { SectionHeader, SectionSubheader} from '../../../styles/global'
 import {QuestionWrapper, QuestionText} from './style';
 import CTA from '../../Home/CTA'
 import Link from "next/link"
+import {PartnerIconSVG} from './PartnerIconSVG'
+import {DevIconSVG} from './DevIconSVG'
 
 
 const Faqs = ({classes}) => {  
@@ -13,13 +15,15 @@ const Faqs = ({classes}) => {
             <SectionSubheader>These are some of our more frequently asked questions</SectionSubheader>
             
             <div className="flex flex-wrap">
-                <div className="w-full sm:w-2/4 p-10">
+                <div className="w-full sm:w-2/4 p-6 md:p-10">
                     <QuestionWrapper>
+                        <PartnerIconSVG />
                         <Link href="/faqs-partner"><QuestionText>For <br/> Partners</QuestionText></Link>
                     </QuestionWrapper>                    
                </div>
-               <div className="w-full sm:w-2/4 p-10">
+               <div className="w-full sm:w-2/4 p-6 md:p-10">
                     <QuestionWrapper>
+                        <DevIconSVG />
                         <Link href="/faqs-team"><QuestionText>For <br/> Developers</QuestionText></Link>
                     </QuestionWrapper>                   
                </div> 

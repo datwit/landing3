@@ -1,10 +1,36 @@
 import styled from 'styled-components';
 
 export const QuestionWrapper = styled.div.attrs({
-    className: "shadow border border-gray-300 p-6 shadow hover:shadow-lg transition duration-200 ease-in"
+    className: "flex items-center shadow border border-gray-300 p-4 md:p-6 shadow hover:shadow-lg transition duration-200 ease-in"
 })
 `  
+@media (min-width: 790px){
+    height: 131px;
+    width:320px;
+    
+}
+@media (max-width: 639px){
+    height: 131px;
+    width:284px;
+}
+@media (max-width: 360px){
+    height: auto;
+    width:auto;
+    justify-content: center;
+    padding:10px;
+}
+
     position: relative;
+    margin-right:auto;
+    margin-left: auto;
+
+&:hover{    
+    cursor: pointer;
+}
+&:hover h1{
+    color: #00baff;
+    cursor: pointer;
+}    
    
 &::after{
     content: '';
@@ -22,11 +48,25 @@ export const QuestionWrapper = styled.div.attrs({
 &:hover::after{
     width: 100%;
 }
+@media (max-width: 360px){
+    svg{
+        display:none;
+    }
+}
+
+svg{
+    padding-right: 20px;    
+}
 `;
 export const QuestionText = styled.h1.attrs({
-    className: "text-xl text-center cursor-pointer hover:text-secondary1"
+    className: "text-xl text-left flex items-center"
 })
-``;
+`
+@media (max-width: 359px){
+   text-align:center;
+}
+height: 81px;
+`;
 export const AccItem = styled.div
 `
 padding-bottom:20px; 
