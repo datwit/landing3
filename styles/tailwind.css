@@ -154,6 +154,9 @@ border-radius: 25px;
     padding: 5px !important;
   }
 }
+.rec.rec-item-wrapper{
+  padding: 5px !important;
+}
 
 /* round buttons on hover */
 .rec.rec-arrow:hover:enabled, .rec.rec-arrow:focus:enabled {
@@ -181,7 +184,5 @@ border-radius: 25px;
   background: #00baff;
   opacity: 1;
 }
-.rec.rec-item-wrapper{
-  padding: 30px !important;
-}
+
 
