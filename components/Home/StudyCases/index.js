@@ -11,7 +11,7 @@ const StudyCases = ({classes}) => {
     return (        
     <div className={classes}>
         <SectionHeader>Check out our solutions</SectionHeader>
-        <SectionSubheader>Commitment and creativity mark our creations. By all means, stroll along...</SectionSubheader>
+        <SectionSubheader>We enjoy our everyday challenges and we are good at it...</SectionSubheader>
         <div className="">
             <ContentWrapper>    
                {

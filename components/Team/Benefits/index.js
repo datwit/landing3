@@ -10,8 +10,8 @@ import {SignYesSVG} from './SignYesSVG'
 const Benefits = ({classes}) => {
     return (
         <div className={classes}>
-        <SectionHeader>We take care of our people</SectionHeader>
-        <SectionSubheader>Lorem, ipsum dolor sit amet consectetur adipisicing elit...</SectionSubheader>
+        <SectionHeader>We are a family</SectionHeader>
+        <SectionSubheader>At Datwit we have amazing people and we believe that take care of them is the right thing to do. </SectionSubheader>
             <ContentWrapper>                
                   
                 <IconWrapper >  

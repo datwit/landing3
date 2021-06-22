@@ -13,7 +13,7 @@ export const InputWrapper = styled.div.attrs({
     className: "relative mb-2"
 })``;
 export const ExplanationForm = styled.p.attrs({
-    className: "text-xs text-gray-500 mt-3"
+    className: "text-xs text-gray-600 mt-3 text-center"
 })``;
 export const FInput = styled.input.attrs({
     className: "w-full border border-gray-300 focus:border-transparent bg-white text-base outline-none text-gray-700 px-3 leading-8 focus:ring-2 focus:ring-secondary2 transition-colors duration-200 ease-in-out"
@@ -28,7 +28,7 @@ export const TInput = styled.textarea.attrs({
 border-radius: 20px;
 `;
 export const FormLabels = styled.label.attrs({
-    className: "leading-7 text-sm text-gray-600"
+    className: "leading-7 text-sm text-gray-400"
 })``;
 
 

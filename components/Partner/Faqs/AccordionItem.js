@@ -1,7 +1,7 @@
 import {useState} from 'react'
 import {AccItemContent, AccItemParagraph, AccordionTitle, AccItem, AccordionTitleWrapper, AccordionIcon, AccItemInner} from '../../../components/Partner/Faqs/style'
 
-const AccordionItem = ({ question, answer}) => {
+const AccordionItem = ({ question, answer, clases, link}) => {
 
     const [opened, setOpened]=useState(false)
     
@@ -19,7 +19,8 @@ const AccordionItem = ({ question, answer}) => {
           <AccItemInner {...{className:'accordion-item__inner'}}>
             <AccItemContent {...{ className: 'accordion-item__content' }}>
               <AccItemParagraph {...{ className: 'accordion-item__paragraph' }}>
-                {answer}
+                <span className="text-base text-gray-500">{answer}</span>
+                <span><a className={clases} href={link}> here</a></span>
               </AccItemParagraph>
             </AccItemContent>
           </AccItemInner>

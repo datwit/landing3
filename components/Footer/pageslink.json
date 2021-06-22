@@ -3,7 +3,9 @@
         "title": "specialized content",
         "items":[
             {"title": "Partner area", "url": "/partner"},
-            {"title": "Team member area", "url": "/team"}
+            {"title": "Team member area", "url": "/team"},
+            {"title": "Faqs", "url": "/faqs"}
+
         ]
     },
     {

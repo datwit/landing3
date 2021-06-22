@@ -8,8 +8,8 @@ import uuid from 'react-uuid'
 const Tech = ({classes}) => {
     return (
         <div className={classes}>
-            <SectionHeader>Lorem ipsum dolor sit amet consectetur. </SectionHeader>
-            <SectionSubheader>Blanditiis enim nihil earum qui, a non fugit consectetur nobis natus quasi...</SectionSubheader>
+            <SectionHeader>We like to wear a lot of hats...</SectionHeader>
+            <SectionSubheader>Therefore this is where our expertise resides.</SectionSubheader>
             <ImgContainer>
                 {
                     datas.map( data => (

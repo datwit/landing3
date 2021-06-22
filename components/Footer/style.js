@@ -16,6 +16,8 @@ export const ColumnTitle = styled.h2.attrs({
     className: "text-white font-bold text-lg my-2 sm:my-0 sm:mb-5"
 })
 `
+text-transform:uppercase;
+
 @media (max-width: 639px){
     text-align: center !important;
 }
