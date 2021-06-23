@@ -45,7 +45,7 @@ const CustomControls = ({ slidesCount, scrollToSlide, onNext, onPrev, getCurrent
         tip = [...tip, 'Blogs', 'Bottom']
         break
       case '/partner':
-        tip = [...tip, 'Find partnership','Partnership pricing','FAQs', 'Bottom']
+        tip = [...tip, 'Why hire us','Datwit believes in','Partnership pricing','Bottom']
         break
       case '/team':
       tip = [...tip, 'Technologies','Benefits', 'Bottom']
@@ -56,6 +56,9 @@ const CustomControls = ({ slidesCount, scrollToSlide, onNext, onPrev, getCurrent
       case '/blog/search':
       tip = [...tip, 'Results', 'Bottom']
       break
+      case '/faqs':
+        tip = [...tip, 'Choosing FAQs', 'Bottom']
+        break
       default:
         break;
     }   
