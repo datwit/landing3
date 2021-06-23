@@ -21,7 +21,7 @@ const Collaborators = ({classes}) => {
                         {                       
                         datas.map(data => (
                             
-                            <div key={uuid()}>
+                            <div className="image-adjust" key={uuid()}>
                                 <ColWrapper>                            
                                     <CollaboratorsCard name={data.name} designation={data.designation} twitter={data.twitter} linkedin={data.linkedin} github={data.github} src={data.src}/>                             
                                 </ColWrapper>

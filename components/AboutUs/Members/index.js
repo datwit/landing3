@@ -22,7 +22,7 @@ const Members = ({classes}) => {
                     <Carousel itemsToShow={3} breakPoints={breakPoints} onTouchMove={e => e.stopPropagation()}>
                     {                       
                         datas.map(data => (
-                            <div key={uuid()}>
+                            <div className="image-adjust" key={uuid()}>
                                 <MemberCol> 
                                     <MemberCard name={data.name} designation={data.designation} rol={data.rol} twitter={data.twitter} linkedin={data.linkedin} github={data.github} src={data.src} />                          
                                 </MemberCol> 

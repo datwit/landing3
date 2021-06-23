@@ -16,7 +16,7 @@ const PartPricing = ({classes}) => {
             <SectionHeader>Our pricing strategy</SectionHeader>            
             <div className="w-full">
                 <ToggleWrapper role="tablist">                    
-                    <BundleChooser  className={openTab === 1 ? "text-white bg-secondary2" : "text-secondary2 bg-white"}
+                    <BundleChooser  className={openTab === 1 ? "text-white bg-secondary2" : "text-secondary2 bg-gray-100"}
                         onClick={e => 
                         { 
                         e.preventDefault();
@@ -26,7 +26,7 @@ const PartPricing = ({classes}) => {
                         href="#link1"
                         role="tablist">Bundle 1
                     </BundleChooser>                   
-                    <BundleChooser className={openTab === 2 ? "text-white bg-secondary2" : "text-secondary2 bg-white"}
+                    <BundleChooser className={openTab === 2 ? "text-white bg-secondary2" : "text-secondary2 bg-gray-100"}
                         onClick={e => 
                         {
                         e.preventDefault();
@@ -36,7 +36,7 @@ const PartPricing = ({classes}) => {
                         href="#link2"
                         role="tablist">Bundle 2
                     </BundleChooser>                   
-                    <BundleChooser className={openTab === 3 ? "text-white bg-secondary2" : "text-secondary2 bg-white"}
+                    <BundleChooser className={openTab === 3 ? "text-white bg-secondary2" : "text-secondary2 bg-gray-100"}
                         onClick={e => 
                         {
                         e.preventDefault();
