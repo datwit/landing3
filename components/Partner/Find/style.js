@@ -10,6 +10,12 @@ svg.resizes{
     width: 210px;
     height:189px;
   }  
+  @media (min-width: 640px){
+    object-fit:cover;
+    width: 65%;
+    height:auto;
+  }
+ 
 }
 #wheel1{
   animation: wheel-rotate 5s linear infinite ;

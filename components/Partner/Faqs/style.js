@@ -141,7 +141,7 @@ export const AccItemContent = styled.div
     transition-duration: 0.1s;
     transition-property: opacity, transform;
     transition-delay: 0.5s;
-    padding: 0 1.2rem 1.2rem;
+    padding: 1.2rem 1.2rem;
 `;
 export const AccItemParagraph = styled.div.attrs({
     className: "text-base"
