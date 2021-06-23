@@ -44,7 +44,7 @@ const Partner = () => {
             <FullPage controls={CustomControls}>
             <Slide {...style}>
               <Section classes={'w-full h-screen'}>
-                <Find  classes={"container px-5 mx-auto relative top-2/4 transform -translate-y-2/4"}/>
+                <Find  classes={"container px-5 mx-auto relative top-2/4 transform -translate-y-2/4 mt-9"}/>
               </Section>        
             </Slide>
 

@@ -20,7 +20,7 @@ export const BulletWrapper= styled.ul
 }
 `;
 export const PricingCardGray= styled.div.attrs({
-    className: "p-4 md:w-1/3 w-full bg-gray-100 bg-opacity-75 px-4 py-4 lg:px-8 lg:py-10 rounded-lg overflow-hidden text-center"
+    className: "p-4 md:w-1/3 w-full bg-white bg-opacity-75 px-4 py-4 lg:px-8 lg:py-10 overflow-hidden text-center shadow border border-gray-300"
 })
 `
 &.slide-left{
@@ -41,10 +41,10 @@ export const PricingCardGray= styled.div.attrs({
 }
 `;
 export const ToggleWrapper = styled.div.attrs({
-    className: "flex mx-auto border-2 border-gray-200 border-opacity-60 rounded-full overflow-hidden my-3 justify-between lg:max-w-lg xl:max-w-xl"
+    className: "flex mx-auto bg-gray-100 rounded-full overflow-hidden my-3 justify-between lg:max-w-lg xl:max-w-xl"
 })``;
 export const BundleChooser = styled.a.attrs({
-    className: "py-1 px-4  rounded-full text-xs sm:text-base flex items-center"
+    className: "py-1 px-4 rounded-full text-xs sm:text-base flex items-center"
 })``;
 export const PriceTitle = styled.h1.attrs({
     className: "title-font sm:text-2xl text-lg font-medium text-primary sm:mb-3"
