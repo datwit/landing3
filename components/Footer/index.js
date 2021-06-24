@@ -38,7 +38,7 @@ const Footer = () => {
                                 <DownH3>+58 658 987</DownH3>
                             </ContactWrapper>                            
                         </ColumnContent> 
-                        {
+                       {/*  {
                             links.map(llink => (
                                 <ColumnContent key={uuid()}>
                                     <ColumnTitle>{llink.title}</ColumnTitle>
@@ -49,7 +49,12 @@ const Footer = () => {
                                     }
                                 </ColumnContent>
                             ))
-                        }    
+                        }     */}
+                        <ColumnContent>
+                            <ColumnTitle>SPECIALIZED CONTENT</ColumnTitle>
+                            <Link href="/partner"><UpperH3>Partner area</UpperH3></Link>
+
+                        </ColumnContent>
                     </FooterLinksWrapper>  
                 </div> 
                 <div className="sm:hidden">
