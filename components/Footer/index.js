@@ -53,8 +53,15 @@ const Footer = () => {
                         <ColumnContent>
                             <ColumnTitle>SPECIALIZED CONTENT</ColumnTitle>
                             <Link href="/partner"><UpperH3>Partner area</UpperH3></Link>
-
+                            <Link href="/teams"><UpperH3>Team member area</UpperH3></Link>
+                            <Link href="/faqs"><UpperH3>Faqs</UpperH3></Link>
                         </ColumnContent>
+                        <ColumnContent>
+                            <ColumnTitle>DATA PROTECTION</ColumnTitle>
+                            <Link href="/info/policy"><UpperH3>Privacy Policy</UpperH3></Link>
+                            <Link href="/info/terms"><UpperH3>Terms and Conditions</UpperH3></Link>                           
+                        </ColumnContent>
+
                     </FooterLinksWrapper>  
                 </div> 
                 <div className="sm:hidden">
@@ -73,7 +80,7 @@ const Footer = () => {
                         </ColumnContent>                        
                         <FooterAccordionWrapper>
                             <FooterAccordionList>
-                            {
+                           {/*  {
                                 links.map((lik, key)=> {
                                 return (
                                 <li {...{ className: 'accordion-list__item', key }}>
@@ -81,7 +88,10 @@ const Footer = () => {
                                 </li>
                                 )
                             })
-                            }
+                            } */}
+                                <li {...{ className: 'accordion-list__item'}}>
+                                    <FooterAccItem title="SPECIALIZED CONTENT" />
+                                </li>
                             </FooterAccordionList>
                         </FooterAccordionWrapper>                 
                     </FooterLinksWrapper>
