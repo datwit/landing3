@@ -6,7 +6,7 @@ import {FooterAccordionTitle, FooterTitleWrapper, FooterAccordionItem, FooterAcc
 import { Link } from 'react-router-dom';
 
 
-const FooterAccItem = ({ title, items}) => {
+const FooterAccItem = ({ title }) => {
     const [opened, setOpened]=useState(false)
 
     return (
@@ -22,7 +22,7 @@ const FooterAccItem = ({ title, items}) => {
         </FooterTitleWrapper>
           <FooterAccItemInner {...{className:'accordion-item__inner'}}>
             <AccItemContent {...{ className: 'accordion-item__content' }}>
-                {
+               {/*  {
                     items.map(l =>(
                       <a href={l.url} key={uuid()}>
                         <FooterAccItemLinks {...{ className: 'accordion-item__paragraph' }}>
@@ -30,7 +30,22 @@ const FooterAccItem = ({ title, items}) => {
                         </FooterAccItemLinks>
                       </a>
                     ))                    
-                }              
+                }    */} 
+                <a href="/partner">
+                    <FooterAccItemLinks {...{ className: 'accordion-item__paragraph' }}>
+                      Partner area                           
+                    </FooterAccItemLinks>
+                </a>
+                <a href="/team">
+                    <FooterAccItemLinks {...{ className: 'accordion-item__paragraph' }}>
+                      Team members area                           
+                    </FooterAccItemLinks>
+                </a> 
+                <a href="/faqs">
+                    <FooterAccItemLinks {...{ className: 'accordion-item__paragraph' }}>
+                      FAQs                          
+                    </FooterAccItemLinks>
+                </a>           
             </AccItemContent>
           </FooterAccItemInner>
         </FooterAccordionItem>
