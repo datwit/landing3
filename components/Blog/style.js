@@ -7,9 +7,11 @@ export const SearchWrapper = styled.div.attrs({
 transform: translateX(50%);
 `;
 export const BlogCardWrapper = styled.div.attrs({
-    className: "p-3 w-full sm:w-1/3 w-full"
+    className: "p-3 w-full sm:w-1/3 w-full flex"
 })
-``;
+`
+align-items: stretch;
+`;
 export const BlogCardBlock = styled.div.attrs({
     className: "p-3"
 })``;
