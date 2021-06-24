@@ -7,16 +7,19 @@ const StudyCasesCard = ({img, title,summary,id}) => {
         <SCardBorder>
             <img className="lg:h-48 h-36 w-full object-cover object-center res-img" src={img} alt="" />                                
             <CardContent>                                                      
-                <CardTitle>{title}</CardTitle>
-                <CardSubtitle>{summary}</CardSubtitle>                                    
-                <Link href={`/studycases/${id}`}>
-                    <ReadMore>Learn More
-                        <svg className="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round">
-                            <path d="M5 12h14"></path>
-                            <path d="M12 5l7 7-7 7"></path>
-                        </svg>
-                    </ReadMore>
-                </Link>                                    
+                <Link href={`/studycases/${id}`}><CardTitle>{title}</CardTitle></Link>
+                <div className="hidden lg:block">
+                    <CardSubtitle>{summary}</CardSubtitle>                                    
+                    <Link href={`/studycases/${id}`}>
+                        <ReadMore>Learn More
+                            <svg className="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round">
+                                <path d="M5 12h14"></path>
+                                <path d="M12 5l7 7-7 7"></path>
+                            </svg>
+                        </ReadMore>
+                    </Link>
+                </div>
+                                                  
             </CardContent>    
         </SCardBorder>
 )

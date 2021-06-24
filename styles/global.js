@@ -12,7 +12,7 @@ export const SectionHeader = styled.h2.attrs({
     className: "mt-1"
 })``;
 export const SectionSubheader = styled.h4.attrs({
-    className: " mb-2 md:mb-6"
+    className: " mb-2 md:mb-4"
 })``;
 export const Button = styled.a
 `
