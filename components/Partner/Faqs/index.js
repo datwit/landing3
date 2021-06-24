@@ -16,16 +16,20 @@ const Faqs = ({classes}) => {
             
             <div className="flex flex-wrap">
                 <div className="w-full sm:w-2/4 p-6 md:p-10">
-                    <QuestionWrapper>
-                        <PartnerIconSVG />
-                        <Link href="/faqs-partner"><QuestionText>For <br/> Partners</QuestionText></Link>
-                    </QuestionWrapper>                    
+                    <Link href="/fpartner">
+                        <QuestionWrapper>
+                            <PartnerIconSVG />
+                            <QuestionText>For <br/> Partners</QuestionText>
+                        </QuestionWrapper>
+                    </Link>                    
                </div>
                <div className="w-full sm:w-2/4 p-6 md:p-10">
-                    <QuestionWrapper>
-                        <DevIconSVG />
-                        <Link href="/faqs-team"><QuestionText>For <br/> Developers</QuestionText></Link>
-                    </QuestionWrapper>                   
+                    <Link href="/fteam">
+                        <QuestionWrapper>
+                            <DevIconSVG />
+                            <QuestionText>For <br/> Developers</QuestionText>
+                        </QuestionWrapper>
+                    </Link>                   
                </div> 
 
             </div>

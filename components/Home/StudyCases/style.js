@@ -17,11 +17,11 @@ export const SCardWrapper = styled.div.attrs({
         
         flex-direction: column;
     }
-    &:hover{
+    /* &:hover{
       h1{
         color: #00baff;
       }
-    }
+    } */
     img.res-img{
         @media (min-width: 360px){
         
@@ -61,12 +61,12 @@ export const SCardWrapper = styled.div.attrs({
   `;
 
   export const CardTitle = styled.h1.attrs({
-    className: "title-font text-lg font-bold text-primary mb-1 cursor-pointer"
+    className: "title-font text-lg font-bold text-primary mb-1 cursor-pointer hover:text-secondary1"
   })``;
   export const CardSubtitle = styled.p.attrs({
-    className: "mt-0 text-base leading-6 text-gray-500 hidden lg:block"
+    className: "mt-0 text-base leading-6 text-gray-500"
   })``;
   export const ReadMore = styled.a.attrs({
-    className: "text-secondary2 inline-flex items-center md:mb-2 lg:mb-0 cursor-pointer hidden lg:block"
+    className: "text-secondary2 flex items-center md:mb-2 lg:mb-0 cursor-pointer hover:text-secondary1"
   })``;
 
