@@ -16,7 +16,7 @@ const Faqs = ({classes}) => {
             
             <div className="flex flex-wrap">
                 <div className="w-full sm:w-2/4 p-6 md:p-10">
-                    <Link href="/faqs-partner">
+                    <Link href="/fpartner">
                         <QuestionWrapper>
                             <PartnerIconSVG />
                             <QuestionText>For <br/> Partners</QuestionText>
@@ -24,7 +24,7 @@ const Faqs = ({classes}) => {
                     </Link>                    
                </div>
                <div className="w-full sm:w-2/4 p-6 md:p-10">
-                    <Link href="/faqs-team">
+                    <Link href="/fteam">
                         <QuestionWrapper>
                             <DevIconSVG />
                             <QuestionText>For <br/> Developers</QuestionText>
