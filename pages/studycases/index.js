@@ -56,7 +56,7 @@ const AllStudyCases = () =>{
       <BlogCardWrapper key={uuid()}>
                            
               <BlogCardBorder>
-                  <img className="lg:h-48 md:h-28 md:w-full object-cover object-center" src="/images/dummy-image.png" alt="" />  
+                  <img className="lg:h-48 md:h-28 w-full object-cover object-center" src={item.img} alt="" />  
                   <CategoryRect>
                       <Link href={`/studycases/search?p=${item.tags.toLowerCase()}`}>
                           <CategoryTitle>{item.tags}</CategoryTitle>

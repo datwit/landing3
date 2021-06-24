@@ -21,8 +21,7 @@ const FaqsTeam = () => {
                 <FullPage controls={CustomControls} scrollMode='normal'>
                     <section className="pt-32">  
                         <div className="px-5 mx-auto">              
-                            <SectionHeader>Frequently asked questions</SectionHeader>
-                            <SectionSubheader>Lorem ipsum dolor sit amet consectetur adipisicing elit...</SectionSubheader>
+                            <SectionHeader className="mb-4">Frequently asked questions for developers</SectionHeader>                           
                             {/*accordion component*/}
                             <AccordionWrapper>
                                 <AccordionList>
