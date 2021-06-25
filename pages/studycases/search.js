@@ -17,8 +17,9 @@ import ReactPaginate from 'react-paginate'
 import cases from '../../cache/cases.json'
 
 
+
 const CasesResults = () => {
-    const {isMobile} = DeviceDetect()
+    const {isMobile} = DeviceDetect()  
 
     // * pagination states
     const [offset, setOffset] = useState(0);
@@ -105,12 +106,13 @@ const CasesResults = () => {
                     <Slide {...style}>
                         <Section>
                             <div className="container px-5 mx-auto mt-20">
-                                <Link href="/studycases/">
-                                <h3 className="flex pt-10 pb-6 cursor-pointer hover:text-secondary1">
-                                    <FiChevronLeft  className="h-6 w-6 mr-2"/>                                    
-                                    <span>Back</span>
-                                </h3>
-                                </Link>
+                                {/* back button*/}
+                                <a onClick={()=>router.back()}>
+                                    <h3 className="flex pt-2 pb-4 cursor-pointer hover:text-secondary1">
+                                        <FiChevronLeft  className="h-6 w-6 mr-2"/>                                    
+                                        <span>Back</span>
+                                    </h3>
+                                </a>
                                 <SectionHeader>Search Results</SectionHeader>
                                 {/*pagination*/}
                                 <PaginationSection>

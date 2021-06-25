@@ -8,13 +8,16 @@ import { motion } from 'framer-motion'
 import { FullPage } from 'react-full-page'
 import CustomControls from '../../components/Slide/CustomControls'
 import {PostTitle, DateAuthorWrapper} from '../../components/Blog/style'
+import { useRouter } from 'next/router'
+import {FiChevronLeft} from 'react-icons/fi'
 
 import { getAllData } from '../../lib/posts';
 
 const StudyCasesPage = ({ title, date, content, author})=> {
 
     const hydratedContent = hydrate(content);
-  
+    const router = useRouter()
+   
     return (
       //Post page template
       <>
@@ -26,7 +29,15 @@ const StudyCasesPage = ({ title, date, content, author})=> {
             <FullPage controls={CustomControls} scrollMode='normal'>
                 <main>
                     <section className="pt-20">
-                      <div className="px-5 mx-auto">  
+                      <div className="px-5 mx-auto">
+                        {/* back button*/}
+                        <a onClick={()=>router.back()}>
+                          <h3 className="flex pt-10 pb-6 cursor-pointer hover:text-secondary1">
+                              <FiChevronLeft  className="h-6 w-6 mr-2"/>                                    
+                              <span>Back</span>
+                          </h3>
+                        </a>
+                        {/**/}  
                         <PostTitle>{title}</PostTitle>
                         <div className="mt-3 mb-5">
                           <div className="w-full"><p className="mt-2"><span className="text-gray-700 font-medium">By: </span><span>{author}</span></p></div>

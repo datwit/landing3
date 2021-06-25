@@ -78,7 +78,7 @@ export const DateAuthorWrapper= styled.div.attrs({
 export const PostTitle= styled.h2.attrs({
     className: "text-3xl font-bold"
 })``;
-export const Category= styled.a
+export const Category= styled.p
 `
 padding: .05rem .8rem;
 border-radius: 3rem;
@@ -86,8 +86,9 @@ background: #f5f2f2;
 color: #e69c24;
 border: 2px solid #e69c24;
 font-size: 14px;
-margin-right: 5px;
+margin: 0 5px 10px 0;
 cursor:pointer;
+line-height:1rem;
 `;
 export const SearchField= styled.input.attrs({
     className: "w-full border border-gray-300 focus:border-transparent bg-white text-base outline-none text-gray-700 px-3 leading-8 focus:ring-2 focus:ring-secondary2 transition-colors duration-200 ease-in-out"
