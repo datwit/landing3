@@ -4,10 +4,12 @@ import {AccItemContent} from '../../components/Partner/Faqs/style'
 import uuid from 'react-uuid'
 import {FooterAccordionTitle, FooterTitleWrapper, FooterAccordionItem, FooterAccItemInner, FooterAccItemLinks, FooterAccordionIcon} from './style';
 import { Link } from 'react-router-dom';
+import {useRouter} from 'next/router'
 
 
 const FooterAccItem = ({ title, items }) => {
     const [opened, setOpened]=useState(false)
+    const router = useRouter()   
 
     return (
         <FooterAccordionItem       
@@ -24,7 +26,7 @@ const FooterAccItem = ({ title, items }) => {
             <AccItemContent {...{ className: 'accordion-item__content' }}>
                 {
                     items.map(l =>(
-                      <a href={l.url} key={uuid()}>
+                      <a key={uuid()} onClick={()=>router.push(l.url)} href={l.url}>
                         <FooterAccItemLinks {...{ className: 'accordion-item__paragraph' }}>
                           {l.title}                            
                         </FooterAccItemLinks>

@@ -67,7 +67,7 @@ const Footer = () => {
                             </SocialList>
                             {/* <Divider />   */}
                         </ColumnContent>                        
-                        {/* <FooterAccordionWrapper>
+                        <FooterAccordionWrapper>
                             <FooterAccordionList>
                             {
                                 links.map((lik, key)=> {
@@ -79,12 +79,12 @@ const Footer = () => {
                             })
                             }                                
                             </FooterAccordionList>
-                        </FooterAccordionWrapper>   */} 
-                        <ColumnContent>
+                        </FooterAccordionWrapper>   
+                        {/* <ColumnContent>
                             <ColumnTitle>SPECIALIZED CONTENT</ColumnTitle>
                             <Link href="/partner"><UpperH3>Partner area</UpperH3></Link>
 
-                        </ColumnContent>              
+                        </ColumnContent>  */}             
                     </FooterLinksWrapper>
                 </div>                   
             </FooterContainer>                
