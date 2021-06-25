@@ -33,7 +33,7 @@ const Services = ({classes}) => {
     return (        
         <div ref={wrapperRef} className={classes}>
             <SectionHeader>What we do</SectionHeader>
-            <SectionSubheader>Our goal is to get close to the product you have in mind through intuitive designs and great tools to back them up.</SectionSubheader>
+            {/* <SectionSubheader>Our goal is to get close to the product you have in mind through intuitive designs and great tools to back them up.</SectionSubheader> */}
             
                 <div className="">
                     <ContentWrapper>

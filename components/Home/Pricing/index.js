@@ -13,8 +13,8 @@ const index = ({classes}) => {
     return (
         
         <div className={classes}>
-            <SectionHeader>Choose your product</SectionHeader>
-            <SectionSubheader>Lorem ipsum dolor, sit amet consectetur adipisicing elit...</SectionSubheader>
+            <SectionHeader>Choose your kind of solution</SectionHeader>
+            <SectionSubheader>Our goal is to accomplish to the product you have in mind through intuitive designs and great tools to back them up.</SectionSubheader>
 
             <div className="hidden md:block">
                 <ContentWrapper>

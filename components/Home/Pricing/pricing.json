@@ -1,6 +1,6 @@
 [
   {
-    "field":"DATA SCIENCE",
+    "field":"WEB SOLUTIONS",
     "style":"md:h-full p-3 border-2 border-gray-300 overflow-hidden",
     "price": "$89",
     "description": "Literally you probably haven't heard of them jean shorts.",
@@ -11,7 +11,7 @@
     ]
   },
   {
-    "field":"SOFTWARE DEVELOPMENT",
+    "field":"DATA SOLUTIONS",
     "style":"md:h-full p-3 border-2 border-secondary2 border-opacity-60 overflow-hidden relative",
     "price": "$69",
     "description": "Literally you probably haven't heard of them jean shorts.",
@@ -22,7 +22,7 @@
     ]
   },
   {
-    "field":"DATA SCIENCE",
+    "field":"INFRASTRUCTURE SOLUTIONS",
     "style":"md:h-full p-3 border-2 border-gray-300 overflow-hidden",
     "price": "$72",
     "description": "Literally you probably haven't heard of them jean shorts.",
