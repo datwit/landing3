@@ -10,7 +10,7 @@ export const BlogCardWrapper = styled.div.attrs({
     className: "p-3 w-full sm:w-1/3 w-full flex"
 })
 `
-align-items: stretch;
+/* align-items: stretch; */
 `;
 export const BlogCardBlock = styled.div.attrs({
     className: "p-3"
@@ -21,6 +21,15 @@ export const CardSummary = styled.p.attrs({
 `
 font-size: 0.90rem;
 line-height: 1.2rem;
+/* truncate text*/
+display: -webkit-box;
+-webkit-line-clamp:4;
+-webkit-box-orient: vertical;
+overflow:hidden;
+text-overflow: ellipsis;
+height:75px;
+text-align:justify;
+
 `;
 export const BlogCardBorder = styled.div.attrs({
     className: "border border-gray-300 shadow hover:shadow-lg transition duration-200 ease-in overflow-hidden"
