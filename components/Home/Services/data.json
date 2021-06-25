@@ -32,24 +32,27 @@
             "title": "Data Analysis",
             "subtitle": "By using machine learning state of the art algorithms with customized apps, we ensure:",
             "items":[
-                {"tit":"Data exploration"},
-                {"tit":"Data collection from streaming data sources"},
-                {"tit":"Data cleaning and anonymization"},
-                {"tit":"Study of relationship between variables"},
-                {"tit":"APIs that serve your data"},
-                {"tit":"Data management tech consulting"}            
+                {"tit":"Data exploration"},                
+                {"tit":"Data cleaning and anonymization"},          
+                {"tit":"Data management tech consulting"}, 
+                {"tit":"Data Visualization"}, 
+                {"tit":"Feature Engineering"}, 
+                {"tit":"Experimental Design"} 
+
             ]  
         },
         {
-            "title": "Data Visualization",
-            "subtitle": "Our dashboard philosophy allows faster discoveries with small changes to your apps, so we supply:",
+            "title": "ML Solutions",
+            "subtitle": "Our ML solutions are standar, efficient and ready to use, supplied with:",
             "items":[
-                {"tit":"Descriptive reports"},
-                {"tit":"Graphic reports about your data"},
-                {"tit":"Strategic and operational dashboards"},
-                {"tit":"Addons with business variables of interest"},
-                {"tit":"Models monitoring"},
-                {"tit":"Feedback interface to improve human-in-the-loop"}                
+                {"tit":"Model architecture Design"},
+                {"tit":"Model optimization"},
+                {"tit":"Model training & building"},
+                {"tit":"Model evaluation"},
+                {"tit":"Pipeline design and setup"},
+                {"tit":"Model monitoring and improving"},
+                {"tit":"Business API integration "},
+                {"tit":"Man-in-the-loop AI systems"}                
             ]  
         }
     ]    

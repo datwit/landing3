@@ -116,17 +116,18 @@ border-radius: 25px;
 /*************accordion*******************************/
 .accordion-item--opened .accordion-item__inner {
   max-height: 100rem;
-  /* transition-timing-function: cubic-bezier(0.895, 0.03, 0.685, 0.22); */
+  
   transition-timing-function: linear;
-  transition-duration: 0.7s;
+  transition-duration: 1s;
   transition-property: max-height;
 }
 .accordion-item--opened .accordion-item__content {
   /* opacity: 1; */
   /* transform: translateY(0); */
-  transition-delay: 0.2s;
+  /* transition-delay: 0.2s; */
+  
   transition-timing-function: linear;
-  transition-duration: 0.2s;
+  transition-duration: 1s;
   transition-property: opacity, transform;
 }
 
