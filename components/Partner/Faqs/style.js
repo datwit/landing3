@@ -69,7 +69,7 @@ height: 81px;
 `;
 export const AccItem = styled.div
 `
-padding-bottom:20px; 
+padding-bottom:10px; 
 `;
 export const AccordionIcon= styled.svg
 `
