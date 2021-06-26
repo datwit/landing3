@@ -1,7 +1,9 @@
 import React, { useState, useRef } from 'react'
 import Link from 'next/link'
+import uuid from 'react-uuid'
+import {AccordionSection, Accordion, AccordionTitle,AccordionContent} from './style'
 
-const FooterAccordion = () => {
+const FooterAccordion = ({ title, items }) => {
 
     const [setActive, setActiveState] = useState("");
     const [setHeight, setHeightState] = useState("0px");
@@ -20,19 +22,28 @@ const FooterAccordion = () => {
   }
 
     return (
-        <div className="accordion__section">
-            <button className={`accordion ${setActive}`} onClick={toggleAccordion}>
-                <h2 className="accordion__title">SPECIALIZED CONTENT</h2>                
-                <svg className={`${setRotate} text-white`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"/>
-                </svg>
-            </button>
-            <div ref={content} style={{ maxHeight: `${setHeight}` }} className="accordion__content">
-              <Link href="/partner">Partner area</Link>
-              <Link href="/team">Team member area</Link>
-              <Link href="/faqs">FAQs</Link>            
-            </div>
-        </div>
+        <>
+          <AccordionSection>
+              <Accordion className={setActive} onClick={toggleAccordion}>
+                  <AccordionTitle>{title}</AccordionTitle>                
+                  <svg className={`${setRotate} text-white`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"/>
+                  </svg>
+              </Accordion>
+              <AccordionContent ref={content} style={{ maxHeight: `${setHeight}` }}>                
+                <ul className="my-2">
+                  {
+                      items.map(l =>(
+                        <li className="list-none" key={uuid()}>
+                          <Link href={l.url}>{l.title}</Link>
+                        </li>                        
+                      ))                    
+                  }
+                </ul>                      
+              </AccordionContent>
+          </AccordionSection>
+         
+        </> 
     )
 }
 
