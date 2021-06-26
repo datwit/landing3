@@ -6,6 +6,7 @@ import links from './pageslink.json';
 import {FiGithub, FiFacebook, FiTwitter, FiLinkedin} from 'react-icons/fi'
 import FooterAccItem from './FooterAccItem';
 import uuid from 'react-uuid'
+import FooterAccordion from './FooterAccordion'
 
 const Footer = () => {
     const year = new Date().getFullYear()
@@ -80,11 +81,12 @@ const Footer = () => {
                             }                                
                             </FooterAccordionList>
                         </FooterAccordionWrapper>  */}  
-                        <ColumnContent>
+                        {/* <ColumnContent>
                             <ColumnTitle>SPECIALIZED CONTENT</ColumnTitle>
                             <Link href="/partner"><UpperH3>Partner area</UpperH3></Link>
 
-                        </ColumnContent>              
+                        </ColumnContent>   */} 
+                        <FooterAccordion />           
                     </FooterLinksWrapper>
                 </div>                   
             </FooterContainer>                

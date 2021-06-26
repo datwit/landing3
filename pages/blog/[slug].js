@@ -11,6 +11,7 @@ import { useRouter } from 'next/router'
 import { motion } from 'framer-motion'
 import { FullPage } from 'react-full-page'
 import CustomControls from '../../components/Slide/CustomControls'
+import {FiChevronLeft} from 'react-icons/fi'
 
 const BlogPage = ({ title, date, content, img, author, tags, id})=> {
 
@@ -28,6 +29,14 @@ const BlogPage = ({ title, date, content, img, author, tags, id})=> {
           <main>
               <section className="pt-20">
                   <div className="mx-8 md:mx-auto">  
+                         {/* back button*/}                        
+                          <a onClick={()=>router.back()}>
+                            <h3 className="flex pt-10 pb-6 cursor-pointer hover:text-secondary1">
+                                <FiChevronLeft  className="h-6 w-6 mr-2"/>                                    
+                                <span>Back</span>
+                            </h3>
+                          </a>                      
+                        {/**/} 
                         <ImgContainer>
                             <img src={img} alt={title}/>
                         </ImgContainer>              

@@ -49,7 +49,7 @@ const Services = ({classes}) => {
                                     className="cursor-pointer"
                                     >                           
                                 {/*card image*/}
-                                <div className="py-6 lg:py-14">
+                                <div className="py-6 lg:py-12">
                                     <SoftDSVG/> 
                                 </div>                                 
                                 {/*card title */}                         
@@ -110,7 +110,7 @@ const Services = ({classes}) => {
                                     role="tablist"
                                     className="cursor-pointer">                                                                               
                                 {/*card image*/}
-                                <div className="py-6 lg:py-14">
+                                <div className="py-6 lg:py-12">
                                     <DataScSVG /> 
                                 </div>                                 
                                 {/*card title */}                           

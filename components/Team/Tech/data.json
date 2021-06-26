@@ -1,42 +1,42 @@
 [
     {
-        "src": "/images/technologies/altair.png",
+        "src": "/images/technologies/altair.svg",
         "alt": "Altair"
     },
     {
-        "src": "/images/technologies/aws.png",
+        "src": "/images/technologies/aws.svg",
         "alt": "Amazon Web Services"
     },
     {
-        "src": "/images/technologies/bokeh.png",
+        "src": "/images/technologies/react.svg",
         "alt": "Bokeh"
     },
     {
-        "src": "/images/technologies/chalice.png",
+        "src": "/images/technologies/fastapi.svg",
         "alt": "Chalice"
     },
     {
-        "src":"/images/technologies/keras.png",
+        "src":"/images/technologies/torch.svg",
         "alt": "Keras"
     },
     {
-        "src":"/images/technologies/matplotlib.png",
+        "src":"/images/technologies/matplotlib.svg",
         "alt":"Matplotlib"
     },
     {
-        "src":"/images/technologies/chalice.png",
+        "src":"/images/technologies/spacy.svg",
         "alt":"Nuxtjs"
     },
     {
-       "src":"/images/technologies/python.png",
+       "src":"/images/technologies/python.svg",
        "alt":"Python"
     },
     {
-       "src":"/images/technologies/sagemaker.png",
+       "src":"/images/technologies/sagemaker.svg",
        "alt":"Sagemaker"
     },
     {
-       "src":"/images/technologies/sklearn.png",
+       "src":"/images/technologies/sklearn.svg",
        "alt":"Sklearn"
     }
 ]

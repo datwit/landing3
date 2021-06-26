@@ -10,7 +10,7 @@ export const BlogCardWrapper = styled.div.attrs({
     className: "p-3 w-full sm:w-1/3 w-full flex"
 })
 `
-align-items: stretch;
+/* align-items: stretch; */
 `;
 export const BlogCardBlock = styled.div.attrs({
     className: "p-3"
@@ -21,6 +21,15 @@ export const CardSummary = styled.p.attrs({
 `
 font-size: 0.90rem;
 line-height: 1.2rem;
+/* truncate text*/
+display: -webkit-box;
+-webkit-line-clamp:4;
+-webkit-box-orient: vertical;
+overflow:hidden;
+text-overflow: ellipsis;
+height:75px;
+text-align:justify;
+
 `;
 export const BlogCardBorder = styled.div.attrs({
     className: "border border-gray-300 shadow hover:shadow-lg transition duration-200 ease-in overflow-hidden"
@@ -69,7 +78,7 @@ export const DateAuthorWrapper= styled.div.attrs({
 export const PostTitle= styled.h2.attrs({
     className: "text-3xl font-bold"
 })``;
-export const Category= styled.a
+export const Category= styled.p
 `
 padding: .05rem .8rem;
 border-radius: 3rem;
@@ -77,8 +86,9 @@ background: #f5f2f2;
 color: #e69c24;
 border: 2px solid #e69c24;
 font-size: 14px;
-margin-right: 5px;
+margin: 0 5px 10px 0;
 cursor:pointer;
+line-height:1rem;
 `;
 export const SearchField= styled.input.attrs({
     className: "w-full border border-gray-300 focus:border-transparent bg-white text-base outline-none text-gray-700 px-3 leading-8 focus:ring-2 focus:ring-secondary2 transition-colors duration-200 ease-in-out"

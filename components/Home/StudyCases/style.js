@@ -65,7 +65,17 @@ export const SCardWrapper = styled.div.attrs({
   })``;
   export const CardSubtitle = styled.p.attrs({
     className: "mt-0 text-base leading-6 text-gray-500"
-  })``;
+  })
+  `
+  /* truncate text*/
+  display: -webkit-box;
+  -webkit-line-clamp:3;
+  -webkit-box-orient: vertical;
+  overflow:hidden;
+  text-overflow: ellipsis;
+  height:75px;
+  text-align:justify;
+  `;
   export const ReadMore = styled.a.attrs({
     className: "text-secondary2 flex items-center md:mb-2 lg:mb-0 cursor-pointer hover:text-secondary1"
   })``;
