@@ -14,6 +14,7 @@ import Head from 'next/head';
 import uuid from 'react-uuid'
 import Navbar from '../../components/Navbar'
 import DeviceDetect from "../../lib/deviceDetect";
+import { FiBookmark } from "react-icons/fi";
 
 import cases from '../../cache/cases.json'
 
@@ -57,11 +58,15 @@ const AllStudyCases = () =>{
                            
               <BlogCardBorder>
                   <img className="lg:h-48 md:h-28 w-full object-cover object-center" src={item.img} alt="" />  
-                  <CategoryRect>
-                      <Link href={`/studycases/search?p=${item.tags.toLowerCase()}`}>
-                          <CategoryTitle>{item.tags}</CategoryTitle>
-                      </Link>
-                  </CategoryRect>            
+                  <div>
+                      <div className="px-3 pt-3">
+                        <Link href={`/studycases/search?p=${item.tags.toLowerCase()}`}><CategoryRect>{item.tags}
+                          <FiBookmark />
+                          </CategoryRect>
+                        </Link>
+                        <p className="text-sm text-gray-500 m-0 text-left pt-1">{` ―  ${item.reading} min read`}</p>                        
+                      </div>                     
+                  </div>            
                   <BlogCardBlock>                         
                       <Link href={`/studycases/${item.id}`}><BlogTitle1>{item.title}</BlogTitle1></Link> 
                       <CardSummary>{item.summary}</CardSummary>                      

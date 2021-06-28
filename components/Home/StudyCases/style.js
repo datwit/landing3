@@ -33,10 +33,35 @@ export const SCardWrapper = styled.div.attrs({
         
         }
     }    
+  `; 
+  export const CategoryRect = styled.p.attrs({
+    className: "flex items-center"
+  })
+  `
+  padding: .05rem .5rem;
+  border-radius: 3rem;
+  background: #e69c24;
+  color: white;
+  border: 2px solid #e69c24;
+  font-size: 14px;
+  margin: 0;
+  cursor:pointer;
+  line-height:1.2rem;
+  width:fit-content;
+
+  svg{
+    margin: 0 5px 0 5px;
+  }
+  &:hover {
+        color: #00baff;
+        border: 2px solid #00baff;        
+        background: white;
+        svg{
+            color: #00baff;  
+        }
+        
+  }
   `;
-  export const CategoryRect = styled.div.attrs({
-    className: "bg-secondary2 h-8 flex justify-start items-center"
-  })``;
   export const CategoryTitle = styled.h2.attrs({
     className: "tracking-widest m-0 font-semibold text-white ml-2 cursor-pointer"
   })
