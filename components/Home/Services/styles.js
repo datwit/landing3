@@ -84,6 +84,16 @@ svg.resizes{
   animation: dots 800ms ease-in-out infinite 400ms;
   -webkit-animation: dots 800ms ease-in-out infinite 400ms;
 }
+#Vector_53{
+  stroke-dasharray: 100;
+  stroke-dashoffset: 100;
+  animation: dash 5s linear forwards infinite;
+}
+@keyframes dash {
+  to {
+    stroke-dashoffset: 0;
+  }  
+}
 @keyframes dots {
   100%{
     fill: white;

@@ -1,6 +1,6 @@
 import React from 'react'
 
-const DataScSVG = () => {
+const MLSolutionsSVG = () => {
     return (
         <>         
             
@@ -88,4 +88,4 @@ const DataScSVG = () => {
     )
 }
 
-export default DataScSVG
+export default MLSolutionsSVG

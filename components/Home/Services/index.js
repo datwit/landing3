@@ -2,8 +2,8 @@ import datas from "./data.json";
 import {useState, useRef, useEffect} from 'react'
 import {ContentWrapper, SectionSubheader, SectionHeader}from '../../../styles/global';
 import {GlassInner, TabTitle, TabTitle1, ServTabContent, CardRevealWrapper, IconTitle, CardContent, BulletTitle, BulletSubtitle, ServiceBulletsOuter, ServiceBulletsSpan, CardRevealBorder, TabResponsive} from './styles';
-import SoftDSVG from './SoftDSVG'
-import DataScSVG from './DataScSVG'
+import DataAnalySVG from './DataAnalySVG'
+import MLSolutionsSVG from './MLSolutionsSVG'
 
 const Services = ({classes}) => {
     
@@ -50,7 +50,7 @@ const Services = ({classes}) => {
                                     >                           
                                 {/*card image*/}
                                 <div className="py-6 lg:py-12">
-                                    <SoftDSVG/> 
+                                    <DataAnalySVG/> 
                                 </div>                                 
                                 {/*card title */}                         
                                 <IconTitle onClick={e => 
@@ -111,7 +111,7 @@ const Services = ({classes}) => {
                                     className="cursor-pointer">                                                                               
                                 {/*card image*/}
                                 <div className="py-6 lg:py-12">
-                                    <DataScSVG /> 
+                                    <MLSolutionsSVG /> 
                                 </div>                                 
                                 {/*card title */}                           
                                 <IconTitle onClick={e => 
