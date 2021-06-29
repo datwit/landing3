@@ -63,16 +63,26 @@ export const BlogCardBorder = styled.div.attrs({
     }
 `;
 export const RespBlock = styled.div.attrs({
-    className: "p-2 sm:w-1/4 w-1/2"
+    className: "p-2 sm:w-3/4 w-1/2"
 })``;
+export const SearchCard = styled.div.attrs({
+    className: "flex border border-gray-300 shadow hover:shadow-lg transition duration-200 ease-in cursor-pointer"
+})
+`
+&:hover{
+    h1{
+        color:#00BAFF;
+    }
+}
+`;
 export const BlogTitle1 = styled.h1.attrs({
-    className: "title-font text-lg font-bold text-primary mb-1 cursor-pointer"
+    className: "title-font text-lg font-bold text-primary mt-2"
 })``;
 export const BlogTitle2 = styled.a.attrs({
     className: "font-bold text-primary cursor-pointer"
 })``;
 export const DateWrapper= styled.div.attrs({
-    className: "text-gray-600 text-xs"
+    className: "text-gray-600 text-xs py-2"
 })``;
 export const ImgContainer= styled.div.attrs({
     className: "flex justify-center mb-4"
