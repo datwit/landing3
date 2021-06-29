@@ -64,7 +64,7 @@ const CasesResults = () => {
         <div className="w-full" key={key6}>            
             <div className="mx-4 md:mx-0 mb-3">
                 <div className="flex">
-                    <img src={item.img} className="sm:w-1/6 w-1/2" alt="" />
+                    <img src={item.img} className="sm:w-1/4 w-1/2" alt="" />
                     <RespBlock>
                         <DateWrapper>
                         {format(parseISO(item.date), 'MMMM do, uuu')}
@@ -105,7 +105,7 @@ const CasesResults = () => {
                 <FullPage controls={CustomControls}>
                     <Slide {...style}>
                         <Section>
-                            <div className="container px-5 mx-auto mt-20">
+                            <div className="px-5 mx-auto mt-20">
                                 {/* back button*/}
                                 <a onClick={()=>router.back()}>
                                     <h3 className="flex pt-2 pb-4 cursor-pointer hover:text-secondary1">

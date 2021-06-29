@@ -118,7 +118,7 @@ return (
         <FullPage controls={CustomControls}>
           <Slide {...style}>
             <Section classes={'w-full h-screen'}>
-            <div className="container px-5 mx-auto mt-20">
+            <div className="px-5 mx-auto mt-20">
               {/* back button*/}
               <a onClick={()=>router.back()}>
                   <h3 className="flex pt-2 pb-4 cursor-pointer hover:text-secondary1">

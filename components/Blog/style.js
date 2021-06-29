@@ -13,7 +13,7 @@ export const BlogCardWrapper = styled.div.attrs({
 /* align-items: stretch; */
 `;
 export const BlogCardBlock = styled.div.attrs({
-    className: "p-3"
+    className: ""
 })``;
 export const CardSummary = styled.p.attrs({
     className: "mt-0 text-gray-500 hidden md:block"
@@ -49,16 +49,21 @@ export const BlogCardBorder = styled.div.attrs({
         
         width:40%;
         }
-         @media (min-width: 640px){
+        @media (min-width: 640px){
         
-        width:100%;
-        height:100%;
+        width:auto;
+        height:150px;
+        }
+        @media (min-width: 1280px){
+        
+        width:auto;
+        height:200px;
         }
 
     }
 `;
 export const RespBlock = styled.div.attrs({
-    className: "p-2 sm:w-5/6 w-1/2"
+    className: "p-2 sm:w-1/4 w-1/2"
 })``;
 export const BlogTitle1 = styled.h1.attrs({
     className: "title-font text-lg font-bold text-primary mb-1 cursor-pointer"
