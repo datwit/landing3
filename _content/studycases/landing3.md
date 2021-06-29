@@ -5,6 +5,7 @@ tags: Software Development
 img: /images/cases/landing3.png
 date: 2021-02-04T13:41:27.220Z
 author: Enma Lidia Muñoz García 
+reading: 10
 ---
 
 Datwit landing page is a website to promote the work of the company creating multipurpose software solutions integrating modern techniques like Cloud Computing, Machine Learning, Data Analysis, and microservices. 

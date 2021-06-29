@@ -30,8 +30,7 @@ const Faqs = ({classes}) => {
                             <QuestionText>For <br/> Developers</QuestionText>
                         </QuestionWrapper>
                     </Link>                   
-               </div> 
-
+               </div>          
             </div>
                                             
             

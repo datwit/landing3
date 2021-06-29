@@ -4,7 +4,6 @@ import {Divider, FooterAccordionList, FooterContainer, SocialList, FooterHeader,
 import datas from './data.json'
 import links from './pageslink.json';
 import {FiGithub, FiFacebook, FiTwitter, FiLinkedin} from 'react-icons/fi'
-import FooterAccItem from './FooterAccItem';
 import uuid from 'react-uuid'
 import FooterAccordion from './FooterAccordion'
 
@@ -67,26 +66,15 @@ const Footer = () => {
                                 <Link href="tel:+58 658 987"><svg className="h-7 w-7 text-white mr-2"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  strokeWidth="2"  strokeLinecap="round"  strokeLinejoin="round">  <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" /></svg></Link>                       
                             </SocialList>
                             {/* <Divider />   */}
-                        </ColumnContent>                        
-                       {/*  <FooterAccordionWrapper>
-                            <FooterAccordionList>
+                        </ColumnContent> 
+                        {/*accordion*/}
                             {
-                                links.map((lik, key)=> {
-                                return (
-                                <li {...{ className: 'accordion-list__item', key }}>
-                                    <FooterAccItem {...lik} />
-                                </li>
-                                )
-                            })
-                            }                                
-                            </FooterAccordionList>
-                        </FooterAccordionWrapper>  */}  
-                        {/* <ColumnContent>
-                            <ColumnTitle>SPECIALIZED CONTENT</ColumnTitle>
-                            <Link href="/partner"><UpperH3>Partner area</UpperH3></Link>
-
-                        </ColumnContent>   */} 
-                        <FooterAccordion />           
+                                links.map(lik=>(
+                                    <div key={uuid()}>
+                                        <FooterAccordion {...lik} />
+                                    </div>
+                                ))
+                            }
                     </FooterLinksWrapper>
                 </div>                   
             </FooterContainer>                

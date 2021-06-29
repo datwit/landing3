@@ -5,6 +5,7 @@ img: /images/cases/preprocess.svg
 tags: Data Science
 date: 2020-09-29T19:05:27.220Z
 author: Abel Meneses Abad 
+reading: 10 
 ---
 
 

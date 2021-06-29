@@ -87,33 +87,6 @@ export const Divider = styled.div.attrs({
 // background: #b7b7bc;
 `;
 
-export const FooterAccordionItem = styled.div
-`
-// padding-bottom:10px; 
-border-bottom: 1px solid #fcfcfc;    
-`;
-export const FooterAccordionWrapper = styled.div.attrs({
-    className: ""
-})
-`
-/* padding-bottom: 30px; */
-`;
-export const FooterAccordionList = styled.div
-`
-    list-style: none;
-    margin: 0;
-    padding: 0;       
-    overflow: hidden;        
-`;
-export const FooterAccordionTitle = styled.h3.attrs({
-    className: "text-lg text-white mx-auto"
-})
-`
-    text-transform: uppercase;
-    &:hover{
-        color: #00baff;
-    }
-`;
 export const FooterTitleWrapper = styled.div.attrs({
     className: ""
 })
@@ -132,34 +105,52 @@ export const FooterTitleWrapper = styled.div.attrs({
         transform: rotate(180deg); 
                     
     }   
-`
-export const FooterAccItemInner = styled.div
-`
-    max-height: 0;
-    overflow: hidden;
-    text-transform: cubic-bezier(0.95, 0.05, 0.795, 0.035);
-    transition-duration: 0.5s;
-    transition-property: max-height;    
-    position: relative;
-    background:transparent;  
-    // border-left: 3px solid #e69c24;     
-        
 `;
-export const FooterAccItemLinks = styled.h3.attrs({
-    className: "text-base text-white font-light"
-})
+export const AccordionSection = styled.div
 `
-    text-align: center;
-    
+    display: flex;
+    flex-direction: column;
 `;
-export const FooterAccordionIcon= styled.svg
+export const Accordion = styled.button
 `
-    width: 1.2rem;
-    height: 1.2rem;
-    transition: transform 0.3s ease-in-out;
-    background-size: contain;
-    background-repeat: no-repeat;  
-    opacity: 0.6;
-    color:white;
+    background-color: #1e4158;
+    color: white;
+    cursor: pointer; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #fcfcfc; 
 
+    .accordion__icon { 
+        width: 1.2rem;
+        height: 1.2rem;
+        transition: transform 0.3s ease-in-out;
+        background-size: contain;
+        background-repeat: no-repeat;  
+        opacity: 0.6;  
+        margin: 5px 0 5px 0;
+    }
+    .rotate {
+        transform: rotate(180deg);
+    }
+`;
+export const AccordionTitle = styled.h2
+`
+    font-weight: 600;
+    font-size: 18px;
+    text-align: center;
+    color: white;
+    text-transform: uppercase;
+    margin: 5px 0 5px 0;
+`;
+export const AccordionContent = styled.div
+`
+    background-color: #1e4158; 
+    transition: max-height 0.6s ease;
+    color: white;
+    text-align: center;  
+    display: flex;    
+    flex-direction: column;
 `;

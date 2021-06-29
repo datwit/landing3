@@ -19,7 +19,8 @@ function getjsonData(fileDir) {
       summary: matterResult.data.summary,
       img: matterResult.data.img,
       tags: matterResult.data.tags,
-      date: matterResult.data.date
+      date: matterResult.data.date,
+      reading: matterResult.data.reading
     }
   })
   return JSON.stringify(files)

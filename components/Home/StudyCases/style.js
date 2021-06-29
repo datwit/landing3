@@ -1,42 +1,42 @@
 import styled from 'styled-components'
 
 export const SCardWrapper = styled.div.attrs({
-    className: "py-2 md:py-0 md:p-4 w-full sm:w-1/3"
+    className: "py-2 md:py-0 md:p-4 w-full md:w-1/3"
   })
   ``;
   export const SCardBorder = styled.div.attrs({
     className: "h-full border border-gray-300 overflow-hidden mx-4 md:mx-0 shadow hover:shadow-lg transition duration-200 ease-in"
   })
+  `   
+  `; 
+  export const CategoryRect = styled.p.attrs({
+    className: "flex items-center"
+  })
   `
-     @media (min-width: 360px){
-        
-        display:flex;
-        flex-direction: row;
-    }
-     @media (min-width: 640px){
-        
-        flex-direction: column;
-    }
-    /* &:hover{
-      h1{
+  padding: .05rem .5rem;
+  border-radius: 3rem;
+  background: #e69c24;
+  color: white;
+  border: 2px solid #e69c24;
+  font-size: 14px;
+  margin: 0;
+  cursor:pointer;
+  line-height:1.2rem;
+  width:fit-content;
+
+  svg{
+    margin: 0 5px 0 5px;
+  }
+  &:hover {
         color: #00baff;
-      }
-    } */
-    img.res-img{
-        @media (min-width: 360px){
-        
-        width:35%;
+        border: 2px solid #00baff;        
+        background: white;
+        svg{
+            color: #00baff;  
         }
-         @media (min-width: 640px){
         
-        width:100%;
-        
-        }
-    }    
+  }
   `;
-  export const CategoryRect = styled.div.attrs({
-    className: "bg-secondary2 h-8 flex justify-start items-center"
-  })``;
   export const CategoryTitle = styled.h2.attrs({
     className: "tracking-widest m-0 font-semibold text-white ml-2 cursor-pointer"
   })
@@ -46,18 +46,11 @@ export const SCardWrapper = styled.div.attrs({
   line-height: 1.1rem;
   `;
   export const CardContent = styled.div.attrs({
-    className: "p-4"
+    className: "p-4 w-full"
   })
   `
-   @media (min-width: 360px){
-        
-        width:65%;
-        }
-         @media (min-width: 640px){
-        
-        width:100%;
-        
-        }
+  display: flex;
+  align-items:stretch;   
   `;
 
   export const CardTitle = styled.h1.attrs({
