@@ -1,38 +1,13 @@
 import styled from 'styled-components'
 
 export const SCardWrapper = styled.div.attrs({
-    className: "py-2 md:py-0 md:p-4 w-full sm:w-1/3"
+    className: "py-2 md:py-0 md:p-4 w-full md:w-1/3"
   })
   ``;
   export const SCardBorder = styled.div.attrs({
     className: "h-full border border-gray-300 overflow-hidden mx-4 md:mx-0 shadow hover:shadow-lg transition duration-200 ease-in"
   })
-  `
-     @media (min-width: 360px){
-        
-        display:flex;
-        flex-direction: row;
-    }
-     @media (min-width: 640px){
-        
-        flex-direction: column;
-    }
-    /* &:hover{
-      h1{
-        color: #00baff;
-      }
-    } */
-    img.res-img{
-        @media (min-width: 360px){
-        
-        width:35%;
-        }
-         @media (min-width: 640px){
-        
-        width:100%;
-        
-        }
-    }    
+  `   
   `; 
   export const CategoryRect = styled.p.attrs({
     className: "flex items-center"
@@ -71,18 +46,11 @@ export const SCardWrapper = styled.div.attrs({
   line-height: 1.1rem;
   `;
   export const CardContent = styled.div.attrs({
-    className: "p-4"
+    className: "p-4 w-full"
   })
   `
-   @media (min-width: 360px){
-        
-        width:65%;
-        }
-         @media (min-width: 640px){
-        
-        width:100%;
-        
-        }
+  display: flex;
+  align-items:stretch;   
   `;
 
   export const CardTitle = styled.h1.attrs({

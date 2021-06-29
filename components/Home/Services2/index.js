@@ -3,7 +3,7 @@ import {ContentWrapper, SectionHeader}from '../../../styles/global';
 import { BulletSubtitle, ServiceBulletsOuter, ServiceBulletsSpan } from '../Services1/styles';
 import MLSolutionsSVG from './MLSolutionsSVG'
 import uuid from 'react-uuid'
-import {IllWraper, ImageTitle, TextBlock} from './style'
+import {IllWrapper, ImageTitle, TextBlock} from './style'
 
 const Services2 = ({classes}) => {    
    
@@ -12,10 +12,10 @@ const Services2 = ({classes}) => {
         <div className={classes}>
             <SectionHeader>Machine Learning solutions from A to Z</SectionHeader>
                 <ContentWrapper>
-                    <IllWraper>
+                    <IllWrapper>
                         <MLSolutionsSVG/> 
                         <ImageTitle>{datas[0].title}</ImageTitle>
-                    </IllWraper>
+                    </IllWrapper>
                     <TextBlock>                       
                         <div className="ml-2">                                    
                             <BulletSubtitle>{datas[0].subtitle}</BulletSubtitle>

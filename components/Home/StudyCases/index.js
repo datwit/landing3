@@ -5,14 +5,20 @@ import { BlogCardBorder, RespBlock, BlogTitle2} from '../../../components/Blog/s
 import Link from "next/link"
 import uuid from 'react-uuid'
 import StudyCasesCard from './StudyCasesCard';
+import Carousel from 'react-elastic-carousel'
+
 
 const StudyCases = ({classes}) => {
+    const breakPoints = [
+        { width: 1, itemsToShow: 1 },
+        { width: 400, itemsToShow: 2 }               
+    ]  
     
     return (        
     <div className={classes}>
         <SectionHeader>Check out our solutions</SectionHeader>
         <SectionSubheader>We enjoy our everyday challenges and we are good at it...</SectionSubheader>
-        <div className="">
+        <div className="hidden md:block">
             <ContentWrapper>    
                {
                     datas.map(data => (
@@ -23,26 +29,17 @@ const StudyCases = ({classes}) => {
                }                    
             </ContentWrapper>
         </div> 
-        {/* <div className="md:hidden">                                      
-                     
-            <ul>
+        <div className="md:hidden">                                      
+            <Carousel breakPoints={breakPoints} onTouchMove={e => e.stopPropagation()}>
                 {
-                datas.map(data => (
-                    <BlogCardBorder key={uuid()} className="mb-3">
-                        <div className="flex">
-                        <img src={data.img} className="sm:w-1/4 w-1/2" alt="" />
-                        <RespBlock>
-                            <Link href={`/studycases/${data.id}`}>
-                                <BlogTitle2>{data.title}</BlogTitle2>
-                            </Link>                            
-                            <p>{data.author}</p>
-                        </RespBlock>
-                        </div>
-                    </BlogCardBorder>
-                )) 
-                }
-            </ul>           
-        </div>   */}
+                    datas.map(data => (
+                        <SCardWrapper key={uuid()}>                           
+                            <StudyCasesCard img={data.img} title={data.title} id={data.id} summary={data.summary}/>
+                        </SCardWrapper> 
+                    ))
+                } 
+            </Carousel>               
+        </div>  
     </div>  
         
         

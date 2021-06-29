@@ -1,6 +1,6 @@
 import datas from "./data.json";
 import {ContentWrapper, SectionHeader}from '../../../styles/global';
-import { IllWraper2, BulletSubtitle, ServiceBulletsOuter, ServiceBulletsSpan} from './styles';
+import { IllWrapper2, BulletSubtitle, ServiceBulletsOuter, ServiceBulletsSpan} from './styles';
 import DataAnalySVG from './DataAnalySVG'
 import uuid from 'react-uuid'
 import { ImageTitle, TextBlock} from '../Services2/style'
@@ -12,10 +12,10 @@ const Services1 = ({classes}) => {
         <div className={classes}>
             <SectionHeader>We do Data Intelligence</SectionHeader>
                 <ContentWrapper>
-                    <IllWraper2>
+                    <IllWrapper2>
                         <DataAnalySVG/> 
                         <ImageTitle>{datas[1].title}</ImageTitle>
-                    </IllWraper2>
+                    </IllWrapper2>
                     <TextBlock>                       
                         <div className="ml-2">                                    
                             <BulletSubtitle>{datas[1].subtitle}</BulletSubtitle>

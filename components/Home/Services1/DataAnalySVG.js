@@ -3,7 +3,7 @@ import React from 'react'
 const DataAnalySVG = () => {
     return (
         <>       
-           <svg className="mx-auto resizes" viewBox="0 0 312 205" fill="none" xmlns="http://www.w3.org/2000/svg">
+           <svg className="mx-auto resizes1" viewBox="0 0 312 205" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g id="5Recurso 1 1">
                 <path id="Vector" d="M311.672 0H0.328255C0.146965 0 0 0.155318 0 0.346913V204.653C0 204.845 0.146965 205 0.328255 205H311.672C311.853 205 312 204.845 312 204.653V0.346913C312 0.155318 311.853 0 311.672 0Z" fill="white"/>
                 <path id="Vector_2" fillRule="evenodd" clipRule="evenodd" d="M175.3 183.736L173.61 159.644H145.891L144.152 183.736C143.586 189.571 141.027 194.988 136.955 198.974H182.497C178.426 194.988 175.867 189.571 175.3 183.736V183.736Z" fill="#EAEAEC"/>

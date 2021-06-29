@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const IllWraper = styled.div.attrs({
+export const IllWrapper = styled.div.attrs({
     className: "w-full md:w-1/3 my-auto"
   })
   `

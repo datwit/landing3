@@ -1,16 +1,21 @@
 import styled from 'styled-components'
 
 
-export const IllWraper2 = styled.div.attrs({
+export const IllWrapper2 = styled.div.attrs({
   className: "w-full md:w-1/3 my-auto"
 })
 `
-svg.resizes{
-  @media (max-width: 800px){
+svg.resizes1{
+  @media (max-width: 767px){
     object-fit:cover;
-    width: 85%;
-    height:85%;
-  }  
+    width: 60%;
+    height:60%;
+  } 
+  @media (max-width: 400px){
+    object-fit:cover;
+    width: auto;
+    height:auto;
+  }    
 }
 #leaf1{
   animation: leaf-anime1 2s linear infinite alternate;
@@ -50,7 +55,6 @@ svg.resizes{
     transform: rotateZ(15deg);
   }  
 }
-
 `;
 export const BulletSubtitle = styled.p.attrs({
   className: "text-base mt-2 text-gray-700"
