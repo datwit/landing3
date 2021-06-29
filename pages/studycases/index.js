@@ -57,41 +57,21 @@ const AllStudyCases = () =>{
       <BlogCardWrapper key={uuid()}>
                            
               <BlogCardBorder>
-                  <img className="lg:h-48 md:h-28 w-full object-cover object-center" src={item.img} alt="" />  
-                  <div>
-                      <div className="px-3 pt-3">
+                  <img className="object-cover object-center res-img" src={item.img} alt="" />  
+                  <div className="p-4">                   
+                      <div>
                         <Link href={`/studycases/search?p=${item.tags.toLowerCase()}`}><CategoryRect>{item.tags}
                           <FiBookmark />
                           </CategoryRect>
                         </Link>
                         <p className="text-sm text-gray-500 m-0 text-left pt-1">{` ―  ${item.reading} min read`}</p>                        
-                      </div>                     
-                  </div>            
-                  <BlogCardBlock>                         
-                      <Link href={`/studycases/${item.id}`}><BlogTitle1>{item.title}</BlogTitle1></Link> 
-                      <CardSummary>{item.summary}</CardSummary>                      
-                  </BlogCardBlock>
-              </BlogCardBorder>                 
-         
-            {/* <div className="md:hidden">                 
-                  <BlogCardBorder>
-                      <div className="flex">                        
-                          <img src="/images/dummy-image.png"  className="sm:w-1/4 w-1/2"  alt=""/>
-                          <div className="w-full">
-                              <CategoryRect>
-                                  <Link href={`/studycases/search?p=${item.tags.toLowerCase()}`}>
-                                      <CategoryTitle>{item.tags}</CategoryTitle>
-                                  </Link>
-                              </CategoryRect>
-                              <div className="p-2">
-                                  <Link href={`/studycases/${item.id}`}>
-                                      <BlogTitle2>{item.title}</BlogTitle2>
-                                  </Link>                                                              
-                              </div>                                
-                          </div>  
-                      </div>                        
-                  </BlogCardBorder>                                 
-            </div> */}
+                      </div>                            
+                      <div>                         
+                          <Link href={`/studycases/${item.id}`}><BlogTitle1>{item.title}</BlogTitle1></Link> 
+                          <CardSummary>{item.summary}</CardSummary>                      
+                      </div>
+                  </div>                 
+              </BlogCardBorder>          
       </BlogCardWrapper>          
 
 )
@@ -123,7 +103,7 @@ return (
           <FullPage controls={CustomControls}>
               <Slide {...style}>
                   <Section classes={'w-full h-screen'}>
-                  <div className="container px-5 mx-auto relative top-2/4 transform -translate-y-2/4 mt-16"> 
+                  <div className="container px-5 mx-auto relative top-2/4 transform -translate-y-2/4 mt-12"> 
                       <SectionHeader>Feel free to explore our solutions</SectionHeader>
                       <SectionSubheader>Commitment and creativity mark our creations. By all means, stroll along...</SectionSubheader>
                       {/*pagination*/}
