@@ -103,7 +103,7 @@ return (
           <FullPage controls={CustomControls}>
               <Slide {...style}>
                   <Section classes={'w-full h-screen'}>
-                  <div className="container px-5 mx-auto relative top-2/4 transform -translate-y-2/4 mt-12"> 
+                  <div className="container px-5 mx-auto relative top-2/4 transform -translate-y-2/4 mt-12 lg:mt-14"> 
                       <SectionHeader>Feel free to explore our solutions</SectionHeader>
                       <SectionSubheader>Commitment and creativity mark our creations. By all means, stroll along...</SectionSubheader>
                       {/*pagination*/}

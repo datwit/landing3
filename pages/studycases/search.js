@@ -4,7 +4,7 @@ import Footer from '../../components/Footer'
 import { format, parseISO } from 'date-fns'
 import CustomControls from '../../components/Slide/CustomControls'
 import { ContentWrapper, SectionHeader } from '../../styles/global'
-import { CardSummary,BlogTitle2, DateWrapper, RespBlock, BlogTitle1, PaginationWrapper, PaginationSection, SearchCard } from '../../components/Blog/style'
+import { CardSummary, CardSummary2,BlogTitle2, DateWrapper, RespBlock, BlogTitle1, PaginationWrapper, PaginationSection, SearchCard } from '../../components/Blog/style'
 import Link from "next/link"
 import { useRouter } from 'next/router'
 import Navbar from '../../components/Navbar' 
@@ -64,14 +64,16 @@ const CasesResults = () => {
             <div className="mx-4 md:mx-0 mb-3" key={key6}>
                 <Link href={`/studycases/${item.id}`}>
                 <SearchCard>
-                    <img src={item.img} className="sm:w-1/4 w-1/2 p-1 md:p-4" alt="" />
+                    <div className="sm:w-1/4 lg:w-1/6 w-1/2 h-full">
+                    <img src={item.img} className="p-1 md:p-2" alt="" />
+                    </div>                   
                     <RespBlock>
                         <DateWrapper>
                         {format(parseISO(item.date), 'MMMM do, uuu')}
                         </DateWrapper>
-                        <p className="text-sm text-gray-500 m-0 text-left pt-1">{` ―  ${item.reading} min read`}</p>
+                        <p className="text-sm text-gray-500 m-0 text-left">{` ―  ${item.reading} min read`}</p>
                         <Link href={`/studycases/${item.id}`}><BlogTitle1>{item.title}</BlogTitle1></Link>
-                        <CardSummary className="hidden sm:block">{item.summary}</CardSummary>
+                        <CardSummary2>{item.summary}</CardSummary2>
                     </RespBlock>
                 </SearchCard>
                 </Link>
@@ -118,7 +120,7 @@ const CasesResults = () => {
                                 <SectionHeader>Search Results</SectionHeader>
                                 {/*pagination*/}
                                 <PaginationSection>
-                                    <div className="w-full" id="pag-section">
+                                    <div className="w-full pb-14" id="pag-section">
                                         {data}
                                     </div>                 
                                     { results ==0 ?
@@ -161,7 +163,7 @@ const CasesResults = () => {
                     <Section Section classes={'min-h-screen'}>
                         <div className="px-5 mx-auto mt-20">
                             <Link href="/studycases/">
-                                <h3 className="flex pt-10 pb-6 cursor-pointer hover:text-secondary1">
+                                <h3 className="flex pt-2 pb-4 cursor-pointer hover:text-secondary1">
                                     <FiChevronLeft  className="h-6 w-6 mr-2"/>                                    
                                     <span>Back</span>
                                 </h3>
@@ -169,7 +171,7 @@ const CasesResults = () => {
                             <SectionHeader>Search Results</SectionHeader>
                            {/*pagination*/}
                             <PaginationSection>
-                                <div className="w-full">
+                                <div className="w-full pb-14">
                                 {data}
                                 </div>                 
                                 { results ==0 ?

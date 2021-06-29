@@ -16,9 +16,17 @@ export const BlogCardBlock = styled.div.attrs({
     className: ""
 })``;
 export const CardSummary = styled.p.attrs({
-    className: "mt-0 text-gray-500 hidden md:block"
+    className: "mt-0 text-gray-500"
 })
 `
+ height:fit-content;
+
+ @media (max-width: 767px){
+        
+    display:none;
+    
+}
+
 font-size: 0.90rem;
 line-height: 1.2rem;
 /* truncate text*/
@@ -29,6 +37,21 @@ overflow:hidden;
 text-overflow: ellipsis;
 height:75px;
 text-align:justify;
+
+`;
+export const CardSummary2 = styled.p.attrs({
+    className: "mt-0 text-gray-500"
+})
+`
+ height:fit-content;
+
+ @media (max-width: 767px){
+        
+    display:none;
+    
+}
+font-size: 0.90rem;
+line-height: 1.2rem;
 
 `;
 export const BlogCardBorder = styled.div.attrs({
@@ -52,7 +75,7 @@ export const BlogCardBorder = styled.div.attrs({
         @media (min-width: 640px){
         
         width:auto;
-        height:150px;
+        height:145px;
         }
         @media (min-width: 1280px){
         
@@ -63,17 +86,20 @@ export const BlogCardBorder = styled.div.attrs({
     }
 `;
 export const RespBlock = styled.div.attrs({
-    className: "p-2 sm:w-3/4 w-1/2"
+    className: "p-2 sm:w-3/4 lg:w-5/6 w-1/2 h-full"
 })``;
 export const SearchCard = styled.div.attrs({
     className: "flex border border-gray-300 shadow hover:shadow-lg transition duration-200 ease-in cursor-pointer"
 })
 `
-&:hover{
-    h1{
-        color:#00BAFF;
+   align-items: center;
+    
+
+    &:hover{
+        h1{
+            color:#00BAFF;
+        }
     }
-}
 `;
 export const BlogTitle1 = styled.h1.attrs({
     className: "title-font text-lg font-bold text-primary mt-2"
@@ -120,7 +146,7 @@ export const PaginationWrapper= styled.div
     transform: translateX(-50%);
 
     .pagination{
-        margin: 15px 0;
+        padding: 15px 0;
         display: flex;
         list-style: none; 
         
@@ -164,8 +190,8 @@ export const PaginationSection= styled.div.attrs({
     className: "flex flex-wrap"
 })
 `
-#pag-section{
+/* #pag-section{
     height: 70vh;
-}
+} */
 
 `;
