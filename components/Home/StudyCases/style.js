@@ -48,9 +48,7 @@ export const SCardWrapper = styled.div.attrs({
   export const CardContent = styled.div.attrs({
     className: "p-4 w-full"
   })
-  `
-  display: flex;
-  align-items:stretch;   
+  `     
   `;
 
   export const CardTitle = styled.h1.attrs({
