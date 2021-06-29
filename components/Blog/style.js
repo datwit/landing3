@@ -146,7 +146,7 @@ export const PaginationWrapper= styled.div
     transform: translateX(-50%);
 
     .pagination{
-        padding: 15px 0;
+        padding: 30px 0;
         display: flex;
         list-style: none; 
         
