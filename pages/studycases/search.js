@@ -60,9 +60,8 @@ const CasesResults = () => {
         setPerPage(cant)
         //slicing data   
         const slice = data.slice(offset, offset + cant)
-        const postData = slice.map((item, key6) =>
-        <div className="w-full" key={key6}>            
-            <div className="mx-4 md:mx-0 mb-3">
+        const postData = slice.map((item, key6) =>                   
+            <div className="mx-4 md:mx-0 mb-3" key={key6}>
                 <Link href={`/studycases/${item.id}`}>
                 <SearchCard>
                     <img src={item.img} className="sm:w-1/4 w-1/2 p-1 md:p-4" alt="" />
@@ -77,7 +76,7 @@ const CasesResults = () => {
                 </SearchCard>
                 </Link>
             </div>            
-        </div>
+        
         )
         setData(postData)
         setPageCount(Math.ceil(data.length / cant))
