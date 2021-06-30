@@ -54,13 +54,13 @@ const AllStudyCases = () =>{
     //slicing data   
     const slice = data.slice(offset, offset + cant)
     const casesData = slice.map(item =>           
-      <BlogCardWrapper key={uuid()}>
-                           
+      <BlogCardWrapper key={uuid()}>                           
               <BlogCardBorder>
                   <img className="object-cover object-center res-img" src={item.img} alt="" />  
-                  <div className="p-4">                   
+                  <BlogCardBlock>                   
                       <div>
-                        <Link href={`/studycases/search?p=${item.tags.toLowerCase()}`}><CategoryRect>{item.tags}
+                        <Link href={`/studycases/search?p=${item.tags.toLowerCase()}`}>
+                          <CategoryRect>{item.tags}
                           <FiBookmark />
                           </CategoryRect>
                         </Link>
@@ -70,7 +70,7 @@ const AllStudyCases = () =>{
                           <Link href={`/studycases/${item.id}`}><BlogTitle1>{item.title}</BlogTitle1></Link> 
                           <CardSummary>{item.summary}</CardSummary>                      
                       </div>
-                  </div>                 
+                  </BlogCardBlock>                 
               </BlogCardBorder>          
       </BlogCardWrapper>          
 
@@ -103,7 +103,7 @@ return (
           <FullPage controls={CustomControls}>
               <Slide {...style}>
                   <Section classes={'w-full h-screen'}>
-                  <div className="container px-5 mx-auto relative top-2/4 transform -translate-y-2/4 mt-12 lg:mt-14"> 
+                  <div className="container px-5 mx-auto relative top-2/4 transform -translate-y-2/4 mt-10 xl:mt-14"> 
                       <SectionHeader>Feel free to explore our solutions</SectionHeader>
                       <SectionSubheader>Commitment and creativity mark our creations. By all means, stroll along...</SectionSubheader>
                       {/*pagination*/}
@@ -144,8 +144,8 @@ return (
           <>
             <Navbar scrollToSlide={ scrollToTop }/>            
               <Slide {...style}>
-                <Section classes={'pb-16'}>
-                <div className="px-5 mx-auto mt-20"> 
+                <Section classes={'min-h-screen'}>
+                <div className="px-5 mx-auto pb-16 mt-20"> 
                     <SectionHeader>Check out our solutions</SectionHeader>
                     <SectionSubheader>Commitment and creativity mark our creations. By all means, stroll along...</SectionSubheader>
                     {/*pagination*/}
