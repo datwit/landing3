@@ -20,11 +20,11 @@ Initially I have created 2 separate databases to run in development and testing 
 
 Having configured the variable *FLASK_ENV* in development mode in the activate.bat file of the environment as follows.
 
-`set "FLASK_ENV=development"*`
+    `set "FLASK_ENV=development"*`
 
 Running on your console:
 
-    python run.py
+    `python run.py`
 
 The tables in the database will be created instantly.
 
@@ -55,23 +55,15 @@ To add data, for example an office, the query would be as follows:
         "jobTitle": "Shopman"
     }
 
-And swagger ui looks like this:
-
-![Swagger UI](\api\images\swagger_ui.gif "Swagger UI")
-
-A query / response from the web could be like this:
-
-![Web response](\api\images\web_response.gif "Web response")
-
 ### How to test
 
 First, set *FLASK_ENV* in test mode:
 
-`set "FLASK_ENV=testing"*`
+    `set "FLASK_ENV=testing"*`
 
 Then, run each unit test as follows :
 
-    python -m unittest api/tests/offices.py
+    `python -m unittest api/tests/offices.py`
 
 In this project has been used **Coverage** ([Coverage Documentation](https://coverage.readthedocs.io/en/coverage-5.5/)) too. It monitors the program, noting which parts of the code have been executed, then analyzes the source to identify code that could have been executed but was not. Coverage measurement is typically used to gauge the effectiveness of tests. It can show which parts of your code are being exercised by tests, and which are not.
 
@@ -91,6 +83,5 @@ But there is another way to show this result and it is the html report:
 
     coverage html api/tests/offices.py
 
-It should look like this:
 
-![Coverage html Report](\api\images\coverage_html_report.gif "Coverage html Report")
+> To see the full Github study case go [**here**](https://github.com/datwit/flalq)
