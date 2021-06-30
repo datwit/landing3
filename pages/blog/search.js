@@ -4,7 +4,7 @@ import Footer from '../../components/Footer'
 import { format, parseISO } from 'date-fns'
 import CustomControls from '../../components/Slide/CustomControls'
 import { ContentWrapper, SectionHeader} from '../../styles/global'
-import { CardSummary,BlogTitle2, DateWrapper, RespBlock, BlogTitle1, PaginationWrapper, PaginationSection } from '../../components/Blog/style'
+import { SearchCard,ImageW, CardSummary, CardSummary2, BlogTitle2, DateWrapper, RespBlock, BlogTitle1, PaginationWrapper, PaginationSection } from '../../components/Blog/style'
 import Link from "next/link"
 import { useRouter } from 'next/router'
 import { motion } from 'framer-motion'
@@ -73,16 +73,20 @@ const BlogResults = () => {
     const postData = slice.map((item, key6) =>
       <div className="w-full" key={key6}>
         <div className="mx-4 md:mx-0 mb-3">
-            <div className="flex">              
-              <img className="sm:w-1/6 w-1/2" src={item.img} alt="" />        
+            <SearchCard> 
+              <ImageW>
+                <img className="res" src={item.img} alt="" />  
+              </ImageW>                   
               <RespBlock>
                 <DateWrapper>
                     {format(parseISO(item.date), 'MMMM do, uuu')}
                 </DateWrapper>
-                  <Link href={`/blog/${item.id}`}><BlogTitle1>{item.title}</BlogTitle1></Link>
-                  <CardSummary className="hidden sm:block">{item.summary}</CardSummary>
+                  <Link href={`/blog/${item.id}`}>
+                    <BlogTitle1>{item.title}</BlogTitle1>
+                  </Link>
+                 {/*  <CardSummary2 className="hidden sm:block">{item.summary}</CardSummary2> */}
               </RespBlock>
-            </div>
+            </SearchCard>
         </div>
       </div>
     )
@@ -121,7 +125,7 @@ return (
             <div className="px-5 mx-auto mt-20">
               {/* back button*/}
               <a onClick={()=>router.back()}>
-                  <h3 className="flex pt-2 pb-4 cursor-pointer hover:text-secondary1">
+                  <h3 className="flex cursor-pointer hover:text-secondary1">
                       <FiChevronLeft  className="h-6 w-6 mr-2"/>                                    
                       <span>Back</span>
                   </h3>
@@ -172,7 +176,7 @@ return (
             <Section classes={'min-h-screen'}>
               <div className="container px-5 mx-auto mt-20">
                 <Link href="/blog/">
-                  <h3 className="flex cursor-pointer hover:text-secondary1">
+                  <h3 className="flex cursor-pointer pt-2 pb-4 hover:text-secondary1">
                       <FiChevronLeft  className="h-6 w-6 mr-2"/>                                    
                       <span>Back</span>
                   </h3>

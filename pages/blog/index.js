@@ -15,6 +15,7 @@ import Head from 'next/head';
 import uuid from 'react-uuid'
 import DeviceDetect from "../../lib/deviceDetect";
 import Navbar from '../../components/Navbar'
+import {CategoryRect} from '../../components/Home/StudyCases/style'
 
 
 import posts from '../../cache/posts.json'
@@ -87,26 +88,28 @@ const Blog = () => {
     const slice = data.slice(offset, offset + cant)
     const postData = slice.map(item =>
       <BlogCardWrapper key={uuid()}>        
-          <BlogCardBorder>
-          <Link href={`/blog/${item.id}`}><img className="lg:h-48 md:h-28 md:w-full object-cover object-center cursor-pointer res-img" src={item.img} alt="" /></Link>         
-            <BlogCardBlock>
-              <div className="flex flex-wrap">
-                {
-                  item.tags.map(tags => (
-                    <div key={uuid()}>
-                      <Link href={`/blog/search?p=${tags.toLowerCase()}`}>
-                        <Category>{tags}</Category>
-                      </Link>
-                    </div>
-                  ))
-                }
-              </div>
-              <div className="text-gray-600 text-xs">
-                {format(parseISO(item.date), 'MMMM do, uuu')}
-              </div>
-              <Link href={`/blog/${item.id}`}><BlogTitle1>{item.title}</BlogTitle1></Link>
-              <CardSummary>{item.summary}</CardSummary>              
-            </BlogCardBlock>
+          <BlogCardBorder>            
+              <img className="object-cover object-center cursor-pointer res-img" src={item.img} alt="" />                  
+              <BlogCardBlock>
+                <div className="flex flex-wrap">
+                  {
+                    item.tags.map(tags => (
+                      <div key={uuid()}>
+                        <Link href={`/blog/search?p=${tags.toLowerCase()}`}>
+                          <CategoryRect>{tags}</CategoryRect>
+                        </Link>
+                      </div>
+                    ))
+                  }
+                </div>
+                <div className="text-gray-600 text-xs pt-1">
+                  {format(parseISO(item.date), 'MMMM do, uuu')}
+                </div>
+                <Link href={`/blog/${item.id}`}>
+                  <BlogTitle1>{item.title}</BlogTitle1>
+                </Link>
+                <CardSummary>{item.summary}</CardSummary>              
+              </BlogCardBlock>
           </BlogCardBorder>        
         {/* <div className="md:hidden">
           <BlogCardBorder className="mb-3">
@@ -161,7 +164,7 @@ const Blog = () => {
             <FullPage controls={CustomControls}>
               <Slide {...style}>
                 <Section classes={'w-full h-screen'}>
-                <div className="container px-5 mx-auto relative top-2/4 transform -translate-y-2/4 mt-10">
+                <div className="container px-5 mx-auto relative top-2/4 transform -translate-y-2/4 mt-10 xl:mt-12">
                       <SectionSubheader>Discover interesting ideas and unique perspectives from our amazing crew</SectionSubheader>        
                       {pressEnter && searchRedirect()}
                       {/* search box*/}

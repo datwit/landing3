@@ -4,7 +4,7 @@ import Footer from '../../components/Footer'
 import { format, parseISO } from 'date-fns'
 import CustomControls from '../../components/Slide/CustomControls'
 import { ContentWrapper, SectionHeader } from '../../styles/global'
-import { CardSummary,BlogTitle2, DateWrapper, RespBlock, BlogTitle1, PaginationWrapper, PaginationSection, SearchCard } from '../../components/Blog/style'
+import { ImageW, CardSummary, CardSummary2,BlogTitle2, DateWrapper, RespBlock, BlogTitle1, PaginationWrapper, PaginationSection, SearchCard } from '../../components/Blog/style'
 import Link from "next/link"
 import { useRouter } from 'next/router'
 import Navbar from '../../components/Navbar' 
@@ -60,23 +60,23 @@ const CasesResults = () => {
         setPerPage(cant)
         //slicing data   
         const slice = data.slice(offset, offset + cant)
-        const postData = slice.map((item, key6) =>                   
+        const postData = slice.map((item, key6) =>         
             <div className="mx-4 md:mx-0 mb-3" key={key6}>
-                <Link href={`/studycases/${item.id}`}>
-                <SearchCard>
-                    <img src={item.img} className="sm:w-1/4 w-1/2 p-1 md:p-4" alt="" />
-                    <RespBlock>
-                        <DateWrapper>
+                <SearchCard> 
+                    <ImageW>
+                        <img className="res"  src={item.img} alt="" />
+                    </ImageW>                         
+                  <RespBlock>
+                    <DateWrapper>
                         {format(parseISO(item.date), 'MMMM do, uuu')}
-                        </DateWrapper>
-                        <p className="text-sm text-gray-500 m-0 text-left pt-1">{` ―  ${item.reading} min read`}</p>
-                        <Link href={`/studycases/${item.id}`}><BlogTitle1>{item.title}</BlogTitle1></Link>
-                        <CardSummary className="hidden sm:block">{item.summary}</CardSummary>
-                    </RespBlock>
+                    </DateWrapper>
+                      <Link href={`/studycases/${item.id}`}>
+                        <BlogTitle1>{item.title}</BlogTitle1>
+                      </Link>
+                     {/*  <CardSummary2 className="hidden sm:block">{item.summary}</CardSummary2> */}
+                  </RespBlock>
                 </SearchCard>
-                </Link>
-            </div>            
-        
+            </div>         
         )
         setData(postData)
         setPageCount(Math.ceil(data.length / cant))
@@ -99,113 +99,114 @@ const CasesResults = () => {
     
     return (
         <> 
-            <Head>
-            <title>Datwit | Search results</title>            
-            </Head> 
-            <motion.div initial={{opacity:0,  y: 200}} animate={{opacity:1, y:0}}>
-            { !isMobile ? 
-                <FullPage controls={CustomControls}>
-                    <Slide {...style}>
-                        <Section>
-                            <div className="container px-5 mx-auto mt-20">
-                                {/* back button*/}
-                                <a onClick={()=>router.back()}>
-                                    <h3 className="flex pt-2 pb-4 cursor-pointer hover:text-secondary1">
-                                        <FiChevronLeft  className="h-6 w-6 mr-2"/>                                    
-                                        <span>Back</span>
-                                    </h3>
-                                </a>
-                                <SectionHeader>Search Results</SectionHeader>
-                                {/*pagination*/}
-                                <PaginationSection>
-                                    <div className="w-full" id="pag-section">
-                                        {data}
-                                    </div>                 
-                                    { results ==0 ?
-                                        <div className="mx-auto">
-                                        <p>No results found 😢 </p>
-                                        </div>
-                                        :
-                                        pageCount >= 2 ?
-                                        <PaginationWrapper>
-                                            <ReactPaginate
-                                            previousLabel={prevSVG}
-                                            nextLabel={nextSVG}
-                                            breakLabel={"..."}
-                                            breakClassName={"break-me"}
-                                            pageCount={pageCount}
-                                            onPageChange={handlePageClick}
-                                            containerClassName={"pagination"}
-                                            subContainerClassName={"pages pagination"}
-                                            activeClassName={"active"}
-                                            />
-                                        </PaginationWrapper>
-                                        :
-                                        []
-                                    }
-                                    </PaginationSection>
-                            </div>
-                        </Section>
-                    </Slide>
-                    <Slide>
-                        <Section classes={"w-full h-screen bg-primary mx-auto px-10"}>
-                            <Footer />
-                        </Section>
-                    </Slide>
-                </FullPage>
-            :
-            <>
-                <Navbar scrollToSlide={ scrollToTop }/>
-        
-                <Slide {...style}>
-                    <Section Section classes={'min-h-screen'}>
-                        <div className="px-5 mx-auto mt-20">
-                            <Link href="/studycases/">
-                                <h3 className="flex pt-10 pb-6 cursor-pointer hover:text-secondary1">
-                                    <FiChevronLeft  className="h-6 w-6 mr-2"/>                                    
-                                    <span>Back</span>
-                                </h3>
-                            </Link>
-                            <SectionHeader>Search Results</SectionHeader>
-                           {/*pagination*/}
-                            <PaginationSection>
-                                <div className="w-full">
-                                {data}
-                                </div>                 
-                                { results ==0 ?
-                                    <div className="mx-auto">
-                                    <p>No results found 😢 </p>
-                                    </div>
-                                    :
-                                    pageCount >= 2 ?
-                                    <PaginationWrapper>
-                                    <ReactPaginate
-                                        previousLabel={prevSVG}
-                                        nextLabel={nextSVG}
-                                        breakLabel={"..."}
-                                        breakClassName={"break-me"}
-                                        pageCount={pageCount}
-                                        onPageChange={handlePageClick}
-                                        containerClassName={"pagination"}
-                                        subContainerClassName={"pages pagination"}
-                                        activeClassName={"active"}
-                                    />
-                                    </PaginationWrapper>
-                                    :
-                                    []
-                                }
-                            </PaginationSection>
+             <Head>
+    <title>Datwit | Search results</title>  
+    </Head>  
+    <motion.div initial={{opacity:0,  y: 200}} animate={{opacity:1, y:0}}> 
+        { !isMobile ? 
+        <FullPage controls={CustomControls}>
+          <Slide {...style}>
+            <Section classes={'w-full h-screen'}>
+            <div className="px-5 mx-auto mt-20">
+              {/* back button*/}
+              <a onClick={()=>router.back()}>
+                  <h3 className="flex cursor-pointer hover:text-secondary1">
+                      <FiChevronLeft  className="h-6 w-6 mr-2"/>                                    
+                      <span>Back</span>
+                  </h3>
+              </a>
+            <SectionHeader>Search Results</SectionHeader>
+              {/*pagination*/}
+                <PaginationSection>
+                  <div className="w-full">
+                    {data}
+                  </div>                 
+                  { results ==0 ?
+                      <div className="mx-auto">
+                      <p>No results found 😢 </p>
+                      </div>
+                      :
+                      pageCount >= 2 ?
+                      <PaginationWrapper>
+                        <ReactPaginate
+                          previousLabel={prevSVG}
+                          nextLabel={nextSVG}
+                          breakLabel={"..."}
+                          breakClassName={"break-me"}
+                          pageCount={pageCount}
+                          onPageChange={handlePageClick}
+                          containerClassName={"pagination"}
+                          subContainerClassName={"pages pagination"}
+                          activeClassName={"active"}
+                        />
+                      </PaginationWrapper>
+                      :
+                      []
+                  }
+                </PaginationSection>
+              </div>            
+            </Section>        
+          </Slide>       
+
+          <Slide>
+            <Section classes={"w-full h-screen bg-primary mx-auto px-10"}>
+              <Footer />
+            </Section>                  
+          </Slide>
+        </FullPage> 
+        :
+        <>
+          <Navbar scrollToSlide={ scrollToTop }/>
+          <Slide {...style}>
+            <Section classes={'min-h-screen'}>
+              <div className="px-5 mx-auto mt-20">
+               {/* back button*/}
+                <a onClick={()=>router.back()}>
+                    <h3 className="flex cursor-pointer hover:text-secondary1">
+                        <FiChevronLeft  className="h-6 w-6 mr-2"/>                                    
+                        <span>Back</span>
+                    </h3>
+                </a>
+               {/* */}
+              <SectionHeader>Search Results</SectionHeader>
+                {/*pagination*/}
+                  <PaginationSection>
+                      {data}              
+                    { results ==0 ?
+                        <div className="mx-auto">
+                        <p>No results found 😢 </p>
                         </div>
-                    </Section>
-                </Slide>
-                <Slide>
-                    <Section classes={"w-full h-screen bg-primary mx-auto px-10"}>
-                        <Footer />
-                    </Section>
-                </Slide>            
-            </>            
-            }
-            </motion.div>
+                        :
+                        pageCount >= 2 ?
+                        <PaginationWrapper>
+                          <ReactPaginate
+                            previousLabel={prevSVG}
+                            nextLabel={nextSVG}
+                            breakLabel={"..."}
+                            breakClassName={"break-me"}
+                            pageCount={pageCount}
+                            onPageChange={handlePageClick}
+                            containerClassName={"pagination"}
+                            subContainerClassName={"pages pagination"}
+                            activeClassName={"active"}
+                          />
+                        </PaginationWrapper>
+                        :
+                        []
+                    }
+                  </PaginationSection>
+              </div>            
+            </Section>        
+          </Slide>       
+
+          <Slide>
+            <Section classes={"w-full h-screen bg-primary mx-auto px-10"}>
+              <Footer />
+            </Section>                  
+          </Slide>        
+        </>
+        }     
+    </motion.div>
         </>
     );
 }

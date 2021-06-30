@@ -10,7 +10,7 @@ export const SCardWrapper = styled.div.attrs({
   `   
   `; 
   export const CategoryRect = styled.p.attrs({
-    className: "flex items-center"
+    className: "flex items-center mr-1"
   })
   `
   padding: .05rem .5rem;
@@ -19,7 +19,7 @@ export const SCardWrapper = styled.div.attrs({
   color: white;
   border: 2px solid #e69c24;
   font-size: 14px;
-  margin: 0;
+  margin: 0 5px 3px 0;
   cursor:pointer;
   line-height:1.2rem;
   width:fit-content;

@@ -13,12 +13,20 @@ export const BlogCardWrapper = styled.div.attrs({
 /* align-items: stretch; */
 `;
 export const BlogCardBlock = styled.div.attrs({
-    className: ""
+    className: "p-4"
 })``;
 export const CardSummary = styled.p.attrs({
-    className: "mt-0 text-gray-500 hidden md:block"
+    className: "mt-0 text-gray-500"
 })
 `
+ height:fit-content;
+
+ @media (max-width: 767px){
+        
+    display:none;
+    
+}
+
 font-size: 0.90rem;
 line-height: 1.2rem;
 /* truncate text*/
@@ -29,6 +37,21 @@ overflow:hidden;
 text-overflow: ellipsis;
 height:75px;
 text-align:justify;
+
+`;
+export const CardSummary2 = styled.p.attrs({
+    className: "mt-0 text-gray-500"
+})
+`
+ height:fit-content;
+
+ @media (max-width: 767px){
+        
+    display:none;
+    
+}
+font-size: 0.90rem;
+line-height: 1.2rem;
 
 `;
 export const BlogCardBorder = styled.div.attrs({
@@ -52,7 +75,7 @@ export const BlogCardBorder = styled.div.attrs({
         @media (min-width: 640px){
         
         width:auto;
-        height:150px;
+        height:145px;
         }
         @media (min-width: 1280px){
         
@@ -60,29 +83,46 @@ export const BlogCardBorder = styled.div.attrs({
         height:200px;
         }
 
-    }
+    }    
 `;
 export const RespBlock = styled.div.attrs({
-    className: "p-2 sm:w-3/4 w-1/2"
+    className: "p-2 sm:w-5/6 w-1/2 h-full"
 })``;
+export const ImageW = styled.div.attrs({
+    className: "sm:w-1/6 w-1/2 h-full"
+})
+`
+     
+    margin-top: auto;
+    margin-bottom: auto; 
+
+img.res{
+    @media (min-width: 1024px){    
+    width:75%;
+    height:auto;
+    display:flex;
+    align-items:center;    
+    }
+}
+`;
 export const SearchCard = styled.div.attrs({
     className: "flex border border-gray-300 shadow hover:shadow-lg transition duration-200 ease-in cursor-pointer"
 })
 `
-&:hover{
-    h1{
-        color:#00BAFF;
+    &:hover{
+        h1{
+            color:#00BAFF;
+        }
     }
-}
 `;
 export const BlogTitle1 = styled.h1.attrs({
-    className: "title-font text-lg font-bold text-primary mt-2"
+    className: "title-font text-lg font-bold text-primary mb-1 hover:text-secondary1 cursor-pointer"
 })``;
 export const BlogTitle2 = styled.a.attrs({
     className: "font-bold text-primary cursor-pointer"
 })``;
 export const DateWrapper= styled.div.attrs({
-    className: "text-gray-600 text-xs py-2"
+    className: "text-gray-600 text-xs"
 })``;
 export const ImgContainer= styled.div.attrs({
     className: "flex justify-center mb-4"
@@ -120,7 +160,7 @@ export const PaginationWrapper= styled.div
     transform: translateX(-50%);
 
     .pagination{
-        margin: 15px 0;
+        padding: 28px 0;
         display: flex;
         list-style: none; 
         
@@ -164,8 +204,8 @@ export const PaginationSection= styled.div.attrs({
     className: "flex flex-wrap"
 })
 `
-#pag-section{
+/* #pag-section{
     height: 70vh;
-}
+} */
 
 `;
