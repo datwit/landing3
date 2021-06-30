@@ -121,7 +121,7 @@ return (
             <div className="px-5 mx-auto mt-20">
               {/* back button*/}
               <a onClick={()=>router.back()}>
-                  <h3 className="flex pt-2 pb-4 cursor-pointer hover:text-secondary1">
+                  <h3 className="flex cursor-pointer hover:text-secondary1">
                       <FiChevronLeft  className="h-6 w-6 mr-2"/>                                    
                       <span>Back</span>
                   </h3>

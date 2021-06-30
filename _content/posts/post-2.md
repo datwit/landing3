@@ -5,7 +5,7 @@ tags:
 - "Coding"
 - "Research"
 - "Tips"
-img: https://images.unsplash.com/photo-1556740758-90de374c12ad?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1000&q=80
+img: /images/dummy-image.png
 date: 2021-02-14T19:05:27.220Z
 author: Benjamin  
 reading: 5 
