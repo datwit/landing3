@@ -14,6 +14,14 @@ h3{
     margin-top: 1rem;
     margin-bottom: .8rem;
     font-size: 20px;
+    color:#1e4158;
+    
+}
+h4{
+    margin-top: 1rem;
+    margin-bottom: .8rem;
+    font-size: 20px;
+    text-align:left;
     
 }
 p{
@@ -33,5 +41,10 @@ blockquote {
     margin: 20px 0;
     padding-left: 1.5rem;
     border-left: 5px solid #e69c24;
+}
+pre {
+   /*  white-space: pre-wrap; */
+    width: 100%;
+    overflow: auto;
 }
 `;

@@ -102,6 +102,7 @@ The future changes of this library are based in the initial objectives:
     - __Citation__: add a complete set of cites about all techniques, and link them with its correspondent function on the library.
 
 
+> To see the full Github study case go [**here**](https://github.com/datwit/preprocess)
 
 
 
