@@ -1,10 +1,15 @@
 import styled from 'styled-components';
 
 export const IllWrapper = styled.div.attrs({
-    className: "w-full md:w-1/3 my-auto"
+    className: "w-full md:w-2/4 my-auto"
   })
   `
   svg.resizes{
+  @media (min-width: 768px){
+  object-fit:cover;
+  width: 70%;
+  height:70%;
+  } 
   @media (max-width: 767px){
     object-fit:cover;
     width: 60%;
@@ -55,6 +60,6 @@ export const ImageTitle = styled.h2.attrs({
     className: "text-base md:text-2xl my-2 md:my-6"
 })``;
 export const TextBlock = styled.div.attrs({
-    className: "w-full md:w-2/3 md:p-4"
+    className: "w-full md:w-2/4 md:p-4"
 })``;
   

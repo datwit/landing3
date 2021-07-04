@@ -2,10 +2,15 @@ import styled from 'styled-components'
 
 
 export const IllWrapper2 = styled.div.attrs({
-  className: "w-full md:w-1/3 my-auto"
+  className: "w-full md:w-2/4 my-auto"
 })
 `
 svg.resizes1{
+  @media (min-width: 768px){
+    object-fit:cover;
+    width: 70%;
+    height:70%;
+  } 
   @media (max-width: 767px){
     object-fit:cover;
     width: 60%;
