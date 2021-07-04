@@ -47,4 +47,13 @@ pre {
     width: 100%;
     overflow: auto;
 }
+img{
+    @media (min-width: 1024px){  
+    width:70%;
+    height: 70%;
+    margin-left:auto;
+    margin-right: auto;
+    }
+}
+
 `;
