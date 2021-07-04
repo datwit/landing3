@@ -1,5 +1,5 @@
 import datas from "./data.json";
-import {ContentWrapper, SectionHeader}from '../../../styles/global';
+import {ContentWrapper, SectionHeader}from 'styles/global';
 import { IllWrapper2, BulletSubtitle, ServiceBulletsOuter, ServiceBulletsSpan} from './styles';
 import DataAnalySVG from './DataAnalySVG'
 import uuid from 'react-uuid'

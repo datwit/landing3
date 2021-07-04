@@ -15,22 +15,7 @@ export const SocialCard = styled.div
 
     //glassmorphism workaround
     /* slightly transparent fallback */ 
-    background-color: rgba(255, 255, 255, .87);
-    
-
-    /* if backdrop support: very transparent and blurred */
-    // background-color: rgba(255, 255, 255, .4);
-    // @supports ((-webkit-backdrop-filter: blur(2rem)) or (backdrop-filter: blur(2rem))) {    
-        
-    //     background: linear-gradient(
-    //         to right bottom,
-    //         rgba(255,255,255,0.5),
-    //         rgba(255,255,255,0.3)
-    //         );
-    //     -webkit-backdrop-filter: blur(2rem);
-    //     backdrop-filter: blur(2rem);
-    
-    // }
+    background-color: rgba(255, 255, 255, .87);  
 `;
 export const MemberDesig = styled.h3.attrs({
     className: "text-gray-500"
