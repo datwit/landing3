@@ -1,19 +1,18 @@
 import Link from 'next/link'
-import {Fragment} from 'react'
-import {Divider, FooterAccordionList, FooterContainer, SocialList, FooterHeader, FooterLinksWrapper, ColumnContent, ColumnTitle, SocialListItem, ContactWrapper, UpperH3, DownH3, CopyRight, FooterAccordionWrapper} from './style'
+import React, {Fragment} from 'react'
+import {FooterContainer, SocialList, FooterHeader, FooterLinksWrapper, ColumnContent, ColumnTitle, SocialListItem, SocialListItem2, ContactWrapper, UpperH3, DownH3, CopyRight} from './style'
 import datas from './data.json'
 import links from './pageslink.json';
-import {FiGithub, FiFacebook, FiTwitter, FiLinkedin} from 'react-icons/fi'
-import uuid from 'react-uuid'
+import {FiGithub, FiFacebook, FiTwitter, FiLinkedin, FiMessageCircle} from 'react-icons/fi'
+import { HiOutlineMail } from 'react-icons/hi'
 import FooterAccordion from './FooterAccordion'
 
 const Footer = () => {
     const year = new Date().getFullYear()
     return (
         <Fragment>            
-            <FooterContainer>                                    
-                   {/*  <img className="mx-auto mb-6" src="/images/logo-grande.png" alt="logo" width="350px" /> */}
-                    <FooterHeader>Let's work together</FooterHeader> 
+            <FooterContainer>         
+                <FooterHeader>Let's work together</FooterHeader> 
                 <div className="hidden sm:block">               
                     <FooterLinksWrapper>                    
                         <ColumnContent>
@@ -27,30 +26,39 @@ const Footer = () => {
                         </ColumnContent>                                  
                         <ColumnContent>
                             <ColumnTitle>CONTACT US</ColumnTitle>
-                            <ContactWrapper>
-                                <svg className="h-7 w-7 text-white"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  strokeWidth="2"  strokeLinecap="round"  strokeLinejoin="round">  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />  <polyline points="22,6 12,13 2,6" /></svg>
-                                <a href="mailto:contact@datwit.com">
-                                <UpperH3>contact@datwit.com</UpperH3>
-                                </a>
+                            <ContactWrapper>                                
+                                <Link href="mailto:contact@datwit.com">
+                                    <SocialListItem2>
+                                        <HiOutlineMail />
+                                        <UpperH3>contact@datwit.com</UpperH3>
+                                    </SocialListItem2>                               
+                                </Link>
                             </ContactWrapper>
                             <ContactWrapper>
-                                <svg className="h-7 w-7 text-white"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  strokeWidth="2"  strokeLinecap="round"  strokeLinejoin="round">  <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" /></svg>
-                                <DownH3>+58 658 987</DownH3>
+                                <Link href="tel:+58 658 987">
+                                    <SocialListItem2>
+                                        <FiMessageCircle />
+                                        <UpperH3>+58 658 987</UpperH3>
+                                    </SocialListItem2>
+                                </Link>                                
                             </ContactWrapper>                            
                         </ColumnContent> 
                         {
-                            links.map(llink => (
-                                <ColumnContent key={uuid()}>
+                            React.Children.toArray(
+                                links.map(llink => (
+                                <ColumnContent>
                                     <ColumnTitle>{llink.title}</ColumnTitle>
                                     {
-                                        llink.items.map(l =>(
-                                            <Link href={l.url} key={uuid()}><UpperH3>{l.title}</UpperH3></Link>
-                                        ))
+                                        React.Children.toArray(
+                                            llink.items.map(l =>(
+                                            <Link href={l.url}><UpperH3>{l.title}</UpperH3></Link>
+                                            ))
+                                        )                                        
                                     }
                                 </ColumnContent>
-                            ))
-                        }   
-
+                                ))
+                            )                            
+                        }
                     </FooterLinksWrapper>  
                 </div> 
                 <div className="sm:hidden">
@@ -61,19 +69,22 @@ const Footer = () => {
                                 <Link href={datas[0].url}><SocialListItem><FiLinkedin /></SocialListItem></Link>
                                 <Link  href={datas[1].url}><SocialListItem><FiFacebook /></SocialListItem></Link>
                                 <Link  href={datas[2].url}><SocialListItem><FiGithub /></SocialListItem></Link>
-                                <Link  href={datas[3].url}><SocialListItem><FiTwitter /></SocialListItem></Link> 
-                                <Link href="mailto:contact@datwit.com"><svg className="h-7 w-7 text-white mr-2"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  strokeWidth="2"  strokeLinecap="round"  strokeLinejoin="round">  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />  <polyline points="22,6 12,13 2,6" /></svg></Link> 
-                                <Link href="tel:+58 658 987"><svg className="h-7 w-7 text-white mr-2"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  strokeWidth="2"  strokeLinecap="round"  strokeLinejoin="round">  <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" /></svg></Link>                       
-                            </SocialList>
-                            {/* <Divider />   */}
+                                <Link  href={datas[3].url}><SocialListItem><FiTwitter /></SocialListItem></Link>                                  
+                                <Link href="mailto:contact@datwit.com">
+                                    <li><HiOutlineMail className="h-7 w-7 text-white mr-2"/></li>                                                 
+                                </Link>
+                                <Link href="tel:+58 658 987">
+                                    <li><FiMessageCircle className="h-7 w-7 text-white mr-2" /></li>
+                                </Link>     
+                            </SocialList>                          
                         </ColumnContent> 
                         {/*accordion*/}
                             {
-                                links.map(lik=>(
-                                    <div key={uuid()}>
-                                        <FooterAccordion {...lik} />
-                                    </div>
-                                ))
+                                React.Children.toArray(
+                                    links.map(lik=>(                                    
+                                        <FooterAccordion {...lik} />                                    
+                                    ))
+                                )                                
                             }
                     </FooterLinksWrapper>
                 </div>                   

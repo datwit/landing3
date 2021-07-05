@@ -39,10 +39,27 @@ export const SocialListItem = styled.li.attrs({
     className: "mr-2 h-8 w-8 cursor-pointer"
 })
 `
+list-style:none;
 svg{
     width:1.75rem;
     height:1.75rem;
     color: white;
+    
+    &:hover{
+        color: #00baff;    
+    }
+}
+`;
+export const SocialListItem2 = styled.li.attrs({
+    className: "cursor-pointer flex items-start"
+})
+`
+list-style:none;
+svg{
+    width:1.75rem;
+    height:1.75rem;
+    color: white;
+    margin-right:5px;
     
     &:hover{
         color: #00baff;    
@@ -68,10 +85,6 @@ svg{
 export const UpperH3 = styled.h3.attrs({
     className: "text-white font-medium text-left sm:mb-5 cursor-pointer flex justify-center sm:justify-start hover:text-secondary1"
 })``;
-export const DownH3 = styled.h3.attrs({
-    className: "text-white font-medium text-left cursor-pointer flex justify-center sm:justify-start hover:text-secondary1"
-})
-``;
 export const CopyRight = styled.p.attrs({
     className: "text-md absolute bottom-0"
 })
@@ -90,8 +103,7 @@ export const Divider = styled.div.attrs({
 export const FooterTitleWrapper = styled.div.attrs({
     className: ""
 })
-`
-    /* display: block; */
+`   
     padding: 0.5rem 0;
     display: flex;
     justify-content: space-between;
