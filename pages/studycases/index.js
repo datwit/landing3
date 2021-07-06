@@ -47,12 +47,9 @@ const AllStudyCases = () =>{
 
   const getData = () => {
     const data = cases
-    const cant = window.innerHeight <= 600 && window.innerWidth <= window.innerHeight ? 
-       2 : window.innerHeight >= 800 && window.innerWidth <= window.innerHeight ? 4 : 3
-    setPerPage(cant)
-    
+       
     //slicing data   
-    const slice = data.slice(offset, offset + cant)
+    const slice = data.slice(offset, offset + perPage)
     const casesData = slice.map(item =>           
       <BlogCardWrapper key={uuid()}>                           
               <BlogCardBorder>
@@ -76,7 +73,7 @@ const AllStudyCases = () =>{
 
 )
 setData(casesData)
-setPageCount(Math.ceil(data.length / cant))
+setPageCount(Math.ceil(data.length / perPage))
 }
 
  //callingData

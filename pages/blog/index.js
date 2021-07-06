@@ -79,13 +79,11 @@ const Blog = () => {
 
   //getting our data 
   const getData = () => {
-    const data = posts
-    const cant = window.innerHeight <= 600 && window.innerWidth <= window.innerHeight ? 
-       2 : window.innerHeight >= 800 && window.innerWidth <= 765 ? 4 : 3
+    const data = posts    
 
-    setPerPage(cant)    
+       
     //slicing data   
-    const slice = data.slice(offset, offset + cant)
+    const slice = data.slice(offset, offset + perPage)
     const postData = slice.map(item =>
       <BlogCardWrapper key={uuid()}>        
           <BlogCardBorder>            
@@ -130,7 +128,7 @@ const Blog = () => {
       </BlogCardWrapper>
     )
     setData(postData)
-    setPageCount(Math.ceil(data.length / cant))
+    setPageCount(Math.ceil(data.length / perPage))
 
 
   }
