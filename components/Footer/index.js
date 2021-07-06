@@ -1,12 +1,12 @@
 import Link from 'next/link'
 import React, {Fragment} from 'react'
-import {FooterContainer, SocialList, FooterHeader, FooterLinksWrapper, ColumnContent,ColumnContent2, ColumnTitle, SocialListItem, SocialListItem2, ContactWrapper, UpperH3, DownH3, CopyRight} from './style'
+import {FooterContainer, ContactContainer, SocialList, FooterHeader, FooterLinksWrapper,FooterAccordionContainer, ColumnContent, ColumnTitle, SocialListItem, ContactWrapper,CopyRight} from './style'
 import datas from './data.json'
 import links from './pageslink.json';
 import {FiGithub, FiFacebook, FiTwitter, FiLinkedin, FiMessageCircle} from 'react-icons/fi'
 import { HiOutlineMail } from 'react-icons/hi'
 import FooterAccordion from './FooterAccordion'
-import {QuestionText, AccordionList, AccordionWrapper} from 'components/Partner/Faqs/style'
+import { AccordionList } from 'components/Partner/Faqs/style'
 
 const Footer = () => {
     const year = new Date().getFullYear()
@@ -16,7 +16,7 @@ const Footer = () => {
                 <FooterHeader>Let's work together</FooterHeader> 
                 <div className="hidden sm:block">               
                    <div className="sm:flex">
-                        <div className="sm:w-2/4 lg:flex lg:w-2/3">
+                        <ContactContainer>
                             <div className="w-2/4">
                                 <ColumnTitle>FOLLOW US</ColumnTitle>
                                 <SocialList>
@@ -30,23 +30,21 @@ const Footer = () => {
                                 <ColumnTitle>CONTACT US</ColumnTitle>
                                 <ContactWrapper>                                
                                     <Link href="mailto:contact@datwit.com">
-                                        <SocialListItem2>
+                                        <SocialListItem>
                                             <HiOutlineMail />
-                                            <UpperH3>contact@datwit.com</UpperH3>
-                                        </SocialListItem2>                               
+                                            {/* <UpperH3>contact@datwit.com</UpperH3> */}
+                                        </SocialListItem>                               
                                     </Link>
-                                </ContactWrapper>
-                                <ContactWrapper>
                                     <Link href="tel:+58 658 987">
-                                        <SocialListItem2>
+                                        <SocialListItem>
                                             <FiMessageCircle />
-                                            <UpperH3>+58 658 987</UpperH3>
-                                        </SocialListItem2>
-                                    </Link>                                
-                                </ContactWrapper>                            
+                                            {/* <UpperH3>+58 658 987</UpperH3> */}
+                                        </SocialListItem>
+                                    </Link>  
+                                </ContactWrapper>                                                     
                             </div>
-                        </div>                    
-                        <div className="sm:w-2/4 lg:w-1/3">
+                        </ContactContainer>                    
+                        <FooterAccordionContainer>
                             <AccordionList>
                             {
                                 React.Children.toArray(
@@ -58,7 +56,7 @@ const Footer = () => {
                                 )                                
                             }                           
                             </AccordionList>
-                        </div>                           
+                        </FooterAccordionContainer>                           
                     </div>                        
                 </div>              
                 <div className="sm:hidden">

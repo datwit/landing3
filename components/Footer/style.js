@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 export const FooterContainer = styled.div.attrs({
-    className: "px-5 relative top-2/4 transform -translate-y-2/4"
+    className: "px-10 relative top-2/4 transform -translate-y-2/4"
 })``;
 export const FooterHeader = styled.h1.attrs({
     className: "text-white text-center text-4xl my-2"
@@ -11,9 +11,6 @@ export const FooterLinksWrapper = styled.div.attrs({
 })``;
 export const ColumnContent = styled.div.attrs({
     className: "sm:w-2/4 lg:w-1/4 overflow-hidden lg:my-2 lg:px-2 mb-4"
-})``;
-export const ColumnContent2 = styled.div.attrs({
-    className: "sm:w-2/4"
 })``;
 export const ColumnTitle = styled.h2.attrs({
     className: "text-white text-lg font-bold"
@@ -56,22 +53,6 @@ svg{
     }
 }
 `;
-export const SocialListItem2 = styled.li.attrs({
-    className: "cursor-pointer flex items-center"
-})
-`
-list-style:none;
-svg{
-    width:1.75rem;
-    height:1.75rem;
-    color: white;
-    margin-right:5px;
-    
-    &:hover{
-        color: #00baff;    
-    }
-}
-`;
 export const ContactWrapper = styled.span.attrs({
     className: "flex"
 })
@@ -88,13 +69,12 @@ svg{
     text-align: left !important;
 }
 `;
-export const UpperH3 = styled.h3.attrs({
-    className: "text-white font-medium text-left cursor-pointer flex justify-center sm:justify-start hover:text-secondary1"
-})
-`
-margin: 5px 0;
-line-height: 2.25rem;
-`;
+export const ContactContainer = styled.div.attrs({
+    className: "sm:w-2/4 lg:flex lg:w-2/3"
+})``;
+export const FooterAccordionContainer = styled.div.attrs({
+    className: "sm:w-2/4 lg:w-1/3"
+})``;
 export const CopyRight = styled.p.attrs({
     className: "text-md absolute bottom-0"
 })
