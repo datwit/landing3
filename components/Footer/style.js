@@ -12,10 +12,15 @@ export const FooterLinksWrapper = styled.div.attrs({
 export const ColumnContent = styled.div.attrs({
     className: "sm:w-2/4 lg:w-1/4 overflow-hidden lg:my-2 lg:px-2 mb-4"
 })``;
+export const ColumnContent2 = styled.div.attrs({
+    className: "sm:w-2/4"
+})``;
 export const ColumnTitle = styled.h2.attrs({
-    className: "text-white font-bold text-lg my-2 sm:my-0 sm:mb-5"
+    className: "text-white text-lg font-bold"
 })
 `
+margin: 5px 0;
+line-height: 2.25rem;
 text-transform:uppercase;
 
 @media (max-width: 639px){
@@ -36,10 +41,11 @@ export const SocialList = styled.ul.attrs({
 }
 `;
 export const SocialListItem = styled.li.attrs({
-    className: "mr-2 h-8 w-8 cursor-pointer"
+    className: "mr-2 h-8 w-8 cursor-pointer mt-2"
 })
 `
 list-style:none;
+
 svg{
     width:1.75rem;
     height:1.75rem;
@@ -51,7 +57,7 @@ svg{
 }
 `;
 export const SocialListItem2 = styled.li.attrs({
-    className: "cursor-pointer flex items-start"
+    className: "cursor-pointer flex items-center"
 })
 `
 list-style:none;
@@ -83,8 +89,12 @@ svg{
 }
 `;
 export const UpperH3 = styled.h3.attrs({
-    className: "text-white font-medium text-left sm:mb-5 cursor-pointer flex justify-center sm:justify-start hover:text-secondary1"
-})``;
+    className: "text-white font-medium text-left cursor-pointer flex justify-center sm:justify-start hover:text-secondary1"
+})
+`
+margin: 5px 0;
+line-height: 2.25rem;
+`;
 export const CopyRight = styled.p.attrs({
     className: "text-md absolute bottom-0"
 })
@@ -93,62 +103,8 @@ left:50%;
 transform: translateX(-50%);
 color: #b7b7bc;
 `;
-export const Divider = styled.div.attrs({
-    className: "w-8 h-1 mx-auto mt-4 bg-secondary2 block sm:hidden"
-})
-`
-// background: #b7b7bc;
-`;
 
-export const FooterTitleWrapper = styled.div.attrs({
-    className: ""
-})
-`   
-    padding: 0.5rem 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: transparent;
-    z-index: 2;
-    position: relative;
-    cursor:pointer;
-
-    .icon-rotate {       
-        transform: rotate(180deg); 
-                    
-    }   
-`;
-export const AccordionSection = styled.div
-`
-    display: flex;
-    flex-direction: column;
-`;
-export const Accordion = styled.button
-`
-    background-color: #1e4158;
-    color: white;
-    cursor: pointer; 
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border: none;
-    outline: none;
-    border-bottom: 1px solid #fcfcfc; 
-
-    .accordion__icon { 
-        width: 1.2rem;
-        height: 1.2rem;
-        transition: transform 0.3s ease-in-out;
-        background-size: contain;
-        background-repeat: no-repeat;  
-        opacity: 0.6;  
-        margin: 5px 0 5px 0;
-    }
-    .rotate {
-        transform: rotate(180deg);
-    }
-`;
-export const AccordionTitle = styled.h2
+export const AccordionFooterTitle = styled.h2
 `
     font-weight: 600;
     font-size: 18px;
@@ -156,6 +112,36 @@ export const AccordionTitle = styled.h2
     color: white;
     text-transform: uppercase;
     margin: 5px 0 5px 0;
+`;
+export const AccordionTitleWrapperF = styled.div.attrs({
+    className: "border border-gray-300 shadow hover:shadow-md transition duration-200 ease-in"
+})`
+  
+    display: flex;
+    justify-content: space-between;
+    align-items: center;    
+    position: relative;
+    cursor:pointer;
+    background-color: #1e4158;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #fcfcfc; 
+
+    .icon-rotate {       
+        transform: rotate(180deg);                      
+    }   
+
+`;
+export const AccordionIconFooter= styled.svg
+`
+    width: 1.2rem;
+    height: 1.2rem;
+    transition: transform 0.3s ease-in-out;
+    background-size: contain;
+    background-repeat: no-repeat;    
+    margin: 5px 0 5px 0;
+    color:white;
+
 `;
 export const AccordionContent = styled.div
 `
@@ -165,4 +151,14 @@ export const AccordionContent = styled.div
     text-align: center;  
     display: flex;    
     flex-direction: column;
+`;
+export const AccContWrapper = styled.div
+`
+    max-height: 0;
+    overflow: hidden;
+    text-transform: cubic-bezier(0.95, 0.05, 0.795, 0.035);
+    transition-duration: 0.5s;
+    transition-property: max-height;    
+    position: relative; 
+        
 `;
