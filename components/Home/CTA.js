@@ -1,4 +1,4 @@
-import {Button} from '../../styles/global'
+import {Button} from 'styles/global'
 import Link from 'next/link';
 
 
