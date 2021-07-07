@@ -117,10 +117,9 @@ const CasesResults = () => {
               </a>
             <SectionHeader>Search Results</SectionHeader>
               {/*pagination*/}
-                <PaginationSection>
-                  <div className="w-full">
+                  <PaginationSection>                  
                     {data}
-                  </div>                 
+                  </PaginationSection>                
                   { results ==0 ?
                       <div className="mx-auto">
                       <p>No results found 😢 </p>
@@ -142,8 +141,7 @@ const CasesResults = () => {
                       </PaginationWrapper>
                       :
                       []
-                  }
-                </PaginationSection>
+                  }                
               </div>            
             </Section>        
           </Slide>       
@@ -170,8 +168,9 @@ const CasesResults = () => {
                {/* */}
               <SectionHeader>Search Results</SectionHeader>
                 {/*pagination*/}
-                  <PaginationSection>
-                      {data}              
+                    <PaginationSection>
+                      {data} 
+                    </PaginationSection>                 
                     { results ==0 ?
                         <div className="mx-auto">
                         <p>No results found 😢 </p>
@@ -193,8 +192,7 @@ const CasesResults = () => {
                         </PaginationWrapper>
                         :
                         []
-                    }
-                  </PaginationSection>
+                    }                  
               </div>            
             </Section>        
           </Slide>       

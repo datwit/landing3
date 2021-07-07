@@ -104,8 +104,10 @@ return (
                       <SectionHeader>Feel free to explore our solutions</SectionHeader>
                       <SectionSubheader>Commitment and creativity mark our creations. By all means, stroll along...</SectionSubheader>
                       {/*pagination*/}
-                      <div className="flex flex-wrap relative pb-20">
-                          {data} 
+                      
+                          <div className="flex flex-wrap">
+                            {data} 
+                          </div>                         
                           {
                           pageCount >= 2 
                           ?                      
@@ -127,7 +129,7 @@ return (
                           :
                             [] 
                           }                                                 
-                      </div>
+                     
                   </div>
                   </Section>
               </Slide>
@@ -145,9 +147,10 @@ return (
                 <div className="px-5 mx-auto pb-16 mt-20"> 
                     <SectionHeader>Check out our solutions</SectionHeader>
                     <SectionSubheader>Commitment and creativity mark our creations. By all means, stroll along...</SectionSubheader>
-                    {/*pagination*/}
-                    <div className="flex flex-wrap">
-                        {data} 
+                    {/*pagination*/}                   
+                        <div className="flex flex-wrap">
+                           {data} 
+                        </div>                      
                         {
                         pageCount >= 2 
                         ?                      
@@ -168,8 +171,7 @@ return (
                           </PaginationWrapper>
                         :
                           [] 
-                        }                                                 
-                    </div>
+                        }                           
                 </div>
                 </Section>
               </Slide>

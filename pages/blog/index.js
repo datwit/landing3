@@ -180,8 +180,9 @@ const Blog = () => {
                       </SearchWrapper>
 
                     {/*pagination*/}
-                    <div className="flex flex-wrap pb-20 relative">                      
-                        {data}                                            
+                      <div className="flex flex-wrap">                      
+                        {data}  
+                      </div>                                          
                       {
                       pageCount >= 2 
                         ?
@@ -201,8 +202,7 @@ const Blog = () => {
                           :
                           [] 
                         }          
-                      </div>
-                  </div>
+                      </div>                
                 </Section>
               </Slide>
 
@@ -235,8 +235,9 @@ const Blog = () => {
                       </SearchWrapper>
 
                     {/*pagination*/}
-                    <div className="flex flex-wrap">
-                      {data}
+                      <div className="flex flex-wrap">
+                        {data}
+                      </div>
                       {
                       pageCount >= 2 
                         ?
@@ -255,8 +256,7 @@ const Blog = () => {
                           </PaginationWrapper>
                           :
                           [] 
-                        }          
-                      </div>
+                        }                      
                   </div>
                 </Section>
               </Slide>

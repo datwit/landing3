@@ -76,7 +76,7 @@ export const RespBlock = styled.div.attrs({
     className: "p-2 sm:w-5/6 w-1/2 h-full"
 })``;
 export const ImageW = styled.div.attrs({
-    className: "sm:w-1/6 w-1/2 h-full"
+    className: "sm:w-1/3 md:w-1/4 lg:w-1/6 w-1/2 h-full"
 })
 `
      
@@ -90,6 +90,14 @@ export const ImageW = styled.div.attrs({
         display:flex;
         align-items:center;    
         }
+        @media (min-width: 450px){    
+        width:75%;
+        height:auto;         
+        } 
+        @media (min-width: 640px){    
+        width:90%;
+        height:auto;         
+        }       
     }
 `;
 export const SearchCard = styled.div.attrs({
@@ -141,15 +149,16 @@ export const SearchField= styled.input.attrs({
 export const PaginationWrapper= styled.div        
 `
     
-    position: absolute;    
-    bottom:0px;
-    left: 50%;
-    transform: translateX(-50%);
-
+    position: relative;
+    
     .pagination{
-        padding: 28px 0;
+        padding: 20px 0 0 0;
         display: flex;
         list-style: none; 
+        left: 50%;
+        position: absolute;
+        transform: translate(-50%);
+        
         
     
     li{
