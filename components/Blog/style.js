@@ -67,7 +67,8 @@ export const BlogCardBorder = styled.div.attrs({
         }
         @media (min-width: 1280px){        
         width:auto;
-        height:200px;
+       /*  height:160px; */
+       height: 30vh;
         }
 
     }    
