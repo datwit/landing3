@@ -1,5 +1,3 @@
-import React from 'react'
-
 const FoundersIllustration = () => {
     return (        
         <svg className="mx-auto resizes" viewBox="0 0 524 537" fill="none" xmlns="http://www.w3.org/2000/svg">

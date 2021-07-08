@@ -31,16 +31,7 @@ const Faqs = ({classes}) => {
                         </QuestionWrapper>
                     </Link>                   
                </div>          
-            </div>
-                                            
-            
-            {/* <SectionSubheader>If you want to know its answers and a bunch of other questions, feel free to click below...</SectionSubheader>
-            
-                <CTA buttonName={'Read more'} hhref='/faqs'>                
-                    <svg className="h-6 w-6 text-white ml-2"  fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
-                    </svg>
-                </CTA> */}                  
+            </div>                        
         </div>
             
     )

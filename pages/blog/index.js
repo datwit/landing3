@@ -79,13 +79,11 @@ const Blog = () => {
 
   //getting our data 
   const getData = () => {
-    const data = posts
-    const cant = window.innerHeight <= 600 && window.innerWidth <= window.innerHeight ? 
-       2 : window.innerHeight >= 800 && window.innerWidth <= 765 ? 4 : 3
+    const data = posts    
 
-    setPerPage(cant)    
+       
     //slicing data   
-    const slice = data.slice(offset, offset + cant)
+    const slice = data.slice(offset, offset + perPage)
     const postData = slice.map(item =>
       <BlogCardWrapper key={uuid()}>        
           <BlogCardBorder>            
@@ -130,7 +128,7 @@ const Blog = () => {
       </BlogCardWrapper>
     )
     setData(postData)
-    setPageCount(Math.ceil(data.length / cant))
+    setPageCount(Math.ceil(data.length / perPage))
 
 
   }
@@ -164,7 +162,7 @@ const Blog = () => {
             <FullPage controls={CustomControls}>
               <Slide {...style}>
                 <Section classes={'w-full h-screen'}>
-                <div className="container px-5 mx-auto relative top-2/4 transform -translate-y-2/4 mt-10 xl:mt-12">
+                <div className="container px-5 mx-auto relative top-2/4 transform -translate-y-2/4">
                       <SectionSubheader>Discover interesting ideas and unique perspectives from our amazing crew</SectionSubheader>        
                       {pressEnter && searchRedirect()}
                       {/* search box*/}
@@ -182,8 +180,9 @@ const Blog = () => {
                       </SearchWrapper>
 
                     {/*pagination*/}
-                    <div className="flex flex-wrap pb-20 relative">                      
-                        {data}                                            
+                      <div className="flex flex-wrap">                      
+                        {data}  
+                      </div>                                          
                       {
                       pageCount >= 2 
                         ?
@@ -203,8 +202,7 @@ const Blog = () => {
                           :
                           [] 
                         }          
-                      </div>
-                  </div>
+                      </div>                
                 </Section>
               </Slide>
 
@@ -237,8 +235,9 @@ const Blog = () => {
                       </SearchWrapper>
 
                     {/*pagination*/}
-                    <div className="flex flex-wrap">
-                      {data}
+                      <div className="flex flex-wrap">
+                        {data}
+                      </div>
                       {
                       pageCount >= 2 
                         ?
@@ -257,8 +256,7 @@ const Blog = () => {
                           </PaginationWrapper>
                           :
                           [] 
-                        }          
-                      </div>
+                        }                      
                   </div>
                 </Section>
               </Slide>

@@ -1,9 +1,7 @@
+import React from 'react';
 import datas from "./data.json";
 import {SCardWrapper} from './style';
-import {ContentWrapper, SectionSubheader, SectionHeader} from '../../../styles/global';
-import { BlogCardBorder, RespBlock, BlogTitle2} from '../../../components/Blog/style'
-import Link from "next/link"
-import uuid from 'react-uuid'
+import {ContentWrapper, SectionSubheader, SectionHeader} from 'styles/global';
 import StudyCasesCard from './StudyCasesCard';
 import Carousel from 'react-elastic-carousel'
 
@@ -21,22 +19,27 @@ const StudyCases = ({classes}) => {
         <div className="hidden md:block">
             <ContentWrapper>    
                {
+                   React.Children.toArray(
                     datas.map(data => (
-                        <SCardWrapper key={uuid()}>                           
+                        <SCardWrapper >                           
                             <StudyCasesCard img={data.img} title={data.title} id={data.id} summary={data.summary}/>
                         </SCardWrapper> 
-                    ))
+                        ))
+                   )                   
                }                    
             </ContentWrapper>
         </div> 
         <div className="md:hidden">                                      
             <Carousel breakPoints={breakPoints} onTouchMove={e => e.stopPropagation()}>
                 {
-                    datas.map(data => (
-                        <SCardWrapper key={uuid()}>                           
+                    React.Children.toArray(
+                        datas.map(data => (
+                        <SCardWrapper>                           
                             <StudyCasesCard img={data.img} title={data.title} id={data.id} summary={data.summary}/>
                         </SCardWrapper> 
-                    ))
+                        ))
+                    )
+                   
                 } 
             </Carousel>               
         </div>  

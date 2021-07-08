@@ -1,50 +1,38 @@
-import React, { useState, useRef } from 'react'
-import Link from 'next/link'
+import {useState} from 'react'
+import {AccItemContent, AccItemParagraph, AccordionTitle, AccItem, AccordionTitleWrapper, AccordionIcon, AccItemInner} from 'components/Partner/Faqs/style'
 import uuid from 'react-uuid'
-import {AccordionSection, Accordion, AccordionTitle,AccordionContent} from './style'
+import Link from 'next/link'
+import {AccordionSection, Accordion, AccordionFooterTitle,AccordionContent, AccordionTitleWrapperF, AccordionIconFooter, AccContWrapper} from './style'
 
 const FooterAccordion = ({ title, items }) => {
 
-    const [setActive, setActiveState] = useState("");
-    const [setHeight, setHeightState] = useState("0px");
-    const [setRotate, setRotateState] = useState("accordion__icon");
-
-  const content = useRef(null);
-
-  function toggleAccordion() {
-    setActiveState(setActive === "" ? "active" : "");
-    setHeightState(
-      setActive === "active" ? "0px" : `${content.current.scrollHeight}px`
-    );
-    setRotateState(
-      setActive === "active" ? "accordion__icon" : "accordion__icon rotate"
-    );
-  }
-
+    const [opened, setOpened]=useState(false)
+    
     return (
-        <>
-          <AccordionSection>
-              <Accordion className={setActive} onClick={toggleAccordion}>
-                  <AccordionTitle>{title}</AccordionTitle>                
-                  <svg className={`${setRotate} text-white`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <>        
+          <AccItem className= {opened && 'accordion-item--opened'}>
+              <AccordionTitleWrapperF onClick ={ () => { setOpened( !opened ) }}>
+                  <AccordionFooterTitle>{title}</AccordionFooterTitle>          
+                  <AccordionIconFooter className={!opened ? '' : 'icon-rotate' } fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"/>
-                  </svg>
-              </Accordion>
-              <AccordionContent ref={content} style={{ maxHeight: `${setHeight}` }}>                
+                  </AccordionIconFooter>         
+              </AccordionTitleWrapperF>
+              <AccContWrapper {...{className:'accordion-item__inner'}}>
+                <AccordionContent {...{ className: 'accordion-item__content' }}>
                 <ul className="my-2">
                   {
                       items.map(l =>(
                         <li className="list-none" key={uuid()}>
                           <Link href={l.url}>{l.title}</Link>
-                        </li>                        
+                        </li>                                                
                       ))                    
                   }
-                </ul>                      
-              </AccordionContent>
-          </AccordionSection>
-         
-        </> 
+                </ul> 
+                </AccordionContent>
+              </AccContWrapper>
+          </AccItem>
+      </>    
     )
 }
 
-export default FooterAccordion
+export default FooterAccordion 

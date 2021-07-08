@@ -41,5 +41,9 @@ export const Button = styled.a
         }
         
     }
+    svg{       
+        color: white;
+        margin-left:8px;      
+    }
      
 `;

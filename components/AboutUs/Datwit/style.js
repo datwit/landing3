@@ -11,27 +11,23 @@ export const ImgWrapper = styled.div.attrs({
         width:  auto;
         height: auto;
     }
-    svg.resizes{
-  
-    @media (min-width: 1024px){
-        object-fit:cover;
-        width: 90%;
-        height:90%;
+    svg.resizes{  
+        @media (min-width: 1024px){
+            object-fit:cover;
+            width: 90%;
+            height:90%;
+        }
     }
-}
     #sign{
         animation: sign-anime 1s linear infinite alternate; 
         -webkit-animation: sign-anime 1s linear infinite alternate;          
-    }
-    
+    }    
     @keyframes sign-anime {
         0%{
-            transform: translateY(0);
-            
+            transform: translateY(0);            
         }
         100%{
-            transform: translateY(10px);
-            
+            transform: translateY(10px);            
         }
     }
 `;

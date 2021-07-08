@@ -122,7 +122,7 @@ return (
         <FullPage controls={CustomControls}>
           <Slide {...style}>
             <Section classes={'w-full h-screen'}>
-            <div className="px-5 mx-auto mt-20">
+            <div className="container px-5 mx-auto mt-20">
               {/* back button*/}
               <a onClick={()=>router.back()}>
                   <h3 className="flex cursor-pointer hover:text-secondary1">
@@ -132,10 +132,9 @@ return (
               </a>
             <SectionHeader>Search Results</SectionHeader>
               {/*pagination*/}
-                <PaginationSection>
-                  <div className="w-full">
+                  <PaginationSection>                  
                     {data}
-                  </div>                 
+                  </PaginationSection>                                      
                   { results ==0 ?
                       <div className="mx-auto">
                       <p>No results found 😢 </p>
@@ -157,8 +156,7 @@ return (
                       </PaginationWrapper>
                       :
                       []
-                  }
-                </PaginationSection>
+                  }               
               </div>            
             </Section>        
           </Slide>       
@@ -174,9 +172,9 @@ return (
           <Navbar scrollToSlide={ scrollToTop }/>
           <Slide {...style}>
             <Section classes={'min-h-screen'}>
-              <div className="container px-5 mx-auto mt-20">
+              <div className="px-5 mx-auto pb-16 mt-20">
                 <Link href="/blog/">
-                  <h3 className="flex cursor-pointer pt-2 pb-4 hover:text-secondary1">
+                  <h3 className="flex cursor-pointer hover:text-secondary1">
                       <FiChevronLeft  className="h-6 w-6 mr-2"/>                                    
                       <span>Back</span>
                   </h3>
@@ -184,7 +182,8 @@ return (
               <SectionHeader>Search Results</SectionHeader>
                 {/*pagination*/}
                   <PaginationSection>
-                      {data}              
+                      {data}
+                  </PaginationSection>                  
                     { results ==0 ?
                         <div className="mx-auto">
                         <p>No results found 😢 </p>
@@ -206,8 +205,7 @@ return (
                         </PaginationWrapper>
                         :
                         []
-                    }
-                  </PaginationSection>
+                    }                  
               </div>            
             </Section>        
           </Slide>       
