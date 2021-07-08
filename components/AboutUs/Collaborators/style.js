@@ -11,8 +11,21 @@ export const ColName = styled.h2.attrs({
 export const ColRol = styled.h4.attrs({
     className: "text-gray-500 mb-3"
 })``; 
+export const SocialLinkItem = styled.a.attrs({
+    className: "ml-2"
+})
+`
+svg{
+    width: 32px;
+    height: 32px;
+    color: #e69c24;
+    margin: 16px 0;   
+    
+    &:hover{
+        color:#00baff;
+    }
+}
 
-export const SocialWrapper = styled.span.attrs({
-    className: "flex justify-center"
-})``; 
+`; 
+
 

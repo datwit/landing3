@@ -47,12 +47,9 @@ const AllStudyCases = () =>{
 
   const getData = () => {
     const data = cases
-    const cant = window.innerHeight <= 600 && window.innerWidth <= window.innerHeight ? 
-       2 : window.innerHeight >= 800 && window.innerWidth <= window.innerHeight ? 4 : 3
-    setPerPage(cant)
-    
+       
     //slicing data   
-    const slice = data.slice(offset, offset + cant)
+    const slice = data.slice(offset, offset + perPage)
     const casesData = slice.map(item =>           
       <BlogCardWrapper key={uuid()}>                           
               <BlogCardBorder>
@@ -76,7 +73,7 @@ const AllStudyCases = () =>{
 
 )
 setData(casesData)
-setPageCount(Math.ceil(data.length / cant))
+setPageCount(Math.ceil(data.length / perPage))
 }
 
  //callingData
@@ -103,12 +100,14 @@ return (
           <FullPage controls={CustomControls}>
               <Slide {...style}>
                   <Section classes={'w-full h-screen'}>
-                  <div className="container px-5 mx-auto relative top-2/4 transform -translate-y-2/4 mt-10 xl:mt-14"> 
+                  <div className="container px-5 mx-auto relative top-2/4 transform -translate-y-2/4"> 
                       <SectionHeader>Feel free to explore our solutions</SectionHeader>
                       <SectionSubheader>Commitment and creativity mark our creations. By all means, stroll along...</SectionSubheader>
                       {/*pagination*/}
-                      <div className="flex flex-wrap relative pb-20">
-                          {data} 
+                      
+                          <div className="flex flex-wrap">
+                            {data} 
+                          </div>                         
                           {
                           pageCount >= 2 
                           ?                      
@@ -130,7 +129,7 @@ return (
                           :
                             [] 
                           }                                                 
-                      </div>
+                     
                   </div>
                   </Section>
               </Slide>
@@ -148,9 +147,10 @@ return (
                 <div className="px-5 mx-auto pb-16 mt-20"> 
                     <SectionHeader>Check out our solutions</SectionHeader>
                     <SectionSubheader>Commitment and creativity mark our creations. By all means, stroll along...</SectionSubheader>
-                    {/*pagination*/}
-                    <div className="flex flex-wrap">
-                        {data} 
+                    {/*pagination*/}                   
+                        <div className="flex flex-wrap">
+                           {data} 
+                        </div>                      
                         {
                         pageCount >= 2 
                         ?                      
@@ -171,8 +171,7 @@ return (
                           </PaginationWrapper>
                         :
                           [] 
-                        }                                                 
-                    </div>
+                        }                           
                 </div>
                 </Section>
               </Slide>

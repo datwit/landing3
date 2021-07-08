@@ -22,7 +22,7 @@ const StudyCasesCard = ({img, title,summary,id}) => {
                                                   
             </CardContent>    
         </SCardBorder>
-)
+    )
 }
 
 export default StudyCasesCard
