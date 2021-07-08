@@ -32,11 +32,14 @@ const StudyCases = ({classes}) => {
         <div className="md:hidden">                                      
             <Carousel breakPoints={breakPoints} onTouchMove={e => e.stopPropagation()}>
                 {
-                    datas.map(data => (
+                    React.Children.toArray(
+                        datas.map(data => (
                         <SCardWrapper>                           
                             <StudyCasesCard img={data.img} title={data.title} id={data.id} summary={data.summary}/>
                         </SCardWrapper> 
-                    ))
+                        ))
+                    )
+                   
                 } 
             </Carousel>               
         </div>  
