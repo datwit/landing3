@@ -1,11 +1,9 @@
 const path =require('path')
 
 module.exports = {    
-    trailingSlash: true,   
-
+    trailingSlash: true,
     webpack: config => {
         config.resolve.modules.push(path.resolve('./'))
-
         return config
     }
 }
