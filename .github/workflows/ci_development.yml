@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Build and Upload
-        uses: convictional/trigger-workflow-and-wait@1.4.0
+        uses: convictional/trigger-workflow-and-wait@v1.4.0
         with:
           owner: datwit
           repo: landing3
@@ -23,7 +23,7 @@ jobs:
           wait_workflow: true
 
       - name: Deploy site
-        uses: convictional/trigger-workflow-and-wait@1.4.0
+        uses: convictional/trigger-workflow-and-wait@v1.4.0
         with:
           owner: datwit
           repo: landing-stack
