@@ -12,7 +12,7 @@ jobs:
         uses: convictional/trigger-workflow-and-wait@v1.4.0
         with:
           owner: datwit
-          repo: datwit/landing3
+          repo: landing3
           github_token: ${{ secrets.LANDING_DEPLOY_TOKEN }}
           workflow_file_name: export_and_upload_to_s3.yml
           ref: development
@@ -26,7 +26,7 @@ jobs:
         uses: convictional/trigger-workflow-and-wait@v1.4.0
         with:
           owner: datwit
-          repo: datwit/landing-stack
+          repo: landing-stack
           github_token: ${{ secrets.LANDING_DEPLOY_TOKEN }}
           workflow_file_name: deploy-development.yml
           ref: main
