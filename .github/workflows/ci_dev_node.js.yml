@@ -1,7 +1,8 @@
-name: Sequential CI-CD Development
+name: Nodejs CI-CD Development
 
 on:
-  workflow_dispatch
+  push:
+    branches: [ development ]
 
 jobs:
   build:
@@ -13,15 +14,15 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
-      
+
       - name: Use Node.js ${{ matrix.nenvironmentsode-version }}
-      
+
         uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node-version }}
 
       - run: yarn install
-      
+
       # remove CI=false in production
       - run: CI=false yarn build
 
@@ -30,8 +31,8 @@ jobs:
           name: website
           path: './out'
 
-  upload:
-    name: Upload to AWS
+  deploy:
+    name: Deploy to AWS
     runs-on: ubuntu-latest
     needs: build
     env:
