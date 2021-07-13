@@ -1,9 +1,10 @@
 import React from 'react'
-import {ContentWrapper, SectionHeader, SectionSubheader} from '../../../styles/global'
+import { SectionHeader} from 'styles/global'
 import datas from './bullets.json';
 import { BulletsContainer } from './style';
 import {PBullets} from '../../Home/Pricing/style';
-import uuid from 'react-uuid'
+import { IoIosPlayCircle } from "react-icons/io";
+
 
 const Believe = ({classes}) => {
     return (
@@ -11,17 +12,18 @@ const Believe = ({classes}) => {
             <BulletsContainer>
                 <SectionHeader className="text-left pb-3">Datwit team believes in:</SectionHeader>
                 {
-                    datas.map(data => (
-                        <div  className="m-3 flex items-center" key={uuid()}>
+                    React.Children.toArray(
+                        datas.map(data => (
+                        <div  className="m-3 flex items-center">
                             <PBullets>
-                                <svg className="h-8 w-8 text-secondary2"  viewBox="0 0 24 24"  fill="currentColor"  stroke="none"  strokeWidth="2"  strokeLinecap="round"  strokeLinejoin="round">  <circle cx="12" cy="12" r="10" />  <polygon fill="#fff" points="10 8 16 12 10 16 10 8" /></svg>
+                                <IoIosPlayCircle className="h-8 w-8 text-secondary2"/>
                             </PBullets>
                             {data}
                         </div>
-                        
-                    ))
+                        ))
+                    )
                 }
-            </BulletsContainer>         
+            </BulletsContainer>
         </div>
     )
 }

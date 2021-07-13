@@ -17,7 +17,8 @@ export const PBulletsWrapper = styled.p.attrs({
 })``;
 export const PBullets = styled.span.attrs({
     className: "w-5 h-5 mr-2 inline-flex items-center justify-center flex-shrink-0"
-})``;
+})
+``;
 export const CarouselContainer = styled.div.attrs({
     className: ""
 })
@@ -26,29 +27,29 @@ export const CarouselContainer = styled.div.attrs({
     display:none;
 }
 .control-dots{
-    
+
     bottom:-17px;
     li{
         width: 25px;
-        height: 5px; 
+        height: 5px;
     }
 
     .dot{
         width: 25px;
         height: 5px;
-        border-radius:0;            
+        border-radius:0;
         background: #00baff;
         box-shadow:none;
 
-    }  
+    }
 }
 .control-arrow {
     visibility:hidden;
-    
+
     &.control-next, &.control-prev{
-        &::before{            
-            visibility:hidden;               
-        }   
-    }     
+        &::before{
+            visibility:hidden;
+        }
+    }
 }
 `;
