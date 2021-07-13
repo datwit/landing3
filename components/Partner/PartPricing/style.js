@@ -44,7 +44,7 @@ export const ToggleWrapper = styled.div.attrs({
     className: "flex mx-auto bg-gray-100 rounded-full overflow-hidden my-3 justify-between lg:max-w-lg xl:max-w-xl"
 })``;
 export const BundleChooser = styled.a.attrs({
-    className: "py-1 px-4 rounded-full text-xs sm:text-base flex items-center"
+    className: "py-1 px-4 rounded-full text-xs sm:text-base flex items-center hover:text-secondary1 cursor-pointer"
 })``;
 export const PriceTitle = styled.h1.attrs({
     className: "title-font sm:text-2xl text-lg font-medium text-primary sm:mb-3"

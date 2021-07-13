@@ -2,25 +2,21 @@ import React from 'react'
 import { PriceTitle, PriceDescription} from './style';
 import CTA from '../../Home/CTA'
 import Link from "next/link"
-import {Button} from '../../../styles/global'
+import {Button} from 'styles/global'
 
 const PartnerCard = ({title, description, price}) => {
     return (
         <>
             <PriceTitle>{title}</PriceTitle>
                 <PriceDescription>{description}</PriceDescription>
-                <h2 className="text-black" >{price}</h2>
-                <div className="justify-center my-2 flex">                    
-                        <Link href="/contact">
-                            <Button>Contact us            
-                                <svg className="h-6 w-6 text-white ml-2"  width="24" height="24" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">  <path stroke="none" d="M0 0h24v24H0z"/>  <line x1="10" y1="14" x2="21" y2="3" />  <path d="M21 3L14.5 21a.55 .55 0 0 1 -1 0L10 14L3 10.5a.55 .55 0 0 1 0 -1L21 3" /></svg>
-                            </Button>
-                        </Link>
-                                          
-                    {/* <CTA buttonName={'Contact us'} hhref='/contact'>
-                        <svg className="h-6 w-6 text-white ml-2"  width="24" height="24" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">  <path stroke="none" d="M0 0h24v24H0z"/>  <line x1="10" y1="14" x2="21" y2="3" />  <path d="M21 3L14.5 21a.55 .55 0 0 1 -1 0L10 14L3 10.5a.55 .55 0 0 1 0 -1L21 3" /></svg>
-                    </CTA> */}
-                </div>            
+                <h2 className="text-gray-600" >{price}</h2>
+                <div className="justify-center my-2 flex">
+                    <Link href="/contact">
+                        <Button>Contact us
+                            <svg className="h-6 w-6 text-white ml-2"  width="24" height="24" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">  <path stroke="none" d="M0 0h24v24H0z"/>  <line x1="10" y1="14" x2="21" y2="3" />  <path d="M21 3L14.5 21a.55 .55 0 0 1 -1 0L10 14L3 10.5a.55 .55 0 0 1 0 -1L21 3" /></svg>
+                        </Button>
+                    </Link>
+                </div>
         </>
     )
 }
