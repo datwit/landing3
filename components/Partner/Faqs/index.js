@@ -1,10 +1,11 @@
 import { SectionHeader, SectionSubheader} from 'styles/global'
-import {QuestionWrapper, QuestionText} from './style';
+import {QuestionWrapper, QuestionText, SVGCircle} from './style';
 import CTA from '../../Home/CTA'
 import Link from "next/link"
 import {PartnerIconSVG} from './PartnerIconSVG'
 import {DevIconSVG} from './DevIconSVG'
 import FaqCard from './FaqCard'
+import {FaRegHandshake, FaLaptopCode} from "react-icons/fa";
 
 
 const Faqs = ({classes}) => {
@@ -16,12 +17,14 @@ const Faqs = ({classes}) => {
 
             <div className="flex flex-wrap">
                <FaqCard href="/fpartner">
-                    <PartnerIconSVG />
-                    For <br/> Partners
+                    {/*<PartnerIconSVG />*/}
+                    <SVGCircle><FaRegHandshake /></SVGCircle>
+                    <h1 className="text-lg">For <br/> Partners</h1>
                </FaqCard>
                 <FaqCard href="/fteam">
-                    <DevIconSVG />
-                    For <br/> Developers
+                    {/*<DevIconSVG />*/}
+                    <SVGCircle><FaLaptopCode /></SVGCircle>
+                    <h1 className="text-lg">For <br/> Developers</h1>
                </FaqCard>
             </div>
         </div>
