@@ -1,17 +1,12 @@
-import { IconContent, IconTitle, IconText, IconBlock} from '../../Partner/Find/style'
-import {IconWrapper} from './style'
+ import React from 'react'
+import { IconContent, IconTitle, IconText} from '../../Partner/Find/style'
 
-const BenefitBlock = ({title, description, children}) => {
-    return (
-        <IconWrapper>
-	        <IconBlock>
-	            {children}
-	            <IconContent>
-	                <IconTitle>{title}</IconTitle>
-	                <IconText>{description}</IconText>
-	            </IconContent>
-	        </IconBlock>
-        </IconWrapper>
+const BenefitBlock = ({title, description}) => {
+    return (        
+        <IconContent>
+            <IconTitle>{title}</IconTitle>
+            <IconText>{description}</IconText>
+        </IconContent>         
     )
 }
 

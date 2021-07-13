@@ -1,6 +1,8 @@
 import styled from 'styled-components'
 
-
+/* export const ImgContainer = styled.div.attrs({
+    className: "flex flex-wrap -m-4 sm:mt-1/4 lg:mt-0"
+})``; */
 export const ImgContainer = styled.div.attrs({
     className: "flex flex-wrap -m-4 lg:mt-0"
 })``;

@@ -5,11 +5,11 @@ import Link from "next/link"
 const StudyCasesCard = ({img, title,summary,id}) => {
     return (
         <SCardBorder>
-            <img className="lg:h-48 h-36 w-full object-cover object-center res-img" src={img} alt="" />
-            <CardContent>
+            <img className="lg:h-48 h-36 w-full object-cover object-center res-img" src={img} alt="" />                                
+            <CardContent>                                                      
                 <Link href={`/studycases/${id}`}><CardTitle>{title}</CardTitle></Link>
                 <div className="hidden lg:block">
-                    <CardSubtitle>{summary}</CardSubtitle>
+                    <CardSubtitle>{summary}</CardSubtitle>                                    
                     <Link href={`/studycases/${id}`}>
                         <ReadMore>Learn More
                             <svg className="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round">
@@ -19,9 +19,10 @@ const StudyCasesCard = ({img, title,summary,id}) => {
                         </ReadMore>
                     </Link>
                 </div>
-            </CardContent>
+                                                  
+            </CardContent>    
         </SCardBorder>
-    )
+)
 }
 
 export default StudyCasesCard
