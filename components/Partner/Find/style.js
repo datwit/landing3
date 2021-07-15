@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 export const IconBlock = styled.div.attrs({
-    className: "h-full overflow-hidden mx-4 md:mx-0"
+    className: "h-full mx-4 md:mx-0"
 })
 `
 svg.resizes{
@@ -9,13 +9,13 @@ svg.resizes{
     object-fit:cover;
     width: 210px;
     height:189px;
-  }  
+  }
   @media (min-width: 640px){
     object-fit:cover;
     width: 65%;
     height:auto;
   }
- 
+
 }
 #wheel1{
   animation: wheel-rotate 5s linear infinite ;
@@ -43,7 +43,7 @@ svg.resizes{
   transform-origin:center;
   transform-box: fill-box;
 }
-#fast{  
+#fast{
   animation: left-right 5s linear infinite ;
   -webkit-animation: left-right 5s linear infinite;
   transform-origin:left;
@@ -55,7 +55,7 @@ svg.resizes{
   }
   100%{
     transform: rotateZ(360deg);
-  }  
+  }
 }
 @keyframes wheel-rotate-reverse {
   0%{
@@ -63,14 +63,14 @@ svg.resizes{
   }
   100%{
     transform: rotateZ(0);
-  }  
+  }
 }
 @keyframes left-right {
-  0%{    
+  0%{
     transform: translateX(-5px);
-    
+
   }
-  100%{   
+  100%{
     transform: translateX(5px);
   }
 }

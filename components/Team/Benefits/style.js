@@ -11,15 +11,15 @@ export const IconWrapper = styled.div.attrs({
         margin-right: auto;
     }
     #yes{
-        animation: sign-anime  1.9s linear infinite alternate; 
+        animation: sign-anime  1.9s linear infinite alternate;
         -webkit-animation: sign-anime  1.9s linear infinite alternate;
     }
     #heart{
-        animation: sign-anime  1.7s linear infinite alternate; 
+        animation: sign-anime  1.7s linear infinite alternate;
         -webkit-animation: sign-anime  1.7s linear infinite alternate;
     }
     #bill{
-        animation: bill-anime  1.9s linear infinite alternate; 
+        animation: bill-anime  1.9s linear infinite alternate;
         -webkit-animation: bill-anime 1.9s linear infinite alternate;
         transform-origin:bottom;
         transform-box: fill-box;
@@ -38,6 +38,6 @@ export const IconWrapper = styled.div.attrs({
         }
         100%{
             transform: rotateZ(10deg);
-        }  
+        }
     }
 `;

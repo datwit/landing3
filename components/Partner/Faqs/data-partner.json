@@ -2,8 +2,12 @@
     {
         "id":"q1",
         "question": "What can you help me with?",
-        "answer": "With whatever we can. Defining business goals,creating roadmaps, key business values, target users, main features, prioritising. We can find you similar projects that are already active on the market to benchmark against. In terms of project development we prepare server-side architecture, front end, back end, graphic and UX design. When it comes to machine learning we can...",
-        "list":[],
+        "answer": "When it comes to machine learning, model development, feature development, monitoring, and deployment across all three major cloud providers.",
+        "list":[
+            {"title":"Analyzing and documenting customer business processes, target potential customers, create product roadmaps, work on product features."},
+            {"title":"Suggesting similar solutions already active on the market to benchmark against."},
+            {"title":"In terms of solutions development, provide an A to Z approach to clients, a holistic understanding of the data lifecycle and experience working on each portion of it; data acquisition, data engineering, data intelligence and analytics, data presentation (frontend, backend, graphics, and UI/UX design), and technical support skills."}
+        ],
         "link": "",
         "clases": "hidden"
 
@@ -11,7 +15,7 @@
     {
         "id":"q2",
         "question": "How can I become a Datwit partner?",
-        "answer": "It's great you want to join us! We would really like to get to know your business better and discuss the possibilities of our future collaboration. If you have an idea contact us by our online form, e-mail or phone. We'll meet and talk it over. Just be sure to prepare as much info about your idea as possible.",
+        "answer": "We are exited to know you want to join us! We would really like to get to know your business and discuss the possibilities of our future collaboration. Please, go ahead and contact us through any of the following ways: by our online form, e-mail [contact@datwit.com], or by reaching out to our partner line [call: 1-800-WIT+]. We will be happy to meet and discuss what we can do together. Just be sure to bring a detailed plan for your idea(s) to showcase how it will improve our customer success.",
         "list":[],
         "link": "",
         "clases": "hidden"
@@ -20,7 +24,7 @@
     {
         "id":"q3",
         "question": "What do I need to know before contacting you?",
-        "answer": "Well, the most important thing to know is what do you want to accomplish. Why do I need this software? What for? What should it do? Having a clear vision in mind is crucial when ordering a software application. You don't want to spend many months developing it with us without being sure what you need. We'll also be glad to help you get started, building projects from scratch is nothing new for us. Also check out more details about our partnership strategy",
+        "answer": "Having a clear picture of where can you provide the most help to our customers. For example, you might have more experience in data engineering or perhaps in ML modeling and monitoring. You might also be able to provide general development services but it will take time away from things you really shine at doing. Each of your solid base skills will drive the path of our future relationship. Always remember, our customers are the reason we exist. Guaranteen our customers success is creating our own. As a Datwit partner, you are an extension of that goal, and we want to make sure you have the tools and resources to experience the same success. We will be happy to help you get started, building projects from scratch is nothing new for us. For more details, please check out our partnership strategy",
         "list":[],
         "link": "/partner",
         "clases": "text-gray-500 font-semibold"
@@ -29,7 +33,7 @@
     {
         "id":"q4",
         "question": "How much time will it take for you to make my app?",
-        "answer": "To give you a precise answer we must prepare a project scope and create a budget. We shall tell you how much of that scope can be completed within the budget and we'll be able to estimate how long will it take after at least a month of work.",
+        "answer": "Project timing is not an exact science. To give you a reasonable answer we must prepare a project scope, create deadlines, and a budget. We will tell you how much of that scope will need to be completed within the budget and time constraints. We'll be able to estimate how long will it take after at least a month of work.",
         "list":[],
         "link": "",
         "clases": "hidden"

@@ -30,8 +30,8 @@
             {"title":"Bulma"},
             {"title":"HTML 5"},
             {"title":"CSS 3"},
-            {"title":"Web API Services"}    
-        ],        
+            {"title":"Web API Services"}
+        ],
         "link": "",
         "clases": "hidden"
     },

@@ -3,17 +3,17 @@ import {IconWrapper} from './style'
 
 const BenefitBlock = ({title, description, children}) => {
     return (
-        <IconWrapper>  
+        <IconWrapper>
         <IconBlock>
-            {children}                                     
+            {children}
             <IconContent>
                 <IconTitle>{title}</IconTitle>
                 <IconText>{description}</IconText>
-            </IconContent>  
-        </IconBlock> 
-                                                                  
-        </IconWrapper>        
-              
+            </IconContent>
+        </IconBlock>
+
+        </IconWrapper>
+
     )
 }
 
