@@ -2,6 +2,7 @@
     {
         "num":1,
         "id":"link1",
+        "bundle":"Bundle 1",
         "title":"Raclette Blueberry Nextious Level",
         "description":"Photo booth fam kinfolk cold-pressed sriracha leggings jianbing microdosing tousled waistcoat.",
         "price":"$69...",
@@ -15,6 +16,7 @@
     {
         "num":2,
         "id":"link2",
+        "bundle":"Bundle 2",
         "title":"Raclette Blueberry Nextious Level",
         "description":"Photo booth fam kinfolk cold-pressed sriracha leggings jianbing microdosing tousled waistcoat.",
         "price":"$72...",
@@ -28,6 +30,7 @@
     {
         "num":3,
         "id":"link3",
+        "bundle":"Bundle 3",
         "title":"Raclette Blueberry Nextious Level",
         "description":"Photo booth fam kinfolk cold-pressed sriracha leggings jianbing microdosing tousled waistcoat.",
         "price":"$85...",

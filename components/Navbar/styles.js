@@ -17,12 +17,11 @@ const HoverLine = css
         transform: scaleX(0);
         transform-origin: right;
         transition: transform 0.5s;
-      } 
+      }
       &:hover::after{
         transform: scaleX(1);
         transform-origin: left;
-      }   
-  
+      }
 `
 
 export const NavWrapper = styled.div.attrs({
@@ -33,14 +32,14 @@ export const NavbarContainer = styled.div.attrs({
 })``;
 export const ImgWrapper = styled.div.attrs({
   className: "flex-shrink-0"
-})``;  
+})``;
 export const LogoLink = styled.a.attrs({
   className: "inline-flex items-center cursor-pointer"
-})``; 
+})``;
 //Hidding left behind for understanding purposes
 export const ButtonContainer = styled.div.attrs({
   className: "-mr-2 flex"
-})``;  
+})``;
 export const HamburguerWrapper = styled.aside.attrs({
   className: "md:invisible"
 })
@@ -53,35 +52,30 @@ export const HamburguerWrapper = styled.aside.attrs({
       display: flex;
       flex-direction: column;
       background: #1e4158;
-      opacity: 0.95;			
+      opacity: 0.95;
       transition: height 1s ease;
       z-index: 2;
       overflow-y:auto;
       justify-content:center
   }
-`; 
+`;
 export const LinkItem = styled.li.attrs({
   className: "ml-5 2xl:ml-8 py-2 text-sm font-semibold text-primary hover:text-secondary1 focus:text-secondary1"
 })
 `
 ${HoverLine}
 font-family: 'Numans';
-`;  
+`;
 export const LinkItem2 = styled.li.attrs({
   className: "  pt-9 ml-5 2xl:ml-8 text-xl font-semibold text-white hover:text-secondary1 focus:text-secondary1"
 })
 `
 ${HoverLine}
 font-family: 'Numans';
-`;  
+`;
 export const HeaderElements = styled.div.attrs({
   className: "h-16 absolute top-0 w-full px-5 pt-4"
-})``;  
+})``;
 export const AligningElements = styled.div.attrs({
   className: "flex justify-end"
-})``;  
-
-
-  
-
-  
+})``;

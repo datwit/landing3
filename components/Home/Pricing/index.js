@@ -8,25 +8,25 @@ import { FiSend } from 'react-icons/fi';
 
 
 const Pricing = ({classes}) => {
-    
+
     return (
-        
+
         <div className={classes}>
             <SectionHeader>Choose your kind of solution</SectionHeader>
             <SectionSubheader>Our goal is to accomplish to the product you have in mind through intuitive designs and great tools to back them up.</SectionSubheader>
 
             <div className="hidden md:block">
                 <ContentWrapper>
-                    <MainPricingCard /> 
-                </ContentWrapper>                                    
+                    <MainPricingCard />
+                </ContentWrapper>
             </div>
-             {/*********responsive************** */} 
-            <div className="md:hidden">               
-                <CarouselResponsive />                 
+             {/*********responsive************** */}
+            <div className="md:hidden">
+                <CarouselResponsive />
             </div>
 
             <CTA buttonName={'Contact us'} hhref='/contact'>
-                <FiSend className="h-6 w-6 text-white ml-2"/>  
+                <FiSend className="h-6 w-6 text-white ml-2"/>
             </CTA>
         </div>
     )

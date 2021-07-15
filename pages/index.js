@@ -8,7 +8,7 @@ import Services1 from '../components/Home/Services1'
 import Pricing from '../components/Home/Pricing'
 import Footer from '../components/Footer'
 import Navbar from '../components/Navbar'
-import Selection from '../components/Selection' 
+import Selection from '../components/Selection'
 import { motion } from 'framer-motion'
 import Head from 'next/head';
 import {useEffect} from 'react'
@@ -16,11 +16,11 @@ import DeviceDetect from "../lib/deviceDetect";
 
 export default function Home() {
   const {isMobile} = DeviceDetect()
-  
+
   const style={
-    height:'calc(100% - 80px)',    
-  } 
-  
+    height:'calc(100% - 80px)',
+  }
+
   function scrollToTop() {
     window.scrollTo({
       top: 0,
@@ -34,22 +34,22 @@ export default function Home() {
       document.body.style.overflow = "visible";
     };
   })
-  
 
-  return ( 
-    <> 
+
+  return (
+    <>
       <Head>
-      <title>Datwit | Home</title>    
-      </Head>     
-      <motion.div initial={{opacity:0,  y: 200}} animate={{opacity:1, y:0}}> 
-          { !isMobile ? 
+      <title>Datwit | Home</title>
+      </Head>
+      <motion.div initial={{opacity:0,  y: 200}} animate={{opacity:1, y:0}}>
+          { !isMobile ?
             <>
-              <FullPage controls={CustomControls}> 
+              <FullPage controls={CustomControls}>
 
-                <Slide {...style}>      
-                  <Section classes={'w-full h-screen'}>                  
-                      <Hero />                  
-                  </Section>        
+                <Slide {...style}>
+                  <Section classes={'w-full h-screen'}>
+                      <Hero />
+                  </Section>
                 </Slide>
 
                 <Slide>
@@ -62,43 +62,43 @@ export default function Home() {
                 <Section classes={'w-full h-screen'}>
                     <Services1 classes={"container px-5 mx-auto relative top-2/4 transform -translate-y-2/4"} />
                   </Section>
-                </Slide>  
+                </Slide>
 
                 <Slide>
                   <Section classes={'w-full h-screen'}>
                     <StudyCases classes={"container px-5 mx-auto relative top-2/4 transform -translate-y-2/4"}/>
-                  </Section>          
+                  </Section>
                 </Slide>
-                
+
                 <Slide>
                   <Section classes={'w-full h-screen'}>
-                    <Pricing classes={"container px-5 mx-auto relative top-2/4 transform -translate-y-2/4"} />
-                  </Section>          
+                    <Pricing classes={"container px-5 mx-auto relative top-2/4 transform -translate-y-2/4 mt-4"} />
+                  </Section>
                 </Slide>
 
                 <Slide>
                   <Section classes={'w-full h-screen'}>
                     <Selection classes={"container px-5 mx-auto relative top-2/4 transform -translate-y-2/4"}/>
-                  </Section>          
+                  </Section>
                 </Slide>
 
                 <Slide>
                   <Section classes={"w-full h-screen bg-primary mx-auto px-10"}>
                     <Footer />
-                  </Section>                 
+                  </Section>
                 </Slide>
-                
+
               </FullPage>
             </>
-              
+
           :
           <>
             <Navbar scrollToSlide={ scrollToTop }/>
 
-            <Slide {...style}>      
-                <Section classes={'w-full h-screen'}>           
-                  <Hero />                  
-                </Section>      
+            <Slide {...style}>
+                <Section classes={'w-full h-screen'}>
+                  <Hero />
+                </Section>
             </Slide>
 
             <Slide>
@@ -111,35 +111,35 @@ export default function Home() {
               <Section classes={'pb-16'}>
                 <Services1  classes={"px-5 mx-auto"}/>
               </Section>
-            </Slide>  
+            </Slide>
 
             <Slide>
               <Section classes={'pb-16'}>
                 <StudyCases classes={"px-5 mx-auto"} />
-              </Section>          
+              </Section>
             </Slide>
-            
+
             <Slide>
               <Section classes={'pb-16'}>
                 <Pricing classes={"px-5 mx-auto"} />
-              </Section>          
+              </Section>
             </Slide>
 
             <Slide>
               <Section classes={'pb-16'}>
                 <Selection classes={"px-5 mx-auto"} />
-              </Section>          
+              </Section>
             </Slide>
 
-            <Slide>              
+            <Slide>
               <Section classes={"w-full h-screen bg-primary mx-auto px-10"}>
                 <Footer />
-              </Section>                             
+              </Section>
             </Slide>
           </>
 
           }
-        </motion.div> 
-    </>         
+        </motion.div>
+    </>
   )
 }

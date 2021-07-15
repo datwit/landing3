@@ -3,11 +3,11 @@ import styled from 'styled-components';
 export const QuestionWrapper = styled.div.attrs({
     className: "flex items-center shadow border border-gray-300 p-4 md:p-6 shadow hover:shadow-lg transition duration-200 ease-in"
 })
-`  
+`
 @media (min-width: 790px){
     height: 131px;
     width:320px;
-    
+
 }
 @media (max-width: 639px){
     height: 131px;
@@ -24,14 +24,13 @@ export const QuestionWrapper = styled.div.attrs({
     margin-right:auto;
     margin-left: auto;
 
-&:hover{    
+&:hover{
     cursor: pointer;
 }
 &:hover h1{
     color: #00baff;
     cursor: pointer;
-}    
-   
+}
 &::after{
     content: '';
     display: block;
@@ -55,8 +54,26 @@ export const QuestionWrapper = styled.div.attrs({
 }
 
 svg{
-    padding-right: 20px;    
+    width:50px;
+    height:50px;
+    color: white;
+    position:absolute;
 }
+`;
+export const SVGCircle = styled.div.attrs({
+    className: ""
+})
+`
+    background:#e69c24;
+    width:70px;
+    height:70px;
+    position:relative;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    border-radius: 50%;
+    margin-right:15px;
+
 `;
 export const QuestionText = styled.h1.attrs({
     className: "text-xl text-left flex items-center"
@@ -69,7 +86,7 @@ height: 81px;
 `;
 export const AccItem = styled.div
 `
-padding-bottom:10px; 
+padding-bottom:10px;
 `;
 export const AccordionIcon= styled.svg
 `
@@ -77,7 +94,7 @@ export const AccordionIcon= styled.svg
     height: 1.2rem;
     transition: transform 0.3s ease-in-out;
     background-size: contain;
-    background-repeat: no-repeat;  
+    background-repeat: no-repeat;
     /* opacity: 0.6; */
     color:#e69c24;
 
@@ -90,8 +107,8 @@ export const AccordionList = styled.div
 `
     list-style: none;
     margin: 0;
-    padding: 0;       
-    overflow: hidden;        
+    padding: 0;
+    overflow: hidden;
 `;
 export const AccordionTitleWrapper = styled.div.attrs({
     className: "border border-gray-300 shadow hover:shadow-md transition duration-200 ease-in"
@@ -107,10 +124,10 @@ export const AccordionTitleWrapper = styled.div.attrs({
     position: relative;
     cursor:pointer;
 
-    .icon-rotate {       
-        transform: rotate(180deg); 
-        color: #00baff;              
-    }   
+    .icon-rotate {
+        transform: rotate(180deg);
+        color: #00baff;
+    }
 
 `;
 export const AccordionTitle = styled.h3.attrs({
@@ -127,11 +144,11 @@ export const AccItemInner = styled.div
     overflow: hidden;
     text-transform: cubic-bezier(0.95, 0.05, 0.795, 0.035);
     transition-duration: 0.5s;
-    transition-property: max-height;    
+    transition-property: max-height;
     position: relative;
-    background:#eaebec;  
-    border-left: 3px solid #e69c24;     
-        
+    background:#eaebec;
+    border-left: 3px solid #e69c24;
+
 `;
 export const AccItemContent = styled.div
 `
@@ -148,5 +165,5 @@ export const AccItemParagraph = styled.div.attrs({
 })
 `
     text-align: justify;
-    
+
 `;

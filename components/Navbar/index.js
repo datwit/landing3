@@ -11,17 +11,17 @@ import { FiMenu, FiX } from 'react-icons/fi';
 const Navbar=({scrollToSlide}) => {
 	const [active, setActive] = useState(false);
 	const router = useRouter();
-	
+
 	const handleClick = () => {
 		setActive(!active);
-	};	
+	};
 
 	const reset = () => {
 		scrollToSlide(0);
 		setActive(false);
 	};
 	const some = () => {
-		return null; 
+		return null;
 	};
 
 	const handleS=(event) =>{
@@ -37,7 +37,7 @@ const Navbar=({scrollToSlide}) => {
 		const contact = document.getElementById('contact')
 		const abaut = document.getElementById('abaut')
 		const blog = document.getElementById('blog')
-		
+
 
 		if (windowBottom >= docHeight) {
 			navb.classList.replace('bg-white','bar-vanished')
@@ -64,42 +64,42 @@ const Navbar=({scrollToSlide}) => {
 	  }, []);
 
 
-	return (	
+	return (
 		<NavbarContainer  id='navbar'>
-			<nav className='container max-w-7xl mx-auto px-4 sm:px-6 p-3'>			
-				<NavWrapper>					
+			<nav className='container max-w-7xl mx-auto px-4 sm:px-6 p-3'>
+				<NavWrapper>
 						<ImgWrapper onClick={router.pathname=="/" ? reset : some} >
 							<Link href='/'>
-								<LogoLink>									
-									<LogoSVG />						
+								<LogoLink>
+									<LogoSVG />
 								</LogoLink>
 							</Link>
 						</ImgWrapper>
 						<div className="hidden md:block items-center">
-							<ul className="list-none flex">								
+							<ul className="list-none flex">
 								{
 									React.Children.toArray(
 										datas.map(data => (
 											<Link href={data.link}><LinkItem id={data.id} onClick={router.pathname == data.link ? reset : some} className={router.pathname == data.link ? "text-secondary2": "text-primary"}>{data.name}</LinkItem></Link> 
 										))
-									)								
-								}							
+									)
+								}
 							</ul>
 						</div>
-						<ButtonContainer className="md:hidden">							
+						<ButtonContainer className="md:hidden">
 							<button className="mr-2 justify-end" onClick={setActive}>
 								<FiMenu className="w-9 h-9 text-primary" id="hamb"/>
 							</button>
-						</ButtonContainer>						
+						</ButtonContainer>
 				</NavWrapper>
 				<HamburguerWrapper className={`${active ? 'h-full' : 'hidden h-0'} cont-aside`}>
 					<HeaderElements>
-						<AligningElements>							
-							<button onClick= {handleClick} >								
+						<AligningElements>
+							<button onClick= {handleClick} >
 								<FiX className="w-9 h-9 text-white" />
 							</button>
-						</AligningElements>							
-					</HeaderElements>													 
+						</AligningElements>
+					</HeaderElements>
 					<div className="md:hidden">
 						<ul className="list-none flex flex-col items-center">
 							{
@@ -107,14 +107,14 @@ const Navbar=({scrollToSlide}) => {
 									datas.map(data => (
 										<Link href={data.link}><LinkItem2 id={data.id} onClick={router.pathname == data.link ? reset : some} className={router.pathname == data.link ? "text-secondary2": "text-white"}>{data.name}</LinkItem2></Link>
 									))
-								)								
-							}						
-						</ul>							
-					</div>					
-				</HamburguerWrapper>			
+								)
+							}
+						</ul>
+					</div>
+				</HamburguerWrapper>
 			</nav>
-		</NavbarContainer>	
-	)	
+		</NavbarContainer>
+	)
 }
 
 export default Navbar
