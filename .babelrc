@@ -1,4 +1,22 @@
+// {
+//     "presets": ["next/babel"],
+//     "plugins": [["styled-components", { "ssr": false }]]
+// }
+
+
 {
-    "presets": ["next/babel"],
-    "plugins": [["styled-components", { "ssr": false }]]
+	"env":{
+		"development":{
+			"plugins":[
+				["styled-components", {"ssr":true}]
+			],
+			"presets": ["next/babel"]
+		},
+		"production":{
+			"plugins":[
+				["styled-components", {"ssr":false}]
+			],
+			"presets": ["next/babel"]
+		},
+	}
 }
