@@ -88,14 +88,10 @@ export const AccItem = styled.div
 `
 padding-bottom:10px;
 `;
-export const AccordionIcon= styled.svg
+export const AccordionIcon= styled.div
 `
-    width: 1.2rem;
-    height: 1.2rem;
+
     transition: transform 0.3s ease-in-out;
-    background-size: contain;
-    background-repeat: no-repeat;
-    /* opacity: 0.6; */
     color:#e69c24;
 
 `;
