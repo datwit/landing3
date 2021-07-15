@@ -14,15 +14,12 @@ const Faqs = ({classes}) => {
         <div className={classes}>
             <SectionHeader>Frequently asked questions</SectionHeader>
             <SectionSubheader>These are some of our more frequently asked questions</SectionSubheader>
-
             <div className="flex flex-wrap">
                <FaqCard href="/fpartner">
-                    {/*<PartnerIconSVG />*/}
                     <SVGCircle><FaRegHandshake /></SVGCircle>
                     <h1 className="text-lg">For <br/> Partners</h1>
                </FaqCard>
                 <FaqCard href="/fteam">
-                    {/*<DevIconSVG />*/}
                     <SVGCircle><FaLaptopCode /></SVGCircle>
                     <h1 className="text-lg">For <br/> Developers</h1>
                </FaqCard>
