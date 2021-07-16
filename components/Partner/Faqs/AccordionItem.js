@@ -18,7 +18,7 @@ const AccordionItem = ({ question, answer, clases, link, list}) => {
             <AccItemInner {...{className:'accordion-item__inner'}}>
               <AccItemContent {...{ className: 'accordion-item__content' }}>
                 <AccItemParagraph {...{ className: 'accordion-item__paragraph' }}>
-                  <span className="text-base text-gray-500">{answer}</span>
+                  <span className="text-base text-gray-600">{answer}</span>
                   <span><a className={clases} href={link}> here</a></span>
                   <ul>
                   {

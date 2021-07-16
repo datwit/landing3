@@ -72,14 +72,6 @@
     },
     {
         "id":"q9",
-        "question": "How much do you charge?",
-        "answer": "It depends on many things: project scope, time spent on the project and technological issues. We know it sounds vague but its simply honest. Remember that each software project is different, especially if you had a particularly original idea. We do not want to give you an unrealistic estimate, instead we want to provide you with the best quality possible within your budget. For starters check out",
-        "list":[],
-        "link": "/partner",
-        "clases": "text-gray-500 font-semibold"
-    },
-    {
-        "id":"q10",
         "question": "What is your experience?",
         "answer": "We are professionals with more than 10 years of experience. We are experienced in creating web applications of all kind using modern techniques and including machine learning algorithms",
         "list":[],
@@ -87,7 +79,7 @@
         "clases": "hidden"
     },
     {
-        "id":"q11",
+        "id":"q10",
         "question": " What technology do you use? Are there any reasons why you chose those particular technologies?",
         "answer": "For back-end we use Python which gives the developers a lot of possibilities when it comes to prototyping, allows them to take advantage of ready-to-use components, and speeds up the development process. Indeed - the first results are visible almost immediately. Python is also an amazing language to use when it comes  to machine learnign For front-end we use React.js. We use React because it is perfect for a wide range of projects, fast iterations, implementations, prototyping and creating a proof of concept. It’s simple and scalable. A library very loved and widelly adopted all over the development world.",
         "list":[],
