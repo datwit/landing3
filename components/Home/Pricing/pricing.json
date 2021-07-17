@@ -1,35 +1,33 @@
 [
   {
-    "field":"WEB SOLUTIONS",
+    "field":"SINGLE SALE",
     "style":"md:h-full p-3 border-2 border-gray-300 overflow-hidden",
     "price": "$89",
-    "description": "Literally you probably haven't heard of them jean shorts.",
+    "description": "We provide a small targeted ML solution, within a short period of time. Some of these products might be:",
     "bullets": [
-      {"title":"Vexillologist pitchfork"},
-      {"title":"Tumeric plaid portland"},
-      {"title":"Mixtape chillwave tumeric"}
+      {"title":"Ready to-integrate ML algorithm with its corresponding API"},
+      {"title":"Technical support to maintain ML models"},
+      {"title":"Pro assistance when it comes to infrastructure solutions"}
     ]
   },
   {
-    "field":"DATA SOLUTIONS",
+    "field":"UP-SALE",
     "style":"md:h-full p-3 border-2 border-secondary2 border-opacity-60 overflow-hidden relative",
     "price": "$69",
-    "description": "Literally you probably haven't heard of them jean shorts.",
+    "description": "Usually added AI/ML solutions to improve existing business workflows. Such as:",
     "bullets": [
-      {"title":"Vexillologist pitchfork"},
-      {"title":"Tumeric plaid portland"},
-      {"title":"Mixtape chillwave tumeric"}
+      {"title":"Some of the data full cycle: acquisition, engineering, analytics and data presentation"},
+      {"title":"When it comes to machine learning, we can offer: model development, feature development, monitoring, deployment and technical support"}
     ]
   },
   {
-    "field":"INFRASTRUCTURE SOLUTIONS",
+    "field":"FULL SCOPE",
     "style":"md:h-full p-3 border-2 border-gray-300 overflow-hidden",
     "price": "$72",
-    "description": "Literally you probably haven't heard of them jean shorts.",
+    "description": "Include an end-to-end solution with a full operational infrastructure, gathering all the major ML features like:",
     "bullets": [
-      {"title":"Vexillologist pitchfork"},
-      {"title":"Tumeric plaid portland"},
-      {"title":"Mixtape chillwave tumeric"}
+      {"title":"Data full cycle: acquisition, engineering, analytics and data presentation"},
+      {"title":"ML: model development, feature development, monitoring, deployment and technical support"}
     ]
   }
 ]
