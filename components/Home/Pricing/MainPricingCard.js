@@ -4,11 +4,11 @@ import PricingBullets from './PricingBullets';
 import datas from "./pricing.json";
 
 const MainPricingCard = () => {
-    return (  
-        <>      
+    return (
+        <>
         {
             React.Children.toArray(
-                datas.map(data => (        
+                datas.map(data => (
                     <OuterWrapper>
                         <div className={data.style}>
                             <Field>{data.field}</Field>
@@ -18,18 +18,18 @@ const MainPricingCard = () => {
                                 React.Children.toArray(
                                     data.bullets.map(data => (
                                     <PBulletsWrapper>
-                                        <PricingBullets title={data.title}/> 
+                                        <PricingBullets title={data.title}/>
                                     </PBulletsWrapper>
                                     ))
-                                )                        
-                            }                               
+                                )
+                            }
                         </div>
-                    </OuterWrapper>  
+                    </OuterWrapper>
                 ))
             )
-        
-        }  
-        </>          
+
+        }
+        </>
     )
 }
 

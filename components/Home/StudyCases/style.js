@@ -7,8 +7,8 @@ export const SCardWrapper = styled.div.attrs({
   export const SCardBorder = styled.div.attrs({
     className: "h-full border border-gray-300 overflow-hidden mx-4 md:mx-0 shadow hover:shadow-lg transition duration-200 ease-in"
   })
-  `   
-  `; 
+  `
+  `;
   export const CategoryRect = styled.p.attrs({
     className: "flex items-center mr-1"
   })
@@ -29,12 +29,12 @@ export const SCardWrapper = styled.div.attrs({
   }
   &:hover {
         color: #00baff;
-        border: 2px solid #00baff;        
+        border: 2px solid #00baff;
         background: white;
         svg{
-            color: #00baff;  
+            color: #00baff;
         }
-        
+
   }
   `;
   export const CategoryTitle = styled.h2.attrs({
@@ -48,11 +48,11 @@ export const SCardWrapper = styled.div.attrs({
   export const CardContent = styled.div.attrs({
     className: "p-4 w-full"
   })
-  `     
+  `
   `;
 
   export const CardTitle = styled.h1.attrs({
-    className: "title-font text-lg font-bold text-primary mb-1 cursor-pointer hover:text-secondary1"
+    className: "title-font text-lg font-bold text-primary mb-1"
   })``;
   export const CardSubtitle = styled.p.attrs({
     className: "mt-0 text-base leading-6 text-gray-500"
