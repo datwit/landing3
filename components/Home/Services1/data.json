@@ -5,6 +5,7 @@
         "items":[
             {"tit":"Exploratory data analysis"},
             {"tit":"Data cleaning and anonymization"},
+            {"tit":"Data visualization"},
             {"tit":"Data infrastructure design and build"},
             {"tit":"Database setup and management"},
             {"tit":"ETL design"}
@@ -29,9 +30,9 @@
             {"tit":"Business and data understanding"},
             {"tit":"Business API integration"},
             {"tit":"Web solutions centered on data management"},
-            {"tit":"Man-in-the-loop AI systems"},
-            {"tit":"ML infrastructure for cloud on-premises arch"},
-            {"tit":"Additional consulting services when it comes to infrastructure, custom modeling, system deployment and technical support"}
+            {"tit":"ML infrastructure design for cloud/on-premises arch"},
+            {"tit":"Web interfaces for man-in-the-loop AI systems"},
+            {"tit":"Machine learning related consulting services"}
         ]
     }
 ]
