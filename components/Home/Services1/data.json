@@ -1,30 +1,35 @@
  [
     {
-        "title": "ML Solutions",
-        "subtitle": "Our ML solutions are standar, efficient and ready to use, supplied with:",
+        "title": "Data Management",
+        "subtitle": "Our professionals will make the best use possible for your data by doing:",
         "items":[
-            {"tit":"Model architecture Design"},
+            {"tit":"Data exploration"},
+            {"tit":"Data cleaning and anonymization"},
+            {"tit":"Data engineering supplying infrastructure for storing and curation"}
+        ]
+    },
+    {
+        "title": "Data Intelligence",
+        "subtitle": "By using machine learning state of the art algorithms for customized apps, we provide:",
+        "items":[
+            {"tit":"Model architecture design"},
             {"tit":"Model optimization"},
             {"tit":"Model training & building"},
             {"tit":"Model evaluation"},
             {"tit":"Pipeline design and setup"},
             {"tit":"Model monitoring and improving"},
             {"tit":"Business API integration "},
-            {"tit":"Man-in-the-loop AI systems"}                
-        ]  
+            {"tit":"Man-in-the-loop AI systems"}
+        ]
     },
     {
-        "title": "Data Analysis",
-        "subtitle": "By using machine learning state of the art algorithms with customized apps, we ensure:",
+        "title": "Data Visualization + Additional services",
+        "subtitle": "Also we are able to join you offering a end-to-end solution with:",
         "items":[
-            {"tit":"Data exploration"},                
-            {"tit":"Data cleaning and anonymization"},          
-            {"tit":"Data management tech consulting"}, 
-            {"tit":"Data Visualization"}, 
-            {"tit":"Feature Engineering"}, 
-            {"tit":"Experimental Design"} 
+            {"tit":"Data visualization using hard coded reports and monitoring interfaces"},
+            {"tit":"Additional consulting services when it comes to infrastructure, custom modeling, system deployment and technical support"}
+        ]
 
-        ]  
     }
-   
-]    
+
+]

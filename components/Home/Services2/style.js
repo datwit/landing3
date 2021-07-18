@@ -21,40 +21,6 @@ export const IllWrapper = styled.div.attrs({
     height:auto;
   }   
 }
-#cup{
-  animation: cup-anime 1.9s linear infinite alternate; 
-  -webkit-animation: cup-anime 1.9s linear infinite alternate;
-}
-#dot1{
-  animation: dots 800ms ease-in-out infinite;
-  -webkit-animation: dots 800ms ease-in-out infinite;
-  
-}
-#dot2{
-  animation: dots 800ms ease-in-out infinite 200ms;
-  -webkit-animation: dots 800ms ease-in-out infinite 200ms;
-}
-#dot3{
-  animation: dots 800ms ease-in-out infinite 300ms;
-  -webkit-animation: dots 800ms ease-in-out infinite 300ms;
-}
-#dot4{
-  animation: dots 800ms ease-in-out infinite 400ms;
-  -webkit-animation: dots 800ms ease-in-out infinite 400ms;
-}
-@keyframes dots {
-  100%{
-    fill: white;
-  }
-}
-@keyframes cup-anime {
-  0%{
-    transform: translateY(0);
-  }
-  100%{
-    transform: translateY(5px);
-  }
-}
 `;
 export const ImageTitle = styled.h2.attrs({
     className: "text-base md:text-2xl my-2 md:my-6"
