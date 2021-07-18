@@ -30,7 +30,7 @@ const CustomControls = ({ slidesCount, scrollToSlide, onNext, onPrev, getCurrent
 
     switch (pathname) {
       case '/':
-        tip = [...tip, 'Top', 'Services','Services', 'Study Cases', 'Membership', 'Bottom']
+        tip = [...tip, 'Top', 'Services','Services','Services','Study Cases', 'Membership', 'Bottom']
         break
       case '/studycases':
         tip = [...tip, 'Study Cases', 'Bottom']
