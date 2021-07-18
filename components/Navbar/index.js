@@ -34,6 +34,7 @@ const Navbar=({scrollToSlide}) => {
 		const hamb = document.getElementById('hamb')
 		const home = document.getElementById('home')
 		const study = document.getElementById('study')
+		const price = document.getElementById('price')
 		const contact = document.getElementById('contact')
 		const abaut = document.getElementById('abaut')
 		const blog = document.getElementById('blog')
@@ -46,6 +47,7 @@ const Navbar=({scrollToSlide}) => {
 			contact.classList.replace('text-primary','text-white')
 			abaut.classList.replace('text-primary','text-white')
 			study.classList.replace('text-primary','text-white')
+			price.classList.replace('text-primary','text-white')
 			blog.classList.replace('text-primary','text-white')
 		} else {
 			navb.classList.replace('bar-vanished', 'bg-white')
@@ -54,6 +56,7 @@ const Navbar=({scrollToSlide}) => {
 			contact.classList.replace('text-white', 'text-primary')
 			abaut.classList.replace('text-white', 'text-primary')
 			study.classList.replace('text-white', 'text-primary')
+			price.classList.replace('text-white', 'text-primary')
 			blog.classList.replace('text-white', 'text-primary')
 		}
 	  };

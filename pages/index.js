@@ -70,11 +70,11 @@ export default function Home() {
                   </Section>
                 </Slide>
 
-                <Slide>
-                  <Section classes={'w-full h-screen'}>
-                    <Pricing classes={"container px-5 mx-auto relative top-2/4 transform -translate-y-2/4 mt-8"} />
-                  </Section>
-                </Slide>
+               { /*<Slide>
+                   <Section classes={'w-full h-screen'}>
+                     <Pricing classes={"container px-5 mx-auto relative top-2/4 transform -translate-y-2/4 mt-8"} />
+                   </Section>
+                 </Slide>*/}
 
                 <Slide>
                   <Section classes={'w-full h-screen'}>
@@ -119,11 +119,11 @@ export default function Home() {
               </Section>
             </Slide>
 
-            <Slide>
-              <Section classes={'pb-16'}>
-                <Pricing classes={"px-5 mx-auto"} />
-              </Section>
-            </Slide>
+            {/* <Slide>
+               <Section classes={'pb-16'}>
+                 <Pricing classes={"px-5 mx-auto"} />
+               </Section>
+             </Slide>*/}
 
             <Slide>
               <Section classes={'pb-16'}>

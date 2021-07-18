@@ -2,13 +2,19 @@
     {
         "name": "Home",
         "link": "/",
-        "id":"home"       
+        "id":"home"
 
     },
     {
         "name": "Study cases",
         "link": "/studycases",
         "id":"study"
+
+    },
+    {
+        "name": "Pricing",
+        "link": "/pricing",
+        "id":"price"
 
     },
     {
