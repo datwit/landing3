@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 
-export const IllWrapper2 = styled.div.attrs({
+export const IllWrapper3 = styled.div.attrs({
   className: "w-full md:w-2/4 my-auto"
 })
 `
@@ -61,12 +61,3 @@ svg.resizes1{
   }  
 }
 `;
-export const BulletSubtitle = styled.p.attrs({
-  className: "text-base mt-2 text-gray-700"
-})``;
-export const ServiceBulletsOuter = styled.p.attrs({
-  className: "text-base mt-2 flex text-gray-700"
-})``;
-export const ServiceBulletsSpan = styled.span.attrs({
-  className: "w-5 h-5 mr-2 inline-flex items-center justify-center flex-shrink-0"
-})``;

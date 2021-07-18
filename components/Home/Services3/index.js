@@ -1,27 +1,28 @@
 import React from 'react'
-import datas from "./data.json";
+import datas from "../Services1/data.json";
 import {ContentWrapper, SectionHeader}from 'styles/global';
-import { IllWrapper2, BulletSubtitle, ServiceBulletsOuter, ServiceBulletsSpan} from './style';
-import MLSolutionsSVG from './MLSolutionsSVG'
 import { ImageTitle, TextBlock} from '../Services2/style'
 import { FiArrowRightCircle } from 'react-icons/fi';
+import DataAnalySVG from './DataAnalySVG'
+import { BulletSubtitle, ServiceBulletsOuter, ServiceBulletsSpan } from '../Services1/style';
+import { IllWrapper3 } from './style';
 
-
-const Services1 = ({classes}) => {
+const Services3 = ({classes}) => {
 
     return (
         <div className={classes}>
+            <SectionHeader>Wait...there's more...</SectionHeader>
                 <ContentWrapper>
-                    <IllWrapper2>
-                        <MLSolutionsSVG />
-                        <ImageTitle>{datas[1].title}</ImageTitle>
-                    </IllWrapper2>
+                    <IllWrapper3>
+                        <DataAnalySVG />
+                        <ImageTitle>{datas[2].title}</ImageTitle>
+                    </IllWrapper3>
                     <TextBlock>
                         <div className="ml-2">
-                            <BulletSubtitle>{datas[1].subtitle}</BulletSubtitle>
+                            <BulletSubtitle>{datas[2].subtitle}</BulletSubtitle>
                         {
                             React.Children.toArray(
-                                datas[1].items.map(data=>(
+                                datas[2].items.map(data=>(
                                     <ServiceBulletsOuter>
                                         <ServiceBulletsSpan>
                                             <FiArrowRightCircle className="h-8 w-8 text-secondary2"/>
@@ -39,4 +40,4 @@ const Services1 = ({classes}) => {
 
 }
 
-export default Services1
+export default Services3

@@ -1,18 +1,19 @@
-import CustomControls from '../components/Slide/CustomControls'
+import CustomControls from 'components/Slide/CustomControls'
 import { FullPage, Slide } from 'react-full-page'
-import Section from '../components/Section'
-import Hero from '../components/Home/Hero'
-import StudyCases from '../components/Home/StudyCases'
-import Services2 from '../components/Home/Services2'
-import Services1 from '../components/Home/Services1'
-import Pricing from '../components/Home/Pricing'
-import Footer from '../components/Footer'
-import Navbar from '../components/Navbar'
-import Selection from '../components/Selection'
+import Section from 'components/Section'
+import Hero from 'components/Home/Hero'
+import StudyCases from 'components/Home/StudyCases'
+import Services2 from 'components/Home/Services2'
+import Services1 from 'components/Home/Services1'
+import Services3 from 'components/Home/Services3'
+import Pricing from 'components/Home/Pricing'
+import Footer from 'components/Footer'
+import Navbar from 'components/Navbar'
+import Selection from 'components/Selection'
 import { motion } from 'framer-motion'
 import Head from 'next/head';
 import {useEffect} from 'react'
-import DeviceDetect from "../lib/deviceDetect";
+import DeviceDetect from "lib/deviceDetect";
 
 export default function Home() {
   const {isMobile} = DeviceDetect()
@@ -64,6 +65,12 @@ export default function Home() {
                   </Section>
                 </Slide>
 
+                 <Slide>
+                <Section classes={'w-full h-screen'}>
+                    <Services3 classes={"container px-5 mx-auto relative top-2/4 transform -translate-y-2/4"} />
+                  </Section>
+                </Slide>
+
                 <Slide>
                   <Section classes={'w-full h-screen'}>
                     <StudyCases classes={"container px-5 mx-auto relative top-2/4 transform -translate-y-2/4"}/>
@@ -110,6 +117,12 @@ export default function Home() {
             <Slide>
               <Section classes={'pb-16'}>
                 <Services1  classes={"px-5 mx-auto"}/>
+              </Section>
+            </Slide>
+
+             <Slide>
+              <Section classes={'pb-16'}>
+                <Services3  classes={"px-5 mx-auto"}/>
               </Section>
             </Slide>
 
