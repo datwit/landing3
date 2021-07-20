@@ -1,15 +1,15 @@
-import CustomControls from '../../components/Slide/CustomControls'
+import CustomControls from 'components/Slide/CustomControls'
 import { FullPage, Slide } from 'react-full-page'
-import Section from '../../components/Section'
-import Footer from '../../components/Footer'
-import Datwit from '../../components/AboutUs/Datwit'
-import Members from '../../components/AboutUs/Members'
-import Collaborators from '../../components/AboutUs/Collaborators' 
+import Section from 'components/Section'
+import Footer from 'components/Footer'
+import Datwit from 'components/AboutUs/Datwit'
+import Members from 'components/AboutUs/Members'
+import Collaborators from 'components/AboutUs/Collaborators'
 import { motion } from 'framer-motion'
 import Head from 'next/head';
-import Navbar from '../../components/Navbar'
+import Navbar from 'components/Navbar'
 import {useEffect} from 'react'
-import DeviceDetect from "../../lib/deviceDetect";
+import DeviceDetect from "lib/deviceDetect";
 
 
 const About = () => {
@@ -23,8 +23,8 @@ const About = () => {
   }
 
   const style={
-    height:'calc(100% - 80px)',    
-  } 
+    height:'calc(100% - 80px)',
+  }
 
    /*****hiding scroll bar*/
   useEffect(()=>{
@@ -33,69 +33,69 @@ const About = () => {
       document.body.style.overflow = "visible";
     };
   })
-  
-    return ( 
-      <> 
+
+    return (
+      <>
         <Head>
-        <title>Datwit | About us</title>        
-        </Head>    
+        <title>Datwit | About us</title>
+        </Head>
         <motion.div initial={{opacity:0,  y: 200}} animate={{opacity:1, y:0}}>
-        { !isMobile ?       
-            <FullPage controls={CustomControls}> 
+        { !isMobile ?
+            <FullPage controls={CustomControls}>
               <Slide {...style}>
                 <Section classes={'w-full h-screen'}>
                   <Datwit classes={"container px-5 mx-auto relative top-2/4 transform -translate-y-2/4 mt-20"}/>
-                </Section>        
+                </Section>
               </Slide>
 
               <Slide>
                 <Section classes={'w-full h-screen'}>
                   <Members classes={"container px-5 mx-auto relative top-2/4 transform -translate-y-2/4"}/>
-                </Section>        
+                </Section>
               </Slide>
 
               <Slide>
                 <Section classes={'w-full h-screen'}>
                   <Collaborators classes={"container px-5 mx-auto relative top-2/4 transform -translate-y-2/4"}/>
-                </Section>        
+                </Section>
               </Slide>
 
               <Slide>
                 <Section classes={"w-full h-screen bg-primary mx-auto px-10"}>
                   <Footer />
-                </Section>                  
-              </Slide>        
+                </Section>
+              </Slide>
             </FullPage>
           :
           <>
-            <Navbar scrollToSlide={ scrollToTop }/>            
+            <Navbar scrollToSlide={ scrollToTop }/>
               <Slide {...style}>
                 <Section classes={'pb-16 pt-20'}>
                   <Datwit classes={"px-5 mx-auto"}/>
-                </Section>        
+                </Section>
               </Slide>
 
               <Slide>
                 <Section classes={'pb-16'}>
                   <Members classes={"px-5 mx-auto"}/>
-                </Section>        
+                </Section>
               </Slide>
 
               <Slide>
                 <Section classes={'pb-16'}>
                   <Collaborators classes={"px-5 mx-auto"}/>
-                </Section>        
+                </Section>
               </Slide>
 
               <Slide>
                 <Section classes={"w-full h-screen bg-primary mx-auto px-10"}>
                   <Footer />
-                </Section>                  
-              </Slide>        
-          </>    
-        }       
-        </motion.div> 
-      </>       
+                </Section>
+              </Slide>
+          </>
+        }
+        </motion.div>
+      </>
     )
 }
 
