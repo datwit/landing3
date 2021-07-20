@@ -1,14 +1,14 @@
-import Head from 'next/head';
-import renderToString from 'next-mdx-remote/render-to-string';
-import hydrate from 'next-mdx-remote/hydrate';
-import Footer from '../../components/Footer'
-import {MarkdownContent} from '../../components/Markdown/style'
-import {PostTitle} from '../../components/Blog/style'
+import Head from 'next/head'
+import renderToString from 'next-mdx-remote/render-to-string'
+import hydrate from 'next-mdx-remote/hydrate'
+import Footer from 'components/Footer'
+import {MarkdownContent} from 'components/Markdown/style'
+import {PostTitle} from 'components/Blog/style'
 import { motion } from 'framer-motion' 
 import { FullPage } from 'react-full-page'
-import CustomControls from '../../components/Slide/CustomControls'
+import CustomControls from 'components/Slide/CustomControls'
 
-import { getAllData } from '../../lib/posts';
+import { getAllData } from 'lib/posts';
 
 const Info = ({ title, content})=> {
 

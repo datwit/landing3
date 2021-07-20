@@ -1,14 +1,14 @@
-import datas from '../../components/Partner/Faqs/data-dev.json'
-import uuid from 'react-uuid'
-import {SectionHeader,SectionSubheader} from '../../styles/global'
-import {QuestionText, AccordionList, AccordionWrapper} from '../../components/Partner/Faqs/style'
-import Navbar from '../../components/Navbar'
-import Footer from '../../components/Footer'
+import React from 'react'
+import datas from 'components/Partner/Faqs/data-dev.json'
+import {SectionHeader,SectionSubheader} from 'styles/global'
+import {QuestionText, AccordionList, AccordionWrapper} from 'components/Partner/Faqs/style'
+import Navbar from 'components/Navbar'
+import Footer from 'components/Footer'
 import { motion } from 'framer-motion'
 import { FullPage } from 'react-full-page'
-import CustomControls from '../../components/Slide/CustomControls'
-import AccordionItem from '../../components/Partner/Faqs/AccordionItem'
-import Head from 'next/head';
+import CustomControls from 'components/Slide/CustomControls'
+import AccordionItem from 'components/Partner/Faqs/AccordionItem'
+import Head from 'next/head'
 
 
 const FaqsTeam = () => {
@@ -26,13 +26,16 @@ const FaqsTeam = () => {
                             {/*accordion component*/}
                             <AccordionWrapper>
                                 <AccordionList>
-                                {datas.map((data, key) => {
-                                    return (
-                                    <li {...{ className: 'accordion-list__item', key }}>
-                                        <AccordionItem {...data} />
-                                    </li>
+                                {
+                                    React.Children.toArray(
+                                        datas.map(data => (
+                                            <li {...{ className: 'accordion-list__item'}}>
+                                                <AccordionItem {...data} />
+                                            </li>
+                                        ))
                                     )
-                                })}
+
+                                }
                                 </AccordionList>
                             </AccordionWrapper>
                         </div>
