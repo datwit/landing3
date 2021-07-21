@@ -2,7 +2,7 @@ import React from 'react';
 import datas from "../Services1/data.json";
 import {ContentWrapper, SectionHeader}from 'styles/global';
 import { BulletSubtitle, ServiceBulletsOuter, ServiceBulletsSpan } from '../Services1/style';
-
+import DataManagSVG from './DataManagSVG'
 import {IllWrapper, ImageTitle, TextBlock} from './style'
 
 const Services2 = ({classes}) => {
@@ -13,7 +13,7 @@ const Services2 = ({classes}) => {
             <SectionHeader>Machine Learning solutions from A to Z</SectionHeader>
                 <ContentWrapper>
                     <IllWrapper>
-                        <div className="h-48 w-60 bg-gray-300 mx-auto"></div>
+                        <DataManagSVG />
                         <ImageTitle>{datas[0].title}</ImageTitle>
                     </IllWrapper>
                     <TextBlock>
