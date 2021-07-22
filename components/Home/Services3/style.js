@@ -34,7 +34,7 @@ svg.resizes1{
   transform-origin:bottom;
   transform-box: fill-box;
 }
-#Vector_53{
+#Vector_56{
   stroke-dasharray: 100;
   stroke-dashoffset: 100;
   animation: dash 5s linear forwards infinite;
