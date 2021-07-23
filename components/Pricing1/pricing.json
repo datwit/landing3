@@ -1,0 +1,44 @@
+[
+  {
+    "field":"DATA SOLUTIONS",
+    "style":"secondary1",
+    "price": "$89",
+    "description": "Our team can use your data and take it to the next level",
+    "bullets": [
+        {"title":"Exploratory data analysis"},
+        {"title":"Data cleaning and anonymization"},
+        {"title":"Data visualization"},
+        {"title":"Data infrastructure design and build"},
+        {"title":"Database setup and management"},
+        {"title":"ETL design"}
+    ]
+  },
+  {
+    "field":"ML SOLUTIONS",
+    "style":"secondary2",
+    "price": "$69",
+    "description": "Well made ML solutions can really improve your business workflow",
+    "bullets": [
+        {"title":"Model architecture design"},
+        {"title":"Model optimization"},
+        {"title":"Model training & building"},
+        {"title":"Model evaluation"},
+        {"title":"Pipeline design and setup"},
+        {"title":"Model monitoring and improving"}
+    ]
+  },
+  {
+    "field":"WEB SOLUTIONS",
+    "style":"primary",
+    "price": "$72",
+    "description": "Including an end-to-end solution with a full operational infrastructure",
+    "bullets": [
+        {"title":"Business and data understanding"},
+        {"title":"Business API integration"},
+        {"title":"Web solutions centered on data management"},
+        {"title":"ML infrastructure design for cloud/on-premises arch"},
+        {"title":"Web interfaces for man-in-the-loop AI systems"},
+        {"title":"Machine learning related consulting services"}
+    ]
+  }
+]

@@ -7,8 +7,9 @@ import Head from 'next/head';
 import Navbar from 'components/Navbar'
 import {useEffect} from 'react'
 import DeviceDetect from "lib/deviceDetect";
-import Pricing from 'components/Home/Pricing'
-
+import Pricing1 from 'components/Pricing1'
+import Pricing2 from 'components/Pricing2'
+import Pricing3 from 'components/Pricing3'
 
 
 const PricingP = () => {
@@ -44,8 +45,20 @@ const PricingP = () => {
             <FullPage controls={CustomControls}>
                	<Slide>
                   	<Section classes={'w-full h-screen'}>
-                    	<Pricing classes={"container px-5 mx-auto relative top-2/4 transform -translate-y-2/4 mt-8"} />
+                    	<Pricing1 classes={"container px-5 mx-auto relative top-2/4 transform -translate-y-2/4 mt-8"} />
                   	</Section>
+                </Slide>
+
+                <Slide>
+                    <Section classes={'w-full h-screen'}>
+                      <Pricing2 classes={"container px-5 mx-auto relative top-2/4 transform -translate-y-2/4 mt-8"} />
+                    </Section>
+                </Slide>
+
+                <Slide>
+                    <Section classes={'w-full h-screen'}>
+                      <Pricing3 classes={"container px-5 mx-auto relative top-2/4 transform -translate-y-2/4 mt-8"} />
+                    </Section>
                 </Slide>
 
                 <Slide>
@@ -57,9 +70,9 @@ const PricingP = () => {
           :
           <>
             <Navbar scrollToSlide={ scrollToTop }/>
-              	<Slide>
+            	<Slide>
 		            <Section classes={'pb-16'}>
-		               	<Pricing classes={"px-5 mx-auto"} />
+		               	<Pricing1 classes={"px-5 mx-auto"} />
 		            </Section>
             	</Slide>
 
