@@ -26,6 +26,9 @@ module.exports = {
       margin :{
         '1/3':'30%',
         '1/4': '20%'        
+      },
+      borderWidth:{
+        '3':'3px'
       }
     },
   },

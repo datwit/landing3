@@ -54,11 +54,11 @@ const Partner = () => {
                 </Section>
               </Slide>
 
-            <Slide>
-              <Section classes={'w-full h-screen'}>
-                <PartPricing  classes={"container px-5 mx-auto relative top-2/4 transform -translate-y-2/4"}/>
-              </Section>
-            </Slide>
+           {/* <Slide>
+                         <Section classes={'w-full h-screen'}>
+                           <PartPricing  classes={"container px-5 mx-auto relative top-2/4 transform -translate-y-2/4"}/>
+                         </Section>
+                       </Slide>*/}
 
             <Slide>
               <Section classes={"w-full h-screen bg-primary mx-auto px-10"}>
@@ -81,11 +81,11 @@ const Partner = () => {
                 </Section>
               </Slide>
 
-              <Slide>
-                <Section classes={'pb-16'}>
-                  <PartPricing classes={"px-5 mx-auto"} />
-                </Section>
-              </Slide>
+              {/*<Slide>
+                              <Section classes={'pb-16'}>
+                                <PartPricing classes={"px-5 mx-auto"} />
+                              </Section>
+                            </Slide>*/}
 
               <Slide>
                 <Section classes={"w-full h-screen bg-primary mx-auto px-10"}>

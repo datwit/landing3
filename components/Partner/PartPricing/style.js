@@ -1,24 +1,24 @@
 import styled from 'styled-components';
 
-export const BulletWrapper= styled.ul
-`
-&.slide-right{
-    position: relative;
-    right: -1000px;
-    -webkit-animation: slider 0.8s forwards;
-    -webkit-animation-delay: 0.3s;
-    animation: slider 0.8s forwards;
-    animation-delay: 0.3s;
+// export const BulletWrapper= styled.ul
+// `
+// &.slide-right{
+//     position: relative;
+//     right: -1000px;
+//     -webkit-animation: slider 0.8s forwards;
+//     -webkit-animation-delay: 0.3s;
+//     animation: slider 0.8s forwards;
+//     animation-delay: 0.3s;
 
-}
-@-webkit-keyframes slider {
-    100% { right: 0; }
-}
+// }
+// @-webkit-keyframes slider {
+//     100% { right: 0; }
+// }
 
-@keyframes slider {
-    100% { right: 0; }
-}
-`;
+// @keyframes slider {
+//     100% { right: 0; }
+// }
+// `;
 export const PricingCardGray= styled.div.attrs({
     className: "p-4 md:w-1/3 w-full bg-white bg-opacity-75 px-4 py-4 lg:px-8 lg:py-10 overflow-hidden text-center shadow border border-gray-300"
 })
@@ -52,12 +52,12 @@ export const PriceTitle = styled.h1.attrs({
 export const PriceDescription = styled.p.attrs({
     className: "leading-relaxed mb-3 text-sm sm:text-base"
 })``;
-export const BulletText = styled.p.attrs({
+/*export const BulletText = styled.p.attrs({
     className: "flex items-center text-gray-600 md:mb-6 text-sm sm:text-base"
 })``;
 export const BulletTextSpan = styled.span.attrs({
     className: "w-8 h-8 mr-2 inline-flex items-center justify-center flex-shrink-0"
-})``;
+})``;*/
 export const BulletsContainer = styled.div.attrs({
     className: "px-4 sm:p-4 md:w-2/3 w-full flex items-center"
 })``;
