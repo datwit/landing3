@@ -2,7 +2,7 @@ import React from 'react'
 import { SectionHeader} from 'styles/global'
 import datas from './bullets.json';
 import { BulletsContainer } from './style';
-import {PBullets} from '../../Home/Pricing/style';
+import {PBullets} from '../../Pricing1/style';
 import { IoIosPlayCircle } from "react-icons/io";
 
 
