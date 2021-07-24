@@ -5,10 +5,10 @@
         "items":[
             {"tit":"Exploratory data analysis"},
             {"tit":"Data cleaning and anonymization"},
-            {"tit":"Data visualization"},
+            {"tit":"ETL design"},            
             {"tit":"Data infrastructure design and build"},
             {"tit":"Database setup and management"},
-            {"tit":"ETL design"}
+            {"tit":"Data visualization"}
         ]
     },
     {
