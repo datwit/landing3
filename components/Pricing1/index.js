@@ -2,7 +2,7 @@ import React from 'react'
 import {ContentWrapper, SectionHeader, SectionSubheader} from 'styles/global';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import MainPricingCard from './MainPricingCard';
-import CarouselResponsive from './CarouselResponsive';
+import CardTabsResponsive from './CardTabsResponsive';
 import datas from "./pricing.json";
 import {BulletWrapper, OuterWrapper} from './style';
 import BulletsContent  from './BulletsContent'
@@ -39,7 +39,7 @@ const Pricing1 = ({classes}) => {
             </div>
              {/*********responsive************** */}
             <div className="md:hidden">
-                <CarouselResponsive />
+                <CardTabsResponsive />
             </div>
            
         </div>

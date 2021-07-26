@@ -25,6 +25,13 @@ const PricingP = () => {
   const style={
     height:'calc(100% - 80px)',
   }
+  
+  function scrollToTop() {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  }
 
    /*****hiding scroll bar*/
   useEffect(()=>{
@@ -71,10 +78,22 @@ const PricingP = () => {
           <>
             <Navbar scrollToSlide={ scrollToTop }/>
             	<Slide>
-		            <Section classes={'pb-16'}>
+		            <Section classes={'pb-16 pt-20'}>
 		               	<Pricing1 classes={"px-5 mx-auto"} />
 		            </Section>
             	</Slide>
+
+              <Slide>
+                <Section classes={'pb-16 hidden md:block'}>
+                    <Pricing2 classes={"px-5 mx-auto"} />
+                </Section>
+              </Slide>
+
+              <Slide>
+                <Section classes={'pb-16 hidden md:block'}>
+                    <Pricing3 classes={"px-5 mx-auto"} />
+                </Section>
+              </Slide>
 
             	<Slide>
 	              	<Section classes={"w-full h-screen bg-primary mx-auto px-10"}>

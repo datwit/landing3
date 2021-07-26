@@ -25,39 +25,54 @@ export const PBullets = styled.span.attrs({
     className: "w-5 h-5 mr-2 inline-flex items-center justify-center flex-shrink-0"
 })
 ``;
-export const CarouselContainer = styled.div.attrs({
-    className: ""
+export const ToggleWrapper = styled.div.attrs({
+    className: "flex mx-auto my-3 justify-center lg:max-w-lg xl:max-w-xl"
+})``;
+export const BundleChooser = styled.div.attrs({
+    className: "py-1 px-4 text-xs sm:text-base flex flex-col items-center cursor-pointer relative"
 })
 `
-.carousel-status{
-    display:none;
-}
-.control-dots{
-
-    bottom:-17px;
-    li{
-        width: 25px;
-        height: 5px;
+    z-index:2;
+    svg{
+        margin:10px;
+    }
+    path{
+      stroke: #e69c24;
+    }
+    h4{
+       color: #e69c24;
+       margin: 5px 0 5px 0;
     }
 
-    .dot{
-        width: 25px;
+    &::before{
+        position:absolute;
+        bottom:0;
+        content:"";
+        background: #e69c24;
         height: 5px;
-        border-radius:0;
-        background: #00baff;
-        box-shadow:none;
+        z-index: -1;
+        width: 100%;
 
     }
-}
-.control-arrow {
-    visibility:hidden;
-
-    &.control-next, &.control-prev{
-        &::before{
-            visibility:hidden;
+    &.open::before{
+        height:100%;
+        transition: height 300ms ease-in-out;
+        -webkit-transition: height 300ms ease-in-out;
+    }
+    &.open{
+         path{
+            stroke:white;
+            transition: stroke 300ms ease-in-out;
+            -webkit-transition: stroke 300ms ease-in-out;
+        }
+        h4{
+            color: white;
+            transition: color 300ms ease-in-out;
+            -webkit-transition: color 300ms ease-in-out;
         }
     }
-}
+
+
 `;
 export const BulletWrapper= styled.ul
 `
@@ -84,6 +99,27 @@ export const BulletText = styled.p.attrs({
 export const BulletTextSpan = styled.span.attrs({
     className: "w-8 h-8 mr-2 inline-flex items-center justify-center flex-shrink-0"
 })``;
+export const CardPriceCont = styled.div.attrs({
+    className: " p-4 w-full"
+})
+`
+&.slide-left{
+    position: relative;
+    left: -1000px;
+    -webkit-animation: slidel 0.8s forwards;
+    -webkit-animation-delay: 0.3s;
+    animation: slidel 0.8s forwards;
+    animation-delay: 0.3s;
+    overflow:hidden;
+}
+@-webkit-keyframes slidel {
+    100% { left: 0; }
+}
+
+@keyframes slidel {
+    100% { left: 0; }
+}
+`;
 export const ButtonPrice = styled.div.attrs({
     className: "mx-auto my-4 border-3"
 })
@@ -110,7 +146,7 @@ export const ButtonPrice = styled.div.attrs({
 
     &.naranja{
         &:hover{
-            color:#e69c24; 
+            color:#e69c24;
             border-width:3px;
             border-color:#e69c24;
             background: white;
@@ -121,7 +157,7 @@ export const ButtonPrice = styled.div.attrs({
     }
     &.azul{
         &:hover{
-            color:#00baff; 
+            color:#00baff;
             border-width:3px;
             border-color:#00baff;
             background: white;
@@ -132,7 +168,7 @@ export const ButtonPrice = styled.div.attrs({
     }
     &.dark{
         &:hover{
-            color:#1e4158; 
+            color:#1e4158;
             border-width:3px;
             border-color:#1e4158;
             background: white;
@@ -140,5 +176,5 @@ export const ButtonPrice = styled.div.attrs({
                 color:#1e4158;
             }
         }
-    }    
+    }
 `;

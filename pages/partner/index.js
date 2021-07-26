@@ -4,7 +4,6 @@ import CustomControls from 'components/Slide/CustomControls'
 import Footer from 'components/Footer'
 import Find from 'components/Partner/Find'
 import Faqs from 'components/Partner/Faqs'
-import PartPricing from 'components/Partner/PartPricing'
 import { motion } from 'framer-motion'
 import Head from 'next/head';
 import {useEffect} from 'react'
