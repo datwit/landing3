@@ -36,7 +36,7 @@ const CustomControls = ({ slidesCount, scrollToSlide, onNext, onPrev, getCurrent
         tip = [...tip, 'Study Cases', 'Bottom']
         break
       case '/pricing':
-        tip = [...tip, 'Pricing', 'Bottom']
+        tip = [...tip, 'Data Solutions', 'ML Solutions','Web Solutions','Bottom']
         break
       case '/about':
         tip = [...tip, 'About Datwit', 'Team', 'Collaborators', 'Bottom']
@@ -106,7 +106,7 @@ const CustomControls = ({ slidesCount, scrollToSlide, onNext, onPrev, getCurrent
           <Navbar scrollToSlide={ scrollToSlide }/> 
 
           <div className={className}>
-            {renderSlidesNumbers(getCurrentSlideIndex())}
+            {renderSlidesNumbers(getCurrentSlideIndex())}           
           </div>    
         </>
        

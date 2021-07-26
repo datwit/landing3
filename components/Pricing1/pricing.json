@@ -1,5 +1,7 @@
 [
   {
+    "num":1,
+    "bundle":"DATA",
     "field":"DATA SOLUTIONS",
     "style":"secondary1",
     "price": "$89",
@@ -14,6 +16,8 @@
     ]
   },
   {
+    "num":2,
+    "bundle":"ML",
     "field":"ML SOLUTIONS",
     "style":"secondary2",
     "price": "$69",
@@ -28,6 +32,8 @@
     ]
   },
   {
+    "num":3,
+    "bundle":"DEV",
     "field":"WEB SOLUTIONS",
     "style":"primary",
     "price": "$72",
