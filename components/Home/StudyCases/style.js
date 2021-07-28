@@ -68,6 +68,24 @@ export const SCardWrapper = styled.div.attrs({
   text-align:justify;
   `;
   export const ReadMore = styled.a.attrs({
-    className: "text-secondary2 flex items-center md:mb-2 lg:mb-0 cursor-pointer hover:text-secondary1"
-  })``;
+    className: "text-secondary2 flex items-center md:mb-2 lg:mb-0 cursor-pointer hover:text-secondary1 relative"
+  })
+  `
+  svg{
+    position:relative;
+    right:-3px;
+    bottom:0;
+  }
+  &:hover{
+    svg{
+      animation: moving-arrow .5s ease-in-out infinite alternate;
+    }
+  }
+  @keyframes moving-arrow{
+    100%{
+      transform:translateX(7px);
+    }
+  }
+
+  `;
 
