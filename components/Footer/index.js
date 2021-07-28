@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import React, {Fragment} from 'react'
-import {FooterContainer, ContactContainer, SocialList, FooterHeader, FooterLinksWrapper,FooterAccordionContainer, ColumnContent, ColumnTitle, SocialListItem, ContactWrapper,CopyRight} from './style'
+import {FooterContainer, ContactContainer, SocialList, FooterHeader, FooterLinksWrapper,FooterAccordionContainer, ColumnContent, ColumnTitle, SocialListItem, SocialListItem2, ContactWrapper,CopyRight} from './style'
 import datas from './data.json'
 import links from './pageslink.json';
 import {FiGithub, FiFacebook, FiTwitter, FiLinkedin, FiMessageCircle} from 'react-icons/fi'
@@ -20,26 +20,26 @@ const Footer = () => {
                             <div className="w-2/4">
                                 <ColumnTitle>FOLLOW US</ColumnTitle>
                                 <SocialList>
-                                    <Link href={datas[0].url}><SocialListItem><FiLinkedin /></SocialListItem></Link>
-                                    <Link  href={datas[1].url}><SocialListItem><FiFacebook /></SocialListItem></Link>
-                                    <Link  href={datas[2].url}><SocialListItem><FiGithub /></SocialListItem></Link>
-                                    <Link  href={datas[3].url}><SocialListItem><FiTwitter /></SocialListItem></Link>
+                                    <Link href={datas[0].url}><SocialListItem2><FiLinkedin /></SocialListItem2></Link>
+                                    <Link  href={datas[1].url}><SocialListItem2><FiFacebook /></SocialListItem2></Link>
+                                    <Link  href={datas[2].url}><SocialListItem2><FiGithub /></SocialListItem2></Link>
+                                    <Link  href={datas[3].url}><SocialListItem2><FiTwitter /></SocialListItem2></Link>
                                 </SocialList>
                             </div>
                             <div className="w-2/4">
                                 <ColumnTitle>CONTACT US</ColumnTitle>
                                 <ContactWrapper>
                                     <Link href="mailto:contact@datwit.com">
-                                        <SocialListItem>
+                                        <SocialListItem2>
                                             <HiOutlineMail />
                                             {/* <UpperH3>contact@datwit.com</UpperH3> */}
-                                        </SocialListItem>
+                                        </SocialListItem2>
                                     </Link>
                                     <Link href="tel:+58 658 987">
-                                        <SocialListItem>
+                                        <SocialListItem2>
                                             <FiMessageCircle />
                                             {/* <UpperH3>+58 658 987</UpperH3> */}
-                                        </SocialListItem>
+                                        </SocialListItem2>
                                     </Link>
                                 </ContactWrapper>
                             </div>
@@ -69,10 +69,10 @@ const Footer = () => {
                                 <Link  href={datas[2].url}><SocialListItem><FiGithub /></SocialListItem></Link>
                                 <Link  href={datas[3].url}><SocialListItem><FiTwitter /></SocialListItem></Link>
                                 <Link href="mailto:contact@datwit.com">
-                                    <li className="mr-2 mt-2"><HiOutlineMail className="h-7 w-7 text-white mr-2"/></li>
+                                    <SocialListItem><HiOutlineMail/></SocialListItem>
                                 </Link>
                                 <Link href="tel:+58 658 987">
-                                    <li className="mr-2 mt-2"><FiMessageCircle className="h-7 w-7 text-white mr-2" /></li>
+                                    <SocialListItem><FiMessageCircle /></SocialListItem>
                                 </Link>
                             </SocialList>
                         </ColumnContent>
