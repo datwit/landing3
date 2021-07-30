@@ -34,24 +34,41 @@ export const SocialList = styled.ul.attrs({
 @media (max-width: 640px){
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-evenly;
 }
 `;
 export const SocialListItem = styled.li.attrs({
-    className: "mr-2 h-8 w-8 cursor-pointer mt-2"
+    className: "h-8 w-8 cursor-pointer"
 })
 `
 list-style:none;
+display:flex;
+justify-content:center;
 
-svg{
-    width:1.75rem;
-    height:1.75rem;
-    color: white;
-    
-    &:hover{
-        color: #00baff;    
+    svg{
+        width:1.75rem;
+        height:1.75rem;
+        color: white;
+        
+        &:hover{
+            color: #00baff;    
+        }
     }
-}
+`;
+export const SocialListItem2 = styled.li.attrs({
+    className: "h-8 w-8 mt-2 mr-2 cursor-pointer"
+})
+`
+list-style:none;
+    svg{
+        width:1.75rem;
+        height:1.75rem;
+        color: white;
+        
+        &:hover{
+            color: #00baff;    
+        }
+    }
 `;
 export const ContactWrapper = styled.span.attrs({
     className: "flex"
