@@ -1,9 +1,6 @@
 import React from 'react'
-import { Field, Price, LilDescrip, PBulletsWrapper, ButtonPrice} from './style';
-import PricingBullets from './PricingBullets';
-import CTA from '../Home/CTA';
+import { Field, Price, LilDescrip, ButtonPrice} from './style';
 import { FiSend } from 'react-icons/fi';
-import styled from "styled-components"
 import Link from 'next/link'
 
 const MainPricingCard = ({style, field,price,description}) => {
@@ -34,4 +31,4 @@ const MainPricingCard = ({style, field,price,description}) => {
     )
 }
 
-export default MainPricingCard
+export {MainPricingCard}

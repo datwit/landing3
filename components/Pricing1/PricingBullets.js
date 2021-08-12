@@ -12,4 +12,4 @@ const PricingBullets = ({title}) => {
     )
 }
 
-export default PricingBullets
+export {PricingBullets}

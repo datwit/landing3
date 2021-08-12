@@ -17,4 +17,4 @@ const FaqCard = ({href, children, text}) => {
     )
 }
 
-export default FaqCard
+export {FaqCard}

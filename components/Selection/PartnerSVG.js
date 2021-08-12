@@ -51,4 +51,4 @@ const PartnerSVG = () => {
     )
 }
 
-export default PartnerSVG
+export {PartnerSVG}

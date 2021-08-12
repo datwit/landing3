@@ -1,4 +1,4 @@
-import CTA from '../CTA'
+import {CTA} from '../CTA'
 import {MainHeaderCont} from './style';
 import { FiSend } from 'react-icons/fi';
 
@@ -20,4 +20,4 @@ const Hero = ()=>(
           </MainHeaderCont> 
         </div>          
 )
-export default Hero
+export {Hero}

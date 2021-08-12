@@ -2,7 +2,7 @@ import React from 'react'
 import datas from "./collaborators.json";
 import {ColWrapper} from './style';
 import {ContentWrapper} from 'styles/global';
-import CollaboratorsCard from './CollaboratorsCard'
+import {CollaboratorsCard} from './CollaboratorsCard'
 import Carousel from 'react-elastic-carousel'
 
 const Collaborators = ({classes}) => {
@@ -33,4 +33,4 @@ const Collaborators = ({classes}) => {
     )
 }
 
-export default Collaborators
+export {Collaborators}

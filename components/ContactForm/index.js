@@ -59,4 +59,4 @@ const ContacthtmlForm = ({classes}) => {
     )
 }
 
-export default ContacthtmlForm
+export {ContacthtmlForm}

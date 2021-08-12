@@ -2,7 +2,7 @@ import React from 'react';
 import datas from "./data.json";
 import {SCardWrapper} from './style';
 import {ContentWrapper, SectionSubheader, SectionHeader} from 'styles/global';
-import StudyCasesCard from './StudyCasesCard';
+import {StudyCasesCard} from './StudyCasesCard';
 import Carousel from 'react-elastic-carousel'
 
 
@@ -49,4 +49,4 @@ const StudyCases = ({classes}) => {
     )
 }
 
-export default StudyCases
+export {StudyCases}

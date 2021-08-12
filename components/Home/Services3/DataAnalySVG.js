@@ -106,4 +106,4 @@ const DataAnalySVG = () => {
     )
 }
 
-export default DataAnalySVG
+export {DataAnalySVG}

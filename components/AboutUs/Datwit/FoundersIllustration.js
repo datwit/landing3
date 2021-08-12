@@ -172,7 +172,7 @@ const FoundersIllustration = () => {
     )
 }
 
-export default FoundersIllustration
+export {FoundersIllustration}
 
 
 

@@ -35,4 +35,4 @@ const CollaboratorsCard = ({name, designation, twitter, linkedin, github, src}) 
     )
 }
 
-export default CollaboratorsCard
+export {CollaboratorsCard}

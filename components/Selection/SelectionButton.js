@@ -12,4 +12,4 @@ const SelectionButton = ({hhref}) => {
     )
 }
 
-export default SelectionButton
+export {SelectionButton}

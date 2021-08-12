@@ -84,4 +84,4 @@ function DataManagSVG() {
     )
 }
 
-export default DataManagSVG
+export {DataManagSVG}

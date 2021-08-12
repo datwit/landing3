@@ -1,16 +1,16 @@
 import { FullPage, Slide } from 'react-full-page'
-import Section from 'components/Section'
-import Footer from 'components/Footer'
+import {Section} from 'components/Section'
+import {Footer} from 'components/Footer'
 import { format, parseISO } from 'date-fns'
-import CustomControls from 'components/Slide/CustomControls'
-import { ContentWrapper, SectionHeader} from 'styles/global'
-import { SearchCard,ImageW, CardSummary, CardSummary2, BlogTitle2, DateWrapper, RespBlock, BlogTitle1, PaginationWrapper, PaginationSection } from '../../components/Blog/style'
+import {CustomControls} from 'components/Slide/CustomControls'
+import { SectionHeader} from 'styles/global'
+import { SearchCard,ImageW, DateWrapper, RespBlock, BlogTitle1, PaginationWrapper, PaginationSection } from '../../components/Blog/style'
 import Link from "next/link"
 import { useRouter } from 'next/router'
 import { motion } from 'framer-motion'
 import Head from 'next/head';
 import DeviceDetect from "lib/deviceDetect"
-import Navbar from 'components/Navbar'
+import {Navbar }from 'components/Navbar'
 import {FiChevronLeft} from 'react-icons/fi'
 import ReactPaginate from 'react-paginate'
 import { useEffect, useState } from 'react'
@@ -27,18 +27,12 @@ import posts from 'cache/posts.json'
 const BlogResults = () => {
   const {isMobile} = DeviceDetect()
 
-  const style={
-    height:'calc(100% - 80px)',
-  }
-
   function scrollToTop() {
     window.scrollTo({
       top: 0,
       behavior: "smooth"
     });
   }
-
-
 
   const [offset, setOffset] = useState(0);
   const [data, setData] = useState([]);
@@ -47,7 +41,7 @@ const BlogResults = () => {
 
   const router = useRouter()
   const cat = router.query.p
-  const que = router.query.q
+  const que = router.query.q 
   const results = cat != null ?
     posts.filter(post => post.Stringtags.toLowerCase().includes(cat)) :
 
@@ -119,7 +113,7 @@ return (
     <motion.div initial={{opacity:0,  y: 200}} animate={{opacity:1, y:0}}>
         { !isMobile ?
         <FullPage controls={CustomControls}>
-          <Slide {...style}>
+          <Slide>
             <Section classes={'w-full h-screen'}>
             <div className="container px-5 mx-auto mt-20">
               {/* back button*/}
@@ -169,7 +163,7 @@ return (
         :
         <>
           <Navbar scrollToSlide={ scrollToTop }/>
-          <Slide {...style}>
+          <Slide>
             <Section classes={'min-h-screen'}>
               <div className="px-5 mx-auto pb-16 mt-20">
                 <Link href="/blog/">

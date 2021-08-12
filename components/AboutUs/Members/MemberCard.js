@@ -38,4 +38,4 @@ const MemberCard = ({name, designation, rol, twitter, linkedin, github, src}) =>
     )
 }
 
-export default MemberCard
+export {MemberCard}

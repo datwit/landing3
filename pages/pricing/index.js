@@ -1,31 +1,20 @@
-import CustomControls from 'components/Slide/CustomControls'
+import {CustomControls} from 'components/Slide/CustomControls'
 import { FullPage, Slide } from 'react-full-page'
-import Section from 'components/Section'
-import Footer from 'components/Footer'
+import {Section} from 'components/Section'
+import {Footer} from 'components/Footer'
 import { motion } from 'framer-motion'
 import Head from 'next/head';
-import Navbar from 'components/Navbar'
+import {Navbar} from 'components/Navbar'
 import {useEffect} from 'react'
 import DeviceDetect from "lib/deviceDetect";
-import Pricing1 from 'components/Pricing1'
-import Pricing2 from 'components/Pricing2'
-import Pricing3 from 'components/Pricing3'
+import {Pricing1} from 'components/Pricing1'
+import {Pricing2} from 'components/Pricing2'
+import {Pricing3} from 'components/Pricing3'
 
 
 const PricingP = () => {
 	const {isMobile} = DeviceDetect()
 
-  function scrollToTop() {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth"
-    });
-  }
-
-  const style={
-    height:'calc(100% - 80px)',
-  }
-  
   function scrollToTop() {
     window.scrollTo({
       top: 0,

@@ -1,8 +1,6 @@
 import {ContentWrapper, SectionHeader, SectionSubheader} from 'styles/global'
-import {IconWrapper} from '../../Team/Benefits/style'
-import { IconBlock} from './style'
 import datas from './data.json'
-import FindBlock from './FindBlock'
+import {FindBlock} from './FindBlock'
 import { CustomSVG } from './CustomSVG'
 import {IntegrationSVG} from './IntegrationSVG'
 import {AgileSVG} from './AgileSVG'
@@ -28,4 +26,4 @@ const Find = ({classes}) => {
     )
 }
 
-export default Find
+export {Find}

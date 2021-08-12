@@ -1,14 +1,14 @@
 import React from 'react'
 import datas from 'components/Partner/Faqs/data-dev.json'
-import {SectionHeader,SectionSubheader} from 'styles/global'
-import {QuestionText, AccordionList, AccordionWrapper} from 'components/Partner/Faqs/style'
-import Navbar from 'components/Navbar'
-import Footer from 'components/Footer'
+import {SectionHeader} from 'styles/global'
+import { AccordionList, AccordionWrapper} from 'components/Partner/Faqs/style'
+import {Footer} from 'components/Footer'
 import { motion } from 'framer-motion'
 import { FullPage } from 'react-full-page'
-import CustomControls from 'components/Slide/CustomControls'
-import AccordionItem from 'components/Partner/Faqs/AccordionItem'
+import {CustomControls} from 'components/Slide/CustomControls'
+import {AccordionItem} from 'components/Partner/Faqs/AccordionItem'
 import Head from 'next/head'
+import {Section} from 'components/Section'
 
 
 const FaqsTeam = () => {
@@ -20,7 +20,7 @@ const FaqsTeam = () => {
             <motion.div initial={{opacity:0,  y: 200}} animate={{opacity:1, y:0}}>
                 <FullPage controls={CustomControls} scrollMode='normal'>
 
-                    <section className="pt-20">
+                    <Section classes={"min-h-screen pt-20"}>
                         <div className="px-5 mx-auto">
                             <SectionHeader className="mb-4">Frequently asked questions for developers</SectionHeader>
                             {/*accordion component*/}
@@ -34,16 +34,15 @@ const FaqsTeam = () => {
                                             </li>
                                         ))
                                     )
-
                                 }
                                 </AccordionList>
                             </AccordionWrapper>
                         </div>
-                    </section>
+                    </Section>
 
-                    <section className= "w-full h-screen bg-primary mx-auto px-10">
+                    <Section classes={ "w-full h-screen bg-primary mx-auto px-10"}>
                         <Footer />
-                    </section>
+                    </Section>
 
                 </FullPage>
             </motion.div>

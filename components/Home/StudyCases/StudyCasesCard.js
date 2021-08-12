@@ -23,4 +23,4 @@ const StudyCasesCard = ({img, title,summary,id}) => {
     )
 }
 
-export default StudyCasesCard
+export {StudyCasesCard}

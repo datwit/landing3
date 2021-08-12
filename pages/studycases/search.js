@@ -1,13 +1,13 @@
 import { FullPage, Slide } from 'react-full-page'
-import Section from 'components/Section'
-import Footer from 'components/Footer'
+import {Section} from 'components/Section'
+import {Footer} from 'components/Footer'
 import { format, parseISO } from 'date-fns'
-import CustomControls from 'components/Slide/CustomControls'
-import { ContentWrapper, SectionHeader } from 'styles/global'
-import { ImageW, CardSummary, CardSummary2,BlogTitle2, DateWrapper, RespBlock, BlogTitle1, PaginationWrapper, PaginationSection, SearchCard } from 'components/Blog/style'
+import {CustomControls} from 'components/Slide/CustomControls'
+import { SectionHeader } from 'styles/global'
+import { ImageW, DateWrapper, RespBlock, BlogTitle1, PaginationWrapper, PaginationSection, SearchCard } from 'components/Blog/style'
 import Link from "next/link"
 import { useRouter } from 'next/router'
-import Navbar from 'components/Navbar'
+import {Navbar} from 'components/Navbar'
 import { motion } from 'framer-motion'
 import Head from 'next/head'
 import DeviceDetect from "lib/deviceDetect"
@@ -40,11 +40,7 @@ const CasesResults = () => {
           document.body.style.overflow = "visible";
         };
     })
-
-    const style={
-        height:'calc(100% - 80px)',
-    }
-
+   
     const router = useRouter()
     const cat = router.query.p
     const results = cat != null ?
@@ -105,7 +101,7 @@ const CasesResults = () => {
     <motion.div initial={{opacity:0,  y: 200}} animate={{opacity:1, y:0}}>
         { !isMobile ?
         <FullPage controls={CustomControls}>
-          <Slide {...style}>
+          <Slide>
             <Section classes={'w-full h-screen'}>
             <div className="px-5 mx-auto mt-20">
               {/* back button*/}
@@ -155,7 +151,7 @@ const CasesResults = () => {
         :
         <>
           <Navbar scrollToSlide={ scrollToTop }/>
-          <Slide {...style}>
+          <Slide>
             <Section classes={'min-h-screen'}>
               <div className="px-5 mx-auto mt-20">
                {/* back button*/}

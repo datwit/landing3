@@ -19,4 +19,4 @@ const LogoSVG = () => {
     )
 }
 
-export default LogoSVG
+export {LogoSVG}

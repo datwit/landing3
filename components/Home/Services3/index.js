@@ -3,7 +3,7 @@ import datas from "../Services1/data.json";
 import {ContentWrapper, SectionHeader}from 'styles/global';
 import { ImageTitle, TextBlock} from '../Services2/style'
 import { FiArrowRightCircle } from 'react-icons/fi';
-import DataAnalySVG from './DataAnalySVG'
+import {DataAnalySVG} from './DataAnalySVG'
 import { BulletSubtitle, ServiceBulletsOuter, ServiceBulletsSpan } from '../Services1/style';
 import { IllWrapper3 } from './style';
 
@@ -40,4 +40,4 @@ const Services3 = ({classes}) => {
 
 }
 
-export default Services3
+export {Services3}

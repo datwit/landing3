@@ -1,5 +1,5 @@
 import {DatwitWrapper, TextBlock, DHeader, DParagraph, GitLink, ImgWrapper} from './style'
-import FoundersIllustration from './FoundersIllustration'
+import {FoundersIllustration} from './FoundersIllustration'
 
 
 const Datwit = ({classes}) => {
@@ -28,4 +28,4 @@ const Datwit = ({classes}) => {
     )
 }
 
-export default Datwit
+export {Datwit}

@@ -1,10 +1,9 @@
-import { } from '../../styles/global'
-import { SectionHeader, SectionSubheader, ContentWrapper} from '../../styles/global'
+import { SectionHeader, SectionSubheader, ContentWrapper} from 'styles/global'
 import { BlockOuterContainer, BlockBorder, ButtonWrapper, SHeader, SVGWrapper } from './style'
 import { useState} from 'react'
-import SelectionButton from './SelectionButton';
-import PartnerSVG from './PartnerSVG';
-import TeamSVG from './TeamSVG';
+import {SelectionButton} from './SelectionButton';
+import {PartnerSVG} from './PartnerSVG';
+import {TeamSVG} from './TeamSVG';
 
 
 const Selection = ({classes}) => {
@@ -69,4 +68,4 @@ const Selection = ({classes}) => {
     )
 }
 
-export default Selection
+export {Selection}

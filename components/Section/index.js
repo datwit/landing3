@@ -1,13 +1,11 @@
 import {Fragment} from 'react'
-/* import Navbar from '../Navbar'  */
 
 
 const Section = ({children, classes}) => {
 
     return ( 
         <Fragment>        
-            <section className= {classes}>
-                {/* <Navbar /> */}
+            <section className= {classes}>               
                 {children}        
             </section>
         </Fragment>  
@@ -15,4 +13,4 @@ const Section = ({children, classes}) => {
 
 }
 
-export default Section
+export {Section}

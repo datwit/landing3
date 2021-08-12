@@ -61,4 +61,4 @@ const TeamSVG = () => {
     )
 }
 
-export default TeamSVG
+export {TeamSVG}

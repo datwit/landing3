@@ -36,4 +36,4 @@ const AccordionItem = ({ question, answer, clases, link, list}) => {
     )
 }
 
-export default AccordionItem
+export {AccordionItem}

@@ -1,19 +1,19 @@
 import { FullPage, Slide } from 'react-full-page'
-import Section from 'components/Section'
-import Footer from 'components/Footer'
+import {Section} from 'components/Section'
+import {Footer} from 'components/Footer'
 import Link from "next/link"
 import React, { useCallback, useState, useEffect } from 'react'
 import { getAllData } from 'lib/posts'
 import { format, parseISO } from 'date-fns'
-import CustomControls from 'components/Slide/CustomControls'
+import {CustomControls} from 'components/Slide/CustomControls'
 import { SectionSubheader } from 'styles/global'
-import { Category, PaginationWrapper, SearchWrapper, BlogCardWrapper, BlogCardBlock, CardSummary, BlogCardBorder, RespBlock, BlogTitle1, BlogTitle2, DateWrapper, SearchField } from '../../components/Blog/style'
+import { PaginationWrapper, SearchWrapper, BlogCardWrapper, BlogCardBlock, CardSummary, BlogCardBorder, RespBlock, BlogTitle1, BlogTitle2, DateWrapper, SearchField } from '../../components/Blog/style'
 import ReactPaginate from 'react-paginate';
 import { useRouter } from 'next/router'
 import { motion } from 'framer-motion'
 import Head from 'next/head';
 import DeviceDetect from "lib/deviceDetect";
-import Navbar from 'components/Navbar'
+import {Navbar} from 'components/Navbar'
 import {CategoryRect} from 'components/Home/StudyCases/style'
 
 
@@ -21,10 +21,6 @@ import posts from 'cache/posts.json'
 
 const Blog = () => {
   const {isMobile} = DeviceDetect()
-
-  const style={
-    height:'calc(100% - 80px)',
-  }
 
   function scrollToTop() {
     window.scrollTo({
@@ -72,9 +68,8 @@ const Blog = () => {
 
   //redirecting using router
   const searchRedirect=()=>{
-    router.push(`/blog/search?q=${query.toLowerCase()}`)
-  }
-
+    router.push(`/blog/search?q=${query.toLowerCase()}`)    
+  }  
 
   //getting our data
   const getData = () => {
@@ -143,7 +138,7 @@ const Blog = () => {
         <motion.div initial={{opacity:0,  y: 200}} animate={{opacity:1, y:0}}>
           { !isMobile ?
             <FullPage controls={CustomControls}>
-              <Slide {...style}>
+              <Slide>
                 <Section classes={'w-full h-screen'}>
                 <div className="container px-5 mx-auto relative top-2/4 transform -translate-y-2/4">
                       <SectionSubheader>Discover interesting ideas and unique perspectives from our amazing crew</SectionSubheader>
@@ -198,7 +193,7 @@ const Blog = () => {
             :
             <>
               <Navbar scrollToSlide={ scrollToTop }/>
-              <Slide {...style}>
+              <Slide>
                 <Section classes={'min-h-screen'}>
                 <div className="px-5 mx-auto pb-16 mt-20">
                       <SectionSubheader>Discover interesting ideas and unique perspectives from our amazing crew</SectionSubheader>
