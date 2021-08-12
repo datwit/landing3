@@ -16,4 +16,4 @@ const CTA = ({buttonName, children,hhref}) => {
 
 
 }
-export default CTA
+export {CTA}

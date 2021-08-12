@@ -28,4 +28,4 @@ const Believe = ({classes}) => {
     )
 }
 
-export default Believe
+export {Believe}

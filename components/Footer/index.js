@@ -5,7 +5,7 @@ import datas from './data.json'
 import links from './pageslink.json';
 import {FiGithub, FiFacebook, FiTwitter, FiLinkedin, FiMessageCircle} from 'react-icons/fi'
 import { HiOutlineMail } from 'react-icons/hi'
-import FooterAccordion from './FooterAccordion'
+import {FooterAccordion} from './FooterAccordion'
 import { AccordionList } from 'components/Partner/Faqs/style'
 
 const Footer = () => {
@@ -96,4 +96,4 @@ const Footer = () => {
     )
 }
 
-export default Footer
+export {Footer}

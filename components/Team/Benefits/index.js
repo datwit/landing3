@@ -1,6 +1,6 @@
 import {ContentWrapper, SectionHeader, SectionSubheader} from 'styles/global'
 import datas from './data.json'
-import BenefitBlock from './BenefitBlock'
+import {BenefitBlock }from './BenefitBlock'
 import {HeartSVG} from './HeartSVG'
 import {GiveMoneySVG} from './GiveMoneySVG'
 import {SignYesSVG} from './SignYesSVG'
@@ -25,4 +25,4 @@ const Benefits = ({classes}) => {
     )
 }
 
-export default Benefits
+export {Benefits}

@@ -36,4 +36,4 @@ const FooterAccordion = ({ title, items }) => {
     )
 }
 
-export default FooterAccordion
+export {FooterAccordion}

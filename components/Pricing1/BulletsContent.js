@@ -10,4 +10,4 @@ const BulletsContent = ({title}) => {
     )
 }
 
-export default BulletsContent
+export {BulletsContent}

@@ -1,14 +1,14 @@
-import CustomControls from 'components/Slide/CustomControls'
+import {CustomControls} from 'components/Slide/CustomControls'
 import { FullPage, Slide } from 'react-full-page'
-import Section from 'components/Section'
-import Hero from 'components/Home/Hero'
-import StudyCases from 'components/Home/StudyCases'
-import Services2 from 'components/Home/Services2'
-import Services1 from 'components/Home/Services1'
-import Services3 from 'components/Home/Services3'
-import Footer from 'components/Footer'
-import Navbar from 'components/Navbar'
-import Selection from 'components/Selection'
+import {Section} from 'components/Section'
+import {Hero} from 'components/Home/Hero'
+import {StudyCases} from 'components/Home/StudyCases'
+import {Services2} from 'components/Home/Services2'
+import {Services1} from 'components/Home/Services1'
+import {Services3} from 'components/Home/Services3'
+import {Footer} from 'components/Footer'
+import {Navbar} from 'components/Navbar'
+import {Selection} from 'components/Selection'
 import { motion } from 'framer-motion'
 import Head from 'next/head';
 import {useEffect} from 'react'
@@ -16,10 +16,6 @@ import DeviceDetect from "lib/deviceDetect";
 
 export default function Home() {
   const {isMobile} = DeviceDetect()
-
-  const style={
-    height:'calc(100% - 80px)',
-  }
 
   function scrollToTop() {
     window.scrollTo({
@@ -46,7 +42,7 @@ export default function Home() {
             <>
               <FullPage controls={CustomControls}>
 
-                <Slide {...style}>
+                <Slide>
                   <Section classes={'w-full h-screen'}>
                       <Hero />
                   </Section>
@@ -101,7 +97,7 @@ export default function Home() {
           <>
             <Navbar scrollToSlide={ scrollToTop }/>
 
-            <Slide {...style}>
+            <Slide>
                 <Section classes={'w-full h-screen'}>
                   <Hero />
                 </Section>

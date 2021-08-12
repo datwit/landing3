@@ -2,7 +2,7 @@ import React from 'react';
 import datas from "../Services1/data.json";
 import {ContentWrapper, SectionHeader}from 'styles/global';
 import { BulletSubtitle, ServiceBulletsOuter, ServiceBulletsSpan } from '../Services1/style';
-import DataManagSVG from './DataManagSVG'
+import {DataManagSVG} from './DataManagSVG'
 import {IllWrapper, ImageTitle, TextBlock} from './style'
 
 const Services2 = ({classes}) => {
@@ -38,4 +38,4 @@ const Services2 = ({classes}) => {
     )
 }
 
-export default Services2
+export {Services2}

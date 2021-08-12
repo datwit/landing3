@@ -82,4 +82,4 @@ const MLSolutionsSVG = () => {
     )
 }
 
-export default MLSolutionsSVG
+export {MLSolutionsSVG}

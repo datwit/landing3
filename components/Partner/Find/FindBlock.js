@@ -17,4 +17,4 @@ const FindBlock = ({ title , description, children}) => {
     )
 }
 
-export default FindBlock
+export {FindBlock}

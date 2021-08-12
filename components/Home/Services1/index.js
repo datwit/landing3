@@ -2,7 +2,7 @@ import React from 'react'
 import datas from "./data.json";
 import {ContentWrapper, SectionHeader}from 'styles/global';
 import { IllWrapper2, BulletSubtitle, ServiceBulletsOuter, ServiceBulletsSpan} from './style';
-import MLSolutionsSVG from './MLSolutionsSVG'
+import {MLSolutionsSVG} from './MLSolutionsSVG'
 import { ImageTitle, TextBlock} from '../Services2/style'
 import { FiArrowRightCircle } from 'react-icons/fi';
 
@@ -39,4 +39,4 @@ const Services1 = ({classes}) => {
 
 }
 
-export default Services1
+export {Services1}

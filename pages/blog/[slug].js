@@ -3,7 +3,7 @@ import Head from 'next/head';
 import { format, parseISO } from 'date-fns';
 import renderToString from 'next-mdx-remote/render-to-string';
 import hydrate from 'next-mdx-remote/hydrate';
-import Footer from 'components/Footer'
+import {Footer} from 'components/Footer'
 import {ImgContainer, DateAuthorWrapper, PostTitle} from 'components/Blog/style'
 import { getAllData } from 'lib/posts';
 import {MarkdownContent} from 'components/Markdown/style'
@@ -11,7 +11,7 @@ import {Category} from 'components/Blog/style'
 import { useRouter } from 'next/router'
 import { motion } from 'framer-motion'
 import { FullPage } from 'react-full-page'
-import CustomControls from 'components/Slide/CustomControls'
+import {CustomControls} from 'components/Slide/CustomControls'
 import {FiChevronLeft} from 'react-icons/fi'
 
 const BlogPage = ({ title, date, content, img, author, tags, id})=> {

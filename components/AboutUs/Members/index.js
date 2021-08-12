@@ -2,7 +2,7 @@ import React from 'react'
 import datas from "./team.json";
 import {MemberCol} from './style'
 import {ContentWrapper} from 'styles/global';
-import MemberCard from './MemberCard'
+import {MemberCard} from './MemberCard'
 import Carousel from 'react-elastic-carousel'
 
 
@@ -35,4 +35,4 @@ const Members = ({classes}) => {
     )
 }
 
-export default Members
+export {Members}

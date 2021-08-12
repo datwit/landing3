@@ -24,4 +24,4 @@ const Tech = ({classes}) => {
     )
 }
 
-export default Tech
+export {Tech}

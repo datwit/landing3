@@ -2,12 +2,12 @@ import Head from 'next/head';
 import { format, parseISO } from 'date-fns';
 import renderToString from 'next-mdx-remote/render-to-string';
 import hydrate from 'next-mdx-remote/hydrate';
-import Footer from 'components/Footer'
+import {Footer} from 'components/Footer'
 import {MarkdownContent} from 'components/Markdown/style'
 import { motion } from 'framer-motion'
 import { FullPage } from 'react-full-page'
-import CustomControls from 'components/Slide/CustomControls'
-import {PostTitle, DateAuthorWrapper} from 'components/Blog/style'
+import {CustomControls} from 'components/Slide/CustomControls'
+import {PostTitle} from 'components/Blog/style'
 import { useRouter } from 'next/router'
 import {FiChevronLeft} from 'react-icons/fi'
 

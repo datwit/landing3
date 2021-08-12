@@ -17,4 +17,4 @@ const BenefitBlock = ({title, description, children}) => {
     )
 }
 
-export default BenefitBlock
+export {BenefitBlock}

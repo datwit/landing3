@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 import {NavWrapper, NavbarContainer, ImgWrapper, LogoLink, LinkItem, ButtonContainer, LinkItem2, HamburguerWrapper, HeaderElements, AligningElements} from './styles'
 import { useRouter } from 'next/router'
 import datas from './routes.json';
-import LogoSVG from './LogoSVG'
+import {LogoSVG} from './LogoSVG'
 import { FiMenu, FiX } from 'react-icons/fi';
 
 
@@ -30,35 +30,20 @@ const Navbar=({scrollToSlide}) => {
 		const html = document.documentElement;
 		const docHeight = Math.max(body.scrollHeight, body.offsetHeight, html.clientHeight,  html.scrollHeight, html.offsetHeight);
 		const windowBottom = windowHeight + window.pageYOffset;
-		const navb = document.getElementById('navbar')
-		const hamb = document.getElementById('hamb')
-		const home = document.getElementById('home')
-		const study = document.getElementById('study')
-		const price = document.getElementById('price')
-		const contact = document.getElementById('contact')
-		const abaut = document.getElementById('abaut')
-		const blog = document.getElementById('blog')
+		const navb = document.getElementById('navbar')		
+		const ids = ['hamb','home', 'study', 'price', 'contact', 'abaut', 'blog']
 
-
-		if (windowBottom >= docHeight) {
-			navb.classList.replace('bg-white','bar-vanished')
-			hamb.classList.replace('text-primary','text-white')
-			home.classList.replace('text-primary','text-white')
-			contact.classList.replace('text-primary','text-white')
-			abaut.classList.replace('text-primary','text-white')
-			study.classList.replace('text-primary','text-white')
-			price.classList.replace('text-primary','text-white')
-			blog.classList.replace('text-primary','text-white')
-		} else {
-			navb.classList.replace('bar-vanished', 'bg-white')
-			hamb.classList.replace('text-white', 'text-primary')
-			home.classList.replace('text-white', 'text-primary')
-			contact.classList.replace('text-white', 'text-primary')
-			abaut.classList.replace('text-white', 'text-primary')
-			study.classList.replace('text-white', 'text-primary')
-			price.classList.replace('text-white', 'text-primary')
-			blog.classList.replace('text-white', 'text-primary')
-		}
+		for (let index = 0; index < ids.length; index++) {
+			const element = document.getElementById(ids[index])
+			if (windowBottom >= docHeight) {
+				navb.classList.replace('bg-white','bar-vanished')
+				element.classList.replace('text-primary','text-white')			
+			}
+			else{
+				navb.classList.replace('bar-vanished', 'bg-white')
+				element.classList.replace('text-white', 'text-primary')
+			}
+		}		
 	  };
 
 	  useEffect(() => {
@@ -120,4 +105,4 @@ const Navbar=({scrollToSlide}) => {
 	)
 }
 
-export default Navbar
+export {Navbar}

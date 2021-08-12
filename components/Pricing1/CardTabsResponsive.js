@@ -1,14 +1,10 @@
 
-import {OuterWrapper, Field, CardPriceCont, Price, LilDescrip, PBulletsWrapper, CarouselContainer, BulletWrapper,ToggleWrapper, BundleChooser} from './style';
-import PricingBullets from './PricingBullets';
-import datas from "./pricing.json";
-import Carousel from 'react-elastic-carousel'
-import MainPricingCard from './MainPricingCard';
-import BulletsContent  from './BulletsContent'
-import {ContentWrapper} from 'styles/global';
-import React,{ useRef, useState } from 'react';
-import {AiOutlineCloudServer} from "react-icons/ai";
-import { BiCodeBlock } from "react-icons/bi";
+import { CardPriceCont, BulletWrapper,ToggleWrapper, BundleChooser} from './style'
+import datas from "./pricing.json"
+import {MainPricingCard} from './MainPricingCard'
+import {BulletsContent}  from './BulletsContent'
+import {ContentWrapper} from 'styles/global'
+import React,{ useState } from 'react'
 import { GrSystem,GrServerCluster, GrCode } from "react-icons/gr";
 
 
@@ -84,4 +80,4 @@ const CardTabsResponsive = () => {
     )
 }
 
-export default CardTabsResponsive
+export {CardTabsResponsive}

@@ -1,10 +1,6 @@
 import { SectionHeader, SectionSubheader} from 'styles/global'
-import {QuestionWrapper, QuestionText, SVGCircle} from './style';
-import CTA from '../../Home/CTA'
-import Link from "next/link"
-import {PartnerIconSVG} from './PartnerIconSVG'
-import {DevIconSVG} from './DevIconSVG'
-import FaqCard from './FaqCard'
+import {SVGCircle} from './style';
+import {FaqCard} from './FaqCard'
 import {FaRegHandshake, FaLaptopCode} from "react-icons/fa";
 
 
@@ -28,4 +24,4 @@ const Faqs = ({classes}) => {
     )
 }
 
-export default Faqs
+export {Faqs}
