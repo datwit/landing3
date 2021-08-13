@@ -87,6 +87,21 @@ height: 81px;
 export const AccItem = styled.div
 `
 padding-bottom:10px;
+
+&.accordion-item--opened {
+    .accordion-item__inner {
+        max-height: 100rem;
+        
+        transition-timing-function: linear;
+        transition-duration: 1s;
+        transition-property: max-height;
+    }
+    .accordion-item__content{
+        transition-timing-function: linear;
+        transition-duration: 1s;
+        transition-property: opacity, transform;
+    }
+}
 `;
 export const AccordionIcon= styled.div
 `

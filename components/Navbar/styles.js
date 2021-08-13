@@ -29,7 +29,24 @@ export const NavWrapper = styled.div.attrs({
   })``;
 export const NavbarContainer = styled.div.attrs({
   className: "flex items-center flex-wrap h-20 w-full fixed top-0 bg-fixed bg-white z-10"
-})``;
+})
+`
+&.bar-vanished{
+  background-color:transparent;
+  transition: background-color 330ms ease-in-out;
+  -webkit-transition: background-color 330ms ease-in-out;  
+    a{
+      color: white;
+      transition: color 500ms ease-in-out 200ms;
+      -webkit-transition: color 500ms ease-in-out 200ms;
+    }
+    svg{
+      fill: white;
+      transition: fill 500ms ease-in-out 200ms;
+      -webkit-transition: fill 500ms ease-in-out 200ms;
+    }
+}
+`;
 export const ImgWrapper = styled.div.attrs({
   className: "flex-shrink-0"
 })``;

@@ -1,4 +1,3 @@
-import '../styles/globals.css'
 import '../styles/tailwind.css' 
 import Head from 'next/head';
 

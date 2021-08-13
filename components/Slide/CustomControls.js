@@ -2,6 +2,7 @@ import React,{useEffect} from 'react'
 import PropTypes from 'prop-types';
 import { useRouter } from "next/router"
 import {Navbar} from '../Navbar'
+import {NavigationWrapper} from './style'
 
 
 
@@ -105,9 +106,9 @@ const CustomControls = ({ slidesCount, scrollToSlide, onNext, onPrev, getCurrent
         <>      
           <Navbar scrollToSlide={ scrollToSlide }/> 
 
-          <div className={className}>
+          <NavigationWrapper className={className}>
             {renderSlidesNumbers(getCurrentSlideIndex())}           
-          </div>    
+          </NavigationWrapper>    
         </>
        
         
