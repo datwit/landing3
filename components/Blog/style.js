@@ -96,7 +96,7 @@ export const ImageW = styled.div.attrs({
         height:auto;         
         } 
         @media (min-width: 640px){    
-        width:90%;
+        width:80%;
         height:auto;         
         }       
     }
@@ -140,6 +140,11 @@ font-size: 14px;
 margin: 0 5px 10px 0;
 cursor:pointer;
 line-height:1rem;
+
+&:hover{
+    color: #00baff;
+    border:2px solid #00baff;    
+}
 `;
 export const SearchField= styled.input.attrs({
     className: "w-full border border-gray-300 focus:border-transparent bg-white text-base outline-none text-gray-700 px-3 leading-8 focus:ring-2 focus:ring-secondary2 transition-colors duration-200 ease-in-out"

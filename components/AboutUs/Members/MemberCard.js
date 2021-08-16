@@ -1,7 +1,7 @@
 import {ColName, SocialLinkItem} from '../Collaborators/style'
 import { MemberDesig, MemberRol, SocialCard, SocialWrapper2} from './style'
 import {useState} from 'react'
-import { FiTwitter,FiGithub, FiLinkedin } from 'react-icons/fi';
+import { FiTwitter,FiGithub, FiLinkedin } from 'react-icons/fi'
 
 const MemberCard = ({name, designation, rol, twitter, linkedin, github, src}) => {
 
@@ -32,8 +32,7 @@ const MemberCard = ({name, designation, rol, twitter, linkedin, github, src}) =>
                         <FiGithub /> 
                     </SocialLinkItem>
                 </SocialWrapper2>
-            </SocialCard>                         
-               
+            </SocialCard>              
         </>
     )
 }

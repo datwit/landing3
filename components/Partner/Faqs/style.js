@@ -4,115 +4,100 @@ export const QuestionWrapper = styled.div.attrs({
     className: "flex items-center shadow border border-gray-300 p-4 md:p-6 shadow hover:shadow-lg transition duration-200 ease-in"
 })
 `
-@media (min-width: 790px){
-    height: 131px;
-    width:320px;
+    @media (min-width: 790px){
+        height: 131px;
+        width:320px;
 
-}
-@media (max-width: 639px){
-    height: 131px;
-    width:284px;
-}
-@media (max-width: 360px){
-    height: auto;
-    width:auto;
-    justify-content: center;
-    padding:10px;
-}
-
-    position: relative;
-    margin-right:auto;
-    margin-left: auto;
-
-&:hover{
-    cursor: pointer;
-}
-&:hover h1{
-    color: #00baff;
-    cursor: pointer;
-}
-&::after{
-    content: '';
-    display: block;
-    height: 4px;
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    -webkit-transform: translateX(-50%);
-    transform: translateX(-50%);
-    background: #e69c24;
-    width: 0;
-    transition: width .2s linear;
-}
-&:hover::after{
-    width: 100%;
-}
-@media (max-width: 360px){
-    svg{
-        display:none;
     }
-}
+    @media (max-width: 639px){
+        height: 131px;
+        width:284px;
+    }
+    @media (max-width: 360px){
+        height: auto;
+        width:auto;
+        justify-content: center;
+        padding:10px;
+    }
 
-svg{
-    width:50px;
-    height:50px;
-    color: white;
-    position:absolute;
-}
+        position: relative;
+        margin-right:auto;
+        margin-left: auto;
+
+    &:hover{
+        cursor: pointer;
+    }
+    &:hover h1{
+        color: #00baff;
+        cursor: pointer;
+    }
+    &::after{
+        content: '';
+        display: block;
+        height: 4px;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        -webkit-transform: translateX(-50%);
+        transform: translateX(-50%);
+        background: #e69c24;
+        width: 0;
+        transition: width .2s linear;
+    }
+    &:hover::after{
+        width: 100%;
+    }
+    svg{
+        width:50px;
+        height:50px;
+        color: white;
+        position:absolute;
+    }
 `;
 export const SVGCircle = styled.div.attrs({
     className: ""
 })
 `
-    background:#e69c24;
-    width:70px;
-    height:70px;
-    position:relative;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    border-radius: 50%;
-    margin-right:15px;
-
-`;
-export const QuestionText = styled.h1.attrs({
-    className: "text-xl text-left flex items-center"
-})
-`
-@media (max-width: 359px){
-   text-align:center;
-}
-height: 81px;
+    @media (max-width: 317px){
+        display: nones;
+    }
+        background:#e69c24;
+        width:70px;
+        height:70px;
+        position:relative;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        border-radius: 50%;
+        margin-right:15px;
 `;
 export const AccItem = styled.div
 `
-padding-bottom:10px;
+    padding-bottom:10px;
 
-&.accordion-item--opened {
-    .accordion-item__inner {
-        max-height: 100rem;
-        
-        transition-timing-function: linear;
-        transition-duration: 1s;
-        transition-property: max-height;
+    &.accordion-item--opened {
+        .accordion-item__inner {
+            max-height: 100rem;
+            
+            transition-timing-function: linear;
+            transition-duration: 1s;
+            transition-property: max-height;
+        }
+        .accordion-item__content{
+            transition-timing-function: linear;
+            transition-duration: 1s;
+            transition-property: opacity, transform;
+        }
     }
-    .accordion-item__content{
-        transition-timing-function: linear;
-        transition-duration: 1s;
-        transition-property: opacity, transform;
-    }
-}
 `;
 export const AccordionIcon= styled.div
 `
-
     transition: transform 0.3s ease-in-out;
     color:#e69c24;
-
 `;
 export const AccordionWrapper = styled.div
 `
-padding-bottom: 30px;
+    padding-bottom: 30px;
 `;
 export const AccordionList = styled.div
 `
@@ -139,15 +124,14 @@ export const AccordionTitleWrapper = styled.div.attrs({
         transform: rotate(180deg);
         color: #00baff;
     }
-
 `;
 export const AccordionTitle = styled.h3.attrs({
     className: "text-base sm:text-lg text-primary text-left"
 })
 `
-&:hover{
-    color: #00baff;
-}
+    &:hover{
+        color: #00baff;
+    }
 `;
 export const AccItemInner = styled.div
 `
@@ -176,5 +160,4 @@ export const AccItemParagraph = styled.div.attrs({
 })
 `
     text-align: justify;
-
 `;

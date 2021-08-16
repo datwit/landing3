@@ -40,8 +40,7 @@ const Pricing1 = ({classes}) => {
              {/*********responsive************** */}
             <div className="md:hidden">
                 <CardTabsResponsive />
-            </div>
-           
+            </div>           
         </div>
     )
 }

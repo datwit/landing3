@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
-import {AccItemContent, AccItemParagraph, AccordionTitle, AccItem, AccordionTitleWrapper, AccordionIcon, AccItemInner} from 'components/Partner/Faqs/style'
+import { AccItem} from 'components/Partner/Faqs/style'
 import Link from 'next/link'
-import {AccordionSection, Accordion, AccordionFooterTitle,AccordionContent, AccordionTitleWrapperF, AccordionIconFooter, AccContWrapper} from './style'
+import {AccordionFooterTitle,AccordionContent, AccordionTitleWrapperF, AccordionIconFooter, AccContWrapper} from './style'
 
 const FooterAccordion = ({ title, items }) => {
 
@@ -12,7 +12,8 @@ const FooterAccordion = ({ title, items }) => {
           <AccItem className= {opened && 'accordion-item--opened'}>
               <AccordionTitleWrapperF onClick ={ () => { setOpened( !opened ) }}>
                   <AccordionFooterTitle>{title}</AccordionFooterTitle>
-                  <AccordionIconFooter className={!opened ? '' : 'icon-rotate' } fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <AccordionIconFooter className={!opened ? '' : 'icon-rotate' } 
+                    fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"/>
                   </AccordionIconFooter>
               </AccordionTitleWrapperF>

@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import React, {Fragment} from 'react'
+import React from 'react'
 import {FooterContainer, ContactContainer, SocialList, FooterHeader, FooterLinksWrapper,FooterAccordionContainer, ColumnContent, ColumnTitle, SocialListItem, SocialListItem2, ContactWrapper,CopyRight} from './style'
 import datas from './data.json'
 import links from './pageslink.json';
@@ -11,7 +11,7 @@ import { AccordionList } from 'components/Partner/Faqs/style'
 const Footer = () => {
     const year = new Date().getFullYear()
     return (
-        <Fragment>
+        <>
             <FooterContainer>
                 <FooterHeader>Let's work together</FooterHeader>
                 <div className="hidden sm:block">
@@ -31,14 +31,12 @@ const Footer = () => {
                                 <ContactWrapper>
                                     <Link href="mailto:contact@datwit.com">
                                         <SocialListItem2>
-                                            <HiOutlineMail />
-                                            {/* <UpperH3>contact@datwit.com</UpperH3> */}
+                                            <HiOutlineMail />                                           
                                         </SocialListItem2>
                                     </Link>
                                     <Link href="tel:+58 658 987">
                                         <SocialListItem2>
-                                            <FiMessageCircle />
-                                            {/* <UpperH3>+58 658 987</UpperH3> */}
+                                            <FiMessageCircle />                                           
                                         </SocialListItem2>
                                     </Link>
                                 </ContactWrapper>
@@ -92,7 +90,7 @@ const Footer = () => {
                 </div>
             </FooterContainer>
             <CopyRight>&copy; {year} Datwit</CopyRight>
-        </Fragment>
+        </>
     )
 }
 

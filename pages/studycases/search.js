@@ -36,16 +36,18 @@ const CasesResults = () => {
 
     useEffect(()=>{
         isMobile ? [] : document.body.style.overflow = "hidden";
-        return () => {
-          document.body.style.overflow = "visible";
-        };
+            return () => {
+                document.body.style.overflow = "visible";
+            };
     })
    
     const router = useRouter()
     const cat = router.query.p
-    const results = cat != null ?
-        cases.filter(post => post.tags.toLowerCase().includes(cat)) : []
-
+    const results = cat != null 
+        ?
+        cases.filter(post => post.tags.toLowerCase().includes(cat)) 
+        : 
+        []
 
     //getting our data
     const getData = () => {
@@ -62,15 +64,15 @@ const CasesResults = () => {
                     <ImageW>
                         <img className="res"  src={item.img} alt="" />
                     </ImageW>
-                  <RespBlock>
-                    <DateWrapper>
-                        {format(parseISO(item.date), 'MMMM do, uuu')}
-                    </DateWrapper>
-                      <Link href={`/studycases/${item.id}`}>
-                        <BlogTitle1>{item.title}</BlogTitle1>
-                      </Link>
-                     {/*  <CardSummary2 className="hidden sm:block">{item.summary}</CardSummary2> */}
-                  </RespBlock>
+                    <RespBlock>
+                        <DateWrapper>
+                            {format(parseISO(item.date), 'MMMM do, uuu')}
+                        </DateWrapper>
+                        <Link href={`/studycases/${item.id}`}>
+                            <BlogTitle1>{item.title}</BlogTitle1>
+                        </Link>
+                        {/*  <CardSummary2 className="hidden sm:block">{item.summary}</CardSummary2> */}
+                    </RespBlock>
                 </SearchCard>
             </div>
         )
@@ -95,112 +97,117 @@ const CasesResults = () => {
 
     return (
         <>
-             <Head>
-    <title>Datwit | Search results</title>
-    </Head>
-    <motion.div initial={{opacity:0,  y: 200}} animate={{opacity:1, y:0}}>
-        { !isMobile ?
-        <FullPage controls={CustomControls}>
-          <Slide>
-            <Section classes={'w-full h-screen'}>
-            <div className="px-5 mx-auto mt-20">
-              {/* back button*/}
-              <a onClick={()=>router.back()}>
-                  <h3 className="flex cursor-pointer hover:text-secondary1">
-                      <FiChevronLeft  className="h-6 w-6 mr-2"/>
-                      <span>Back</span>
-                  </h3>
-              </a>
-            <SectionHeader>Search Results</SectionHeader>
-              {/*pagination*/}
-                  <PaginationSection>
-                    {data}
-                  </PaginationSection>
-                  { results ==0 ?
-                      <div className="mx-auto">
-                      <p>No results found 😢 </p>
-                      </div>
-                      :
-                      pageCount >= 2 ?
-                      <PaginationWrapper>
-                        <ReactPaginate
-                          previousLabel={prevSVG}
-                          nextLabel={nextSVG}
-                          breakLabel={"..."}
-                          breakClassName={"break-me"}
-                          pageCount={pageCount}
-                          onPageChange={handlePageClick}
-                          containerClassName={"pagination"}
-                          subContainerClassName={"pages pagination"}
-                          activeClassName={"active"}
-                        />
-                      </PaginationWrapper>
-                      :
-                      []
-                  }
-              </div>
-            </Section>
-          </Slide>
-
-          <Slide>
-            <Section classes={"w-full h-screen bg-primary mx-auto px-10"}>
-              <Footer />
-            </Section>
-          </Slide>
-        </FullPage>
-        :
-        <>
-          <Navbar scrollToSlide={ scrollToTop }/>
-          <Slide>
-            <Section classes={'min-h-screen'}>
-              <div className="px-5 mx-auto mt-20">
-               {/* back button*/}
-                <a onClick={()=>router.back()}>
-                    <h3 className="flex cursor-pointer hover:text-secondary1">
-                        <FiChevronLeft  className="h-6 w-6 mr-2"/>
-                        <span>Back</span>
-                    </h3>
-                </a>
-               {/* */}
-              <SectionHeader>Search Results</SectionHeader>
-                {/*pagination*/}
-                    <PaginationSection>
-                      {data}
-                    </PaginationSection>
-                    { results ==0 ?
-                        <div className="mx-auto">
-                        <p>No results found 😢 </p>
+            <Head>
+                <title>Datwit | Search results</title>
+            </Head>
+            <motion.div initial={{opacity:0,  y: 200}} animate={{opacity:1, y:0}}>
+            { 
+            !isMobile 
+            ?
+            <FullPage controls={CustomControls}>
+                <Slide>
+                    <Section classes={'w-full h-screen'}>
+                        <div className="px-5 mx-auto mt-20">                      
+                            <a onClick={()=>router.back()}>
+                                <h3 className="flex cursor-pointer hover:text-secondary1">
+                                    <FiChevronLeft  className="h-6 w-6 mr-2"/>
+                                    <span>Back</span>
+                                </h3>
+                            </a>
+                            <SectionHeader>Search Results</SectionHeader>
+                            {/*pagination*/}
+                            <PaginationSection>
+                                {data}
+                            </PaginationSection>
+                            { 
+                            results ==0 
+                            ?
+                                <div className="mx-auto">
+                                    <p>No results found 😢 </p>
+                                </div>
+                            :
+                                pageCount >= 2 
+                                ?
+                                <PaginationWrapper>
+                                    <ReactPaginate
+                                    previousLabel={prevSVG}
+                                    nextLabel={nextSVG}
+                                    breakLabel={"..."}
+                                    breakClassName={"break-me"}
+                                    pageCount={pageCount}
+                                    onPageChange={handlePageClick}
+                                    containerClassName={"pagination"}
+                                    subContainerClassName={"pages pagination"}
+                                    activeClassName={"active"}
+                                    />
+                                </PaginationWrapper>
+                                :
+                                []
+                            }
                         </div>
-                        :
-                        pageCount >= 2 ?
-                        <PaginationWrapper>
-                          <ReactPaginate
-                            previousLabel={prevSVG}
-                            nextLabel={nextSVG}
-                            breakLabel={"..."}
-                            breakClassName={"break-me"}
-                            pageCount={pageCount}
-                            onPageChange={handlePageClick}
-                            containerClassName={"pagination"}
-                            subContainerClassName={"pages pagination"}
-                            activeClassName={"active"}
-                          />
-                        </PaginationWrapper>
-                        :
-                        []
-                    }
-              </div>
-            </Section>
-          </Slide>
+                    </Section>
+                </Slide>
 
-          <Slide>
-            <Section classes={"w-full h-screen bg-primary mx-auto px-10"}>
-              <Footer />
-            </Section>
-          </Slide>
-        </>
-        }
-    </motion.div>
+                <Slide>
+                    <Section classes={"w-full h-screen bg-primary mx-auto px-10"}>
+                        <Footer />
+                    </Section>
+                </Slide>
+            </FullPage>
+            :
+            <>
+                <Navbar scrollToSlide={ scrollToTop }/>
+                <Slide>
+                    <Section classes={'min-h-screen'}>
+                    <div className="px-5 mx-auto mt-20">                    
+                        <a onClick={()=>router.back()}>
+                            <h3 className="flex cursor-pointer hover:text-secondary1">
+                                <FiChevronLeft  className="h-6 w-6 mr-2"/>
+                                <span>Back</span>
+                            </h3>
+                        </a>                  
+                        <SectionHeader>Search Results</SectionHeader>
+                        {/*pagination*/}
+                        <PaginationSection>
+                            {data}
+                        </PaginationSection>
+                        { 
+                        results ==0 
+                        ?
+                            <div className="mx-auto">
+                                <p>No results found 😢 </p>
+                            </div>
+                        :
+                            pageCount >= 2 
+                            ?
+                            <PaginationWrapper>
+                            <ReactPaginate
+                                previousLabel={prevSVG}
+                                nextLabel={nextSVG}
+                                breakLabel={"..."}
+                                breakClassName={"break-me"}
+                                pageCount={pageCount}
+                                onPageChange={handlePageClick}
+                                containerClassName={"pagination"}
+                                subContainerClassName={"pages pagination"}
+                                activeClassName={"active"}
+                            />
+                            </PaginationWrapper>
+                            :
+                            []
+                        }
+                    </div>
+                    </Section>
+                </Slide>
+
+                <Slide>
+                    <Section classes={"w-full h-screen bg-primary mx-auto px-10"}>
+                        <Footer />
+                    </Section>
+                </Slide>
+            </>
+            }
+            </motion.div>
         </>
     );
 }

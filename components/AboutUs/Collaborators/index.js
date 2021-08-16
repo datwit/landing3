@@ -1,7 +1,7 @@
 import React from 'react'
-import datas from "./collaborators.json";
-import {ColWrapper, CarouselWrapper} from './style';
-import {ContentWrapper} from 'styles/global';
+import datas from "./collaborators.json"
+import {ColWrapper, CarouselWrapper} from './style'
+import {ContentWrapper, SectionHeader, SectionSubheader} from 'styles/global'
 import {CollaboratorsCard} from './CollaboratorsCard'
 import Carousel from 'react-elastic-carousel'
 
@@ -14,8 +14,8 @@ const Collaborators = ({classes}) => {
     
     return (
         <CarouselWrapper className={classes}>
-            <h2 className="mt-4">Collaborators</h2>
-            <h4 className="mb-6">Our amazing collaborators help drive Datwit towards being a cutting-edge company</h4>            
+            <SectionHeader>Collaborators</SectionHeader>
+            <SectionSubheader>Our amazing collaborators help drive Datwit towards being a cutting-edge company</SectionSubheader>            
             <ContentWrapper>                
                 <Carousel itemsToShow={3} breakPoints={breakPoints} onTouchMove={e => e.stopPropagation()}>
                     {

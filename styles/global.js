@@ -30,8 +30,7 @@ export const Button = styled.a
     &:active{
         box-shadow: inset 4px 4px 4px #9cd4e6;
         transform: translate(4px,4px);
-    }
-    
+    }    
     &:hover {
         color: #00baff;
         border: 3px solid #00baff;        
@@ -44,6 +43,5 @@ export const Button = styled.a
     svg{       
         color: white;
         margin-left:8px;      
-    }
-     
+    }     
 `;

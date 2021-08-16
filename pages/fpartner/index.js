@@ -8,7 +8,7 @@ import { motion } from 'framer-motion'
 import { FullPage } from 'react-full-page'
 import {CustomControls} from 'components/Slide/CustomControls'
 import {AccordionItem} from 'components/Partner/Faqs/AccordionItem'
-import Head from 'next/head';
+import Head from 'next/head'
 import {Section} from 'components/Section'
 
 const FaqsPartner = () => {
