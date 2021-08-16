@@ -1,6 +1,6 @@
 import React from 'react'
-import { Field, Price, LilDescrip, ButtonPrice} from './style';
-import { FiSend } from 'react-icons/fi';
+import { Field, Price, LilDescrip, ButtonPrice} from './style'
+import { FiSend } from 'react-icons/fi'
 import Link from 'next/link'
 
 const MainPricingCard = ({style, field,price,description}) => {

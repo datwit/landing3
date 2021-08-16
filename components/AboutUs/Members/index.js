@@ -1,9 +1,10 @@
 import React from 'react'
-import datas from "./team.json";
+import datas from "./team.json"
 import {MemberCol} from './style'
-import {ContentWrapper} from 'styles/global';
+import {ContentWrapper, SectionHeader, SectionSubheader} from 'styles/global'
 import {MemberCard} from './MemberCard'
 import Carousel from 'react-elastic-carousel'
+import {CarouselWrapper} from '../Collaborators/style'
 
 
 const Members = ({classes}) => {   
@@ -14,9 +15,9 @@ const Members = ({classes}) => {
     ]   
 
     return (
-        <div className={classes}>
-            <h2 className="mt-4">Meet our team</h2>
-            <h4 className="mb-4">We are dreamers disguised as data scientists, engineers and designers...</h4>            
+        <CarouselWrapper className={classes}>
+            <SectionHeader>Meet our team</SectionHeader>
+            <SectionSubheader>We are dreamers disguised as data scientists, engineers and designers...</SectionSubheader>            
             <ContentWrapper>
                 <Carousel itemsToShow={3} breakPoints={breakPoints} onTouchMove={e => e.stopPropagation()}>
                 {
@@ -30,8 +31,7 @@ const Members = ({classes}) => {
                 }                                   
                 </Carousel>                  
             </ContentWrapper>                       
-        </div>
-   
+        </CarouselWrapper>   
     )
 }
 

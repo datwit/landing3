@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 import {SectionHeader, SectionSubheader} from 'styles/global'
 import datas from './data.json'
 import {ImgContainer, ImgWrapper} from './style'

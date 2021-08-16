@@ -1,7 +1,7 @@
 
-import {SectionSubheader, ContentWrapper, Button} from 'styles/global';
-import {MapWrapper, FormBlock, FormIntro, InputWrapper, FInput, TInput, FormLabels, ExplanationForm} from './style';
-import { FiSend } from 'react-icons/fi';
+import {SectionSubheader, ContentWrapper, Button} from 'styles/global'
+import {MapWrapper, FormBlock, FormIntro, InputWrapper, FInput, TInput, FormLabels, ExplanationForm} from './style'
+import { FiSend } from 'react-icons/fi'
 
 const ContacthtmlForm = ({classes}) => {
 
@@ -46,7 +46,6 @@ const ContacthtmlForm = ({classes}) => {
                             name="message"
                         ></TInput>
                     </InputWrapper>
-
                     <div className="flex justify-center">
                         <Button>Send
                            <FiSend className="h-6 w-6 ml-2"/>

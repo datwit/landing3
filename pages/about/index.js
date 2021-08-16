@@ -13,84 +13,86 @@ import DeviceDetect from "lib/deviceDetect"
 
 
 const About = () => {
-  const {isMobile} = DeviceDetect()
+    const {isMobile} = DeviceDetect()
 
-  function scrollToTop() {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth"
-    });
-  }
-   /*****hiding scroll bar*/
-  useEffect(()=>{
-    isMobile ? [] : document.body.style.overflow = "hidden";
-    return () => {
-      document.body.style.overflow = "visible";
-    };
-  })
+    function scrollToTop() {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      });
+    }
+    /*****hiding scroll bar*/
+    useEffect(()=>{
+      isMobile ? [] : document.body.style.overflow = "hidden";
+      return () => {
+        document.body.style.overflow = "visible";
+      };
+    })
 
     return (
-      <>
-        <Head>
-        <title>Datwit | About us</title>
-        </Head>
-        <motion.div initial={{opacity:0,  y: 200}} animate={{opacity:1, y:0}}>
-        { !isMobile ?
-            <FullPage controls={CustomControls}>
-              <Slide>
-                <Section classes={'w-full h-screen'}>
-                  <Datwit classes={"container px-5 mx-auto relative top-2/4 transform -translate-y-2/4 mt-20"}/>
-                </Section>
-              </Slide>
+        <>
+            <Head>
+                <title>Datwit | About us</title>
+            </Head>
+            <motion.div initial={{opacity:0,  y: 200}} animate={{opacity:1, y:0}}>
+                { 
+                !isMobile 
+                ?
+                    <FullPage controls={CustomControls}>
+                        <Slide>
+                            <Section classes={'w-full h-screen'}>
+                                <Datwit classes={"container px-5 mx-auto relative top-2/4 transform -translate-y-2/4 mt-20"}/>
+                            </Section>
+                        </Slide>
 
-              <Slide>
-                <Section classes={'w-full h-screen'}>
-                  <Members classes={"container px-5 mx-auto relative top-2/4 transform -translate-y-2/4"}/>
-                </Section>
-              </Slide>
+                        <Slide>
+                            <Section classes={'w-full h-screen'}>
+                                <Members classes={"container px-5 mx-auto relative top-2/4 transform -translate-y-2/4"}/>
+                            </Section>
+                        </Slide>
 
-              <Slide>
-                <Section classes={'w-full h-screen'}>
-                  <Collaborators classes={"container px-5 mx-auto relative top-2/4 transform -translate-y-2/4"}/>
-                </Section>
-              </Slide>
+                        <Slide>
+                            <Section classes={'w-full h-screen'}>
+                                <Collaborators classes={"container px-5 mx-auto relative top-2/4 transform -translate-y-2/4"}/>
+                            </Section>
+                        </Slide>
 
-              <Slide>
-                <Section classes={"w-full h-screen bg-primary mx-auto px-10"}>
-                  <Footer />
-                </Section>
-              </Slide>
-            </FullPage>
-          :
-          <>
-            <Navbar scrollToSlide={ scrollToTop }/>
-              <Slide>
-                <Section classes={'pb-16 pt-20'}>
-                  <Datwit classes={"px-5 mx-auto"}/>
-                </Section>
-              </Slide>
+                        <Slide>
+                            <Section classes={"w-full h-screen bg-primary mx-auto px-10"}>
+                                <Footer />
+                            </Section>
+                        </Slide>
+                    </FullPage>
+                :
+                    <>
+                        <Navbar scrollToSlide={ scrollToTop }/>
+                        <Slide>
+                            <Section classes={'pb-16 pt-20'}>
+                                <Datwit classes={"px-5 mx-auto"}/>
+                            </Section>
+                        </Slide>
 
-              <Slide>
-                <Section classes={'pb-16'}>
-                  <Members classes={"px-5 mx-auto"}/>
-                </Section>
-              </Slide>
+                        <Slide>
+                            <Section classes={'pb-16'}>
+                                <Members classes={"px-5 mx-auto"}/>
+                            </Section>
+                        </Slide>
 
-              <Slide>
-                <Section classes={'pb-16'}>
-                  <Collaborators classes={"px-5 mx-auto"}/>
-                </Section>
-              </Slide>
+                        <Slide>
+                            <Section classes={'pb-16'}>
+                                <Collaborators classes={"px-5 mx-auto"}/>
+                            </Section>
+                        </Slide>
 
-              <Slide>
-                <Section classes={"w-full h-screen bg-primary mx-auto px-10"}>
-                  <Footer />
-                </Section>
-              </Slide>
-          </>
-        }
-        </motion.div>
-      </>
+                        <Slide>
+                            <Section classes={"w-full h-screen bg-primary mx-auto px-10"}>
+                                <Footer />
+                            </Section>
+                        </Slide>
+                  </>
+                }
+            </motion.div>
+        </>
     )
 }
 

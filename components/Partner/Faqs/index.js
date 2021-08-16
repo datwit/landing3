@@ -1,7 +1,7 @@
-import { SectionHeader, SectionSubheader} from 'styles/global'
-import {SVGCircle} from './style';
+import { SectionHeader, SectionSubheader, ContentWrapper} from 'styles/global'
+import {SVGCircle} from './style'
 import {FaqCard} from './FaqCard'
-import {FaRegHandshake, FaLaptopCode} from "react-icons/fa";
+import {FaRegHandshake, FaLaptopCode} from "react-icons/fa"
 
 
 const Faqs = ({classes}) => {
@@ -10,7 +10,7 @@ const Faqs = ({classes}) => {
         <div className={classes}>
             <SectionHeader>Frequently asked questions</SectionHeader>
             <SectionSubheader>These are some of our more frequently asked questions</SectionSubheader>
-            <div className="flex flex-wrap">
+            <ContentWrapper>
                <FaqCard href="/fpartner">
                     <SVGCircle><FaRegHandshake /></SVGCircle>
                     <h1 className="text-lg">For <br/> Partners</h1>
@@ -19,7 +19,7 @@ const Faqs = ({classes}) => {
                     <SVGCircle><FaLaptopCode /></SVGCircle>
                     <h1 className="text-lg">For <br/> Developers</h1>
                </FaqCard>
-            </div>
+            </ContentWrapper>
         </div>
     )
 }

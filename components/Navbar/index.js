@@ -1,11 +1,11 @@
-import React from 'react';
+import React from 'react'
 import Link from 'next/link'
-import { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react'
 import {NavWrapper, NavbarContainer, ImgWrapper, LogoLink, LinkItem, ButtonContainer, LinkItem2, HamburguerWrapper, HeaderElements, AligningElements} from './styles'
 import { useRouter } from 'next/router'
-import datas from './routes.json';
+import datas from './routes.json'
 import {LogoSVG} from './LogoSVG'
-import { FiMenu, FiX } from 'react-icons/fi';
+import { FiMenu, FiX } from 'react-icons/fi'
 
 
 const Navbar=({scrollToSlide}) => {
@@ -20,6 +20,7 @@ const Navbar=({scrollToSlide}) => {
 		scrollToSlide(0);
 		setActive(false);
 	};
+
 	const some = () => {
 		return null;
 	};
@@ -44,12 +45,12 @@ const Navbar=({scrollToSlide}) => {
 				element.classList.replace('text-white', 'text-primary')
 			}
 		}		
-	  };
+	};
 
-	  useEffect(() => {
-		window.addEventListener('scroll', handleS);
-		return () => window.removeEventListener('scroll', handleS);
-	  }, []);
+	useEffect(() => {
+	window.addEventListener('scroll', handleS);
+	return () => window.removeEventListener('scroll', handleS);
+	}, []);
 
 
 	return (

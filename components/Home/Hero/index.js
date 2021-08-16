@@ -1,6 +1,6 @@
 import {CTA} from '../CTA'
-import {MainHeaderCont} from './style';
-import { FiSend } from 'react-icons/fi';
+import {MainHeaderCont} from './style'
+import { FiSend } from 'react-icons/fi'
 
 
 

@@ -1,10 +1,9 @@
 import React from 'react'
-import {ContentWrapper} from 'styles/global';
-import 'react-responsive-carousel/lib/styles/carousel.min.css';
-import {MainPricingCard} from '../Pricing1/MainPricingCard';
-import {BulletWrapper, OuterWrapper} from '../Pricing1/style';
+import {ContentWrapper} from 'styles/global'
+import {MainPricingCard} from '../Pricing1/MainPricingCard'
+import {BulletWrapper, OuterWrapper} from '../Pricing1/style'
 import {BulletsContent}  from '../Pricing1/BulletsContent'
-import datas from "../Pricing1/pricing.json";
+import datas from "../Pricing1/pricing.json"
 
 const Pricing2 = ({classes}) => {
 
@@ -30,8 +29,7 @@ const Pricing2 = ({classes}) => {
                         </BulletWrapper>
                     </div>
                 </ContentWrapper>
-            </div>            
-                      
+            </div>                     
         </div>
     )
 }

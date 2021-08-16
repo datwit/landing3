@@ -1,10 +1,10 @@
 import React from 'react'
-import datas from "./data.json";
-import {ContentWrapper, SectionHeader}from 'styles/global';
-import { IllWrapper2, BulletSubtitle, ServiceBulletsOuter, ServiceBulletsSpan} from './style';
+import datas from "./data.json"
+import {ContentWrapper}from 'styles/global'
+import { IllWrapper2, BulletSubtitle, ServiceBulletsOuter, ServiceBulletsSpan} from './style'
 import {MLSolutionsSVG} from './MLSolutionsSVG'
 import { ImageTitle, TextBlock} from '../Services2/style'
-import { FiArrowRightCircle } from 'react-icons/fi';
+import { FiArrowRightCircle } from 'react-icons/fi'
 
 
 const Services1 = ({classes}) => {
