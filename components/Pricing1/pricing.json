@@ -1,22 +1,6 @@
-[
+[ 
   {
     "num":1,
-    "bundle":"DATA",
-    "field":"DATA SOLUTIONS",
-    "style":"secondary1",
-    "price": "$89",
-    "description": "Our team can use your data and take it to the next level",
-    "bullets": [
-        {"title":"Exploratory data analysis"},
-        {"title":"Data cleaning and anonymization"},
-        {"title":"Data visualization"},
-        {"title":"Data infrastructure design and build"},
-        {"title":"Database setup and management"},
-        {"title":"ETL design"}
-    ]
-  },
-  {
-    "num":2,
     "bundle":"ML",
     "field":"ML SOLUTIONS",
     "style":"secondary2",
@@ -29,6 +13,22 @@
         {"title":"Model evaluation"},
         {"title":"Pipeline design and setup"},
         {"title":"Model monitoring and improving"}
+    ]
+  },
+  {
+    "num":2,
+    "bundle":"DATA",
+    "field":"DATA SOLUTIONS",
+    "style":"secondary1",
+    "price": "$89",
+    "description": "Our team can use your data and take it to the next level",
+    "bullets": [
+        {"title":"Exploratory data analysis"},
+        {"title":"Data cleaning and anonymization"},
+        {"title":"Data visualization"},
+        {"title":"Data infrastructure design and build"},
+        {"title":"Database setup and management"},
+        {"title":"ETL design"}
     ]
   },
   {
