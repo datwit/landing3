@@ -1,5 +1,5 @@
 import React from 'react'
-import {ContentWrapper, SectionHeader, SectionSubheader} from 'styles/global'
+import {ContentWrapper, SectionHeader} from 'styles/global'
 import 'react-responsive-carousel/lib/styles/carousel.min.css'
 import {MainPricingCard} from './MainPricingCard'
 import {CardTabsResponsive} from './CardTabsResponsive'
@@ -14,8 +14,6 @@ const Pricing1 = ({classes}) => {
 
         <div className={classes}>
             <SectionHeader>Choose your kind of solution</SectionHeader>
-            <SectionSubheader>Our goal is to accomplish to the product you have in mind through intuitive designs and great tools to back them up.</SectionSubheader>
-
             <div className="hidden md:block lg:px-14">
                 <ContentWrapper>
                     <OuterWrapper>                    
