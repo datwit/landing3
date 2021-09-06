@@ -2,8 +2,20 @@
 import {SectionSubheader, ContentWrapper, Button} from 'styles/global'
 import {MapWrapper, FormBlock, FormIntro, InputWrapper, FInput, TInput, FormLabels, ExplanationForm} from './style'
 import { FiSend } from 'react-icons/fi'
+import {useState} from 'react'
 
 const ContacthtmlForm = ({classes}) => {
+    const [formValues,setFormValues] = useState({
+        name: '',
+        email: '',
+        message: ''
+    })
+
+    const handleChange = (event) => {
+        const {name, value} = event.target        
+
+        setFormValues({...formValues,[name]:value})
+    }
 
     return (
         <div className={classes}>
@@ -29,6 +41,8 @@ const ContacthtmlForm = ({classes}) => {
                             id="name"
                             type="text"
                             name="name"
+                            value={formValues.name}
+                            onChange={handleChange}
                         />
                     </InputWrapper>
                     <InputWrapper>
@@ -37,6 +51,8 @@ const ContacthtmlForm = ({classes}) => {
                             id="email"
                             type="email"
                             name="email"
+                            value={formValues.email}
+                            onChange={handleChange}
                         />
                     </InputWrapper>
                     <InputWrapper>
@@ -44,6 +60,9 @@ const ContacthtmlForm = ({classes}) => {
                         <TInput
                             id="message"
                             name="message"
+                            type="text"
+                            value={formValues.message}
+                            onChange={handleChange}
                         ></TInput>
                     </InputWrapper>
                     <div className="flex justify-center">
