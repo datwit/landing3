@@ -3,6 +3,7 @@ import {SectionSubheader, ContentWrapper, Button} from 'styles/global'
 import {MapWrapper, FormBlock, FormIntro, InputWrapper, FInput, TInput, FormLabels, ExplanationForm} from './style'
 import { FiSend } from 'react-icons/fi'
 import {useState} from 'react'
+import  { sendMessage }  from './SendMessage'
 
 const ContacthtmlForm = ({classes}) => {
     const [formValues,setFormValues] = useState({
@@ -15,6 +16,10 @@ const ContacthtmlForm = ({classes}) => {
         const {name, value} = event.target        
 
         setFormValues({...formValues,[name]:value})
+    }
+    const handleSubmit = (event) =>{
+        event.preventDefault()
+        sendMessage(formValues)             
     }
 
     return (
@@ -66,7 +71,7 @@ const ContacthtmlForm = ({classes}) => {
                         ></TInput>
                     </InputWrapper>
                     <div className="flex justify-center">
-                        <Button>Send
+                        <Button type="submit" onClick={handleSubmit}>Send
                            <FiSend className="h-6 w-6 ml-2"/>
                         </Button>
                     </div>
