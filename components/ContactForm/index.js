@@ -1,7 +1,7 @@
 
 import {SectionSubheader, ContentWrapper, Button} from 'styles/global'
-import { MapWrapper, FormBlock, FormIntro, InputWrapper, FInput, TInput, FormLabels, ExplanationForm} from './style'
-import { FiSend } from 'react-icons/fi'
+import { MessageConfirmation, MapWrapper, FormBlock, FormIntro, InputWrapper, FInput, TInput, FormLabels, ExplanationForm} from './style'
+import { FiSend, FiCheck } from 'react-icons/fi'
 import {useState} from 'react'
 import {Loading} from './Loading'
 import axios from 'axios'
@@ -21,11 +21,10 @@ const ContacthtmlForm = ({classes}) => {
         const {name, value} = event.target        
 
         setFormValues({...formValues,[name]:value})
-    }
-    
+    }    
     const handleSubmit = (event) =>{
         event.preventDefault()
-        setIsLoading(true)              
+        setIsLoading(true)                      
         async function sendMessage (messageData) {
             try {
                 const response = await axios({
@@ -38,7 +37,11 @@ const ContacthtmlForm = ({classes}) => {
                     name: '',
                     email: '',
                     message: '' 
-                })                
+                })
+                setShowMessage(true)
+                setTimeout(()=>{
+                    setShowMessage(false) 
+                }, 4000)                                                
                 return response    
                                  
             } catch (e) {
@@ -106,7 +109,11 @@ const ContacthtmlForm = ({classes}) => {
                             : <Loading />                                               
                         }
                     </div>
-                    <ExplanationForm>Send us your message and our team will contact you as soon as possible</ExplanationForm>
+                    {
+                       showMessage
+                       ? <MessageConfirmation>Message sent succesfully! <FiCheck/></MessageConfirmation>                    
+                       : <ExplanationForm>Send us your message and our team will contact you as soon as possible</ExplanationForm>
+                    }                    
                 </FormBlock>
             </ContentWrapper>
         </div>

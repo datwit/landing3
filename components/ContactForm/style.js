@@ -14,7 +14,24 @@ export const InputWrapper = styled.div.attrs({
 })``;
 export const ExplanationForm = styled.p.attrs({
     className: "text-xs text-gray-600 mt-3 text-center"
-})``;
+})
+`
+height: 33px;
+`;
+export const MessageConfirmation = styled.p.attrs({
+    className: "text-xs text-gray-600 mt-3 text-center text-green-700 bg-green-50"
+})
+`
+display:flex;
+align-items:center;
+justify-content: center;
+border-radius:20px;
+height: 33px;
+
+svg{
+    font-size:20px;
+}
+`;
 export const FInput = styled.input.attrs({
     className: "w-full border border-gray-300 focus:border-transparent bg-white text-base outline-none text-gray-700 px-3 leading-8 focus:ring-2 focus:ring-secondary2 transition-colors duration-200 ease-in-out"
 })
