@@ -1,25 +1,51 @@
 
 import {SectionSubheader, ContentWrapper, Button} from 'styles/global'
-import {MapWrapper, FormBlock, FormIntro, InputWrapper, FInput, TInput, FormLabels, ExplanationForm} from './style'
+import { MapWrapper, FormBlock, FormIntro, InputWrapper, FInput, TInput, FormLabels, ExplanationForm} from './style'
 import { FiSend } from 'react-icons/fi'
 import {useState} from 'react'
-import  { sendMessage }  from './SendMessage'
+import {Loading} from './Loading'
+import axios from 'axios'
+
+const baseURL = "http://localhost:8081/v1/user/"
 
 const ContacthtmlForm = ({classes}) => {
+    const [isLoading, setIsLoading] = useState(false)
+    const [showMessage, setShowMessage] = useState(false)
     const [formValues,setFormValues] = useState({
         name: '',
         email: '',
         message: ''
     })
-
+    
     const handleChange = (event) => {
         const {name, value} = event.target        
 
         setFormValues({...formValues,[name]:value})
     }
+    
     const handleSubmit = (event) =>{
         event.preventDefault()
-        sendMessage(formValues)             
+        setIsLoading(true)              
+        async function sendMessage (messageData) {
+            try {
+                const response = await axios({
+                    url: baseURL,
+                    method: 'POST',
+                    data: messageData,                    
+                })                                                                        
+                setIsLoading(false), 
+                setFormValues({
+                    name: '',
+                    email: '',
+                    message: '' 
+                })                
+                return response    
+                                 
+            } catch (e) {
+                console.log(e);        
+            }
+        }       
+        sendMessage(formValues)                              
     }
 
     return (
@@ -70,10 +96,15 @@ const ContacthtmlForm = ({classes}) => {
                             onChange={handleChange}
                         ></TInput>
                     </InputWrapper>
-                    <div className="flex justify-center">
+                    <div className="flex justify-center items-center">
                         <Button type="submit" onClick={handleSubmit}>Send
                            <FiSend className="h-6 w-6 ml-2"/>
                         </Button>
+                        {
+                            !isLoading
+                            ? ''                                                        
+                            : <Loading />                                               
+                        }
                     </div>
                     <ExplanationForm>Send us your message and our team will contact you as soon as possible</ExplanationForm>
                 </FormBlock>
