@@ -1,6 +1,6 @@
 
 import {SectionSubheader, ContentWrapper, Button} from 'styles/global'
-import { MessageConfirmation, MapWrapper, FormBlock, FormIntro, InputWrapper, FInput, TInput, FormLabels, ExplanationForm} from './style'
+import {Counter, MessageConfirmation, MapWrapper, FormBlock, FormIntro, InputWrapper, FInput, TInput, FormLabels, ExplanationForm} from './style'
 import { FiSend, FiCheck } from 'react-icons/fi'
 import {useState} from 'react'
 import {Loading} from './Loading'
@@ -11,6 +11,8 @@ const baseURL = "http://localhost:8081/v1/user/"
 const ContacthtmlForm = ({classes}) => {
     const [isLoading, setIsLoading] = useState(false)
     const [showMessage, setShowMessage] = useState(false)
+    const [count, setCount] = useState(0)   
+    const [alertMessage, setAlertMessage] = useState('')
     const [formValues,setFormValues] = useState({
         name: '',
         email: '',
@@ -18,39 +20,49 @@ const ContacthtmlForm = ({classes}) => {
     })
     
     const handleChange = (event) => {
-        const {name, value} = event.target        
-
+        const {name, value} = event.target 
         setFormValues({...formValues,[name]:value})
-    }    
+        
+        setCount((formValues.message.length)+1)
+    }  
+     
     const handleSubmit = (event) =>{
-        event.preventDefault()
-        setIsLoading(true)                      
-        async function sendMessage (messageData) {
-            try {
-                const response = await axios({
-                    url: baseURL,
-                    method: 'POST',
-                    data: messageData,                    
-                })                                                                        
-                setIsLoading(false), 
-                setFormValues({
-                    name: '',
-                    email: '',
-                    message: '' 
-                })
-                setShowMessage(true)
-                setTimeout(()=>{
-                    setShowMessage(false) 
-                }, 4000)                                                
-                return response    
+        if(formValues.name !='' & formValues.email !='' & formValues.message !=''){
+            event.preventDefault()
+            setIsLoading(true)                      
+            async function sendMessage (messageData) {
+                try {
+                    const response = await axios({
+                        url: baseURL,
+                        method: 'POST',
+                        data: messageData,                    
+                    })                                                                        
+                    setIsLoading(false), 
+                    setFormValues({
+                        name: '',
+                        email: '',
+                        message: '' 
+                    }) 
+                    setCount(0) 
                                  
-            } catch (e) {
-                console.log(e);        
+                    if(response.status===200){                 
+                        setShowMessage(true)
+                        setTimeout(()=>{
+                            setShowMessage(false) 
+                        }, 4000) 
+                    }                               
+                } catch (e) {
+                    console.log(e);        
+                }
+            }       
+            sendMessage(formValues)     
             }
-        }       
-        sendMessage(formValues)                              
-    }
-
+        else{
+            console.log('error')
+        } 
+                                 
+    }  
+     
     return (
         <div className={classes}>
             <SectionSubheader>We're always in for great adventures. Tell us all about this exciting idea. Fill in the form below so we can reach you!</SectionSubheader>
@@ -70,11 +82,13 @@ const ContacthtmlForm = ({classes}) => {
                 <FormBlock>
                     <FormIntro>Our doors are always open, so feel free to drop by and spot us in our natural habitat.</FormIntro>
                     <InputWrapper>
-                        <FormLabels>Your name</FormLabels>
+                        <FormLabels>Name</FormLabels>
                         <FInput
                             id="name"
                             type="text"
                             name="name"
+                            maxLength="50"
+                            placeholder="Your name..."
                             value={formValues.name}
                             onChange={handleChange}
                         />
@@ -85,22 +99,27 @@ const ContacthtmlForm = ({classes}) => {
                             id="email"
                             type="email"
                             name="email"
+                            maxLength="50"
+                            placeholder="Enter a valid email address"
                             value={formValues.email}
                             onChange={handleChange}
                         />
                     </InputWrapper>
                     <InputWrapper>
-                        <FormLabels>I'm interested in...</FormLabels>
+                        <FormLabels>Message</FormLabels>
                         <TInput
                             id="message"
                             name="message"
                             type="text"
+                            maxLength="200"                            
+                            placeholder="I'm interested in..."
                             value={formValues.message}
                             onChange={handleChange}
                         ></TInput>
+                        <Counter>{count}/200</Counter>
                     </InputWrapper>
                     <div className="flex justify-center items-center">
-                        <Button type="submit" onClick={handleSubmit}>Send
+                        <Button type="submit" onClick={handleSubmit} disabled={formValues.message.length==0}>Send
                            <FiSend className="h-6 w-6 ml-2"/>
                         </Button>
                         {
@@ -111,7 +130,7 @@ const ContacthtmlForm = ({classes}) => {
                     </div>
                     {
                        showMessage
-                       ? <MessageConfirmation>Message sent succesfully! <FiCheck/></MessageConfirmation>                    
+                       ? <MessageConfirmation>Message sent succesfully!<FiCheck/></MessageConfirmation>                    
                        : <ExplanationForm>Send us your message and our team will contact you as soon as possible</ExplanationForm>
                     }                    
                 </FormBlock>

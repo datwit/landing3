@@ -32,8 +32,12 @@ svg{
     font-size:20px;
 }
 `;
+export const Counter = styled.p.attrs({
+    className: "text-xs text-gray-600 mt-1 text-right"
+})
+``;
 export const FInput = styled.input.attrs({
-    className: "w-full border border-gray-300 focus:border-transparent bg-white text-base outline-none text-gray-700 px-3 leading-8 focus:ring-2 focus:ring-secondary2 transition-colors duration-200 ease-in-out"
+    className: "w-full border border-gray-300 focus:border-transparent bg-white text-base outline-none text-gray-700 px-3 leading-8 focus:ring-2 focus:ring-secondary2 transition-colors duration-200 ease-in-out placeholder-gray-300"
 })
 `
 border-radius: 25px;
