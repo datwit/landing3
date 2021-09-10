@@ -21,10 +21,11 @@ const ContacthtmlForm = ({classes}) => {
     
     const handleChange = (event) => {
         const {name, value} = event.target 
-        setFormValues({...formValues,[name]:value})
+        setFormValues({...formValues,[name]:value}) 
         
-        setCount((formValues.message.length)+1)
-    }  
+        setCount((formValues.message.length)+1)              
+    }
+        
      
     const handleSubmit = (event) =>{
         if(formValues.name !='' & formValues.email !='' & formValues.message !=''){
@@ -43,7 +44,7 @@ const ContacthtmlForm = ({classes}) => {
                         email: '',
                         message: '' 
                     }) 
-                    setCount(0) 
+                    // setCount(0) 
                                  
                     if(response.status===200){                 
                         setShowMessage(true)
@@ -119,7 +120,7 @@ const ContacthtmlForm = ({classes}) => {
                         <Counter>{count}/200</Counter>
                     </InputWrapper>
                     <div className="flex justify-center items-center">
-                        <Button type="submit" onClick={handleSubmit} disabled={formValues.message.length==0}>Send
+                        <Button type="submit" onClick={handleSubmit} className={formValues.name.length==0 || formValues.email.length==0 || formValues.message.length==0 ? 'submit-button' : ''}>Send
                            <FiSend className="h-6 w-6 ml-2"/>
                         </Button>
                         {

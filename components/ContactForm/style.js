@@ -43,7 +43,7 @@ export const FInput = styled.input.attrs({
 border-radius: 25px;
 `;
 export const TInput = styled.textarea.attrs({
-    className: "w-full border border-gray-300 focus:border-transparent bg-white text-base outline-none text-gray-700 px-3 leading-8 focus:ring-2 focus:ring-secondary2 transition-colors duration-200 ease-in-out"
+    className: "w-full border border-gray-300 focus:border-transparent bg-white text-base outline-none text-gray-700 px-3 leading-8 focus:ring-2 focus:ring-secondary2 transition-colors duration-200 ease-in-out placeholder-gray-300"
 })
 `
 border-radius: 20px;
