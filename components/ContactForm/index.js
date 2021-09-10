@@ -6,7 +6,8 @@ import {useState} from 'react'
 import {Loading} from './Loading'
 import axios from 'axios'
 
-const baseURL = "http://localhost:8081/v1/user/"
+const API_URL = process.env.NEXT_PUBLIC_API_URL
+
 
 const ContacthtmlForm = ({classes}) => {
     const [isLoading, setIsLoading] = useState(false)
@@ -33,11 +34,11 @@ const ContacthtmlForm = ({classes}) => {
             setIsLoading(true)                      
             async function sendMessage (messageData) {
                 try {
-                    const response = await axios({
-                        url: baseURL,
+                        const response = await axios({
+                        url: API_URL,
                         method: 'POST',
                         data: messageData,                    
-                    })                                                                        
+                    })                                                                   
                     setIsLoading(false), 
                     setFormValues({
                         name: '',
