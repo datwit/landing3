@@ -1,10 +1,12 @@
 
 import {SectionSubheader, ContentWrapper, Button} from 'styles/global'
 import {Counter, MessageConfirmation, MapWrapper, FormBlock, FormIntro, InputWrapper, FInput, TInput, FormLabels, ExplanationForm} from './style'
-import { FiSend, FiCheck } from 'react-icons/fi'
+import { FiSend} from 'react-icons/fi'
 import {useState} from 'react'
 import {Loading} from './Loading'
 import axios from 'axios'
+import {AlertMessage} from './AlertMessage'
+import data from './messajes.json'
 
 const API_URL = process.env.NEXT_PUBLIC_API_URL
 
@@ -27,14 +29,15 @@ const ContacthtmlForm = ({classes}) => {
         setCount((formValues.message.length)+1)              
     }
         
-     
+    
+
     const handleSubmit = (event) =>{
         if(formValues.name !='' & formValues.email !='' & formValues.message !=''){
             event.preventDefault()
             setIsLoading(true)                      
             async function sendMessage (messageData) {
                 try {
-                        const response = await axios({
+                    const response = await axios({
                         url: API_URL,
                         method: 'POST',
                         data: messageData,                    
@@ -44,27 +47,33 @@ const ContacthtmlForm = ({classes}) => {
                         name: '',
                         email: '',
                         message: '' 
-                    }) 
+                    })                                  
                     // setCount(0) 
-                                 
-                    if(response.status===200){                 
+                    //space for handling responses                                  
+                    if(response.status===201){  
+                        setAlertMessage(0)                                      
                         setShowMessage(true)
                         setTimeout(()=>{
                             setShowMessage(false) 
                         }, 4000) 
-                    }                               
+                    }                             
                 } catch (e) {
                     console.log(e);        
                 }
+                
             }       
-            sendMessage(formValues)     
+            sendMessage(formValues)
+                 
             }
         else{
-            console.log('error')
-        } 
-                                 
+            setAlertMessage(1)                                      
+            setShowMessage(true)
+            setTimeout(()=>{
+                setShowMessage(false) 
+            }, 4000) 
+        }                                  
     }  
-     
+    
     return (
         <div className={classes}>
             <SectionSubheader>We're always in for great adventures. Tell us all about this exciting idea. Fill in the form below so we can reach you!</SectionSubheader>
@@ -132,7 +141,7 @@ const ContacthtmlForm = ({classes}) => {
                     </div>
                     {
                        showMessage
-                       ? <MessageConfirmation>Message sent succesfully!<FiCheck/></MessageConfirmation>                    
+                       ? <AlertMessage text={data[alertMessage].text} style={data[alertMessage].style}/>                
                        : <ExplanationForm>Send us your message and our team will contact you as soon as possible</ExplanationForm>
                     }                    
                 </FormBlock>
