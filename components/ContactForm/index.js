@@ -51,7 +51,7 @@ const ContacthtmlForm = ({classes}) => {
         const {name, value} = event.target 
         setFormValues({...formValues,[name]:value}) 
         
-        setCount((formValues.message.length)+1)              
+        name==="message" ? setCount(value.length) : null             
     }
     
     const handleSubmit = (event) =>{
