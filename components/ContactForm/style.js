@@ -51,8 +51,20 @@ border-radius: 20px;
 export const FormLabels = styled.label.attrs({
     className: "leading-7 text-sm text-gray-400"
 })``;
-export const Loader = styled.label.attrs({
+export const ConnectionWarning = styled.div.attrs({
     className: ""
+})
+`
+text-align:center;
+svg{
+    font-size: 40px;
+    color: #e69c24;
+    margin-left: auto;
+    margin-right: auto;
+}
+`;
+export const Loader = styled.label.attrs({
+    className: "mx-auto"
 })
 `
 &.sk-circle {    
