@@ -37,11 +37,29 @@ export const Button = styled.a
         background: white;
         svg{
             color: #00baff;  
-        }
-        
+        }        
     }
     svg{       
         color: white;
         margin-left:8px;      
-    }     
+    } 
+    &.submit-button{
+        background:#eaebec !important;
+        border: 3px solid #a4a7a7 !important;
+        color:#a4a7a7 !important;
+        box-shadow: none;    
+        transition: none;
+        margin-right:auto;
+        margin-left:auto;
+        svg{
+            color:#a4a7a7 !important; 
+        }
+        &:hover{
+            cursor:auto !important;
+        }
+        &:active{
+            box-shadow: none;
+            transform: none;
+        }    
+    }  
 `;
