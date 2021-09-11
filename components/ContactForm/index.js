@@ -71,15 +71,33 @@ const ContacthtmlForm = ({classes}) => {
                         email: '',
                         message: '' 
                     })                                  
-                    // setCount(0) 
+                    setCount(0) 
                     //space for handling responses                                  
-                    if(response.status===201){  
+                       /*  if(response.status===201){  
                         setAlertMessage(0)                                      
                         setShowMessage(true)
                         setTimeout(()=>{
                             setShowMessage(false) 
                         }, 4000) 
-                    }                             
+                    }*/
+                    switch (response.status) {
+                        case 201:
+                            setAlertMessage(0)                                      
+                            setShowMessage(true)
+                            setTimeout(()=>{
+                                setShowMessage(false) 
+                            }, 4000)
+                            break;
+                        //empty fields    
+                        case 204: 
+                            break;
+                        //email validation
+                        case 400: 
+                            break;       
+                        default:
+                            console.log('error')
+                            break;
+                    }                            
                 } catch (e) {
                     console.log(e);        
                 }                
@@ -161,7 +179,7 @@ const ContacthtmlForm = ({classes}) => {
                                 </Button>
                                 {
                                     !isLoading
-                                    ? ''                                                        
+                                    ? ''                                                       
                                     : <Loading />                                               
                                 }
                             </div>

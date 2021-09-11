@@ -49,6 +49,8 @@ export const Button = styled.a
         color:#a4a7a7 !important;
         box-shadow: none;    
         transition: none;
+        margin-right:auto;
+        margin-left:auto;
         svg{
             color:#a4a7a7 !important; 
         }
