@@ -64,7 +64,7 @@ svg{
 }
 `;
 export const Loader = styled.label.attrs({
-    className: "mx-auto"
+    className: ""
 })
 `
 &.sk-circle {    

@@ -37,8 +37,7 @@ const ContacthtmlForm = ({classes}) => {
                 }                
                 else{
                     setConStatus(false)
-                } 
-                console.log(conStatus)                            
+                }                                          
             } catch (e) {
                 console.log(e);
                 setConStatus(false)        
@@ -71,15 +70,7 @@ const ContacthtmlForm = ({classes}) => {
                         email: '',
                         message: '' 
                     })                                  
-                    setCount(0) 
-                    //space for handling responses                                  
-                       /*  if(response.status===201){  
-                        setAlertMessage(0)                                      
-                        setShowMessage(true)
-                        setTimeout(()=>{
-                            setShowMessage(false) 
-                        }, 4000) 
-                    }*/
+                    setCount(0)                    
                     switch (response.status) {
                         case 201:
                             setAlertMessage(0)                                      
