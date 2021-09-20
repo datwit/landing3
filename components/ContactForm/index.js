@@ -226,8 +226,11 @@ const ContacthtmlForm = ({classes}) => {
                         </>
                         :
                         <ConnectionWarning>
-                            <FiAlertTriangle/>
-                            <p>Our contact form is temporarily unavailable. We hope you can comeback later</p>
+                            <div className="md:absolute md:transform md:-translate-y-2/4 md:top-2/4">
+                                <FiAlertTriangle/>
+                                <p>Our contact form is temporarily unavailable. We hope you can comeback later</p>
+                            </div>
+                           
                         </ConnectionWarning>  
                     }                                  
                 </FormBlock>

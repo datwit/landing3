@@ -60,9 +60,10 @@ export const FormLabels = styled.label.attrs({
     className: "leading-7 text-sm text-gray-400"
 })``;
 export const ConnectionWarning = styled.div.attrs({
-    className: ""
+    className: "md:relative"
 })
 `
+min-height:250px;
 text-align:center;
 svg{
     font-size: 40px;
