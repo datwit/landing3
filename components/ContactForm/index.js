@@ -7,6 +7,7 @@ import {Loading} from './Loading'
 import axios from 'axios'
 import {AlertMessage} from './AlertMessage'
 import data from './messajes.json'
+import { ValidateMessage, ValidateName, ValidateEmail } from './Validations'
 
 const API_URL = process.env.NEXT_PUBLIC_API_URL
 
@@ -17,7 +18,7 @@ const ContacthtmlForm = ({classes}) => {
     const [count, setCount] = useState(0)   
     const [alertMessage, setAlertMessage] = useState('')
     const [conStatus, setConStatus] = useState(false)
-    const [validate, setValidate] = useState(false)
+    // const [validate, setValidate] = useState(false)
     const [formValues,setFormValues] = useState({
         name: '',
         email: '',
@@ -45,64 +46,7 @@ const ContacthtmlForm = ({classes}) => {
             }
         }
         testConnection ()
-    }, [])
-
-    const ValidateMessage = (text)=>{
-        const stringformat = /^[A-Za-zñáéíóú,.;?!]+(\s+[A-Za-zñáéíóú,.;?!]+)*$/ 
-        if(text != ""){
-            if(text.match(stringformat)){
-                setValidate(false)                 
-                setShowMessage(false)                                           
-            }
-            else{        
-                setValidate(true)                      
-                setAlertMessage(3)                                      
-                setShowMessage(true)             
-            }
-        }
-        else{
-            setValidate(true) 
-            setShowMessage(false)            
-        }           
-    }
-
-    const ValidateName = (text)=>{
-        const stringformat = /^[A-Za-zñáéíóú]+(\s+[A-Za-zñáéíóú]+)*$/ 
-        if(text != ""){
-            if(text.match(stringformat)){
-                setValidate(false)                 
-                setShowMessage(false)                                           
-            }
-            else{        
-                setValidate(true)                      
-                setAlertMessage(3)                                      
-                setShowMessage(true)             
-            }
-        }
-        else{
-            setValidate(true) 
-            setShowMessage(false)            
-        }           
-    }   
-
-    const ValidateEmail =(email) =>{
-        const mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
-        if(email != ""){
-            if(email.match(mailformat)){
-                setValidate(false)                 
-                setShowMessage(false)                                           
-            }
-            else{        
-                setValidate(true)                      
-                setAlertMessage(2)                                      
-                setShowMessage(true)             
-            }
-        }
-        else{
-            setValidate(true) 
-            setShowMessage(false)            
-        }        
-    }
+    }, [])   
 
     const handleChange = (event) => {
         const {name, value} = event.target        
@@ -110,11 +54,40 @@ const ContacthtmlForm = ({classes}) => {
         
         //counter
         name==="message" ? setCount(value.length) : null 
-        //email
-        name==="email" ? ValidateEmail(value) : null 
-        //empty spaces
-        name==="message" ? ValidateMessage(value) : null
-        name==="name" ? ValidateName(value) : null        
+          
+        //validations
+        if (name==="message") {            
+           if (ValidateMessage(value)=== false) {                                 
+                setShowMessage(false) 
+           } else {                                    
+                setAlertMessage(3)                                      
+                setShowMessage(true) 
+           }
+        } else {
+            null
+        }
+        if (name==="name") {            
+            if (ValidateName(value)=== false) {                                 
+                setShowMessage(false) 
+            } else {                                     
+                setAlertMessage(3)                                      
+                setShowMessage(true) 
+            }
+        } 
+        else {
+             null
+        }
+        if (name==="email") {            
+            if (ValidateEmail(value)=== false) {                                
+                setShowMessage(false) 
+            } else {                                    
+                setAlertMessage(3)                                      
+                setShowMessage(true) 
+            }
+        } 
+        else {
+             null
+        } 
     }    
 
     const handleSubmit = (event) =>{
@@ -203,7 +176,7 @@ const ContacthtmlForm = ({classes}) => {
                                 placeholder="Your name..."
                                 value={formValues.name}
                                 onChange={handleChange}
-                                error={validate}
+                                error={showMessage}
                             />
                             </InputWrapper>
                             <InputWrapper>
@@ -217,7 +190,7 @@ const ContacthtmlForm = ({classes}) => {
                                     placeholder="Enter a valid email address"
                                     value={formValues.email}
                                     onChange={handleChange}
-                                    error={validate}
+                                    error={showMessage}
                                 />
                             </InputWrapper>
                             <InputWrapper>
@@ -231,12 +204,12 @@ const ContacthtmlForm = ({classes}) => {
                                     placeholder="I'm interested in..."
                                     value={formValues.message}
                                     onChange={handleChange}
-                                    error={validate}
+                                    error={showMessage}
                                 ></TInput>
                                 <Counter>{count}/500</Counter>
                             </InputWrapper>
                             <div className="flex justify-center items-center">
-                                <Button type="submit" onClick={handleSubmit} className={formValues.name.trim() === "" || formValues.email.trim() === "" || formValues.message.trim() === "" || validate ? 'submit-button' : ''}>Send
+                                <Button type="submit" onClick={handleSubmit} className={formValues.name.trim() === "" || formValues.email.trim() === "" || formValues.message.trim() === "" || showMessage ? 'submit-button' : ''}>Send
                                 <FiSend className="h-6 w-6 ml-2"/>
                                 </Button>
                                 {
