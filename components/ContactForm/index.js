@@ -31,7 +31,7 @@ const ContacthtmlForm = ({classes}) => {
                 const response = await axios({
                     url: API_URL,
                     method: 'GET'                                    
-                })                                          
+                })                                         
                 
                 if(response.status===200){  
                     setConStatus(true)                    
@@ -46,6 +46,27 @@ const ContacthtmlForm = ({classes}) => {
         }
         testConnection ()
     }, [])
+
+    const EmptySpaces = (text)=>{
+        const stringformat = /^[A-Za-z,.;]+(\s+[A-Za-z,.;]+)*$/; 
+        if(text != ""){
+            if(text.match(stringformat)){
+                setValidate(false)                 
+                setShowMessage(false)                                           
+            }
+            else{        
+                setValidate(true)                      
+                setAlertMessage(3)                                      
+                setShowMessage(true)             
+            }
+        }
+        else{
+            setValidate(true) 
+            setShowMessage(false)            
+        }           
+    }
+
+    
 
     const ValidateEmail =(email) =>{
         const mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/; 
@@ -73,7 +94,9 @@ const ContacthtmlForm = ({classes}) => {
         //counter
         name==="message" ? setCount(value.length) : null 
         //email
-        name==="email" ? ValidateEmail(value) : null        
+        name==="email" ? ValidateEmail(value) : null 
+        //empty spaces
+        name ==="name" || name==="message" ? EmptySpaces(value) : null       
     }
     
     
