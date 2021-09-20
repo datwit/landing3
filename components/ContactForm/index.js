@@ -47,8 +47,8 @@ const ContacthtmlForm = ({classes}) => {
         testConnection ()
     }, [])
 
-    const EmptySpaces = (text)=>{
-        const stringformat = /^[A-Za-z,.;]+(\s+[A-Za-z,.;]+)*$/; 
+    const ValidateMessage = (text)=>{
+        const stringformat = /^[A-Za-zñáéíóú,.;?!]+(\s+[A-Za-zñáéíóú,.;?!]+)*$/ 
         if(text != ""){
             if(text.match(stringformat)){
                 setValidate(false)                 
@@ -66,10 +66,27 @@ const ContacthtmlForm = ({classes}) => {
         }           
     }
 
-    
+    const ValidateName = (text)=>{
+        const stringformat = /^[A-Za-zñáéíóú]+(\s+[A-Za-zñáéíóú]+)*$/ 
+        if(text != ""){
+            if(text.match(stringformat)){
+                setValidate(false)                 
+                setShowMessage(false)                                           
+            }
+            else{        
+                setValidate(true)                      
+                setAlertMessage(3)                                      
+                setShowMessage(true)             
+            }
+        }
+        else{
+            setValidate(true) 
+            setShowMessage(false)            
+        }           
+    }   
 
     const ValidateEmail =(email) =>{
-        const mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/; 
+        const mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
         if(email != ""){
             if(email.match(mailformat)){
                 setValidate(false)                 
@@ -96,10 +113,9 @@ const ContacthtmlForm = ({classes}) => {
         //email
         name==="email" ? ValidateEmail(value) : null 
         //empty spaces
-        name ==="name" || name==="message" ? EmptySpaces(value) : null       
-    }
-    
-    
+        name==="message" ? ValidateMessage(value) : null
+        name==="name" ? ValidateName(value) : null        
+    }    
 
     const handleSubmit = (event) =>{
         if(formValues.name.length !='' & formValues.email.length !='' & formValues.message.length !=''){
