@@ -37,24 +37,33 @@ export const Counter = styled.p.attrs({
 })
 ``;
 export const FInput = styled.input.attrs({
-    className: "w-full border border-gray-300 focus:border-transparent bg-white text-base outline-none text-gray-700 px-3 leading-8 focus:ring-2 focus:ring-secondary2 transition-colors duration-200 ease-in-out placeholder-gray-300"
+    className: "w-full border border-gray-300 focus:border-transparent bg-white text-base outline-none text-gray-700 px-3 leading-8 transition-colors duration-200 ease-in-out placeholder-gray-300"
 })
 `
 border-radius: 25px;
+&:focus{
+    border-width: 2px;
+    border-color:${props => props.error ? "red" : "#e69c24"};
+}
 `;
 export const TInput = styled.textarea.attrs({
-    className: "w-full border border-gray-300 focus:border-transparent bg-white text-base outline-none text-gray-700 px-3 leading-8 focus:ring-2 focus:ring-secondary2 transition-colors duration-200 ease-in-out placeholder-gray-300"
+    className: "w-full border border-gray-300 focus:border-transparent bg-white text-base outline-none text-gray-700 px-3 leading-8 transition-colors duration-200 ease-in-out placeholder-gray-300"
 })
 `
 border-radius: 20px;
+&:focus{
+    border-width: 2px;
+    border-color:${props => props.error ? "red" : "#e69c24"};
+}
 `;
 export const FormLabels = styled.label.attrs({
     className: "leading-7 text-sm text-gray-400"
 })``;
 export const ConnectionWarning = styled.div.attrs({
-    className: ""
+    className: "md:relative"
 })
 `
+min-height:250px;
 text-align:center;
 svg{
     font-size: 40px;

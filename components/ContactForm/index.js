@@ -7,6 +7,7 @@ import {Loading} from './Loading'
 import axios from 'axios'
 import {AlertMessage} from './AlertMessage'
 import data from './messajes.json'
+import { ValidateMessage, ValidateName, ValidateEmail } from './Validations'
 
 const API_URL = process.env.NEXT_PUBLIC_API_URL
 
@@ -17,6 +18,7 @@ const ContacthtmlForm = ({classes}) => {
     const [count, setCount] = useState(0)   
     const [alertMessage, setAlertMessage] = useState('')
     const [conStatus, setConStatus] = useState(false)
+    // const [validate, setValidate] = useState(false)
     const [formValues,setFormValues] = useState({
         name: '',
         email: '',
@@ -30,7 +32,7 @@ const ContacthtmlForm = ({classes}) => {
                 const response = await axios({
                     url: API_URL,
                     method: 'GET'                                    
-                })                                          
+                })                                         
                 
                 if(response.status===200){  
                     setConStatus(true)                    
@@ -44,18 +46,54 @@ const ContacthtmlForm = ({classes}) => {
             }
         }
         testConnection ()
-    }, [])
+    }, [])   
 
     const handleChange = (event) => {
-        const {name, value} = event.target 
+        const {name, value} = event.target        
         setFormValues({...formValues,[name]:value}) 
         
-        name==="message" ? setCount(value.length) : null             
-    }
-    
+        //counter
+        name==="message" ? setCount(value.length) : null 
+          
+        //validations
+        if (name==="message") {            
+           if (ValidateMessage(value)=== false) {                                 
+                setShowMessage(false) 
+           } else {                                    
+                setAlertMessage(3)                                      
+                setShowMessage(true) 
+           }
+        } else {
+            null
+        }
+        if (name==="name") {            
+            if (ValidateName(value)=== false) {                                 
+                setShowMessage(false) 
+            } else {                                     
+                setAlertMessage(3)                                      
+                setShowMessage(true) 
+            }
+        } 
+        else {
+             null
+        }
+        if (name==="email") {            
+            if (ValidateEmail(value)=== false) {                                
+                setShowMessage(false) 
+            } else {                                    
+                setAlertMessage(3)                                      
+                setShowMessage(true) 
+            }
+        } 
+        else {
+             null
+        } 
+    }    
+
     const handleSubmit = (event) =>{
-        if(formValues.name !='' & formValues.email !='' & formValues.message !=''){
+        if(formValues.name.length !='' & formValues.email.length !='' & formValues.message.length !=''){
             event.preventDefault()
+
             setIsLoading(true)                      
             async function sendMessage (messageData) {
                 try {
@@ -133,10 +171,12 @@ const ContacthtmlForm = ({classes}) => {
                                 id="name"
                                 type="text"
                                 name="name"
-                                maxLength="50"
+                                maxLength="80"
+                                minLength="3"
                                 placeholder="Your name..."
                                 value={formValues.name}
                                 onChange={handleChange}
+                                error={showMessage}
                             />
                             </InputWrapper>
                             <InputWrapper>
@@ -146,9 +186,11 @@ const ContacthtmlForm = ({classes}) => {
                                     type="email"
                                     name="email"
                                     maxLength="50"
+                                    minLength="5"
                                     placeholder="Enter a valid email address"
                                     value={formValues.email}
                                     onChange={handleChange}
+                                    error={showMessage}
                                 />
                             </InputWrapper>
                             <InputWrapper>
@@ -157,15 +199,17 @@ const ContacthtmlForm = ({classes}) => {
                                     id="message"
                                     name="message"
                                     type="text"
-                                    maxLength="200"                            
+                                    maxLength="500"
+                                    minLength="10"                            
                                     placeholder="I'm interested in..."
                                     value={formValues.message}
                                     onChange={handleChange}
+                                    error={showMessage}
                                 ></TInput>
-                                <Counter>{count}/200</Counter>
+                                <Counter>{count}/500</Counter>
                             </InputWrapper>
                             <div className="flex justify-center items-center">
-                                <Button type="submit" onClick={handleSubmit} className={formValues.name.length==0 || formValues.email.length==0 || formValues.message.length==0 ? 'submit-button' : ''}>Send
+                                <Button type="submit" onClick={handleSubmit} className={formValues.name.trim() === "" || formValues.email.trim() === "" || formValues.message.trim() === "" || showMessage ? 'submit-button' : ''}>Send
                                 <FiSend className="h-6 w-6 ml-2"/>
                                 </Button>
                                 {
@@ -182,8 +226,11 @@ const ContacthtmlForm = ({classes}) => {
                         </>
                         :
                         <ConnectionWarning>
-                            <FiAlertTriangle/>
-                            <p>Our contact form is temporarily unavailable. We hope you can comeback later</p>
+                            <div className="md:absolute md:transform md:-translate-y-2/4 md:top-2/4">
+                                <FiAlertTriangle/>
+                                <p>Our contact form is temporarily unavailable. We hope you can comeback later</p>
+                            </div>
+                           
                         </ConnectionWarning>  
                     }                                  
                 </FormBlock>
