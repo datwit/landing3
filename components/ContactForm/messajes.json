@@ -2,21 +2,21 @@
     {
         "id":1,
         "text":"Message sent successfully!",
-        "style":"text-xs mt-3 text-green-700 bg-green-50 h-8 rounded-2xl flex justify-center items-center"
+        "style":" text-center text-xs mt-3 text-green-700 bg-green-50 h-8 rounded-2xl flex justify-center items-center"
     },
     {
         "id":2,
         "text":"You must provide content in each one of the fields.",
-        "style":"text-xs mt-3 text-red-700 bg-red-50 h-8 rounded-2xl flex justify-center items-center"
+        "style":"text-center text-xs mt-3 text-red-700 bg-red-50 h-8 rounded-2xl flex justify-center items-center"
     },
     {
         "id":3,
         "text":"You must provide a valid email address.",
-        "style":"text-xs mt-3 text-red-700 bg-red-50 h-8 rounded-2xl flex justify-center items-center"
+        "style":" text-center text-xs mt-3 text-red-700 bg-red-50 h-8 rounded-2xl flex justify-center items-center"
     },
     {
         "id":4,
         "text":"You must provide a valid phrase without leading or trealing spaces",
-        "style":"text-xs mt-3 text-red-700 bg-red-50 h-8 rounded-2xl flex justify-center items-center"
+        "style":"text-center text-xs mt-3 text-red-700 bg-red-50 h-8 rounded-2xl flex justify-center items-center"
     }       
 ]

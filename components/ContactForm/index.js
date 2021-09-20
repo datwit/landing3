@@ -203,6 +203,7 @@ const ContacthtmlForm = ({classes}) => {
                                 placeholder="Your name..."
                                 value={formValues.name}
                                 onChange={handleChange}
+                                error={validate}
                             />
                             </InputWrapper>
                             <InputWrapper>
@@ -216,6 +217,7 @@ const ContacthtmlForm = ({classes}) => {
                                     placeholder="Enter a valid email address"
                                     value={formValues.email}
                                     onChange={handleChange}
+                                    error={validate}
                                 />
                             </InputWrapper>
                             <InputWrapper>
@@ -229,6 +231,7 @@ const ContacthtmlForm = ({classes}) => {
                                     placeholder="I'm interested in..."
                                     value={formValues.message}
                                     onChange={handleChange}
+                                    error={validate}
                                 ></TInput>
                                 <Counter>{count}/500</Counter>
                             </InputWrapper>
