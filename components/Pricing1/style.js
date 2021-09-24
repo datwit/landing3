@@ -56,10 +56,10 @@ export const BundleChooser = styled.div.attrs({
         margin:10px;
     }
     path{
-      stroke: #e69c24;
+      stroke: #4b4b4d;
     }
     h4{
-       color: #e69c24;
+       color: #4b4b4d;
        margin: 5px 0 5px 0;
     }
 
@@ -67,8 +67,8 @@ export const BundleChooser = styled.div.attrs({
         position:absolute;
         bottom:0;
         content:"";
-        background: #e69c24;
-        height: 5px;
+        background: ${props => props.color};
+        height: 0px;
         z-index: -1;
         width: 100%;
 
@@ -136,6 +136,7 @@ export const CardPriceCont = styled.div.attrs({
 @-webkit-keyframes slidel {
     100% { left: 0; }
 }
+
 @keyframes slidel {
     100% { left: 0; }
 }
@@ -144,6 +145,7 @@ export const ButtonPrice = styled.div.attrs({
     className: "mx-auto my-4 border-3"
 })
 `
+
     padding: .5rem 1rem;
     border-radius: 9999px;
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
@@ -154,12 +156,14 @@ export const ButtonPrice = styled.div.attrs({
     display: inline-flex;
     cursor:pointer;
     border-color: #EAEBEC;
+
     svg{
        color: #4b4b4d;
     }
+
     &:active{
         transform: translate(4px,4px);
-    }    
+    }
     &:hover{
         color:#1e4158;
         border-width:3px;
@@ -168,5 +172,38 @@ export const ButtonPrice = styled.div.attrs({
         svg{
             color:#1e4158;
         }
-    }   
+    }
+    &.naranja{
+        &:hover{
+            color:#e69c24;
+            border-width:3px;
+            border-color:#e69c24;
+            background: white;
+            svg{
+                color:#e69c24;
+            }
+        }
+    }
+    &.azul{
+        &:hover{
+            color:#00baff;
+            border-width:3px;
+            border-color:#00baff;
+            background: white;
+            svg{
+                color:#00baff;
+            }
+        }
+    }
+    &.dark{
+        &:hover{
+            color:#1e4158;
+            border-width:3px;
+            border-color:#1e4158;
+            background: white;
+            svg{
+                color:#1e4158;
+            }
+        }
+    }
 `;

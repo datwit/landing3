@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
-import { Field, Price, LilDescrip, ButtonPrice, FullPricingCard, BulletWrapper} from './style'
+import { Field, Price, LilDescrip, FullPricingCard, BulletWrapper} from './style'
 
-const MainPricingCard = ({style, field,price,description, children}) => {
+const MainPricingCard = ({style, field, price, description, children}) => {
     const [hover, setHover] = useState(false)
 
     const toggleHoverON = () => {
@@ -26,8 +26,7 @@ const MainPricingCard = ({style, field,price,description, children}) => {
                         {children}
                     </BulletWrapper>    
                 </div>                 
-            </FullPricingCard>
-                              
+            </FullPricingCard>                              
         </>
     )
 }

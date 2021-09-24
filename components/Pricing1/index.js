@@ -37,8 +37,7 @@ const Pricing1 = ({classes}) => {
                                     </MainPricingCard>                    
                                 </OuterWrapper> 
                             ))
-                        )
-                       
+                        )                       
                     }
                     <div className="flex justify-content w-full">
                         <Link href="/contact">
