@@ -5,7 +5,7 @@ const BulletsContent = ({title}) => {
     return (
         <BulletText>
             <BulletTextSpan>                
-                <FiCheck className="h-8 w-8 text-secondary2" />
+                <FiCheck className="h-6 w-6 text-secondary2" />
             </BulletTextSpan>{title}
         </BulletText>
     )
