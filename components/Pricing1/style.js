@@ -1,8 +1,21 @@
 import styled from "styled-components"
 
 export const OuterWrapper = styled.div.attrs({
-    className: "p-4 md:w-2/4 w-full"
-})``;
+    className: "p-4 md:w-1/3"
+})
+`
+    #priceCardReveal{
+        position: absolute; 
+        bottom: 0%;
+        width:100%;  
+        cursor: pointer; 
+        z-index: 1;     
+        transition: height 300ms ease-in-out;  
+        -webkit-transition: height 300ms ease-in-out;        
+        background-color: white;
+        overflow-y: auto;
+    }      
+`;
 export const Field = styled.h2.attrs({
     className: "text-sm tracking-widest text-white title-font font-semibold py-2 "
 })``;
@@ -28,6 +41,12 @@ export const PBullets = styled.span.attrs({
 export const ToggleWrapper = styled.div.attrs({
     className: "flex mx-auto my-3 justify-center lg:max-w-lg xl:max-w-xl"
 })``;
+export const FullPricingCard = styled.div.attrs({
+    className: "border-2 shadow-lg box-border mx-auto relative overflow-hidden cursor-pointer"
+})
+`
+min-height: 280px;   
+`;
 export const BundleChooser = styled.div.attrs({
     className: "py-1 px-4 text-xs sm:text-base flex flex-col items-center cursor-pointer relative"
 })
@@ -37,10 +56,10 @@ export const BundleChooser = styled.div.attrs({
         margin:10px;
     }
     path{
-      stroke: #e69c24;
+      stroke: #4b4b4d;
     }
     h4{
-       color: #e69c24;
+       color: #4b4b4d;
        margin: 5px 0 5px 0;
     }
 
@@ -48,8 +67,8 @@ export const BundleChooser = styled.div.attrs({
         position:absolute;
         bottom:0;
         content:"";
-        background: #e69c24;
-        height: 5px;
+        background: ${props => props.color};
+        height: 0px;
         z-index: -1;
         width: 100%;
 
@@ -74,7 +93,9 @@ export const BundleChooser = styled.div.attrs({
 
 
 `;
-export const BulletWrapper= styled.ul
+export const BulletWrapper= styled.ul.attrs({
+    className: "m-2"
+})    
 `
 &.slide-right{
     position: relative;
@@ -94,10 +115,10 @@ export const BulletWrapper= styled.ul
 }
 `;
 export const BulletText = styled.p.attrs({
-    className: "flex items-center text-gray-600 m-3 text-sm sm:text-base"
+    className: "flex items-center text-gray-600 text-sm sm:text-base mt-2"
 })``;
 export const BulletTextSpan = styled.span.attrs({
-    className: "w-8 h-8 mr-2 inline-flex items-center justify-center flex-shrink-0"
+    className: "w-6 h-6 mr-2 inline-flex items-center justify-center flex-shrink-0"
 })``;
 export const CardPriceCont = styled.div.attrs({
     className: " p-4 w-full"
@@ -143,7 +164,15 @@ export const ButtonPrice = styled.div.attrs({
     &:active{
         transform: translate(4px,4px);
     }
-
+    &:hover{
+        color:#1e4158;
+        border-width:3px;
+        border-color:#1e4158;
+        background: white;
+        svg{
+            color:#1e4158;
+        }
+    }
     &.naranja{
         &:hover{
             color:#e69c24;

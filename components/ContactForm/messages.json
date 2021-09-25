@@ -18,5 +18,15 @@
         "id":4,
         "text":"You must provide a valid phrase without leading or trealing spaces.",
         "style":"text-center text-xs mt-3 text-red-700 bg-red-50 h-8 rounded-2xl flex justify-center items-center"
-    }       
+    },
+    {
+        "id":5,
+        "text":"Something is wrong with the data you provided, please check it and try again.",
+        "style":"text-center text-xs mt-3 text-red-700 bg-red-50 h-8 rounded-2xl flex justify-center items-center"
+    },
+    {
+        "id":6,
+        "text":"Something is wrong, we are working on it, please try again later.",
+        "style":"text-center text-xs mt-3 text-red-700 bg-red-50 h-8 rounded-2xl flex justify-center items-center"
+    }          
 ]

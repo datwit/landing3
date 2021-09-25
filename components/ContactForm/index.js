@@ -6,7 +6,7 @@ import {useState, useEffect} from 'react'
 import {Loading} from './Loading'
 import axios from 'axios'
 import {AlertMessage} from './AlertMessage'
-import data from './messajes.json'
+import data from './messages.json'
 import { ValidateMessage, ValidateName, ValidateEmail } from './Validations'
 
 const API_URL = process.env.NEXT_PUBLIC_API_URL
@@ -116,15 +116,21 @@ const ContacthtmlForm = ({classes}) => {
                             setTimeout(()=>{
                                 setShowMessage(false) 
                             }, 4000)
-                            break;
-                        //empty fields    
-                        case 204: 
-                            break;
-                        //email validation
+                            break;                        
+                        //bad request
                         case 400: 
+                            setAlertMessage(4)                                      
+                            setShowMessage(true)
+                            setTimeout(()=>{
+                                setShowMessage(false) 
+                            }, 4000)
                             break;       
                         default:
-                            console.log('error')
+                            setAlertMessage(5)                                      
+                            setShowMessage(true)
+                            setTimeout(()=>{
+                                setShowMessage(false) 
+                            }, 4000)
                             break;
                     }                            
                 } catch (e) {

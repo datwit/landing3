@@ -10,7 +10,7 @@ export const FormIntro = styled.p.attrs({
     className: "text-base m-0 text-gray-600 text-justify"
 })``;
 export const InputWrapper = styled.div.attrs({
-    className: "relative mb-2"
+    className: "relative"
 })``;
 export const ExplanationForm = styled.p.attrs({
     className: "text-xs text-gray-600 mt-3 text-center"

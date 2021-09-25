@@ -1,12 +1,11 @@
 
-import { CardPriceCont, BulletWrapper,ToggleWrapper, BundleChooser} from './style'
+import { CardPriceCont, ToggleWrapper, BundleChooser, Field, Price, LilDescrip, FullPricingCard, BulletWrapper} from './style'
 import datas from "./pricing.json"
-import {MainPricingCard} from './MainPricingCard'
 import {BulletsContent}  from './BulletsContent'
 import {ContentWrapper} from 'styles/global'
 import React,{ useState } from 'react'
 import { GrSystem,GrServerCluster, GrCode } from "react-icons/gr"
-
+import {PricingButton} from './PricingButton'
 
 const CardTabsResponsive = () => {
     
@@ -16,7 +15,7 @@ const CardTabsResponsive = () => {
         <>
             <div className="w-full">
                 <ToggleWrapper>
-                    <BundleChooser  className={openTab === datas[0].num ? "open" : ""}
+                    <BundleChooser  color={openTab === datas[0].num ? "#e69c24" : ""} className={openTab === datas[0].num ? "open" : ""}
                         onClick={e =>
                         {
                         e.preventDefault();
@@ -24,7 +23,7 @@ const CardTabsResponsive = () => {
                         }}>
                         <GrServerCluster className="h-10 w-10"/>                      
                     </BundleChooser>
-                    <BundleChooser  className={openTab === datas[1].num ? "open" : ""}
+                    <BundleChooser  color={openTab === datas[1].num ? "#00baff" : ""} className={openTab === datas[1].num ? "open" : ""}
                         onClick={e =>
                         {
                         e.preventDefault();
@@ -32,7 +31,7 @@ const CardTabsResponsive = () => {
                         }}>
                         <GrSystem className="h-10 w-10"/>                       
                     </BundleChooser>
-                        <BundleChooser  className={openTab === datas[2].num ? "open" : ""}
+                        <BundleChooser  color={openTab === datas[2].num ? "#1e4158" : ""} className={openTab === datas[2].num ? "open" : ""}
                         onClick={e =>
                         {
                         e.preventDefault();
@@ -47,7 +46,15 @@ const CardTabsResponsive = () => {
                     datas.map(data => (
                         <ContentWrapper className={openTab === data.num ? "block" : "hidden"}>
                             <CardPriceCont className={openTab === data.num ? "block slide-left" : "hidden"}>
-                                <MainPricingCard style={data.style} field={data.field} price={data.price} description={data.description}/>
+                                <FullPricingCard className={`border-${data.style}`}>
+                                    <div className={`bg-${data.style}`}><Field>{data.field}</Field></div>
+                                    <div className="p-3">
+                                        <span className="flex justify-center items-baseline my-2"><Price>{data.price}</Price><p className="m-0"> /hr</p></span>
+                                        <h4 className="text-sm font-semibold pb-2">billed monthly</h4>
+                                        <LilDescrip>{data.description}</LilDescrip>                   
+                                    </div>                                   
+                                    <PricingButton style={data.style}/>                                                    
+                                </FullPricingCard> 
                             </CardPriceCont>
                             <div className= "px-4 sm:p-4 w-full">
                                 <BulletWrapper className={ openTab === data.num ? 'block slide-right': 'hidden'}>

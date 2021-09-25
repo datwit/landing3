@@ -40,7 +40,7 @@ const Contact = () => {
             <FullPage controls={CustomControls}>
                 <Slide>
                     <Section classes={'w-full h-screen'}>
-                        <ContacthtmlForm classes={"container px-5 mx-auto relative top-2/4 transform -translate-y-2/4"} />
+                        <ContacthtmlForm classes={"container px-5 mx-auto relative top-2/4 transform -translate-y-2/4 mt-3"} />
                     </Section>
                 </Slide>
 
