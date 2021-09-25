@@ -1,14 +1,11 @@
 
-import { CardPriceCont, ToggleWrapper, BundleChooser, Field, Price, LilDescrip, FullPricingCard, BulletWrapper, ButtonPrice} from './style'
+import { CardPriceCont, ToggleWrapper, BundleChooser, Field, Price, LilDescrip, FullPricingCard, BulletWrapper} from './style'
 import datas from "./pricing.json"
-import {MainPricingCard} from './MainPricingCard'
 import {BulletsContent}  from './BulletsContent'
 import {ContentWrapper} from 'styles/global'
 import React,{ useState } from 'react'
 import { GrSystem,GrServerCluster, GrCode } from "react-icons/gr"
-import Link from 'next/link'
-import { FiSend } from 'react-icons/fi'
-
+import {PricingButton} from './PricingButton'
 
 const CardTabsResponsive = () => {
     
@@ -55,19 +52,8 @@ const CardTabsResponsive = () => {
                                         <span className="flex justify-center items-baseline my-2"><Price>{data.price}</Price><p className="m-0"> /hr</p></span>
                                         <h4 className="text-sm font-semibold pb-2">billed monthly</h4>
                                         <LilDescrip>{data.description}</LilDescrip>                   
-                                    </div>
-                                    <div className="flex justify-content my-4">
-                                        <Link href="/contact">
-                                            <ButtonPrice className={
-                                                (data.style === 'secondary2' && 'naranja')
-                                                || (data.style === 'secondary1' && 'azul')
-                                                || (data.style === 'primary' && 'dark')
-                                            }
-                                            > Contact us
-                                                <FiSend className={`h-6 w-6 ml-2`}/>
-                                            </ButtonPrice>
-                                        </Link>
-                                    </div>                                                    
+                                    </div>                                   
+                                    <PricingButton style={data.style}/>                                                    
                                 </FullPricingCard> 
                             </CardPriceCont>
                             <div className= "px-4 sm:p-4 w-full">

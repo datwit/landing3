@@ -45,19 +45,7 @@ const PricingP = () => {
                         <Section classes={'w-full h-screen'}>
                             <Pricing1 classes={"container px-5 mx-auto relative top-2/4 transform -translate-y-2/4 mt-8"} />
                         </Section>
-                    </Slide>
-
-                    <Slide>
-                        <Section classes={'w-full h-screen'}>
-                            <Pricing2 classes={"container px-5 mx-auto relative top-2/4 transform -translate-y-2/4 mt-8"} />
-                        </Section>
-                    </Slide>
-
-                    <Slide>
-                        <Section classes={'w-full h-screen'}>
-                            <Pricing3 classes={"container px-5 mx-auto relative top-2/4 transform -translate-y-2/4 mt-8"} />
-                        </Section>
-                    </Slide>
+                    </Slide>                    
 
                     <Slide>
                         <Section classes={"w-full h-screen bg-primary mx-auto px-10"}>
