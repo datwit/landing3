@@ -35,11 +35,11 @@ const StudyCasesPage = ({ title, date, content, author})=> {
                                         <FiChevronLeft  className="h-6 w-6 mr-2"/>
                                         <span>Back</span>
                                     </h3>
-                                </a>                               
-                                <PostTitle>{title}</PostTitle>
-                                <div className="mt-3 mb-5">
-                                    <div className="w-full"><p className="mt-2"><span className="text-gray-700 font-medium">By: </span><span>{author}</span></p></div>
-                                    <div className="w-full"><p className="mt-2"><span className="text-gray-700 font-medium">On: </span>{format(parseISO(date), 'MMMM do, uuu')}<span></span></p></div>
+                                </a>
+                                <div className="mt-3 mb-8 w-3/4 mx-auto text-center">                               
+                                    <PostTitle>{title}</PostTitle>                                
+                                    <div className="w-full"><p className="mt-0 text-sm"><span className="text-gray-700 font-medium">By: </span><span>{author}</span></p></div>
+                                    <div className="w-full"><p className="mt-0 text-sm"><span className="text-gray-700 font-medium">On: </span>{format(parseISO(date), 'MMMM do, uuu')}<span></span></p></div>
                                 </div>
                                 <MarkdownContent>{hydratedContent}</MarkdownContent>
                             </div>

@@ -35,28 +35,28 @@ const BlogPage = ({ title, date, content, img, author, tags, id})=> {
                                         <FiChevronLeft  className="h-6 w-6 mr-2"/>
                                         <span>Back</span>
                                     </h3>
-                                </a>                             
+                                </a>
+                                <DateAuthorWrapper>
+                                    <PostTitle>{title}</PostTitle> 
+                                    <div className="w-full"><p className="mt-0 text-sm">{`By: ${author}`}</p></div>
+                                    <div className="w-full"><p className="mt-0 text-sm">{`On: ${format(parseISO(date), 'MMMM do, uuu')}`}</p></div>
+                                    <div className="flex flex-wrap py-5 justify-center">
+                                        {
+                                            React.Children.toArray(
+                                                tags.map(tags => (
+                                                    <a onClick={() => router.push(`/blog/search?p=${tags.toLowerCase()}`)}>
+                                                        <Category
+                                                        >{tags}
+                                                        </Category>
+                                                    </a>
+                                                ))
+                                            )
+                                        }
+                                    </div>                                      
+                                </DateAuthorWrapper>                                                         
                                 <ImgContainer>
                                     <img src={img} alt={title}/>
-                                </ImgContainer>
-                                <DateAuthorWrapper>
-                                <div className="w-full md:w-2/4"><p>{`By: ${author}`}</p></div>
-                                <div className="w-full md:w-2/4"><p>{`On: ${format(parseISO(date), 'MMMM do, uuu')}`}</p></div>
-                                </DateAuthorWrapper>
-                                <div className="flex flex-wrap py-5">
-                                    {
-                                        React.Children.toArray(
-                                            tags.map(tags => (
-                                                <a onClick={() => router.push(`/blog/search?p=${tags.toLowerCase()}`)}>
-                                                    <Category
-                                                    >{tags}
-                                                    </Category>
-                                                </a>
-                                            ))
-                                        )
-                                    }
-                                </div>
-                                <PostTitle>{title}</PostTitle>
+                                </ImgContainer>                              
                                 <MarkdownContent>{hydratedContent}</MarkdownContent>
                             </div>
                         </section>

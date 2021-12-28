@@ -30,7 +30,7 @@ export const CardSummary = styled.p.attrs({
     -webkit-box-orient: vertical;
     overflow:hidden;
     text-overflow: ellipsis;
-    height:75px;
+    height:78px;
     text-align:justify;
 
 `;
@@ -63,12 +63,11 @@ export const BlogCardBorder = styled.div.attrs({
         }
         @media (min-width: 640px){        
         width:auto;
-        height:145px;
+        height:130px;
         }
         @media (min-width: 1280px){        
-        width:auto;
-       /*  height:160px; */
-       height: 30vh;
+        width:auto;       
+        height: 150px;
         }
 
     }    
@@ -124,27 +123,30 @@ export const ImgContainer= styled.div.attrs({
     className: "flex justify-center mb-4"
 })``;
 export const DateAuthorWrapper= styled.div.attrs({
-    className: "text-gray-600 text-md w-full mx-auto md:inline-flex"
-})``;
+    className: "text-gray-600 text-md w-3/4 mx-auto"
+})
+`
+    text-align: center;
+`;
 export const PostTitle= styled.h2.attrs({
     className: "text-3xl font-bold"
 })``;
 export const Category= styled.p
 `
-padding: .05rem .8rem;
-border-radius: 3rem;
-background: #f5f2f2;
-color: #e69c24;
-border: 2px solid #e69c24;
-font-size: 14px;
-margin: 0 5px 10px 0;
-cursor:pointer;
-line-height:1rem;
+    padding: .05rem .8rem;
+    border-radius: 3rem;
+    background: #f5f2f2;
+    color: #e69c24;
+    border: 2px solid #e69c24;
+    font-size: 14px;
+    margin: 0 5px 10px 0;
+    cursor:pointer;
+    line-height:1rem;
 
-&:hover{
-    color: #00baff;
-    border:2px solid #00baff;    
-}
+    &:hover{
+        color: #00baff;
+        border:2px solid #00baff;    
+    }
 `;
 export const SearchField= styled.input.attrs({
     className: "w-full border border-gray-300 focus:border-transparent bg-white text-base outline-none text-gray-700 px-3 leading-8 focus:ring-2 focus:ring-secondary2 transition-colors duration-200 ease-in-out"
