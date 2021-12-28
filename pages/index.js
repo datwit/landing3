@@ -69,7 +69,7 @@ export default function Home() {
 
             <Slide>
                 <Section classes={'w-full h-screen'}>
-                    <StudyCases classes={"container px-5 mx-auto relative top-2/4 transform -translate-y-2/4"}/>
+                    <StudyCases classes={"container px-5 mx-auto relative top-2/4 transform -translate-y-2/4 mt-4"}/>
                 </Section>
             </Slide>
         

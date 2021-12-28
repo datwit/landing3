@@ -8,6 +8,7 @@ h2{
     margin-top: 1rem;
     margin-bottom: .8rem;
     font-size: 25px;
+    text-align: left;
     
 }
 h3{
@@ -15,25 +16,23 @@ h3{
     margin-bottom: .8rem;
     font-size: 20px;
     color:#1e4158;
+    text-align: left;
     
 }
 h4{
     margin-top: 1rem;
     margin-bottom: .8rem;
     font-size: 20px;
-    text-align:left;
-    
+    text-align:left;    
 }
 p{
-    color: #413f3f;
-    opacity: .72;
+    color: #334155;    
     margin-top:10px;
     font-size: 18px;
 }
 ul{
     list-style-type: square;
-    color: #413f3f;
-    opacity: .72;
+    color: #334155;    
     margin: 20px 0px 20px 20px;
     
 }
@@ -54,6 +53,16 @@ img{
     margin-left:auto;
     margin-right: auto;
     }
+}
+a{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #334155; 
+    &:hover{
+        color: #00baff;
+    }
+}
+code{
+    background: #eaebec;    
 }
 
 `;
