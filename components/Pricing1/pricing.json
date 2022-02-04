@@ -2,23 +2,25 @@
   {
     "num":1,
     "bundle":"ML",
-    "field":"ML SOLUTIONS",
+    "field":"ML Solutions",
     "style":"secondary2",
     "price": "$69",
     "description": "Well made ML solutions can really improve your business workflow",
-    "bullets": [
+    "included":[
         {"title":"Model architecture design"},
         {"title":"Model optimization"},
-        {"title":"Model training & building"},
-        {"title":"Model evaluation"},
-        {"title":"Pipeline design and setup"},
-        {"title":"Model monitoring and improving"}
+        {"title":"Model training & building"}       
+    ],
+    "bullets": [
+        {"id":1,"title":"Model architecture design","amount":100},
+        {"id":2,"title":"Model optimization","amount":100},
+        {"id":3,"title":"Model training & building","amount":100}       
     ]
   },
   {
     "num":2,
     "bundle":"DATA",
-    "field":"DATA SOLUTIONS",
+    "field":"Data Solutions",
     "style":"secondary1",
     "price": "$89",
     "description": "Our team can use your data and take it to the next level",
@@ -34,7 +36,7 @@
   {
     "num":3,
     "bundle":"DEV",
-    "field":"WEB SOLUTIONS",
+    "field":"Web Solutions",
     "style":"primary",
     "price": "$72",
     "description": "Including an end-to-end solution with a full operational infrastructure",

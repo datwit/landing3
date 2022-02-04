@@ -3,22 +3,13 @@ import styled from "styled-components"
 export const OuterWrapper = styled.div.attrs({
     className: "p-4 md:w-1/3"
 })
-`
-    #priceCardReveal{
-        position: absolute; 
-        bottom: 0%;
-        width:100%;  
-        cursor: pointer; 
-        z-index: 1;     
-        transition: height 300ms ease-in-out;  
-        -webkit-transition: height 300ms ease-in-out;        
-        background-color: white;
-        overflow-y: auto;
-    }      
-`;
+``;
 export const Field = styled.h2.attrs({
     className: "text-sm tracking-widest text-white title-font font-semibold py-2 "
-})``;
+})
+`
+    text-transform: uppercase;
+`;
 export const Price = styled.h1.attrs({
     className: "text-5xl text-primary leading-none"
 })``;
@@ -53,7 +44,7 @@ export const BundleChooser = styled.div.attrs({
 `
     z-index:2;
     svg{
-        margin:10px;
+        margin-right:10px;
     }
     path{
       stroke: #4b4b4d;
@@ -93,6 +84,18 @@ export const BundleChooser = styled.div.attrs({
 
 
 `;
+export const TabWrapper = styled.div.attrs({
+    className: "flex items-center justify-center"
+})
+``;
+export const TabText = styled.p.attrs({
+    className: "hidden md:block"
+})
+`
+padding-bottom:0;
+color: ${props => props.color};
+margin-top:0;
+`;
 export const BulletWrapper= styled.ul.attrs({
     className: "m-2"
 })    
@@ -121,7 +124,7 @@ export const BulletTextSpan = styled.span.attrs({
     className: "w-6 h-6 mr-2 inline-flex items-center justify-center flex-shrink-0"
 })``;
 export const CardPriceCont = styled.div.attrs({
-    className: " p-4 w-full"
+    className: " p-4 md:w-1/3"
 })
 `
 &.slide-left{

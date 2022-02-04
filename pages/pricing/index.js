@@ -7,6 +7,7 @@ import Head from 'next/head'
 import {Navbar} from 'components/Navbar'
 import {useEffect} from 'react'
 import DeviceDetect from "lib/deviceDetect"
+import {Pricing} from 'components/Pricing'
 import {Pricing1} from 'components/Pricing1'
 import {Pricing2} from 'components/Pricing2'
 import {Pricing3} from 'components/Pricing3'
@@ -43,7 +44,7 @@ const PricingP = () => {
                 <FullPage controls={CustomControls}>
                     <Slide>
                         <Section classes={'w-full h-screen'}>
-                            <Pricing1 classes={"container px-5 mx-auto relative top-2/4 transform -translate-y-2/4 mt-8"} />
+                            <Pricing classes={"container px-5 mx-auto relative top-2/4 transform -translate-y-2/4"} />
                         </Section>
                     </Slide>                    
 
@@ -58,22 +59,10 @@ const PricingP = () => {
                 <Navbar scrollToSlide={ scrollToTop }/>
                 <Slide>
                     <Section classes={'pb-16 pt-20'}>
-                        <Pricing1 classes={"px-5 mx-auto"} />
+                        <Pricing classes={"px-5 mx-auto"} />
                     </Section>
                 </Slide>
-
-                <Slide>
-                    <Section classes={'pb-16 hidden md:block'}>
-                        <Pricing2 classes={"px-5 mx-auto"} />
-                    </Section>
-                </Slide>
-
-                <Slide>
-                    <Section classes={'pb-16 hidden md:block'}>
-                        <Pricing3 classes={"px-5 mx-auto"} />
-                    </Section>
-                </Slide>
-
+               
                 <Slide>
                     <Section classes={"w-full h-screen bg-primary mx-auto px-10"}>
                         <Footer />
