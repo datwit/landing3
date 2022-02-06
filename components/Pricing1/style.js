@@ -118,7 +118,7 @@ export const BulletWrapper= styled.ul.attrs({
 }
 `;
 export const BulletText = styled.p.attrs({
-    className: "flex items-center text-gray-600 text-sm sm:text-base mt-2"
+    className: "flex items-center text-sm text-gray-500 mt-2"
 })``;
 export const BulletTextSpan = styled.span.attrs({
     className: "w-6 h-6 mr-2 inline-flex items-center justify-center flex-shrink-0"
