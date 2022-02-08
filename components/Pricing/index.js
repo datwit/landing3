@@ -1,7 +1,7 @@
 import React,{ useState, useMemo } from 'react'
 import { GrSystem,GrServerCluster, GrCode } from "react-icons/gr"
 import {PricingButton} from '../Pricing1/PricingButton'
-import { CardPriceCont, TabText, TabWrapper, ToggleWrapper, BundleChooser, Field, Price, LilDescrip, FullPricingCard, BulletWrapper} from '../Pricing1/style'
+import { CardPriceCont, CheckboxContainer, TabText, TabWrapper, ToggleWrapper, BundleChooser, Field, Price, LilDescrip, FullPricingCard, BulletWrapper} from '../Pricing1/style'
 import data from "../Pricing1/pricing.json"
 import {BulletsContent}  from '../Pricing1/BulletsContent'
 import {ContentWrapper} from 'styles/global'
@@ -37,8 +37,7 @@ const Pricing = ({classes}) => {
                         onClick={e =>
                         {
                         e.preventDefault();
-                        setOpenTab(data[0].num);
-                        ClearChecks();
+                        setOpenTab(data[0].num);                       
                         }}>
                         <TabWrapper>                                
                             <GrServerCluster className="h-10 w-10 md:h-6 md:w-6"/>
@@ -49,8 +48,7 @@ const Pricing = ({classes}) => {
                         onClick={e =>
                         {
                         e.preventDefault();
-                        setOpenTab(data[1].num);
-                        ClearChecks();
+                        setOpenTab(data[1].num);                        
                         }}>
                         <TabWrapper>    
                             <GrSystem className="h-10 w-10 md:h-6 md:w-6"/>  
@@ -61,8 +59,7 @@ const Pricing = ({classes}) => {
                         onClick={e =>
                         {
                         e.preventDefault();
-                        setOpenTab(data[2].num);
-                        ClearChecks();
+                        setOpenTab(data[2].num);                        
                         }}>
                         <TabWrapper>
                             <GrCode className="h-10 w-10 md:h-6 md:w-6"/> 
@@ -92,15 +89,17 @@ const Pricing = ({classes}) => {
                                     <PricingButton style={data.style}/>                                                    
                                 </FullPricingCard> 
                             </CardPriceCont>
-                            <div className= "px-4 sm:p-4 md:w-1/3">
+                            <div className= "px-4 sm:p-4 md:w-2/3">
                                 <BulletWrapper className={ openTab === data.num ? 'block slide-right': 'hidden'}>
                                     <h4 className="font-semibold text-left">Features:</h4>
                                     {
                                         React.Children.toArray(
                                             data.features.map(({ id, amount, title }) => (                              
-                                                <div>
-                                                    <label>
+                                                <CheckboxContainer>                                                   
+                                                    <label className="container">  
+                                                        <p>{`${id}, amount: ${amount}, title: ${title}`}</p>
                                                         <input
+                                                        className="regular-checkbox big-checkbox"
                                                         type="checkbox"
                                                         defaultChecked={!!checked[id]}                                                        
                                                         onChange={() => {
@@ -109,10 +108,11 @@ const Pricing = ({classes}) => {
                                                             [id]: !checked[id]
                                                             });
                                                         }}
-                                                        />
-                                                        {`${id}, amount: ${amount}, title: ${title}`}
-                                                    </label>                                                     
-                                                </div>                                                                               
+                                                        />                                                  
+                                                        <span className="checkmark">                                                           
+                                                        </span>                                                        
+                                                    </label>                                                                                                                                                       
+                                                </CheckboxContainer>                                                                               
                                             )))                                                                                                  
                                     }                       
                                 <p>Sum of the amount for checked subscribers: {Total(index)}</p>   

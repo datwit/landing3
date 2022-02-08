@@ -13,7 +13,7 @@ module.exports = {
         primary: '#1e4158',
         secondary1:'#00baff',
         secondary2: '#e69c24',
-        bggray: ' #eaebec'
+        bggray: '#eaebec'
       },
       screens:{
         'xs': '360px',
