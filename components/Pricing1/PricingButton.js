@@ -4,18 +4,16 @@ import Link from 'next/link'
 import {ButtonPrice} from './style'
 
 const PricingButton = ({style}) => {
-    return (
-        <div className="flex justify-content w-full">
-            <Link href="/contact">
-                <ButtonPrice className={
-                    (style === 'secondary2' && 'naranja')
-                    || (style === 'secondary1' && 'azul')
-                    || (style === 'primary' && 'dark') }
-                > Contact us
-                    <FiSend className={`h-6 w-6 ml-2`}/>
-                </ButtonPrice>
-            </Link>
-        </div> 
+    return (        
+        <Link href="/contact">
+            <ButtonPrice className={
+                (style === 'secondary2' && 'naranja')
+                || (style === 'secondary1' && 'azul')
+                || (style === 'primary' && 'dark') }
+            > Contact us
+                <FiSend className={`h-6 w-6 ml-2`}/>
+            </ButtonPrice>
+        </Link>        
     )
 }
 

@@ -223,6 +223,7 @@ export const ButtonPrice = styled.div.attrs({
     display: inline-flex;
     cursor:pointer;
     border-color: #EAEBEC;
+    margin-right:20px; 
 
     svg{
        color: #4b4b4d;
@@ -273,4 +274,19 @@ export const ButtonPrice = styled.div.attrs({
             }
         }
     }
+`;
+export const ButtonTotal = styled.div.attrs({
+    className: "mx-auto my-4 border-3"
+})
+`
+    padding: .5rem 1rem;
+    border-radius: 9999px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    /* transition: box-shadow 0.3 ease, transform 0.3 ease; */
+    background-color: #EAEBEC;
+    color: #4b4b4d;
+    font-weight: 600;
+    display: inline-flex;    
+    border-color: #EAEBEC;  
+    margin-right:20px; 
 `;

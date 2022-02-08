@@ -1,7 +1,7 @@
 import React,{ useState, useMemo } from 'react'
 import { GrSystem,GrServerCluster, GrCode } from "react-icons/gr"
 import {PricingButton} from '../Pricing1/PricingButton'
-import { CardPriceCont, CheckboxContainer, TabText, TabWrapper, ToggleWrapper, BundleChooser, Field, Price, LilDescrip, FullPricingCard, BulletWrapper} from '../Pricing1/style'
+import { CardPriceCont, ButtonTotal, CheckboxContainer, TabText, TabWrapper, ToggleWrapper, BundleChooser, Field, Price, LilDescrip, FullPricingCard, BulletWrapper} from '../Pricing1/style'
 import data from "../Pricing1/pricing.json"
 import {BulletsContent}  from '../Pricing1/BulletsContent'
 import {ContentWrapper} from 'styles/global'
@@ -85,8 +85,7 @@ const Pricing = ({classes}) => {
                                                 )) 
                                             )
                                         }                 
-                                    </div>                                   
-                                    <PricingButton style={data.style}/>                                                    
+                                    </div>                                                                                   
                                 </FullPricingCard> 
                             </CardPriceCont>
                             <div className= "px-4 sm:p-4 md:w-2/3">
@@ -114,9 +113,12 @@ const Pricing = ({classes}) => {
                                                     </label>                                                                                                                                                       
                                                 </CheckboxContainer>                                                                               
                                             )))                                                                                                  
-                                    }                       
-                                <p>Sum of the amount for checked subscribers: {Total(index)}</p>   
+                                    }                                       
                                 </BulletWrapper>
+                                <div>
+                                    <ButtonTotal>Total ${Total(index)}</ButtonTotal> 
+                                    <PricingButton style={data.style}/>                                    
+                                </div>                               
                             </div>
                         </ContentWrapper>
                     ))
