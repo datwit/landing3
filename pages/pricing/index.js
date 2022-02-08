@@ -8,9 +8,6 @@ import {Navbar} from 'components/Navbar'
 import {useEffect} from 'react'
 import DeviceDetect from "lib/deviceDetect"
 import {Pricing} from 'components/Pricing'
-import {Pricing1} from 'components/Pricing1'
-import {Pricing2} from 'components/Pricing2'
-import {Pricing3} from 'components/Pricing3'
 
 
 const PricingP = () => {

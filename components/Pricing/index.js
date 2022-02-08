@@ -1,9 +1,9 @@
 import React,{ useState, useMemo } from 'react'
 import { GrSystem,GrServerCluster, GrCode } from "react-icons/gr"
-import {PricingButton} from '../Pricing1/PricingButton'
-import { CardPriceCont, ButtonTotal, CheckboxContainer, TabText, TabWrapper, ToggleWrapper, BundleChooser, Field, Price, LilDescrip, FullPricingCard, BulletWrapper} from '../Pricing1/style'
-import data from "../Pricing1/pricing.json"
-import {BulletsContent}  from '../Pricing1/BulletsContent'
+import {PricingButton} from './PricingButton'
+import { CardPriceCont, ButtonTotal, CheckboxContainer, TabText, TabWrapper, ToggleWrapper, BundleChooser, Field, Price, LilDescrip, FullPricingCard, BulletWrapper} from './style'
+import data from "./pricing.json"
+import {BulletsContent}  from './BulletsContent'
 import {ContentWrapper} from 'styles/global'
 
 const Pricing = ({classes}) => {
