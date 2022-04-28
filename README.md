@@ -2,15 +2,29 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## Getting Started
 
-First, run the development server:
+First, run the development server (Step by Step):
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+- Clone this project using **git** command:
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+        git clone https://github.com/datwit/landing3
+
+- Default branch is *main*. The name of the working branch is development, move there:
+
+        git checkout development
+
+- Install the dependency of the project, using:
+
+        npm install
+        # or
+        yarn install
+
+- The command console returns some warnings, can be depreciated. Run the project:
+
+        npm run dev
+        # or
+        yarn dev
+
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result. In the beginning, you need to wait for the successful page build.
 
 You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
 
