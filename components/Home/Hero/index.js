@@ -12,7 +12,7 @@ const Hero = ()=>(
                 we will make it real!
               </h1>
               <h4>
-                ...the sky isn't the limit...just the start               
+                The sky is not the limit...it’s just the start   
               </h4>              
               <CTA buttonName={'Contact us'} hhref='/contact'>
                   <FiSend className="h-6 w-6 text-white ml-2"/>                
