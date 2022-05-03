@@ -10,7 +10,7 @@ reading: 10
 
 Datwit landing page is a website to promote the work of the company creating multipurpose software solutions integrating modern techniques like Cloud Computing, Machine Learning, Data Analysis, and microservices. 
 
-Datwit is pursuing the purpose of redesigning its landing page. Therefore we need to study the current version and its competitors, so we can evaluate the site's visual evolution.
+Datwit aims at redesigning its landing page. Therefore, we need to study the current version and its competitors, so we can evaluate the site's visual evolution.
 
 <!--more-->
 

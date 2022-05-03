@@ -8,8 +8,8 @@ import {AgileSVG} from './AgileSVG'
 const Find = ({classes}) => {
     return (
         <div className={classes}>
-            <SectionHeader>Why you should hire us</SectionHeader>
-            <SectionSubheader>We can work together to build the product you have in mind through intuitive designs and great tools to back them up.</SectionSubheader>
+            <SectionHeader>Why you should trust our team</SectionHeader>
+            <SectionSubheader>We can work together to build the product you have in mind through intuitive designs and great tools</SectionSubheader>
             <h3 className="text-gray-600">Our experience creating IT solutions includes:</h3>
             <ContentWrapper>
                 <FindBlock title={datas[0].title} description={datas[0].description}>

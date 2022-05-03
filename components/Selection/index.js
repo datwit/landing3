@@ -37,8 +37,8 @@ const Selection = ({classes}) => {
  
     return (
         <div className={classes}>
-            <SectionHeader>Join us...</SectionHeader>
-            <SectionSubheader>Stop being who you were and discover who you really are as a part of our family. Select wich member do you want to be. </SectionSubheader>
+            <SectionHeader>Join us!</SectionHeader>
+            <SectionSubheader>Discover who you really want to be as part of our Datwit family. </SectionSubheader>
             <ContentWrapper>
                 <>
                     <BlockOuterContainer>
