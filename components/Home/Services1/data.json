@@ -13,7 +13,7 @@
     },
     {
         "title": "Data Intelligence",
-        "subtitle": "We use machine learning state-of-the-art algorithms for customized apps to:",
+        "subtitle": "We use machine learning state-of-the-art algorithms for customized apps for:",
         "items":[
             {"tit":"Model architecture design"},
             {"tit":"Model optimization"},
@@ -25,14 +25,14 @@
     },
     {
         "title": "Full scope of machine learning",
-        "subtitle": "Also we are able to join you offering an end-to-end solution with:",
+        "subtitle": "We can also offer you an end-to-end solution with:",
         "items":[
             {"tit":"Business and data understanding"},
             {"tit":"Business API integration"},
             {"tit":"Web solutions centered on data management"},
             {"tit":"ML infrastructure design for cloud/on-premises arch"},
             {"tit":"Web interfaces for man-in-the-loop AI systems"},
-            {"tit":"Machine learning related consulting services"}
+            {"tit":"Machine learning-related consulting services"}
         ]
     }
 ]
