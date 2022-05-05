@@ -15,7 +15,7 @@ const Collaborators = ({classes}) => {
     return (
         <CarouselWrapper className={classes}>
             <SectionHeader>Collaborators</SectionHeader>
-            <SectionSubheader>Our amazing collaborators help drive Datwit towards being a cutting-edge company</SectionSubheader>            
+            <SectionSubheader>Our amazing collaborators help drive Datwit towards being a  company</SectionSubheader>            
             <ContentWrapper>                
                 <Carousel itemsToShow={3} breakPoints={breakPoints} onTouchMove={e => e.stopPropagation()}>
                     {

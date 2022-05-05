@@ -10,7 +10,7 @@ const Find = ({classes}) => {
         <div className={classes}>
             <SectionHeader>Why you should trust our team</SectionHeader>
             <SectionSubheader>We can work together to build the product you have in mind through intuitive designs and great tools</SectionSubheader>
-            <h3 className="text-gray-600">Our experience creating IT solutions includes:</h3>
+            <h3 className="text-gray-600">Our experience in IT solutions includes:</h3>
             <ContentWrapper>
                 <FindBlock title={datas[0].title} description={datas[0].description}>
                     <CustomSVG />

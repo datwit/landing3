@@ -9,7 +9,7 @@ const Benefits = ({classes}) => {
     return (
         <div className={classes}>
             <SectionHeader>We are a family</SectionHeader>
-            <SectionSubheader>At Datwit we have amazing people and we believe that take care of them is the right thing to do. </SectionSubheader>
+            <SectionSubheader>Our Datwit team has amazing people. We believe their well-being is essential. </SectionSubheader>
             <ContentWrapper>
                 <BenefitBlock title={datas[0].title} description={datas[0].description}>
                     <HeartSVG />

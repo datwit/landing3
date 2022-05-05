@@ -8,7 +8,7 @@ const Tech = ({classes}) => {
     return (
         <div className={classes}>
             <SectionHeader>We like to wear a lot of hats...</SectionHeader>
-            <SectionSubheader>Therefore this is where our expertise resides.</SectionSubheader>
+            <SectionSubheader>This is where our expertise lies.</SectionSubheader>
             <ImgContainer>
                 {
                     React.Children.toArray(
