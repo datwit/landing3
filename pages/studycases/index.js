@@ -87,7 +87,7 @@ const AllStudyCases = () =>{
     return (
         <>
             <Head>
-            <title>Datwit | Study Cases</title>
+            <title>Datwit | Our Work</title>
             </Head>
             <motion.div initial={{opacity:0,  y: 200}} animate={{opacity:1, y:0}}>
             { 

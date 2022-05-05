@@ -41,9 +41,7 @@
     {
         "id":"q5",
         "question": "How do you guarantee product quality?",
-        "answer": "Every two weeks we evaluate the result, test our work (development
-        and acceptance tests), present it to you and then apply your feedback so that you
-        can get the product you want and need.",
+        "answer": "Every two weeks we evaluate the result, test our work (development and acceptance tests), present it to you and then apply your feedback so that you can get the product you want and need.",
         "list":[],
         "link": "",
         "clases": "hidden"

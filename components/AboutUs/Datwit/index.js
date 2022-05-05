@@ -21,7 +21,7 @@ const Datwit = ({classes}) => {
                         At Datwit, we want to help companies make their own small impact on the world
                         around them and expand their possibilities.
                         <br />
-                        Take a look to our open solutions
+                        Take a look at our open solutions!
                         <GitLink href="https://github.com/datwit">                        
                             <FiGithub className="h-8 w-8 text-secondary2 ml-4 hover:text-secondary1" />
                         </GitLink>
