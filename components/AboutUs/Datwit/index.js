@@ -12,11 +12,14 @@ const Datwit = ({classes}) => {
                 </ImgWrapper>                
                 <TextBlock>
                     <DHeader>Datwit</DHeader>
-                    <DParagraph>We are a Serbian Company dedicated to creating multipurpose software solutions
-                        integrating modern techniques
-                        like Cloud Computing, Machine Learning, Data Analysis and microservices.
-                        Datwit develops small web apps with full artificial intelligence capabilities.
+                    <DParagraph> Datwit was founded in 2019 by a group of friends in Belgrade, Serbia. 
+                        From the very beginning, our main goal has been to create multipurpose software 
+                        solutions by integrating modern techniques like Cloud Computing, Machine Learning, 
+                        Data Analysis and micro-services. We integrate our artificial intelligence 
+                        solutions into other software applications.
                         <br />
+                        At Datwit, we want to help companies make their own small impact on the world
+                        around them and expand their possibilities.
                         <br />
                         Take a look to our open solutions
                         <GitLink href="https://github.com/datwit">                        

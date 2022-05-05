@@ -140,7 +140,7 @@ const Blog = () => {
                     <Slide>
                         <Section classes={'w-full h-screen'}>
                             <div className="container px-5 mx-auto relative top-2/4 transform -translate-y-2/4 mt-4">
-                            <SectionSubheader>Discover interesting ideas and unique perspectives from our amazing crew</SectionSubheader>
+                            <SectionSubheader>Discover awe-inspiring ideas and unique perspectives from our remarkable crew</SectionSubheader>
                             {pressEnter && searchRedirect()}
                             {/* search box*/}
                             <SearchWrapper>

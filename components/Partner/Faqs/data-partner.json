@@ -15,7 +15,7 @@
     {
         "id":"q2",
         "question": "How can I become a Datwit partner?",
-        "answer": "We are exited to know you want to join us! We would really like to get to know your business and discuss the possibilities of our future collaboration. Please, go ahead and contact us through any of the following ways: by our online form, e-mail [contact@datwit.com], or by reaching out to our partner line [call: 1-800-WIT+]. We will be happy to meet and discuss what we can do together. Just be sure to bring a detailed plan for your idea(s) to showcase how it will improve our customer success.",
+        "answer": "We are excited to know you want to join us! We would really like to get to know your business and discuss the possibilities of our future collaboration. Please, go ahead and contact us through any of the following ways: by our online form, e-mail [contact@datwit.com], or by reaching out to our partner line [call: 1-800-WIT+]. We will be happy to meet and discuss what we can do together. Just be sure to bring a detailed plan for your idea(s) to showcase how it will improve our customer success.",
         "list":[],
         "link": "",
         "clases": "hidden"
@@ -24,7 +24,7 @@
     {
         "id":"q3",
         "question": "What do I need to know before contacting you?",
-        "answer": "Having a clear picture of where can you provide the most help to our customers. For example, you might have more experience in data engineering or perhaps in ML modeling and monitoring. You might also be able to provide general development services but it will take time away from things you really shine at doing. Each of your solid base skills will drive the path of our future relationship. Always remember, our customers are the reason we exist. Guaranteen our customers success is creating our own. As a Datwit partner, you are an extension of that goal, and we want to make sure you have the tools and resources to experience the same success. We will be happy to help you get started, building projects from scratch is nothing new for us. For more details, please check out our partnership strategy",
+        "answer": "Having a clear picture of where can you provide the most help to our customers. For example, you might have more experience in data engineering or perhaps in ML modeling and monitoring. You might also be able to provide general development services but it will take time away from things you really shine at doing. Each of your solid base skills will drive the path of our future relationship. Always remember, our customers are the reason we exist. Guaranteeing our customers success is creating our own. As a Datwit partner, you are an extension of that goal, and we want to make sure you have the tools and resources to experience the same success. We will be happy to help you get started, building projects from scratch is nothing new for us. For more details, please check out our partnership strategy",
         "list":[],
         "link": "/partner",
         "clases": "text-gray-500 font-semibold"
@@ -32,8 +32,8 @@
     },
     {
         "id":"q4",
-        "question": "How much time will it take for you to make my app?",
-        "answer": "Project timing is not an exact science. To give you a reasonable answer we must prepare a project scope, create deadlines, and a budget. We will tell you how much of that scope will need to be completed within the budget and time constraints. We'll be able to estimate how long will it take after at least a month of work.",
+        "question": "How long will it take for you to finish my app?",
+        "answer": "Project timing is not an exact science. To give you a reasonable answer we must prepare a project scope, create deadlines, and a budget. We will tell you how much of that scope will need to be completed within the budget and time constraints. We'll be able to estimate how long it will take after at least a month of work.",
         "list":[],
         "link": "",
         "clases": "hidden"
@@ -41,7 +41,9 @@
     {
         "id":"q5",
         "question": "How do you guarantee product quality?",
-        "answer": "We evaluate the result after every two weeks, we test our work (we conduct both development and acceptance tests), we present it to you, we apply your feedback so you know you get what you are paying for.",
+        "answer": "Every two weeks we evaluate the result, test our work (development
+        and acceptance tests), present it to you and then apply your feedback so that you
+        can get the product you want and need.",
         "list":[],
         "link": "",
         "clases": "hidden"
