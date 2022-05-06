@@ -7,8 +7,8 @@ import {ImgContainer, ImgWrapper} from './style'
 const Tech = ({classes}) => {
     return (
         <div className={classes}>
-            <SectionHeader>We like to wear a lot of hats...</SectionHeader>
-            <SectionSubheader>We like to wear a lot of hats...This is where our expertise lies.</SectionSubheader>
+            <SectionHeader>We like to wear many hats...</SectionHeader>
+            <SectionSubheader>This is where our expertise lies</SectionSubheader>
             <ImgContainer>
                 {
                     React.Children.toArray(
