@@ -57,7 +57,7 @@
     {
         "id":"q7",
         "question": "What happens after you finish my app?",
-        "answer": "Hopefully the app is exactly what you dreamed of :) But apart from delivering a finished product, we are happy to provide you with technical support and app maintenance should you need it. After all, we know our work inside out. Of course if you want to maintain the app by yourself the source code and all technical data is at your disposal, but even in that case, feel free to contact us if you need any help.",
+        "answer": "Apart from delivering a finished product, we are happy to provide you with technical support and app maintenance should you need it. After all, we know our work inside out. Of course if you want to maintain the app by yourself the source code and all technical data is at your disposal, but even in that case, feel free to contact us if you need any help.",
         "list":[],
         "link": "",
         "clases": "hidden"
@@ -73,15 +73,15 @@
     {
         "id":"q9",
         "question": "What is your experience?",
-        "answer": "We are professionals with more than 10 years of experience. We are experienced in creating web applications of all kind using modern techniques and including machine learning algorithms",
+        "answer": "We are professionals with more than 10 years of experience in creating web applications of all kinds using modern techniques and machine learning algorithms.",
         "list":[],
         "link": "",
         "clases": "hidden"
     },
     {
         "id":"q10",
-        "question": " What technology do you use? Are there any reasons why you chose those particular technologies?",
-        "answer": "For back-end we use Python which gives the developers a lot of possibilities when it comes to prototyping, allows them to take advantage of ready-to-use components, and speeds up the development process. Indeed - the first results are visible almost immediately. Python is also an amazing language to use when it comes  to machine learnign For front-end we use React.js. We use React because it is perfect for a wide range of projects, fast iterations, implementations, prototyping and creating a proof of concept. It’s simple and scalable. A library very loved and widelly adopted all over the development world.",
+        "question": " What technologies do you use? Are there any reasons why you have chosen these particular technologies?",
+        "answer": "For the back end we use Python which gives the developers a lot of possibilities when it comes to prototyping, allowing them to take advantage of ready-to-use components and speeding up the development process. Indeed - the first results are visible almost immediately. Python is also a superb language when it comes to machine learning. We use React.js for the front end because it is perfect for a wide range of projects, enabling fast iterations, implementations, prototyping and creating a proof of concept. It’s simple and scalable. A widely adopted library all over the development world.",
         "list":[],
         "link": "",
         "clases": "hidden"
