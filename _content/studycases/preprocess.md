@@ -9,13 +9,13 @@ reading: 10
 ---
 
 
-preprocess is a python3 package for text preprocessing. Is based on NLTK, Stanford NLP models, and other less popular NLP python libraries.
+preprocess is a Python3 package for text preprocessing. It is based on NLTK, Stanford NLP models, and other less popular NLP Python libraries.
 
-preprocess was a personal project of the author started in 2014 to facilitate his PhD experiments. Currently is just a library to simplify his work and a developing project to optimize his investigation and work text experiment pipelines.
+preprocess was created as a personal project in 2014 to facilitate my PhD experiments. Currently, it is just a library that simplifies my work and a developing project to optimize my investigation and work text experiment pipelines.
 
 ### Who is preprocess for?
-* Data scientists, who want to test with python the impact of different preprocessing techniques in NLP tasks.
-* Students, to start doing text preprocessing the easy way.
+* Data scientists who want to test the impact of different preprocessing techniques on NLP tasks in Python.
+* Students who want to start doing text preprocessing the easy way.
 ## Challenge
 
 In 2011 when I started to play with texts and python, NLP was the must popular library in python ecosystem. Stanford models were very well known and I was starting on python programming.

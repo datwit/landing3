@@ -151,7 +151,7 @@ const ContacthtmlForm = ({classes}) => {
     
     return (
         <div className={classes}>
-            <SectionSubheader>We're always in for great adventures. Tell us all about this exciting idea. Fill in the form below so we can reach you!</SectionSubheader>
+            <SectionSubheader> We’re always ready for new and great challenges! So tell us all about your exciting idea. Fill in the form below so we can reach you!</SectionSubheader>
             <ContentWrapper>
                 <MapWrapper>
                     <iframe
@@ -170,7 +170,7 @@ const ContacthtmlForm = ({classes}) => {
                         conStatus
                         ? 
                         <>
-                            <FormIntro>Our doors are always open, so feel free to drop by and spot us in our natural habitat.</FormIntro>
+                            <FormIntro>Our doors are always open! Feel free to drop by and spot us in our natural habitat.</FormIntro>
                             <InputWrapper>
                             <FormLabels>Name</FormLabels>
                             <FInput

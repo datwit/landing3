@@ -16,9 +16,10 @@ API flalq uses the structure from the MySQL Basic Tutorial database. Developed w
 
 ## Solution
 
-Initially I have created 2 separate databases to run in development and testing environments respectively. But this can be done on your terms and reset in the `config.py` file.
+Initially, you can create two separate databases to be run in development and testing environments, respectively. Nevertheless, this can be done on your terms and reset in the
+config.py file.
 
-Having configured the variable *FLASK_ENV* in development mode in the activate.bat file of the environment as follows.
+Configure the variable FLASK_ENV in development mode in the activate.bat file of the environment, as follows:
 
     `set "FLASK_ENV=development"*`
 
@@ -28,7 +29,7 @@ Running on your console:
 
 The tables in the database will be created instantly.
 
-### Inside the aplication
+### Inside the application
 
 This is a small code snippet from an endpoint:
 
@@ -65,7 +66,7 @@ Then, run each unit test as follows :
 
     `python -m unittest api/tests/offices.py`
 
-In this project has been used **Coverage** ([Coverage Documentation](https://coverage.readthedocs.io/en/coverage-5.5/)) too. It monitors the program, noting which parts of the code have been executed, then analyzes the source to identify code that could have been executed but was not. Coverage measurement is typically used to gauge the effectiveness of tests. It can show which parts of your code are being exercised by tests, and which are not.
+In this project, Coverage (Coverage Documentation) has also been used. It monitors the program, noting which parts of the code have been executed. Then, it analyzes the source to identify code that could have been executed but was not. Coverage measurement is typically used to gauge the effectiveness of tests. It can show which parts of your code are being exercised by tests, and which are not.
 
 You can install Coverage in the usual ways. The simplest way is:
 
@@ -79,7 +80,7 @@ Then to see the results table:
 
     coverage report -m api/tests/offices.py
 
-But there is another way to show this result and it is the html report:
+There is another way to show this result and it is the html report:
 
     coverage html api/tests/offices.py
 

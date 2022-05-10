@@ -15,7 +15,7 @@ const Pricing1 = ({classes}) => {
     return (
 
         <div className={classes}>
-            <SectionHeader>Choose your kind of solution</SectionHeader>
+            <SectionHeader>Choose the solution that fits you best</SectionHeader>
             <div className="hidden md:block lg:px-14">
                 <ContentWrapper>
                     {

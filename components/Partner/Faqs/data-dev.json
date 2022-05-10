@@ -45,7 +45,7 @@
     },
     {
         "id":"q5",
-        "question": "Which payment model do you practice?",
+        "question": "Which is your payment method?",
         "answer": "Incididunt cillum anim voluptate magna ad qui ad velit reprehenderit ea. Aliqua tempor magna et quis ex mollit elit pariatur Lorem do pariatur. Culpa adipisicing aliquip dolore aute consequat tempor exercitation qui ut consectetur. Ex sunt occaecat aliquip anim excepteur ipsum nulla mollit. Magna labore occaecat consequat tempor et enim. Incididunt sit elit sit sunt voluptate.Magna enim occaecat voluptate Lorem laboris deserunt. Exercitation laborum eu non non labore. Cillum excepteur sunt commodo do aliqua esse dolor anim. Ullamco cupidatat adipisicing magna eiusmod. Exercitation cupidatat do do fugiat non ex laboris non exercitation ea culpa esse.Lorem incididunt labore esse elit. Ea sit qui fugiat qui reprehenderit. Mollit officia aliqua qui velit.Ullamco cillum exercitation eiusmod nostrud magna sunt ut ea ipsum id. Aliquip incididunt laboris veniam labore aute commodo mollit laborum officia ea ipsum ipsum labore. Cupidatat eiusmod velit consectetur ipsum velit. Duis minim est aliqua consectetur consequat voluptate enim cupidatat labore elit elit.",
         "list":[],
         "link": "",
@@ -53,7 +53,7 @@
     },
     {
         "id":"q6",
-        "question": "Where are your company's office and  employees located?",
+        "question": "Where are your HQ and employees located?",
         "answer": "Our headquarters and some of our employees are located in Serbia, the rest of our people is in Cuba. So we are pretty open to remote work as long as there's a real commitment and job philosophy.",
         "list":[],
         "link": "",

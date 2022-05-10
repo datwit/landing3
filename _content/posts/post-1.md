@@ -1,5 +1,5 @@
 ---
-title: Obsidian review from a cuban engineer
+title: Considerations on Obsidian from a Cuban engineer’s perspective
 summary: Learn how Obsidian canbe used for research and work offline and some other plugins and tips to get started with this amazing note taking tool.
 tags: 
 - "Research"

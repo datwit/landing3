@@ -1,38 +1,36 @@
  [
     {
         "title": "Data Engineering",
-        "subtitle": "Our professionals will make the best use possible for your data by doing:",
+        "subtitle": "Let us get the best out of your data with:",
         "items":[
             {"tit":"Exploratory data analysis"},
-            {"tit":"Data cleaning and anonymization"},
+            {"tit":"Data cleaning"},
+            {"tit":"Anonymization"},
             {"tit":"ETL design"},            
             {"tit":"Data infrastructure design and build"},
-            {"tit":"Database setup and management"},
             {"tit":"Data visualization"}
         ]
     },
     {
         "title": "Data Intelligence",
-        "subtitle": "By using machine learning state of the art algorithms for customized apps, we provide:",
+        "subtitle": "Build intelligent apps from the start with:",
         "items":[
-            {"tit":"Model architecture design"},
-            {"tit":"Model optimization"},
-            {"tit":"Model training & building"},
-            {"tit":"Model evaluation"},
-            {"tit":"Pipeline design and setup"},
-            {"tit":"Model monitoring and improving"}
+            {"tit":"Architecture and Model Design"},
+            {"tit":"Model build, training, and optimization"},
+            {"tit":"Design and deploy data pipelines"},
+            {"tit":"Built-in observability and monitoring"}
         ]
     },
     {
-        "title": "Full scope of machine learning",
-        "subtitle": "Also we are able to join you offering an end-to-end solution with:",
+        "title": "Machine Learning Full Scope",
+        "subtitle": "We can also offer you an end-to-end solution with:",
         "items":[
-            {"tit":"Business and data understanding"},
-            {"tit":"Business API integration"},
+            {"tit":"Data Management in your business"},
+            {"tit":"Data Integrations and APIs"},
             {"tit":"Web solutions centered on data management"},
             {"tit":"ML infrastructure design for cloud/on-premises arch"},
             {"tit":"Web interfaces for man-in-the-loop AI systems"},
-            {"tit":"Machine learning related consulting services"}
+            {"tit":"Machine learning-related consulting services"}
         ]
     }
 ]

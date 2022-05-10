@@ -38,6 +38,6 @@ fs.writeFile('cache/posts.json', getjsonData('posts'), function (err) {
 })
 fs.writeFile('cache/cases.json', getjsonData('studycases'), function (err) {
   if (err) return console.log(err);
-  console.log('Study cases cached.');
+  console.log('Our Work cached.');
 })
 
