@@ -32,6 +32,10 @@ You can start editing the page by modifying `pages/index.js`. The page auto-upda
 
 The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
 
+## Deploy on Datwit Github CI/CD
+
+Read [HERE](https://github.com/datwit/landing3/issues/101#issuecomment-873645737)
+
 ## Learn More
 
 To learn more about Next.js, take a look at the following resources:
