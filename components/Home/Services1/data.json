@@ -1,10 +1,11 @@
  [
     {
         "title": "Data Engineering",
-        "subtitle": "Our professionals make the most effective use of your data by implementing:",
+        "subtitle": "Let us get the best out of your data with:",
         "items":[
             {"tit":"Exploratory data analysis"},
-            {"tit":"Data cleaning and anonymization"},
+            {"tit":"Data cleaning"},
+            {"tit":"Anonymization"},
             {"tit":"ETL design"},            
             {"tit":"Data infrastructure design and build"},
             {"tit":"Database setup and management"},
