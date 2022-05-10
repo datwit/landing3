@@ -8,28 +8,25 @@
             {"tit":"Anonymization"},
             {"tit":"ETL design"},            
             {"tit":"Data infrastructure design and build"},
-            {"tit":"Database setup and management"},
             {"tit":"Data visualization"}
         ]
     },
     {
         "title": "Data Intelligence",
-        "subtitle": "We use machine learning state-of-the-art algorithms for customized apps for:",
+        "subtitle": "Build intelligent apps from the start with:",
         "items":[
-            {"tit":"Model architecture design"},
-            {"tit":"Model optimization"},
-            {"tit":"Model training & building"},
-            {"tit":"Model evaluation"},
-            {"tit":"Pipeline design and setup"},
-            {"tit":"Model monitoring and improvement"}
+            {"tit":"Architecture and Model Design"},
+            {"tit":"Model build, training, and optimization"},
+            {"tit":"Design and deploy data pipelines"},
+            {"tit":"Built-in observability and monitoring"}
         ]
     },
     {
-        "title": "Full scope of machine learning",
+        "title": "Machine Learning Full Scope",
         "subtitle": "We can also offer you an end-to-end solution with:",
         "items":[
-            {"tit":"Business and data understanding"},
-            {"tit":"Business API integration"},
+            {"tit":"Data Management in your business"},
+            {"tit":"Data Integrations and APIs"},
             {"tit":"Web solutions centered on data management"},
             {"tit":"ML infrastructure design for cloud/on-premises arch"},
             {"tit":"Web interfaces for man-in-the-loop AI systems"},
