@@ -1,0 +1,38 @@
+[  
+  {
+    "name": "Abel Meneses",
+    "designation": "Founder / COO",
+    "rol": "Data Scientist",
+    "twitter":"https://twitter.com/abelma1980",
+    "linkedin": "https://www.linkedin.com/in/meneses-abad",
+    "github": "https://github.com/sorice",
+    "src": "/members/v2/abel.jpg"
+  },
+  {
+    "name": "Danay Meneses",
+    "designation": "Definir o en blanco",
+    "rol": "Data Engineer",
+    "twitter":"https://github.com/DanayMeneses",
+    "linkedin": "https://www.linkedin.com/in/danaymeneses",
+    "github": "https://twitter.com/DanayMeneses",
+    "src": "/members/v2/danay.jpg"
+  },
+  {
+    "name": "Ailan Alcantara",
+    "designation": "Definir o en blanco",
+    "rol": "FrontEnd Developer",
+    "twitter":"",
+    "linkedin": "https://www.linkedin.com/in/ailan-alcantara-a97b131a4",
+    "github": "https://github.com/alcantara2575",
+    "src": "/members/v2/ailan.jpg"
+  },
+  {
+    "name": "Otros",
+    "designation": "Definir o en blanco",
+    "rol": "Ingeniers",
+    "twitter":"",
+    "linkedin": "",
+    "github": "",
+    "src": "/members/v2/otros.jpg"
+  }
+]

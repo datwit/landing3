@@ -5,6 +5,7 @@ import {Footer} from 'components/Footer'
 import {Datwit} from 'components/AboutUs/Datwit'
 import {Members} from 'components/AboutUs/Members'
 import {Collaborators} from 'components/AboutUs/Collaborators'
+import {Founders} from 'components/AboutUs/Founders'
 import { motion } from 'framer-motion'
 import Head from 'next/head'
 import {Navbar} from 'components/Navbar'
@@ -47,6 +48,12 @@ const About = () => {
 
                         <Slide>
                             <Section classes={'w-full h-screen'}>
+                                <Founders classes={"container px-5 mx-auto relative top-2/4 transform -translate-y-2/4"}/>
+                            </Section>
+                        </Slide>
+
+                        <Slide>
+                            <Section classes={'w-full h-screen'}>
                                 <Members classes={"container px-5 mx-auto relative top-2/4 transform -translate-y-2/4"}/>
                             </Section>
                         </Slide>
@@ -69,6 +76,12 @@ const About = () => {
                         <Slide>
                             <Section classes={'pb-16 pt-20'}>
                                 <Datwit classes={"px-5 mx-auto"}/>
+                            </Section>
+                        </Slide>
+
+                        <Slide>
+                            <Section classes={'pb-16'}>
+                                <Founders classes={"px-5 mx-auto"}/>
                             </Section>
                         </Slide>
 

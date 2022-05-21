@@ -1,59 +1,58 @@
 
-[
+[ 
     {
-      "name": "Leonel Salazar",
-      "designation": "Founder / CEO",
-      "rol": "Software Engineer",
-      "twitter":"https://twitter.com/leonel_lordford",
-      "linkedin": "https://www.linkedin.com/in/leonel-salazar-videaux",
-      "github": "https://github.com/leonel-lordford",
-      "src": "/members/lordford.png"
+      "name": "Ozkar L. Garcell",
+      "designation": "Definir o en blanco",
+      "rol": "Backend Developer",
+      "twitter":"https://twitter.com/codeshard",
+      "linkedin": "https://www.linkedin.com/in/ozkar-garcell/",
+      "github": "https://github.com/codeshard",
+      "src": "/members/v2/ozkar.jpg"
     },
     {
-      "name": "Abel Meneses",
-      "designation": "Founder / COO",
-      "rol": "Head of DataSci Team",
-      "twitter":"https://twitter.com/abelma1980",
-      "linkedin": "https://www.linkedin.com/in/meneses-abad",
-      "github": "https://github.com/sorice",
-      "src": "/members/abelma.png"
+      "name": "Daniel Placencia",
+      "designation": "Definir o en blanco",
+      "rol": "MLOps",
+      "twitter":"https://twitter.com/",
+      "linkedin": "https://www.linkedin.com/in/",
+      "github": "https://github.com/",
+      "src": "/members/v2/daniel.jpg"
     },
     {
-      "name": "Yanet Conde",
-      "designation": "CCO",
-      "rol": "Customer Relationship",
-      "twitter":"",
-      "linkedin": "https://www.linkedin.com/in/yanetcg1983/",
-      "github": "https://github.com/yanetcg1983",
-      "src": "/members/yanet.png"
-    }, 
-    {
-      "name": "Danay Meneses Abad",
-      "designation": "Backend Developer",
-      "rol": "",
-      "twitter":"https://github.com/DanayMeneses",
-      "linkedin": "https://www.linkedin.com/in/danaymeneses",
-      "github": "https://twitter.com/DanayMeneses",
-      "src": "/members/danay.png"
-    },
-    {
-
-      "name": "Enma Lidia Muñoz",
-      "designation": "CXO",
-      "rol": "Frontend Developer",
+      "name": "Enma Lidia",
+      "designation": "Definir o en blanco",
+      "rol": "UX/UI",
       "twitter":"https://twitter.com/enma_lidia",
       "linkedin": "https://www.linkedin.com/in/enma-lidia-muñoz-garcía",
       "github": "https://github.com/enmalidia",
-      "src": "/members/enma.png"
+      "src": "/members/v2/enma.jpg"
     },
     {
-      "name": "Yoel Benítez Fonseca",
-      "designation": "CTO",
-      "rol": "Reliability Engineer",
+      "name": "Yoel Benítez",
+      "designation": "Definir o en blanco",
+      "rol": "DevOps",
       "twitter":"",
-      "linkedin": "https://www.linkedin.com/in/",
+      "linkedin": "",
       "github": "https://github.com/ybenitezf",
-      "src": "/members/yoel.png"
+      "src": "/members/v2/yoel.jpg"
+    },
+    {
+      "name": "Yanet Conde",
+      "designation": "Definir o en blanco",
+      "rol": "Junior Tester & Marketing",
+      "twitter":"",
+      "linkedin": "https://www.linkedin.com/in/yanetcg1983/",
+      "github": "https://github.com/yanetcg1983",
+      "src": "/members/v2/yanet.jpg"
+    },
+    {
+      "name": "Alejandro Valdevila",
+      "designation": "Definir o en blanco",
+      "rol": "FrontEnd Developer",
+      "twitter":"",
+      "linkedin": "https://www.linkedin.com/in/avaldevilap/",
+      "github": "",
+      "src": "/members/v2/alejandro.jpg"
     }
 
 ]
