@@ -39,7 +39,7 @@ const Selection = ({classes}) => {
         <div className={classes}>
             <SectionHeader>Join us!</SectionHeader>
             <SectionSubheader>Discover who you really want to be as part of our Datwit family. </SectionSubheader>
-            <ContentWrapper>
+            <ContentWrapper className="max-w-5xl mx-auto">
                 <>
                     <BlockOuterContainer>
                         <BlockBorder onClick={handleToggle1} className={`${card1 ? 'active' : ''}`}>                            
