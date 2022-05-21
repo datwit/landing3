@@ -49,8 +49,12 @@ const CardTabsResponsive = () => {
                                 <FullPricingCard className={`border-${data.style}`}>
                                     <div className={`bg-${data.style}`}><Field>{data.field}</Field></div>
                                     <div className="p-3">
-                                        <span className="flex justify-center items-baseline my-2"><Price>{data.price}</Price><p className="m-0"> /hr</p></span>
-                                        <h4 className="text-sm font-semibold pb-2">billed monthly</h4>
+                                        <span className="flex justify-center items-baseline my-2"><Price>{data.price}</Price><p className="m-0"> /months </p></span>
+                                        <h4 className="text-sm font-semibold pb-2">Estimated project time</h4>                 
+                                    </div>
+                                    <div className="p-3">
+                                        <span className="flex justify-center items-baseline my-2"><Price>{data.cost}</Price><p className="m-0"> /hr</p></span>
+                                        <h4 className="text-sm font-semibold pb-2">Estimated billed monthly</h4>
                                         <LilDescrip>{data.description}</LilDescrip>                   
                                     </div>                                   
                                     <PricingButton style={data.style}/>                                                    

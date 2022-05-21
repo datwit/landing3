@@ -22,7 +22,7 @@ const Pricing1 = ({classes}) => {
                         React.Children.toArray(
                             datas.map(data=>(
                                 <OuterWrapper>                    
-                                    <MainPricingCard style={data.style} field={data.field} price={data.price} description={data.description}>                                        
+                                    <MainPricingCard style={data.style} field={data.field} price={data.price} cost={data.cost} description={data.description}>                                        
                                     <BulletWrapper>
                                         {
                                             React.Children.toArray(

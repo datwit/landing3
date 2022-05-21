@@ -12,8 +12,8 @@
         ]
     },
     {
-        "title": "Intelligent Services",
-        "subtitle": "Build intelligent apps from the start with:",
+        "title": "Smart Services",
+        "subtitle": "Build smart apps from the start with:",
         "items":[
             {"tit":"Architecture and Model Design"},
             {"tit":"Model build, training, and optimization"},
