@@ -4,7 +4,8 @@
     "bundle":"ML",
     "field":"SMART SERVICES",
     "style":"secondary2",
-    "price": "3 - 6",
+    "month_init": "3",
+    "month_end": "6",
     "cost": "$40",
     "description": "APIs with smart models that can improve your business workflow",
     "bullets": [
@@ -21,7 +22,8 @@
     "bundle":"DATA",
     "field":"DATA SOLUTIONS",
     "style":"secondary1",
-    "price": "6 - 11",
+    "month_init": "6",
+    "month_end": "11",
     "cost": "$28",
     "description": "Analyze and prepare data up to 2Gb for future business actions",
     "bullets": [
@@ -38,7 +40,8 @@
     "bundle":"DEV",
     "field":"ML FULL SCOPE",
     "style":"primary",
-    "price": "+6",
+    "month_init": "+6",
+    "month_end": "12",
     "cost": "$35",
     "description": "Including an end-to-end solution with a full operational infrastructure on AWS",
     "bullets": [
