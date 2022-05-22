@@ -28,7 +28,7 @@ const StudyCasesPage = ({ title, date, content, author})=> {
             <motion.div initial={{opacity:0,  y: 200}} animate={{opacity:1, y:0}}>
                 <FullPage controls={CustomControls} scrollMode='normal'>
                     <main>
-                        <section className="pt-20">
+                        <section className="pt-20 mx-auto max-w-7xl">
                             <div className="px-5 mx-auto">                                
                                 <a onClick={()=>router.back()}>
                                     <h3 className="flex pt-10 pb-6 cursor-pointer hover:text-secondary1">
