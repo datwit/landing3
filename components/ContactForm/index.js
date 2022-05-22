@@ -56,16 +56,6 @@ const ContacthtmlForm = ({classes}) => {
         name==="message" ? setCount(value.length) : null 
           
         //validations
-        if (name==="message") {            
-           if (ValidateMessage(value)=== false) {                                 
-                setShowMessage(false) 
-           } else {                                    
-                setAlertMessage(3)                                      
-                setShowMessage(true) 
-           }
-        } else {
-            null
-        }
         if (name==="name") {            
             if (ValidateName(value)=== false) {                                 
                 setShowMessage(false) 
@@ -101,7 +91,7 @@ const ContacthtmlForm = ({classes}) => {
                         url: API_URL,
                         method: 'POST',
                         data: messageData,                    
-                    })                                                                   
+                    })                                                               
                     setIsLoading(false), 
                     setFormValues({
                         name: '',

@@ -53,6 +53,15 @@
       "linkedin": "https://www.linkedin.com/in/avaldevilap/",
       "github": "",
       "src": "/members/v2/alejandro.jpg"
+    },
+    {
+      "name": "Eriberto Vanegas",
+      "designation": "Definir o en blanco",
+      "rol": "Definir o dejar en blanco",
+      "twitter":"https://twitter.com/LagoEriberto",
+      "linkedin": "https://www.linkedin.com/in/evanegasl2022/",
+      "github": "https://github.com/Vanegas2020",
+      "src": "/members/v2/vanegas.jpg"
     }
 
 ]
