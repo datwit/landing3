@@ -1,11 +1,11 @@
 import React from 'react'
-import datas from "./collaborators.json"
-import {ColWrapper, CarouselWrapper} from './style'
+import datas from "./founders.json"
+import {ColWrapper, CarouselWrapper} from '../Collaborators/style'
 import {ContentWrapper, SectionHeader, SectionSubheader} from 'styles/global'
-import {CollaboratorsCard} from './CollaboratorsCard'
+import {CollaboratorsCard} from '../Collaborators/CollaboratorsCard'
 import Carousel from 'react-elastic-carousel'
 
-const Collaborators = ({classes}) => {
+const Founders = ({classes}) => {
     const breakPoints = [
         { width: 1, itemsToShow: 1 },
         { width: 550, itemsToShow: 2 },
@@ -14,7 +14,7 @@ const Collaborators = ({classes}) => {
     
     return (
         <CarouselWrapper className={classes}>
-            <SectionHeader>Collaborators</SectionHeader>
+            <SectionHeader>Founders</SectionHeader>
             <SectionSubheader>Our amazing collaborators are helping Datwit become a cutting-edge company</SectionSubheader>
             <ContentWrapper>                
                 <Carousel itemsToShow={3} breakPoints={breakPoints} onTouchMove={e => e.stopPropagation()}>
@@ -25,12 +25,13 @@ const Collaborators = ({classes}) => {
                                     <CollaboratorsCard name={data.name} designation={data.designation} rol={data.rol} twitter={data.twitter} linkedin={data.linkedin} github={data.github} src={data.src}/>                             
                                 </ColWrapper>                                                                            
                             ))
-                        )                       
-                    } 
+                             
+                        )
+                    }
                 </Carousel>                                                 
             </ContentWrapper>       
         </CarouselWrapper>
     )
 }
 
-export {Collaborators}
+export {Founders}

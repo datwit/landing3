@@ -106,7 +106,7 @@ const CasesResults = () => {
             ?
             <FullPage controls={CustomControls}>
                 <Slide>
-                    <Section classes={'w-full h-screen'}>
+                    <Section classes={'w-full h-screen  mx-auto max-w-7xl'}>
                         <div className="px-5 mx-auto mt-20">                      
                             <a onClick={()=>router.back()}>
                                 <h3 className="flex cursor-pointer hover:text-secondary1">

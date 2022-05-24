@@ -4,6 +4,7 @@ import {FooterContainer, ContactContainer, SocialList, FooterHeader, FooterLinks
 import datas from './data.json'
 import links from './pageslink.json';
 import {FiGithub, FiFacebook, FiTwitter, FiLinkedin, FiMessageCircle} from 'react-icons/fi'
+import {SiWhatsapp} from "react-icons/si"
 import { HiOutlineMail } from 'react-icons/hi'
 import {FooterAccordion} from './FooterAccordion'
 import { AccordionList } from 'components/Partner/Faqs/style'
@@ -21,7 +22,7 @@ const Footer = () => {
                                 <ColumnTitle>FOLLOW US</ColumnTitle>
                                 <SocialList>
                                     <Link href={datas[0].url}><SocialListItem2><FiLinkedin /></SocialListItem2></Link>
-                                    <Link  href={datas[1].url}><SocialListItem2><FiFacebook /></SocialListItem2></Link>
+                                    {/* <Link  href={datas[1].url}><SocialListItem2><FiFacebook /></SocialListItem2></Link> */}
                                     <Link  href={datas[2].url}><SocialListItem2><FiGithub /></SocialListItem2></Link>
                                     <Link  href={datas[3].url}><SocialListItem2><FiTwitter /></SocialListItem2></Link>
                                 </SocialList>
@@ -34,9 +35,9 @@ const Footer = () => {
                                             <HiOutlineMail />                                           
                                         </SocialListItem2>
                                     </Link>
-                                    <Link href="tel:+58 658 987">
+                                    <Link href="//wa.me/+381613141890">
                                         <SocialListItem2>
-                                            <FiMessageCircle />                                           
+                                            <SiWhatsapp />                                           
                                         </SocialListItem2>
                                     </Link>
                                 </ContactWrapper>

@@ -28,7 +28,7 @@ const BlogPage = ({ title, date, content, img, author, tags, id})=> {
             <motion.div initial={{opacity:0,  y: 200}} animate={{opacity:1, y:0}}>
                 <FullPage controls={CustomControls} scrollMode='normal'>
                     <main>
-                        <section className="pt-20">
+                        <section className="pt-20 mx-auto max-w-7xl">
                             <div className="mx-8 md:mx-auto">                                
                                 <a onClick={()=>router.back()}>
                                     <h3 className="flex pt-10 pb-6 cursor-pointer hover:text-secondary1">

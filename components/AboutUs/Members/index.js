@@ -1,10 +1,9 @@
 import React from 'react'
 import datas from "./team.json"
-import {MemberCol} from './style'
 import {ContentWrapper, SectionHeader, SectionSubheader} from 'styles/global'
-import {MemberCard} from './MemberCard'
+import {CollaboratorsCard} from '../Collaborators/CollaboratorsCard'
 import Carousel from 'react-elastic-carousel'
-import {CarouselWrapper} from '../Collaborators/style'
+import {CarouselWrapper, ColWrapper} from '../Collaborators/style'
 
 
 const Members = ({classes}) => {   
@@ -23,9 +22,9 @@ const Members = ({classes}) => {
                 {
                     React.Children.toArray(
                         datas.map(data => (                            
-                            <MemberCol> 
-                                <MemberCard name={data.name} designation={data.designation} rol={data.rol} twitter={data.twitter} linkedin={data.linkedin} github={data.github} src={data.src} />                          
-                            </MemberCol>                                                                        
+                            <ColWrapper> 
+                                <CollaboratorsCard name={data.name} designation={data.designation} rol={data.rol} twitter={data.twitter} linkedin={data.linkedin} github={data.github} src={data.src} />                          
+                            </ColWrapper>                                                                        
                         ))
                     )                        
                 }                                   

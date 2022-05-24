@@ -21,7 +21,7 @@ const FaqsPartner = () => {
             <motion.div initial={{opacity:0,  y: 200}} animate={{opacity:1, y:0}}>
                 <FullPage controls={CustomControls} scrollMode='normal'>
 
-                    <Section classes={"min-h-screen pt-20"}>
+                    <Section classes={"min-h-screen pt-20 mx-auto max-w-7xl"}>
                         <div className="px-5 mx-auto">
                             <SectionHeader className="mb-4">Frequently asked questions for  partners</SectionHeader>
                             {/*accordion component*/}

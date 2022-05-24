@@ -1,42 +1,20 @@
 [  
   {
-    "name": "Karell Lexander Garcés",
-      "designation": "Firmware Engineering",
-      "twitter":"https://twitter.com/KarellGarces",
-      "linkedin": "https://www.linkedin.com/in/karellgarces",
-      "github": "https://github.com/KarellGarces",
-      "src": "/members/karell.png"
+    "name": "Leonel Salazar",
+    "designation": "Definir o dejar en blanco",
+    "rol": "Developer",
+    "twitter":"https://twitter.com/leonel_lordford",
+    "linkedin": "https://www.linkedin.com/in/leonel-salazar-videaux",
+    "github": "https://github.com/leonel-lordford",
+    "src": "/members/v2/leonel.jpg"
   },
   {
-    "name": "Karel Rodríguez Varona",
-      "designation": "DataSci Team Member",
-      "twitter":"",
-      "linkedin": "https://www.linkedin.com/in/karel-rodr%C3%ADguez-varona-5609aaa5/",
-      "github": "https://github.com/kwaref",
-      "src": "/members/karel.png"
-  },
-  {
-    "name": "Ozkar L. Garcell",
-      "designation": "DataSci Team Member",
-      "twitter":"https://twitter.com/codeshard",
-      "linkedin": "https://www.linkedin.com/in/ozkar-garcell/",
-      "github": "https://github.com/codeshard",
-      "src": "/members/oskar.png"
-  },
-  {
-    "name": "Eriberto Vanegas Lago",
-      "designation": "DataSci Team Member",
-      "twitter":"https://twitter.com/LagoEriberto?s=09",
-      "linkedin": "https://www.linkedin.com/in/evanegasl2020/",
-      "github": "https://github.com/Vanegas2020",
-      "src": "/members/vanegas.png"
-  },
-  {
-    "name": "Ailan Alcantara Espinosa",
-      "designation": "Software Engineering",
-      "twitter":"",
-      "linkedin": "https://www.linkedin.com/in/ailan-alcantara-a97b131a4",
-      "github": "https://github.com/alcantara2575",
-      "src": "/members/ailan.png"
+    "name": "Karell L. Garcés",
+    "designation": "Definir o dejar en blanco",
+    "rol": "Management",
+    "twitter":"https://twitter.com/KarellGarces",
+    "linkedin": "https://www.linkedin.com/in/karellgarces",
+    "github": "https://github.com/KarellGarces",
+    "src": "/members/v2/karelw.jpg"
   }
 ]
