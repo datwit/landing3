@@ -3,32 +3,32 @@
         "title": "Data Engineering",
         "subtitle": "Let us get the best out of your data with:",
         "items":[
-            {"tit":"Exploratory data analysis"},
+            {"tit":"Exploratory Data Analysis"},
             {"tit":"Data cleaning"},
-            {"tit":"Anonymization"},
-            {"tit":"ETL design"},            
-            {"tit":"Data infrastructure design and build"},
+            {"tit":"Data Anonymization"},
+            {"tit":"Custom ETL Design"},            
+            {"tit":"Data Infrastructure Design"},
             {"tit":"Data visualization"}
         ]
     },
     {
-        "title": "Data Intelligence",
-        "subtitle": "Build intelligent apps from the start with:",
+        "title": "Smart Services",
+        "subtitle": "Build smart apps from the start with:",
         "items":[
-            {"tit":"Architecture and Model Design"},
-            {"tit":"Model build, training, and optimization"},
+            {"tit":"ML Models Design"},
+            {"tit":"Model training, and optimization"},
             {"tit":"Design and deploy data pipelines"},
-            {"tit":"Built-in observability and monitoring"}
+            {"tit":"Built-in observability and monitoring"},
+            {"tit":"Model Interpretability Reports"}
         ]
     },
     {
         "title": "Machine Learning Full Scope",
         "subtitle": "We can also offer you an end-to-end solution with:",
         "items":[
-            {"tit":"Data Management in your business"},
-            {"tit":"Data Integrations and APIs"},
-            {"tit":"Web solutions centered on data management"},
-            {"tit":"ML infrastructure design for cloud/on-premises arch"},
+            {"tit":"Increase your Data Management in self system"},
+            {"tit":"Improved your Data & Integrate through APIs"},
+            {"tit":"ML infrastructure design for AWS cloud"},
             {"tit":"Web interfaces for man-in-the-loop AI systems"},
             {"tit":"Machine learning-related consulting services"}
         ]
