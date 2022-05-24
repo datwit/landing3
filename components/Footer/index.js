@@ -22,7 +22,7 @@ const Footer = () => {
                                 <ColumnTitle>FOLLOW US</ColumnTitle>
                                 <SocialList>
                                     <Link href={datas[0].url}><SocialListItem2><FiLinkedin /></SocialListItem2></Link>
-                                    <Link  href={datas[1].url}><SocialListItem2><FiFacebook /></SocialListItem2></Link>
+                                    {/* <Link  href={datas[1].url}><SocialListItem2><FiFacebook /></SocialListItem2></Link> */}
                                     <Link  href={datas[2].url}><SocialListItem2><FiGithub /></SocialListItem2></Link>
                                     <Link  href={datas[3].url}><SocialListItem2><FiTwitter /></SocialListItem2></Link>
                                 </SocialList>
