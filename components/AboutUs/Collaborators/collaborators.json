@@ -9,21 +9,21 @@
     "src": "/members/v2/leonel.jpg"
   },
   {
-    "name": "Karel Rodríguez",
-    "designation": "Definir o dejar en blanco",
-    "rol": "ML Engineer",
-    "twitter":"",
-    "linkedin": "https://www.linkedin.com/in/karel-rodr%C3%ADguez-varona-5609aaa5/",
-    "github": "https://github.com/kwaref",
-    "src": "/members/v2/karelw.jpg"
-  },
-  {
     "name": "Karell L. Garcés",
     "designation": "Definir o dejar en blanco",
     "rol": "Management",
     "twitter":"https://twitter.com/KarellGarces",
     "linkedin": "https://www.linkedin.com/in/karellgarces",
     "github": "https://github.com/KarellGarces",
+    "src": "/members/v2/karelw.jpg"
+  },
+  {
+    "name": "Karel Rodríguez",
+    "designation": "Definir o dejar en blanco",
+    "rol": "ML Engineer",
+    "twitter":"",
+    "linkedin": "https://www.linkedin.com/in/karel-rodr%C3%ADguez-varona-5609aaa5/",
+    "github": "https://github.com/kwaref",
     "src": "/members/v2/otros2.jpg"
   }
 ]
