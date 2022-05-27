@@ -1,0 +1,20 @@
+[  
+  {
+    "name": "Leonel Salazar",
+    "designation": "Definir o dejar en blanco",
+    "rol": "Developer",
+    "twitter":"https://twitter.com/leonel_lordford",
+    "linkedin": "https://www.linkedin.com/in/leonel-salazar-videaux",
+    "github": "https://github.com/leonel-lordford",
+    "src": "/members/v2/leonel.jpg"
+  },
+  {
+    "name": "Karell L. Garcés",
+    "designation": "Definir o dejar en blanco",
+    "rol": "Management",
+    "twitter":"https://twitter.com/KarellGarces",
+    "linkedin": "https://www.linkedin.com/in/karellgarces",
+    "github": "https://github.com/KarellGarces",
+    "src": "/members/v2/karelw.jpg"
+  }
+]

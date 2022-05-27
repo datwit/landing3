@@ -1,0 +1,36 @@
+ [
+    {
+        "title": "Data Engineering",
+        "subtitle": "Let us get the best out of your data with:",
+        "items":[
+            {"tit":"Exploratory Data Analysis"},
+            {"tit":"Data cleaning"},
+            {"tit":"Data Anonymization"},
+            {"tit":"Custom ETL Design"},            
+            {"tit":"Data Infrastructure Design"},
+            {"tit":"Data visualization"}
+        ]
+    },
+    {
+        "title": "Smart Services",
+        "subtitle": "Build smart apps from the start with:",
+        "items":[
+            {"tit":"ML Models Design"},
+            {"tit":"Model training, and optimization"},
+            {"tit":"Design and deploy data pipelines"},
+            {"tit":"Built-in observability and monitoring"},
+            {"tit":"Model Interpretability Reports"}
+        ]
+    },
+    {
+        "title": "Machine Learning Full Scope",
+        "subtitle": "We can also offer you an end-to-end solution with:",
+        "items":[
+            {"tit":"Increase your Data Management in self system"},
+            {"tit":"Improved your Data & Integrate through APIs"},
+            {"tit":"ML infrastructure design for AWS cloud"},
+            {"tit":"Web interfaces for man-in-the-loop AI systems"},
+            {"tit":"Machine learning-related consulting services"}
+        ]
+    }
+]

@@ -1,0 +1,69 @@
+
+[ 
+    {
+      "name": "Ozkar L. Garcell",
+      "designation": "Definir o en blanco",
+      "rol": "Backend Developer",
+      "twitter":"https://twitter.com/codeshard",
+      "linkedin": "https://www.linkedin.com/in/ozkar-garcell/",
+      "github": "https://github.com/codeshard",
+      "src": "/members/v2/ozkar.jpg"
+    },
+    {
+      "name": "Daniel Placencia",
+      "designation": "Definir o en blanco",
+      "rol": "MLOps",
+      "twitter":"https://twitter.com/",
+      "linkedin": "https://www.linkedin.com/in/",
+      "github": "https://github.com/",
+      "src": "/members/v2/daniel.jpg"
+    },
+    {
+      "name": "Enma Lidia",
+      "designation": "Definir o en blanco",
+      "rol": "UX/UI",
+      "twitter":"https://twitter.com/enma_lidia",
+      "linkedin": "https://www.linkedin.com/in/enma-lidia-muñoz-garcía",
+      "github": "https://github.com/enmalidia",
+      "src": "/members/v2/enma.jpg"
+    },
+    {
+      "name": "Yoel Benítez",
+      "designation": "Definir o en blanco",
+      "rol": "DevOps",
+      "twitter":"",
+      "linkedin": "",
+      "github": "https://github.com/ybenitezf",
+      "src": "/members/v2/yoel.jpg"
+    },
+    {
+      "name": "Yanet Conde",
+      "designation": "Definir o en blanco",
+      "rol": "Junior Tester & Marketing",
+      "twitter":"",
+      "linkedin": "https://www.linkedin.com/in/yanetcg1983/",
+      "github": "https://github.com/yanetcg1983",
+      "src": "/members/v2/yanet.jpg"
+    },
+    {
+      "name": "Alejandro Valdevila",
+      "designation": "Definir o en blanco",
+      "rol": "FrontEnd Developer",
+      "twitter":"",
+      "linkedin": "https://www.linkedin.com/in/avaldevilap/",
+      "github": "",
+      "src": "/members/v2/alejandro.jpg"
+    },
+    {
+      "name": "Eriberto Vanegas",
+      "designation": "Definir o en blanco",
+      "rol": "Definir o dejar en blanco",
+      "twitter":"https://twitter.com/LagoEriberto",
+      "linkedin": "https://www.linkedin.com/in/evanegasl2022/",
+      "github": "https://github.com/Vanegas2020",
+      "src": "/members/v2/vanegas.jpg"
+    }
+
+]
+
+
