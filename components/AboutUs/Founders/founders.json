@@ -1,7 +1,7 @@
 [  
   {
     "name": "Abel Meneses",
-    "designation": "Founder / COO",
+    "designation": "CEO",
     "rol": "Data Scientist",
     "twitter":"https://twitter.com/abelma1980",
     "linkedin": "https://www.linkedin.com/in/meneses-abad",
@@ -10,7 +10,7 @@
   },
   {
     "name": "Danay Meneses",
-    "designation": "Definir o en blanco",
+    "designation": "CTO",
     "rol": "Data Engineer",
     "twitter":"https://github.com/DanayMeneses",
     "linkedin": "https://www.linkedin.com/in/danaymeneses",
@@ -19,7 +19,7 @@
   },
   {
     "name": "Ailan Alcantara",
-    "designation": "Definir o en blanco",
+    "designation": "CIO",
     "rol": "FrontEnd Developer",
     "twitter":"",
     "linkedin": "https://www.linkedin.com/in/ailan-alcantara-a97b131a4",
@@ -27,9 +27,9 @@
     "src": "/members/v2/ailan.jpg"
   },
   {
-    "name": "Otros",
-    "designation": "Definir o en blanco",
-    "rol": "Ingeniers",
+    "name": "Sebastian Aurei",
+    "designation": "CFO",
+    "rol": "Data Engineer",
     "twitter":"",
     "linkedin": "",
     "github": "",
