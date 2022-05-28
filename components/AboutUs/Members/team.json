@@ -2,7 +2,7 @@
 [ 
     {
       "name": "Ozkar L. Garcell",
-      "designation": "Definir o en blanco",
+      "designation": "",
       "rol": "Backend Developer",
       "twitter":"https://twitter.com/codeshard",
       "linkedin": "https://www.linkedin.com/in/ozkar-garcell/",
@@ -11,7 +11,7 @@
     },
     {
       "name": "Daniel Placencia",
-      "designation": "Definir o en blanco",
+      "designation": "",
       "rol": "MLOps",
       "twitter":"https://twitter.com/",
       "linkedin": "https://www.linkedin.com/in/",
@@ -19,8 +19,8 @@
       "src": "/members/v2/daniel.jpg"
     },
     {
-      "name": "Enma Lidia",
-      "designation": "Definir o en blanco",
+      "name": "Enma Muñoz",
+      "designation": "Chief Brand Officer",
       "rol": "UX/UI",
       "twitter":"https://twitter.com/enma_lidia",
       "linkedin": "https://www.linkedin.com/in/enma-lidia-muñoz-garcía",
@@ -29,7 +29,7 @@
     },
     {
       "name": "Yoel Benítez",
-      "designation": "Definir o en blanco",
+      "designation": "Chief Architect",
       "rol": "DevOps",
       "twitter":"",
       "linkedin": "",
@@ -38,8 +38,8 @@
     },
     {
       "name": "Yanet Conde",
-      "designation": "Definir o en blanco",
-      "rol": "Junior Tester & Marketing",
+      "designation": "Chief Communications Officer",
+      "rol": "Junior Tester",
       "twitter":"",
       "linkedin": "https://www.linkedin.com/in/yanetcg1983/",
       "github": "https://github.com/yanetcg1983",
@@ -47,7 +47,7 @@
     },
     {
       "name": "Alejandro Valdevila",
-      "designation": "Definir o en blanco",
+      "designation": "",
       "rol": "FrontEnd Developer",
       "twitter":"",
       "linkedin": "https://www.linkedin.com/in/avaldevilap/",
@@ -56,8 +56,8 @@
     },
     {
       "name": "Eriberto Vanegas",
-      "designation": "Definir o en blanco",
-      "rol": "Definir o dejar en blanco",
+      "designation": "",
+      "rol": "Data Engineer",
       "twitter":"https://twitter.com/LagoEriberto",
       "linkedin": "https://www.linkedin.com/in/evanegasl2022/",
       "github": "https://github.com/Vanegas2020",
