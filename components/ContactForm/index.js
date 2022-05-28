@@ -205,7 +205,7 @@ const ContacthtmlForm = ({classes}) => {
                                 <Counter>{count}/500</Counter>
                             </InputWrapper>
                             <div className="flex justify-center items-center">
-                                <Button type="submit" onClick={handleSubmit} className={formValues.name.trim() === "" || formValues.email.trim() === "" || formValues.message.trim() === "" || showMessage ? 'submit-button' : ''}>Send
+                                <Button type="submit" onClick={(event)=>!showMessage && handleSubmit(event)} className={formValues.name.trim() === "" || formValues.email.trim() === "" || formValues.message.trim() === "" || showMessage ? 'submit-button' : ''}>Send
                                 <FiSend className="h-6 w-6 ml-2"/>
                                 </Button>
                                 {
