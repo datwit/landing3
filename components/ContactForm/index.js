@@ -22,10 +22,12 @@ const ContacthtmlForm = ({classes}) => {
     const [formValues,setFormValues] = useState({
         name: '',
         email: '',
-        message: ''
+        message: '',
+        honnyname: '',
+        honnyemail: '',
+        honnymessage: '',
+        fax: false,
     })
-
-    console.log(SUFFIX, API_URL)
     
     //checking connection to the endpoint
     useEffect(() => {
@@ -55,10 +57,10 @@ const ContacthtmlForm = ({classes}) => {
         setFormValues({...formValues,[name]:value}) 
         
         //counter
-        name==="message" ? setCount(value.length) : null 
+        name===`${SUFFIX}message` ? setCount(value.length) : null 
           
         //validations
-        if (name==="name") {            
+        if (name===`${SUFFIX}name`) {            
             if (ValidateName(value)=== false) {                                 
                 setShowMessage(false) 
             } else {                                     
@@ -69,7 +71,7 @@ const ContacthtmlForm = ({classes}) => {
         else {
              null
         }
-        if (name==="email") {            
+        if (name===`${SUFFIX}email`) {            
             if (ValidateEmail(value)=== false) {                                
                 setShowMessage(false) 
             } else {                                    
@@ -80,10 +82,11 @@ const ContacthtmlForm = ({classes}) => {
         else {
              null
         } 
+        console.log(formValues.fax, event.name, event.value)
     }    
 
     const handleSubmit = (event) =>{
-        if(formValues.name.length !='' & formValues.email.length !='' & formValues.message.length !=''){
+        if(formValues.honnyname.length !='' & formValues.honnyemail.length !='' & formValues.honnymessage.length !=''){
             event.preventDefault()
 
             setIsLoading(true)                      
@@ -98,7 +101,11 @@ const ContacthtmlForm = ({classes}) => {
                     setFormValues({
                         name: '',
                         email: '',
-                        message: '' 
+                        message: '',
+                        honnyname: '',
+                        honnyemail: '',
+                        honnymessage: '',
+                        fax: false 
                     })                                  
                     setCount(0)                    
                     switch (response.status) {
@@ -166,13 +173,25 @@ const ContacthtmlForm = ({classes}) => {
                             <InputWrapper>
                                 <FormLabels>Name</FormLabels>
                                 <FInput
+                                    id="name"
+                                    type="text"
+                                    name={`name`}
+                                    maxLength="80"
+                                    minLength="3"
+                                    placeholder="Your name..."
+                                    value={formValues.name}
+                                    onChange={handleChange}
+                                    className="absolute"
+                                    style={{left:"3000px"}}
+                                />
+                                <FInput
                                     id={`${SUFFIX}name`}
                                     type="text"
                                     name={`${SUFFIX}name`}
                                     maxLength="80"
                                     minLength="3"
                                     placeholder="Your name..."
-                                    value={formValues.name}
+                                    value={formValues.honnyname}
                                     onChange={handleChange}
                                     error={showMessage}
                                 />
@@ -180,13 +199,26 @@ const ContacthtmlForm = ({classes}) => {
                             <InputWrapper>
                                 <FormLabels>Email</FormLabels>
                                 <FInput
+                                    id={`email`}
+                                    type="email"
+                                    name={`email`}
+                                    maxLength="50"
+                                    minLength="5"
+                                    placeholder="Enter a valid email address"
+                                    value={formValues.email}
+                                    onChange={handleChange}
+                                    error={showMessage}
+                                    className="absolute"
+                                    style={{left:"3000px"}}
+                                />
+                                <FInput
                                     id={`${SUFFIX}email`}
                                     type="email"
                                     name={`${SUFFIX}email`}
                                     maxLength="50"
                                     minLength="5"
                                     placeholder="Enter a valid email address"
-                                    value={formValues.email}
+                                    value={formValues.honnyemail}
                                     onChange={handleChange}
                                     error={showMessage}
                                 />
@@ -194,8 +226,8 @@ const ContacthtmlForm = ({classes}) => {
                             <InputWrapper>
                                 <FormLabels>Message</FormLabels>
                                 <TInput
-                                    id={`${SUFFIX}message`}
-                                    name={`${SUFFIX}message`}
+                                    id={`message`}
+                                    name={`message`}
                                     type="text"
                                     maxLength="500"
                                     minLength="10"                            
@@ -203,12 +235,32 @@ const ContacthtmlForm = ({classes}) => {
                                     value={formValues.message}
                                     onChange={handleChange}
                                     error={showMessage}
+                                    className="absolute"
+                                    style={{left:"3000px"}}
+                                ></TInput>
+                                <TInput
+                                    id={`${SUFFIX}message`}
+                                    name={`${SUFFIX}message`}
+                                    type="text"
+                                    maxLength="500"
+                                    minLength="10"                            
+                                    placeholder="I'm interested in..."
+                                    value={formValues.honnymessage}
+                                    onChange={handleChange}
+                                    error={showMessage}
                                 ></TInput>
                                 <Counter>{count}/500</Counter>
                             </InputWrapper>
-                            <input type="checkbox" name="contact_me_by_fax_only" value="1" onChange={()=>(console.log("robot"))} className="absolute -top-full" autoComplete="off"></input>
+                            <input 
+                                type="checkbox" 
+                                name="contact_me_by_fax_only"
+                                className="absolute -top-full" 
+                                autoComplete="off"
+                                onChange={(event)=>setFormValues({...formValues,fax:event.target.checked})}
+                                >
+                            </input>
                             <div className="flex justify-center items-center">
-                                <Button type="submit" onClick={(event)=>!showMessage && handleSubmit(event)} className={formValues.name.trim() === "" || formValues.email.trim() === "" || formValues.message.trim() === "" || showMessage ? 'submit-button' : ''}>Send
+                                <Button type="submit" onClick={(event)=>!showMessage && !formValues.fax && handleSubmit(event)} className={formValues.honnyname.trim() === "" || formValues.honnyemail.trim() === "" || formValues.honnymessage.trim() === "" || showMessage ? 'submit-button' : ''}>Send
                                 <FiSend className="h-6 w-6 ml-2"/>
                                 </Button>
                                 {
