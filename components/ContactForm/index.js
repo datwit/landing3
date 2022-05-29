@@ -10,7 +10,7 @@ import data from './messages.json'
 import { ValidateMessage, ValidateName, ValidateEmail } from './Validations'
 
 const API_URL = process.env.NEXT_PUBLIC_API_URL
-
+const SUFFIX = process.env.NEXT_PUBLIC_FORM_SUFFIX
 
 const ContacthtmlForm = ({classes}) => {
     const [isLoading, setIsLoading] = useState(false)
@@ -24,6 +24,8 @@ const ContacthtmlForm = ({classes}) => {
         email: '',
         message: ''
     })
+
+    console.log(SUFFIX, API_URL)
     
     //checking connection to the endpoint
     useEffect(() => {
@@ -162,25 +164,25 @@ const ContacthtmlForm = ({classes}) => {
                         <>
                             <FormIntro>Our doors are always open! Feel free to drop by and spot us in our natural habitat.</FormIntro>
                             <InputWrapper>
-                            <FormLabels>Name</FormLabels>
-                            <FInput
-                                id="name"
-                                type="text"
-                                name="name"
-                                maxLength="80"
-                                minLength="3"
-                                placeholder="Your name..."
-                                value={formValues.name}
-                                onChange={handleChange}
-                                error={showMessage}
-                            />
+                                <FormLabels>Name</FormLabels>
+                                <FInput
+                                    id={`${SUFFIX}name`}
+                                    type="text"
+                                    name={`${SUFFIX}name`}
+                                    maxLength="80"
+                                    minLength="3"
+                                    placeholder="Your name..."
+                                    value={formValues.name}
+                                    onChange={handleChange}
+                                    error={showMessage}
+                                />
                             </InputWrapper>
                             <InputWrapper>
                                 <FormLabels>Email</FormLabels>
                                 <FInput
-                                    id="email"
+                                    id={`${SUFFIX}email`}
                                     type="email"
-                                    name="email"
+                                    name={`${SUFFIX}email`}
                                     maxLength="50"
                                     minLength="5"
                                     placeholder="Enter a valid email address"
@@ -192,8 +194,8 @@ const ContacthtmlForm = ({classes}) => {
                             <InputWrapper>
                                 <FormLabels>Message</FormLabels>
                                 <TInput
-                                    id="message"
-                                    name="message"
+                                    id={`${SUFFIX}message`}
+                                    name={`${SUFFIX}message`}
                                     type="text"
                                     maxLength="500"
                                     minLength="10"                            
@@ -204,6 +206,7 @@ const ContacthtmlForm = ({classes}) => {
                                 ></TInput>
                                 <Counter>{count}/500</Counter>
                             </InputWrapper>
+                            <input type="checkbox" name="contact_me_by_fax_only" value="1" onChange={()=>(console.log("robot"))} className="absolute -top-full" autoComplete="off"></input>
                             <div className="flex justify-center items-center">
                                 <Button type="submit" onClick={(event)=>!showMessage && handleSubmit(event)} className={formValues.name.trim() === "" || formValues.email.trim() === "" || formValues.message.trim() === "" || showMessage ? 'submit-button' : ''}>Send
                                 <FiSend className="h-6 w-6 ml-2"/>
