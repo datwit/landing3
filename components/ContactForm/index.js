@@ -58,31 +58,36 @@ const ContacthtmlForm = ({classes}) => {
         
         //counter
         name===`${SUFFIX}message` ? setCount(value.length) : null 
-          
+
         //validations
         if (name===`${SUFFIX}name`) {            
-            if (ValidateName(value)=== false) {                                 
-                setShowMessage(false) 
+            if (ValidateName(value)=== false) { 
+                if (formValues.honnyemail == "" || ValidateEmail(formValues.honnyemail) === false){ 
+                    setShowMessage(false) 
+                }
+                else {
+                    setAlertMessage(2)                                      
+                    setShowMessage(true)
+                }
             } else {                                     
-                setAlertMessage(3)                                      
+                setAlertMessage(3)                                   
                 setShowMessage(true) 
             }
         } 
-        else {
-             null
-        }
-        if (name===`${SUFFIX}email`) {            
-            if (ValidateEmail(value)=== false) {                                
-                setShowMessage(false) 
+        else if (name===`${SUFFIX}email` ) {            
+            if (ValidateEmail(value)=== false) {    
+                if (formValues.honnyname == "" || ValidateName(formValues.honnyname) === false){ 
+                    setShowMessage(false) 
+                }
+                else {
+                    setAlertMessage(3)                                      
+                    setShowMessage(true)
+                }
             } else {                                    
-                setAlertMessage(3)                                      
+                setAlertMessage(2)                                      
                 setShowMessage(true) 
             }
         } 
-        else {
-             null
-        } 
-        console.log(formValues.fax, event.name, event.value)
     }    
 
     const handleSubmit = (event) =>{
@@ -193,7 +198,7 @@ const ContacthtmlForm = ({classes}) => {
                                     placeholder="Your name..."
                                     value={formValues.honnyname}
                                     onChange={handleChange}
-                                    error={showMessage}
+                                    error={showMessage && alertMessage == 3}
                                 />
                             </InputWrapper>
                             <InputWrapper>
@@ -220,7 +225,7 @@ const ContacthtmlForm = ({classes}) => {
                                     placeholder="Enter a valid email address"
                                     value={formValues.honnyemail}
                                     onChange={handleChange}
-                                    error={showMessage}
+                                    error={showMessage && alertMessage == 2}
                                 />
                             </InputWrapper>
                             <InputWrapper>
@@ -247,7 +252,7 @@ const ContacthtmlForm = ({classes}) => {
                                     placeholder="I'm interested in..."
                                     value={formValues.honnymessage}
                                     onChange={handleChange}
-                                    error={showMessage}
+                                    error={showMessage && alertMessage == 1 && formValues.honnymessage == ""}
                                 ></TInput>
                                 <Counter>{count}/500</Counter>
                             </InputWrapper>

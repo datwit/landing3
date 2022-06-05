@@ -41,6 +41,7 @@ export const FInput = styled.input.attrs({
 })
 `
 border-radius: 25px;
+${props => props.error && "border-color: red"};
 &:focus{
     border-width: 2px;
     border-color:${props => props.error ? "red" : "#e69c24"};
