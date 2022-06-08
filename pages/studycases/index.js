@@ -140,7 +140,7 @@ const AllStudyCases = () =>{
                     <Section classes={'min-h-screen'}>
                         <div className="px-5 mx-auto pb-16 mt-20">
                             <SectionHeader>Check out our solutions</SectionHeader>
-                            <SectionSubheader>Commitment and creativity mark our creations. By all means, stroll along...</SectionSubheader>
+                            <SectionSubheader>Commitment and creativity mark our creations. Come and walk with us!...</SectionSubheader>
                             {/*pagination*/}
                             <div className="flex flex-wrap">
                                 {data}

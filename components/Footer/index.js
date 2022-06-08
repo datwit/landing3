@@ -64,14 +64,14 @@ const Footer = () => {
                             <ColumnTitle>CONTACT US</ColumnTitle>
                             <SocialList>
                                 <Link href={datas[0].url}><SocialListItem><FiLinkedin /></SocialListItem></Link>
-                                <Link  href={datas[1].url}><SocialListItem><FiFacebook /></SocialListItem></Link>
+                                {/* <Link  href={datas[1].url}><SocialListItem><FiFacebook /></SocialListItem></Link> */}
                                 <Link  href={datas[2].url}><SocialListItem><FiGithub /></SocialListItem></Link>
                                 <Link  href={datas[3].url}><SocialListItem><FiTwitter /></SocialListItem></Link>
                                 <Link href="mailto:contact@datwit.com">
                                     <SocialListItem><HiOutlineMail/></SocialListItem>
                                 </Link>
-                                <Link href="tel:+58 658 987">
-                                    <SocialListItem><FiMessageCircle /></SocialListItem>
+                                <Link href="//wa.me/+381613141890">
+                                    <SocialListItem><SiWhatsapp /></SocialListItem>
                                 </Link>
                             </SocialList>
                         </ColumnContent>

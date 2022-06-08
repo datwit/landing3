@@ -1,6 +1,6 @@
 import React from 'react'
 import datas from "./data.json"
-import {ContentWrapper}from 'styles/global'
+import {ContentWrapper, SectionHeader}from 'styles/global'
 import { IllWrapper2, BulletSubtitle, ServiceBulletsOuter, ServiceBulletsSpan} from './style'
 import {MLSolutionsSVG} from './MLSolutionsSVG'
 import { ImageTitle, TextBlock} from '../Services2/style'
@@ -11,6 +11,7 @@ const Services1 = ({classes}) => {
 
     return (
         <div className={classes}>
+            <SectionHeader>Machine Learning solutions from A to Z</SectionHeader>
                 <ContentWrapper>
                     <IllWrapper2>
                         <MLSolutionsSVG />

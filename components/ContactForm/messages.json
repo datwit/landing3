@@ -16,7 +16,7 @@
     },
     {
         "id":4,
-        "text":"You must provide a valid phrase without leading or trealing spaces.",
+        "text":"You must provide a valid phrase without leading or trailing spaces.",
         "style":"text-center text-xs mt-3 text-red-700 bg-red-50 h-8 rounded-2xl flex justify-center items-center"
     },
     {
