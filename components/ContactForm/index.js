@@ -141,7 +141,7 @@ const ContacthtmlForm = ({classes}) => {
     
     return (
         <div className={classes}>
-            <SectionSubheader> We’re always ready for new and great challenges! So tell us all about your exciting idea. Fill in the form below so we can reach you!</SectionSubheader>
+            <SectionSubheader> We’re always ready for new and great challenges, so tell us about your exciting idea! Fill in the form below so we can reach you!</SectionSubheader>
             <ContentWrapper>
                 <MapWrapper>
                     <iframe
