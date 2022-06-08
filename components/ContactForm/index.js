@@ -23,9 +23,9 @@ const ContacthtmlForm = ({classes}) => {
         name: '',
         email: '',
         message: '',
-        honnyname: '',
-        honnyemail: '',
-        honnymessage: '',
+        [`${SUFFIX}email`]:"",
+        [`${SUFFIX}name`]:"", 
+        [`${SUFFIX}message`]:"",
         fax: false,
     })
     
@@ -62,7 +62,7 @@ const ContacthtmlForm = ({classes}) => {
         //validations
         if (name===`${SUFFIX}name`) {            
             if (ValidateName(value)=== false) { 
-                if (formValues.honnyemail == "" || ValidateEmail(formValues.honnyemail) === false){ 
+                if (formValues[`${SUFFIX}email`] === "" || ValidateEmail(formValues[`${SUFFIX}email`]) === false){ 
                     setShowMessage(false) 
                 }
                 else {
@@ -76,7 +76,7 @@ const ContacthtmlForm = ({classes}) => {
         } 
         else if (name===`${SUFFIX}email` ) {            
             if (ValidateEmail(value)=== false) {    
-                if (formValues.honnyname == "" || ValidateName(formValues.honnyname) === false){ 
+                if (formValues[`${SUFFIX}name`] == "" || ValidateName(formValues[`${SUFFIX}name`]) === false){ 
                     setShowMessage(false) 
                 }
                 else {
@@ -87,11 +87,11 @@ const ContacthtmlForm = ({classes}) => {
                 setAlertMessage(2)                                      
                 setShowMessage(true) 
             }
-        } 
+        }
     }    
 
     const handleSubmit = (event) =>{
-        if(formValues.honnyname.length !='' & formValues.honnyemail.length !='' & formValues.honnymessage.length !=''){
+        if(formValues[`${SUFFIX}name`] !='' & formValues[`${SUFFIX}email`] !='' & formValues[`${SUFFIX}message`] !=''){
             event.preventDefault()
 
             setIsLoading(true)                      
@@ -107,10 +107,10 @@ const ContacthtmlForm = ({classes}) => {
                         name: '',
                         email: '',
                         message: '',
-                        honnyname: '',
-                        honnyemail: '',
-                        honnymessage: '',
-                        fax: false 
+                        [`${SUFFIX}email`]:"",
+                        [`${SUFFIX}name`]:"", 
+                        [`${SUFFIX}message`]:"", 
+                        fax: false
                     })                                  
                     setCount(0)                    
                     switch (response.status) {
@@ -195,7 +195,7 @@ const ContacthtmlForm = ({classes}) => {
                                     maxLength="80"
                                     minLength="3"
                                     placeholder="Your name..."
-                                    value={formValues.honnyname}
+                                    value={formValues[`${SUFFIX}name`]}
                                     onChange={handleChange}
                                     error={showMessage && alertMessage == 3}
                                 />
@@ -222,7 +222,7 @@ const ContacthtmlForm = ({classes}) => {
                                     maxLength="50"
                                     minLength="5"
                                     placeholder="Enter a valid email address"
-                                    value={formValues.honnyemail}
+                                    value={formValues[`${SUFFIX}email`]}
                                     onChange={handleChange}
                                     error={showMessage && alertMessage == 2}
                                 />
@@ -249,9 +249,9 @@ const ContacthtmlForm = ({classes}) => {
                                     maxLength="500"
                                     minLength="10"                            
                                     placeholder="I'm interested in..."
-                                    value={formValues.honnymessage}
+                                    value={formValues[`${SUFFIX}message`]}
                                     onChange={handleChange}
-                                    error={showMessage && alertMessage == 1 && formValues.honnymessage == ""}
+                                    error={showMessage && alertMessage == 1 && formValues[`${SUFFIX}message`] == ""}
                                 ></TInput>
                                 <Counter>{count}/500</Counter>
                             </InputWrapper>
@@ -264,7 +264,7 @@ const ContacthtmlForm = ({classes}) => {
                                 >
                             </input>
                             <div className="flex justify-center items-center">
-                                <Button type="submit" onClick={(event)=>!showMessage && !formValues.fax && handleSubmit(event)} className={formValues.honnyname.trim() === "" || formValues.honnyemail.trim() === "" || formValues.honnymessage.trim() === "" || showMessage ? 'submit-button' : ''}>Send
+                                <Button type="submit" onClick={(event)=>!showMessage && !formValues.fax && handleSubmit(event)} className={formValues[`${SUFFIX}name`].trim() === "" || formValues[`${SUFFIX}email`].trim() === "" || formValues[`${SUFFIX}message`].trim() === "" || showMessage ? 'submit-button' : ''}>Send
                                 <FiSend className="h-6 w-6 ml-2"/>
                                 </Button>
                                 {
