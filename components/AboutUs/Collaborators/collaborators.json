@@ -16,5 +16,14 @@
     "linkedin": "https://www.linkedin.com/in/karellgarces",
     "github": "https://github.com/KarellGarces",
     "src": "/members/v2/karelw.jpg"
+  },
+  {
+    "name": "Eliany Sánchez",
+    "designation": "",
+    "rol": "Frontend Developer",
+    "twitter":"",
+    "linkedin": "https://www.linkedin.com/in/elysanchez",
+    "github": "https://github.com/Elysanchez1219",
+    "src": "/members/v2/ely.jpg"
   }
 ]

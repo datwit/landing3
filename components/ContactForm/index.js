@@ -10,7 +10,7 @@ import data from './messages.json'
 import { ValidateMessage, ValidateName, ValidateEmail } from './Validations'
 
 const API_URL = process.env.NEXT_PUBLIC_API_URL
-
+const SUFFIX = process.env.NEXT_PUBLIC_FORM_SUFFIX
 
 const ContacthtmlForm = ({classes}) => {
     const [isLoading, setIsLoading] = useState(false)
@@ -22,7 +22,11 @@ const ContacthtmlForm = ({classes}) => {
     const [formValues,setFormValues] = useState({
         name: '',
         email: '',
-        message: ''
+        message: '',
+        honnyname: '',
+        honnyemail: '',
+        honnymessage: '',
+        fax: false,
     })
     
     //checking connection to the endpoint
@@ -53,35 +57,41 @@ const ContacthtmlForm = ({classes}) => {
         setFormValues({...formValues,[name]:value}) 
         
         //counter
-        name==="message" ? setCount(value.length) : null 
-          
+        name===`${SUFFIX}message` ? setCount(value.length) : null 
+
         //validations
-        if (name==="name") {            
-            if (ValidateName(value)=== false) {                                 
-                setShowMessage(false) 
+        if (name===`${SUFFIX}name`) {            
+            if (ValidateName(value)=== false) { 
+                if (formValues.honnyemail == "" || ValidateEmail(formValues.honnyemail) === false){ 
+                    setShowMessage(false) 
+                }
+                else {
+                    setAlertMessage(2)                                      
+                    setShowMessage(true)
+                }
             } else {                                     
-                setAlertMessage(3)                                      
+                setAlertMessage(3)                                   
                 setShowMessage(true) 
             }
         } 
-        else {
-             null
-        }
-        if (name==="email") {            
-            if (ValidateEmail(value)=== false) {                                
-                setShowMessage(false) 
+        else if (name===`${SUFFIX}email` ) {            
+            if (ValidateEmail(value)=== false) {    
+                if (formValues.honnyname == "" || ValidateName(formValues.honnyname) === false){ 
+                    setShowMessage(false) 
+                }
+                else {
+                    setAlertMessage(3)                                      
+                    setShowMessage(true)
+                }
             } else {                                    
-                setAlertMessage(3)                                      
+                setAlertMessage(2)                                      
                 setShowMessage(true) 
             }
-        } 
-        else {
-             null
         } 
     }    
 
     const handleSubmit = (event) =>{
-        if(formValues.name.length !='' & formValues.email.length !='' & formValues.message.length !=''){
+        if(formValues.honnyname.length !='' & formValues.honnyemail.length !='' & formValues.honnymessage.length !=''){
             event.preventDefault()
 
             setIsLoading(true)                      
@@ -96,7 +106,11 @@ const ContacthtmlForm = ({classes}) => {
                     setFormValues({
                         name: '',
                         email: '',
-                        message: '' 
+                        message: '',
+                        honnyname: '',
+                        honnyemail: '',
+                        honnymessage: '',
+                        fax: false 
                     })                                  
                     setCount(0)                    
                     switch (response.status) {
@@ -141,7 +155,6 @@ const ContacthtmlForm = ({classes}) => {
     
     return (
         <div className={classes}>
-            <SectionSubheader> We’re always ready for new and great challenges, so tell us about your exciting idea! Fill in the form below so we can reach you!</SectionSubheader>
             <ContentWrapper>
                 <MapWrapper>
                     <iframe
@@ -155,45 +168,70 @@ const ContacthtmlForm = ({classes}) => {
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2829.912127445988!2d20.40630131515939!3d44.82335478399543!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x475a6579cfc71f57%3A0xb1db7bd4fc85870e!2sBulevar%20Zorana%20%C4%90in%C4%91i%C4%87a%20116%2C%20Beograd%2011070!5e0!3m2!1sen!2srs!4v1609605711401!5m2!1sen!2srs">
                     </iframe>
                 </MapWrapper>
-                <FormBlock>                 
+                <FormBlock>   
+                    <FormIntro>We’re always ready for new and great challenges, so tell us all about your exciting idea! Fill in the form below so we can reach you!</FormIntro>              
                     {
                         conStatus
                         ? 
                         <>
-                            <FormIntro>Our doors are always open! Feel free to drop by and spot us in our natural habitat.</FormIntro>
                             <InputWrapper>
-                            <FormLabels>Name</FormLabels>
-                            <FInput
-                                id="name"
-                                type="text"
-                                name="name"
-                                maxLength="80"
-                                minLength="3"
-                                placeholder="Your name..."
-                                value={formValues.name}
-                                onChange={handleChange}
-                                error={showMessage}
-                            />
+                                <FormLabels>Name</FormLabels>
+                                <FInput
+                                    id="name"
+                                    type="text"
+                                    name={`name`}
+                                    maxLength="80"
+                                    minLength="3"
+                                    placeholder="Your name..."
+                                    value={formValues.name}
+                                    onChange={handleChange}
+                                    className="absolute"
+                                    style={{left:"3000px"}}
+                                />
+                                <FInput
+                                    id={`${SUFFIX}name`}
+                                    type="text"
+                                    name={`${SUFFIX}name`}
+                                    maxLength="80"
+                                    minLength="3"
+                                    placeholder="Your name..."
+                                    value={formValues.honnyname}
+                                    onChange={handleChange}
+                                    error={showMessage && alertMessage == 3}
+                                />
                             </InputWrapper>
                             <InputWrapper>
                                 <FormLabels>Email</FormLabels>
                                 <FInput
-                                    id="email"
+                                    id={`email`}
                                     type="email"
-                                    name="email"
+                                    name={`email`}
                                     maxLength="50"
                                     minLength="5"
                                     placeholder="Enter a valid email address"
                                     value={formValues.email}
                                     onChange={handleChange}
                                     error={showMessage}
+                                    className="absolute"
+                                    style={{left:"3000px"}}
+                                />
+                                <FInput
+                                    id={`${SUFFIX}email`}
+                                    type="email"
+                                    name={`${SUFFIX}email`}
+                                    maxLength="50"
+                                    minLength="5"
+                                    placeholder="Enter a valid email address"
+                                    value={formValues.honnyemail}
+                                    onChange={handleChange}
+                                    error={showMessage && alertMessage == 2}
                                 />
                             </InputWrapper>
                             <InputWrapper>
                                 <FormLabels>Message</FormLabels>
                                 <TInput
-                                    id="message"
-                                    name="message"
+                                    id={`message`}
+                                    name={`message`}
                                     type="text"
                                     maxLength="500"
                                     minLength="10"                            
@@ -201,11 +239,32 @@ const ContacthtmlForm = ({classes}) => {
                                     value={formValues.message}
                                     onChange={handleChange}
                                     error={showMessage}
+                                    className="absolute"
+                                    style={{left:"3000px"}}
+                                ></TInput>
+                                <TInput
+                                    id={`${SUFFIX}message`}
+                                    name={`${SUFFIX}message`}
+                                    type="text"
+                                    maxLength="500"
+                                    minLength="10"                            
+                                    placeholder="I'm interested in..."
+                                    value={formValues.honnymessage}
+                                    onChange={handleChange}
+                                    error={showMessage && alertMessage == 1 && formValues.honnymessage == ""}
                                 ></TInput>
                                 <Counter>{count}/500</Counter>
                             </InputWrapper>
+                            <input 
+                                type="checkbox" 
+                                name="contact_me_by_fax_only"
+                                className="absolute -top-full" 
+                                autoComplete="off"
+                                onChange={(event)=>setFormValues({...formValues,fax:event.target.checked})}
+                                >
+                            </input>
                             <div className="flex justify-center items-center">
-                                <Button type="submit" onClick={(event)=>!showMessage && handleSubmit(event)} className={formValues.name.trim() === "" || formValues.email.trim() === "" || formValues.message.trim() === "" || showMessage ? 'submit-button' : ''}>Send
+                                <Button type="submit" onClick={(event)=>!showMessage && !formValues.fax && handleSubmit(event)} className={formValues.honnyname.trim() === "" || formValues.honnyemail.trim() === "" || formValues.honnymessage.trim() === "" || showMessage ? 'submit-button' : ''}>Send
                                 <FiSend className="h-6 w-6 ml-2"/>
                                 </Button>
                                 {

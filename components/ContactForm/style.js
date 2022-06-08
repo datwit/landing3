@@ -7,7 +7,7 @@ export const FormBlock = styled.div.attrs({
     className: "w-full md:w-1/2 md:pl-6"
 })``;
 export const FormIntro = styled.p.attrs({
-    className: "text-base m-0 text-gray-600 text-justify"
+    className: "text-base my-4 text-gray-600 text-justify"
 })``;
 export const InputWrapper = styled.div.attrs({
     className: "relative"
@@ -41,6 +41,7 @@ export const FInput = styled.input.attrs({
 })
 `
 border-radius: 25px;
+${props => props.error && "border-color: red"};
 &:focus{
     border-width: 2px;
     border-color:${props => props.error ? "red" : "#e69c24"};

@@ -13,7 +13,7 @@ export function ValidateMessage(text) {
     }           
 }
 export function ValidateName(text){
-    const stringformat = /^[A-Za-zñáéíóú]+(\s+[A-Za-zñáéíóú]+)*$/ 
+    const stringformat = /^[A-Za-zñáéíóú ]+(\s+[A-Za-zñáéíóú]+)*$/ 
     if(text != ""){
         if(text.match(stringformat)){
             return false                                            
@@ -24,7 +24,7 @@ export function ValidateName(text){
     }
     else{
         return true            
-    }           
+    }  
 } 
 export function ValidateEmail(email) {
     const mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
