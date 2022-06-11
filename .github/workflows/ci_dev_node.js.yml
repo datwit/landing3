@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     env: 
      NEXT_PUBLIC_API_URL: https://iehjt4h109.execute-api.eu-west-1.amazonaws.com/prod/
-     NEXT_PUBLIC_FORM_SUFFIX: jsagr63434yoeltest
+     NEXT_PUBLIC_FORM_SUFFIX: jsagr63434
     strategy:
       matrix:
         node-version: [14.x]
