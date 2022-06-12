@@ -22,7 +22,7 @@ function MyApp({ Component, pageProps }) {
           location="bottom"
           containerClasses="cookies-consent"
           >
-          Al confirmar utilizaremos cookies para garantizar que obtengas la mejor experiencia en nuestro sitio web.     
+          Our site uses cookies to improve your experience and enable certain functionality. By continuing you agree to our use of cookies.     
           <Link href="/info/policy/" className="links-cookies-consent"> Privacy Policy</Link>
         </CookieConsent>
         <Component {...pageProps} />
