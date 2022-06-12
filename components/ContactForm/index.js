@@ -169,7 +169,7 @@ const ContacthtmlForm = ({classes}) => {
                     </iframe>
                 </MapWrapper>
                 <FormBlock>   
-                    <FormIntro>Fill in the form below so we can reach you!</FormIntro>              
+                    <FormIntro>We welcome your questions & ideas. Fill out the form and we'll be in touch as soon as possible!</FormIntro>              
                     {
                         conStatus
                         ? 
