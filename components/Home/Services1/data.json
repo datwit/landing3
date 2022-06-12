@@ -26,8 +26,8 @@
         "title": "Machine Learning Full Scope",
         "subtitle": "We can also offer you an end-to-end solution with:",
         "items":[
-            {"tit":"Increase your Data Management in self system"},
-            {"tit":"Improved your Data & Integrate through APIs"},
+            {"tit":"Increase your data management into your current systems"},
+            {"tit":"Improved your data & integrate it through new APIs"},
             {"tit":"ML infrastructure design for AWS cloud"},
             {"tit":"Web interfaces for man-in-the-loop AI systems"},
             {"tit":"Machine learning-related consulting services"}
