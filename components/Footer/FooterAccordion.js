@@ -1,10 +1,12 @@
 import React, {useState} from 'react'
 import { AccItem} from 'components/Partner/Faqs/style'
 import Link from 'next/link'
+import { useRouter } from 'next/router'
 import {AccordionFooterTitle,AccordionContent, AccordionTitleWrapperF, AccordionIconFooter, AccContWrapper} from './style'
 
 const FooterAccordion = ({ title, items }) => {
 
+	  const router = useRouter();
     const [opened, setOpened]=useState(false)
 
     return (
@@ -24,7 +26,7 @@ const FooterAccordion = ({ title, items }) => {
                       React.Children.toArray(
                           items.map(l =>(
                               <li className="list-none">
-                                <Link href={l.url}>{l.title}</Link>
+                                {router.pathname != l.url && <Link href={l.url}>{l.title}</Link>}
                               </li>
                           ))
                       )
