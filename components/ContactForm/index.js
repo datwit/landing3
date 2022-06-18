@@ -101,7 +101,7 @@ const ContacthtmlForm = ({classes}) => {
                         url: API_URL,
                         method: 'POST',
                         data: messageData,                    
-                    })                                                               
+                    })                                                              
                     setIsLoading(false), 
                     setFormValues({
                         name: '',
@@ -121,24 +121,23 @@ const ContacthtmlForm = ({classes}) => {
                                 setShowMessage(false) 
                             }, 4000)
                             break;                        
-                        //bad request
-                        case 400: 
-                            setAlertMessage(4)                                      
-                            setShowMessage(true)
-                            setTimeout(()=>{
-                                setShowMessage(false) 
-                            }, 4000)
-                            break;       
+                        //bad request     
                         default:
-                            setAlertMessage(5)                                      
+                            setAlertMessage(4)                                      
                             setShowMessage(true)
                             setTimeout(()=>{
                                 setShowMessage(false) 
                             }, 4000)
                             break;
                     }                            
-                } catch (e) {
-                    console.log(e);        
+                } catch (e) {                                             
+                    setIsLoading(false), 
+                    console.log(e);
+                    setAlertMessage(5)                                      
+                    setShowMessage(true)
+                    setTimeout(()=>{
+                        setShowMessage(false) 
+                    }, 6000)        
                 }                
             }       
             sendMessage(formValues)
