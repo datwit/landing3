@@ -20,7 +20,7 @@ const ContacthtmlForm = ({classes}) => {
     const [conStatus, setConStatus] = useState(false)
     // const [validate, setValidate] = useState(false)
     const [formValues,setFormValues] = useState({
-        name: 'asd',
+        name: '',
         email: '',
         message: '',
         [`${SUFFIX}email`]:"",
