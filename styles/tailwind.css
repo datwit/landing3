@@ -71,10 +71,12 @@
     right: 0px;
     margin: 25px;
     border-radius: 2px;
-    @media (max-width: 770px) {
+  }
+  @media only screen and (max-width: 770px) {
+    .cookies-consent{
       max-width: 90vw;
       margin: 40px 5vw;
-    }
+    }    
   }
   .cookies-consent button{
     background: #00baff !important;
