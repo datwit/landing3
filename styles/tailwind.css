@@ -78,15 +78,21 @@
       margin: 40px 5vw;
     }    
   }
-  .cookies-consent button{
-    background: #00baff !important;
-    color:white !important;
-    margin-top: 0px !important;
+  .decline-cookie-button{
+    padding: 3px 5px;
+    font-size: 14px;
   }
-  .cookies-consent button:hover{
-    background: #e69c24 !important;
-    color:white !important;
+  button.decline-cookie-button:hover{
+    color: #e69c24;
+    font-weight: bold;
   }
-  .cookies-consent a:hover{
-    color: #00baff !important;
+  .acept-cookie-button{
+    background: #00baff;
+    color:white;
+    margin: 0 0 15px 15px;
+    padding: 5px 10px;
+  }
+  button.acept-cookie-button:hover{
+    background: #e69c24;
+    color:white;
   }
