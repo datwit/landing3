@@ -57,6 +57,8 @@ We use cookies and other similar technologies to recognize your browser, learn m
 
 You can instruct your browser to refuse all cookies or to indicate when a cookie is being sent. However, if you do not accept cookies, you may not be able to use some portions of our services. We will inform you at the right time about the cookies we are using and what they are used for.
 
+Our website uses tools to measure your user experience. If you do not want your information to be collected, you may choose not to accept the consent alert (click on the X) but you will still have access to the site's information.
+
 Sharing Data
 ------------
 
