@@ -35,11 +35,11 @@ const Footer = () => {
                                             <HiOutlineMail />                                           
                                         </SocialListItem2>
                                     </Link>
-                                    <Link href="//wa.me/+381613141890">
+                                    {/* <Link href="//wa.me/+381613141890">
                                         <SocialListItem2>
                                             <SiWhatsapp />                                           
                                         </SocialListItem2>
-                                    </Link>
+                                    </Link> */}
                                 </ContactWrapper>
                             </div>
                         </ContactContainer>
@@ -70,9 +70,9 @@ const Footer = () => {
                                 <Link href="mailto:contact@datwit.com">
                                     <SocialListItem><HiOutlineMail/></SocialListItem>
                                 </Link>
-                                <Link href="//wa.me/+381613141890">
+                                {/* <Link href="//wa.me/+381613141890">
                                     <SocialListItem><SiWhatsapp /></SocialListItem>
-                                </Link>
+                                </Link> */}
                             </SocialList>
                         </ColumnContent>
                         {/*accordion*/}
