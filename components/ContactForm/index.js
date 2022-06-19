@@ -187,6 +187,7 @@ const ContacthtmlForm = ({classes}) => {
                                     className="absolute"
                                     style={{left:"3000px"}}
                                     autoComplete="off"
+                                    tabIndex="-1"
                                 />
                                 <FInput
                                     id={`${SUFFIX}name`}
@@ -215,6 +216,7 @@ const ContacthtmlForm = ({classes}) => {
                                     className="absolute"
                                     style={{left:"3000px"}}
                                     autoComplete="off"
+                                    tabIndex="-1"
                                 />
                                 <FInput
                                     id={`${SUFFIX}email`}
@@ -243,6 +245,7 @@ const ContacthtmlForm = ({classes}) => {
                                     className="absolute"
                                     style={{left:"3000px"}}
                                     autoComplete="off"
+                                    tabIndex="-1"
                                 ></TInput>
                                 <TInput
                                     id={`${SUFFIX}message`}
@@ -262,6 +265,7 @@ const ContacthtmlForm = ({classes}) => {
                                 name="contact_me_by_fax_only"
                                 className="absolute -top-full" 
                                 autoComplete="off"
+                                tabIndex="-1"
                                 onChange={(event)=>setFormValues({...formValues,fax:event.target.checked})}
                                 >
                             </input>
