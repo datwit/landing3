@@ -43,8 +43,8 @@
     "bundle":"DEV",
     "field":"ML FULL SCOPE",
     "style":"primary",
-    "month_init": "+6",
-    "month_end": "12",
+    "month_init": "6",
+    "month_end": "11",
     "cost": "$35",
     "description": "Including an end-to-end solution with a full operational infrastructure on AWS",
     "bullets": [
