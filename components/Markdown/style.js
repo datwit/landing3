@@ -46,6 +46,12 @@ pre {
     width: 100%;
     overflow: auto;
 }
+em{
+    &.caption{
+        font-size:10px;
+    }
+}
+
 img{
     @media (min-width: 1024px){  
     width:70%;
