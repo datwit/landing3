@@ -97,10 +97,12 @@ We build **sitemaps** for each kind of user, so we could understand the navigati
 For starters, we made hand-drawn **sketches** to save time and to get a rough idea of how the design might be evolving.
 
 <img src="/images/cases/sketches-all.png"/>
+<em className="caption">This work is licensed under Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License by Enma Lidia Muñoz García</em>
 
 Because we are introducing a new version for the Datwit landing page with a bunch of new functionalities, we thought it was better to make low-mid fidelity wireframes to test different kinds of visual components and see how the content will look.
 
 <img src="/images/cases/low-wiref.png"/>
+<em className="caption">This work is licensed under Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License by Enma Lidia Muñoz García</em>
 
 > Online website [**here**](https://www.datwit.com)
 > 

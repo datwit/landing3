@@ -1,7 +1,7 @@
 ---
 title: preprocess
 summary: preprocess is a python3 package for text preprocessing. Is based on NLTK, Stanford NLP models, and other less popular NLP python libraries.
-img: /images/cases/preprocess.svg
+img: /images/cases/preprocess.png
 tags: Data Science
 date: 2020-09-29T19:05:27.220Z
 author: Abel Meneses Abad 
@@ -105,5 +105,5 @@ The future changes of this library are based in the initial objectives:
 > To see the full Github study case go [**here**](https://github.com/datwit/preprocess)
 
 
-
+> The image of this work is licensed under Datwit LLC Copyright 
 

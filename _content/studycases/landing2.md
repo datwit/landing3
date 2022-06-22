@@ -39,16 +39,19 @@ We are trying to achieve with this version:
 #### **Color palette**
 Choosing the color palette proved to be a challenge and after many thoughts, de team settled with this:
 
-<img src="/images/cases/color_palette_oficial_white.svg"/>
+<img src="/images/cases/color_palette_oficial_white.png"/>
+<em className="caption">This image is licensed under Datwit LLC Copyright</em>
 
 #### **Logo**
 Then the next step was improving the logo. Going through this idea:
 
 <img src="/images/cases/evolucion_logo.png"/>
+<em className="caption">This image is licensed under Datwit LLC Copyright</em>
 
 We came up with this:
 
-<img src="/images/cases/logo-final.svg"/>
+<img src="/images/cases/logo-final.png"/>
+<em className="caption">This image is licensed under Datwit LLC Copyright</em>
 
 #### **Typography**
 
@@ -63,7 +66,9 @@ As the secondary typography, we stick to Roboto as the ideal material design cho
 We made hand-drawn sketches to save time and to see how the design might be evolving. From the first rough sketches, the design evolved to low-fi wireframes.
 
 <img src="/images/cases/sketches.png"/>
+<em className="caption">This work is licensed under Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License by Enma Lidia Muñoz García</em>
 <img src="/images/cases/landing-wireframes.png"/>
+<em className="caption">This work is licensed under Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License by Enma Lidia Muñoz García</em>
 
 > Github repository [**here**](https://github.com/datwit/landing)
 > 

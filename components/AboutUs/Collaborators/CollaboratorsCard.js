@@ -15,6 +15,7 @@ const CollaboratorsCard = ({name, designation, rol, twitter, linkedin, github, s
 
     return (
         <>
+            {/* <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img alt="Creative Commons License" src="https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License</a>. */}
             <img alt="team" className="flex-shrink-0 h-full w-full object-cover object-center" src={src}/>
             <SocialCard onMouseEnter={toggleHoverON} onMouseLeave={toggleHoverOFF} className={hover ? "h-full" : "h-7"}>
                 <ColName>{name}</ColName>
