@@ -1,9 +1,40 @@
 import React from 'react'
 
 const IntegrationSVG = () => {
+    const data = 
+    `
+    <title property="dc:title">Software integrations</title>
+    <metadata id="license"
+        xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+        xmlns:dc="http://purl.org/dc/elements/1.1/"
+        xmlns:cc="http://creativecommons.org/ns#">
+        <rdf:RDF>
+        <cc:Work rdf:about="">
+            <dc:creator>Enma Lidia Muñoz García</dc:creator>
+            <dc:contributor>Datwit</dc:contributor>
+            <dc:format>image/svg+xml</dc:format>
+            <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+            <cc:license rdf:resource="https://creativecommons.org/licenses/by-nc-sa/4.0/"/>
+        </cc:Work>
+        <cc:License rdf:about="https://creativecommons.org/licenses/by-nc-sa/4.0/">
+            <cc:permits rdf:resource="http://creativecommons.org/ns#Reproduction" />
+            <cc:permits rdf:resource="http://creativecommons.org/ns#Distribution" />
+            <cc:requires rdf:resource="http://creativecommons.org/ns#Notice" />
+            <cc:requires rdf:resource="http://creativecommons.org/ns#Attribution" />
+            <cc:permits rdf:resource="http://creativecommons.org/ns#DerivativeWorks" />
+            <cc:requires rdf:resource="http://creativecommons.org/ns#ShareAlike" />
+        </cc:License>
+        </rdf:RDF>
+    </metadata>
+    `;
+
     return (
+        
         <>
             <svg className="mx-auto resizes mb-5 sm:mb-0" viewBox="0 0 231 208" fill="none" xmlns="http://www.w3.org/2000/svg">
+                
+                <span dangerouslySetInnerHTML={{__html: data}} />
+                
                 <g id="2Recurso 1 1" clipPath="url(#clip0)">
                 <path id="Vector" d="M230.09 0H0.24C0.107452 0 0 0.107452 0 0.24V207.36C0 207.493 0.107452 207.6 0.24 207.6H230.09C230.223 207.6 230.33 207.493 230.33 207.36V0.24C230.33 0.107452 230.223 0 230.09 0Z" fill="white"/>
                 <g id="circle">

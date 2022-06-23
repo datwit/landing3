@@ -1,9 +1,39 @@
 import React from 'react'
 
 const AgileSVG = () => {
+    const data = 
+    `
+    <title property="dc:title">Agile</title>
+    <metadata id="license"
+        xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+        xmlns:dc="http://purl.org/dc/elements/1.1/"
+        xmlns:cc="http://creativecommons.org/ns#">
+        <rdf:RDF>
+        <cc:Work rdf:about="">
+            <dc:creator>Enma Lidia Muñoz García</dc:creator>
+            <dc:contributor>Datwit</dc:contributor>
+            <dc:format>image/svg+xml</dc:format>
+            <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+            <cc:license rdf:resource="https://creativecommons.org/licenses/by-nc-sa/4.0/"/>
+        </cc:Work>
+        <cc:License rdf:about="https://creativecommons.org/licenses/by-nc-sa/4.0/">
+            <cc:permits rdf:resource="http://creativecommons.org/ns#Reproduction" />
+            <cc:permits rdf:resource="http://creativecommons.org/ns#Distribution" />
+            <cc:requires rdf:resource="http://creativecommons.org/ns#Notice" />
+            <cc:requires rdf:resource="http://creativecommons.org/ns#Attribution" />
+            <cc:permits rdf:resource="http://creativecommons.org/ns#DerivativeWorks" />
+            <cc:requires rdf:resource="http://creativecommons.org/ns#ShareAlike" />
+        </cc:License>
+        </rdf:RDF>
+    </metadata>
+    `;
+    
     return (
         <>
             <svg className="mx-auto resizes" viewBox="0 0 231 208" fill="none" xmlns="http://www.w3.org/2000/svg">
+                
+                <span dangerouslySetInnerHTML={{__html: data}} />
+                
                 <g id="4Recurso 1 1" clipPath="url(#clip0)">
                 <path id="Vector" d="M230.09 0H0.24C0.107452 0 0 0.107452 0 0.24V207.36C0 207.493 0.107452 207.6 0.24 207.6H230.09C230.223 207.6 230.33 207.493 230.33 207.36V0.24C230.33 0.107452 230.223 0 230.09 0Z" fill="white"/>
                 <path id="Vector_2" fillRule="evenodd" clipRule="evenodd" d="M195.94 155C195.934 154.527 195.788 154.066 195.521 153.675C195.254 153.284 194.877 152.981 194.438 152.804C193.999 152.627 193.517 152.584 193.054 152.68C192.59 152.776 192.165 153.007 191.833 153.344C191.5 153.68 191.274 154.108 191.184 154.573C191.094 155.037 191.143 155.518 191.326 155.955C191.508 156.392 191.816 156.765 192.21 157.028C192.604 157.29 193.067 157.43 193.54 157.43C194.18 157.425 194.792 157.166 195.242 156.711C195.692 156.255 195.943 155.64 195.94 155V155Z" stroke="#E69C24" strokeWidth="2.83" strokeMiterlimit="22.93"/>

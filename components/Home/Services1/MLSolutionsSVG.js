@@ -1,9 +1,39 @@
 import React from 'react'
 
 const MLSolutionsSVG = () => {
+    const data = 
+    `
+    <title property="dc:title">Machine Learning</title>
+    <metadata id="license"
+        xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+        xmlns:dc="http://purl.org/dc/elements/1.1/"
+        xmlns:cc="http://creativecommons.org/ns#">
+        <rdf:RDF>
+        <cc:Work rdf:about="">
+            <dc:creator>Enma Lidia Muñoz García</dc:creator>
+            <dc:contributor>Datwit</dc:contributor>
+            <dc:format>image/svg+xml</dc:format>
+            <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+            <cc:license rdf:resource="https://creativecommons.org/licenses/by-nc-sa/4.0/"/>
+        </cc:Work>
+        <cc:License rdf:about="https://creativecommons.org/licenses/by-nc-sa/4.0/">
+            <cc:permits rdf:resource="http://creativecommons.org/ns#Reproduction" />
+            <cc:permits rdf:resource="http://creativecommons.org/ns#Distribution" />
+            <cc:requires rdf:resource="http://creativecommons.org/ns#Notice" />
+            <cc:requires rdf:resource="http://creativecommons.org/ns#Attribution" />
+            <cc:permits rdf:resource="http://creativecommons.org/ns#DerivativeWorks" />
+            <cc:requires rdf:resource="http://creativecommons.org/ns#ShareAlike" />
+        </cc:License>
+        </rdf:RDF>
+    </metadata>
+    `;
+
     return (
         <>         
             <svg className="mx-auto resizes1" viewBox="0 0 267 159" fill="none" xmlns="http://www.w3.org/2000/svg">
+                
+                <span dangerouslySetInnerHTML={{__html: data}} />
+
                 <g id="Frame 1">
                 <path id="Vector" d="M266.17 0H0V158.74H266.17V0Z" fill="white"/>
                 <path id="Vector_2" opacity="0.15" fillRule="evenodd" clipRule="evenodd" d="M233.078 24H232.922C232.677 24 232.443 23.8946 232.27 23.7071C232.097 23.5196 232 23.2652 232 23C232 22.7348 232.097 22.4804 232.27 22.2929C232.443 22.1054 232.677 22 232.922 22H233.078C233.323 22 233.557 22.1054 233.73 22.2929C233.903 22.4804 234 22.7348 234 23C234 23.2652 233.903 23.5196 233.73 23.7071C233.557 23.8946 233.323 24 233.078 24Z" fill="#002B36"/>

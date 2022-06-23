@@ -1,8 +1,38 @@
 import React from 'react'
 
 const HeartSVG = () => {
+    const data = 
+    `
+    <title property="dc:title">Make an impact</title>
+    <metadata id="license"
+        xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+        xmlns:dc="http://purl.org/dc/elements/1.1/"
+        xmlns:cc="http://creativecommons.org/ns#">
+        <rdf:RDF>
+        <cc:Work rdf:about="">
+            <dc:creator>Enma Lidia Muñoz García</dc:creator>
+            <dc:contributor>Datwit</dc:contributor>
+            <dc:format>image/svg+xml</dc:format>
+            <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+            <cc:license rdf:resource="https://creativecommons.org/licenses/by-nc-sa/4.0/"/>
+        </cc:Work>
+        <cc:License rdf:about="https://creativecommons.org/licenses/by-nc-sa/4.0/">
+            <cc:permits rdf:resource="http://creativecommons.org/ns#Reproduction" />
+            <cc:permits rdf:resource="http://creativecommons.org/ns#Distribution" />
+            <cc:requires rdf:resource="http://creativecommons.org/ns#Notice" />
+            <cc:requires rdf:resource="http://creativecommons.org/ns#Attribution" />
+            <cc:permits rdf:resource="http://creativecommons.org/ns#DerivativeWorks" />
+            <cc:requires rdf:resource="http://creativecommons.org/ns#ShareAlike" />
+        </cc:License>
+        </rdf:RDF>
+    </metadata>
+    `;
+
     return (
         <svg className="sizing" viewBox="0 0 84 84" fill="none" xmlns="http://www.w3.org/2000/svg">
+            
+            <span dangerouslySetInnerHTML={{__html: data}} />
+            
             <g id="3Recurso 1 1" clipPath="url(#clip0)">
             <path id="Vector" d="M83.62 0H0V83.68H83.62V0Z" fill="white"/>
             <path id="Vector_2" fillRule="evenodd" clipRule="evenodd" d="M24.94 50.74V49.74C23.78 49.55 24.41 48.94 23.5 48L19 38C17.5 35.5 16.87 32.56 19.5 30.5C22.5 29 23.31 30 24.74 32.26L29.55 40C30.21 41.06 31.84 42.57 32.07 43.75C35.23 38.3 43.44 32.91 44 32.52C45.7751 31.2603 47.6515 30.1498 49.61 29.2C53.61 26.25 57.94 23.32 62.49 22.06C63.67 21.73 64.63 23.35 65.81 23.59C66.99 23.83 68.08 23.35 69.07 23.68C70.06 24.01 70.01 25.55 70.88 26.16C71.75 26.77 73.37 26.16 74.19 26.72C75.53 27.57 75.19 29.72 75.98 31.34C79.12 33.97 74.29 38.28 72.65 40.26C71.01 42.24 67.45 45.16 61.81 48.75C57.9561 51.1273 53.7893 52.955 49.43 54.18L50 81.77H24.63L24.94 50.74Z" fill="#FDD1AB"/>
