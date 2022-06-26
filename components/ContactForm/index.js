@@ -155,18 +155,14 @@ const ContacthtmlForm = ({classes}) => {
     return (
         <div className={classes}>
             <ContentWrapper>
-                <MapWrapper>
-                    <iframe
-                        width="100%"
-                        height="100%"
-                        frameBorder="0"
-                        title="map"
-                        marginHeight="0"
-                        marginWidth="0"
-                        scrolling="no"
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2829.912127445988!2d20.40630131515939!3d44.82335478399543!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x475a6579cfc71f57%3A0xb1db7bd4fc85870e!2sBulevar%20Zorana%20%C4%90in%C4%91i%C4%87a%20116%2C%20Beograd%2011070!5e0!3m2!1sen!2srs!4v1609605711401!5m2!1sen!2srs">
-                    </iframe>
-                </MapWrapper>
+                <div className='w-full md:w-1/2'>
+                    <a href='https://www.google.com/maps/place/Street+Jorge+Gil+105,+Panama+City,+Panama' target="_blank" rel="noopener noreferrer">
+                        <img 
+                            src="/images/map.jpg"
+                            alt="Picture of the address"
+                            />
+                    </a>
+                </div>
                 <FormBlock>   
                     <FormIntro>We welcome your questions & ideas. Fill out the form and we'll be in touch as soon as possible!</FormIntro>              
                     {
