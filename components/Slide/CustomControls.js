@@ -69,7 +69,8 @@ const CustomControls = ({ slidesCount, scrollToSlide, onNext, onPrev, getCurrent
           const buttonProps = {
               disabled: currentSlideIndex === i,
               key: i,
-              id: "control",
+              name: `Go to slide ${i}`,
+              id: `control${i}`,
               onClick: () => scrollToSlide(i),
               className: 'has-tooltip'
           };

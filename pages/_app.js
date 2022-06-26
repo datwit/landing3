@@ -24,12 +24,18 @@ function MyApp({ Component, pageProps }) {
         handleAcceptCookie();
       }
     }, []);
-       
-    <Head>
-        <link rel="shortcut icon" href="/favicon.ico" />
-    </Head>
+    
     return (
-      <>
+      <>   
+        <Head>
+            <link rel="shortcut icon" href="/favicon.ico" />
+            <link rel="manifest" href="/manifest.json"></link>
+            <meta name="description" content="Machine learning solutions from A-Z to help companies expand their possibilities." />
+            <meta name="robots" content="index, nofollow" />
+            <meta name="language" content="English" />
+            <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+            <meta name="theme-color" content='#ffffff' />
+        </Head>
         <CookieConsent
           onAccept={handleAcceptCookie}
           enableDeclineButton={true}

@@ -4,7 +4,7 @@ export const NavigationWrapper = styled.div.attrs({
     className: ""
 })
 `
-#control{   
+#control0,#control1,#control2,#control3,#control4,#control5,#control6,#control7,#control8{   
 margin-bottom:15px ;
 width: 15px;
 height: 15px;   
