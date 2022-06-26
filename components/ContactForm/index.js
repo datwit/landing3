@@ -117,27 +117,18 @@ const ContacthtmlForm = ({classes}) => {
                         case 201:
                             setAlertMessage(0)                                      
                             setShowMessage(true)
-                            setTimeout(()=>{
-                                setShowMessage(false) 
-                            }, 4000)
                             break;                        
                         //bad request     
                         default:
                             setAlertMessage(4)                                      
                             setShowMessage(true)
-                            setTimeout(()=>{
-                                setShowMessage(false) 
-                            }, 4000)
                             break;
                     }                            
                 } catch (e) {                                             
                     setIsLoading(false), 
                     console.log(e);
                     setAlertMessage(5)                                      
-                    setShowMessage(true)
-                    setTimeout(()=>{
-                        setShowMessage(false) 
-                    }, 6000)        
+                    setShowMessage(true)       
                 }                
             }       
             sendMessage(formValues)
@@ -166,7 +157,7 @@ const ContacthtmlForm = ({classes}) => {
                 <FormBlock>   
                     <FormIntro>We welcome your questions & ideas. Fill out the form and we'll be in touch as soon as possible!</FormIntro>              
                     {
-                        conStatus
+                        !conStatus
                         ? 
                         <>
                             <InputWrapper>
