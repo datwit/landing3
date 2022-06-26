@@ -67,17 +67,17 @@ const CustomControls = ({ slidesCount, scrollToSlide, onNext, onPrev, getCurrent
 
       for (let i = 0; i < slidesCount; i++) {
           const buttonProps = {
-              disabled: currentSlideIndex === i,
+              //disabled: currentSlideIndex === i,
               key: i,
               name: `Go to slide ${i}`,
               id: `control${i}`,
               onClick: () => scrollToSlide(i),
-              className: 'has-tooltip'
+              className: `has-tooltip ${currentSlideIndex === i && "disabled"}`
           };
           const toolProps = {
               className: "tooltip shadow-lg ml-5 bg-bggray text-primary px-3 py-2"
           }
-          slidesNumbers.push(<button {...buttonProps}><span {...toolProps}>{tip[i]}</span></button>);
+          slidesNumbers.push(<div {...buttonProps}><span {...toolProps}>{tip[i]}</span></div>);
       }
       return slidesNumbers;
     }
