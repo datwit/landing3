@@ -5,9 +5,5 @@ module.exports = {
     webpack: config => {
         config.resolve.modules.push(path.resolve('./'))
         return config
-    },
-    i18n: {
-      locales: ["en"],
-      defaultLocale: "en",
-    },
+    }
 }
