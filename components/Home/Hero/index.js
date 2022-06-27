@@ -11,9 +11,9 @@ const Hero = ()=>(
                 <br/>
                 solutions from A to Z!
               </h1>
-              <h4>
+              <p className='text-base md:text-lg leading-6 font-medium text-black text-opacity-70 text-center'>
                 Bring your idea we will make it real!
-              </h4>              
+              </p>              
               <CTA buttonName={'Contact us'} hhref='/contact'>
                   <FiSend className="h-6 w-6 text-white ml-2"/>                
               </CTA>              

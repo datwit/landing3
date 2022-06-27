@@ -30,30 +30,34 @@ const Footer = () => {
                             <div className="w-2/4">
                                 <ColumnTitle>CONTACT US</ColumnTitle>
                                 <ContactWrapper>
-                                    <Link href="mailto:contact@datwit.com">
-                                        <SocialListItem2>
-                                            <HiOutlineMail />                                           
-                                        </SocialListItem2>
-                                    </Link>
-                                    {/* <Link href="//wa.me/+381613141890">
-                                        <SocialListItem2>
-                                            <SiWhatsapp />                                           
-                                        </SocialListItem2>
-                                    </Link> */}
+                                    <SocialList>
+                                        <Link href="mailto:contact@datwit.com">
+                                            <SocialListItem2>
+                                                <HiOutlineMail />                                           
+                                            </SocialListItem2>
+                                        </Link>
+                                        {/* <Link href="//wa.me/+381613141890">
+                                            <SocialListItem2>
+                                                <SiWhatsapp />                                           
+                                            </SocialListItem2>
+                                        </Link> */}
+                                    </SocialList>
                                 </ContactWrapper>
                             </div>
                         </ContactContainer>
                         <FooterAccordionContainer>
                             <AccordionList>
-                            {
-                                React.Children.toArray(
-                                    links.map(lik=>(
-                                        <li {...{ className: 'accordion-list__item' }}>
-                                            <FooterAccordion {...lik} />
-                                        </li>
-                                    ))
-                                )
-                            }
+                                <ul>
+                                    {
+                                        React.Children.toArray(
+                                            links.map(lik=>(
+                                                <li {...{ className: 'accordion-list__item' }}>
+                                                    <FooterAccordion {...lik} />
+                                                </li>
+                                            ))
+                                        )
+                                    }
+                                </ul>
                             </AccordionList>
                         </FooterAccordionContainer>
                     </div>
@@ -77,15 +81,17 @@ const Footer = () => {
                         </ColumnContent>
                         {/*accordion*/}
                             <AccordionList>
-                            {
-                                React.Children.toArray(
-                                    links.map(lik=>(
-                                        <li {...{ className: 'accordion-list__item' }}>
-                                            <FooterAccordion {...lik} />
-                                        </li>
-                                    ))
-                                )
-                            }
+                                <ul>
+                                    {
+                                        React.Children.toArray(
+                                            links.map(lik=>(
+                                                <li {...{ className: 'accordion-list__item' }}>
+                                                    <FooterAccordion {...lik} />
+                                                </li>
+                                            ))
+                                        )
+                                    }
+                                </ul>
                             </AccordionList>
                     </FooterLinksWrapper>
                 </div>
