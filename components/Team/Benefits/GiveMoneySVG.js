@@ -1,8 +1,38 @@
 import React from 'react'
 
 const GiveMoneySVG = () => {
+    const data = 
+    `
+    <title property="dc:title">Give money</title>
+    <metadata id="license"
+        xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+        xmlns:dc="http://purl.org/dc/elements/1.1/"
+        xmlns:cc="http://creativecommons.org/ns#">
+        <rdf:RDF>
+        <cc:Work rdf:about="">
+            <dc:creator>Enma Lidia Muñoz García</dc:creator>
+            <dc:contributor>Datwit</dc:contributor>
+            <dc:format>image/svg+xml</dc:format>
+            <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+            <cc:license rdf:resource="https://creativecommons.org/licenses/by-nc-sa/4.0/"/>
+        </cc:Work>
+        <cc:License rdf:about="https://creativecommons.org/licenses/by-nc-sa/4.0/">
+            <cc:permits rdf:resource="http://creativecommons.org/ns#Reproduction" />
+            <cc:permits rdf:resource="http://creativecommons.org/ns#Distribution" />
+            <cc:requires rdf:resource="http://creativecommons.org/ns#Notice" />
+            <cc:requires rdf:resource="http://creativecommons.org/ns#Attribution" />
+            <cc:permits rdf:resource="http://creativecommons.org/ns#DerivativeWorks" />
+            <cc:requires rdf:resource="http://creativecommons.org/ns#ShareAlike" />
+        </cc:License>
+        </rdf:RDF>
+    </metadata>
+    `;
+    
     return (
         <svg className="sizing"  viewBox="0 0 84 84" fill="none" xmlns="http://www.w3.org/2000/svg">
+            
+            <span dangerouslySetInnerHTML={{__html: data}} />
+
             <g id="3 1Recurso 1 1" clipPath="url(#clip0)">
             <path id="Vector" d="M83.62 0H0V83.68H83.62V0Z" fill="white"/>
             <path id="Vector_2" fillRule="evenodd" clipRule="evenodd" d="M29.82 2C29.74 5.79 29 8.81 29.05 13C26.31 15.79 25.43 19.83 25.05 22.91L25.58 73.35H26.39C27.05 75 28 76 29.28 76C30.44 76 31.46 75 32.08 73.39H33.24C33.72 75.93 35.36 77.79 37.05 77.77C38.73 77.77 40.17 75.98 40.81 73.45H41.2V73.82C41.2 78.55 43.15 82.39 45.51 82.37C47.87 82.37 49.79 78.46 49.78 73.74V73.52L50.22 66.9C50.82 70.05 54.96 78.9 56.59 78.83C58.14 78.72 59.36 76.54 59.72 73.6H60.15L60.39 41.46L65.07 51.71C66.07 53.96 67.91 54.88 70.07 54L71.73 53.33C73.92 52.45 73.38 48 72.16 45.86L59.89 24.3C59.5258 23.6879 59.0221 23.1705 58.42 22.79C57.0874 19.5543 54.9869 16.6919 52.3 14.45L53 4.09L38 2.71L29.82 2Z" fill="#F7B698"/>

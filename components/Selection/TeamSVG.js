@@ -1,8 +1,38 @@
 import React from 'react'
 
 const TeamSVG = () => {
+    const data = 
+    `
+    <title property="dc:title">Team</title>
+    <metadata id="license"
+        xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+        xmlns:dc="http://purl.org/dc/elements/1.1/"
+        xmlns:cc="http://creativecommons.org/ns#">
+        <rdf:RDF>
+        <cc:Work rdf:about="">
+            <dc:creator>Enma Lidia Muñoz García</dc:creator>
+            <dc:contributor>Datwit</dc:contributor>
+            <dc:format>image/svg+xml</dc:format>
+            <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+            <cc:license rdf:resource="https://creativecommons.org/licenses/by-nc-sa/4.0/"/>
+        </cc:Work>
+        <cc:License rdf:about="https://creativecommons.org/licenses/by-nc-sa/4.0/">
+            <cc:permits rdf:resource="http://creativecommons.org/ns#Reproduction" />
+            <cc:permits rdf:resource="http://creativecommons.org/ns#Distribution" />
+            <cc:requires rdf:resource="http://creativecommons.org/ns#Notice" />
+            <cc:requires rdf:resource="http://creativecommons.org/ns#Attribution" />
+            <cc:permits rdf:resource="http://creativecommons.org/ns#DerivativeWorks" />
+            <cc:requires rdf:resource="http://creativecommons.org/ns#ShareAlike" />
+        </cc:License>
+        </rdf:RDF>
+    </metadata>
+    `;
+
     return (
         <svg className="mx-auto resizes" width="273" height="148" viewBox="0 0 273 148" fill="none" xmlns="http://www.w3.org/2000/svg">
+            
+            <span dangerouslySetInnerHTML={{__html: data}} />
+            
             <g id="team 1">
             <g id="Group 1">
             <path id="Vector" fillRule="evenodd" clipRule="evenodd" d="M167.937 59.7366H168.685V45.1814H167.909C165.354 45.1814 163.262 46.6784 163.262 48.5048V56.4321C163.291 58.2397 165.382 59.7366 167.937 59.7366Z" fill="#FDD6C1" stroke="#3F4042" strokeWidth="2.3" strokeLinecap="round" strokeLinejoin="round"/>

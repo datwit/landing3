@@ -1,6 +1,36 @@
 const FoundersIllustration = () => {
+    const data = 
+    `
+    <title property="dc:title">Datwit team</title>
+    <metadata id="license"
+        xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+        xmlns:dc="http://purl.org/dc/elements/1.1/"
+        xmlns:cc="http://creativecommons.org/ns#">
+        <rdf:RDF>
+        <cc:Work rdf:about="">
+            <dc:creator>Enma Lidia Muñoz García</dc:creator>
+            <dc:contributor>Datwit</dc:contributor>
+            <dc:format>image/svg+xml</dc:format>
+            <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+            <cc:license rdf:resource="https://creativecommons.org/licenses/by-nc-sa/4.0/"/>
+        </cc:Work>
+        <cc:License rdf:about="https://creativecommons.org/licenses/by-nc-sa/4.0/">
+            <cc:permits rdf:resource="http://creativecommons.org/ns#Reproduction" />
+            <cc:permits rdf:resource="http://creativecommons.org/ns#Distribution" />
+            <cc:requires rdf:resource="http://creativecommons.org/ns#Notice" />
+            <cc:requires rdf:resource="http://creativecommons.org/ns#Attribution" />
+            <cc:permits rdf:resource="http://creativecommons.org/ns#DerivativeWorks" />
+            <cc:requires rdf:resource="http://creativecommons.org/ns#ShareAlike" />
+        </cc:License>
+        </rdf:RDF>
+    </metadata>
+    `;
+
     return (        
         <svg className="mx-auto resizes" viewBox="0 0 524 537" fill="none" xmlns="http://www.w3.org/2000/svg">
+            
+            <span dangerouslySetInnerHTML={{__html: data}} />
+            
             <g id="2Recurso 3 1" clipPath="url(#clip0)">
             <path id="Vector" fillRule="evenodd" clipRule="evenodd" d="M156.52 23.92C129.76 35.27 99.71 44 87.35 73.18C67.42 120.05 92.88 166.51 71.1 212.83C58.46 239.58 60.47 234.46 35.47 265.74C5.76 303 -11.59 366.69 14.34 416.7C34.08 454.9 71.18 469.94 102.73 482.76C113.62 487.19 185.73 515.43 254.24 491.76C270.66 486.14 277.31 478.02 291.33 479.4C325.33 482.91 330.33 528.21 361.33 535.59C387.33 541.78 417.61 517.88 436.71 493.89C440.323 489.342 443.681 484.598 446.77 479.68C463.38 447.68 476.77 410.68 480.26 373.57C481.12 364.336 481.337 355.054 480.91 345.79C479.16 322.17 474.36 299.2 459.91 278.25C433.91 238.11 394.31 206.65 394.12 156.64C393.01 149.07 392.28 141.23 391.54 133.29C387.76 93.43 384.54 50.71 345.13 25.29C293 -8.12001 252.7 -4.41001 200.2 13.31C191.52 16 163.9 20.78 156.52 23.92Z" fill="#FBF9F9"/>
             <path id="Vector_2" fillRule="evenodd" clipRule="evenodd" d="M362.12 281.08H267.29L270.84 269.88C272.68 264.07 282.4 259.88 293.78 259.88H335.64C347.02 259.88 356.74 264.14 358.58 269.88L362.12 281.08Z" fill="#E59A24"/>
