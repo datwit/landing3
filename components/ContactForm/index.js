@@ -157,7 +157,7 @@ const ContacthtmlForm = ({classes}) => {
                 <FormBlock>   
                     <FormIntro>We welcome your questions & ideas. Fill out the form and we'll be in touch as soon as possible!</FormIntro>              
                     {
-                        !conStatus
+                        conStatus
                         ? 
                         <>
                             <InputWrapper>
