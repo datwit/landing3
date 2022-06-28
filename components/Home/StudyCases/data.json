@@ -5,7 +5,7 @@
         "title": "API flalq using Flask and SQLAlchemy",
         "author": "Danay Meneses Abad",
         "summary": "API flalq uses the structure from the MySQL Basic Tutorial database. Developed with Flask, SQLAlchemy (not Flask_SQLAlchemy), marshmallow, unittest and mysql db.",
-        "img": "/images/cases/flalq.svg",
+        "img": "/images/cases/flalq.png",
         "tags": "Data Science",
         "date": "2021-05-08T19:05:27.220Z",
         "reading": 15
@@ -15,7 +15,7 @@
         "title": "preprocess",
         "author": "Abel Meneses Abad",
         "summary": "preprocess is a python3 package for text preprocessing. Is based on NLTK, Stanford NLP models, and other less popular NLP python libraries.",
-        "img": "/images/cases/preprocess.svg",
+        "img": "/images/cases/preprocess.png",
         "tags": "Data Science",
         "date": "2020-09-29T19:05:27.220Z",
         "reading": 10

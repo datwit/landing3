@@ -33,7 +33,7 @@ function MyApp({ Component, pageProps }) {
             <meta name="description" content="Machine learning solutions from A-Z to help companies expand their possibilities." />
             <meta name="robots" content="index, nofollow" />
             <meta name="language" content="English" />
-            <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+            <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
             <meta name="theme-color" content='#ffffff' />
         </Head>
         <CookieConsent
