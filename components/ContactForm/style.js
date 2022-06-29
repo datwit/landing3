@@ -7,13 +7,13 @@ export const FormBlock = styled.div.attrs({
     className: "w-full md:w-1/2 md:pl-6"
 })``;
 export const FormIntro = styled.p.attrs({
-    className: "text-base my-4 text-gray-600 text-justify"
+    className: "text-base mb-4 text-justify mt-0"
 })``;
 export const InputWrapper = styled.div.attrs({
     className: "relative"
 })``;
 export const ExplanationForm = styled.p.attrs({
-    className: "text-xs text-gray-600 mt-3 text-center"
+    className: "text-xs mt-3 text-center"
 })
 `
 height: 33px;
@@ -33,7 +33,7 @@ svg{
 }
 `;
 export const Counter = styled.p.attrs({
-    className: "text-xs text-gray-600 mt-1 text-right"
+    className: "text-xs mt-1 text-right"
 })
 ``;
 export const FInput = styled.input.attrs({
