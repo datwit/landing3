@@ -1,10 +1,13 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react'
 
-export function MetaSVG(){
-   
-}
 
 function DataManagSVG() {
+    const [mounted, setMounted] = useState(false);
+
+    useEffect(() => {
+        setMounted(true)
+    }, [])
+
     const data = 
     `
     <title property="dc:title">Data Engineering</title>
@@ -33,8 +36,9 @@ function DataManagSVG() {
     `;
 
     return (
-        <>
-            <svg className="mx-auto resizes" viewBox="0 0 267 159" fill="none" xmlns="http://www.w3.org/2000/svg">
+        
+        mounted && 
+            <svg className="mx-auto resizes" viewBox="0 0 267 159" fill="none"      xmlns="http://www.w3.org/2000/svg">
 
                 <span dangerouslySetInnerHTML={{__html: data}} />
 
@@ -113,9 +117,8 @@ function DataManagSVG() {
                 <rect width="266.17" height="158.74" fill="white"/>
                 </clipPath>
                 </defs>
-            </svg>           
-        </>
-    )
+            </svg>          
+        )
 }
 
 export {DataManagSVG}
