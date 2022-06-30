@@ -1,6 +1,12 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react'
 
 const AgileSVG = () => {
+    const [mounted, setMounted] = useState(false);
+
+    useEffect(() => {
+        setMounted(true)
+    }, [])
+
     const data = 
     `
     <title property="dc:title">Agile</title>
@@ -29,8 +35,9 @@ const AgileSVG = () => {
     `;
     
     return (
-        <>
-            <svg className="mx-auto resizes" viewBox="0 0 231 208" fill="none" xmlns="http://www.w3.org/2000/svg">
+        
+        mounted && 
+        <svg className="mx-auto resizes" viewBox="0 0 231 208" fill="none" xmlns="http://www.w3.org/2000/svg">
                 
                 <span dangerouslySetInnerHTML={{__html: data}} />
                 
@@ -71,8 +78,7 @@ const AgileSVG = () => {
                 </clipPath>
                 </defs>
             </svg>  
-        </>
-    )
+        )
 }
 
 export { AgileSVG }

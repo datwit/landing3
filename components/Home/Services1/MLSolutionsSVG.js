@@ -1,6 +1,12 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react'
 
 const MLSolutionsSVG = () => {
+    const [mounted, setMounted] = useState(false);
+
+    useEffect(() => {
+        setMounted(true)
+    }, [])
+
     const data = 
     `
     <title property="dc:title">Machine Learning</title>
@@ -29,7 +35,8 @@ const MLSolutionsSVG = () => {
     `;
 
     return (
-        <>         
+        
+        mounted &&         
             <svg className="mx-auto resizes1" viewBox="0 0 267 159" fill="none" xmlns="http://www.w3.org/2000/svg">
                 
                 <span dangerouslySetInnerHTML={{__html: data}} />
@@ -108,8 +115,7 @@ const MLSolutionsSVG = () => {
                 <path id="Vector_69" fillRule="evenodd" clipRule="evenodd" d="M46.9989 51.3868C46.9769 51.0955 46.8702 50.8171 46.6919 50.5856C46.5137 50.354 46.2716 50.1795 45.9955 50.0835C45.7194 49.9874 45.4212 49.9739 45.1376 50.0447C44.8539 50.1155 44.5971 50.2675 44.3987 50.482C44.2003 50.6966 44.0689 50.9643 44.0206 51.2523C43.9723 51.5404 44.0093 51.8363 44.127 52.1036C44.2446 52.371 44.4379 52.5983 44.683 52.7575C44.9281 52.9167 45.2144 53.001 45.5068 53C45.9185 52.9828 46.3066 52.8034 46.5862 52.5011C46.8659 52.1988 47.0143 51.7981 46.9989 51.3868V51.3868Z" fill="#B2B4B5"/>
                 </g>
             </svg>       
-        </>
-    )
+        )
 }
 
 export {MLSolutionsSVG}

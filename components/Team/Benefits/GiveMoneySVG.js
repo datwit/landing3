@@ -1,6 +1,12 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react'
 
 const GiveMoneySVG = () => {
+    const [mounted, setMounted] = useState(false);
+
+    useEffect(() => {
+        setMounted(true)
+    }, [])
+
     const data = 
     `
     <title property="dc:title">Give money</title>
@@ -29,6 +35,8 @@ const GiveMoneySVG = () => {
     `;
     
     return (
+        
+        mounted && 
         <svg className="sizing"  viewBox="0 0 84 84" fill="none" xmlns="http://www.w3.org/2000/svg">
             
             <span dangerouslySetInnerHTML={{__html: data}} />
