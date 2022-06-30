@@ -2,10 +2,10 @@
     {
         "id":"q1",
         "question": "What can you help me with?",
-        "answer": "When it comes to machine learning, model development, feature development, monitoring, and deployment across all three major cloud providers.",
+        "answer": "When it comes to machine learning, the creation of new features that describe better your business, AI model development, then monitoring, and deployment across major cloud providers.",
         "list":[
-            {"title":"Analyzing and documenting customer business processes, target potential customers, create product roadmaps, work on product features."},
-            {"title":"Suggesting similar solutions already active on the market to benchmark against."},
+            {"title":"Analyzing and documenting customer business processes, targeting potential customers, create product roadmaps, work on product features."},
+            {"title":"Suggesting similar solutions already active on the market to benchmark against or to reuse."},
             {"title":"In terms of solutions development, provide an A to Z approach to clients, a holistic understanding of the data lifecycle and experience working on each portion of it; data acquisition, data engineering, smart data processing and analytics, data visualization (frontend, backend, graphics, and UI/UX design), and technical support skills."}
         ],
         "link": "",
@@ -15,7 +15,7 @@
     {
         "id":"q2",
         "question": "How can I become a Datwit partner?",
-        "answer": "We are excited to know you want to join us! We would really like to get to know your business and discuss the possibilities of our future collaboration. Please, go ahead and contact us through any of the following ways: by our online form, e-mail [contact@datwit.com], or by reaching out to our partner line [call: 1-800-WIT+]. We will be happy to meet and discuss what we can do together. Just be sure to bring a detailed plan for your idea(s) to showcase how it will improve our customer success.",
+        "answer": "We are excited to know you want to join us! We would really like to get to know your business and discuss the possibilities of our future collaboration. Please, go ahead and contact us through any of the following ways: by our online form or e-mail [contact@datwit.com]. We will be happy to meet and discuss what we can do together. Just be sure to bring a detailed plan for your idea(s) to showcase how it will improve your customer success.",
         "list":[],
         "link": "",
         "clases": "hidden"
@@ -33,10 +33,10 @@
     {
         "id":"q4",
         "question": "How long will it take for you to finish my app?",
-        "answer": "Project timing is not an exact science. To give you a reasonable answer we must prepare a project scope, create deadlines, and a budget. We will tell you how much of that scope will need to be completed within the budget and time constraints. We'll be able to estimate how long it will take after at least a month of work.",
+        "answer": "Project timing is not an exact science. To give you a reasonable answer we must prepare a project scope, create deadlines, and a budget. We will tell you how much of that scope will need to be completed within the budget and time constraints. We'll be able to estimate how long it will take after at least a month of work. An approximate period of the duration of the project, based on previous experiences, can be found in the Pricing section",
         "list":[],
-        "link": "",
-        "clases": "hidden"
+        "link": "/pricing",
+        "clases": "text-gray-500 font-semibold"
     },
     {
         "id":"q5",
@@ -81,7 +81,7 @@
     {
         "id":"q10",
         "question": " What technologies do you use? Are there any reasons why you have chosen these particular technologies?",
-        "answer": "For the back end we use Python which gives the developers a lot of possibilities when it comes to prototyping, allowing them to take advantage of ready-to-use components and speeding up the development process. Indeed - the first results are visible almost immediately. Python is also a superb language when it comes to machine learning. We use React.js for the front end because it is perfect for a wide range of projects, enabling fast iterations, implementations, prototyping and creating a proof of concept. It’s simple and scalable. A widely adopted library all over the development world.",
+        "answer": "For the back end we use Python which gives the developers a lot of possibilities when it comes to prototyping, allowing them to take advantage of ready-to-use components and speeding up the development process. Indeed - the first results are visible almost immediately. Python is also a superb language when it comes to machine learning. We use React.js for the frontend because it is perfect for a wide range of projects, enabling fast iterations, implementations, prototyping and creating a proof of concept. It’s simple and scalable. A widely adopted library all over the development world.",
         "list":[],
         "link": "",
         "clases": "hidden"
