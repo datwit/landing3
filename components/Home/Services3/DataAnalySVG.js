@@ -1,6 +1,12 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react'
 
 const DataAnalySVG = () => {
+    const [mounted, setMounted] = useState(false);
+
+    useEffect(() => {
+        setMounted(true)
+    }, [])
+
     const data = 
     `
     <title property="dc:title">Data Analysis</title>
@@ -29,8 +35,9 @@ const DataAnalySVG = () => {
     `;
 
     return (
-        <>       
-          <svg className="mx-auto resizes1" viewBox="0 0 267 159" fill="none" xmlns="http://www.w3.org/2000/svg">
+
+        mounted &&       
+            <svg className="mx-auto resizes1" viewBox="0 0 267 159" fill="none" xmlns="http://www.w3.org/2000/svg">
                 
                 <span dangerouslySetInnerHTML={{__html: data}} />
 
@@ -132,7 +139,6 @@ const DataAnalySVG = () => {
                 </clipPath>
                 </defs>
             </svg>
-        </>
     )
 }
 

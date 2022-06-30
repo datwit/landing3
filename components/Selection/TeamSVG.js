@@ -1,6 +1,12 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react'
 
 const TeamSVG = () => {
+    const [mounted, setMounted] = useState(false);
+
+    useEffect(() => {
+        setMounted(true)
+    }, [])
+
     const data = 
     `
     <title property="dc:title">Team</title>
@@ -29,6 +35,8 @@ const TeamSVG = () => {
     `;
 
     return (
+        
+        mounted && 
         <svg className="mx-auto resizes" width="273" height="148" viewBox="0 0 273 148" fill="none" xmlns="http://www.w3.org/2000/svg">
             
             <span dangerouslySetInnerHTML={{__html: data}} />

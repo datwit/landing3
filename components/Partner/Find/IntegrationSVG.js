@@ -1,6 +1,12 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react'
 
 const IntegrationSVG = () => {
+    const [mounted, setMounted] = useState(false);
+
+    useEffect(() => {
+        setMounted(true)
+    }, [])
+
     const data = 
     `
     <title property="dc:title">Software integrations</title>
@@ -30,7 +36,7 @@ const IntegrationSVG = () => {
 
     return (
         
-        <>
+        mounted &&
             <svg className="mx-auto resizes mb-5 sm:mb-0" viewBox="0 0 231 208" fill="none" xmlns="http://www.w3.org/2000/svg">
                 
                 <span dangerouslySetInnerHTML={{__html: data}} />
@@ -92,8 +98,7 @@ const IntegrationSVG = () => {
                 </clipPath>
                 </defs>
             </svg>            
-        </>
-    )
+        )
 }
 
 export { IntegrationSVG }
