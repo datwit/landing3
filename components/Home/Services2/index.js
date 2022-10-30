@@ -10,7 +10,7 @@ const Services2 = ({classes}) => {
 
     return (
         <div className={classes}>
-            <SectionHeader>Machine Learning solutions from A to Z</SectionHeader>
+            <SectionHeader>Data Preparation Services</SectionHeader>
             <ContentWrapper>
                 <IllWrapper>
                     <DataManagSVG />

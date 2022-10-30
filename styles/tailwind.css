@@ -7,7 +7,7 @@
 @layer base{
     @font-face {
       font-family: 'Numans';
-      src: url('../public/fonts/Numans-Regular.ttf') format('truetype');
+      src: url('/fonts/Numans-Regular.ttf') format('truetype');
     }
     /*main header hero section*/
     h1{
@@ -59,3 +59,40 @@
     box-sizing: border-box;
   } 
   
+  .cookies-consent {
+    font-size: 14px;
+    line-height: 18px;
+    background: white !important;
+    color: #374151 !important;
+    left: inherit !important;
+    display: block !important;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    max-width: 400px;
+    right: 0px;
+    margin: 25px;
+    border-radius: 2px;
+  }
+  @media only screen and (max-width: 770px) {
+    .cookies-consent{
+      max-width: 90vw;
+      margin: 40px 5vw;
+    }    
+  }
+  .decline-cookie-button{
+    padding: 3px 5px;
+    font-size: 14px;
+  }
+  button.decline-cookie-button:hover{
+    color: #e69c24;
+    font-weight: bold;
+  }
+  .acept-cookie-button{
+    background: #00baff;
+    color:white;
+    margin: 0 0 15px 15px;
+    padding: 5px 10px;
+  }
+  button.acept-cookie-button:hover{
+    background: #e69c24;
+    color:white;
+  }

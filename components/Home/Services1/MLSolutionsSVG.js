@@ -1,9 +1,46 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react'
 
 const MLSolutionsSVG = () => {
+    const [mounted, setMounted] = useState(false);
+
+    useEffect(() => {
+        setMounted(true)
+    }, [])
+
+    const data = 
+    `
+    <title property="dc:title">Machine Learning</title>
+    <metadata id="license"
+        xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+        xmlns:dc="http://purl.org/dc/elements/1.1/"
+        xmlns:cc="http://creativecommons.org/ns#">
+        <rdf:RDF>
+        <cc:Work rdf:about="">
+            <dc:creator>Enma Lidia Muñoz García</dc:creator>
+            <dc:contributor>Datwit</dc:contributor>
+            <dc:format>image/svg+xml</dc:format>
+            <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+            <cc:license rdf:resource="https://creativecommons.org/licenses/by-nc-sa/4.0/"/>
+        </cc:Work>
+        <cc:License rdf:about="https://creativecommons.org/licenses/by-nc-sa/4.0/">
+            <cc:permits rdf:resource="http://creativecommons.org/ns#Reproduction" />
+            <cc:permits rdf:resource="http://creativecommons.org/ns#Distribution" />
+            <cc:requires rdf:resource="http://creativecommons.org/ns#Notice" />
+            <cc:requires rdf:resource="http://creativecommons.org/ns#Attribution" />
+            <cc:permits rdf:resource="http://creativecommons.org/ns#DerivativeWorks" />
+            <cc:requires rdf:resource="http://creativecommons.org/ns#ShareAlike" />
+        </cc:License>
+        </rdf:RDF>
+    </metadata>
+    `;
+
     return (
-        <>         
+        
+        mounted &&         
             <svg className="mx-auto resizes1" viewBox="0 0 267 159" fill="none" xmlns="http://www.w3.org/2000/svg">
+                
+                <span dangerouslySetInnerHTML={{__html: data}} />
+
                 <g id="Frame 1">
                 <path id="Vector" d="M266.17 0H0V158.74H266.17V0Z" fill="white"/>
                 <path id="Vector_2" opacity="0.15" fillRule="evenodd" clipRule="evenodd" d="M233.078 24H232.922C232.677 24 232.443 23.8946 232.27 23.7071C232.097 23.5196 232 23.2652 232 23C232 22.7348 232.097 22.4804 232.27 22.2929C232.443 22.1054 232.677 22 232.922 22H233.078C233.323 22 233.557 22.1054 233.73 22.2929C233.903 22.4804 234 22.7348 234 23C234 23.2652 233.903 23.5196 233.73 23.7071C233.557 23.8946 233.323 24 233.078 24Z" fill="#002B36"/>
@@ -78,8 +115,7 @@ const MLSolutionsSVG = () => {
                 <path id="Vector_69" fillRule="evenodd" clipRule="evenodd" d="M46.9989 51.3868C46.9769 51.0955 46.8702 50.8171 46.6919 50.5856C46.5137 50.354 46.2716 50.1795 45.9955 50.0835C45.7194 49.9874 45.4212 49.9739 45.1376 50.0447C44.8539 50.1155 44.5971 50.2675 44.3987 50.482C44.2003 50.6966 44.0689 50.9643 44.0206 51.2523C43.9723 51.5404 44.0093 51.8363 44.127 52.1036C44.2446 52.371 44.4379 52.5983 44.683 52.7575C44.9281 52.9167 45.2144 53.001 45.5068 53C45.9185 52.9828 46.3066 52.8034 46.5862 52.5011C46.8659 52.1988 47.0143 51.7981 46.9989 51.3868V51.3868Z" fill="#B2B4B5"/>
                 </g>
             </svg>       
-        </>
-    )
+        )
 }
 
 export {MLSolutionsSVG}

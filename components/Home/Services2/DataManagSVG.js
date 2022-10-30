@@ -1,9 +1,47 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react'
+
 
 function DataManagSVG() {
+    const [mounted, setMounted] = useState(false);
+
+    useEffect(() => {
+        setMounted(true)
+    }, [])
+
+    const data = 
+    `
+    <title property="dc:title">Data Engineering</title>
+    <metadata id="license"
+        xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+        xmlns:dc="http://purl.org/dc/elements/1.1/"
+        xmlns:cc="http://creativecommons.org/ns#">
+        <rdf:RDF>
+        <cc:Work rdf:about="">
+            <dc:creator>Enma Lidia Muñoz García</dc:creator>
+            <dc:contributor>Datwit</dc:contributor>
+            <dc:format>image/svg+xml</dc:format>
+            <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+            <cc:license rdf:resource="https://creativecommons.org/licenses/by-nc-sa/4.0/"/>
+        </cc:Work>
+        <cc:License rdf:about="https://creativecommons.org/licenses/by-nc-sa/4.0/">
+            <cc:permits rdf:resource="http://creativecommons.org/ns#Reproduction" />
+            <cc:permits rdf:resource="http://creativecommons.org/ns#Distribution" />
+            <cc:requires rdf:resource="http://creativecommons.org/ns#Notice" />
+            <cc:requires rdf:resource="http://creativecommons.org/ns#Attribution" />
+            <cc:permits rdf:resource="http://creativecommons.org/ns#DerivativeWorks" />
+            <cc:requires rdf:resource="http://creativecommons.org/ns#ShareAlike" />
+        </cc:License>
+        </rdf:RDF>
+    </metadata>
+    `;
+
     return (
-        <>
-            <svg className="mx-auto resizes" viewBox="0 0 267 159" fill="none" xmlns="http://www.w3.org/2000/svg">
+        
+        mounted && 
+            <svg className="mx-auto resizes" viewBox="0 0 267 159" fill="none"      xmlns="http://www.w3.org/2000/svg">
+
+                <span dangerouslySetInnerHTML={{__html: data}} />
+
                 <g id="6Recurso 1 1" clipPath="url(#clip0)">
                 <path id="Vector" d="M266.17 0H0V158.74H266.17V0Z" fill="white"/>
                 <path id="Vector_2" fillRule="evenodd" clipRule="evenodd" d="M62.57 8.26001H172.19C172.215 8.26129 172.239 8.26748 172.262 8.27823C172.285 8.28898 172.305 8.30408 172.322 8.32266C172.338 8.34124 172.351 8.36293 172.359 8.3865C172.368 8.41007 172.371 8.43505 172.37 8.46001V115.25C172.371 115.275 172.368 115.3 172.359 115.324C172.351 115.347 172.338 115.369 172.322 115.387C172.305 115.406 172.285 115.421 172.262 115.432C172.239 115.443 172.215 115.449 172.19 115.45H62.57C62.5454 115.449 62.5214 115.443 62.4993 115.432C62.4772 115.421 62.4576 115.406 62.4417 115.387C62.4258 115.368 62.4139 115.346 62.4067 115.323C62.3995 115.299 62.3972 115.274 62.4 115.25V8.46001C62.3972 8.43557 62.3995 8.41082 62.4067 8.38729C62.4139 8.36376 62.4258 8.34196 62.4417 8.32321C62.4576 8.30447 62.4772 8.28919 62.4993 8.27832C62.5214 8.26745 62.5454 8.26122 62.57 8.26001V8.26001Z" fill="#ADADAD" stroke="#4B4B4D" strokeWidth="5.36" strokeMiterlimit="22.93"/>
@@ -79,9 +117,8 @@ function DataManagSVG() {
                 <rect width="266.17" height="158.74" fill="white"/>
                 </clipPath>
                 </defs>
-            </svg>           
-        </>
-    )
+            </svg>          
+        )
 }
 
 export {DataManagSVG}

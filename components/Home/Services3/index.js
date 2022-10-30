@@ -11,7 +11,7 @@ const Services3 = ({classes}) => {
 
     return (
         <div className={classes}>
-            <SectionHeader>Wait...there's more...</SectionHeader>
+            <SectionHeader>Turnkey Solutions</SectionHeader>
             <ContentWrapper>
                 <IllWrapper3>
                     <DataAnalySVG />

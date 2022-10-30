@@ -11,7 +11,7 @@ const Services1 = ({classes}) => {
 
     return (
         <div className={classes}>
-            <SectionHeader>Machine Learning solutions from A to Z</SectionHeader>
+            <SectionHeader>ML Models Services</SectionHeader>
                 <ContentWrapper>
                     <IllWrapper2>
                         <MLSolutionsSVG />

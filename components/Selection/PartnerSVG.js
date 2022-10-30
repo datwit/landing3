@@ -1,8 +1,46 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react'
 
 const PartnerSVG = () => {
+    const [mounted, setMounted] = useState(false);
+
+    useEffect(() => {
+        setMounted(true)
+    }, [])
+    
+    const data = 
+    `
+    <title property="dc:title">Partner</title>
+    <metadata id="license"
+        xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+        xmlns:dc="http://purl.org/dc/elements/1.1/"
+        xmlns:cc="http://creativecommons.org/ns#">
+        <rdf:RDF>
+        <cc:Work rdf:about="">
+            <dc:creator>Enma Lidia Muñoz García</dc:creator>
+            <dc:contributor>Datwit</dc:contributor>
+            <dc:format>image/svg+xml</dc:format>
+            <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+            <cc:license rdf:resource="https://creativecommons.org/licenses/by-nc-sa/4.0/"/>
+        </cc:Work>
+        <cc:License rdf:about="https://creativecommons.org/licenses/by-nc-sa/4.0/">
+            <cc:permits rdf:resource="http://creativecommons.org/ns#Reproduction" />
+            <cc:permits rdf:resource="http://creativecommons.org/ns#Distribution" />
+            <cc:requires rdf:resource="http://creativecommons.org/ns#Notice" />
+            <cc:requires rdf:resource="http://creativecommons.org/ns#Attribution" />
+            <cc:permits rdf:resource="http://creativecommons.org/ns#DerivativeWorks" />
+            <cc:requires rdf:resource="http://creativecommons.org/ns#ShareAlike" />
+        </cc:License>
+        </rdf:RDF>
+    </metadata>
+    `;
+
     return (
+
+        mounted &&
         <svg className="mx-auto resizes" width="273" height="148" viewBox="0 0 273 148" fill="none" xmlns="http://www.w3.org/2000/svg">
+            
+            <span dangerouslySetInnerHTML={{__html: data}} />
+            
             <g id="partner 1" clipPath="url(#clip0)">
             <g id="Group 1">
             <path id="Vector" fillRule="evenodd" clipRule="evenodd" d="M176.238 72.842V126.741C176.238 135.121 169.114 141.975 160.409 141.975H22.5466C13.8421 141.975 6.71761 135.121 6.71761 126.741V72.842C8.09166 75.548 10.1959 77.8199 12.7944 79.4029C15.393 80.986 18.3833 81.8177 21.4301 81.8048H161.525C164.573 81.8187 167.563 80.9875 170.162 79.4043C172.761 77.8212 174.865 75.5487 176.238 72.842V72.842Z" fill="#B2B4B5"/>

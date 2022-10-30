@@ -16,7 +16,7 @@ const Members = ({classes}) => {
     return (
         <CarouselWrapper className={classes}>
             <SectionHeader>Meet our team</SectionHeader>
-            <SectionSubheader>We are a group of data scientists, engineers, and designers with a passion for our work and dreams like you....</SectionSubheader>            
+            <SectionSubheader>We are people who are passionate about designing quality smart applications.</SectionSubheader>            
             <ContentWrapper>
                 <Carousel itemsToShow={3} breakPoints={breakPoints} onTouchMove={e => e.stopPropagation()}>
                 {

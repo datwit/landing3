@@ -1,8 +1,46 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react'
 
 const SignYesSVG = () => {
+    const [mounted, setMounted] = useState(false);
+
+    useEffect(() => {
+        setMounted(true)
+    }, [])
+
+    const data = 
+    `
+    <title property="dc:title">Saying yes</title>
+    <metadata id="license"
+        xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+        xmlns:dc="http://purl.org/dc/elements/1.1/"
+        xmlns:cc="http://creativecommons.org/ns#">
+        <rdf:RDF>
+        <cc:Work rdf:about="">
+            <dc:creator>Enma Lidia Muñoz García</dc:creator>
+            <dc:contributor>Datwit</dc:contributor>
+            <dc:format>image/svg+xml</dc:format>
+            <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+            <cc:license rdf:resource="https://creativecommons.org/licenses/by-nc-sa/4.0/"/>
+        </cc:Work>
+        <cc:License rdf:about="https://creativecommons.org/licenses/by-nc-sa/4.0/">
+            <cc:permits rdf:resource="http://creativecommons.org/ns#Reproduction" />
+            <cc:permits rdf:resource="http://creativecommons.org/ns#Distribution" />
+            <cc:requires rdf:resource="http://creativecommons.org/ns#Notice" />
+            <cc:requires rdf:resource="http://creativecommons.org/ns#Attribution" />
+            <cc:permits rdf:resource="http://creativecommons.org/ns#DerivativeWorks" />
+            <cc:requires rdf:resource="http://creativecommons.org/ns#ShareAlike" />
+        </cc:License>
+        </rdf:RDF>
+    </metadata>
+    `;
+
     return (
+        
+        mounted &&
         <svg className="sizing" viewBox="0 0 84 84" fill="none" xmlns="http://www.w3.org/2000/svg">
+            
+            <span dangerouslySetInnerHTML={{__html: data}} />
+            
             <g id="2Recurso 1 2" clipPath="url(#clip0)">
             <path id="Vector" d="M83.62 0H0V83.68H83.62V0Z" fill="white"/>
             <path id="Vector_2" fillRule="evenodd" clipRule="evenodd" d="M1.59 72.17C5.4 72.17 6.23 72.33 10.39 72.26C13.19 74.88 18.18 77.11 19.66 77.15C24.35 77.95 31.01 77.8 35.71 77.54L70.31 74.27C70.6871 71.9989 70.6871 69.6811 70.31 67.41V41H31.49C28.4 42.34 19.89 39.65 11.62 49L1.25 50.88L1.59 72.17Z" fill="#FDD6C1"/>

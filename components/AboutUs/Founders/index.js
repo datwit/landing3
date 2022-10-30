@@ -15,7 +15,7 @@ const Founders = ({classes}) => {
     return (
         <CarouselWrapper className={classes}>
             <SectionHeader>Founders</SectionHeader>
-            <SectionSubheader>Our amazing collaborators are helping Datwit become a cutting-edge company</SectionSubheader>
+            <SectionSubheader>Our leaders are constant, they bring experience in development and management effort.</SectionSubheader>
             <ContentWrapper>                
                 <Carousel itemsToShow={3} breakPoints={breakPoints} onTouchMove={e => e.stopPropagation()}>
                     {

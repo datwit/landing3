@@ -1,9 +1,46 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react'
 
 const DataAnalySVG = () => {
+    const [mounted, setMounted] = useState(false);
+
+    useEffect(() => {
+        setMounted(true)
+    }, [])
+
+    const data = 
+    `
+    <title property="dc:title">Data Analysis</title>
+    <metadata id="license"
+        xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+        xmlns:dc="http://purl.org/dc/elements/1.1/"
+        xmlns:cc="http://creativecommons.org/ns#">
+        <rdf:RDF>
+        <cc:Work rdf:about="">
+            <dc:creator>Enma Lidia Muñoz García</dc:creator>
+            <dc:contributor>Datwit</dc:contributor>
+            <dc:format>image/svg+xml</dc:format>
+            <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+            <cc:license rdf:resource="https://creativecommons.org/licenses/by-nc-sa/4.0/"/>
+        </cc:Work>
+        <cc:License rdf:about="https://creativecommons.org/licenses/by-nc-sa/4.0/">
+            <cc:permits rdf:resource="http://creativecommons.org/ns#Reproduction" />
+            <cc:permits rdf:resource="http://creativecommons.org/ns#Distribution" />
+            <cc:requires rdf:resource="http://creativecommons.org/ns#Notice" />
+            <cc:requires rdf:resource="http://creativecommons.org/ns#Attribution" />
+            <cc:permits rdf:resource="http://creativecommons.org/ns#DerivativeWorks" />
+            <cc:requires rdf:resource="http://creativecommons.org/ns#ShareAlike" />
+        </cc:License>
+        </rdf:RDF>
+    </metadata>
+    `;
+
     return (
-        <>       
-          <svg className="mx-auto resizes1" viewBox="0 0 267 159" fill="none" xmlns="http://www.w3.org/2000/svg">
+
+        mounted &&       
+            <svg className="mx-auto resizes1" viewBox="0 0 267 159" fill="none" xmlns="http://www.w3.org/2000/svg">
+                
+                <span dangerouslySetInnerHTML={{__html: data}} />
+
                 <g id="8Recurso 1 1" clipPath="url(#clip0)">
                 <path id="Vector" d="M266.17 0H0V158.74H266.17V0Z" fill="white"/>
                 <path id="Vector_2" fillRule="evenodd" clipRule="evenodd" d="M151.172 134.346L149.8 116H127.24L125.867 134.346C125.403 138.791 123.317 142.914 120 145.941V146H157V145.941C153.698 142.908 151.626 138.785 151.172 134.346V134.346Z" fill="#EAEAEC"/>
@@ -102,7 +139,6 @@ const DataAnalySVG = () => {
                 </clipPath>
                 </defs>
             </svg>
-        </>
     )
 }
 

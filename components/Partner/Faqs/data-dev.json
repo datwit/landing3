@@ -2,7 +2,7 @@
     {
         "id":"q1",
         "question": "How can I become a Datwit team member?",
-        "answer": "It's great you want to join us! We would really like to get to know you as a part of our family. Please get in touch with us real-time using this phone number: +586987410",
+        "answer": "It's great you want to join us! We would really like to get to know you as a part of our family. Please get in touch with us real-time go ahead and contact us through any of the following ways: by our online form or e-mail [contact@datwit.com].",
         "list":[],
         "link": "",
         "clases": "hidden"
@@ -11,7 +11,7 @@
     {
         "id":"q2",
         "question": "What are the main industries we serve?",
-        "answer": "To provide the best services in the market we mainly focus our software development services on product development for several primary industries like: smart applications...",
+        "answer": "To provide the best services in the market we mainly focus our software development services on product development for several primary industries like: healthcare smart applications, renuevable energies smart monitoring and some agricultural smart applications.",
         "list":[],
         "link": "",
         "clases": "hidden"
@@ -20,17 +20,14 @@
     {
         "id":"q3",
         "question": "What technologies do we use in software development?",
-        "answer": "Our team includes only high-experienced professionals who have experience in different software development fields such as:",
+        "answer": "Our team includes only high-experienced professionals who have expertice in different software technologies such as:",
         "list":[
             {"title":"Python"},
-            {"title":"JavaScript"},
+            {"title":"Torch & Sklearn"},
+            {"title":"AWS CDK & Azure ML"},
+            {"title":"Next.js"},
             {"title":"React.js"},
-            {"title":"Bootstrap"},
-            {"title":"Tailwindcss"},
-            {"title":"Bulma"},
-            {"title":"HTML 5"},
-            {"title":"CSS 3"},
-            {"title":"Web API Services"}
+            {"title":"Tailwindcss"}
         ],
         "link": "",
         "clases": "hidden"
@@ -38,7 +35,7 @@
     {
         "id":"q4",
         "question": "What software development methodologies do we use?",
-        "answer": "All our development and software testing processes are running while adhering to highly effective methodologies including Agile, Scrum, DevOps, and other methodologies to meet the highest KPIs in every project. We also document all the operations required to handle the development just to ensure the optimum project lifecycle.",
+        "answer": "All our development and software testing processes are running while adhering to highly effective methodologies including Agile, Scrum, DevOps, and other methodologies to meet the highest KPIs in every project. We also document all the operations required to handle the development just to ensure the optimum project lifecycle. Our team have some experience using Team Data Science Process (TDSP), the Microsoft agile methodology to deliver intelligent apps.",
         "list":[],
         "link": "",
         "clases": "hidden"
@@ -46,15 +43,19 @@
     {
         "id":"q5",
         "question": "Which is your payment method?",
-        "answer": "Incididunt cillum anim voluptate magna ad qui ad velit reprehenderit ea. Aliqua tempor magna et quis ex mollit elit pariatur Lorem do pariatur. Culpa adipisicing aliquip dolore aute consequat tempor exercitation qui ut consectetur. Ex sunt occaecat aliquip anim excepteur ipsum nulla mollit. Magna labore occaecat consequat tempor et enim. Incididunt sit elit sit sunt voluptate.Magna enim occaecat voluptate Lorem laboris deserunt. Exercitation laborum eu non non labore. Cillum excepteur sunt commodo do aliqua esse dolor anim. Ullamco cupidatat adipisicing magna eiusmod. Exercitation cupidatat do do fugiat non ex laboris non exercitation ea culpa esse.Lorem incididunt labore esse elit. Ea sit qui fugiat qui reprehenderit. Mollit officia aliqua qui velit.Ullamco cillum exercitation eiusmod nostrud magna sunt ut ea ipsum id. Aliquip incididunt laboris veniam labore aute commodo mollit laborum officia ea ipsum ipsum labore. Cupidatat eiusmod velit consectetur ipsum velit. Duis minim est aliqua consectetur consequat voluptate enim cupidatat labore elit elit.",
-        "list":[],
+        "answer": "In our company we use the following payment methods:",        
+        "list":[
+            {"title": "Credit cards. Those that use online security features like encryption and fraud monitoring to keep your accounts and personal information safe."},
+            {"title": "Direct debit and bank transfer to Datwit bank account."},
+            {"title": "Payment apps. Payment apps like PayPal, Google Pay and Apple Pay"}
+        ],
         "link": "",
         "clases": "hidden"
     },
     {
         "id":"q6",
         "question": "Where are your HQ and employees located?",
-        "answer": "Our headquarters and some of our employees are located in Serbia, the rest of our people is in Cuba. So we are pretty open to remote work as long as there's a real commitment and job philosophy.",
+        "answer": "Our headquarters and some of our employees are located in Spain and Serbia. So we are pretty open to remote work as long as there's a real commitment and job philosophy.",
         "list":[],
         "link": "",
         "clases": "hidden"

@@ -2,7 +2,7 @@
 title: API flalq using Flask and SQLAlchemy
 summary: API flalq uses the structure from the MySQL Basic Tutorial database. Developed with Flask, SQLAlchemy (not Flask_SQLAlchemy), marshmallow, unittest and mysql db.  
 tags: Data Science
-img: /images/cases/flalq.svg
+img: /images/cases/flalq.png
 date: 2021-05-08T19:05:27.220Z
 author: Danay Meneses Abad
 reading: 15 
@@ -21,11 +21,11 @@ config.py file.
 
 Configure the variable FLASK_ENV in development mode in the activate.bat file of the environment, as follows:
 
-    `set "FLASK_ENV=development"*`
+    set "FLASK_ENV=development"*
 
 Running on your console:
 
-    `python run.py`
+    python run.py
 
 The tables in the database will be created instantly.
 
@@ -60,11 +60,11 @@ To add data, for example an office, the query would be as follows:
 
 First, set *FLASK_ENV* in test mode:
 
-    `set "FLASK_ENV=testing"*`
+    set "FLASK_ENV=testing"*
 
 Then, run each unit test as follows :
 
-    `python -m unittest api/tests/offices.py`
+    python -m unittest api/tests/offices.py
 
 In this project, Coverage (Coverage Documentation) has also been used. It monitors the program, noting which parts of the code have been executed. Then, it analyzes the source to identify code that could have been executed but was not. Coverage measurement is typically used to gauge the effectiveness of tests. It can show which parts of your code are being exercised by tests, and which are not.
 
@@ -86,3 +86,5 @@ There is another way to show this result and it is the html report:
 
 
 > To see the full Github study case go [**here**](https://github.com/datwit/flalq)
+
+> The image of this work is licensed under Datwit LLC Copyright 
