@@ -46,11 +46,11 @@ const About = () => {
                             </Section>
                         </Slide>
 
-                        <Slide>
+                        {/* <Slide>
                             <Section classes={'w-full h-screen'}>
                                 <Founders classes={"container px-5 mx-auto relative top-2/4 transform -translate-y-2/4"}/>
                             </Section>
-                        </Slide>
+                        </Slide> */}
 
                         <Slide>
                             <Section classes={'w-full h-screen'}>
