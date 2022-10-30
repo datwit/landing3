@@ -276,7 +276,7 @@ const ContacthtmlForm = ({classes}) => {
                         <ConnectionWarning>
                             <div className="md:absolute md:transform md:-translate-y-2/4 md:top-2/4">
                                 <FiAlertTriangle/>
-                                <p>Our contact form is temporarily unavailable. We hope you can comeback later</p>
+                                <p>Our contact form is temporarily unavailable. Please, come back later.</p>
                             </div>
                            
                         </ConnectionWarning>  
