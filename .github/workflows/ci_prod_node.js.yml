@@ -14,7 +14,7 @@ jobs:
     
     env:
       NEXT_PUBLIC_FORM_SUFFIX: hd623ndsu
-      NEXT_PUBLIC_API_URL: https://k3u5jqlag4.execute-api.eu-west-1.amazonaws.com/prod/
+      NEXT_PUBLIC_API_URL: https://d6tg45n2y3.execute-api.eu-west-1.amazonaws.com/prod/
 
     steps:
       - uses: actions/checkout@v2
