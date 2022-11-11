@@ -1,7 +1,8 @@
 ---
 title: API flalq using Flask and SQLAlchemy
 summary: API flalq uses the structure from the MySQL Basic Tutorial database. Developed with Flask, SQLAlchemy (not Flask_SQLAlchemy), marshmallow, unittest and mysql db.  
-tags: Data Science
+tags: 
+    - Data Science
 img: /images/cases/flalq.png
 date: 2021-05-08T19:05:27.220Z
 author: Danay Meneses Abad

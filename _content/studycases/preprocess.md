@@ -2,7 +2,8 @@
 title: preprocess
 summary: preprocess is a python3 package for text preprocessing. Is based on NLTK, Stanford NLP models, and other less popular NLP python libraries.
 img: /images/cases/preprocess.png
-tags: Data Science
+tags: 
+    - Data Science
 date: 2020-09-29T19:05:27.220Z
 author: Abel Meneses Abad 
 reading: 10 
