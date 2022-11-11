@@ -51,11 +51,13 @@ const AllStudyCases = () =>{
                     <img className="object-cover object-center res-img" src={item.img} alt="" />
                     <BlogCardBlock>
                         <div>
-                        <Link href={`/studycases/search?p=${item.tags.toLowerCase()}`}>
-                            <CategoryRect>{item.tags}
+                        {item.tags.map((tag) => (
+                        <Link href={`/studycases/search?p=${tag.toLowerCase()}`}>
+                            <CategoryRect>{tag}
                             <FiBookmark />
                             </CategoryRect>
                         </Link>
+                        ))}
                         <p className="text-sm text-gray-500 m-0 text-left pt-1">{` ―  ${item.reading} min read`}</p>
                         </div>
                         <div>

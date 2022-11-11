@@ -45,7 +45,8 @@ const CasesResults = () => {
     const cat = router.query.p
     const results = cat != null 
         ?
-        cases.filter(post => post.tags.toLowerCase().includes(cat)) 
+        // cases.filter(post => post.tags.toLowerCase().includes(cat)) 
+        cases.filter(post => post.tags.some( tag => tag.toLowerCase().includes(cat)))
         : 
         []
 
