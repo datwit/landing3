@@ -76,4 +76,4 @@ We made hand-drawn sketches to save time and to see how the design might be evol
 
 > Github repository [**here**](https://github.com/datwit/landing)
 > 
-> To see all the images and the full study case go [**here**](https://www.notion.so/Datwit-landing-page-v2-0-ac659c4768e94011b1ad897d0e6c49a3)
+> To see all the images and the full study case go [**here**](https://github.com/datwit/landing/tree/master/static/images)
