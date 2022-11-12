@@ -2,34 +2,38 @@
 title: preprocess
 summary: preprocess is a python3 package for text preprocessing. Is based on NLTK, Stanford NLP models, and other less popular NLP python libraries.
 img: /images/cases/preprocess.png
+category: Data Analysis
 tags: 
-    - Data Science
+    - text
+    - python
+    - wrangling
 date: 2020-09-29T19:05:27.220Z
 author: Abel Meneses Abad 
 reading: 10 
 ---
 
 
-preprocess is a Python3 package for text preprocessing. It is based on NLTK, Stanford NLP models, and other less popular NLP Python libraries.
+`Preprocess` is a python 3 package for text preprocessing. It is based on `NLTK`, `Stanford NLP` models, and other less known NLP Python libraries.
 
-preprocess was created as a personal project in 2014 to facilitate my PhD experiments. Currently, it is just a library that simplifies my work and a developing project to optimize my investigation and work text experiment pipelines.
+Preprocess was created as a personal project in 2014 to facilitate my PhD experiments. Currently, it is a library that simplifies NLP work and a continuously developing project to further optimize research and work on text processing pipelines.
 
 ### Who is preprocess for?
-* Data scientists who want to test the impact of different preprocessing techniques on NLP tasks in Python.
-* Students who want to start doing text preprocessing the easy way.
-## Challenge
+Data scientists who want to test the impact of different preprocessing techniques on NLP tasks written in python language.
+Students who want to start experimenting with text preprocessing in an easy way.
 
-In 2011 when I started to play with texts and python, NLP was the must popular library in python ecosystem. Stanford models were very well known and I was starting on python programming.
+## The challenge
 
-My modern language is Spanish, and NLTK still have lot of no capabilities for this language. The Belgium software _Pattern_ was very versitile for languages like Spanish, but unfortunately the version for python3 never was developed, my hunch is because the fast grows of python community made more profitable the use of open source libraries abailable on github or other python organizations.
+In 2011, when I started to experiment with text manipulation and python, NLP was the most popular library or framework in the ecosystem, mainly because of its ease of use. At the same time, Stanford NLP models were very well known and I was starting to explore python programming. So, I decided to combine both in a single line of career development.
 
-Another important reason for the developing of this library was my personal need to develop my own skills in python, and at the very end this was a way to return to the community something useful for early learners as a new resource to push them to the same stages I went through.
+Exploring other NLP frameworks and libraries I came across the NLTK toolkit, a wonderful tool for teaching, and working in, computational linguistics. Unfortunately for me,  my native language is Spanish and NLTK did not have a whole lot of capabilities to work with it. The Belgium software pattern was very versatile for languages like Spanish, but a python 3 compatible version was never developed. My personal take on this is that the exponential growth of the python language made it more profitable to use open source libraries freely available on platforms like github or other python communities than the paid alternatives. At this point, I started to recognize the need for a library that was more tailored to my needs and the spanish speaking NLP community.
 
-Vectorization is a huge technique to improve big text datasets analysis, but for small collections and scholl projects the conversion of "a beatifull text" to the sequence [1, 56, 12], which means the frecuency of every word in a certain dictionary, it is not so obvious. So one of my final purpouse was to maintain the input as a literal string human readable, to allow the practitioner to compare visually the similarities between two strings. I was working from the beginning in text similarity problems so was a good reason from my point of view.
+Another important reason for developing this library was my personal need to develop my own skills in python while at the same time being able to return something useful to the community, a resource that would be helpful for new learners going through the same stages I went through.
 
-Even version 0.3 does not support spacy models or objects, because was one of my last discoveries. Spacy is very optimized with Cython, and has support for Spanish, so I consider this will be the last goal to reach inside text-preproc compatibilities.
+Moving away from the romanticism of my learning process and into the weeds of NLP, I can tell you that vectorization is a huge technique to improve big text datasets analysis. But, for small text collections and school projects the conversion of, for example, [a beautiful text] to the sequence [1, 56, 12] - which means the frequency of every word in a dictionary - is not a trivial task. So, one of my objectives was to maintain the input as a human readable literal string, to allow the practitioner to visually compare the similarities and differences between two of them. I was working on text similarity problems at the moment so I thought it was a good starting point for my development project.
 
-My intentions are to let the library very well documented for future students, and to let everything very organized to be extended with new techniques or to optimize current functions. Even today, I don't know if OOP philosophy could be better, but in case I (or someone else) answer that question I will do what is right.
+Spacy library has become popular in the last few years, I had never heard about it until I was finishing version 0.3, for that reason preprocess does not support spacy models or objects in any of its versions. Spacy is optimized using Cython language, and has support for Spanish, so I consider this will be the last goal to reach regarding text-preproc dependencies.
+
+My intentions are to achieve a good level of documentation and organization for the library to make it easy on future users and developers to continue improving/extending its features and techniques. As of today, I am not sure if the use of object oriented programing (OOP) philosophy is the correct approach to follow, but, until I or someone else is able to answer that question I will continue its development the same way.
 
 ## Solution
 

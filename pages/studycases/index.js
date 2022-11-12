@@ -6,7 +6,7 @@ import {CustomControls} from 'components/Slide/CustomControls'
 import {SectionSubheader, SectionHeader} from 'styles/global'
 import {PaginationWrapper, BlogCardWrapper, BlogCardBorder,BlogCardBlock, BlogTitle1, BlogTitle2, CardSummary, RespBlock, DateWrapper} from 'components/Blog/style'
 import { getAllData } from 'lib/posts'
-import {CategoryRect, CategoryTitle} from 'components/Home/StudyCases/style'
+import {CategoryRect, CategoryTitle, TagsRect} from 'components/Home/StudyCases/style'
 import { motion } from 'framer-motion'
 import { useState, useEffect } from 'react'
 import ReactPaginate from 'react-paginate'
@@ -43,33 +43,42 @@ const AllStudyCases = () =>{
     const getData = () => {
         const data = cases
 
-    //slicing data
-    const slice = data.slice(offset, offset + perPage)
-    const casesData = slice.map((item, key8 )=>
-        <BlogCardWrapper key={key8}>
-                <BlogCardBorder>
-                    <img className="object-cover object-center res-img" src={item.img} alt="" />
-                    <BlogCardBlock>
-                        <div>
-                        {item.tags.map((tag) => (
-                        <Link href={`/studycases/search?p=${tag.toLowerCase()}`}>
-                            <CategoryRect>{tag}
-                            <FiBookmark />
-                            </CategoryRect>
-                        </Link>
-                        ))}
-                        <p className="text-sm text-gray-500 m-0 text-left pt-1">{` ―  ${item.reading} min read`}</p>
-                        </div>
-                        <div>
-                            <Link href={`/studycases/${item.id}`}><BlogTitle1>{item.title}</BlogTitle1></Link>
-                            <CardSummary>{item.summary}</CardSummary>
-                        </div>
-                    </BlogCardBlock>
-                </BlogCardBorder>
-        </BlogCardWrapper>
-    )
-    setData(casesData)
-    setPageCount(Math.ceil(data.length / perPage))
+        //slicing data
+        const slice = data.slice(offset, offset + perPage)
+        const casesData = slice.map((item, key8 )=>
+            <BlogCardWrapper key={key8}>
+                    <BlogCardBorder>
+                        <img className="object-cover object-center res-img" src={item.img} alt="" />
+                        <BlogCardBlock>
+                            <div>
+                            <Link href={`/studycases/search?p=${item.category}`}>
+                                <CategoryRect>
+                                    {item.category}
+                                    <FiBookmark />
+                                </CategoryRect>
+                            </Link>
+                            <p className="text-sm text-gray-500 m-0 text-left pt-1">{` ―  ${item.reading} min read`}</p>
+                            </div>
+                            <div>
+                                <Link href={`/studycases/${item.id}`}><BlogTitle1>{item.title}</BlogTitle1></Link>
+                                <CardSummary>{item.summary}</CardSummary>
+                            </div>
+                            <div className='flex'>
+                                {
+                                    item.tags.map((tag) => (
+                                        <Link href={`/studycases/search?p=${tag.toLowerCase()}`}>
+                                            <TagsRect>{tag}
+                                            </TagsRect>
+                                        </Link>
+                                    ))
+                                }
+                            </div>
+                        </BlogCardBlock>
+                    </BlogCardBorder>
+            </BlogCardWrapper>
+        )
+        setData(casesData)
+        setPageCount(Math.ceil(data.length / perPage))
     }
 
     //callingData
