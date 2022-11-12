@@ -2,10 +2,11 @@
 title: Bastion host in AWS CDK to access resources in private networks
 summary: Including a Bastion host on a AWS VPC is a way to provide secure access, for developers and other roles, to resources in the infrastructure deployed in a private network. The bastion host sits in between the public network and the private network and can be used to create SSH tunnels to target services only visible on the private network.
 img: /images/cases/bastion_host.png
+category: Infrastructure
 tags: 
-    - AWS CDK
-    - VPC
-    - SSH
+    - aws cdk
+    - vpc
+    - ssh
 date: 2022-11-11T20:35:27.220Z
 author: Yoel Benítez Fonseca 
 reading: 10
