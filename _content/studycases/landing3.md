@@ -3,9 +3,10 @@ title: Datwit landing page v3.0
 summary: Datwit is pursuing the purpose of redesigning its landing page. Therefore we need to study the current version and its competitors, so we can evaluate the site's visual evolution.
 category: Proba
 tags: 
-    - Web Development
-    - Startup Content
-    - ReactJs
+    - design
+    - startup
+    - web
+    - reactjs
 img: /images/cases/landing3.png
 date: 2021-02-04T13:41:27.220Z
 author: Enma Lidia Muñoz García 

@@ -4,9 +4,9 @@ summary: Datwit develops small web apps with full artificial intelligence capabi
 img: /images/cases/landing2.png
 category: Proba
 tags: 
-    - Web Development
-    - Startup Content
-    - ReactJs
+    - design
+    - startup
+    - web
 date: 2020-11-16T19:05:27.220Z
 author: Enma Lidia Muñoz García 
 reading: 10 
