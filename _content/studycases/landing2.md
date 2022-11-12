@@ -2,6 +2,7 @@
 title: Datwit landing page v2.0
 summary: Datwit develops small web apps with full artificial intelligence capabilities. Therefore became a need to showcase its team work through a landing page.
 img: /images/cases/landing2.png
+category: Proba
 tags: 
     - Web Development
     - Startup Content
