@@ -37,6 +37,32 @@ export const SCardWrapper = styled.div.attrs({
 
   }
   `;
+  export const TagsRect = styled.p.attrs({
+    className: "mr-1"
+  })
+  `
+  padding: .1rem .5rem;
+  border-radius: 3rem;
+  background: #EAEBEC;
+  color: #1E4158;
+  font-size: 14px;
+  margin: 0 5px 3px 0;
+  cursor:pointer;
+  line-height:1.2rem;
+  width:fit-content;
+
+  svg{
+    margin: 0 5px 0 5px;
+  }
+  &:hover {
+        color: #1E4158;
+        background: #DADBDC;
+        svg{
+            color: #00baff;
+        }
+
+  }
+  `;
   export const CategoryTitle = styled.h2.attrs({
     className: "tracking-widest m-0 font-semibold text-white ml-2 cursor-pointer"
   })
