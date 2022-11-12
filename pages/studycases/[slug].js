@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import { format, parseISO } from 'date-fns'
-import renderToString from 'next-mdx-remote/render-to-string'
-import hydrate from 'next-mdx-remote/hydrate'
+import { serialize } from 'next-mdx-remote/serialize'
+import { MDXRemote } from 'next-mdx-remote'
 import {Footer} from 'components/Footer'
 import {MarkdownContent} from 'components/Markdown/style'
 import { motion } from 'framer-motion'
@@ -15,7 +15,6 @@ import { getAllData } from 'lib/posts'
 
 const StudyCasesPage = ({ title, date, content, author})=> {
 
-    const hydratedContent = hydrate(content);
     const router = useRouter()
 
     return (
@@ -41,7 +40,9 @@ const StudyCasesPage = ({ title, date, content, author})=> {
                                     <div className="w-full"><p className="mt-0 text-sm"><span className="text-gray-700 font-medium">By: </span><span>{author}</span></p></div>
                                     <div className="w-full"><p className="mt-0 text-sm"><span className="text-gray-700 font-medium">On: </span>{format(parseISO(date), 'MMMM do, uuu')}<span></span></p></div>
                                 </div>
-                                <MarkdownContent>{hydratedContent}</MarkdownContent>
+                                <MarkdownContent>
+                                    <MDXRemote {...content} />
+                                </MarkdownContent>
                             </div>
                         </section>
                         <section className= "w-full h-screen bg-primary mx-auto px-10">
@@ -61,7 +62,7 @@ export const getStaticProps = async (context) => {
     const { params } = context;
     const allCases = getAllData('studycases');
     const { data, content } = allCases.find((item) => item.slug === params.slug);
-    const mdxSource = await renderToString(content);
+    const mdxSource = await serialize(content);
 
     return {
         props: {
