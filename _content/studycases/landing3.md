@@ -1,7 +1,7 @@
 ---
 title: Datwit landing page v3.0
 summary: Datwit is pursuing the purpose of redesigning its landing page. Therefore we need to study the current version and its competitors, so we can evaluate the site's visual evolution.
-category: Proba
+category: Software Development
 tags: 
     - design
     - startup
