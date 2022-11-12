@@ -10,6 +10,24 @@
       "src": "/members/v2/ozkar.jpg"
     },
     {
+      "name": "Ailan Alcantara",
+      "designation": "",
+      "rol": "FrontEnd Developer",
+      "twitter":"",
+      "linkedin": "https://www.linkedin.com/in/ailan-alcantara-a97b131a4",
+      "github": "https://github.com/alcantara2575",
+      "src": "/members/v2/ailan.jpg"
+    },
+    {
+      "name": "Danay Meneses",
+      "designation": "",
+      "rol": "Data Engineer",
+      "twitter":"https://github.com/DanayMeneses",
+      "linkedin": "https://www.linkedin.com/in/danaymeneses",
+      "github": "https://twitter.com/DanayMeneses",
+      "src": "/members/v2/danay.jpg"
+    },
+    {
       "name": "Daniel Placencia",
       "designation": "",
       "rol": "MLOps",
@@ -17,15 +35,6 @@
       "linkedin": "https://www.linkedin.com/in/",
       "github": "https://github.com/",
       "src": "/members/v2/daniel.jpg"
-    },
-    {
-      "name": "Enma Muñoz",
-      "designation": "Chief Brand Officer",
-      "rol": "UX/UI",
-      "twitter":"https://twitter.com/enma_lidia",
-      "linkedin": "https://www.linkedin.com/in/enma-lidia-muñoz-garcía",
-      "github": "https://github.com/enmalidia",
-      "src": "/members/v2/enma.jpg"
     },
     {
       "name": "Yoel Benítez",
@@ -71,25 +80,7 @@
       "linkedin": "https://www.linkedin.com/in/meneses-abad",
       "github": "https://github.com/sorice",
       "src": "/members/v2/abel.jpg"
-    },
-    {
-      "name": "Danay Meneses",
-      "designation": "",
-      "rol": "Data Engineer",
-      "twitter":"https://github.com/DanayMeneses",
-      "linkedin": "https://www.linkedin.com/in/danaymeneses",
-      "github": "https://twitter.com/DanayMeneses",
-      "src": "/members/v2/danay.jpg"
-    },
-    {
-      "name": "Ailan Alcantara",
-      "designation": "",
-      "rol": "FrontEnd Developer",
-      "twitter":"",
-      "linkedin": "https://www.linkedin.com/in/ailan-alcantara-a97b131a4",
-      "github": "https://github.com/alcantara2575",
-      "src": "/members/v2/ailan.jpg"
-    }
+    } 
 ]
 
 
