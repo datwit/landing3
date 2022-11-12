@@ -2,7 +2,11 @@
 title: Datwit landing page v2.0
 summary: Datwit develops small web apps with full artificial intelligence capabilities. Therefore became a need to showcase its team work through a landing page.
 img: /images/cases/landing2.png
-tags: Software Development
+category: Software Development
+tags: 
+    - design
+    - startup
+    - web
 date: 2020-11-16T19:05:27.220Z
 author: Enma Lidia Muñoz García 
 reading: 10 
@@ -72,4 +76,4 @@ We made hand-drawn sketches to save time and to see how the design might be evol
 
 > Github repository [**here**](https://github.com/datwit/landing)
 > 
-> To see all the images and the full study case go [**here**](https://www.notion.so/Datwit-landing-page-v2-0-ac659c4768e94011b1ad897d0e6c49a3)
+> To see all the images and the full study case go [**here**](https://github.com/datwit/landing/tree/master/static/images)

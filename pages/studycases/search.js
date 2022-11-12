@@ -45,7 +45,8 @@ const CasesResults = () => {
     const cat = router.query.p
     const results = cat != null 
         ?
-        cases.filter(post => post.tags.toLowerCase().includes(cat)) 
+        // cases.filter(post => post.tags.toLowerCase().includes(cat)) 
+        cases.filter(post => post.tags.some( tag => tag.toLowerCase().includes(cat)) || post.category.toLowerCase().includes(cat.toLowerCase()) )
         : 
         []
 
@@ -120,7 +121,7 @@ const CasesResults = () => {
                                 {data}
                             </PaginationSection>
                             { 
-                            results ==0 
+                            results == 0 
                             ?
                                 <div className="mx-auto">
                                     <p>No results found 😢 </p>
