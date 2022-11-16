@@ -4,7 +4,8 @@ summary: One of the most important proactive security hallmarks for AWS (or any 
 img: /images/cases/bastion_host.png
 category: Infrastructure
 tags: 
-    - aws cdk
+    - aws
+    - cdk
     - vpc
     - ssh
 date: 2022-11-11T20:35:27.220Z
