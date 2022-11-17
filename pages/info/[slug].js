@@ -1,6 +1,6 @@
 import Head from 'next/head'
-import renderToString from 'next-mdx-remote/render-to-string'
-import hydrate from 'next-mdx-remote/hydrate'
+import { serialize } from 'next-mdx-remote/serialize'
+import { MDXRemote } from 'next-mdx-remote'
 import {Footer} from 'components/Footer'
 import {MarkdownContent} from 'components/Markdown/style'
 import {PostTitle} from 'components/Blog/style'
@@ -12,8 +12,6 @@ import {Section} from 'components/Section'
 import { getAllData } from 'lib/posts'
 
 const Info = ({ title, content})=> {
-
-    const hydratedContent = hydrate(content);
 
     return (
         //Post page template
@@ -27,7 +25,9 @@ const Info = ({ title, content})=> {
                         <Section classes={"pb-16 pt-20 mx-auto max-w-7xl"} >
                             <div className="px-5 mx-auto">  
                                 <PostTitle>{title}</PostTitle>                  
-                                <MarkdownContent>{hydratedContent}</MarkdownContent>
+                                <MarkdownContent>
+                                    <MDXRemote {...content} />
+                                </MarkdownContent>
                             </div>        
                         </Section> 
                         <Section classes={"w-full h-screen bg-primary mx-auto px-10"}>
@@ -47,7 +47,7 @@ export const getStaticProps = async (context) => {
     const { params } = context;
     const allPosts = getAllData('info');
     const { data, content } = allPosts.find((item) => item.slug === params.slug);
-    const mdxSource = await renderToString(content);
+    const mdxSource = await serialize(content);
 
     return {
         props: {

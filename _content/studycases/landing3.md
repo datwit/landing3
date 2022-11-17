@@ -17,8 +17,6 @@ Datwit landing page is a website to promote the work of the company creating mul
 
 Datwit aims at redesigning its landing page. Therefore, we need to study the current version and its competitors, so we can evaluate the site's visual evolution.
 
-<!--more-->
-
 ## Challenge
 
 Saas landing pages have the most challenging copy of all the industry. In this case its content about data science can be hard to understand if it's not displayed in a efficient and clear way.

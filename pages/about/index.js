@@ -5,7 +5,6 @@ import {Footer} from 'components/Footer'
 import {Datwit} from 'components/AboutUs/Datwit'
 import {Members} from 'components/AboutUs/Members'
 import {Collaborators} from 'components/AboutUs/Collaborators'
-import {Founders} from 'components/AboutUs/Founders'
 import { motion } from 'framer-motion'
 import Head from 'next/head'
 import {Navbar} from 'components/Navbar'
@@ -79,11 +78,11 @@ const About = () => {
                             </Section>
                         </Slide>
 
-                        <Slide>
+                        {/* <Slide>
                             <Section classes={'pb-16'}>
                                 <Founders classes={"px-5 mx-auto"}/>
                             </Section>
-                        </Slide>
+                        </Slide> */}
 
                         <Slide>
                             <Section classes={'pb-16'}>

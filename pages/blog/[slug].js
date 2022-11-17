@@ -1,8 +1,8 @@
 import React from 'react'
 import Head from 'next/head'
 import { format, parseISO } from 'date-fns'
-import renderToString from 'next-mdx-remote/render-to-string'
-import hydrate from 'next-mdx-remote/hydrate'
+import { serialize } from 'next-mdx-remote/serialize'
+import { MDXRemote } from 'next-mdx-remote'
 import {Footer} from 'components/Footer'
 import {ImgContainer, DateAuthorWrapper, PostTitle} from 'components/Blog/style'
 import { getAllData } from 'lib/posts'
@@ -16,7 +16,6 @@ import {FiChevronLeft} from 'react-icons/fi'
 
 const BlogPage = ({ title, date, content, img, author, tags, id})=> {
 
-    const hydratedContent = hydrate(content);
     const router = useRouter()
 
     return (
@@ -57,7 +56,9 @@ const BlogPage = ({ title, date, content, img, author, tags, id})=> {
                                 <ImgContainer>
                                     <img src={img} alt={title}/>
                                 </ImgContainer>                              
-                                <MarkdownContent>{hydratedContent}</MarkdownContent>
+                                <MarkdownContent>
+                                    <MDXRemote {...content} />
+                                </MarkdownContent>
                             </div>
                         </section>
                         <section className= "w-full h-screen bg-primary mx-auto px-10">
@@ -77,7 +78,7 @@ export const getStaticProps = async (context) => {
     const { params } = context;
     const allPosts = getAllData('posts');
     const { data, content } = allPosts.find((item) => item.slug === params.slug);
-    const mdxSource = await renderToString(content);
+    const mdxSource = await serialize(content);
 
     return {
         props: {
