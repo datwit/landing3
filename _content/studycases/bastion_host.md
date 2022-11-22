@@ -15,7 +15,9 @@ reading: 10
 
 In this article we will explore how to include a Bastion host on an [AWS VPC](https://aws.amazon.com/vpc/) with the help of [AWS CDK](https://aws.amazon.com/cdk/) as a way to provide secure access, for developers and other roles, to resources in a deployed infrastructure with a private network. The bastion host will work as a bridge to access internal network resources without the need for making any critical service public to the internet. The bastion host setup can be done manually from the [AWS console](https://console.aws.amazon.com), but nowadays infrastructure as code is the way to go.
 
-<img src="/public/images/cases/bastion_host.png"/>
+<img src="/images/cases/bastion_host.png"/>
+<em className="caption">Small AWS diagram of bastion host</em>
+
 ## Problem
 
 Let us explore an example scenario. Say you are in charge of defining and setting up a Neptune database using the CDK. At the moment AWS only allows the database cluster to exists within a private network on your VPC. The target architecture will be exactly the same as above (an over simplified architecture for the purpose of this example). We also need to allow sharing of <code>SSH</code> keys between members of the team but we want to keep security as tight as possible.
