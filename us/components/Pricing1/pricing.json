@@ -1,0 +1,60 @@
+[ 
+  {
+    "num":1,
+    "bundle":"ML",
+    "field":"SMART SERVICES",
+    "style":"secondary2",
+    "month_init": "3",
+    "month_end": "6",
+    "cost": "$40",
+    "description": "APIs, Torch models & Pipelines that can improve your business workflow",
+    "bullets": [
+        {"title":"Torch ML Model Design"},
+        {"title":"Improve your current Models"},
+        {"title":"New Models Training with AWS | on-premises"},
+        {"title":"ML Pipelines with AWS-CDK"},
+        {"title":"Model Metric Monitoring and Alarm Setup"},
+        {"title":"Model Interpretability Reports"},
+        {"title":"1 Months Support, 3 if Monitoring Active"}
+    ]
+  },
+  {
+    "num":2,
+    "bundle":"DATA",
+    "field":"DATA SOLUTIONS",
+    "style":"secondary1",
+    "month_init": "6",
+    "month_end": "11",
+    "cost": "$28",
+    "description": "Explore, analyze and prepare data up to 2Gb for future business actions",
+    "bullets": [
+        {"title":"Exploratory Data Analysis"},
+        {"title":"Data Cleaning and Anonymization"},
+        {"title":"Data visualization"},
+        {"title":"Data Infrastructure Design"},
+        {"title":"Database Setup and Management"},
+        {"title":"Custom ETL Design"},
+        {"title":"Dynamic and Static Visualizations"},
+        {"title":"6 Months Support"}
+    ]
+  },
+  {
+    "num":3,
+    "bundle":"DEV",
+    "field":"ML FULL SCOPE",
+    "style":"primary",
+    "month_init": "6",
+    "month_end": "11",
+    "cost": "$35",
+    "description": "Including an end-to-end solution with a full operational infrastructure on AWS",
+    "bullets": [
+        {"title":"Business Data Reports"},
+        {"title":"New self-business API Integration"},
+        {"title":"Data Management PlugIn for your current Web Solutions"},
+        {"title":"ML infrastructure Design and Deployment for AWS Cloud"},
+        {"title":"Web Interfaces for man-in-the-loop AI systems"},
+        {"title":"Machine Learning Related Consulting Services"},
+        {"title":"1 Year Support"}
+    ]
+  }
+]

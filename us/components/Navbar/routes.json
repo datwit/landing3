@@ -1,0 +1,38 @@
+[
+    {
+        "name": "Home",
+        "link": "/",
+        "id":"home"
+
+    },
+    {
+        "name": "Our Work",
+        "link": "/studycases",
+        "id":"study"
+
+    },
+    {
+        "name": "Pricing",
+        "link": "/pricing",
+        "id":"price"
+
+    },
+    {
+        "name": "About us",
+        "link": "/about",
+        "id":"abaut"
+
+    },
+    {
+        "name": "Contact us",
+        "link": "/contact",
+        "id":"contact"
+
+    },
+    {
+        "name": "Blog",
+        "link": "https://www.linkedin.com/company/datwit/posts/",
+        "id":"blog"
+
+    }
+]

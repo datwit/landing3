@@ -1,0 +1,19 @@
+
+[
+    {
+        "name":"linkedin",       
+        "url":"https://www.linkedin.com/company/datwit/"
+    },
+    {
+        "name":"facebook",        
+        "url":"https://facebook.com/datwit" 
+    },
+    {
+        "name":"github",        
+        "url":"https://github.com/datwit"
+    },
+    {
+        "name":"twitter",        
+        "url":"https://twitter.com/datwitofficial"
+    }
+]
