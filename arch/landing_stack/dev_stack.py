@@ -2,7 +2,7 @@ from aws_cdk import Stack, CfnOutput
 from aws_cdk import aws_s3
 from aws_cdk import  aws_iam
 from constructs import Construct
-from landing_stack import config
+from . import config
 
 
 class DevStack(Stack):

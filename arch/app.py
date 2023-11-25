@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
-from aws_cdk import App, Environment
+from aws_cdk import App
+from aws_cdk import Environment
 from aws_cdk.aws_s3_deployment import Source
-from dev_stack import DevStack
-from landing_stack.site_stack import SiteStack
 from landing_stack import config
+from landing_stack.contact_api import ContactAPIStack
+from landing_stack.site_stack import SiteStack
 
 env = Environment(
     account=config.CDK_DEFAULT_ACCOUNT,
@@ -11,9 +12,20 @@ env = Environment(
 )
 
 app = App()
-dev = DevStack(app, "DevStack", env=env)
+
+ContactAPIStack(
+    app, f"{config.STAGE}-ContactAPIStack",
+    config.STAGE,
+    config.NEXT_PUBLIC_FORM_SUFFIX,
+    config.DATWIT_RCPT,
+    config.DATWIT_FROM,
+    config.LOG_LEVEL,
+    env=env
+)
+
 SiteStack(
-    app, f"SiteStack{config.STAGE}",
+    app, f"{config.STAGE}-{config.SITE_REGION}-SiteStack",
+    config.STAGE,
     sources=[Source.asset('static_site')],
     env=env
 )

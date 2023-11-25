@@ -80,7 +80,7 @@ def makeResponse(code: int, payload: Any, headers: Dict[str, str] = {}):
         "Content-Type": "application/json",
         "Access-Control-Allow-Methods": "GET,OPTIONS,POST,PUT",
         "Access-Control-Allow-Headers": "Content-Type,Authorization,X-Amz-Date,X-Api-Key,X-Amz-Security-Token",
-        "Access-Control-Allow-Origin": os.getenv("SITE_URL") if STAGE == 'Prod' else '*',
+        "Access-Control-Allow-Origin": '*',
     }
     response = {
         "statusCode": code,
