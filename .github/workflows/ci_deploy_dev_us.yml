@@ -1,0 +1,89 @@
+name: Deploy US Dev
+
+on:
+  push:
+    tags:
+      - "dev-us-*"
+
+env:
+    STAGE: Dev
+    NEXT_PUBLIC_FORM_SUFFIX: jsagr63434
+    DATWIT_RCPT: contact@datwit.com
+    DATWIT_FROM: noreply@datwit.com
+    LOG_LEVEL: DEBUG
+    SITE_REGION: us
+
+jobs:
+    deploy-contact-api:
+        name: Deploy contact API for Stage
+        runs-on: ubuntu-latest
+        outputs:
+          contact_api_url: ${{ steps.contact_api_url.outputs.CONTACT_API_URL }}
+        steps:
+            - uses: actions/checkout@v4
+
+            - uses: actions/setup-python@v4
+              with:
+                python-version: '3.8'
+                cache: 'pip'
+
+            - uses: actions/setup-node@v4
+              with:
+                node-version: 18
+                cache: 'npm'
+
+            - name: Install dependencies
+              run: |
+                npm install -g aws-cdk@next
+                python -m pip install --upgrade pip
+                python -m pip install -r requirements.txt
+              working-directory: arch
+
+            - name: Configure AWS credentials from Test account
+              uses: aws-actions/configure-aws-credentials@v4
+              with:
+                aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+                aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+                aws-region: eu-west-1
+
+            - name: Deploy
+              run: |
+                cdk deploy ${{ env.STAGE }}-ContactAPIStack --require-approval never
+
+            - name: Get Contact API URL
+              id: contact_api_url
+              run: |
+                {
+                  echo 'CONTACT_API_URL<<EOF'
+                  aws cloudformation describe-stacks \
+                      --stack-name ${{ env.STAGE }}-ContactAPIStack \
+                      --query "Stacks[0].Outputs[?OutputKey==`ContactApiURL`].OutputValue" \
+                      --output text
+                  echo EOF
+                } >> "$GITHUB_OUTPUT"
+
+    build:
+        runs-on: ubuntu-latest
+        needs: [deploy-contact-api]
+        env:
+          NEXT_PUBLIC_API_URL: ${{ needs.deploy-contact-api.outputs.contact_api_url }}
+        steps:
+            - uses: actions/checkout@v4
+
+            - uses: actions/setup-node@v4
+              with: 
+                node-version: 18
+
+            -  name: Install despendencies
+               run: yarn install
+               working-directory: us/
+
+            - name: build static site
+              run: CI=false yarn build
+
+            - uses: actions/upload-artifact@v3
+              with:
+                name: website-us
+                path: us/.out
+
+            - run: echo ${{ env.NEXT_PUBLIC_API_URL }}
