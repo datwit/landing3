@@ -12,6 +12,7 @@ env:
     DATWIT_FROM: noreply@datwit.com
     LOG_LEVEL: DEBUG
     SITE_REGION: us
+    CERTIFICATE_ARN: ${{ vars.CERTIFICATE_ARN }}
 
 jobs:
     deploy-contact-api:
