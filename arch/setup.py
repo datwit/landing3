@@ -19,7 +19,7 @@ setuptools.setup(
     packages=setuptools.find_packages(where="landing_stack"),
 
     install_requires=[
-        "aws-cdk-lib==2.0.0-rc.9",
+        "aws-cdk-lib>=2.0.0-rc.9",
         "constructs>=10.0.0,<11.0.0",
         "python-dotenv",
         "ybf-constructs @ https://github.com/datwit/ybf-constructs/releases/download/v0.0.2/ybf_constructs-0.0.2-py2.py3-none-any.whl",
