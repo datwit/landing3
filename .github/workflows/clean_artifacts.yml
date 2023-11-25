@@ -1,11 +1,6 @@
 name: 'Delete old artifacts'
 
-on:
-  # pull_request:
-    # types: [closed]
-
-  schedule:
-  - cron: "0 8 * * *"
+on: workflow_dispatch
   
 
 jobs:
