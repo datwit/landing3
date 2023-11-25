@@ -48,6 +48,7 @@ jobs:
             - name: Deploy
               run: |
                 cdk deploy ${{ env.STAGE }}-ContactAPIStack --require-approval never
+              working-directory: arch
 
             - name: Get Contact API URL
               id: contact_api_url
@@ -75,11 +76,12 @@ jobs:
                 cache: 'npm'
 
             -  name: Install despendencies
-               run: yarn install
-               working-directory: us/
+              run: yarn install
+              working-directory: us/
 
             - name: build static site
               run: CI=false yarn build
+              working-directory: us/
 
             - uses: actions/upload-artifact@v3
               with:
