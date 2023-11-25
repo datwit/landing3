@@ -27,7 +27,6 @@ class ContactAPIStack(BaseStack):
         self.contactStore = dynamodb.Table(
             self,
             f"{id}-ContactStore",
-            table_name="ContactStore{}".format(self.stage),
             partition_key=dynamodb.Attribute(
                 name="pk", type=dynamodb.AttributeType.STRING
             ),
