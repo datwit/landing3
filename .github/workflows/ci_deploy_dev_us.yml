@@ -1,12 +1,9 @@
 name: Deploy US Dev
 
-# on:
-#   push:
-#     tags:
-#       - "dev-us-*"
-
 on:
-    push:
+  push:
+    tags:
+      - "dev-us-*"
 
 
 env:
@@ -16,6 +13,8 @@ env:
     DATWIT_FROM: noreply@datwit.com
     LOG_LEVEL: DEBUG
     SITE_REGION: us
+    SITE_DOMAIN_NAME: 'us-dev.datwit.com'
+    ZONE_DOMAIN_NAME: 'datwit.com'
     CERTIFICATE_ARN: ${{ vars.CERTIFICATE_ARN }}
 
 jobs:
@@ -129,8 +128,6 @@ jobs:
                 path: arch/static_site
 
             - name: Deploy web site for ${{ env.STAGE }} in region ${{ env.SITE_REGION }}
-              env:
-                SITE_DOMAIN_NAME: 'us.datwit.com'
               run: |
                 cdk deploy ${{ env.STAGE }}-${{ env.SITE_REGION }}-SiteStack --require-approval never
               working-directory: arch
