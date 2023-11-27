@@ -58,7 +58,7 @@ jobs:
                   echo 'CONTACT_API_URL<<EOF'
                   aws cloudformation describe-stacks \
                       --stack-name ${{ env.STAGE }}-ContactAPIStack \
-                      --query "Stacks[0].Outputs[?OutputKey==`ContactApiURL`].OutputValue" \
+                      --query "Stacks[0].Outputs[?OutputKey=='ContactApiURL'].OutputValue" \
                       --output text
                   echo EOF
                 } >> "$GITHUB_OUTPUT"
