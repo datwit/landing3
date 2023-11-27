@@ -1,9 +1,13 @@
 name: Deploy US Dev
 
+# on:
+#   push:
+#     tags:
+#       - "dev-us-*"
+
 on:
-  push:
-    tags:
-      - "dev-us-*"
+    push:
+
 
 env:
     STAGE: Dev
