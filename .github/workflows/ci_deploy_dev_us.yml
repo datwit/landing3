@@ -128,11 +128,9 @@ jobs:
                 name: website
                 path: arch/static_site
 
-            - name: check files
+            - name: Deploy web site for ${{ env.STAGE }} in region ${{ env.SITE_REGION }}
+              env:
+                SITE_DOMAIN_NAME: 'us.datwit.com'
               run: |
-                ls -la arch/static_site
-
-            # - name: Deploy
-            #   run: |
-            #     cdk deploy ${{ env.STAGE }}-${{ env.SITE_REGION }}-SiteStack --require-approval never
-            #   working-directory: arch
+                cdk deploy ${{ env.STAGE }}-${{ env.SITE_REGION }}-SiteStack --require-approval never
+              working-directory: arch
