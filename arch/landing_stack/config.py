@@ -6,7 +6,6 @@ load_dotenv()
 
 ASSETS_SOURCE_KEY = os.getenv('ASSETS_SOURCE_KEY', 'dev_landing_assets.zip')
 # this user has already been created, so here we import it directly
-LADING_DEV_USERNAME = os.getenv('LADING_DEV_USERNAME', 'landing_deploy')
 CERTIFICATE_ARN = os.getenv('CERTIFICATE_ARN', None)
 ZONE_DOMAIN_NAME = os.getenv('ZONE_DOMAIN_NAME', 'datwit.com')
 SITE_DOMAIN_NAME = os.getenv('SITE_DOMAIN_NAME', 'development.datwit.com')
