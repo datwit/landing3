@@ -92,7 +92,7 @@ jobs:
           - uses: actions/upload-artifact@v3
             with:
               name: website
-              path: us/.out
+              path: us/out
 
     deploy-web-site:
         runs-on: ubuntu-latest
