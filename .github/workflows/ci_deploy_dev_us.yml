@@ -1,9 +1,9 @@
-name: Deploy US Dev
+name: Deploy Dev
 
 on:
   push:
     tags:
-      - "dev-us-*"
+      - "dev-*"
 
 
 env:
@@ -12,12 +12,11 @@ env:
     DATWIT_RCPT: contact@datwit.com
     DATWIT_FROM: noreply@datwit.com
     LOG_LEVEL: DEBUG
-    SITE_REGION: us
-    SITE_DOMAIN_NAME: 'us-dev.datwit.com'
     ZONE_DOMAIN_NAME: 'datwit.com'
     CERTIFICATE_ARN: ${{ vars.CERTIFICATE_ARN }}
 
 jobs:
+
     deploy-contact-api:
         name: Deploy contact API for Stage
         runs-on: ubuntu-latest
@@ -66,7 +65,8 @@ jobs:
                   echo EOF
                 } >> "$GITHUB_OUTPUT"
 
-    build-web-site:
+    build-us-web-site:
+      name: "Building website for US Region"
       runs-on: ubuntu-latest
       needs: [deploy-contact-api]
       steps:
@@ -90,12 +90,44 @@ jobs:
 
           - uses: actions/upload-artifact@v3
             with:
-              name: website
+              name: website-us
               path: us/out
 
-    deploy-web-site:
+    build-eu-web-site:
+      name: "Building website for EU Region"
+      runs-on: ubuntu-latest
+      needs: [deploy-contact-api]
+      steps:
+          - uses: actions/checkout@v4
+
+          - uses: actions/setup-node@v4
+            with: 
+                node-version: 18
+                cache: 'npm'
+                cache-dependency-path: eu/package-lock.json
+
+          - name: Install despendencies
+            run: yarn install
+            working-directory: eu/
+
+          - name: build static site
+            env:
+                NEXT_PUBLIC_API_URL: ${{ needs.deploy-contact-api.outputs.contact_api_url }}
+            run: CI=false yarn build
+            working-directory: eu/
+
+          - uses: actions/upload-artifact@v3
+            with:
+              name: website-eu
+              path: eu/out
+
+    deploy-us-web-site:
+        name: "Deploy website for US region"
         runs-on: ubuntu-latest
-        needs: [build-web-site]
+        needs: [build-us-web-site]
+        env:
+            SITE_REGION: us
+            SITE_DOMAIN_NAME: 'us-dev.datwit.com'
         steps:
             - uses: actions/checkout@v4
 
@@ -124,8 +156,95 @@ jobs:
 
             - uses: actions/download-artifact@v3
               with:
-                name: website
+                name: website-us
                 path: arch/static_site
+
+            - name: Deploy web site for ${{ env.STAGE }} in region ${{ env.SITE_REGION }}
+              run: |
+                cdk deploy ${{ env.STAGE }}-${{ env.SITE_REGION }}-SiteStack --require-approval never
+              working-directory: arch
+
+    deploy-eu-web-site:
+        name: "Deploy website for EU region"
+        runs-on: ubuntu-latest
+        needs: [build-eu-web-site]
+        env:
+            SITE_REGION: eu
+            SITE_DOMAIN_NAME: 'eu-dev.datwit.com'
+        steps:
+            - uses: actions/checkout@v4
+
+            - uses: actions/setup-python@v4
+              with:
+                python-version: '3.8'
+                cache: 'pip'
+
+            - uses: actions/setup-node@v4
+              with:
+                node-version: 18
+
+            - name: Install dependencies
+              run: |
+                npm install -g aws-cdk
+                python -m pip install --upgrade pip
+                python -m pip install -r requirements.txt
+              working-directory: arch
+
+            - name: Configure AWS credentials from Test account
+              uses: aws-actions/configure-aws-credentials@v4
+              with:
+                aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+                aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+                aws-region: eu-west-1
+
+            - uses: actions/download-artifact@v3
+              with:
+                name: website-eu
+                path: arch/static_site
+
+            - name: Deploy web site for ${{ env.STAGE }} in region ${{ env.SITE_REGION }}
+              run: |
+                cdk deploy ${{ env.STAGE }}-${{ env.SITE_REGION }}-SiteStack --require-approval never
+              working-directory: arch
+
+    deploy-global-site:
+        name: "Deploy global site"
+        runs-on: ubuntu-latest
+        needs: [deploy-us-web-site, deploy-eu-web-site]
+        env:
+            SITE_REGION: global-dev
+            SITE_DOMAIN_NAME: 'development.datwit.com'
+        steps:
+            - uses: actions/checkout@v4
+
+            - uses: actions/setup-python@v4
+              with:
+                python-version: '3.8'
+                cache: 'pip'
+
+            - uses: actions/setup-node@v4
+              with:
+                node-version: 18
+
+            - name: Install dependencies
+              run: |
+                npm install -g aws-cdk
+                python -m pip install --upgrade pip
+                python -m pip install -r requirements.txt
+              working-directory: arch
+
+            - name: Configure AWS credentials from Test account
+              uses: aws-actions/configure-aws-credentials@v4
+              with:
+                aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+                aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+                aws-region: eu-west-1
+
+            - name: Copy site
+              run: |
+                cp global/index.html arch/static_site/index.html
+                sed -i 's/REGION_US/us-dev/g' arch/static_site/index.html
+                sed -i 's/REGION_EU/eu-dev/g' arch/static_site/index.html
 
             - name: Deploy web site for ${{ env.STAGE }} in region ${{ env.SITE_REGION }}
               run: |
