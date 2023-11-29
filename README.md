@@ -1,52 +1,45 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Datwit multi-region site
 
-## Getting Started
+Right now we got 2 regions US or EU, the `global/` folder is a static page 
+to allow selection between regions
 
-First, run the development server (Step by Step):
+## Folder structure
 
-- Clone this project using **git** command:
+- `arch/` contiene el código de la infraestructura para la solución
+- `us/` nextjs app para la región de US
+- `eu/` nextjs app para la región de Europa
+- `global` página de entrada para seleccionar la región
 
-        git clone https://github.com/datwit/landing3
 
-- Default branch is *main*. The name of the working branch is development, move there:
+## Desarrollo
 
-        git checkout development
+Refierase al README de cada uno de los componentes: `us/README.md`, `eu/README.md` o `arch/README.md`
 
-- Install the dependency of the project, using:
+Este proyecto tiene dos ambientes `Dev` (desarrollo) y `Prod` (producción). Que se pueden mirar como un juego de 3 sitios web diferentes para cada ambiete, por ejemplo para desarrollo:
 
-        npm install
-        # or
-        yarn install
+- development.datwit.com (global)
+- us-dev.datwit.com (copia de desarrollo para us)
+- eu-dev.datwit.com (copia de desarrollo para eu)
 
-- The command console returns some warnings, can be depreciated. Run the project:
+Que corresponden al ambiente `Dev`, para el caso de producción se tienen:
 
-        npm run dev
-        # or
-        yarn dev
+- datwit.com (global)
+- us.datwit.com (región US)
+- eu.datwit.com (región EU)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result. In the beginning, you need to wait for the successful page build.
+## Despliegues
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+El despliegue a cada ambiente se realiza por tags de git, para desarrollo los tags deben prefijarse por `dev-` y para producción con `prod-`.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+Cuando se empuje al repositorio un nuevo `tag` prefijado por alguno de estos nombres se dispara el despliegue al ambiente correspondiente:
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+**NOTA**: Para cada ambiente solo debe estar corriendo uno los workflows.
 
-## Deploy on Datwit Github CI/CD
+Por ejemplo:
 
-Read [HERE](https://github.com/datwit/landing3/issues/101#issuecomment-873645737)
+``` shell
+git tag dev-landing-0.0.1
+git push --tags
+```
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Dispara el despliegue de la version 0.0.1 para el ambiente `Dev`

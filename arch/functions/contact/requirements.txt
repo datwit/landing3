@@ -1,0 +1,1 @@
+datwit-contact-form @ https://github.com/datwit/contact-form-manager/releases/download/v0.0.6/datwit_contact_form-0.0.6-py2.py3-none-any.whl

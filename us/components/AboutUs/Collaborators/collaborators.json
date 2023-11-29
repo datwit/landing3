@@ -1,0 +1,47 @@
+[  
+  {
+    "name": "Leonel Salazar",
+    "designation": "Consultant",
+    "rol": "Software Engineer",
+    "twitter":"https://twitter.com/leonel_lordford",
+    "linkedin": "https://www.linkedin.com/in/leonel-salazar-videaux",
+    "github": "https://github.com/leonel-lordford",
+    "src": "/members/v2/leonel.jpg"
+  },
+  {
+    "name": "Denys Hernández Peña",
+    "designation": "",
+    "rol": "Software Engineer and Business Consultant",
+    "twitter":"",
+    "linkedin": "www.linkedin.com/in/dj-hernandez",
+    "github": "",
+    "src": "/members/v2/denys.jpeg"
+  },
+  {
+    "name": "Enma Muñoz",
+    "designation": "Chief Brand Officer",
+    "rol": "UX/UI",
+    "twitter":"https://twitter.com/enma_lidia",
+    "linkedin": "https://www.linkedin.com/in/enma-lidia-muñoz-garcía",
+    "github": "https://github.com/enmalidia",
+    "src": "/members/v2/enma.jpg"
+  },
+  {
+    "name": "Karell L. Garcés",
+    "designation": "Consultant",
+    "rol": "Project Manager",
+    "twitter":"https://twitter.com/KarellGarces",
+    "linkedin": "https://www.linkedin.com/in/karellgarces",
+    "github": "https://github.com/KarellGarces",
+    "src": "/members/v2/karelw.jpg"
+  },
+  {
+    "name": "Eliany Sánchez",
+    "designation": "",
+    "rol": "Frontend Developer",
+    "twitter":"",
+    "linkedin": "https://www.linkedin.com/in/elysanchez",
+    "github": "https://github.com/Elysanchez1219",
+    "src": "/members/v2/ely.jpg"
+  }
+]

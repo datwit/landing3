@@ -1,0 +1,86 @@
+
+[ 
+    {
+      "name": "Ozkar L. Garcell",
+      "designation": "",
+      "rol": "Backend Developer",
+      "twitter":"https://twitter.com/codeshard",
+      "linkedin": "https://www.linkedin.com/in/ozkar-garcell/",
+      "github": "https://github.com/codeshard",
+      "src": "/members/v2/ozkar.jpg"
+    },
+    {
+      "name": "Ailan Alcantara",
+      "designation": "",
+      "rol": "FrontEnd Developer",
+      "twitter":"",
+      "linkedin": "https://www.linkedin.com/in/ailan-alcantara-a97b131a4",
+      "github": "https://github.com/alcantara2575",
+      "src": "/members/v2/ailan.jpg"
+    },
+    {
+      "name": "Danay Meneses",
+      "designation": "",
+      "rol": "Data Engineer",
+      "twitter":"https://github.com/DanayMeneses",
+      "linkedin": "https://www.linkedin.com/in/danaymeneses",
+      "github": "https://twitter.com/DanayMeneses",
+      "src": "/members/v2/danay.jpg"
+    },
+    {
+      "name": "Daniel Placencia",
+      "designation": "",
+      "rol": "MLOps",
+      "twitter":"https://twitter.com/",
+      "linkedin": "https://www.linkedin.com/in/",
+      "github": "https://github.com/",
+      "src": "/members/v2/daniel.jpg"
+    },
+    {
+      "name": "Yoel Benítez",
+      "designation": "Chief Architect",
+      "rol": "DevOps",
+      "twitter":"",
+      "linkedin": "",
+      "github": "https://github.com/ybenitezf",
+      "src": "/members/v2/yoel.jpg"
+    },
+    {
+      "name": "Yanet Conde",
+      "designation": "Chief Communications Officer",
+      "rol": "Junior Tester",
+      "twitter":"",
+      "linkedin": "https://www.linkedin.com/in/yanetcg1983/",
+      "github": "https://github.com/yanetcg1983",
+      "src": "/members/v2/yanet.jpg"
+    },
+    {
+      "name": "Alejandro Valdevila",
+      "designation": "",
+      "rol": "FrontEnd Developer",
+      "twitter":"",
+      "linkedin": "https://www.linkedin.com/in/avaldevilap/",
+      "github": "",
+      "src": "/members/v2/alejandro.jpg"
+    },
+    {
+      "name": "Eriberto Vanegas",
+      "designation": "",
+      "rol": "Data Engineer",
+      "twitter":"https://twitter.com/LagoEriberto",
+      "linkedin": "https://www.linkedin.com/in/evanegasl2022/",
+      "github": "https://github.com/Vanegas2020",
+      "src": "/members/v2/vanegas.jpg"
+    },
+    {
+      "name": "Abel Meneses",
+      "designation": "",
+      "rol": "Data Scientist",
+      "twitter":"https://twitter.com/abelma1980",
+      "linkedin": "https://www.linkedin.com/in/meneses-abad",
+      "github": "https://github.com/sorice",
+      "src": "/members/v2/abel.jpg"
+    } 
+]
+
+
