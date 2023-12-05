@@ -22,7 +22,7 @@ setuptools.setup(
         "aws-cdk-lib",
         "constructs>=10.0.0,<11.0.0",
         "python-dotenv",
-        "ybf-constructs @ https://github.com/datwit/ybf-constructs/releases/download/v0.0.4/ybf_constructs-0.0.4-py2.py3-none-any.whl",
+        "ybf-constructs @ https://github.com/datwit/ybf-constructs/releases/download/v0.0.7/ybf_constructs-0.0.7-py2.py3-none-any.whl",
         "datwit-contact-form @ https://github.com/datwit/contact-form-manager/releases/download/v0.0.6/datwit_contact_form-0.0.6-py2.py3-none-any.whl"
     ],
 
