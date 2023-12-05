@@ -16,7 +16,7 @@ class SiteStack(BaseStack):
         scope: Construct,
         id: str,
         stage: str,
-        sources: typing.Sequence[s3deployment.Source],
+        sources: str,
         **kwargs
     ) -> None:
         super().__init__(scope, id, stage, **kwargs)
@@ -29,10 +29,10 @@ class SiteStack(BaseStack):
             self, f"{id}-DatwitZone", domain_name=config.ZONE_DOMAIN_NAME
         )
 
-        s3site.SiteDeploy(
+        s3site.StaticHTMLSiteDeploy(
             self,
             f"{id}-LadingSite",
-            sources=sources,
+            local_dir=sources,
             certificate=self.cert,
             domain_name=config.SITE_DOMAIN_NAME,
             route53_zone=self.zone,
