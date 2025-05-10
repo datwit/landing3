@@ -88,7 +88,7 @@ jobs:
             run: CI=false yarn build
             working-directory: us/
 
-          - uses: actions/upload-artifact@v3
+          - uses: actions/upload-artifact@v4
             with:
               name: website-us
               path: us/out
@@ -116,7 +116,7 @@ jobs:
             run: CI=false yarn build
             working-directory: eu/
 
-          - uses: actions/upload-artifact@v3
+          - uses: actions/upload-artifact@v4
             with:
               name: website-eu
               path: eu/out
@@ -154,7 +154,7 @@ jobs:
                 aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
                 aws-region: eu-west-1
 
-            - uses: actions/download-artifact@v3
+            - uses: actions/download-artifact@v4
               with:
                 name: website-us
                 path: arch/static_site
@@ -197,7 +197,7 @@ jobs:
                 aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
                 aws-region: eu-west-1
 
-            - uses: actions/download-artifact@v3
+            - uses: actions/download-artifact@v4
               with:
                 name: website-eu
                 path: arch/static_site
