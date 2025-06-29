@@ -26,7 +26,7 @@ ContactAPIStack(
 SiteStack(
     app, f"{config.STAGE}-{config.SITE_REGION}-SiteStack",
     config.STAGE,
-    sources=[Source.asset('static_site')],
+    sources='./static_site',
     env=env
 )
 

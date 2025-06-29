@@ -3,7 +3,6 @@ import typing
 from aws_cdk import aws_certificatemanager as acm
 from aws_cdk import aws_route53 as rt53
 from aws_cdk import aws_s3_deployment as s3deployment
-from aws_cdk import aws_s3 as s3
 from constructs import Construct
 from YbfConstructs import s3site
 
@@ -17,7 +16,7 @@ class SiteStack(BaseStack):
         scope: Construct,
         id: str,
         stage: str,
-        sources: typing.Sequence[s3deployment.Source],
+        sources: str,
         **kwargs
     ) -> None:
         super().__init__(scope, id, stage, **kwargs)
@@ -30,26 +29,12 @@ class SiteStack(BaseStack):
             self, f"{id}-DatwitZone", domain_name=config.ZONE_DOMAIN_NAME
         )
 
-        site_bucket = s3.Bucket(
-            self, "SiteBucket",
-            public_read_access=True,
-            website_error_document="404.html",
-            website_index_document="index.html",
-            block_public_access=s3.BlockPublicAccess(
-                block_public_acls=False,
-                block_public_policy=False,
-                ignore_public_acls=False,
-                restrict_public_buckets=False
-            )
-        )
-
-        s3site.SiteDeploy(
+        s3site.StaticHTMLSiteDeploy(
             self,
             f"{id}-LadingSite",
-            sources=sources,
+            local_dir=sources,
             certificate=self.cert,
             domain_name=config.SITE_DOMAIN_NAME,
             route53_zone=self.zone,
-            prune_bucket=True,
-            bucket_name=site_bucket.bucket_name
+            prune_bucket=True
         )
